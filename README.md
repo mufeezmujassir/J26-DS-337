@@ -318,111 +318,85 @@ Uses Firebase notifications for:
 ---
 
 # 8. Component 1 Folder Structure
+
+```text
 wandaraya-backend/
+├── app/                             # Main FastAPI application
+│   ├── agents/                      # LangGraph AI agents
+│   │   ├── coordinator.py
+│   │   ├── destination.py
+│   │   ├── trip_planner.py
+│   │   └── booking_agent.py
+│   ├── context_stack/               # Context-aware recommendation layers
+│   │   ├── weather.py
+│   │   ├── time_of_day.py
+│   │   ├── holiday.py
+│   │   ├── seasonality.py
+│   │   └── emotion.py
+│   ├── weather_model/               # Weather prediction ML module
+│   │   ├── train.py
+│   │   ├── predict.py
+│   │   ├── evaluate.py
+│   │   ├── scoring.py
+│   │   └── models/
+│   ├── knowledge_base/              # Tourism knowledge base
+│   │   ├── embeddings.py
+│   │   ├── qdrant_client.py
+│   │   └── content_filter.py
+│   ├── services/                    # External and business services
+│   │   ├── gemini.py
+│   │   ├── weather_service.py
+│   │   ├── places_service.py
+│   │   ├── booking_service.py
+│   │   └── fcm_service.py
+│   ├── routers/                     # FastAPI API endpoints
+│   │   ├── recommend.py
+│   │   ├── orchestrate.py
+│   │   ├── itinerary.py
+│   │   ├── trip.py
+│   │   └── notifications.py
+│   ├── models/                      # Database models
+│   │   ├── attraction.py
+│   │   ├── itinerary.py
+│   │   ├── user.py
+│   │   ├── weather.py
+│   │   └── calendar.py
+│   ├── schemas/                     # API validation schemas
+│   │   ├── recommend.py
+│   │   ├── itinerary.py
+│   │   ├── weather.py
+│   │   └── trip.py
+│   ├── database.py                  # Database connection management
+│   ├── config.py                    # Application configuration
+│   └── main.py                      # FastAPI application entry point
 │
-├── app/ # Main FastAPI application
-│ │
-│ ├── agents/ # LangGraph AI Agents
-│ │ ├── coordinator.py # Coordinator Agent
-│ │ ├── destination.py # Destination Recommendation Agent
-│ │ ├── trip_planner.py # AI Trip Planner Agent
-│ │ └── booking_agent.py # Hotel Booking Agent
-│ │
-│ ├── context_stack/ # Context-aware recommendation layers
-│ │ ├── weather.py # Weather Context Layer
-│ │ ├── time_of_day.py # Time Context Layer
-│ │ ├── holiday.py # Holiday / Poya Context Layer
-│ │ ├── seasonality.py # Seasonal Recommendation Layer
-│ │ └── emotion.py # User Emotion Context Layer
-│ │
-│ ├── weather_model/ # Weather Prediction ML Module
-│ │ ├── train.py # Model Training
-│ │ ├── predict.py # Weather Prediction
-│ │ ├── evaluate.py # Model Evaluation
-│ │ ├── scoring.py # Weather Suitability Scoring
-│ │ └── models/ # Saved Weather Models
-│ │
-│ ├── knowledge_base/ # Tourism Knowledge Base
-│ │ ├── embeddings.py # Embedding Generation
-│ │ ├── qdrant_client.py # Vector Database Operations
-│ │ └── content_filter.py # Content Processing & Filtering
-│ │
-│ ├── services/ # External and Business Services
-│ │ ├── gemini.py # AI LLM Services
-│ │ ├── weather_service.py # Weather Services
-│ │ ├── places_service.py # Places Information Services
-│ │ ├── booking_service.py # Booking Services
-│ │ └── fcm_service.py # Notification Services
-│ │
-│ ├── routers/ # FastAPI API Endpoints
-│ │ ├── recommend.py # Recommendation APIs
-│ │ ├── orchestrate.py # Agent Orchestration APIs
-│ │ ├── itinerary.py # Itinerary APIs
-│ │ ├── trip.py # Trip Management APIs
-│ │ └── notifications.py # Notification APIs
-│ │
-│ ├── models/ # Database Models
-│ │ ├── attraction.py
-│ │ ├── itinerary.py
-│ │ ├── user.py
-│ │ ├── weather.py
-│ │ └── calendar.py
-│ │
-│ ├── schemas/ # API Data Validation Schemas
-│ │ ├── recommend.py # Recommendation Request/Response Models
-│ │ ├── itinerary.py # Itinerary Response Models
-│ │ ├── weather.py # Weather Models
-│ │ └── trip.py # Trip Request Models
-│ │
-│ ├── database.py # Database Connection Management
-│ ├── config.py # Application Configuration
-│ └── main.py # FastAPI Application Entry Point
+├── airflow/                         # Apache Airflow data pipeline system
+│   ├── dags/                        # Airflow workflow definitions
+│   │   ├── weather/
+│   │   ├── tourism/
+│   │   ├── knowledge_base/
+│   │   └── ml_training/
+│   └── plugins/                     # Custom Airflow plugins
 │
+├── data/                            # Raw and processed data storage
+│   ├── weather/
+│   ├── tourism/
+│   └── processed/
 │
-├── airflow/ # Apache Airflow Data Pipeline System
-│ │
-│ ├── dags/ # Airflow Workflow Definitions
-│ │ ├── weather/ # Weather Data Pipelines
-│ │ ├── tourism/ # Tourism Data Pipelines
-│ │ ├── knowledge_base/ # Knowledge Base Update Pipelines
-│ │ └── ml_training/ # ML Model Training Pipelines
-│ │
-│ └── plugins/ # Custom Airflow Plugins
-│
-│
-├── data/ # Raw and Processed Data Storage
-│ │
-│ ├── weather/ # Historical Weather Data
-│ ├── tourism/ # Tourism Dataset
-│ └── processed/ # Cleaned Data
-│
-│
-├── migrations/ # Database Migration Files
-│
-│
-├── tests/ # System Testing
-│ │
-│ ├── test_weather_model.py # Weather Model Tests
-│ ├── test_context_stack.py # Context Layer Tests
-│ ├── test_agents.py # AI Agent Tests
-│ └── test_api.py # API Tests
-│
-│
-├── docker-compose.yml # Application Services
-│ # FastAPI + PostgreSQL + Redis + Qdrant
-│
-├── docker-compose.airflow.yml # Airflow Services
-│ # Airflow Scheduler + Webserver
-│
-├── Dockerfile # Backend Container Configuration
-│
-├── requirements.txt # Python Dependencies
-│
-├── .env # Environment Variables
-│
-├── .gitignore # Git Ignore Rules
-│
-└── README.md # Project Documentation
+├── migrations/                      # Database migration files
+├── tests/                           # System testing
+│   ├── test_weather_model.py
+│   ├── test_context_stack.py
+│   ├── test_agents.py
+│   └── test_api.py
+├── docker-compose.yml               # Application services
+├── docker-compose.airflow.yml       # Airflow services
+├── Dockerfile                       # Backend container configuration
+├── requirements.txt                 # Python dependencies
+├── .env                             # Environment variables
+├── .gitignore                       # Git ignore rules
+└── README.md                        # Project documentation
+```
 
 
 ---
