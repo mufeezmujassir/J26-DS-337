@@ -319,81 +319,110 @@ Uses Firebase notifications for:
 
 # 8. Component 1 Folder Structure
 wandaraya-backend/
-
 │
-├── app/
-│
-│ ├── agents/
-│ │ ├── Coordinator Agent
-│ │ ├── Destination Agent
-│ │ ├── Trip Planner Agent
-│ │ └── Booking Agent
+├── app/ # Main FastAPI application
 │ │
-│ ├── context_stack/
-│ │ ├── Weather Context
-│ │ ├── Time Context
-│ │ ├── Holiday Context
-│ │ ├── Seasonality Context
-│ │ └── Emotion Context
+│ ├── agents/ # LangGraph AI Agents
+│ │ ├── coordinator.py # Coordinator Agent
+│ │ ├── destination.py # Destination Recommendation Agent
+│ │ ├── trip_planner.py # AI Trip Planner Agent
+│ │ └── booking_agent.py # Hotel Booking Agent
 │ │
-│ ├── weather_model/
-│ │ ├── Weather Training
-│ │ ├── Weather Prediction
-│ │ ├── Model Evaluation
-│ │ └── Weather Scoring
+│ ├── context_stack/ # Context-aware recommendation layers
+│ │ ├── weather.py # Weather Context Layer
+│ │ ├── time_of_day.py # Time Context Layer
+│ │ ├── holiday.py # Holiday / Poya Context Layer
+│ │ ├── seasonality.py # Seasonal Recommendation Layer
+│ │ └── emotion.py # User Emotion Context Layer
 │ │
-│ ├── knowledge_base/
-│ │ ├── Embedding Generation
-│ │ ├── Vector Search
-│ │ └── Content Processing
+│ ├── weather_model/ # Weather Prediction ML Module
+│ │ ├── train.py # Model Training
+│ │ ├── predict.py # Weather Prediction
+│ │ ├── evaluate.py # Model Evaluation
+│ │ ├── scoring.py # Weather Suitability Scoring
+│ │ └── models/ # Saved Weather Models
 │ │
-│ ├── services/
-│ │ ├── AI Services
-│ │ ├── Weather Services
-│ │ ├── Places Services
-│ │ ├── Booking Services
-│ │ └── Notification Services
+│ ├── knowledge_base/ # Tourism Knowledge Base
+│ │ ├── embeddings.py # Embedding Generation
+│ │ ├── qdrant_client.py # Vector Database Operations
+│ │ └── content_filter.py # Content Processing & Filtering
 │ │
-│ ├── routers/
-│ │ ├── Recommendation APIs
-│ │ ├── Trip APIs
-│ │ ├── Itinerary APIs
-│ │ └── Notification APIs
+│ ├── services/ # External and Business Services
+│ │ ├── gemini.py # AI LLM Services
+│ │ ├── weather_service.py # Weather Services
+│ │ ├── places_service.py # Places Information Services
+│ │ ├── booking_service.py # Booking Services
+│ │ └── fcm_service.py # Notification Services
 │ │
-│ ├── models/
-│ │ ├── Database Models
-│ │ └── Data Entities
+│ ├── routers/ # FastAPI API Endpoints
+│ │ ├── recommend.py # Recommendation APIs
+│ │ ├── orchestrate.py # Agent Orchestration APIs
+│ │ ├── itinerary.py # Itinerary APIs
+│ │ ├── trip.py # Trip Management APIs
+│ │ └── notifications.py # Notification APIs
 │ │
-│ └── schemas/
-│ ├── API Request Models
-│ └── API Response Models
+│ ├── models/ # Database Models
+│ │ ├── attraction.py
+│ │ ├── itinerary.py
+│ │ ├── user.py
+│ │ ├── weather.py
+│ │ └── calendar.py
+│ │
+│ ├── schemas/ # API Data Validation Schemas
+│ │ ├── recommend.py # Recommendation Request/Response Models
+│ │ ├── itinerary.py # Itinerary Response Models
+│ │ ├── weather.py # Weather Models
+│ │ └── trip.py # Trip Request Models
+│ │
+│ ├── database.py # Database Connection Management
+│ ├── config.py # Application Configuration
+│ └── main.py # FastAPI Application Entry Point
 │
 │
-├── airflow/
-│
-│ └── dags/
-│ ├── Weather Data Pipelines
-│ ├── Tourism Data Pipelines
-│ ├── Knowledge Base Updates
-│ └── ML Training Pipelines
-│
-│
-├── data/
-│ └── Raw Tourism & Weather Data
+├── airflow/ # Apache Airflow Data Pipeline System
+│ │
+│ ├── dags/ # Airflow Workflow Definitions
+│ │ ├── weather/ # Weather Data Pipelines
+│ │ ├── tourism/ # Tourism Data Pipelines
+│ │ ├── knowledge_base/ # Knowledge Base Update Pipelines
+│ │ └── ml_training/ # ML Model Training Pipelines
+│ │
+│ └── plugins/ # Custom Airflow Plugins
 │
 │
-├── migrations/
-│ └── Database Migration Files
+├── data/ # Raw and Processed Data Storage
+│ │
+│ ├── weather/ # Historical Weather Data
+│ ├── tourism/ # Tourism Dataset
+│ └── processed/ # Cleaned Data
 │
 │
-├── tests/
-│ └── Component Testing
+├── migrations/ # Database Migration Files
 │
 │
-├── docker-compose.yml
-├── docker-compose.airflow.yml
-├── Dockerfile
-└── README.md
+├── tests/ # System Testing
+│ │
+│ ├── test_weather_model.py # Weather Model Tests
+│ ├── test_context_stack.py # Context Layer Tests
+│ ├── test_agents.py # AI Agent Tests
+│ └── test_api.py # API Tests
+│
+│
+├── docker-compose.yml # Application Services
+│ # FastAPI + PostgreSQL + Redis + Qdrant
+│
+├── docker-compose.airflow.yml # Airflow Services
+│ # Airflow Scheduler + Webserver
+│
+├── Dockerfile # Backend Container Configuration
+│
+├── requirements.txt # Python Dependencies
+│
+├── .env # Environment Variables
+│
+├── .gitignore # Git Ignore Rules
+│
+└── README.md # Project Documentation
 
 
 ---
