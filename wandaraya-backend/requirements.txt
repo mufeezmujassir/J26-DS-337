@@ -1,0 +1,101 @@
+fastapi==0.116.1
+uvicorn[standard]==0.35.0
+python-multipart==0.0.20
+
+#==== enviroment variables ====
+python-dotenv==1.1.1
+
+#====http requests====
+httpx==0.28.1
+requests==2.32.3
+
+#====== python validation ======
+pydantic==2.11.7
+pydantic-settings==2.10.1
+
+#==== database ====
+sqlalchemy==2.0.42
+psycopg[binary]==3.2.9
+alembic==1.16.4
+
+#==== cache ====
+redis==6.4.0
+
+#==== Qdrant vector===========
+qdrant-client==1.15.1
+
+#=====langcjhain===========
+langchain==0.3.27
+langchain-core==0.3.74
+langchain-community==0.3.27
+langchain-qdrant==0.2.0
+langchain-huggingface==0.3.1
+langchain-openai==0.3.27
+
+#===== embeddings =====
+sentence-transformers==5.0.0
+transformers==4.54.1
+torch==2.8.0
+
+#==== google maps api====
+googlemaps==4.10.0
+
+
+#===HTLM parsing====
+beautifulsoup4==4.13.4
+lxml==6.0.0
+selectolax==0.3.30
+
+#=== browser automation ===
+playwright==1.54.0
+
+
+#===xml parsing====
+xmltodict==0.14.0
+
+#==== data processing ====
+pandas==2.3.1
+numpy==2.3.2
+
+#=====date and timing ====
+python-dateutil==2.9.0.post0
+pytz==2025.2
+
+
+# ==== sheduling ====
+apscheduler==3.10.4
+
+# ==== logging ====
+loguru==0.7.3
+
+# ==== Retry Utilities =====
+tenacity==9.1.2
+
+# ==== file handling ====
+orjson==3.11.1
+
+
+#image processing
+Pillow==11.3.0
+
+# ==== testing ====
+pytest==8.4.1
+pytest-asyncio==1.1.0
+
+
+
+# ==== AI Utilities =====
+tiktoken==0.11.0
+
+
+# ==== wheather ====
+openmeteo-requests==1.6.0
+requests-cache==1.2.1
+retry-requests==2.0.0
+
+
+apache-airflow==3.0.4
+apache-airflow-providers-postgres==6.2.2
+apache-airflow-providers-http==5.3.3
+apache-airflow-providers-redis==4.3.2
+apache-airflow-providers-common-sql==1.28.1
