@@ -1,7 +1,7 @@
 services:
 
   postgres:
-    image: postgres:17
+    image: postgis/postgis:17-3.5
     container_name: wandaraya-postgres
     restart: unless-stopped
     environment:
@@ -74,6 +74,9 @@ services:
     env_file:
       - .env
 
+    environment:
+      DATABASE_URL: postgresql+psycopg://postgres:root@postgres:5432/wandaraya
+
     volumes:
       - .:/app
 
@@ -102,6 +105,9 @@ services:
 
     env_file:
       - .env
+
+    environment:
+      DATABASE_URL: postgresql+psycopg://postgres:root@postgres:5432/wandaraya
 
     volumes:
       - ./dags:/opt/airflow/dags
