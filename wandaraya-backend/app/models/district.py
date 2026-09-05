@@ -2,7 +2,7 @@
 from sqlalchemy.orm import Mapped, mapped_column
 from datetime import datetime, timezone
 from app.database import Base
-
+from geoalchemy2 import Geometry
 class District(Base):
     __tablename__ = "districts"
 
@@ -11,7 +11,8 @@ class District(Base):
     province: Mapped[str] = mapped_column(String(255), nullable=False)
     latitude: Mapped[float] = mapped_column(Float, nullable=True)
     longitude: Mapped[float] = mapped_column(Float, nullable=True)
-    elevation_m: Mapped[float] = mapped_column(Float, nullable=True)
+    elevation_m: Mapped[float] = mapped_column(Float, nullable=True, default=None)
+    boundary: Mapped[object | None] = mapped_column(Geometry( geometry_type="MULTIPOLYGON",srid=4326, spatial_index=True), nullable=False)
     is_active: Mapped[bool] = mapped_column(Boolean, default=True)
     created_at: Mapped[datetime] = mapped_column(DateTime, default=lambda: datetime.now(timezone.utc))
     updated_at: Mapped[datetime] = mapped_column(DateTime, default=lambda: datetime.now(timezone.utc), onupdate=lambda: datetime.now(timezone.utc))

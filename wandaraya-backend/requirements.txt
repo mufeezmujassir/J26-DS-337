@@ -18,6 +18,9 @@ sqlalchemy==2.0.42
 psycopg[binary]==3.2.9
 alembic==1.16.4
 
+
+
+
 #==== cache ====
 redis==6.4.0
 
@@ -99,3 +102,7 @@ apache-airflow-providers-postgres==6.2.2
 apache-airflow-providers-http==5.3.3
 apache-airflow-providers-redis==4.3.2
 apache-airflow-providers-common-sql==1.28.1
+
+
+Shapely==2.1.1
+GeoAlchemy2==0.18.0
