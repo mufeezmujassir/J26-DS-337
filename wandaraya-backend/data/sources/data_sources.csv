@@ -1,0 +1,10 @@
+name,source_type,base_url,api_endpoint,trust_score,is_active
+Google Places,API,https://places.googleapis.com,https://places.googleapis.com/v1,0.90,true
+Wikipedia,API,https://en.wikipedia.org,https://en.wikipedia.org/w/api.php,0.80,true
+Wikivoyage,API,https://en.wikivoyage.org,https://en.wikivoyage.org/w/api.php,0.80,true
+Sri Lanka Tourism,OFFICIAL,https://www.srilanka.travel,,0.95,true
+Sri Lanka Tourism Development Authority,OFFICIAL,https://www.sltda.gov.lk,,0.95,true
+Department of Wildlife Conservation Sri Lanka,OFFICIAL,https://www.dwc.gov.lk,,0.95,true
+Department of Archaeology Sri Lanka,OFFICIAL,https://archaeology.gov.lk,,0.95,true
+Department of Meteorology Sri Lanka,OFFICIAL,https://meteo.gov.lk,,0.95,true
+OpenWeatherMap,API,https://openweathermap.org,https://api.openweathermap.org,0.85,true
