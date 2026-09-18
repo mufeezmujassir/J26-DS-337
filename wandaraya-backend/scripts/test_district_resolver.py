@@ -20,17 +20,12 @@ async def main()->None:
         "ChIJXQLueKNz4ToR_sMWrhaKb7k"
     )
 
-    # ==============================================
-    # 1. Google Place Details
-    # ==============================================
 
     raw_place = await connector.get_place_details(
         place_id=place_id
     )
 
-    # ==============================================
-    # 2. Normalize
-    # ==============================================
+
 
     attraction = (
         AttractionNormalizer
@@ -60,9 +55,7 @@ async def main()->None:
         f"{attraction['district_id']}"
     )
 
-    # ==============================================
-    # 3. Validate
-    # ==============================================
+ 
 
     validation = (
         AttractionValidation.validate(
@@ -87,9 +80,7 @@ async def main()->None:
 
         return
 
-    # ==============================================
-    # 4. District Resolution
-    # ==============================================
+   
 
     db = AsyncSessionLocal()
 
@@ -131,9 +122,7 @@ async def main()->None:
             f"{attraction['district_id']}"
         )
 
-        # ==========================================
-        # Final normalized record
-        # ==========================================
+
 
         print("\n================================")
         print("FINAL ATTRACTION")
