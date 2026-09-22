@@ -161,18 +161,14 @@ def main()->None:
         "========================================"
     )
 
-    # -----------------------------------------------------
-    # Load
-    # -----------------------------------------------------
+   
     logger.info(f"Loading category file: {file_path}")
     if not file_path.exists():
         raise FileNotFoundError(f"Category file not found: {file_path}")
 
     categories = pd.read_csv(file_path)
 
-    # -----------------------------------------------------
-    # Import
-    # -----------------------------------------------------     
+    
     import_to_database(
         categories=categories.to_dict(orient="records"),
         dry_run=args.dry_run,
