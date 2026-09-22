@@ -18,6 +18,7 @@ class WikivoyageEnricher:
     """Enrich attractions with a relevant excerpt from Wikivoyage."""
 
     SOURCE_NAME = "Wikivoyage"
+    MAX_CONTEXT_CHARS = 1200
 
     def __init__(self) -> None:
         self.connector = WikivoyageConnector()
@@ -157,36 +158,71 @@ class WikivoyageEnricher:
         attraction: Attraction,
         page_text: str,
     ) -> Optional[str]:
-        normalized_page = cls._normalize_text(page_text)
-        attraction_name = cls._normalize_text(attraction.name)
+        """Return concise paragraph blocks that are focused on the attraction."""
+        if not page_text:
+            return None
 
-        if attraction_name and attraction_name in normalized_page:
-            return cls._extract_window(page_text, [attraction.name])
+        aliases = cls._build_aliases(attraction.name)
+        text = page_text.replace("\r\n", "\n")
+        blocks = re.split(r"\n\s*\n|\n(?=\d+\s)|\n(?=[*#])", text)
+        relevant_blocks: list[str] = []
 
-        for alias in cls._generate_aliases(attraction.name):
-            if cls._normalize_text(alias) in normalized_page:
-                return cls._extract_window(page_text, [alias])
-        return None
+        for block in blocks:
+            clean_block = " ".join(block.split()).strip()
+            if not clean_block:
+                continue
+
+            if not cls._is_relevant_block(clean_block, aliases):
+                continue
+
+            relevant_blocks.append(clean_block)
+
+        if not relevant_blocks:
+            return None
+
+        unique_blocks: list[str] = []
+        seen: set[str] = set()
+        for block in relevant_blocks:
+            normalized = block.casefold()
+            if normalized not in seen:
+                seen.add(normalized)
+                unique_blocks.append(block)
+
+        return "\n".join(unique_blocks)[: cls.MAX_CONTEXT_CHARS].strip()
 
     @staticmethod
-    def _generate_aliases(name: str) -> list[str]:
-        if "dutch" not in name.casefold():
-            return []
-        alias = re.sub(r"\bdutch\b", "", name, flags=re.IGNORECASE)
-        return [re.sub(r"\s+", " ", alias).strip()]
+    def _build_aliases(attraction_name: str) -> list[str]:
+        """Return the canonical attraction name plus safe, useful aliases."""
+        aliases = {attraction_name.strip()}
+        without_dutch = re.sub(
+            r"\bdutch\b",
+            "",
+            attraction_name,
+            flags=re.IGNORECASE,
+        )
+        without_dutch = " ".join(without_dutch.split())
+        if without_dutch:
+            aliases.add(without_dutch)
+        return sorted(aliases, key=len, reverse=True)
 
     @staticmethod
-    def _extract_window(
-        original_text: str,
-        search_terms: list[str],
-        window: int = 1200,
-    ) -> Optional[str]:
-        lowered = original_text.casefold()
-        for term in search_terms:
-            position = lowered.find(term.casefold())
-            if position != -1:
-                return original_text[max(0, position - 300):position + window].strip()
-        return None
+    def _is_relevant_block(block: str, aliases: list[str]) -> bool:
+        """Reject incidental references to an attraction in unrelated listings."""
+        normalized_block = block.casefold()
+        for alias in aliases:
+            normalized_alias = alias.casefold()
+            if not normalized_alias:
+                continue
+
+            position = normalized_block.find(normalized_alias)
+            if position == -1:
+                continue
+
+            if position <= 120:
+                return True
+            if normalized_block.count(normalized_alias) >= 2:
+                return True
+        return False
 
     @classmethod
     async def _get_source(cls, db: AsyncSession) -> Optional[DataSource]:
