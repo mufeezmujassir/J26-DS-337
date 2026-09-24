@@ -7,8 +7,8 @@ class Settings(BaseSettings):
     GOOGLE_PLACES_API_KEY: str = ""
     OPENWEATHER_API_KEY: str = ""
     DATABASE_URL: str = "postgresql+psycopg://postgres:root@postgres:5432/wandaraya"
-    REDIS_URL: str = "redis://localhost:6379"
-    QDRANT_URL: str = "http://localhost:6333"
+    REDIS_URL: str = "redis://redis:6379"
+    QDRANT_URL: str = "http://qdrant:6333"
     EMBEDDING_MODEL: str = "BAAI/bge-large-en-v1.5"
     LANGCHAIN_TRACING_V2: bool = False
     GEMINI_API_KEY: str = ""
