@@ -3,8 +3,17 @@ from app.knowledge_base.retrieval.semantic_retriever import SemanticAttractionRe
 import asyncio
 
 TEST_QUERIES = [
+    "historical heritage place in Galle",
+
+    "Dutch colonial historical attraction",
+
+    "ancient archaeological site in Sri Lanka",
+
     "wildlife safari with elephants",
-    "safari",
+
+    "Buddhist religious and cultural attraction",
+
+    "beach destination near the ocean",
 ]
 
 async def main() -> None:
@@ -13,6 +22,7 @@ async def main() -> None:
         retriever = SemanticAttractionRetriever()
 
         for query in TEST_QUERIES:
+
 
             print("\n================================")
             print("Query:")
@@ -61,3 +71,4 @@ async def main() -> None:
 if  __name__ == "__main__":
 
     asyncio.run(main())
+

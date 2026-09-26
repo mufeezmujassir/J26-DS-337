@@ -40,11 +40,11 @@ class AttractionEmbeddingService:
         return cls._model
 
     @classmethod
-    def _encode(
+
+    def _encode_text(
         cls,
         text: str,
     ) -> EmbeddingResult:
-
         clean_text = text.strip()
 
         if not clean_text:
@@ -82,24 +82,16 @@ class AttractionEmbeddingService:
         text: str,
     ) -> EmbeddingResult:
 
-        return cls._encode(text)
+        return cls._encode_text(text)
 
     @classmethod
     def encode_query(
         cls,
-        query: str,
+
+        text: str,
     ) -> EmbeddingResult:
+        return cls._encode_text(text)
 
-        clean_query = query.strip()
-
-        if not clean_query:
-            raise ValueError(
-                "Query cannot be empty."
-            )
-
-        return cls._encode(clean_query)
-
-    # Temporary backwards compatibility
     @classmethod
     def encode(
         cls,
