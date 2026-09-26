@@ -1,0 +1,319 @@
+# =============================================================================
+# Wandaraya - Component 4: Language Detection Module
+# =============================================================================
+
+module:
+  name: language_detection
+  component: 4
+  version: "1.0.0"
+
+# -----------------------------------------------------------------------------
+# fastText model
+# -----------------------------------------------------------------------------
+# facebook/fasttext-language-identification is the lid218e model. Labels are
+# "{iso639-3}_{script}", e.g. "__label__eng_Latn", "__label__sin_Sinh".
+# utils.parse_fasttext_label() downgrades those to ISO 639-1 codes.
+model:
+  repo_id: facebook/fasttext-language-identification
+  filename: model.bin
+
+  # Downloaded here so the model is fetched once and reused. A relative path
+  # is resolved against the wandaraya-backend root; the environment variable
+  # below overrides it entirely.
+  local_dir: models/fasttext-language-identification
+  env_dir_override: WANDARAYA_LANGDETECT_MODEL_DIR
+
+  # Set to an absolute .bin path to bypass download and HF lookup entirely.
+  local_path: null
+
+  # Set true to forbid network access. Missing local files then fail fast.
+  local_files_only: false
+
+  # Load the model during LanguageDetector.__init__.
+  auto_load: true
+
+  # Number of labels requested from predict_top_k(). Kept small: only the
+  # top label drives the decision, the rest feeds the confidence report.
+  top_k: 3
+
+# -----------------------------------------------------------------------------
+# Confidence thresholds
+# -----------------------------------------------------------------------------
+thresholds:
+  # Normal messages: below this, low_confidence = true.
+  standard_confidence: 0.70
+
+  # Single short words ("hi", "මම"): detection still runs, but with this
+  # lower bar because a 2-4 character sample carries little signal.
+  short_text_confidence: 0.50
+
+  # Below this, the model is considered unusable and the character-based
+  # heuristic detector takes over.
+  fallback_confidence: 0.50
+
+  # Confidence assigned when script evidence is deterministic, e.g. the
+  # message is unambiguously Sinhala script so the label is known even
+  # though the model scored it low.
+  script_confidence: 0.95
+
+  # Confidence assigned when the Singlish lexicon fires without a usable
+  # model score. The lexicon is a narrow heuristic, hence below the script
+  # prior.
+  singlish_confidence: 0.60
+
+# -----------------------------------------------------------------------------
+# Supported languages
+# -----------------------------------------------------------------------------
+# "code" is the value returned as language_code and consumed downstream.
+# "model_codes" lists every fastText code that maps onto this language, in
+# both ISO 639-1 and ISO 639-3 form.
+languages:
+  si:
+    name: Sinhala
+    model_codes: [si, sin]
+  en:
+    name: English
+    model_codes: [en, eng]
+  singlish:
+    name: Singlish
+    model_codes: []
+  code_mixed:
+    name: Code-Switched
+    model_codes: []
+  hi:
+    name: Hindi
+    model_codes: [hi, hin]
+  zh:
+    name: Chinese
+    model_codes: [zh, zho, cmn]
+  de:
+    name: German
+    model_codes: [de, deu]
+  fr:
+    name: French
+    model_codes: [fr, fra]
+  ru:
+    name: Russian
+    model_codes: [ru, rus]
+  it:
+    name: Italian
+    model_codes: [it, ita]
+  es:
+    name: Spanish
+    model_codes: [es, spa]
+
+# -----------------------------------------------------------------------------
+# Non-linguistic outcomes
+# -----------------------------------------------------------------------------
+# These are returned instead of a language and must be handled by the caller
+# before any translation or normalisation pipeline is chosen.
+special_codes:
+  non_text:
+    name: non-text
+    model_codes: []
+  unknown:
+    name: unknown
+    model_codes: []
+
+# -----------------------------------------------------------------------------
+# Result cache
+# -----------------------------------------------------------------------------
+# Key format: "langdetect:{sha256_of_cleaned_lowercased_text}".
+# Redis is optional; when it is unreachable the module falls back to a
+# bounded in-process LRU so caching never becomes a hard dependency.
+cache:
+  enabled: true
+  ttl_seconds: 86400 # 24 hours
+  redis_url: redis://localhost:6379/0
+  key_prefix: langdetect
+  socket_timeout_seconds: 1.0
+  max_memory_entries: 10000
+
+# -----------------------------------------------------------------------------
+# Short text rules
+# -----------------------------------------------------------------------------
+# Gate order in LanguageDetector.detect() is: non-text, then short text.
+# The emoji gate runs first so "👍" is reported as non-text rather than as an
+# unknown single character.
+short_text:
+  min_length: 2
+  single_word_max_length: 5
+  single_word_max_words: 1
+  allow_emoji_gate: true
+
+# -----------------------------------------------------------------------------
+# Singlish (Romanized Sinhala) heuristic
+# -----------------------------------------------------------------------------
+# fastText has no Singlish class and will label Romanized Sinhala as English.
+# A message is labelled "singlish" only when the fastText label is English
+# (or unusable) and the lexicon fires, so a confidently detected foreign
+# language is never relabelled.
+singlish:
+  enabled: true
+  min_tokens: 2
+  min_markers: 1
+
+  # When a message carries this many ordinary English function words, the
+  # lexicon result is suppressed. This is what keeps "I want to go to Kandy"
+  # out of the Singlish branch.
+  english_stopword_guard: true
+  english_stopword_guard_count: 3
+
+  # Discriminative Romanized-Sinhala tokens. Deliberately excludes words that
+  # are also ordinary English ("one", "rice", "gala", "man") and standard
+  # English place spellings such as "Kandy" or "Galle".
+  lexicon:
+    - mama
+    - appa
+    - amma
+    - thaththa
+    - unta
+    - api
+    - mata
+    - mey
+    - mehe
+    - ta
+    - yata
+    - thama
+    - anne
+    - inne
+    - inneee
+    - ekka
+    - namak
+    - kohedha
+    - hari
+    - gana
+    - yanna
+    - yanawa
+    - yanne
+    - yena
+    - yada
+    - yamu
+    - ena
+    - enawa
+    - gamanawa
+    - gamanne
+    - karanawa
+    - karanne
+    - karanna
+    - balanna
+    - balanawa
+    - hodama
+    - kiyala
+    - katika
+    - katha
+    - kade
+    - kanda
+    - pissa
+    - vandi
+    - pambara
+    - goviya
+    - peli
+    - yaluwa
+    - udapadi
+    - dikala
+    - wenas
+    - wenasa
+    - pahasu
+    - viharamaya
+    - kulle
+    - pani
+    - kopi
+    - kele
+    - balu
+    - rith
+    - hangala
+    - uru
+    - petti
+    - perala
+    - kuwada
+    - lapata
+    - nadiya
+    - kelani
+    - mahaweli
+    - kolomba
+    - kolambo
+    - yamuwa
+    - nawa
+    - udupitiya
+    - hanguranketha
+    - thalagune
+    - udawalawe
+    - weera
+    - sirisena
+    - perera
+    - gunawardena
+
+  # Ordinary English function words used by the guard above.
+  english_stopwords:
+    - the
+    - a
+    - an
+    - and
+    - or
+    - but
+    - if
+    - is
+    - are
+    - was
+    - be
+    - been
+    - am
+    - to
+    - of
+    - in
+    - "on"
+    - at
+    - for
+    - with
+    - from
+    - by
+    - i
+    - you
+    - we
+    - he
+    - she
+    - it
+    - they
+    - my
+    - your
+    - our
+    - their
+    - do
+    - does
+    - did
+    - can
+    - could
+    - should
+    - would
+    - will
+    - please
+    - want
+    - need
+    - going
+    - go
+    - come
+    - how
+    - what
+    - when
+    - where
+    - why
+    - that
+    - this
+    - there
+    - here
+    - now
+    - today
+    - tomorrow
+    - not
+    - "no"
+    - "yes"
+
+# -----------------------------------------------------------------------------
+# Logging
+# -----------------------------------------------------------------------------
+# Every prediction is logged at INFO with the input text, detected language,
+# confidence, and the fallback / short-text / non-text flags.
+logging:
+  level: INFO
+  log_predictions: true
