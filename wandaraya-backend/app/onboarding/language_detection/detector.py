@@ -1,4 +1,10 @@
-"""Language detection for the Wandaraya group chat."""
+"""Language detection for the Wandaraya group chat.
+
+Detects Sinhala, English, Singlish, code-switched, and foreign
+languages in informal chat messages. The ``language`` and
+``language_code`` fields are the routing signal consumed by the
+Translation, Singlish Normalisation, and Code-Switch Handler modules.
+"""
 
 from __future__ import annotations
 
@@ -29,6 +35,7 @@ from app.onboarding.language_detection.utils import (
 LOGGER = logging.getLogger(__name__)
 
 PACKAGE_LOGGER_NAME = "app.onboarding.language_detection"
+
 MODULE_DIR = Path(__file__).resolve().parent
 DEFAULT_CONFIG_PATH = MODULE_DIR / "config.yaml"
 
@@ -108,9 +115,7 @@ class LanguageDetector:
             self._thresholds.get("singlish_confidence", 0.60)
         )
 
-        self._min_length = int(
-            self._short_text_config.get("min_length", 2)
-        )
+        self._min_length = int(self._short_text_config.get("min_length", 2))
         self._single_word_max_length = int(
             self._short_text_config.get("single_word_max_length", 5)
         )
@@ -173,6 +178,21 @@ class LanguageDetector:
     def detect(self, text: str) -> Dict[str, Any]:
         """Detect the language of a single message.
 
+        Pipeline (in order):
+
+        1. Validate and NFC-normalise the input.
+        2. Non-text gate: emoji/symbol-only messages are not language.
+        3. Short-text gate: fewer than ``short_text.min_length`` chars.
+        4. Cache lookup.
+        5. fastText prediction via :class:`FastTextModel`.
+        6. Script gate: Sinhala script and Sinhala+Latin mixing are
+           decided by Unicode range, which is deterministic and beats
+           the model.
+        7. Singlish lexicon for Romanized Sinhala, which fastText has
+           no class for.
+        8. Character-based fallback when the model is unusable.
+        9. Threshold check, cache write, and prediction logging.
+
         Non-string input is reported as ``unknown`` rather than raising,
         because a malformed payload must not break a group chat.
         """
@@ -203,6 +223,7 @@ class LanguageDetector:
             return result
 
         cleaned = clean_text(text)
+
         result = self._detect_cleaned(text, cleaned)
 
         self._detections += 1
@@ -219,10 +240,8 @@ class LanguageDetector:
 
         return result
 
-    def detect_batch(
-        self, texts: List[str]
-    ) -> List[Dict[str, Any]]:
-        """Detect several messages, preserving order."""
+    def detect_batch(self, texts: List[str]) -> List[Dict[str, Any]]:
+        """Detect the language of several messages, preserving order."""
 
         if texts is None:
             LOGGER.warning("detect_batch received None instead of a list")
@@ -276,9 +295,7 @@ class LanguageDetector:
 
         return info
 
-    def evaluate(
-        self, test_data: List[Dict[str, Any]]
-    ) -> Dict[str, Any]:
+    def evaluate(self, test_data: List[Dict[str, Any]]) -> Dict[str, Any]:
         """Score the detector against a labelled set.
 
         Each sample needs ``text`` and either ``language_code`` or
@@ -451,9 +468,7 @@ class LanguageDetector:
                 else None
             ),
             "model_error": (
-                self._model.load_error
-                if self._model is not None
-                else None
+                self._model.load_error if self._model is not None else None
             ),
             "cache": self._cache.get_stats(),
             "thresholds": {
@@ -584,8 +599,8 @@ class LanguageDetector:
         """Turn a model prediction into the final labelled result.
 
         Priority: code-mixed script → Sinhala script → unsupported
-        model label → usable model label → Singlish lexicon → character
-        fallback.
+        Latin-script label → usable model label → Singlish lexicon →
+        character fallback.
         """
 
         has_sinhala = contains_sinhala(cleaned)
@@ -650,25 +665,41 @@ class LanguageDetector:
         singlish_hit = bool(singlish_markers)
 
         if model_confident and model_code is None:
+            # Latin-to-Latin mismatch (e.g. "Kandy" → pol_Latn) prefers
+            # English; a non-Latin mismatch stays unknown so non-Latin
+            # scripts are never relabelled.
+            _, predicted_script = parse_fasttext_label(label)
+            script_upper = (predicted_script or "").upper()
+            latin_to_latin = has_latin and script_upper in ("", "LATN")
+
+            if not latin_to_latin:
+                LOGGER.info(
+                    "Text in %s (%s) is not a supported language, "
+                    "reporting unknown rather than guessing",
+                    label,
+                    cleaned[:40],
+                )
+
+                result = self._build_result(
+                    language=LANGUAGE_UNKNOWN,
+                    code=CODE_UNKNOWN,
+                    confidence=confidence,
+                    is_code_switched=False,
+                    short_text=short_text,
+                    non_text=False,
+                    fallback_used=False,
+                    raw_label=label,
+                    source=SOURCE_FASTTEXT,
+                )
+
+                return self._finalise(result, threshold)
+
             LOGGER.info(
-                "Text in %s (%s) is not a supported language, reporting "
-                "unknown rather than guessing",
+                "Model reported unsupported Latin-script language %s for "
+                "Latin text (%s); using the character heuristic instead",
                 label,
                 cleaned[:40],
             )
-
-            result = self._build_result(
-                language=LANGUAGE_UNKNOWN,
-                code=CODE_UNKNOWN,
-                confidence=confidence,
-                is_code_switched=False,
-                short_text=short_text,
-                non_text=False,
-                fallback_used=False,
-                raw_label=label,
-                source=SOURCE_FASTTEXT,
-            )
-            return self._finalise(result, threshold)
 
         if model_usable and model_code not in (CODE_SINHALA,):
             code = (
@@ -688,6 +719,7 @@ class LanguageDetector:
                 raw_label=label,
                 source=SOURCE_FASTTEXT,
             )
+
             return self._finalise(result, threshold)
 
         if singlish_hit:
@@ -706,6 +738,7 @@ class LanguageDetector:
                 raw_label=label,
                 source=SOURCE_CHARACTER_HEURISTIC,
             )
+
             return self._finalise(result, threshold)
 
         fallback_result = self._fallback.detect(cleaned)
@@ -797,6 +830,7 @@ class LanguageDetector:
         level = getattr(logging, level_name, logging.INFO)
 
         package_logger = logging.getLogger(PACKAGE_LOGGER_NAME)
+
         package_logger.setLevel(level)
 
         if not package_logger.handlers:
@@ -864,6 +898,7 @@ class LanguageDetector:
                 if isinstance(entry, dict)
                 else []
             )
+
             for model_code in model_codes:
                 mapping[str(model_code).lower()] = code
 
@@ -875,6 +910,7 @@ class LanguageDetector:
                 if isinstance(entry, dict)
                 else []
             )
+
             for model_code in model_codes:
                 mapping[str(model_code).lower()] = code
 
@@ -925,6 +961,7 @@ class LanguageDetector:
             return []
 
         words = [item for item in value if isinstance(item, str)]
+
         dropped = len(value) - len(words)
 
         if dropped:
@@ -1006,9 +1043,7 @@ class LanguageDetector:
         return {
             "accuracy": float(accuracy_score(y_true, y_pred)),
             "macro_f1": float(
-                f1_score(
-                    y_true, y_pred, average="macro", zero_division=0
-                )
+                f1_score(y_true, y_pred, average="macro", zero_division=0)
             ),
             "weighted_f1": float(
                 f1_score(
@@ -1016,9 +1051,7 @@ class LanguageDetector:
                 )
             ),
             "micro_f1": float(
-                f1_score(
-                    y_true, y_pred, average="micro", zero_division=0
-                )
+                f1_score(y_true, y_pred, average="micro", zero_division=0)
             ),
             "per_language": per_language,
         }
@@ -1093,9 +1126,7 @@ class LanguageDetector:
         return {
             "accuracy": correct / total if total else 0.0,
             "macro_f1": f1_sum / len(labels) if labels else 0.0,
-            "weighted_f1": (
-                weighted_f1_sum / total if total else 0.0
-            ),
+            "weighted_f1": weighted_f1_sum / total if total else 0.0,
             "micro_f1": correct / total if total else 0.0,
             "per_language": per_language,
         }
@@ -1162,4 +1193,192 @@ class LanguageDetector:
 
         LOGGER.info(
             "detect | text=%s | language=%s (code=%s) | confidence=%.4f "
-            "
+            "| fallback=%s | short_text=%s | non_text=%s "
+            "| code_switched=%s | source=%s | raw_label=%s",
+            json.dumps(raw_text, ensure_ascii=False),
+            result["language"],
+            result["language_code"],
+            result["confidence"],
+            result["fallback_used"],
+            result["short_text"],
+            result["non_text"],
+            result["is_code_switched"],
+            result["source"],
+            result["raw_label"],
+        )
+
+
+SAMPLE_INPUTS: List[Dict[str, str]] = [
+    {
+        "text": "I want to go to Kandy",
+        "expected": "English",
+        "expected_code": "en",
+    },
+    {
+        "text": "මම කොළඹ යන්න ඕන",
+        "expected": "Sinhala",
+        "expected_code": "si",
+    },
+    {
+        "text": "mama kolamba yanna one",
+        "expected": "Singlish",
+        "expected_code": "singlish",
+    },
+    {
+        "text": "Beach trip එකට yanna plan karanawa",
+        "expected": "Code-Switched",
+        "expected_code": "code_mixed",
+    },
+    {
+        "text": "मैं कोलंबो जाना चाहता हूँ",
+        "expected": "Hindi",
+        "expected_code": "hi",
+    },
+    {"text": "hi", "expected": "English", "expected_code": "en"},
+    {"text": "මම", "expected": "Sinhala", "expected_code": "si"},
+    {
+        "text": "👍",
+        "expected": "non-text",
+        "expected_code": "non_text",
+    },
+    {
+        "text": "Kandy 👍",
+        "expected": "English",
+        "expected_code": "en",
+    },
+    {
+        "text": "",
+        "expected": "unknown",
+        "expected_code": "unknown",
+    },
+]
+
+
+def _run_samples(detector: LanguageDetector) -> None:
+    """Print a table of the built-in samples and their results."""
+
+    header = (
+        f"{'#':>2}  {'input':<38} {'expected':<14} "
+        f"{'detected':<14} {'code':<11} {'conf':>6}  flags"
+    )
+
+    print(header)
+    print("-" * len(header))
+
+    for index, sample in enumerate(SAMPLE_INPUTS, start=1):
+        result = detector.detect(sample["text"])
+
+        flags = []
+
+        if result["fallback_used"]:
+            flags.append("fallback")
+
+        if result["short_text"]:
+            flags.append("short")
+
+        if result["non_text"]:
+            flags.append("non_text")
+
+        if result["low_confidence"]:
+            flags.append("low_conf")
+
+        if result["is_code_switched"]:
+            flags.append("code_switched")
+
+        preview = sample["text"] if sample["text"] else "<empty>"
+
+        print(
+            f"{index:>2}  {preview[:38]:<38} "
+            f"{sample['expected']:<14} {result['language']:<14} "
+            f"{result['language_code']:<11} "
+            f"{result['confidence']:>6.3f}  {','.join(flags) or '-'}"
+        )
+
+    print()
+
+    stats = detector.get_stats()
+
+    print(f"Model loaded : {stats['model_loaded']} ({stats['model_source']})")
+    print(f"Cache backend: {stats['cache']['backend']}")
+    print(f"Detections   : {stats['detections']}")
+    print(f"Fallback uses: {stats['fallback_uses']}")
+
+
+def _run_evaluation(detector: LanguageDetector) -> None:
+    """Print an accuracy/F1 summary over the built-in samples."""
+
+    test_data = [
+        {
+            "text": sample["text"],
+            "language_code": sample["expected_code"],
+        }
+        for sample in SAMPLE_INPUTS
+    ]
+
+    metrics = detector.evaluate(test_data)
+
+    print()
+    print("Evaluation")
+    print("----------")
+    print(f"Accuracy    : {metrics['accuracy']:.4f}")
+    print(f"Macro F1    : {metrics['macro_f1']:.4f}")
+    print(f"Weighted F1 : {metrics['weighted_f1']:.4f}")
+
+    if metrics["misclassified"]:
+        print("Misclassified:")
+
+        for sample in metrics["misclassified"]:
+            print(
+                f"  {sample['text'][:32]:<32} "
+                f"expected={sample['expected']:<11} "
+                f"got={sample['predicted']}"
+            )
+
+
+def _force_utf8_console() -> None:
+    """Make stdout and stderr UTF-8 tolerant of non-Latin output."""
+
+    for stream in (sys.stdout, sys.stderr):
+        reconfigure = getattr(stream, "reconfigure", None)
+
+        if reconfigure is None:
+            continue
+
+        try:
+            reconfigure(encoding="utf-8", errors="replace")
+        except (OSError, ValueError) as error:
+            LOGGER.debug(
+                "Could not switch %s to UTF-8: %s", stream, error
+            )
+
+
+if __name__ == "__main__":
+    _force_utf8_console()
+
+    logging.basicConfig(
+        level=logging.INFO,
+        format=(
+            "%(asctime)s | %(levelname)-7s | %(name)s | %(message)s"
+        ),
+    )
+
+    LOGGER.info("=" * 70)
+    LOGGER.info("Wandaraya language detection module - smoke test")
+    LOGGER.info("=" * 70)
+
+    demo_detector = LanguageDetector()
+
+    _run_samples(demo_detector)
+
+    stats = demo_detector.get_stats()
+
+    if not stats["model_loaded"]:
+        LOGGER.warning(
+            "The fastText model is not loaded. Results above come from "
+            "character heuristics only. See the module README to install "
+            "the fastText binding and allow the model download."
+        )
+    else:
+        _run_evaluation(demo_detector)
+
+    demo_detector.close()
