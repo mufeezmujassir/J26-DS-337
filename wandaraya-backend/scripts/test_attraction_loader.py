@@ -15,7 +15,7 @@ async def main()->None:
     connector=GooglePlacesConnector()
 
     place_id = (
-        "ChIJXQLueKNz4ToR_sMWrhaKb7k"
+        "ChIJ_9U2xtQ_4ToRspMatLlWFLg"
     )
 
     raw_place = await connector.get_place_details(

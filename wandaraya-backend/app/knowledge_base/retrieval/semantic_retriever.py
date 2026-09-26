@@ -19,6 +19,7 @@ class SemanticCandidate:
     city:str
     district_id:int
 
+
 class SemanticAttractionRetriever:
     def __init__(
         self,
@@ -51,6 +52,7 @@ class SemanticAttractionRetriever:
             limit: int = 10,
     ) -> list[SemanticCandidate]:
 
+
         clean_query = query.strip()
         if not clean_query:
             raise ValueError("Query cannot be empty.")
@@ -58,6 +60,7 @@ class SemanticAttractionRetriever:
         query_embedding = (
             AttractionEmbeddingService.encode_query(clean_query)
         )
+
 
         try:
             response = self.client.query_points(
@@ -99,6 +102,7 @@ class SemanticAttractionRetriever:
                 )
             )
 
+
         if not scored_ids:
             return []
 
@@ -128,6 +132,7 @@ class SemanticAttractionRetriever:
             attraction = attraction_map.get(
                 attraction_id
             )
+
 
             if attraction is None:
                 continue

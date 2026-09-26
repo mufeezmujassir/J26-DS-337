@@ -16,6 +16,8 @@ AsyncSessionLocal = async_sessionmaker(
     expire_on_commit=False,
 )
 
+# Backwards-compat# Backwards-compatible alias for older sync-style imports
+
 class Base(DeclarativeBase):
     pass
 
