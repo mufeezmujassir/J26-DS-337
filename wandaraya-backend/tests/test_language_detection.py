@@ -1,18 +1,12 @@
-"""Tests for the Wandaraya language detection module (Component 4).
+"""Tests for the Wandaraya language detection module.
 
-The suite runs with or without the fastText model present. A
-1.1 GB model download must never be triggered by a test run, so every
-detector is built with caching off and either an injected stub model or
-``auto_load_model=False``.
-
-Run from the ``wandaraya-backend`` root:
-
-    python -m pytest tests/test_language_detection.py -v
+   python -m pytest tests/test_language_detection.py -v
 """
 
 from __future__ import annotations
 
 import logging
+import re
 import sys
 import types
 from pathlib import Path
@@ -80,17 +74,8 @@ CODE_MIXED_TEXT = "Beach trip එකට yanna plan karanawa"
 HINDI_TEXT = "मैं कोलंबो जाना चाहता हूँ"
 
 
-# =============================================================================
-# Fixtures and helpers
-# =============================================================================
-
-
 class StubFastTextModel:
-    """Stand-in for :class:`FastTextModel` with scripted predictions.
-
-    Lets the tests exercise the full detector routing, including the
-    foreign-language paths, without the real 1.1 GB model.
-    """
+    """Stand-in for :class:`FastTextModel` with scripted predictions."""
 
     def __init__(
         self,
@@ -109,7 +94,7 @@ class StubFastTextModel:
 
     @property
     def source(self) -> str:
-        """Where the "model" came from."""
+        """Where the stub model came from."""
 
         return self._source
 
@@ -155,13 +140,7 @@ class StubFastTextModel:
 
 @pytest.fixture(autouse=True)
 def quiet_module_logging():
-    """Silence module logging so test output stays readable.
-
-    The module installs its own handler and disables propagation, so
-    this trims the level rather than removing handlers. Propagation is
-    restored to False afterwards because the log-content test needs to
-    re-enable it for caplog.
-    """
+    """Silence module logging so test output stays readable."""
 
     package_logger = logging.getLogger(PACKAGE_LOGGER_NAME)
     previous_level = package_logger.level
@@ -227,11 +206,6 @@ def make_detector(
     )
 
 
-# =============================================================================
-# utils
-# =============================================================================
-
-
 class TestScriptDetection:
     """Script and emoji predicates."""
 
@@ -278,15 +252,7 @@ class TestEmojiAndSymbols:
 
     @pytest.mark.parametrize(
         "text",
-        [
-            "👍",
-            "😀🎉🔥",
-            "!!!",
-            "...",
-            "🙏🏽",
-            "🇱🇰",
-            "❤️",
-        ],
+        ["👍", "😀🎉🔥", "!!!", "...", "🙏🏽", "🇱🇰", "❤️"],
     )
     def test_symbol_only_text_is_non_text(self, text):
         assert contains_only_emoji_or_symbols(text) is True
@@ -370,12 +336,10 @@ class TestTextNormalisation:
 
 
 class TestFastTextLabels:
-    """Label parsing for the lid218e and lid.176 label shapes."""
+    """Label parsing for lid218e and lid.176 shapes."""
 
     def test_strip_prefix(self):
-        assert (
-            strip_fasttext_label("__label__eng_Latn") == "eng_Latn"
-        )
+        assert strip_fasttext_label("__label__eng_Latn") == "eng_Latn"
         assert strip_fasttext_label("eng_Latn") == "eng_Latn"
         assert strip_fasttext_label(None) == ""
 
@@ -458,10 +422,7 @@ class TestSinglishHeuristic:
 
     def test_matches_romanized_sinhala(self):
         assert (
-            is_probably_singlish(
-                SINGLISH_TEXT,
-                lexicon=self.LEXICON,
-            )
+            is_probably_singlish(SINGLISH_TEXT, lexicon=self.LEXICON)
             is True
         )
 
@@ -476,11 +437,7 @@ class TestSinglishHeuristic:
 
     def test_rejects_when_too_few_tokens(self):
         assert (
-            is_probably_singlish(
-                "mama",
-                lexicon=self.LEXICON,
-            )
-            is False
+            is_probably_singlish("mama", lexicon=self.LEXICON) is False
         )
 
     def test_stopword_guard_suppresses_english(self):
@@ -506,14 +463,10 @@ class TestSinglishHeuristic:
         )
 
     def test_empty_lexicon_never_matches(self):
-        assert (
-            is_probably_singlish(SINGLISH_TEXT, lexicon=[]) is False
-        )
+        assert is_probably_singlish(SINGLISH_TEXT, lexicon=[]) is False
 
     def test_empty_text_never_matches(self):
-        assert (
-            is_probably_singlish("", lexicon=self.LEXICON) is False
-        )
+        assert is_probably_singlish("", lexicon=self.LEXICON) is False
 
 
 class TestConfigLoading:
@@ -523,9 +476,7 @@ class TestConfigLoading:
         config = load_config(str(DEFAULT_CONFIG_PATH))
 
         assert config["thresholds"]["standard_confidence"] == 0.70
-        assert (
-            config["thresholds"]["short_text_confidence"] == 0.50
-        )
+        assert config["thresholds"]["short_text_confidence"] == 0.50
         assert config["thresholds"]["fallback_confidence"] == 0.50
         assert config["cache"]["ttl_seconds"] == 86400
         assert config["model"]["repo_id"] == (
@@ -536,17 +487,8 @@ class TestConfigLoading:
         config = load_config(str(DEFAULT_CONFIG_PATH))
 
         for code in (
-            "si",
-            "en",
-            "singlish",
-            "code_mixed",
-            "hi",
-            "zh",
-            "de",
-            "fr",
-            "ru",
-            "it",
-            "es",
+            "si", "en", "singlish", "code_mixed", "hi", "zh", "de",
+            "fr", "ru", "it", "es",
         ):
             assert code in config["languages"], code
             assert config["languages"][code]["name"]
@@ -597,11 +539,7 @@ class TestConfigLoading:
             load_config(str(scalar))
 
     def test_word_lists_contain_only_strings(self):
-        """Regression: unquoted YAML booleans in word lists.
-
-        ``- yes``, ``- no``, ``- on``, and ``- off`` parse as booleans,
-        which used to raise inside the detection path.
-        """
+        """Regression: unquoted YAML booleans in word lists."""
 
         config = load_config(str(DEFAULT_CONFIG_PATH))
         singlish = config["singlish"]
@@ -627,11 +565,6 @@ class TestConfigLoading:
         assert merged == {"a": {"b": 1, "c": 2}}
         assert base == {"a": {"b": 1}}
         assert override == {"a": {"c": 2}}
-
-
-# =============================================================================
-# fallback
-# =============================================================================
 
 
 class TestCharacterBasedFallback:
@@ -690,19 +623,13 @@ class TestCharacterBasedFallback:
             ("Я хочу поехать в Коломбо", "ru"),
         ],
     )
-    def test_other_scripts_map_to_their_language(
-        self,
-        text,
-        expected,
-    ):
+    def test_other_scripts_map_to_their_language(self, text, expected):
         result = CharacterBasedDetector().detect(text)
 
         assert result["language_code"] == expected
 
     def test_unmapped_script_is_unknown_not_english(self):
-        result = CharacterBasedDetector().detect(
-            "ทะเล"
-        )
+        result = CharacterBasedDetector().detect("ทะเล")
 
         assert result["language_code"] == "unknown"
 
@@ -720,11 +647,6 @@ class TestCharacterBasedFallback:
         ]
 
 
-# =============================================================================
-# cache
-# =============================================================================
-
-
 class TestCache:
     """Result cache behaviour and graceful degradation."""
 
@@ -738,10 +660,7 @@ class TestCache:
         assert cache.get("මම") is None
 
     def test_set_and_get_roundtrip(self):
-        cache = LanguageDetectionCache(
-            enabled=True,
-            redis_url=None,
-        )
+        cache = LanguageDetectionCache(enabled=True, redis_url=None)
 
         result = {"language": "Sinhala", "language_code": "si"}
         cache.set(SINHALA_TEXT, result)
@@ -749,26 +668,17 @@ class TestCache:
         assert cache.get(SINHALA_TEXT) == result
 
     def test_backend_is_redis_or_memory(self):
-        cache = LanguageDetectionCache(
-            enabled=True,
-            redis_url=None,
-        )
+        cache = LanguageDetectionCache(enabled=True, redis_url=None)
 
         assert cache.backend in {BACKEND_REDIS, BACKEND_MEMORY}
 
     def test_miss_returns_none(self):
-        cache = LanguageDetectionCache(
-            enabled=True,
-            redis_url=None,
-        )
+        cache = LanguageDetectionCache(enabled=True, redis_url=None)
 
         assert cache.get("never cached text at all") is None
 
     def test_lookup_ignores_case_and_whitespace(self):
-        cache = LanguageDetectionCache(
-            enabled=True,
-            redis_url=None,
-        )
+        cache = LanguageDetectionCache(enabled=True, redis_url=None)
 
         cache.set("Yanna", {"language_code": "singlish"})
 
@@ -776,9 +686,7 @@ class TestCache:
 
     def test_expired_entry_is_a_miss(self):
         cache = LanguageDetectionCache(
-            enabled=True,
-            redis_url=None,
-            ttl_seconds=0,
+            enabled=True, redis_url=None, ttl_seconds=0
         )
 
         cache.set("මම", {"language_code": "si"})
@@ -786,10 +694,7 @@ class TestCache:
         assert cache.get("මම") is None
 
     def test_delete_removes_entry(self):
-        cache = LanguageDetectionCache(
-            enabled=True,
-            redis_url=None,
-        )
+        cache = LanguageDetectionCache(enabled=True, redis_url=None)
 
         cache.set("මම", {"language_code": "si"})
 
@@ -797,10 +702,7 @@ class TestCache:
         assert cache.get("මම") is None
 
     def test_clear_empties_the_cache(self):
-        cache = LanguageDetectionCache(
-            enabled=True,
-            redis_url=None,
-        )
+        cache = LanguageDetectionCache(enabled=True, redis_url=None)
 
         cache.set("මම", {"language_code": "si"})
         cache.set("කොළඹ", {"language_code": "si"})
@@ -812,9 +714,7 @@ class TestCache:
 
     def test_lru_eviction_bounds_memory(self):
         cache = LanguageDetectionCache(
-            enabled=True,
-            redis_url=None,
-            max_memory_entries=2,
+            enabled=True, redis_url=None, max_memory_entries=2
         )
 
         cache.set("first message here", {"language_code": "en"})
@@ -826,10 +726,7 @@ class TestCache:
         assert stats["memory_entries"] <= 2
 
     def test_malformed_payload_is_dropped(self):
-        cache = LanguageDetectionCache(
-            enabled=True,
-            redis_url=None,
-        )
+        cache = LanguageDetectionCache(enabled=True, redis_url=None)
 
         key = cache._make_key("මම")
         cache._memory[key] = (float("inf"), "not-a-dict")
@@ -837,20 +734,14 @@ class TestCache:
         assert cache.get("මම") is None
 
     def test_non_dict_result_is_refused(self):
-        cache = LanguageDetectionCache(
-            enabled=True,
-            redis_url=None,
-        )
+        cache = LanguageDetectionCache(enabled=True, redis_url=None)
 
         cache.set("මම", "not a dict")
 
         assert cache.get("මම") is None
 
     def test_stats_track_hits_and_misses(self):
-        cache = LanguageDetectionCache(
-            enabled=True,
-            redis_url=None,
-        )
+        cache = LanguageDetectionCache(enabled=True, redis_url=None)
 
         cache.set("මම", {"language_code": "si"})
         cache.get("මම")
@@ -863,29 +754,18 @@ class TestCache:
         assert 0.0 <= stats["hit_rate"] <= 1.0
 
     def test_get_with_invalid_input(self):
-        cache = LanguageDetectionCache(
-            enabled=True,
-            redis_url=None,
-        )
+        cache = LanguageDetectionCache(enabled=True, redis_url=None)
 
         assert cache.get(None) is None
         assert cache.get(123) is None
 
     def test_close_is_safe_to_call_twice(self):
-        cache = LanguageDetectionCache(
-            enabled=True,
-            redis_url=None,
-        )
+        cache = LanguageDetectionCache(enabled=True, redis_url=None)
 
         cache.close()
         cache.close()
 
         assert cache.get("මම") is None
-
-
-# =============================================================================
-# FastTextModel
-# =============================================================================
 
 
 class FakeFastTextBackend:
@@ -980,9 +860,7 @@ class TestFastTextModelWrapper:
             model.predict_top_k("Kandy")
 
     def test_missing_binding_is_reported(
-        self,
-        model_file,
-        monkeypatch,
+        self, model_file, monkeypatch
     ):
         monkeypatch.setitem(sys.modules, "fasttext", None)
 
@@ -994,14 +872,10 @@ class TestFastTextModelWrapper:
         with pytest.raises(FastTextModelError) as excinfo:
             model.load()
 
-        assert "fastText binding is not installed" in str(
-            excinfo.value
-        )
+        assert "fastText binding is not installed" in str(excinfo.value)
 
     def test_try_load_returns_false_instead_of_raising(
-        self,
-        model_file,
-        monkeypatch,
+        self, model_file, monkeypatch
     ):
         monkeypatch.setitem(sys.modules, "fasttext", None)
 
@@ -1015,10 +889,7 @@ class TestFastTextModelWrapper:
         assert model.load_error
 
     def test_loads_from_local_file(
-        self,
-        model_file,
-        fake_fasttext,
-        tmp_path,
+        self, model_file, fake_fasttext, tmp_path
     ):
         backend = fake_fasttext(FakeFastTextBackend())
 
@@ -1033,11 +904,9 @@ class TestFastTextModelWrapper:
         assert model.source == "local_file"
         assert model.model_path == model_file
         assert backend.loaded_paths == [str(model_file)]
+
     def test_predict_returns_label_and_confidence(
-        self,
-        model_file,
-        fake_fasttext,
-        tmp_path,
+        self, model_file, fake_fasttext, tmp_path
     ):
         fake_fasttext(FakeFastTextBackend())
 
@@ -1054,10 +923,7 @@ class TestFastTextModelWrapper:
         assert confidence == pytest.approx(0.91)
 
     def test_predict_strips_newlines(
-        self,
-        model_file,
-        fake_fasttext,
-        tmp_path,
+        self, model_file, fake_fasttext, tmp_path
     ):
         fake_fasttext(FakeFastTextBackend())
 
@@ -1073,10 +939,7 @@ class TestFastTextModelWrapper:
         assert label == "__label__eng_Latn"
 
     def test_predict_with_empty_text_returns_none(
-        self,
-        model_file,
-        fake_fasttext,
-        tmp_path,
+        self, model_file, fake_fasttext, tmp_path
     ):
         fake_fasttext(FakeFastTextBackend())
 
@@ -1092,10 +955,7 @@ class TestFastTextModelWrapper:
         assert model.predict(None) == (None, 0.0)
 
     def test_predict_failure_returns_none(
-        self,
-        model_file,
-        fake_fasttext,
-        tmp_path,
+        self, model_file, fake_fasttext, tmp_path
     ):
         fake_fasttext(FakeFastTextBackend(fail_predict=True))
 
@@ -1110,10 +970,7 @@ class TestFastTextModelWrapper:
         assert model.predict_top_k("Kandy") == []
 
     def test_predict_top_k_returns_ranked_pairs(
-        self,
-        model_file,
-        fake_fasttext,
-        tmp_path,
+        self, model_file, fake_fasttext, tmp_path
     ):
         fake_fasttext(
             FakeFastTextBackend(
@@ -1140,10 +997,7 @@ class TestFastTextModelWrapper:
         assert results[0][1] == pytest.approx(0.6)
 
     def test_corrupt_model_file_raises(
-        self,
-        model_file,
-        fake_fasttext,
-        tmp_path,
+        self, model_file, fake_fasttext, tmp_path
     ):
         fake_fasttext(FakeFastTextBackend(fail=True))
 
@@ -1159,10 +1013,7 @@ class TestFastTextModelWrapper:
         assert "could not be loaded" in str(excinfo.value)
         assert model.is_loaded is False
 
-    def test_local_files_only_without_a_file_raises(
-        self,
-        tmp_path,
-    ):
+    def test_local_files_only_without_a_file_raises(self, tmp_path):
         model = FastTextModel(
             local_path=str(tmp_path / "absent.bin"),
             local_dir=str(tmp_path / "cache"),
@@ -1176,9 +1027,7 @@ class TestFastTextModelWrapper:
         assert "local_files_only" in str(excinfo.value)
 
     def test_missing_huggingface_hub_is_reported(
-        self,
-        tmp_path,
-        monkeypatch,
+        self, tmp_path, monkeypatch
     ):
         monkeypatch.setitem(sys.modules, "huggingface_hub", None)
 
@@ -1194,10 +1043,7 @@ class TestFastTextModelWrapper:
         assert "huggingface_hub is required" in str(excinfo.value)
 
     def test_unload_resets_state(
-        self,
-        model_file,
-        fake_fasttext,
-        tmp_path,
+        self, model_file, fake_fasttext, tmp_path
     ):
         fake_fasttext(FakeFastTextBackend())
 
@@ -1213,10 +1059,7 @@ class TestFastTextModelWrapper:
         assert model.source == "unavailable"
 
     def test_get_info_is_serialisable(
-        self,
-        model_file,
-        fake_fasttext,
-        tmp_path,
+        self, model_file, fake_fasttext, tmp_path
     ):
         fake_fasttext(FakeFastTextBackend())
 
@@ -1234,35 +1077,21 @@ class TestFastTextModelWrapper:
         assert info["model_path"] == str(model_file)
 
 
-# =============================================================================
-# detector
-# =============================================================================
-
-
 class TestDetectorResultShape:
     """The detect() return contract."""
 
-    def test_result_contains_required_keys(
-        self,
-        fallback_detector,
-    ):
+    def test_result_contains_required_keys(self, fallback_detector):
         result = fallback_detector.detect(SINHALA_TEXT)
 
         assert RESULT_KEYS.issubset(result.keys())
 
-    def test_confidence_is_a_probability(
-        self,
-        fallback_detector,
-    ):
+    def test_confidence_is_a_probability(self, fallback_detector):
         for text in (SINHALA_TEXT, "Kandy", "👍", "", "hi"):
             confidence = fallback_detector.detect(text)["confidence"]
 
             assert 0.0 <= confidence <= 1.0
 
-    def test_non_string_input_returns_unknown(
-        self,
-        fallback_detector,
-    ):
+    def test_non_string_input_returns_unknown(self, fallback_detector):
         for value in (None, 123, 4.5, [], {}, object()):
             result = fallback_detector.detect(value)
 
@@ -1270,29 +1099,20 @@ class TestDetectorResultShape:
             assert result["confidence"] == 0.0
             assert "error" in result
 
-    def test_empty_string_returns_unknown(
-        self,
-        fallback_detector,
-    ):
+    def test_empty_string_returns_unknown(self, fallback_detector):
         result = fallback_detector.detect("")
 
         assert result["language"] == "unknown"
         assert result["language_code"] == "unknown"
         assert result["short_text"] is True
 
-    def test_whitespace_only_returns_unknown(
-        self,
-        fallback_detector,
-    ):
+    def test_whitespace_only_returns_unknown(self, fallback_detector):
         result = fallback_detector.detect("     ")
 
         assert result["language_code"] == "unknown"
         assert result["short_text"] is True
 
-    def test_language_and_code_are_consistent(
-        self,
-        detector,
-    ):
+    def test_language_and_code_are_consistent(self, detector):
         for text in (
             SINHALA_TEXT,
             "I want to go to Kandy",
@@ -1310,14 +1130,9 @@ class TestNonTextDetection:
     """Emoji-only and symbol-only messages."""
 
     @pytest.mark.parametrize(
-        "text",
-        ["👍", "😀🎉🔥", "🙏🏽", "🇱🇰"],
+        "text", ["👍", "😀🎉🔥", "🙏🏽", "🇱🇰"]
     )
-    def test_emoji_only_is_non_text(
-        self,
-        fallback_detector,
-        text,
-    ):
+    def test_emoji_only_is_non_text(self, fallback_detector, text):
         result = fallback_detector.detect(text)
 
         assert result["language"] == "non-text"
@@ -1325,27 +1140,18 @@ class TestNonTextDetection:
         assert result["non_text"] is True
         assert result["confidence"] == 1.0
 
-    def test_emoji_message_is_not_short_text(
-        self,
-        fallback_detector,
-    ):
+    def test_emoji_message_is_not_short_text(self, fallback_detector):
         result = fallback_detector.detect("👍")
 
         assert result["short_text"] is False
 
-    def test_text_with_emoji_is_still_detected(
-        self,
-        fallback_detector,
-    ):
+    def test_text_with_emoji_is_still_detected(self, fallback_detector):
         result = fallback_detector.detect("Kandy 👍")
 
         assert result["language_code"] == "en"
         assert result["non_text"] is False
 
-    def test_sinhala_with_emoji_is_sinhala(
-        self,
-        fallback_detector,
-    ):
+    def test_sinhala_with_emoji_is_sinhala(self, fallback_detector):
         result = fallback_detector.detect("මම කොළඹ 👍")
 
         assert result["language_code"] == "si"
@@ -1355,10 +1161,7 @@ class TestNonTextDetection:
 class TestShortTextDetection:
     """Short messages use the lowered confidence threshold."""
 
-    def test_single_character_is_unknown(
-        self,
-        fallback_detector,
-    ):
+    def test_single_character_is_unknown(self, fallback_detector):
         result = fallback_detector.detect("a")
 
         assert result["language_code"] == "unknown"
@@ -1377,10 +1180,7 @@ class TestShortTextDetection:
         assert result["language_code"] == "si"
         assert result["short_text"] is True
 
-    def test_short_text_uses_the_lower_threshold(
-        self,
-        base_config,
-    ):
+    def test_short_text_uses_the_lower_threshold(self, base_config):
         base_config["thresholds"]["short_text_confidence"] = 0.40
         base_config["thresholds"]["standard_confidence"] = 0.99
 
@@ -1397,18 +1197,12 @@ class TestShortTextDetection:
         assert short_result["low_confidence"] is False
         assert long_result["low_confidence"] is True
 
-    def test_longer_input_is_not_short_text(
-        self,
-        fallback_detector,
-    ):
+    def test_longer_input_is_not_short_text(self, fallback_detector):
         result = fallback_detector.detect("I want to go to Kandy")
 
         assert result["short_text"] is False
 
-    def test_short_text_passes_model_agreement(
-        self,
-        base_config,
-    ):
+    def test_short_text_passes_model_agreement(self, base_config):
         result = make_detector(
             base_config,
             responses={"මම": ("__label__sin_Sinh", 0.93)},
@@ -1457,10 +1251,7 @@ class TestLocalLanguageDetection:
         assert result["language_code"] == "code_mixed"
         assert result["is_code_switched"] is True
 
-    def test_code_switched_with_model_agreement(
-        self,
-        base_config,
-    ):
+    def test_code_switched_with_model_agreement(self, base_config):
         result = make_detector(
             base_config,
             responses={CODE_MIXED_TEXT: ("__label__eng_Latn", 0.88)},
@@ -1479,12 +1270,13 @@ class TestLocalLanguageDetection:
         assert result["language_code"] == "en"
 
     def test_confident_foreign_language_is_not_relabelled(
-        self,
-        base_config,
+        self, base_config
     ):
         result = make_detector(
             base_config,
-            responses={"mama kolamba yanna": ("__label__fra_Latn", 0.97)},
+            responses={
+                "mama kolamba yanna": ("__label__fra_Latn", 0.97)
+            },
         ).detect("mama kolamba yanna one")
 
         assert result["language_code"] == "fr"
@@ -1497,12 +1289,7 @@ class TestForeignLanguageDetection:
         "text,label,code,name",
         [
             (HINDI_TEXT, "__label__hin_Deva", "hi", "Hindi"),
-            (
-                "我想去科伦坡",
-                "__label__zho_Hans",
-                "zh",
-                "Chinese",
-            ),
+            ("我想去科伦坡", "__label__zho_Hans", "zh", "Chinese"),
             (
                 "Ich möchte nach Kandy",
                 "__label__deu_Latn",
@@ -1536,12 +1323,7 @@ class TestForeignLanguageDetection:
         ],
     )
     def test_foreign_language_is_mapped(
-        self,
-        base_config,
-        text,
-        label,
-        code,
-        name,
+        self, base_config, text, label, code, name
     ):
         result = make_detector(
             base_config,
@@ -1553,10 +1335,7 @@ class TestForeignLanguageDetection:
         assert result["fallback_used"] is False
         assert result["low_confidence"] is False
 
-    def test_unsupported_language_is_unknown(
-        self,
-        base_config,
-    ):
+    def test_unsupported_language_is_unknown(self, base_config):
         result = make_detector(
             base_config,
             responses={"supported": ("__label__jpn_Jpan", 0.99)},
@@ -1566,11 +1345,61 @@ class TestForeignLanguageDetection:
         assert result["fallback_used"] is False
         assert result["raw_label"] == "__label__jpn_Jpan"
 
-
-    def test_traditional_chinese_maps_to_chinese(
-        self,
-        base_config,
+    def test_unsupported_latin_label_on_latin_text_falls_back_to_english(
+        self, base_config
     ):
+        # lid218e scores bare English place names as unrelated
+        # Latin-script languages with high confidence ("Kandy" ->
+        # __label__pol_Latn at 0.98). English beats unknown here.
+        result = make_detector(
+            base_config,
+            default=("__label__pol_Latn", 0.98),
+        ).detect("Kandy")
+
+        assert result["language_code"] == "en"
+        assert result["source"] == "character_heuristic"
+        assert result["fallback_used"] is True
+        assert result["raw_label"] == "__label__pol_Latn"
+
+    def test_unsupported_latin_label_without_script_falls_back_to_english(
+        self, base_config
+    ):
+        # The smaller lid.176.ftz labels carry no script subtag, so an
+        # absent script must count as "no conflict" rather than blocking
+        # the fallback.
+        result = make_detector(
+            base_config,
+            default=("__label__pl", 0.97),
+        ).detect("Kandy")
+
+        assert result["language_code"] == "en"
+        assert result["fallback_used"] is True
+
+    def test_unsupported_non_latin_label_on_latin_text_stays_unknown(
+        self, base_config
+    ):
+        # A model claiming a non-Latin script for Latin text is a real
+        # signal that the text is not English.
+        result = make_detector(
+            base_config,
+            default=("__label__tha_Thai", 1.0),
+        ).detect("Kandy tour booking")
+
+        assert result["language_code"] == "unknown"
+        assert result["fallback_used"] is False
+
+    def test_unsupported_latin_label_on_non_latin_text_stays_unknown(
+        self, base_config
+    ):
+        result = make_detector(
+            base_config,
+            default=("__label__pol_Latn", 0.99),
+        ).detect("こんにちは、元気ですか")
+
+        assert result["language_code"] == "unknown"
+        assert result["fallback_used"] is False
+
+    def test_traditional_chinese_maps_to_chinese(self, base_config):
         result = make_detector(
             base_config,
             responses={"supported": ("__label__zho_Hant", 0.91)},
@@ -1582,10 +1411,7 @@ class TestForeignLanguageDetection:
 class TestConfidenceAndFallback:
     """Threshold handling and the character-based fallback route."""
 
-    def test_standard_threshold_flags_low_confidence(
-        self,
-        base_config,
-    ):
+    def test_standard_threshold_flags_low_confidence(self, base_config):
         result = make_detector(
             base_config,
             responses={"beach": ("__label__eng_Latn", 0.72)},
@@ -1600,10 +1426,7 @@ class TestConfidenceAndFallback:
 
         assert low["low_confidence"] is True
 
-    def test_below_fallback_threshold_uses_the_fallback(
-        self,
-        base_config,
-    ):
+    def test_below_fallback_threshold_uses_the_fallback(self, base_config):
         result = make_detector(
             base_config,
             responses={"beach": ("__label__eng_Latn", 0.20)},
@@ -1612,10 +1435,7 @@ class TestConfidenceAndFallback:
         assert result["fallback_used"] is True
         assert result["source"] == "character_heuristic"
 
-    def test_fallback_threshold_is_configurable(
-        self,
-        base_config,
-    ):
+    def test_fallback_threshold_is_configurable(self, base_config):
         base_config["thresholds"]["fallback_confidence"] = 0.10
 
         result = make_detector(
@@ -1627,20 +1447,14 @@ class TestConfidenceAndFallback:
         assert result["confidence"] == pytest.approx(0.20)
         assert result["low_confidence"] is True
 
-    def test_missing_model_uses_the_fallback(
-        self,
-        fallback_detector,
-    ):
+    def test_missing_model_uses_the_fallback(self, fallback_detector):
         result = fallback_detector.detect("I want to go to Kandy")
 
         assert result["fallback_used"] is True
         assert result["source"] == "character_heuristic"
         assert result["language_code"] == "en"
 
-    def test_model_raising_is_survivable(
-        self,
-        base_config,
-    ):
+    def test_model_raising_is_survivable(self, base_config):
         class ExplodingModel(StubFastTextModel):
             def predict(self, text):
                 raise RuntimeError("model exploded")
@@ -1654,10 +1468,7 @@ class TestConfidenceAndFallback:
         assert result["language_code"] == "en"
         assert result["fallback_used"] is True
 
-    def test_script_gate_overrides_a_wrong_model_label(
-        self,
-        base_config,
-    ):
+    def test_script_gate_overrides_a_wrong_model_label(self, base_config):
         result = make_detector(
             base_config,
             responses={SINHALA_TEXT: ("__label__eng_Latn", 0.10)},
@@ -1670,10 +1481,7 @@ class TestConfidenceAndFallback:
 class TestBatchDetection:
     """detect_batch ordering and robustness."""
 
-    def test_preserves_order_and_length(
-        self,
-        detector,
-    ):
+    def test_preserves_order_and_length(self, detector):
         texts = [
             "I want to go to Kandy",
             SINHALA_TEXT,
@@ -1697,10 +1505,7 @@ class TestBatchDetection:
     def test_none_batch_is_survivable(self, detector):
         assert detector.detect_batch(None) == []
 
-    def test_bare_string_is_treated_as_one_item(
-        self,
-        detector,
-    ):
+    def test_bare_string_is_treated_as_one_item(self, detector):
         results = detector.detect_batch("Kandy")
 
         assert len(results) == 1
@@ -1731,43 +1536,23 @@ class TestBatchDetection:
 class TestSupportedLanguages:
     """get_supported_languages and get_language_info."""
 
-    def test_lists_the_documented_languages(
-        self,
-        detector,
-    ):
+    def test_lists_the_documented_languages(self, detector):
         codes = detector.get_supported_languages()
 
         for code in (
-            "si",
-            "en",
-            "singlish",
-            "code_mixed",
-            "hi",
-            "zh",
-            "de",
-            "fr",
-            "ru",
-            "it",
-            "es",
+            "si", "en", "singlish", "code_mixed", "hi", "zh", "de",
+            "fr", "ru", "it", "es",
         ):
             assert code in codes
 
-    def test_excludes_special_codes_by_default(
-        self,
-        detector,
-    ):
+    def test_excludes_special_codes_by_default(self, detector):
         codes = detector.get_supported_languages()
 
         assert "non_text" not in codes
         assert "unknown" not in codes
 
-    def test_include_special_adds_non_linguistic_codes(
-        self,
-        detector,
-    ):
-        codes = detector.get_supported_languages(
-            include_special=True
-        )
+    def test_include_special_adds_non_linguistic_codes(self, detector):
+        codes = detector.get_supported_languages(include_special=True)
 
         assert "non_text" in codes
         assert "unknown" in codes
@@ -1783,10 +1568,7 @@ class TestSupportedLanguages:
 class TestEvaluation:
     """evaluate() metric computation."""
 
-    def test_perfect_predictions_score_one(
-        self,
-        fallback_detector,
-    ):
+    def test_perfect_predictions_score_one(self, fallback_detector):
         metrics = fallback_detector.evaluate(
             [
                 {"text": SINHALA_TEXT, "language_code": "si"},
@@ -1833,10 +1615,7 @@ class TestEvaluation:
 
         assert metrics["per_language"]["si"]["support"] == 1
 
-    def test_wrong_prediction_is_reported(
-        self,
-        base_config,
-    ):
+    def test_wrong_prediction_is_reported(self, base_config):
         metrics = make_detector(
             base_config,
             responses={"english": ("__label__deu_Latn", 0.95)},
@@ -1855,10 +1634,7 @@ class TestEvaluation:
         assert metrics["confusion"][0]["expected"] == "en"
         assert metrics["confusion"][0]["count"] == 1
 
-    def test_accepts_language_name_instead_of_code(
-        self,
-        fallback_detector,
-    ):
+    def test_accepts_language_name_instead_of_code(self, fallback_detector):
         metrics = fallback_detector.evaluate(
             [{"text": SINHALA_TEXT, "language": "si"}]
         )
@@ -1886,10 +1662,7 @@ class TestEvaluation:
         with pytest.raises(LanguageDetectionError):
             detector.evaluate([{"text": "no label"}])
 
-    def test_sklearn_report_present_when_available(
-        self,
-        detector,
-    ):
+    def test_sklearn_report_present_when_available(self, detector):
         pytest.importorskip("sklearn.metrics")
 
         metrics = detector.evaluate(
@@ -1902,10 +1675,7 @@ class TestEvaluation:
 class TestCacheIntegration:
     """Detector-level cache behaviour."""
 
-    def test_second_detection_is_served_from_cache(
-        self,
-        base_config,
-    ):
+    def test_second_detection_is_served_from_cache(self, base_config):
         base_config["cache"]["enabled"] = True
 
         cached_detector = LanguageDetector(
@@ -1923,10 +1693,7 @@ class TestCacheIntegration:
 
         cached_detector.close()
 
-    def test_disabling_the_cache_avoids_cache_hits(
-        self,
-        detector,
-    ):
+    def test_disabling_the_cache_avoids_cache_hits(self, detector):
         detector.detect("මම කොළඹ යන්න ඕන")
         detector.detect("මම කොළඹ යන්න ඕන")
 
@@ -1961,9 +1728,7 @@ class TestDetectorStatsAndLifecycle:
         assert detector.get_stats()["model_source"] == "stub"
 
     def test_load_model_with_no_model_creates_a_wrapper(
-        self,
-        base_config,
-        tmp_path,
+        self, base_config, tmp_path
     ):
         base_config["model"] = {
             **base_config["model"],
@@ -1990,9 +1755,7 @@ class TestDetectorStatsAndLifecycle:
         with pytest.raises(LanguageDetectionError):
             LanguageDetector(config_path="does/not/exist.yaml")
 
-    def test_config_path_is_used_when_no_config_given(
-        self,
-    ):
+    def test_config_path_is_used_when_no_config_given(self):
         from_path = LanguageDetector(
             config_path=str(DEFAULT_CONFIG_PATH),
             use_cache=False,
@@ -2005,17 +1768,13 @@ class TestDetectorStatsAndLifecycle:
 class TestPredictionLogging:
     """Every prediction is logged with the required fields."""
 
-    def test_prediction_is_logged_with_all_fields(
-        self,
-        caplog,
-    ):
+    def test_prediction_is_logged_with_all_fields(self, caplog):
         package_logger = logging.getLogger(PACKAGE_LOGGER_NAME)
         package_logger.setLevel(logging.INFO)
         package_logger.propagate = True
 
         with caplog.at_level(
-            logging.INFO,
-            logger=PACKAGE_LOGGER_NAME,
+            logging.INFO, logger=PACKAGE_LOGGER_NAME
         ):
             config = load_config(str(DEFAULT_CONFIG_PATH))
             config["cache"]["enabled"] = False
@@ -2050,16 +1809,11 @@ class TestPredictionLogging:
         assert "code_mixed" in messages[0]
         assert "non_text" in messages[1]
 
-    def test_logging_can_be_disabled(
-        self,
-        caplog,
-        base_config,
-    ):
+    def test_logging_can_be_disabled(self, caplog, base_config):
         base_config["logging"]["log_predictions"] = False
 
         with caplog.at_level(
-            logging.INFO,
-            logger=PACKAGE_LOGGER_NAME,
+            logging.INFO, logger=PACKAGE_LOGGER_NAME
         ):
             LanguageDetector(
                 config=base_config,
@@ -2072,11 +1826,6 @@ class TestPredictionLogging:
             for record in caplog.records
             if "detect |" in record.getMessage()
         ]
-
-
-# =============================================================================
-# End-to-end
-# =============================================================================
 
 
 class TestSampleInputs:
@@ -2136,20 +1885,14 @@ class TestModuleContract:
         ):
             assert callable(getattr(detector, method)), method
 
-    def test_detection_does_not_rewrite_the_input(
-        self,
-        detector,
-    ):
+    def test_detection_does_not_rewrite_the_input(self, detector):
         text = "  Mama KOLOMBA yanna one  "
 
         detector.detect(text)
 
         assert text == "  Mama KOLOMBA yanna one  "
 
-    def test_detection_leaves_no_translation_fields(
-        self,
-        detector,
-    ):
+    def test_detection_leaves_no_translation_fields(self, detector):
         result = detector.detect(SINHALA_TEXT)
 
         for forbidden in (
@@ -2159,3 +1902,34 @@ class TestModuleContract:
             "translation",
         ):
             assert forbidden not in result
+
+
+class TestDependencyContract:
+    """Dependency pins that the fastText binding needs."""
+
+    @staticmethod
+    def _requirements_text() -> str:
+        package_root = Path(DEFAULT_CONFIG_PATH).resolve().parent
+
+        return (package_root / "requirements.txt").read_text(
+            encoding="utf-8"
+        )
+
+    def test_numpy_is_pinned_below_2(self):
+        assert re.search(
+            r"^numpy[^\n]*<\s*2\s*$",
+            self._requirements_text(),
+            re.MULTILINE,
+        ), "numpy<2 is required by the fastText 0.9.2 binding"
+
+    def test_scipy_and_sklearn_are_capped_for_numpy_1(self):
+        text = self._requirements_text()
+
+        # scipy>=1.15 requires numpy>=2.0.0, so an uncapped scipy makes
+        # pip resolve to a stack that cannot import.
+        assert re.search(
+            r"^scipy[^\n]*<\s*1\.15\s*$", text, re.MULTILINE
+        )
+        assert re.search(
+            r"^scikit-learn[^\n]*<\s*1\.7\s*$", text, re.MULTILINE
+        )
