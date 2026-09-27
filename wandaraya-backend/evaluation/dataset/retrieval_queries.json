@@ -1,0 +1,37 @@
+[
+  {
+    "id": "Q001",
+    "query": "historical heritage place in Galle",
+    "relevant_attraction_ids": [1],
+    "intent": "heritage",
+    "location": "Galle"
+  },
+  {
+    "id": "Q002",
+    "query": "Dutch colonial historical attraction",
+    "relevant_attraction_ids": [1],
+    "intent": "history",
+    "location": null
+  },
+  {
+    "id": "Q003",
+    "query": "ancient archaeological site in Sri Lanka",
+    "relevant_attraction_ids": [14],
+    "intent": "archaeology",
+    "location": null
+  },
+  {
+    "id": "Q004",
+    "query": "wildlife safari with elephants",
+    "relevant_attraction_ids": [13],
+    "intent": "wildlife",
+    "location": null
+  },
+  {
+    "id": "Q005",
+    "query": "Buddhist religious and cultural attraction",
+    "relevant_attraction_ids": [2],
+    "intent": "religious_cultural",
+    "location": null
+  }
+]
