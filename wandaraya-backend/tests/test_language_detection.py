@@ -1905,15 +1905,26 @@ class TestModuleContract:
 
 
 class TestDependencyContract:
-    """Dependency pins that the fastText binding needs."""
+    """Dependency pins that the fastText binding needs.
+
+    The module no longer ships its own requirements file, so these read the
+    backend's top-level requirements.txt, which the Docker build slices.
+    """
 
     @staticmethod
     def _requirements_text() -> str:
-        package_root = Path(DEFAULT_CONFIG_PATH).resolve().parent
+        return (
+            BACKEND_ROOT / "requirements.txt"
+        ).read_text(encoding="utf-8")
 
-        return (package_root / "requirements.txt").read_text(
-            encoding="utf-8"
-        )
+    @staticmethod
+    def _docker_requirements_text() -> str:
+        return (
+            BACKEND_ROOT
+            / "docker"
+            / "fastapi"
+            / "requirements-fastapi.txt"
+        ).read_text(encoding="utf-8")
 
     def test_numpy_is_pinned_below_2(self):
         assert re.search(
@@ -1933,3 +1944,35 @@ class TestDependencyContract:
         assert re.search(
             r"^scikit-learn[^\n]*<\s*1\.7\s*$", text, re.MULTILINE
         )
+
+    def test_language_detection_dependencies_are_declared(self):
+        text = self._requirements_text()
+
+        # config.yaml cannot be read without PyYAML, and the model cannot be
+        # fetched or loaded without the other two.
+        assert re.search(r"^pyyaml[^\n]*$", text, re.MULTILINE)
+        assert re.search(r"^huggingface_hub[^\n]*$", text, re.MULTILINE)
+        assert re.search(r"^fasttext[^\n]*$", text, re.MULTILINE)
+        assert re.search(
+            r"^fasttext-wheel[^\n]*sys_platform\s*==\s*\"win32\"",
+            text,
+            re.MULTILINE,
+        )
+
+    def test_docker_slice_carries_the_same_pins(self):
+        # The FastAPI image installs only docker/fastapi/requirements-fastapi.txt,
+        # so a pin that exists in just one of the two files is a latent bug:
+        # local dev works while the container silently uses the fallback.
+        docker_text = self._docker_requirements_text()
+
+        for pattern, message in (
+            (r"^numpy[^\n]*<\s*2\s*$", "numpy<2"),
+            (r"^scipy[^\n]*<\s*1\.15\s*$", "scipy<1.15"),
+            (r"^scikit-learn[^\n]*<\s*1\.7\s*$", "scikit-learn<1.7"),
+            (r"^pyyaml[^\n]*$", "pyyaml"),
+            (r"^huggingface_hub[^\n]*$", "huggingface_hub"),
+            (r"^fasttext[^\n]*$", "fasttext"),
+        ):
+            assert re.search(
+                pattern, docker_text, re.MULTILINE
+            ), f"docker/fastapi/requirements-fastapi.txt is missing {message}"
