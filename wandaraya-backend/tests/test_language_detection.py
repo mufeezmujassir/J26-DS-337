@@ -10,6 +10,7 @@ import re
 import sys
 import types
 from pathlib import Path
+from time import time_ns
 from typing import Any, Dict, List, Optional, Tuple
 
 import pytest
@@ -1677,6 +1678,8 @@ class TestCacheIntegration:
 
     def test_second_detection_is_served_from_cache(self, base_config):
         base_config["cache"]["enabled"] = True
+        # Unique prefix so a stale key cannot fake a first-call cache hit.
+        base_config["cache"]["key_prefix"] = "langdetect:test:%d" % time_ns()
 
         cached_detector = LanguageDetector(
             config=base_config,
