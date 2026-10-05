@@ -115,8 +115,12 @@ services:
       - ./plugins:/opt/airflow/plugins
 
     depends_on:
-      - postgres
-      - redis
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_started
+      fastapi:
+        condition: service_started
 
     command: standalone
 

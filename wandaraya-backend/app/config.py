@@ -12,6 +12,7 @@ class Settings(BaseSettings):
     EMBEDDING_MODEL: str = "BAAI/bge-large-en-v1.5"
     LANGCHAIN_TRACING_V2: bool = False
     GEMINI_API_KEY: str = ""
+    AIRFLOW_API_TOKEN: str = ""
 
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8", extra="ignore")
 

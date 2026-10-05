@@ -55,6 +55,7 @@ class GooglePlacesConnector:
 
         payload:Dict[str,Any]={
             "maxResultCount":max_results,
+            "rankPreference": "POPULARITY",
             "locationRestriction":{
                 "circle":{
                     "center":{
@@ -87,6 +88,31 @@ class GooglePlacesConnector:
             response.raise_for_status()
             data=response.json()
             return data.get("places",[])
+
+    async def search_nearby(
+            self,
+            *,
+            latitude: float,
+            longitude: float,
+            radius_meters: float,
+            included_types: List[str],
+            max_results: int = 20,
+    ) -> List[Dict[str, Any]]:
+        """Discovery-oriented Nearby Search with Google API safety limits."""
+        if not 0 < radius_meters <= 50_000:
+            raise ValueError("radius_meters must be greater than 0 and no more than 50 km.")
+        if not included_types:
+            raise ValueError("included_types must contain at least one Google place type.")
+        if max_results <= 0:
+            raise ValueError("max_results must be greater than zero.")
+
+        return await self.nearby_search(
+            latitude=latitude,
+            longitude=longitude,
+            radius=radius_meters,
+            included_types=included_types,
+            max_results=min(max_results, 20),
+        )
 
     async def get_place_details(
             self, place_id:str)->Dict[str,Any]:
