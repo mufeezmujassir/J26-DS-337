@@ -19,3 +19,18 @@ class BusFare(Base):
     note: Mapped[str] = mapped_column(String(255), nullable=True)
     route_id: Mapped[str] = mapped_column(String(100), nullable=True, index=True)
     created_at: Mapped[datetime] = mapped_column(default=lambda: datetime.now(timezone.utc))
+
+class TrainStation(Base):
+    __tablename__ = "train_stations"
+
+    id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
+    osm_id: Mapped[str] = mapped_column(String(50), nullable=True, index=True)
+    name: Mapped[str] = mapped_column(String(255), nullable=True)
+    name_en: Mapped[str] = mapped_column(String(255), nullable=True)
+    name_si: Mapped[str] = mapped_column(String(255), nullable=True)
+    name_ta: Mapped[str] = mapped_column(String(255), nullable=True)
+    type: Mapped[str] = mapped_column(String(100), nullable=True)
+    operator: Mapped[str] = mapped_column(String(255), nullable=True)
+    lat: Mapped[float] = mapped_column(Float, nullable=True)
+    lon: Mapped[float] = mapped_column(Float, nullable=True)
+    created_at: Mapped[datetime] = mapped_column(default=lambda: datetime.now(timezone.utc))

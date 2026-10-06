@@ -20,11 +20,12 @@ from geoalchemy2 import WKTElement
 try:
     from app.database import AsyncSessionLocal
     from app.models import Road
-    from app.models.transport import BusFare
+    from app.models.transport import BusFare, TrainStation
 except Exception:
     AsyncSessionLocal = None
     Road = None
     BusFare = None
+    TrainStation = None
 
 BASE_DIR = Path(__file__).resolve().parents[1]
 DATA_DIR = BASE_DIR / "data"
@@ -172,12 +173,77 @@ async def import_bus(session, *, validate: bool = False) -> int:
     return total
 
 
+async def import_train_stations(session, *, validate: bool = False) -> int:
+    path = DATA_DIR / "train_data" / "sri_lanka_stations_Railway.csv"
+    if not path.exists():
+        print(f"train stations file not found: {path}")
+        return 0
+
+    reader, hmap, fh = _open_csv(path)
+    if reader is None:
+        return 0
+
+    total = 0
+    for i, row in enumerate(reader, start=1):
+        total += 1
+        if validate and i <= 5:
+            osm_id = row[hmap.get('osm_id', -1)] if 'osm_id' in hmap else None
+            name = row[hmap.get('name', -1)] if 'name' in hmap else None
+            print(f"train station sample {i}: osm_id={osm_id}, name={name}")
+            continue
+        if validate:
+            continue
+        if TrainStation is None or session is None:
+            continue
+            
+        try:
+            osm_id = row[hmap['osm_id']].strip() if 'osm_id' in hmap else None
+            name = row[hmap['name']].strip() if 'name' in hmap else None
+            name_en = row[hmap['name_en']].strip() if 'name_en' in hmap else None
+            name_si = row[hmap['name_si']].strip() if 'name_si' in hmap else None
+            name_ta = row[hmap['name_ta']].strip() if 'name_ta' in hmap else None
+            type_val = row[hmap['type']].strip() if 'type' in hmap else None
+            operator = row[hmap['operator']].strip() if 'operator' in hmap else None
+            
+            val_lat = row[hmap['lat']].strip() if 'lat' in hmap else ""
+            lat = float(val_lat) if val_lat else None
+            
+            val_lon = row[hmap['lon']].strip() if 'lon' in hmap else ""
+            lon = float(val_lon) if val_lon else None
+            
+            session.add(TrainStation(
+                osm_id=osm_id,
+                name=name,
+                name_en=name_en,
+                name_si=name_si,
+                name_ta=name_ta,
+                type=type_val,
+                operator=operator,
+                lat=lat,
+                lon=lon
+            ))
+            if total % 1000 == 0:
+                await session.commit()
+        except Exception as exc:
+            print(f"train station import error at row {i}: {exc}")
+            await session.rollback()
+            
+    if fh:
+        fh.close()
+    if not validate and session is not None:
+        await session.commit()
+    print(f"train stations rows processed: {total}")
+    return total
+
+
 async def main(args):
     total = 0
     if args.roads:
         total += await _with_session(import_roads, validate=args.validate)
     if args.bus:
         total += await _with_session(import_bus, validate=args.validate)
+    if args.train_stations:
+        total += await _with_session(import_train_stations, validate=args.validate)
     print(f"Total processed (or sampled in validate mode): {total}")
 
 
@@ -185,6 +251,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Import pipeline for Component 2 data')
     parser.add_argument('--roads', action='store_true', help='Import roads data')
     parser.add_argument('--bus', action='store_true', help='Import bus fares data')
+    parser.add_argument('--train-stations', action='store_true', help='Import train stations data')
     parser.add_argument('--validate', action='store_true', help='Dry-run validation')
     args = parser.parse_args()
     asyncio.run(main(args))
