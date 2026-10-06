@@ -58,6 +58,7 @@ xmltodict==0.14.0
 
 #==== data processing ====
 pandas==2.3.1
+openpyxl==3.1.5
 
 # numpy<2 is required by the fastText binding; it breaks silently on numpy 2
 numpy>=1.22,<2
