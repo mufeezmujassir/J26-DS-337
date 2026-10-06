@@ -13,7 +13,7 @@ from app.models.holiday_calendar import Holiday
 from app.models.user import User
 from app.models.group import TripGroup, GroupMember
 from app.models.roads import Road
-from app.models.transport import BusFare, TrainStation
+from app.models.transport import BusFare, TrainStation, TrainFare
 
 # Removed weather models, user_preference, and group_preference per user instruction.
 
@@ -36,4 +36,5 @@ __all__ = [
     "Road",
     "BusFare",
     "TrainStation",
+    "TrainFare",
 ]

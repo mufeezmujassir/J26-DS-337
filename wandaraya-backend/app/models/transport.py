@@ -34,3 +34,14 @@ class TrainStation(Base):
     lat: Mapped[float] = mapped_column(Float, nullable=True)
     lon: Mapped[float] = mapped_column(Float, nullable=True)
     created_at: Mapped[datetime] = mapped_column(default=lambda: datetime.now(timezone.utc))
+
+class TrainFare(Base):
+    __tablename__ = "train_fares"
+
+    id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
+    station_name: Mapped[str] = mapped_column(String(255), nullable=True)
+    distance_km: Mapped[float] = mapped_column(Float, nullable=True)
+    first_class_rs: Mapped[float] = mapped_column(Float, nullable=True)
+    second_class_rs: Mapped[float] = mapped_column(Float, nullable=True)
+    third_class_rs: Mapped[float] = mapped_column(Float, nullable=True)
+    created_at: Mapped[datetime] = mapped_column(default=lambda: datetime.now(timezone.utc))

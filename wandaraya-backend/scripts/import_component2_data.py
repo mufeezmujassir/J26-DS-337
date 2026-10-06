@@ -20,12 +20,13 @@ from geoalchemy2 import WKTElement
 try:
     from app.database import AsyncSessionLocal
     from app.models import Road
-    from app.models.transport import BusFare, TrainStation
+    from app.models.transport import BusFare, TrainStation, TrainFare
 except Exception:
     AsyncSessionLocal = None
     Road = None
     BusFare = None
     TrainStation = None
+    TrainFare = None
 
 BASE_DIR = Path(__file__).resolve().parents[1]
 DATA_DIR = BASE_DIR / "data"
@@ -236,6 +237,64 @@ async def import_train_stations(session, *, validate: bool = False) -> int:
     return total
 
 
+async def import_train_fares(session, *, validate: bool = False) -> int:
+    path = DATA_DIR / "train_data" / "train_price.csv"
+    if not path.exists():
+        print(f"train fares file not found: {path}")
+        return 0
+
+    reader, hmap, fh = _open_csv(path)
+    if reader is None:
+        return 0
+
+    total = 0
+    for i, row in enumerate(reader, start=1):
+        total += 1
+        if validate and i <= 5:
+            station = row[hmap.get('station', -1)] if 'station' in hmap else None
+            dist = row[hmap.get('distance_km', -1)] if 'distance_km' in hmap else None
+            print(f"train fare sample {i}: station={station}, distance={dist}")
+            continue
+        if validate:
+            continue
+        if TrainFare is None or session is None:
+            continue
+            
+        try:
+            station_name = row[hmap['station']].strip() if 'station' in hmap else None
+            val_dist = row[hmap['distance_km']].strip() if 'distance_km' in hmap else ""
+            distance_km = float(val_dist) if val_dist else None
+            
+            val_first = row[hmap['1st_class_rs']].strip() if '1st_class_rs' in hmap else ""
+            first_class_rs = float(val_first) if val_first else None
+            
+            val_second = row[hmap['2nd_class_rs']].strip() if '2nd_class_rs' in hmap else ""
+            second_class_rs = float(val_second) if val_second else None
+            
+            val_third = row[hmap['3rd_class_rs']].strip() if '3rd_class_rs' in hmap else ""
+            third_class_rs = float(val_third) if val_third else None
+            
+            session.add(TrainFare(
+                station_name=station_name,
+                distance_km=distance_km,
+                first_class_rs=first_class_rs,
+                second_class_rs=second_class_rs,
+                third_class_rs=third_class_rs
+            ))
+            if total % 1000 == 0:
+                await session.commit()
+        except Exception as exc:
+            print(f"train fare import error at row {i}: {exc}")
+            await session.rollback()
+            
+    if fh:
+        fh.close()
+    if not validate and session is not None:
+        await session.commit()
+    print(f"train fares rows processed: {total}")
+    return total
+
+
 async def main(args):
     total = 0
     if args.roads:
@@ -244,6 +303,8 @@ async def main(args):
         total += await _with_session(import_bus, validate=args.validate)
     if args.train_stations:
         total += await _with_session(import_train_stations, validate=args.validate)
+    if args.train_fares:
+        total += await _with_session(import_train_fares, validate=args.validate)
     print(f"Total processed (or sampled in validate mode): {total}")
 
 
@@ -252,6 +313,7 @@ if __name__ == '__main__':
     parser.add_argument('--roads', action='store_true', help='Import roads data')
     parser.add_argument('--bus', action='store_true', help='Import bus fares data')
     parser.add_argument('--train-stations', action='store_true', help='Import train stations data')
+    parser.add_argument('--train-fares', action='store_true', help='Import train fares data')
     parser.add_argument('--validate', action='store_true', help='Dry-run validation')
     args = parser.parse_args()
     asyncio.run(main(args))
