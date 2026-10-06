@@ -21,12 +21,14 @@ try:
     from app.database import AsyncSessionLocal
     from app.models import Road
     from app.models.transport import BusFare, TrainStation, TrainFare
+    from app.models.scenic import ScenicPlace
 except Exception:
     AsyncSessionLocal = None
     Road = None
     BusFare = None
     TrainStation = None
     TrainFare = None
+    ScenicPlace = None
 
 BASE_DIR = Path(__file__).resolve().parents[1]
 DATA_DIR = BASE_DIR / "data"
@@ -295,6 +297,72 @@ async def import_train_fares(session, *, validate: bool = False) -> int:
     return total
 
 
+async def import_scenic_places(session, *, validate: bool = False) -> int:
+    path = DATA_DIR / "scenic" / "sri_lanka_combined_scenic_places.csv"
+    if not path.exists():
+        print(f"scenic places file not found: {path}")
+        return 0
+
+    reader, hmap, fh = _open_csv(path)
+    if reader is None:
+        return 0
+
+    total = 0
+    for i, row in enumerate(reader, start=1):
+        total += 1
+        if validate and i <= 5:
+            name = row[hmap.get('name', -1)] if 'name' in hmap else None
+            cat = row[hmap.get('category', -1)] if 'category' in hmap else None
+            print(f"scenic place sample {i}: name={name}, category={cat}")
+            continue
+        if validate:
+            continue
+        if ScenicPlace is None or session is None:
+            continue
+            
+        try:
+            name = row[hmap['name']].strip() if 'name' in hmap else None
+            
+            val_lat = row[hmap['latitude']].strip() if 'latitude' in hmap else ""
+            latitude = float(val_lat) if val_lat else None
+            
+            val_lon = row[hmap['longitude']].strip() if 'longitude' in hmap else ""
+            longitude = float(val_lon) if val_lon else None
+            
+            category = row[hmap['category']].strip() if 'category' in hmap else None
+            description = row[hmap['description']].strip() if 'description' in hmap else None
+            website = row[hmap['website']].strip() if 'website' in hmap else None
+            source = row[hmap['source']].strip() if 'source' in hmap else None
+            place_type = row[hmap['type']].strip() if 'type' in hmap else None
+            address = row[hmap['address']].strip() if 'address' in hmap else None
+            district = row[hmap['district']].strip() if 'district' in hmap else None
+            
+            session.add(ScenicPlace(
+                name=name,
+                latitude=latitude,
+                longitude=longitude,
+                category=category,
+                description=description,
+                website=website,
+                source=source,
+                type=place_type,
+                address=address,
+                district=district
+            ))
+            if total % 1000 == 0:
+                await session.commit()
+        except Exception as exc:
+            print(f"scenic place import error at row {i}: {exc}")
+            await session.rollback()
+            
+    if fh:
+        fh.close()
+    if not validate and session is not None:
+        await session.commit()
+    print(f"scenic places rows processed: {total}")
+    return total
+
+
 async def main(args):
     total = 0
     if args.roads:
@@ -305,6 +373,8 @@ async def main(args):
         total += await _with_session(import_train_stations, validate=args.validate)
     if args.train_fares:
         total += await _with_session(import_train_fares, validate=args.validate)
+    if args.scenic:
+        total += await _with_session(import_scenic_places, validate=args.validate)
     print(f"Total processed (or sampled in validate mode): {total}")
 
 
@@ -314,6 +384,7 @@ if __name__ == '__main__':
     parser.add_argument('--bus', action='store_true', help='Import bus fares data')
     parser.add_argument('--train-stations', action='store_true', help='Import train stations data')
     parser.add_argument('--train-fares', action='store_true', help='Import train fares data')
+    parser.add_argument('--scenic', action='store_true', help='Import scenic places data')
     parser.add_argument('--validate', action='store_true', help='Dry-run validation')
     args = parser.parse_args()
     asyncio.run(main(args))
