@@ -15,6 +15,7 @@ from app.models.group import TripGroup, GroupMember
 from app.models.roads import Road
 from app.models.transport import BusFare, TrainStation, TrainFare
 from app.models.scenic import ScenicPlace
+from app.models.nbro import NBROIncident, NBROInspection, NBROPolygon
 
 # Removed weather models, user_preference, and group_preference per user instruction.
 
@@ -39,4 +40,7 @@ __all__ = [
     "TrainStation",
     "TrainFare",
     "ScenicPlace",
+    "NBROIncident",
+    "NBROInspection",
+    "NBROPolygon",
 ]

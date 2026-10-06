@@ -22,6 +22,7 @@ try:
     from app.models import Road
     from app.models.transport import BusFare, TrainStation, TrainFare
     from app.models.scenic import ScenicPlace
+    from app.models.nbro import NBROIncident, NBROInspection, NBROPolygon
 except Exception:
     AsyncSessionLocal = None
     Road = None
@@ -29,6 +30,9 @@ except Exception:
     TrainStation = None
     TrainFare = None
     ScenicPlace = None
+    NBROIncident = None
+    NBROInspection = None
+    NBROPolygon = None
 
 BASE_DIR = Path(__file__).resolve().parents[1]
 DATA_DIR = BASE_DIR / "data"
@@ -394,6 +398,205 @@ async def import_scenic_places(session, *, validate: bool = False) -> int:
     return total
 
 
+async def import_nbro_incidents(session, *, validate: bool = False) -> int:
+    path = DATA_DIR / "NBRO_DATA" / "All_Sri_Lanka_Master.csv"
+    if not path.exists():
+        print(f"nbro incidents file not found: {path}")
+        return 0
+
+    reader, hmap, fh = _open_csv(path)
+    if reader is None:
+        return 0
+
+    total = 0
+    for i, row in enumerate(reader, start=1):
+        total += 1
+        if validate and i <= 5:
+            inc_type = row[hmap.get('inc_type', -1)] if 'inc_type' in hmap else None
+            district = row[hmap.get('district', -1)] if 'district' in hmap else None
+            print(f"nbro incident sample {i}: type={inc_type}, district={district}")
+            continue
+        if validate:
+            continue
+        if NBROIncident is None or session is None:
+            continue
+            
+        try:
+            val_lat = row[hmap['latitude']].strip() if 'latitude' in hmap else ""
+            latitude = float(val_lat) if val_lat and val_lat.replace('.','',1).lstrip('-').isdigit() else None
+            
+            val_lon = row[hmap['longitude']].strip() if 'longitude' in hmap else ""
+            longitude = float(val_lon) if val_lon and val_lon.replace('.','',1).lstrip('-').isdigit() else None
+            
+            val_r1 = row[hmap['rain_1h']].strip() if 'rain_1h' in hmap else ""
+            rain_1h = float(val_r1) if val_r1 and val_r1.replace('.','',1).lstrip('-').isdigit() else None
+            
+            val_r24 = row[hmap['rain_24h']].strip() if 'rain_24h' in hmap else ""
+            rain_24h = float(val_r24) if val_r24 and val_r24.replace('.','',1).lstrip('-').isdigit() else None
+            
+            val_rcum = row[hmap['rain_cum']].strip() if 'rain_cum' in hmap else ""
+            rain_cum = float(val_rcum) if val_rcum and val_rcum.replace('.','',1).lstrip('-').isdigit() else None
+            
+            session.add(NBROIncident(
+                inc_type=row[hmap['inc_type']].strip() if 'inc_type' in hmap else None,
+                type_code=row[hmap['type_code']].strip() if 'type_code' in hmap else None,
+                request_no=row[hmap['request_no']].strip() if 'request_no' in hmap else None,
+                case_id=row[hmap['case_id']].strip() if 'case_id' in hmap else None,
+                district=row[hmap['district']].strip() if 'district' in hmap else None,
+                ds_name=row[hmap['ds_name']].strip() if 'ds_name' in hmap else None,
+                date=row[hmap['date']].strip() if 'date' in hmap else None,
+                gnd_name=row[hmap['gnd_name']].strip() if 'gnd_name' in hmap else None,
+                gnd_no=row[hmap['gnd_no']].strip() if 'gnd_no' in hmap else None,
+                village=row[hmap['village']].strip() if 'village' in hmap else None,
+                address=row[hmap['address']].strip() if 'address' in hmap else None,
+                pathway=row[hmap['pathway']].strip() if 'pathway' in hmap else None,
+                inv_date=row[hmap['inv_date']].strip() if 'inv_date' in hmap else None,
+                inc_date=row[hmap['inc_date']].strip() if 'inc_date' in hmap else None,
+                inc_time=row[hmap['inc_time']].strip() if 'inc_time' in hmap else None,
+                cause=row[hmap['cause']].strip() if 'cause' in hmap else None,
+                rain_1h=rain_1h,
+                rain_24h=rain_24h,
+                rain_cum=rain_cum,
+                latitude=latitude,
+                longitude=longitude
+            ))
+            if total % 1000 == 0:
+                await session.commit()
+        except Exception as exc:
+            print(f"nbro incident import error at row {i}: {exc}")
+            await session.rollback()
+            
+    if fh:
+        fh.close()
+    if not validate and session is not None:
+        await session.commit()
+    print(f"nbro incidents rows processed: {total}")
+    return total
+
+async def import_nbro_inspections(session, *, validate: bool = False) -> int:
+    path = DATA_DIR / "NBRO_DATA" / "All_Sri_Lanka_Dithawa_HR_Inspections.csv"
+    if not path.exists():
+        print(f"nbro inspections file not found: {path}")
+        return 0
+
+    reader, hmap, fh = _open_csv(path)
+    if reader is None:
+        return 0
+
+    total = 0
+    for i, row in enumerate(reader, start=1):
+        total += 1
+        if validate and i <= 5:
+            district = row[hmap.get('district', -1)] if 'district' in hmap else None
+            print(f"nbro inspection sample {i}: district={district}")
+            continue
+        if validate:
+            continue
+        if NBROInspection is None or session is None:
+            continue
+            
+        try:
+            val_lat = row[hmap['latitude']].strip() if 'latitude' in hmap else ""
+            if not val_lat and 'lat' in hmap:
+                val_lat = row[hmap['lat']].strip()
+            latitude = float(val_lat) if val_lat and val_lat.replace('.','',1).lstrip('-').isdigit() else None
+            
+            val_lon = row[hmap['longitude']].strip() if 'longitude' in hmap else ""
+            if not val_lon and 'long' in hmap:
+                val_lon = row[hmap['long']].strip()
+            longitude = float(val_lon) if val_lon and val_lon.replace('.','',1).lstrip('-').isdigit() else None
+            
+            val_tr = row[hmap['total_risk']].strip() if 'total_risk' in hmap else ""
+            total_risk = float(val_tr) if val_tr and val_tr.replace('.','',1).lstrip('-').isdigit() else None
+
+            session.add(NBROInspection(
+                district=row[hmap['district']].strip() if 'district' in hmap else None,
+                dsd=row[hmap['dsd']].strip() if 'dsd' in hmap else None,
+                gnd_name=row[hmap['gnd_name']].strip() if 'gnd_name' in hmap else None,
+                risk_level=row[hmap['risk_level']].strip() if 'risk_level' in hmap else None,
+                hr_priorit=row[hmap['hr_priorit']].strip() if 'hr_priorit' in hmap else None,
+                ref_no=row[hmap['ref_no']].strip() if 'ref_no' in hmap else None,
+                ref_code=row[hmap['ref_code']].strip() if 'ref_code' in hmap else None,
+                gnd_num=row[hmap['gnd_num']].strip() if 'gnd_num' in hmap else None,
+                const_type=row[hmap['const_type']].strip() if 'const_type' in hmap else None,
+                disast_dat=row[hmap['disast_dat']].strip() if 'disast_dat' in hmap else None,
+                disast_tim=row[hmap['disast_tim']].strip() if 'disast_tim' in hmap else None,
+                insp_date=row[hmap['insp_date']].strip() if 'insp_date' in hmap else None,
+                disast_nat=row[hmap['disast_nat']].strip() if 'disast_nat' in hmap else None,
+                temp_recom=row[hmap['temp_recom']].strip() if 'temp_recom' in hmap else None,
+                damage_lvl=row[hmap['damage_lvl']].strip() if 'damage_lvl' in hmap else None,
+                total_risk=total_risk,
+                latitude=latitude,
+                longitude=longitude
+            ))
+            if total % 1000 == 0:
+                await session.commit()
+        except Exception as exc:
+            print(f"nbro inspection import error at row {i}: {exc}")
+            await session.rollback()
+            
+    if fh:
+        fh.close()
+    if not validate and session is not None:
+        await session.commit()
+    print(f"nbro inspections rows processed: {total}")
+    return total
+
+async def import_nbro_polygons(session, *, validate: bool = False) -> int:
+    path = DATA_DIR / "NBRO_DATA" / "All_Sri_Lanka_Polygons.csv"
+    if not path.exists():
+        print(f"nbro polygons file not found: {path}")
+        return 0
+
+    reader, hmap, fh = _open_csv(path)
+    if reader is None:
+        return 0
+
+    total = 0
+    for i, row in enumerate(reader, start=1):
+        total += 1
+        if validate and i <= 5:
+            district = row[hmap.get('district', -1)] if 'district' in hmap else None
+            print(f"nbro polygon sample {i}: district={district}")
+            continue
+        if validate:
+            continue
+        if NBROPolygon is None or session is None:
+            continue
+            
+        try:
+            val_lat = row[hmap['centroid_latitude']].strip() if 'centroid_latitude' in hmap else ""
+            latitude = float(val_lat) if val_lat and val_lat.replace('.','',1).lstrip('-').isdigit() else None
+            
+            val_lon = row[hmap['centroid_longitude']].strip() if 'centroid_longitude' in hmap else ""
+            longitude = float(val_lon) if val_lon and val_lon.replace('.','',1).lstrip('-').isdigit() else None
+            
+            geom_wkt = row[hmap['wkt_geometry']].strip() if 'wkt_geometry' in hmap else None
+            geom = WKTElement(geom_wkt, srid=4326) if geom_wkt else None
+            
+            session.add(NBROPolygon(
+                name=row[hmap['name']].strip() if 'name' in hmap else None,
+                descript=row[hmap['descript']].strip() if 'descript' in hmap else None,
+                source_kmz=row[hmap['source_kmz']].strip() if 'source_kmz' in hmap else None,
+                layer_name=row[hmap['layer_name']].strip() if 'layer_name' in hmap else None,
+                district=row[hmap['district']].strip() if 'district' in hmap else None,
+                centroid_latitude=latitude,
+                centroid_longitude=longitude,
+                wkt_geometry=geom
+            ))
+            if total % 1000 == 0:
+                await session.commit()
+        except Exception as exc:
+            print(f"nbro polygon import error at row {i}: {exc}")
+            await session.rollback()
+            
+    if fh:
+        fh.close()
+    if not validate and session is not None:
+        await session.commit()
+    print(f"nbro polygons rows processed: {total}")
+    return total
+
 async def main(args):
     total = 0
     if args.roads:
@@ -406,6 +609,10 @@ async def main(args):
         total += await _with_session(import_train_fares, validate=args.validate)
     if args.scenic:
         total += await _with_session(import_scenic_places, validate=args.validate)
+    if args.nbro:
+        total += await _with_session(import_nbro_incidents, validate=args.validate)
+        total += await _with_session(import_nbro_inspections, validate=args.validate)
+        total += await _with_session(import_nbro_polygons, validate=args.validate)
     print(f"Total processed (or sampled in validate mode): {total}")
 
 
@@ -416,6 +623,7 @@ if __name__ == '__main__':
     parser.add_argument('--train-stations', action='store_true', help='Import train stations data')
     parser.add_argument('--train-fares', action='store_true', help='Import train fares data')
     parser.add_argument('--scenic', action='store_true', help='Import scenic places data')
+    parser.add_argument('--nbro', action='store_true', help='Import nbro datasets data')
     parser.add_argument('--validate', action='store_true', help='Dry-run validation')
     args = parser.parse_args()
     asyncio.run(main(args))
