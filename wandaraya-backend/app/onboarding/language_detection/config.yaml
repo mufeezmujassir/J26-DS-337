@@ -1,0 +1,274 @@
+# Wandaraya - Component 4: Language Detection Module
+
+module:
+  name: language_detection
+  component: 4
+  version: "1.0.0"
+
+# ---- model ----
+# lid218e labels are "{iso639-3}_{script}", e.g. "__label__eng_Latn".
+model:
+  repo_id: facebook/fasttext-language-identification
+  filename: model.bin
+
+  # Relative to wandaraya-backend root.
+  local_dir: models/fasttext-language-identification
+  env_dir_override: WANDARAYA_LANGDETECT_MODEL_DIR
+
+  # Absolute .bin path to bypass download.
+  local_path: null
+  local_files_only: false
+  auto_load: true
+  top_k: 3
+
+# ---- thresholds ----
+thresholds:
+  standard_confidence: 0.70
+
+  # Lower bar for short text, which carries little signal.
+  short_text_confidence: 0.50
+
+  # Below this the model is unusable; heuristic takes over.
+  fallback_confidence: 0.50
+
+  # Script evidence is deterministic, so it outranks a low model score.
+  script_confidence: 0.95
+
+  # The lexicon is a narrow heuristic.
+  singlish_confidence: 0.60
+
+# ---- supported languages ----
+# "model_codes" lists fastText codes in ISO 639-1 and 639-3 form.
+languages:
+  si:
+    name: Sinhala
+    model_codes: [si, sin]
+  en:
+    name: English
+    model_codes: [en, eng]
+  singlish:
+    name: Singlish
+    model_codes: []
+  code_mixed:
+    name: Code-Switched
+    model_codes: []
+  hi:
+    name: Hindi
+    model_codes: [hi, hin]
+  zh:
+    name: Chinese
+    model_codes: [zh, zho, cmn]
+  de:
+    name: German
+    model_codes: [de, deu]
+  fr:
+    name: French
+    model_codes: [fr, fra]
+  ru:
+    name: Russian
+    model_codes: [ru, rus]
+  it:
+    name: Italian
+    model_codes: [it, ita]
+  es:
+    name: Spanish
+    model_codes: [es, spa]
+
+# ---- non-linguistic outcomes ----
+# Returned instead of a language; the caller must handle these before
+# choosing a pipeline.
+special_codes:
+  non_text:
+    name: non-text
+    model_codes: []
+  unknown:
+    name: unknown
+    model_codes: []
+
+# ---- cache ----
+# Key: "langdetect:{sha256_of_cleaned_lowercased_text}".
+# Redis is optional; falls back to a bounded in-process LRU.
+cache:
+  enabled: true
+  ttl_seconds: 86400 # 24 hours
+  redis_url: redis://localhost:6379/0
+  key_prefix: langdetect
+  socket_timeout_seconds: 1.0
+  max_memory_entries: 10000
+
+# ---- short text ----
+# Gate order is non-text, then short text, so "👍" reports as non_text
+# rather than an unknown single character.
+short_text:
+  min_length: 2
+  single_word_max_length: 5
+  single_word_max_words: 1
+  allow_emoji_gate: true
+
+# ---- Singlish (Romanized Sinhala) ----
+# fastText has no Singlish class and labels Romanized Sinhala as English.
+# Applies only when the model label is English or unusable.
+singlish:
+  enabled: true
+  min_tokens: 2
+  min_markers: 1
+
+  # Suppresses the lexicon when a message carries this many English
+  # function words, keeping "I want to go to Kandy" out of this branch.
+  english_stopword_guard: true
+  english_stopword_guard_count: 3
+
+  # Discriminative Romanized-Sinhala tokens. Excludes words that are also
+  # ordinary English and standard place spellings like "Kandy" or "Galle".
+  lexicon:
+    - mama
+    - appa
+    - amma
+    - thaththa
+    - unta
+    - api
+    - mata
+    - mey
+    - mehe
+    - ta
+    - yata
+    - thama
+    - anne
+    - inne
+    - inneee
+    - ekka
+    - namak
+    - kohedha
+    - hari
+    - gana
+    - yanna
+    - yanawa
+    - yanne
+    - yena
+    - yada
+    - yamu
+    - ena
+    - enawa
+    - gamanawa
+    - gamanne
+    - karanawa
+    - karanne
+    - karanna
+    - balanna
+    - balanawa
+    - hodama
+    - kiyala
+    - katika
+    - katha
+    - kade
+    - kanda
+    - pissa
+    - vandi
+    - pambara
+    - goviya
+    - peli
+    - yaluwa
+    - udapadi
+    - dikala
+    - wenas
+    - wenasa
+    - pahasu
+    - viharamaya
+    - kulle
+    - pani
+    - kopi
+    - kele
+    - balu
+    - rith
+    - hangala
+    - uru
+    - petti
+    - perala
+    - kuwada
+    - lapata
+    - nadiya
+    - kelani
+    - mahaweli
+    - kolomba
+    - kolambo
+    - yamuwa
+    - nawa
+    - udupitiya
+    - hanguranketha
+    - thalagune
+    - udawalawe
+    - weera
+    - sirisena
+    - perera
+    - gunawardena
+
+  # English function words used by the guard above.
+  english_stopwords:
+    - the
+    - a
+    - an
+    - and
+    - or
+    - but
+    - if
+    - is
+    - are
+    - was
+    - be
+    - been
+    - am
+    - to
+    - of
+    - in
+    - "on"
+    - at
+    - for
+    - with
+    - from
+    - by
+    - i
+    - you
+    - we
+    - he
+    - she
+    - it
+    - they
+    - my
+    - your
+    - our
+    - their
+    - do
+    - does
+    - did
+    - can
+    - could
+    - should
+    - would
+    - will
+    - please
+    - want
+    - need
+    - going
+    - go
+    - come
+    - how
+    - what
+    - when
+    - where
+    - why
+    - that
+    - this
+    - there
+    - here
+    - now
+    - today
+    - tomorrow
+    - not
+    - "no"
+    - "yes"
+
+# ---- logging ----
+# Each prediction logs text, language, confidence, and the flags.
+logging:
+  level: INFO
+  log_predictions: true

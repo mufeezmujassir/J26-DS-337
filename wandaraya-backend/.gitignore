@@ -7,3 +7,13 @@
 /qdrant-data/
 /logs/
 wandaraya-backend\.env
+
+#==== downloaded ML models (language detection fastText is ~1.1 GB) ====
+/models/
+
+#==== Python build artifacts ====
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
