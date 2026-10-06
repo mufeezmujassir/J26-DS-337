@@ -62,7 +62,7 @@ async def _with_session(func, *, validate: bool = False):
 
 
 async def import_roads(session, *, validate: bool = False) -> int:
-    path = DATA_DIR / "road_route" / "rda_national_roads.csv"
+    path = DATA_DIR / "road_route" / "sri_lanka_all_roads_v4_FINAL (1).csv"
     if not path.exists():
         print(f"roads file not found: {path}")
         return 0
@@ -83,23 +83,54 @@ async def import_roads(session, *, validate: bool = False) -> int:
         if Road is None or session is None:
             continue
         try:
-            objectid = None
-            if 'objectid' in hmap:
-                v = row[hmap['objectid']].strip()
-                objectid = int(v) if v else None
-            name = row[hmap.get('name', -1)].strip() if 'name' in hmap else None
-            geom_wkt = row[hmap.get('geometry', -1)] if 'geometry' in hmap else None
+            road_id = row[hmap['road_id']].strip() if 'road_id' in hmap else None
+            name = row[hmap['road_name']].strip() if 'road_name' in hmap else None
+            road_number = row[hmap['road_number']].strip() if 'road_number' in hmap else None
+            road_class = row[hmap['road_class']].strip() if 'road_class' in hmap else None
+            
+            val_len = row[hmap['length_km']].strip() if 'length_km' in hmap else ""
+            length_km = float(val_len) if val_len else None
+            
+            road_condition = row[hmap['road_condition']].strip() if 'road_condition' in hmap else None
+            surface_type = row[hmap['surface_type']].strip() if 'surface_type' in hmap else None
+            
+            val_lanes = row[hmap['lanes']].strip() if 'lanes' in hmap else ""
+            lanes = int(val_lanes) if val_lanes.isdigit() else None
+            
+            val_speed = row[hmap['speed_limit']].strip() if 'speed_limit' in hmap else ""
+            speed_limit = float(val_speed) if val_speed.replace('.','',1).isdigit() else None
+            
+            bridge_id = row[hmap['bridge_id']].strip() if 'bridge_id' in hmap else None
+            traffic_volume = row[hmap['traffic_volume']].strip() if 'traffic_volume' in hmap else None
+            closure_status = row[hmap['closure_status']].strip() if 'closure_status' in hmap else None
+            district = row[hmap['district']].strip() if 'district' in hmap else None
+            
+            geom_wkt = row[hmap['geometry']] if 'geometry' in hmap else None
             geom = WKTElement(geom_wkt, srid=4326) if geom_wkt else None
-            if objectid is not None:
-                existing = await session.execute(Road.__table__.select().where(Road.objectid == objectid))
-                if existing.first():
-                    continue
-            session.add(Road(source='rda', objectid=objectid, name=name, geometry=geom, created_at=datetime.utcnow()))
-            if total % 100 == 0:
+            
+            session.add(Road(
+                source='combined_v4',
+                road_id=road_id,
+                name=name,
+                road_number=road_number,
+                road_class=road_class,
+                road_type=surface_type,
+                road_condition=road_condition,
+                lanes=lanes,
+                speed_limit=speed_limit,
+                bridge_id=bridge_id,
+                traffic_volume=traffic_volume,
+                closure_status=closure_status,
+                total_length_km=length_km,
+                district=district,
+                geometry=geom
+            ))
+            if total % 1000 == 0:
                 await session.commit()
         except Exception as exc:
-            print(f"road import error: {exc}")
+            print(f"road import error at row {i}: {exc}")
             await session.rollback()
+    
     if fh:
         fh.close()
     if not validate and session is not None:
