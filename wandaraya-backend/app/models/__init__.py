@@ -12,6 +12,9 @@ from app.models.attraction_images import AttractionImage
 from app.models.holiday_calendar import Holiday
 from app.models.user import User
 from app.models.group import TripGroup, GroupMember
+from app.models.weather_station import WeatherStation
+from app.models.weather_reading import WeatherReading
+from app.models.district_weather_monthly import DistrictWeatherMonthly
 
 # Removed weather models, user_preference, and group_preference per user instruction.
 
@@ -31,4 +34,7 @@ __all__ = [
     "User",
     "TripGroup",
     "GroupMember",
+    "WeatherStation",
+    "WeatherReading",
+    "DistrictWeatherMonthly",
 ]

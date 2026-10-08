@@ -250,8 +250,18 @@ def normalize_rainfall_long(
         "station"
     ].apply(_clean_station_name)
 
-    result["latitude"] = pd.NA
-    result["longitude"] = pd.NA
+    # The current workbook supplies coordinates for most additional stations.
+    # Missing values remain missing rather than being replaced or guessed.
+    result["latitude"] = (
+        _numeric(working["latitude"])
+        if "latitude" in working.columns
+        else pd.NA
+    )
+    result["longitude"] = (
+        _numeric(working["longitude"])
+        if "longitude" in working.columns
+        else pd.NA
+    )
 
     result["observation_date"] = _build_date(
         working["Year"],

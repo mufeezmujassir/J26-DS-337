@@ -1,12 +1,30 @@
-from sqlalchemy import String, Text, Float, Integer, Boolean, DateTime, JSON
-from sqlalchemy.orm import Mapped, mapped_column
-from datetime import datetime, timezone
+from sqlalchemy import (
+    BigInteger,
+    Column,
+    Date,
+    DateTime,
+    Float,
+    ForeignKey,
+    Integer,
+    String,
+    UniqueConstraint,
+    func,
+)
+
 from app.database import Base
-from sqlalchemy import Column, BigInteger, ForeignKey, Date, Time, func
+
 
 class WeatherReading(Base):
 
     __tablename__ = "weather_readings"
+
+    __table_args__ = (
+        UniqueConstraint(
+            "station_id",
+            "observation_date",
+            name="uq_weather_reading_station_date",
+        ),
+    )
 
     id = Column(
         BigInteger,
@@ -15,7 +33,11 @@ class WeatherReading(Base):
 
     station_id = Column(
         String(50),
+        ForeignKey(
+            "weather_stations.station_id"
+        ),
         nullable=False,
+        index=True,
     )
 
     station_name = Column(
@@ -25,10 +47,9 @@ class WeatherReading(Base):
 
     district_id = Column(
         Integer,
-        ForeignKey(
-            "districts.id"
-        ),
+        ForeignKey("districts.id"),
         nullable=True,
+        index=True,
     )
 
     latitude = Column(
@@ -44,6 +65,7 @@ class WeatherReading(Base):
     observation_date = Column(
         Date,
         nullable=False,
+        index=True,
     )
 
     rainfall_mm = Column(

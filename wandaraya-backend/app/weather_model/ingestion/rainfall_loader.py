@@ -70,6 +70,14 @@ class RainfallLoader:
 
         melted["source_file"] = "rf.xlsx"
 
+        # A blank source cell is unavailable, not measured zero rainfall. Do
+        # not manufacture a station/month observation from it.
+        melted["rainfall_mm"] = pd.to_numeric(
+            melted["rainfall_mm"],
+            errors="coerce",
+        )
+        melted = melted[melted["rainfall_mm"].notna()].copy()
+
         return melted[
             [
                 "id",
@@ -121,11 +129,23 @@ class RainfallLoader:
             )
         )
 
-        # This file does not provide coordinates
-        df["longitude"] = None
-        df["latitude"] = None
+        # Additional stations now include verified coordinates when available.
+        # Keep unavailable values (for example Yala) as NULL; never invent them.
+        for coordinate in ["longitude", "latitude"]:
+            if coordinate not in df.columns:
+                df[coordinate] = None
+            df[coordinate] = pd.to_numeric(
+                df[coordinate],
+                errors="coerce",
+            )
 
         df["source_file"] = "rf_other_stations.xlsx"
+
+        df["rainfall_mm"] = pd.to_numeric(
+            df["rainfall_mm"],
+            errors="coerce",
+        )
+        df = df[df["rainfall_mm"].notna()].copy()
 
         return df[
             [
