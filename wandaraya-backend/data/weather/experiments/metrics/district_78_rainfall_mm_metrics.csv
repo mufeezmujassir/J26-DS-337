@@ -1,0 +1,3 @@
+district_id,target,model,mae,rmse,evaluated_months
+78,rainfall_mm,seasonal_naive,167.125,217.6675,10
+78,rainfall_mm,prophet,178.5857,221.2982,10
