@@ -44,6 +44,9 @@ from app.replanning.disruption_detection.fusion import (  # noqa: E402
     FusionEngine,
     fuse,
 )
+from app.replanning.disruption_detection.detector import (  # noqa: E402
+    DisruptionDetector,
+)
 from app.replanning.disruption_detection import utils as dm_utils  # noqa: E402
 from app.replanning.disruption_detection import (  # noqa: E402
     AffectedElement,
@@ -177,6 +180,65 @@ def signals(
 
 def fired_names(rule_outputs: list) -> set[str]:
     return {entry["name"] for entry in rule_outputs}
+
+
+def trip(**overrides: Any) -> Dict[str, Any]:
+    """Build a coherent mock trip context for detector tests."""
+    base: Dict[str, Any] = {
+        "location": {"lat": 6.9271, "lon": 79.8612},
+        "place": {"name": "Sigiriya Rock Fortress", "place_id": ""},
+        "itinerary": {
+            "day": "Day 2",
+            "activity_name": "Sigiriya climb",
+            "time_slot": "09:00-11:00",
+            "location": "Sigiriya",
+            "scheduled_at": "09:00",
+            "actual_at": "09:05",
+            "is_outdoor": True,
+        },
+        "route_waypoints": [{"lat": 6.9271, "lon": 79.8612}],
+        "chat_message": "",
+        "planner": {
+            "closures_today": 0,
+            "hotel_overbooked": False,
+            "city_change_requested": False,
+        },
+    }
+    base.update(overrides)
+    return base
+
+
+def without_api_keys(monkeypatch: pytest.MonkeyPatch, tmp_path: Path) -> None:
+    """Isolate the environment so no live API call can ever happen."""
+    monkeypatch.setattr(dm_utils, "REPO_ROOT", tmp_path)
+    monkeypatch.delenv("OPENWEATHER_API_KEY", raising=False)
+    monkeypatch.delenv("GOOGLE_PLACES_API_KEY", raising=False)
+
+
+STORM_SIGNAL = {
+    "rain_duration_hours": 4.0,
+    "rain_intensity": "storm",
+    "temperature_celsius": 30.0,
+    "heat_warning": False,
+}
+CLOSED_PLACES_SIGNAL = {
+    "is_open": False,
+    "closure_flag": True,
+    "capacity_issue": False,
+    "crowd_level": "low",
+}
+OFF_ROUTE_GPS_SIGNAL = {
+    "gps_deviation_km": 6.0,
+    "time_delay_minutes": 0,
+    "off_route": True,
+    "running_late": False,
+}
+STRONG_COMPLAINT_SIGNAL = {
+    "complaint_score": 0.9,
+    "keywords_found": ["late", "cancel"],
+    "category": "transport",
+    "change_request": False,
+}
 
 
 
@@ -366,7 +428,7 @@ def test_places_missing_api_key_skips_request(
     with mock.patch.object(places_mod.requests, "get", fake_get):
         signal = PlacesMonitor().monitor(place_name="X")
 
-    assert signal["is_open"] is False
+    assert signal["is_open"] is True
     assert signal["closure_flag"] is False
     fake_get.assert_not_called()
 
@@ -1131,6 +1193,248 @@ def test_fusion_values_are_clamped() -> None:
 
     assert result["score"] == 0.40
     assert result["requires_confirmation"] is True
+
+
+# ---------------------------------------------------------------------------
+# 14. Detector
+# ---------------------------------------------------------------------------
+
+
+def test_detector_initialises_all_components() -> None:
+    """The detector wires up every monitor and the fusion engine."""
+    detector = DisruptionDetector()
+
+    assert detector.weather_monitor is not None
+    assert detector.places_monitor is not None
+    assert detector.gps_monitor is not None
+    assert detector.complaint_detector is not None
+    assert detector.fusion_engine is not None
+
+
+def test_check_source_weather_dispatches() -> None:
+    """check_source routes to the weather monitor with location coords."""
+    detector = DisruptionDetector()
+    with mock.patch.object(
+        detector.weather_monitor, "monitor", return_value=STORM_SIGNAL
+    ) as mocked:
+        signal = detector.check_source("weather", trip())
+
+    mocked.assert_called_once_with(6.9271, 79.8612)
+    assert signal == STORM_SIGNAL
+
+
+def test_check_source_complaint_handles_missing_message(monkeypatch, tmp_path) -> None:
+    """A missing chat message yields the neutral complaint signal."""
+    without_api_keys(monkeypatch, tmp_path)
+    signal = DisruptionDetector().check_source("complaint", trip())
+
+    assert signal["complaint_score"] == 0.0
+    assert signal["change_request"] is False
+
+
+def test_check_source_unknown_returns_empty() -> None:
+    """Unknown sources degrade to an empty signal instead of raising."""
+    detector = DisruptionDetector()
+
+    assert detector.check_source("telepathy", trip()) == {}
+
+
+def test_detect_clean_trip_returns_empty(monkeypatch, tmp_path) -> None:
+    """A happy-path trip results in zero disruptions."""
+    without_api_keys(monkeypatch, tmp_path)
+
+    result = DisruptionDetector().detect(trip())
+
+    assert result == []
+
+
+def test_detect_full_disruption_set(caplog) -> None:
+    """All four sources firing produce one disruption per rule."""
+    caplog.set_level(logging.INFO)
+    detector = DisruptionDetector()
+    with (
+        mock.patch.object(
+            detector.weather_monitor, "monitor", return_value=STORM_SIGNAL
+        ),
+        mock.patch.object(
+            detector.places_monitor,
+            "monitor",
+            return_value=CLOSED_PLACES_SIGNAL,
+        ),
+        mock.patch.object(
+            detector.gps_monitor, "monitor", return_value=OFF_ROUTE_GPS_SIGNAL
+        ),
+        mock.patch.object(
+            detector.complaint_detector,
+            "monitor",
+            return_value=STRONG_COMPLAINT_SIGNAL,
+        ),
+    ):
+        result = detector.detect(trip())
+
+    assert len(result) == 4
+    assert {disruption.source for disruption in result} == {
+        "weather",
+        "places",
+        "gps",
+        "complaint",
+    }
+    assert {disruption.severity for disruption in result} == {"step"}
+    assert len({disruption.disruption_id for disruption in result}) == 4
+
+    for disruption in result:
+        assert 0.0 <= disruption.confidence <= 1.0
+        assert disruption.requires_confirmation is False
+        assert disruption.detected_at.tzinfo is not None
+        assert disruption.reason.short
+        assert disruption.reason.description
+        assert disruption.reason.details
+
+    assert any("Disruption" in record.message for record in caplog.records)
+
+
+def test_detect_affected_element_from_context() -> None:
+    """Disruption payloads reflect the trip itinerary fields."""
+    detector = DisruptionDetector()
+    with mock.patch.object(
+        detector.weather_monitor, "monitor", return_value=STORM_SIGNAL
+    ):
+        result = detector.detect(trip())
+
+    affected = result[0].affected_element
+    assert affected.activity_name == "Sigiriya climb"
+    assert affected.time_slot == "09:00-11:00"
+    assert affected.day == "Day 2"
+    assert affected.location == "Sigiriya"
+
+
+def test_detect_and_fuse_strong_signals_no_confirmation() -> None:
+    """High fused score clears the confirmation requirement."""
+    detector = DisruptionDetector()
+    with (
+        mock.patch.object(
+            detector.weather_monitor, "monitor", return_value=STORM_SIGNAL
+        ),
+        mock.patch.object(
+            detector.places_monitor,
+            "monitor",
+            return_value=CLOSED_PLACES_SIGNAL,
+        ),
+        mock.patch.object(
+            detector.gps_monitor, "monitor", return_value=OFF_ROUTE_GPS_SIGNAL
+        ),
+        mock.patch.object(
+            detector.complaint_detector,
+            "monitor",
+            return_value=STRONG_COMPLAINT_SIGNAL,
+        ),
+    ):
+        result = detector.detect_and_fuse(trip())
+
+    assert len(result) == 4
+    assert all(
+        disruption.requires_confirmation is False for disruption in result
+    )
+
+
+def test_detect_and_fuse_weak_signals_require_confirmation() -> None:
+    """Low fused score sets requires_confirmation on every disruption."""
+    detector = DisruptionDetector()
+    weak_complaint = {
+        "complaint_score": 0.3,
+        "keywords_found": ["instead"],
+        "category": "other",
+        "change_request": True,
+    }
+    with (
+        mock.patch.object(
+            detector.weather_monitor,
+            "monitor",
+            return_value={
+                "rain_duration_hours": 0.0,
+                "rain_intensity": "none",
+                "temperature_celsius": 30.0,
+                "heat_warning": False,
+            },
+        ),
+        mock.patch.object(
+            detector.places_monitor,
+            "monitor",
+            return_value={
+                "is_open": True,
+                "closure_flag": False,
+                "capacity_issue": False,
+                "crowd_level": "low",
+            },
+        ),
+        mock.patch.object(
+            detector.gps_monitor,
+            "monitor",
+            return_value={
+                "gps_deviation_km": 0.0,
+                "time_delay_minutes": 0,
+                "off_route": False,
+                "running_late": False,
+            },
+        ),
+        mock.patch.object(
+            detector.complaint_detector, "monitor", return_value=weak_complaint
+        ),
+    ):
+        result = detector.detect_and_fuse(trip())
+
+    assert len(result) == 1
+    assert result[0].severity == "day"
+    assert result[0].source == "complaint"
+    assert result[0].requires_confirmation is True
+
+
+def test_detect_confidence_uses_source_floor() -> None:
+    """A fired rule's confidence never drops below the 0.5 floor."""
+    detector = DisruptionDetector()
+    weak_complaint = {
+        "complaint_score": 0.3,
+        "keywords_found": ["instead"],
+        "category": "other",
+        "change_request": True,
+    }
+    with mock.patch.object(
+        detector.complaint_detector, "monitor", return_value=weak_complaint
+    ):
+        weak_result = detector.detect(trip())
+
+    with mock.patch.object(
+        detector.weather_monitor, "monitor", return_value=STORM_SIGNAL
+    ):
+        strong_result = detector.detect(trip())
+
+    change_rule = next(
+        d for d in weak_result if d.source == "complaint"
+    )
+    rain_rule = next(d for d in strong_result if d.source == "weather")
+
+    assert change_rule.confidence == 0.5
+    assert rain_rule.confidence == 1.0
+
+
+def test_detector_graceful_without_api_keys(
+    monkeypatch, tmp_path
+) -> None:
+    """Local signals still trigger detection when API keys are absent."""
+    without_api_keys(monkeypatch, tmp_path)
+
+    context = trip(
+        route_waypoints=[{"lat": 7.2906, "lon": 80.6337}],
+        chat_message=(
+            "we are late and stuck the place is closed and crowded "
+            "cancel everything"
+        ),
+    )
+    result = DisruptionDetector().detect_and_fuse(context)
+
+    assert len(result) >= 2
+    assert {disruption.source for disruption in result} == {"gps", "complaint"}
+    assert all(disruption.requires_confirmation is True for disruption in result)
 
 
 if __name__ == "__main__":

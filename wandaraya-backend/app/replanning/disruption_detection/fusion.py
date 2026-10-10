@@ -73,6 +73,12 @@ class FusionEngine:
             "contributing_sources": contributing,
         }
 
+    def source_score(
+        self, signals: Dict[str, Any], source: str
+    ) -> float:
+        """Public probe of one source's normalised score, used for per-disruption confidence."""
+        return self._source_score(signals, source)
+
     def _source_score(
         self, signals: Dict[str, Any], source: str
     ) -> float:

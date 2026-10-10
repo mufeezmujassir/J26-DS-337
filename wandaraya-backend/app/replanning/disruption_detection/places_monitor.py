@@ -150,9 +150,9 @@ class PlacesMonitor:
 
     @staticmethod
     def _empty_signal() -> Dict[str, Any]:
-        """Degraded signal returned when the API cannot be reached."""
+        """Neutral signal when the API is unreachable; never fabricate a closure."""
         return {
-            "is_open": False,
+            "is_open": True,
             "closure_flag": False,
             "capacity_issue": False,
             "crowd_level": "low",

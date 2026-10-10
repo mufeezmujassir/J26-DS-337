@@ -14,6 +14,7 @@ from app.schemas.disruption import (
 from app.replanning.disruption_detection.complaint_detector import (
     ComplaintDetector,
 )
+from app.replanning.disruption_detection.detector import DisruptionDetector
 from app.replanning.disruption_detection.fusion import (
     FusionEngine,
     fuse,
@@ -42,10 +43,12 @@ from app.replanning.disruption_detection.weather_monitor import (
     WeatherMonitor,
 )
 
-__version__ = "0.2.0"
+__version__ = "0.3.0"
 
 __all__ = [
     "__version__",
+    # Driver
+    "DisruptionDetector",
     # Schemas
     "AffectedElement",
     "Disruption",
