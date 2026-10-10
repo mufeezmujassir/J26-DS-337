@@ -58,6 +58,7 @@ xmltodict==0.14.0
 
 #==== data processing ====
 pandas==2.3.1
+openpyxl==3.1.5
 
 # numpy<2 is required by the fastText binding; it breaks silently on numpy 2
 numpy>=1.22,<2
@@ -105,6 +106,9 @@ tiktoken==0.11.0
 openmeteo-requests==1.6.0
 requests-cache==1.2.1
 retry-requests==2.0.0
+prophet==1.2.1
+scikit-learn==1.6.1
+matplotlib==3.10.0
 
 
 apache-airflow==3.0.4

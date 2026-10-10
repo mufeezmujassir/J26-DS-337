@@ -12,10 +12,17 @@ from app.models.attraction_images import AttractionImage
 from app.models.holiday_calendar import Holiday
 from app.models.user import User
 from app.models.group import TripGroup, GroupMember
+from app.models.weather_station import WeatherStation
+from app.models.weather_reading import WeatherReading
+from app.models.district_weather_monthly import DistrictWeatherMonthly
+from app.models.weather_model_run import WeatherModelRun
+from app.models.weather_forecast import WeatherForecast
+
 from app.models.roads import Road
 from app.models.transport import BusFare, TrainStation, TrainFare
 from app.models.scenic import ScenicPlace
 from app.models.nbro import NBROIncident, NBROInspection, NBROPolygon
+
 
 # Removed weather models, user_preference, and group_preference per user instruction.
 
@@ -35,6 +42,13 @@ __all__ = [
     "User",
     "TripGroup",
     "GroupMember",
+
+    "WeatherStation",
+    "WeatherReading",
+    "DistrictWeatherMonthly",
+    "WeatherModelRun",
+    "WeatherForecast",
+
     "Road",
     "BusFare",
     "TrainStation",
@@ -43,4 +57,5 @@ __all__ = [
     "NBROIncident",
     "NBROInspection",
     "NBROPolygon",
+
 ]

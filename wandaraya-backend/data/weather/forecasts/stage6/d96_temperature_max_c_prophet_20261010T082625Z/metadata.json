@@ -1,0 +1,20 @@
+{
+  "run_id": "d96_temperature_max_c_prophet_20261010T082625Z",
+  "district_id": 96,
+  "target": "temperature_max_c",
+  "selected_model": "prophet",
+  "training_start": "2021-01-01",
+  "training_cutoff": "2025-10-01",
+  "latest_calendar_month": "2025-10-01",
+  "latest_observed_month": "2025-10-01",
+  "latest_month_missing": false,
+  "training_observations": 55,
+  "forecast_horizon_months": 3,
+  "production_approved": false,
+  "parameters": {
+    "fourier_order": 3,
+    "seasonality_prior_scale": 1.0,
+    "changepoint_prior_scale": 0.05
+  },
+  "created_at_utc": "2026-10-10T08:26:25.418942+00:00"
+}

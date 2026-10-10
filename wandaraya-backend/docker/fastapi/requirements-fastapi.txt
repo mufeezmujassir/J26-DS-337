@@ -27,6 +27,9 @@ selectolax==0.3.30
 playwright==1.54.0
 xmltodict==0.14.0
 pandas==2.3.1
+openpyxl==3.1.5
+prophet==1.2.1
+matplotlib==3.10.0
 
 # numpy<2 is required by the fastText binding; it breaks silently on numpy 2
 numpy>=1.22,<2

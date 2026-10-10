@@ -1,0 +1,3 @@
+district_id,target,model,mae,rmse,evaluated_months
+78,temperature_max_c,seasonal_naive,0.65,0.8056,10
+78,temperature_max_c,prophet,0.4187,0.6009,10
