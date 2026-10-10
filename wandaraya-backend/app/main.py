@@ -11,6 +11,7 @@ from app.knowledge_base.refresh.refresh_service import TourismKBRefreshService
 from app.knowledge_base.discovery.discovery_service import (
     NationwideAttractionDiscoveryService,
 )
+from app.routers.weather_forecasts import router as weather_forecast_router
 
 app = FastAPI(
     title=settings.APP_NAME,
@@ -24,6 +25,8 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+app.include_router(weather_forecast_router)
 
 @app.get("/health")
 async def health_check():

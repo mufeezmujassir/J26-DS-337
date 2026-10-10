@@ -20,6 +20,10 @@ class WeatherStation(Base):
 
     __table_args__ = (
         UniqueConstraint(
+            "station_id",
+            name="uq_weather_stations_station_id",
+        ),
+        UniqueConstraint(
             "station_name",
             name="uq_weather_stations_station_name",
         ),
@@ -34,15 +38,11 @@ class WeatherStation(Base):
     station_id: Mapped[str] = mapped_column(
         String(50),
         nullable=False,
-        unique=True,
-        index=True,
     )
 
     station_name: Mapped[str] = mapped_column(
         String(150),
         nullable=False,
-        unique=True,
-        index=True,
     )
 
     latitude: Mapped[float | None] = mapped_column(
