@@ -1,4 +1,4 @@
-﻿import asyncio
+import asyncio
 import secrets
 
 from fastapi import FastAPI, Header, HTTPException
@@ -131,6 +131,10 @@ async def discover_knowledge_base(
     finally:
         _kb_discovery_lock.release()
 
+
+
+from app.routers import route_validation
+app.include_router(route_validation.router, prefix="/api")
 
 # You can include your routers here later:
 # from app.routers import recommend

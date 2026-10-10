@@ -1,4 +1,4 @@
-﻿from pydantic_settings import BaseSettings, SettingsConfigDict
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class Settings(BaseSettings):
     APP_NAME: str = "WANDARAYA Knowledge Base"
@@ -13,6 +13,8 @@ class Settings(BaseSettings):
     LANGCHAIN_TRACING_V2: bool = False
     GEMINI_API_KEY: str = ""
     AIRFLOW_API_TOKEN: str = ""
+    ROUTE_API_BASE_URL: str = "https://api.openrouteservice.org"
+    ROUTE_API_KEY: str = ""
 
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8", extra="ignore")
 
