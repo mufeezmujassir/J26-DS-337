@@ -40,6 +40,10 @@ from app.replanning.disruption_detection.trigger_rules import (  # noqa: E402
     apply_rules,
     get_rule,
 )
+from app.replanning.disruption_detection.fusion import (  # noqa: E402
+    FusionEngine,
+    fuse,
+)
 from app.replanning.disruption_detection import utils as dm_utils  # noqa: E402
 from app.replanning.disruption_detection import (  # noqa: E402
     AffectedElement,
@@ -741,9 +745,9 @@ def test_no_module_local_models_package_exists() -> None:
         )
 
 
-# ---------------------------------------------------------------------------
+
 # 11. Trigger rules
-# ---------------------------------------------------------------------------
+
 
 
 def test_rules_count_and_names() -> None:
@@ -930,9 +934,9 @@ def test_get_rule_by_name() -> None:
     assert get_rule("does_not_exist") is None
 
 
-# ---------------------------------------------------------------------------
-# 12. Severity classifier
-# ---------------------------------------------------------------------------
+
+# Severity classifier
+
 
 
 def test_classifier_plan_wins() -> None:
@@ -976,6 +980,157 @@ def test_classifier_severity_order() -> None:
     assert SEVERITY_ORDER == ("none", "step", "day", "plan")
     assert severity_rank("step") < severity_rank("day") < severity_rank("plan")
     assert severity_rank("unknown") == severity_rank("none")
+
+
+
+# Fusion
+
+def test_fusion_weights_come_from_config() -> None:
+    """Weights and confirmation threshold come from config.yaml."""
+    engine = FusionEngine()
+
+    assert engine.weights == {
+        "weather": 0.30,
+        "places": 0.30,
+        "complaint": 0.25,
+        "gps": 0.15,
+    }
+    assert engine.confirmation_threshold == 0.75
+
+
+def test_fusion_clean_signals_zero_and_confirmation() -> None:
+    """Happy-path signals fuse to zero and still need confirmation-free no-op."""
+    result = fuse(signals())
+
+    assert result["score"] == 0.0
+    assert result["contributing_sources"] == []
+    assert result["requires_confirmation"] is True
+
+
+def test_fusion_weather_storm_alone() -> None:
+    """A full storm alone contributes its 0.30 weight."""
+    result = fuse(
+        signals(weather={"rain_intensity": "storm", "rain_duration_hours": 4.0})
+    )
+
+    assert result["score"] == 0.30
+    assert result["contributing_sources"] == ["weather"]
+    assert result["requires_confirmation"] is True
+
+
+def test_fusion_all_sources_strong() -> None:
+    """Fully disrupted signals fuse to the maximum score."""
+    result = fuse(
+        signals(
+            weather={"rain_intensity": "storm", "rain_duration_hours": 4.0},
+            places={"is_open": False},
+            complaint={"complaint_score": 1.0},
+            gps={"gps_deviation_km": 6.0},
+        )
+    )
+
+    assert result["score"] == 1.0
+    assert result["contributing_sources"] == [
+        "weather",
+        "places",
+        "complaint",
+        "gps",
+    ]
+    assert result["requires_confirmation"] is False
+
+
+def test_fusion_confirmation_off_at_threshold() -> None:
+    """Score equal to the threshold does not require confirmation."""
+    result = fuse(
+        signals(
+            weather={"rain_intensity": "storm", "rain_duration_hours": 4.0},
+            places={"is_open": False},
+            complaint={"complaint_score": 0.6},
+        )
+    )
+
+    assert result["score"] == 0.75
+    assert result["requires_confirmation"] is False
+
+
+def test_fusion_confirmation_below_threshold() -> None:
+    """A score just below the threshold does require confirmation."""
+    result = fuse(
+        signals(
+            weather={"rain_intensity": "storm", "rain_duration_hours": 4.0},
+            places={"is_open": False},
+            complaint={"complaint_score": 0.5},
+        )
+    )
+
+    assert result["score"] == 0.725
+    assert result["requires_confirmation"] is True
+
+
+def test_fusion_complaint_alone_weighted() -> None:
+    """A complaint alone contributes 0.25 * complaint_score."""
+    result = fuse(signals(complaint={"complaint_score": 0.8}))
+
+    assert result["score"] == 0.20
+    assert result["contributing_sources"] == ["complaint"]
+
+
+def test_fusion_gps_deviation_contribution() -> None:
+    """Deviation beyond the 5 km mark saturates the GPS contribution."""
+    result = fuse(signals(gps={"gps_deviation_km": 6.0}))
+
+    assert result["score"] == 0.15
+    assert result["contributing_sources"] == ["gps"]
+
+
+def test_fusion_heat_warning_raises_weather_score() -> None:
+    """Heat warning floors the weather contributor at 0.5."""
+    result = fuse(
+        signals(
+            weather={
+                "rain_intensity": "none",
+                "rain_duration_hours": 0.0,
+                "heat_warning": True,
+            }
+        )
+    )
+
+    assert result["score"] == 0.15
+    assert result["contributing_sources"] == ["weather"]
+
+
+def test_fusion_crowd_medium_contribution() -> None:
+    """A medium crowd level contributes the medium places probe."""
+    result = fuse(
+        signals(places={"is_open": True, "crowd_level": "medium"})
+    )
+
+    assert result["score"] == 0.09
+    assert result["contributing_sources"] == ["places"]
+
+
+def test_fusion_missing_section_is_tolerated() -> None:
+    """A missing source section simply contributes zero."""
+    merged = signals()
+    del merged["complaint"]
+
+    result = fuse(merged)
+
+    assert result["score"] == 0.0
+    assert "complaint" not in result["contributing_sources"]
+
+
+def test_fusion_values_are_clamped() -> None:
+    """Out-of-range raw values clamp to the [0,1] score range."""
+    result = fuse(
+        signals(
+            complaint={"complaint_score": 5.0},
+            gps={"gps_deviation_km": 1_000_000.0},
+        )
+    )
+
+    assert result["score"] == 0.40
+    assert result["requires_confirmation"] is True
 
 
 if __name__ == "__main__":

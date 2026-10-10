@@ -14,6 +14,10 @@ from app.schemas.disruption import (
 from app.replanning.disruption_detection.complaint_detector import (
     ComplaintDetector,
 )
+from app.replanning.disruption_detection.fusion import (
+    FusionEngine,
+    fuse,
+)
 from app.replanning.disruption_detection.gps_monitor import GpsMonitor
 from app.replanning.disruption_detection.places_monitor import PlacesMonitor
 from app.replanning.disruption_detection.severity_classifier import (
@@ -63,6 +67,9 @@ __all__ = [
     "classify_severity",
     "severity_rank",
     "SEVERITY_ORDER",
+    # Fusion
+    "FusionEngine",
+    "fuse",
     # Utils
     "load_config",
     "haversine_distance",
