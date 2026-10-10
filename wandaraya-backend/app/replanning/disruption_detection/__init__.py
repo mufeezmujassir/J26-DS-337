@@ -16,6 +16,16 @@ from app.replanning.disruption_detection.complaint_detector import (
 )
 from app.replanning.disruption_detection.gps_monitor import GpsMonitor
 from app.replanning.disruption_detection.places_monitor import PlacesMonitor
+from app.replanning.disruption_detection.severity_classifier import (
+    SEVERITY_ORDER,
+    classify_severity,
+    rank as severity_rank,
+)
+from app.replanning.disruption_detection.trigger_rules import (
+    RULES,
+    apply_rules,
+    get_rule,
+)
 from app.replanning.disruption_detection.utils import (
     format_disruption_log,
     get_env_api_key,
@@ -46,6 +56,13 @@ __all__ = [
     "PlacesMonitor",
     "GpsMonitor",
     "ComplaintDetector",
+    # Rules & severity
+    "RULES",
+    "apply_rules",
+    "get_rule",
+    "classify_severity",
+    "severity_rank",
+    "SEVERITY_ORDER",
     # Utils
     "load_config",
     "haversine_distance",

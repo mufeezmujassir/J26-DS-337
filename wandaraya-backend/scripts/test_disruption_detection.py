@@ -29,6 +29,17 @@ from app.replanning.disruption_detection.places_monitor import (  # noqa: E402
 from app.replanning.disruption_detection.weather_monitor import (  # noqa: E402
     WeatherMonitor,
 )
+from app.replanning.disruption_detection.severity_classifier import (  # noqa: E402
+    SEVERITY_ORDER,
+    classify_severity,
+    rank as severity_rank,
+)
+from app.replanning.disruption_detection import trigger_rules as rules_mod  # noqa: E402
+from app.replanning.disruption_detection.trigger_rules import (  # noqa: E402
+    RULES,
+    apply_rules,
+    get_rule,
+)
 from app.replanning.disruption_detection import utils as dm_utils  # noqa: E402
 from app.replanning.disruption_detection import (  # noqa: E402
     AffectedElement,
@@ -106,6 +117,62 @@ def places_payload(
             "user_ratings_total": total_ratings,
         }
     }
+
+
+def signals(
+    weather: Dict[str, Any] | None = None,
+    places: Dict[str, Any] | None = None,
+    gps: Dict[str, Any] | None = None,
+    complaint: Dict[str, Any] | None = None,
+    context: Dict[str, Any] | None = None,
+) -> Dict[str, Any]:
+    """Build a merged signal dict, overlaying defaults with partials."""
+    base: Dict[str, Any] = {
+        "weather": {
+            "rain_duration_hours": 0.0,
+            "rain_intensity": "none",
+            "temperature_celsius": 28.0,
+            "heat_warning": False,
+        },
+        "places": {
+            "is_open": True,
+            "closure_flag": False,
+            "capacity_issue": False,
+            "crowd_level": "low",
+        },
+        "gps": {
+            "gps_deviation_km": 0.0,
+            "time_delay_minutes": 0,
+            "off_route": False,
+            "running_late": False,
+        },
+        "complaint": {
+            "complaint_score": 0.0,
+            "keywords_found": [],
+            "category": "other",
+            "change_request": False,
+        },
+        "context": {
+            "is_outdoor": False,
+            "closures_today": 0,
+            "hotel_overbooked": False,
+            "city_change_requested": False,
+        },
+    }
+    for key, overlay in (
+        ("weather", weather),
+        ("places", places),
+        ("gps", gps),
+        ("complaint", complaint),
+        ("context", context),
+    ):
+        if overlay is not None:
+            base[key] = {**base[key], **overlay}
+    return base
+
+
+def fired_names(rule_outputs: list) -> set[str]:
+    return {entry["name"] for entry in rule_outputs}
 
 
 
@@ -672,6 +739,243 @@ def test_no_module_local_models_package_exists() -> None:
         importlib.import_module(
             "app.replanning.disruption_detection.models"
         )
+
+
+# ---------------------------------------------------------------------------
+# 11. Trigger rules
+# ---------------------------------------------------------------------------
+
+
+def test_rules_count_and_names() -> None:
+    """The module ships the eight documented rules."""
+    assert len(RULES) == 8
+    assert {rule.name for rule in RULES} == {
+        "rain_3h_outdoor",
+        "attraction_closed",
+        "multi_closure",
+        "gps_off_route",
+        "time_delay_major",
+        "complaint_detected",
+        "change_request_detected",
+        "city_change_required",
+    }
+
+
+def test_rules_have_valid_metadata() -> None:
+    """Every rule carries valid severity, source and category."""
+    valid_sources = {"weather", "places", "gps", "complaint"}
+    valid_categories = {
+        "weather",
+        "attraction",
+        "transport",
+        "user_report",
+    }
+
+    for rule in RULES:
+        assert rule.severity in {"step", "day", "plan"}
+        assert rule.source in valid_sources
+        assert rule.category in valid_categories or callable(rule.category)
+        assert callable(rule.condition)
+        assert callable(rule.describe)
+
+
+def test_rule_thresholds_come_from_config() -> None:
+    """Rule thresholds mirror config.yaml values."""
+    config = dm_utils.load_config("config.yaml")
+
+    assert rules_mod.RAIN_THRESHOLD_HOURS == config["weather"]["rain_threshold_hours"]
+    assert rules_mod.GPS_DEVIATION_THRESHOLD_KM == config["gps"]["deviation_threshold_km"]
+    assert rules_mod.DELAY_THRESHOLD_MINUTES == config["gps"]["delay_threshold_minutes"]
+
+
+def test_rain_3h_outdoor_fires() -> None:
+    """Over-3h rain on an outdoor activity fires the weather rule."""
+    fired = apply_rules(
+        signals(
+            weather={"rain_duration_hours": 4.0},
+            context={"is_outdoor": True},
+        )
+    )
+
+    assert "rain_3h_outdoor" in fired_names(fired)
+    assert next(r for r in fired if r["name"] == "rain_3h_outdoor")["severity"] == "step"
+
+
+def test_rain_indoor_does_not_fire() -> None:
+    """Rain alone does not fire unless the activity is outdoor."""
+    fired = apply_rules(
+        signals(
+            weather={"rain_duration_hours": 4.0},
+            context={"is_outdoor": False},
+        )
+    )
+
+    assert "rain_3h_outdoor" not in fired_names(fired)
+
+
+def test_rain_at_threshold_does_not_fire() -> None:
+    """Duration equal to the threshold is not a trigger."""
+    fired = apply_rules(
+        signals(
+            weather={"rain_duration_hours": 3.0},
+            context={"is_outdoor": True},
+        )
+    )
+
+    assert "rain_3h_outdoor" not in fired_names(fired)
+
+
+def test_attraction_closed_fires() -> None:
+    """A closed attraction fires the step-level closure rule."""
+    fired = apply_rules(signals(places={"is_open": False}))
+
+    assert "attraction_closed" in fired_names(fired)
+
+
+def test_multi_closure_fires_day() -> None:
+    """Two closures today escalate to day severity."""
+    fired = apply_rules(
+        signals(context={"closures_today": 2})
+    )
+
+    assert "multi_closure" in fired_names(fired)
+    assert next(r for r in fired if r["name"] == "multi_closure")["severity"] == "day"
+
+
+def test_gps_off_route_fires_over_threshold() -> None:
+    """Deviation beyond 5 km fires; exactly 5 km does not."""
+    assert "gps_off_route" in fired_names(
+        apply_rules(signals(gps={"gps_deviation_km": 5.5}))
+    )
+    assert "gps_off_route" not in fired_names(
+        apply_rules(signals(gps={"gps_deviation_km": 5.0}))
+    )
+
+
+def test_time_delay_major_fires_over_threshold() -> None:
+    """Delay beyond 60 minutes fires; exactly 60 does not."""
+    assert "time_delay_major" in fired_names(
+        apply_rules(signals(gps={"time_delay_minutes": 61}))
+    )
+    assert "time_delay_major" not in fired_names(
+        apply_rules(signals(gps={"time_delay_minutes": 60}))
+    )
+
+
+def test_complaint_detected_fires_over_threshold() -> None:
+    """Complaint score beyond 0.7 fires; exactly 0.7 does not."""
+    assert "complaint_detected" in fired_names(
+        apply_rules(signals(complaint={"complaint_score": 0.71}))
+    )
+    assert "complaint_detected" not in fired_names(
+        apply_rules(signals(complaint={"complaint_score": 0.7}))
+    )
+
+
+def test_change_request_fires_day() -> None:
+    """A chat change request fires the day-level rule."""
+    fired = apply_rules(
+        signals(complaint={"change_request": True})
+    )
+
+    assert "change_request_detected" in fired_names(fired)
+    assert next(r for r in fired if r["name"] == "change_request_detected")["severity"] == "day"
+
+
+def test_city_change_required_fires_plan() -> None:
+    """Hotel overbooking or a city change request fires the plan rule."""
+    hotel_fired = apply_rules(signals(context={"hotel_overbooked": True}))
+    city_fired = apply_rules(signals(context={"city_change_requested": True}))
+
+    assert "city_change_required" in fired_names(hotel_fired)
+    assert "city_change_required" in fired_names(city_fired)
+    plan_rule = next(
+        r for r in hotel_fired if r["name"] == "city_change_required"
+    )
+    assert plan_rule["severity"] == "plan"
+
+
+def test_clean_signals_fire_nothing() -> None:
+    """A happy-path trip fires no rules at all."""
+    fired = apply_rules(signals())
+
+    assert fired == []
+
+
+def test_apply_rules_output_shape() -> None:
+    """Fired entries carry name/severity/source/category/reason."""
+    fired = apply_rules(signals(places={"is_open": False}))
+    entry = fired[0]
+
+    assert set(entry) == {"name", "severity", "source", "category", "reason"}
+    assert set(entry["reason"]) == {"short", "description", "details"}
+
+
+def test_complaint_rule_category_mapping() -> None:
+    """Complaint 'other' maps to user_report; real categories pass through."""
+    other = apply_rules(
+        signals(complaint={"complaint_score": 0.8, "category": "other"})
+    )
+    transport = apply_rules(
+        signals(complaint={"complaint_score": 0.8, "category": "transport"})
+    )
+
+    assert next(r for r in other if r["name"] == "complaint_detected")["category"] == "user_report"
+    assert next(r for r in transport if r["name"] == "complaint_detected")["category"] == "transport"
+
+
+def test_get_rule_by_name() -> None:
+    """Rules are retrievable by name; unknown names return None."""
+    assert get_rule("rain_3h_outdoor") is not None
+    assert get_rule("does_not_exist") is None
+
+
+# ---------------------------------------------------------------------------
+# 12. Severity classifier
+# ---------------------------------------------------------------------------
+
+
+def test_classifier_plan_wins() -> None:
+    """plan beats day and step."""
+    result = classify_severity(
+        [
+            {"severity": "step"},
+            {"severity": "day"},
+            {"severity": "plan"},
+        ]
+    )
+
+    assert result == "plan"
+
+
+def test_classifier_day_wins_over_step() -> None:
+    """day beats step when no plan is present."""
+    result = classify_severity([{"severity": "step"}, {"severity": "day"}])
+
+    assert result == "day"
+
+
+def test_classifier_step_alone() -> None:
+    """A single step rule classifies as step."""
+    assert classify_severity([{"severity": "step"}]) == "step"
+
+
+def test_classifier_empty_is_none() -> None:
+    """No triggered rules classify as none."""
+    assert classify_severity([]) == "none"
+
+
+def test_classifier_ignores_unknown_severity() -> None:
+    """Rules with unrecognised severity do not break classification."""
+    assert classify_severity([{"severity": "banana"}]) == "none"
+    assert classify_severity([{"severity": "banana"}, {"severity": "day"}]) == "day"
+
+
+def test_classifier_severity_order() -> None:
+    """Severity order and numeric rank match the documented hierarchy."""
+    assert SEVERITY_ORDER == ("none", "step", "day", "plan")
+    assert severity_rank("step") < severity_rank("day") < severity_rank("plan")
+    assert severity_rank("unknown") == severity_rank("none")
 
 
 if __name__ == "__main__":
