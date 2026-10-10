@@ -24,7 +24,16 @@ class Edge:
         self.to_node = to_node
         self.mode = mode
         self.directed = directed
-        self.attributes = attributes or {}
+        default_attrs = {
+            "distance_km": None,
+            "travel_time_min": None,
+            "cost_lkr": None,
+            "source_id": None,
+            "source_dataset": None,
+            "transfer_type": None,
+            "is_estimated": False
+        }
+        self.attributes = {**default_attrs, **(attributes or {})}
 
     def __repr__(self):
         return f"Edge({self.from_node} -> {self.to_node}, mode={self.mode}, directed={self.directed})"
