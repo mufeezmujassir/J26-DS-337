@@ -7,6 +7,7 @@ class Settings(BaseSettings):
     GOOGLE_PLACES_API_KEY: str = ""
     OPENWEATHER_API_KEY: str = ""
     OPENWEATHERMAP_API_KEY: str = ""
+    OPENWEATHERMAP_API_KEY: str = ""
     DATABASE_URL: str = "postgresql+psycopg://postgres:root@postgres:5432/wandaraya"
     REDIS_URL: str = "redis://redis:6379"
     QDRANT_URL: str = "http://qdrant:6333"
