@@ -1,0 +1,31 @@
+{
+  "run_id": "d93_temperature_min_c_monthly_climatology_20261010T082623Z",
+  "district_id": 93,
+  "target": "temperature_min_c",
+  "selected_model": "monthly_climatology",
+  "training_start": "2021-01-01",
+  "training_cutoff": "2025-10-01",
+  "latest_calendar_month": "2025-10-01",
+  "latest_observed_month": "2025-10-01",
+  "latest_month_missing": false,
+  "training_observations": 56,
+  "forecast_horizon_months": 3,
+  "production_approved": false,
+  "parameters": {
+    "monthly_means": {
+      "1": 22.34,
+      "2": 22.16,
+      "3": 23.22,
+      "4": 24.44,
+      "5": 25.475,
+      "6": 26.24,
+      "7": 26.52,
+      "8": 25.580000000000002,
+      "9": 25.939999999999998,
+      "10": 24.15,
+      "11": 23.55,
+      "12": 23.2
+    }
+  },
+  "created_at_utc": "2026-10-10T08:26:23.356459+00:00"
+}

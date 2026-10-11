@@ -1,0 +1,47 @@
+# Disruption Detection module configuration.
+
+weather:
+  api_key_env: OPENWEATHER_API_KEY
+  rain_threshold_hours: 3
+  heat_threshold_celsius: 35
+  units: metric
+  timeout_seconds: 10
+
+places:
+  api_key_env: GOOGLE_PLACES_API_KEY
+  timeout_seconds: 10
+
+gps:
+  deviation_threshold_km: 5
+  delay_threshold_minutes: 60
+
+complaints:
+  keywords:
+    - "late"
+    - "closed"
+    - "crowded"
+    - "boring"
+    - "tired"
+    - "expensive"
+    - "cancel"
+    - "change"
+    - "skip"
+    - "stuck"
+  change_request_keywords:
+    - "let's go"
+    - "instead"
+    - "change"
+    - "cancel"
+    - "skip"
+
+fusion:
+  weights:
+    weather: 0.30
+    places: 0.30
+    complaint: 0.25
+    gps: 0.15
+  confirmation_threshold: 0.75
+
+logging:
+  level: INFO
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"

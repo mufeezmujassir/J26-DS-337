@@ -1,0 +1,4 @@
+district_id,target,model,ds,yhat,yhat_lower,yhat_upper,raw_yhat,training_cutoff,production_approved,run_id
+95,temperature_min_c,seasonal_naive,2025-11-01,23.2,,,23.2,2025-10-01,False,d95_temperature_min_c_seasonal_naive_20261010T082624Z
+95,temperature_min_c,seasonal_naive,2025-12-01,23.2,,,23.2,2025-10-01,False,d95_temperature_min_c_seasonal_naive_20261010T082624Z
+95,temperature_min_c,seasonal_naive,2026-01-01,23.3,,,23.3,2025-10-01,False,d95_temperature_min_c_seasonal_naive_20261010T082624Z
