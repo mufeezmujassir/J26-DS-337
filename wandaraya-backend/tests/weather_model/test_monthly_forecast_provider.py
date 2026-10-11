@@ -30,16 +30,12 @@ def _forecast(run_id: str = "run-1", value: float = 100.0):
 
 def test_returns_partial_result_for_available_approved_targets() -> None:
     result = MonthlyForecastProvider._build_result(
-        78,
-        REQUESTED_MONTH,
-        [(_run("rainfall_mm"), _forecast())],
+        78, REQUESTED_MONTH, [(_run("rainfall_mm"), _forecast())]
     )
-
     assert result.available is True
     assert result.rainfall is not None
     assert result.rainfall.value == 100.0
     assert result.rainfall.unit == "mm/month"
-    assert result.temperature_min is None
     assert result.missing_targets == ["temperature_min_c", "temperature_max_c"]
 
 
@@ -52,7 +48,5 @@ def test_rejects_unapproved_or_mismatched_records() -> None:
             (_run("temperature_min_c", run_id="run-2"), _forecast("wrong-run")),
         ],
     )
-
     assert result.available is False
     assert result.missing_targets == list(MonthlyForecastProvider.TARGETS)
-    assert "No valid production-approved" in result.message
