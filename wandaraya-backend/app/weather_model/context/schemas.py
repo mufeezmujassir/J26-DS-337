@@ -97,3 +97,32 @@ class LiveWeatherResult(BaseModel):
     generated_at_utc: datetime | None = None
     forecast: LiveWeatherDay | None = None
     message: str
+
+class ClimatologyValue(BaseModel):
+    target: str
+    mean: float
+    minimum: float
+    maximum: float
+    standard_deviation: float | None = None
+    unit: str
+
+    observation_years: int
+    first_year: int
+    last_year: int
+
+
+class ClimatologyResult(BaseModel):
+    district_id: int
+    requested_month: date
+
+    available: bool
+    source: str = "historical_climatology"
+    resolution: str = "calendar_month"
+
+    rainfall: ClimatologyValue | None = None
+    temperature_min: ClimatologyValue | None = None
+    temperature_max: ClimatologyValue | None = None
+
+    missing_targets: list[str] = Field(default_factory=list)
+
+    message: str
