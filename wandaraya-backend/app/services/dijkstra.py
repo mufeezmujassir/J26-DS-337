@@ -1,11 +1,36 @@
 import math
 import heapq
-from typing import List, Tuple, Dict
-from app.services.graph import MultimodalGraph
+from typing import List, Tuple, Dict, Optional, Any
+from app.services.graph import MultimodalGraph, Edge
+
+class DistanceCostModel:
+    """
+    Distance-based cost model for Dijkstra routing.
+    Minimizes distance in kilometres (distance_km).
+    Enforces strict numeric validation: finite, non-negative, non-boolean numeric values.
+    Rejects missing, negative, NaN, infinite, or non-numeric edge weights.
+    """
+    @staticmethod
+    def get_weight(edge: Edge) -> Optional[float]:
+        if not hasattr(edge, "attributes") or not isinstance(edge.attributes, dict):
+            return None
+        w = edge.attributes.get("distance_km")
+        if w is None or isinstance(w, bool):
+            return None
+        if not isinstance(w, (int, float)):
+            return None
+        try:
+            val = float(w)
+        except (ValueError, TypeError):
+            return None
+        if not math.isfinite(val) or val < 0.0:
+            return None
+        return val
 
 class DijkstraRouter:
-    def __init__(self, graph: MultimodalGraph):
+    def __init__(self, graph: MultimodalGraph, cost_model: Optional[Any] = None):
         self.graph = graph
+        self.cost_model = cost_model or DistanceCostModel()
 
     def route(self, from_node: str, to_node: str) -> Tuple[List[str], float]:
         """
@@ -36,8 +61,8 @@ class DijkstraRouter:
                     min_edge_dist = math.inf
                     
                     for e in edges:
-                        w = e.attributes.get("distance_km")
-                        if w is not None and w >= 0:
+                        w = self.cost_model.get_weight(e)
+                        if w is not None:
                             min_edge_dist = min(min_edge_dist, w)
                             
                     if min_edge_dist == math.inf:
