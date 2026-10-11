@@ -136,7 +136,9 @@ async def discover_knowledge_base(
 
 
 from app.routers import route_validation
+from app.routers import routes
 app.include_router(route_validation.router, prefix="/api")
+app.include_router(routes.router)
 app.include_router(weather_context_router)
 # You can include your routers here later:
 # from app.routers import recommend
