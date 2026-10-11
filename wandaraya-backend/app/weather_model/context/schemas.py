@@ -6,7 +6,7 @@ from datetime import date, datetime
 from enum import Enum
 
 from pydantic import BaseModel, Field
-
+from typing import Optional,Any
 
 class WeatherSource(str, Enum):
     """The weather data source appropriate for a travel-date window."""
@@ -125,4 +125,33 @@ class ClimatologyResult(BaseModel):
 
     missing_targets: list[str] = Field(default_factory=list)
 
+    message: str
+
+
+class UnifiedWeatherContext(BaseModel):
+    district_id: int
+    travel_date: date
+    reference_date: date
+
+    days_ahead: int
+    selected_source: str
+    actual_source: str
+
+    available: bool
+    resolution: str
+
+    latitude: float | None = None
+    longitude: float | None = None
+
+    rainfall_mm: float | None = None
+    rainfall_period: str | None = None
+
+    temperature_min_c: float | None = None
+    temperature_max_c: float | None = None
+
+    precipitation_probability_max: float | None = None
+
+    missing_targets: list[str] = Field(default_factory=list)
+
+    provenance: dict[str, Any] = Field(default_factory=dict)
     message: str

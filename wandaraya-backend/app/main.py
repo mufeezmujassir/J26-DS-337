@@ -12,7 +12,9 @@ from app.knowledge_base.discovery.discovery_service import (
     NationwideAttractionDiscoveryService,
 )
 from app.routers.weather_forecasts import router as weather_forecast_router
-
+from app.routers.weather_context import (
+    router as weather_context_router,
+)
 app = FastAPI(
     title=settings.APP_NAME,
     version="1.0.0",
@@ -135,7 +137,7 @@ async def discover_knowledge_base(
 
 from app.routers import route_validation
 app.include_router(route_validation.router, prefix="/api")
-
+app.include_router(weather_context_router)
 # You can include your routers here later:
 # from app.routers import recommend
 # app.include_router(recommend.router, prefix="/api")
