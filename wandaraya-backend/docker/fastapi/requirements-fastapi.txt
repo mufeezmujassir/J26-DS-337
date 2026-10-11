@@ -62,10 +62,9 @@ retry-requests==2.0.0
 geoalchemy2==0.13.0
 Shapely==2.1.1
 
-# ===== COMPONENT 4 – DYNAMIC REPLANNING =====
+# DYNAMIC REPLANNING 
 pydantic>=2.0
 requests>=2.31.0
 pyyaml>=6.0
 python-dotenv>=1.0.0
 redis>=5.0.0
-pytest>=7.4.0
