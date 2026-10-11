@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from datetime import date
+from typing import Any
 
 from pydantic import BaseModel, Field
 
@@ -32,4 +33,26 @@ class WeatherSuitabilityResult(BaseModel):
     suitability: str
     weather_source: str
     risk_factors: list[str] = Field(default_factory=list)
+    explanation: str
+
+
+class IntegratedSuitabilityResponse(BaseModel):
+    """Suitability score together with the weather context that produced it."""
+
+    district_id: int
+    travel_date: date
+    activity_type: str
+    available: bool
+    score: float | None = None
+    suitability: str
+    confidence: str
+    weather_source: str
+    weather_resolution: str
+    rainfall_mm: float | None = None
+    rainfall_period: str | None = None
+    temperature_min_c: float | None = None
+    temperature_max_c: float | None = None
+    risk_factors: list[str] = Field(default_factory=list)
+    missing_targets: list[str] = Field(default_factory=list)
+    provenance: dict[str, Any] = Field(default_factory=dict)
     explanation: str
