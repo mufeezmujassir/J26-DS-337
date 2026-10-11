@@ -15,6 +15,9 @@ from app.weather_model.suitability.attraction_schemas import (
 from app.weather_model.suitability.attraction_service import (
     AttractionWeatherSuitabilityService,
 )
+from app.weather_model.suitability.calibration_integration import (
+    calibrate_attraction_response,
+)
 
 
 router = APIRouter(prefix="/api/v1/weather", tags=["Attraction Weather Suitability"])
@@ -38,4 +41,4 @@ async def evaluate_attraction_weather_batch(
     service = AttractionWeatherSuitabilityService(
         context_service=WeatherContextService(monthly_lookup=monthly_lookup)
     )
-    return await service.evaluate_batch(payload)
+    return calibrate_attraction_response(await service.evaluate_batch(payload))

@@ -93,8 +93,12 @@ class AttractionWeatherRepository:
             # as unsupported rather than silently treating the attraction as
             # if it had no activities.
             activity_type = profile or row["activity_name"]
-            if activity_type not in candidate["activity_types"]:
-                candidate["activity_types"].append(activity_type)
+            # Do not deduplicate profile keys. Several distinct KB activity
+            # relationships may legitimately map to one weather profile;
+            # retaining each relationship is essential for accurate activity
+            # coverage metrics (for example, five DB activities must remain
+            # five scored activities even if four are cultural_outdoor).
+            candidate["activity_types"].append(activity_type)
 
         return list(grouped.values())
 

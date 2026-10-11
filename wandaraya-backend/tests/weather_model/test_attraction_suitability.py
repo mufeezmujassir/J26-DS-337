@@ -67,6 +67,8 @@ async def test_reuses_weather_context_for_same_location(mock_context_service):
     assert result.available_attractions == 2
     assert result.results[0].weather_score == 56.42
     assert result.results[1].weather_score == 95.64
+    assert result.results[0].coverage_status == "complete"
+    assert result.results[0].weather_evidence_level == "short_term_forecast"
 
 
 @pytest.mark.asyncio
@@ -74,13 +76,16 @@ async def test_averages_only_supported_activities(mock_context_service):
     service = AttractionWeatherSuitabilityService(mock_context_service)
 
     result = await service.evaluate_batch(
-        request(candidate(1, ["hiking", "cultural_outdoor", "photography"]))
+        request(candidate(1, ["hiking", "cultural_outdoor", "unknown_future_activity"]))
     )
 
     attraction = result.results[0]
     assert attraction.weather_score == 62.96
     assert attraction.scored_activity_count == 2
-    assert attraction.unsupported_activity_types == ["photography"]
+    assert attraction.total_activity_count == 3
+    assert attraction.activity_coverage_ratio == 0.6667
+    assert attraction.coverage_status == "partial"
+    assert attraction.unsupported_activity_types == ["unknown_future_activity"]
 
 
 @pytest.mark.asyncio
@@ -104,17 +109,27 @@ async def test_unavailable_weather_is_propagated(mock_context_service):
     assert result.available_attractions == 0
     assert result.results[0].weather_score is None
     assert result.results[0].suitability == "Unknown"
+    assert result.results[0].total_activity_count == 1
+    assert result.results[0].coverage_status == "none"
+    assert result.results[0].weather_evidence_level == "monthly_prediction"
 
 
 @pytest.mark.asyncio
 async def test_different_locations_use_separate_context_lookups(mock_context_service):
     service = AttractionWeatherSuitabilityService(mock_context_service)
 
-    await service.evaluate_batch(
+    result = await service.evaluate_batch(
         request(
-            candidate(1, ["hiking"]),
+            candidate(1, ["water_activities"]),
             candidate(2, ["hiking"], latitude=6.1, longitude=80.3),
         )
     )
 
     assert mock_context_service.get_context.await_count == 2
+    assert result.results[0].requires_additional_conditions is True
+    assert result.results[0].missing_condition_types == [
+        "wind",
+        "wave_height",
+        "currents",
+        "marine_warnings",
+    ]

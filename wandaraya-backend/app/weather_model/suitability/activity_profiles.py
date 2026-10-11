@@ -29,4 +29,23 @@ ACTIVITY_PROFILES = {
     "indoor_museum": ActivityWeatherProfile(
         "indoor_museum", 0.1, 0.1, 20.0, 34.0
     ),
+    "photography_outdoor": ActivityWeatherProfile(
+        "photography_outdoor", 0.7, 0.5, 20.0, 32.0
+    ),
+    "outdoor_recreation": ActivityWeatherProfile(
+        "outdoor_recreation", 0.8, 0.7, 20.0, 31.0
+    ),
+    "agricultural_outdoor": ActivityWeatherProfile(
+        "agricultural_outdoor", 0.7, 0.6, 20.0, 32.0
+    ),
+    "indoor_leisure": ActivityWeatherProfile(
+        "indoor_leisure", 0.1, 0.1, 20.0, 34.0
+    ),
+    "wellness": ActivityWeatherProfile("wellness", 0.3, 0.3, 22.0, 32.0),
+    "marine_activities": ActivityWeatherProfile(
+        "marine_activities", 0.9, 0.6, 24.0, 33.0
+    ),
+    "event_outdoor": ActivityWeatherProfile(
+        "event_outdoor", 0.7, 0.6, 20.0, 33.0
+    ),
 }

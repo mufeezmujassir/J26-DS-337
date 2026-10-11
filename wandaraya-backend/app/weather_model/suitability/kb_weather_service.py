@@ -16,6 +16,9 @@ from app.weather_model.suitability.attraction_schemas import (
 from app.weather_model.suitability.attraction_service import (
     AttractionWeatherSuitabilityService,
 )
+from app.weather_model.suitability.calibration_integration import (
+    calibrate_attraction_response,
+)
 
 
 class KnowledgeBaseWeatherService:
@@ -47,9 +50,10 @@ class KnowledgeBaseWeatherService:
                 results=[],
             )
 
-        return await self.attraction_weather_service.evaluate_batch(
+        response = await self.attraction_weather_service.evaluate_batch(
             AttractionWeatherBatchRequest(
                 travel_date=travel_date,
                 attractions=candidates,
             )
         )
+        return calibrate_attraction_response(response)

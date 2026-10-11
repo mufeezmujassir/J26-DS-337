@@ -65,6 +65,17 @@ class AttractionWeatherSuitabilityService:
         attraction: AttractionWeatherCandidate,
         context: UnifiedWeatherContext,
     ) -> AttractionWeatherScore:
+        total_activity_count = len(attraction.activity_types)
+        weather_evidence_level = cls._weather_evidence_level(context.actual_source)
+        requires_additional_conditions = any(
+            activity_type in {"marine_activities", "water_activities"}
+            for activity_type in attraction.activity_types
+        )
+        missing_condition_types = (
+            ["wind", "wave_height", "currents", "marine_warnings"]
+            if requires_additional_conditions
+            else []
+        )
         common = {
             "attraction_id": attraction.attraction_id,
             "name": attraction.name,
@@ -74,7 +85,12 @@ class AttractionWeatherSuitabilityService:
             "provenance": {
                 **context.provenance,
                 "coordinate_source": attraction.coordinate_source,
+                "missing_targets": context.missing_targets,
             },
+            "total_activity_count": total_activity_count,
+            "weather_evidence_level": weather_evidence_level,
+            "requires_additional_conditions": requires_additional_conditions,
+            "missing_condition_types": missing_condition_types,
         }
 
         if not context.available:
@@ -83,6 +99,8 @@ class AttractionWeatherSuitabilityService:
                 available=False,
                 suitability="Unknown",
                 confidence="unavailable",
+                activity_coverage_ratio=0.0,
+                coverage_status="none",
                 message=context.message,
             )
 
@@ -132,6 +150,19 @@ class AttractionWeatherSuitabilityService:
             risk_factors.extend(score.risk_factors)
 
         numeric_scores = [item.score for item in activity_scores if item.score is not None]
+        scored_activity_count = sum(item.available for item in activity_scores)
+        activity_coverage_ratio = (
+            round(scored_activity_count / total_activity_count, 4)
+            if total_activity_count
+            else 0.0
+        )
+        coverage_status = (
+            "complete"
+            if activity_coverage_ratio == 1.0
+            else "partial"
+            if activity_coverage_ratio > 0
+            else "none"
+        )
         if not numeric_scores:
             message = (
                 "No supported activities could be scored for this attraction."
@@ -144,7 +175,9 @@ class AttractionWeatherSuitabilityService:
                 suitability="Unknown",
                 confidence="unavailable",
                 activity_scores=activity_scores,
-                scored_activity_count=0,
+                scored_activity_count=scored_activity_count,
+                activity_coverage_ratio=activity_coverage_ratio,
+                coverage_status=coverage_status,
                 unsupported_activity_types=unsupported,
                 risk_factors=cls._unique(risk_factors),
                 message=message,
@@ -171,7 +204,9 @@ class AttractionWeatherSuitabilityService:
             suitability=WeatherSuitabilityScorer._classification(weather_score),
             confidence=first_scored.confidence,
             activity_scores=activity_scores,
-            scored_activity_count=len(numeric_scores),
+            scored_activity_count=scored_activity_count,
+            activity_coverage_ratio=activity_coverage_ratio,
+            coverage_status=coverage_status,
             unsupported_activity_types=unsupported,
             risk_factors=cls._unique(risk_factors),
             message=message,
@@ -180,3 +215,11 @@ class AttractionWeatherSuitabilityService:
     @staticmethod
     def _unique(items: list[str]) -> list[str]:
         return list(dict.fromkeys(items))
+
+    @staticmethod
+    def _weather_evidence_level(actual_source: str) -> str:
+        return {
+            "openweathermap": "short_term_forecast",
+            "monthly_forecast": "monthly_prediction",
+            "historical_climatology": "seasonal_baseline",
+        }.get(actual_source, "unavailable")

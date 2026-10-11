@@ -48,13 +48,25 @@ class AttractionWeatherScore(BaseModel):
     district_id: int
     available: bool
     weather_score: float | None = None
+    ranking_weather_score: float | None = None
+    evidence_quality: float = 0.0
+    uncertainty_level: str = "unavailable"
+    ranking_eligible: bool = False
+    calibration_version: str | None = None
+    calibration_limitations: list[str] = Field(default_factory=list)
     suitability: str
     confidence: str
     activity_scores: list[ActivityWeatherScore] = Field(default_factory=list)
+    total_activity_count: int = 0
     scored_activity_count: int = 0
+    activity_coverage_ratio: float = 0.0
+    coverage_status: str = "none"
     unsupported_activity_types: list[str] = Field(default_factory=list)
     weather_source: str
     weather_resolution: str
+    weather_evidence_level: str = "unknown"
+    requires_additional_conditions: bool = False
+    missing_condition_types: list[str] = Field(default_factory=list)
     risk_factors: list[str] = Field(default_factory=list)
     provenance: dict[str, Any] = Field(default_factory=dict)
     message: str
