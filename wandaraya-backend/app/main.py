@@ -18,6 +18,9 @@ from app.routers.weather_context import (
 from app.routers.weather_suitability import (
     router as weather_suitability_router,
 )
+from app.routers.weather_attractions import (
+    router as weather_attractions_router,
+)
 app = FastAPI(
     title=settings.APP_NAME,
     version="1.0.0",
@@ -141,6 +144,8 @@ async def discover_knowledge_base(
 from app.routers import route_validation
 app.include_router(route_validation.router, prefix="/api")
 app.include_router(weather_context_router)
+# The fixed batch route must be registered before the dynamic district route.
+app.include_router(weather_attractions_router)
 app.include_router(weather_suitability_router)
 # You can include your routers here later:
 # from app.routers import recommend
