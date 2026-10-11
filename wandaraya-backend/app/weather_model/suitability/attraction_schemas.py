@@ -15,6 +15,9 @@ class AttractionWeatherCandidate(BaseModel):
     latitude: float | None = Field(default=None, ge=-90, le=90)
     longitude: float | None = Field(default=None, ge=-180, le=180)
     activity_types: list[str] = Field(min_length=1)
+    # Set internally by the KB repository. Direct batch callers default to
+    # attraction-level coordinates.
+    coordinate_source: str = "attraction"
 
     @model_validator(mode="after")
     def validate_coordinates(self) -> "AttractionWeatherCandidate":

@@ -71,7 +71,10 @@ class AttractionWeatherSuitabilityService:
             "district_id": attraction.district_id,
             "weather_source": context.actual_source,
             "weather_resolution": context.resolution,
-            "provenance": context.provenance,
+            "provenance": {
+                **context.provenance,
+                "coordinate_source": attraction.coordinate_source,
+            },
         }
 
         if not context.available:
