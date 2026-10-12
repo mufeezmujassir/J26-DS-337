@@ -1,0 +1,91 @@
+{
+  "stage": "9.8.12",
+  "generated_at_utc": "2026-10-12T04:28:46.765838+00:00",
+  "readiness": "conditionally_ready",
+  "readiness_reasons": [
+    "Airflow task execution is not asserted by this report; inspect task instances and logs after a deliberate manual trigger.",
+    "No model artifact is production-approved, so long-range model forecasts remain unavailable by design.",
+    "Historical coverage remains limited to districts and target series represented in the existing coverage audit."
+  ],
+  "tests": {
+    "status": "completed",
+    "passed": 204,
+    "failed": 0,
+    "skipped": 0,
+    "return_code": 0,
+    "output_tail": "........................................................................ [ 35%]\n........................................................................ [ 70%]\n............................................................             [100%]\n204 passed in 7.68s\n"
+  },
+  "data_coverage": {
+    "status": "loaded_existing_audit",
+    "districts": 25,
+    "districts_with_observations": 16,
+    "candidate_district_target_pairs": 43,
+    "source": "data/weather/reports/backtesting/district_coverage_audit.json"
+  },
+  "model_registry": {
+    "status": "loaded",
+    "entries": 43,
+    "production_approved": 0,
+    "candidate_references": 58,
+    "registry_production_approved": false
+  },
+  "artifact_integrity": {
+    "manifests_found": 58,
+    "checksum_valid": 58,
+    "invalid": []
+  },
+  "airflow_dags": [
+    {
+      "dag_id": "weather_live",
+      "file": "dags/weather_live.py",
+      "definition_present": true,
+      "paused_by_default": true,
+      "retry_and_timeout_configured": true,
+      "default_schedule_utc": "0 */3 * * *",
+      "import_status": "passed",
+      "task_execution_status": "not_claimed_by_static_validation"
+    },
+    {
+      "dag_id": "weather_historical",
+      "file": "dags/weather_historical.py",
+      "definition_present": true,
+      "paused_by_default": true,
+      "retry_and_timeout_configured": true,
+      "default_schedule_utc": "0 2 1 * *",
+      "import_status": "passed",
+      "task_execution_status": "not_claimed_by_static_validation"
+    },
+    {
+      "dag_id": "weather_model_train",
+      "file": "dags/weather_model_train.py",
+      "definition_present": true,
+      "paused_by_default": true,
+      "retry_and_timeout_configured": true,
+      "default_schedule_utc": "0 3 2 * *",
+      "import_status": "passed",
+      "task_execution_status": "not_claimed_by_static_validation"
+    },
+    {
+      "dag_id": "weather_predictions_cache",
+      "file": "dags/weather_predictions_cache.py",
+      "definition_present": true,
+      "paused_by_default": true,
+      "retry_and_timeout_configured": true,
+      "default_schedule_utc": "0 4 * * 1",
+      "import_status": "passed",
+      "task_execution_status": "not_claimed_by_static_validation"
+    }
+  ],
+  "scientific_safeguards": {
+    "temperature_minimum_coverage": 0.95,
+    "rainfall_imputation": "prohibited",
+    "automatic_production_approval": false,
+    "cross_district_substitution": "prohibited_without_validated_policy",
+    "monthly_rainfall_interpreted_as_daily": false
+  },
+  "known_limitations": [
+    "Airflow task execution is not asserted by this report; inspect task instances and logs after a deliberate manual trigger.",
+    "No model artifact is production-approved, so long-range model forecasts remain unavailable by design.",
+    "Historical coverage remains limited to districts and target series represented in the existing coverage audit."
+  ]
+}

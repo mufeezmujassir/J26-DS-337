@@ -1,0 +1,45 @@
+{
+  "artifact_version": "0841140034deac83",
+  "district_id": 81,
+  "target": "temperature_max_c",
+  "model_name": "prophet",
+  "artifact_path": "data/weather/artifacts/candidates/district_81/temperature_max_c/prophet/0841140034deac83/model.json",
+  "artifact_sha256": "9c18dade592624e858427f5074ad70da681f5f80bc888c99065a14e963986639",
+  "configuration": {
+    "growth": "linear",
+    "yearly_seasonality": false,
+    "weekly_seasonality": false,
+    "daily_seasonality": false,
+    "changepoint_prior_scale": 0.05,
+    "seasonality_prior_scale": 1.0,
+    "interval_width": 0.8,
+    "extra_seasonality": {
+      "name": "yearly_monthly",
+      "period": 365.25,
+      "fourier_order": 3,
+      "prior_scale": 1.0
+    }
+  },
+  "provenance": {
+    "training_start": "2021-01-01",
+    "training_cutoff": "2025-10-01",
+    "calendar_months": 58,
+    "observed_months": 57,
+    "missing_source_months": 1,
+    "imputed_training_months": 1,
+    "training_policy": {
+      "name": "missing_aware_training_only",
+      "min_coverage": 0.95,
+      "imputed_months": [
+        "2022-05-01"
+      ],
+      "imputation_methods": {
+        "2022-05-01": "training_only_adjacent_linear_interpolation"
+      }
+    },
+    "data_fingerprint": "a665982f58637eed614f6db6a6f312f16cdb2bb813ec962a045d34d783c56692"
+  },
+  "registry_evidence_fingerprint": "a7e09240acf51468644ccca3fad6a00f4cd6c3c672d47ab70e94524c5536e113",
+  "created_at_utc": "2026-10-12T01:22:59.910627+00:00",
+  "production_approved": false
+}

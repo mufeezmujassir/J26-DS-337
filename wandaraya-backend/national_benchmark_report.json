@@ -1,0 +1,3512 @@
+{
+  "stage": "9.8.7.4",
+  "generated_at_utc": "2026-10-12T00:16:49.709118+00:00",
+  "configuration": {
+    "min_train_months": 36,
+    "horizon_months": 3,
+    "step_months": 3,
+    "min_coverage": 0.95
+  },
+  "summary": {
+    "jobs_attempted": 43,
+    "reports_loaded": 42,
+    "completed_fair_comparisons": 21,
+    "failures": 1,
+    "insufficient_history": 5
+  },
+  "results": [
+    {
+      "district_id": 73,
+      "target": "rainfall_mm",
+      "observation_count": 45,
+      "fair_comparison_status": "insufficient_common_predictions",
+      "common_prediction_count": 0,
+      "model_metrics": {
+        "monthly_climatology": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        },
+        "seasonal_naive": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        },
+        "prophet": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        }
+      },
+      "prophet_improvement_over_climatology_percent": null,
+      "provisional_lowest_mae_model": null,
+      "imputed_training_folds": 0,
+      "skipped_folds": [
+        {
+          "origin": "2024-01-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2024-04-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-03-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-06-01",
+          "reason": "incomplete_training_history"
+        }
+      ],
+      "production_approved": false
+    },
+    {
+      "district_id": 74,
+      "target": "rainfall_mm",
+      "observation_count": 57,
+      "fair_comparison_status": "insufficient_common_predictions",
+      "common_prediction_count": 0,
+      "model_metrics": {
+        "monthly_climatology": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        },
+        "seasonal_naive": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        },
+        "prophet": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        }
+      },
+      "prophet_improvement_over_climatology_percent": null,
+      "provisional_lowest_mae_model": null,
+      "imputed_training_folds": 0,
+      "skipped_folds": [
+        {
+          "origin": "2024-01-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2024-04-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2024-07-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2024-10-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-01-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-04-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-07-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-10-01",
+          "reason": "incomplete_training_history"
+        }
+      ],
+      "production_approved": false
+    },
+    {
+      "district_id": 74,
+      "target": "temperature_min_c",
+      "observation_count": 57,
+      "fair_comparison_status": "insufficient_common_predictions",
+      "common_prediction_count": 0,
+      "model_metrics": {
+        "monthly_climatology": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        },
+        "seasonal_naive": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        },
+        "prophet": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        }
+      },
+      "prophet_improvement_over_climatology_percent": null,
+      "provisional_lowest_mae_model": null,
+      "imputed_training_folds": 0,
+      "skipped_folds": [
+        {
+          "origin": "2024-01-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2024-04-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2024-07-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2024-10-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-01-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-04-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-07-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-10-01",
+          "reason": "incomplete_training_history"
+        }
+      ],
+      "production_approved": false
+    },
+    {
+      "district_id": 74,
+      "target": "temperature_max_c",
+      "observation_count": 57,
+      "fair_comparison_status": "insufficient_common_predictions",
+      "common_prediction_count": 0,
+      "model_metrics": {
+        "monthly_climatology": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        },
+        "seasonal_naive": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        },
+        "prophet": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        }
+      },
+      "prophet_improvement_over_climatology_percent": null,
+      "provisional_lowest_mae_model": null,
+      "imputed_training_folds": 0,
+      "skipped_folds": [
+        {
+          "origin": "2024-01-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2024-04-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2024-07-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2024-10-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-01-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-04-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-07-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-10-01",
+          "reason": "incomplete_training_history"
+        }
+      ],
+      "production_approved": false
+    },
+    {
+      "district_id": 76,
+      "target": "rainfall_mm",
+      "observation_count": 58,
+      "fair_comparison_status": "completed",
+      "common_prediction_count": 21,
+      "model_metrics": {
+        "monthly_climatology": {
+          "mae": 44.9754,
+          "rmse": 74.9637,
+          "bias": 9.6738,
+          "prediction_count": 21,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 35.4798,
+              "rmse": 76.1832,
+              "bias": -27.6083
+            },
+            "2": {
+              "mae": 49.7339,
+              "rmse": 61.4296,
+              "bias": 13.2244
+            },
+            "3": {
+              "mae": 49.7125,
+              "rmse": 85.3298,
+              "bias": 43.4054
+            }
+          }
+        },
+        "seasonal_naive": {
+          "mae": 88.9548,
+          "rmse": 139.162,
+          "bias": 4.6643,
+          "prediction_count": 21,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 97.9286,
+              "rmse": 174.7414,
+              "bias": -38.3286
+            },
+            "2": {
+              "mae": 76.6,
+              "rmse": 84.5961,
+              "bias": -12.3
+            },
+            "3": {
+              "mae": 92.3357,
+              "rmse": 142.8536,
+              "bias": 64.6214
+            }
+          }
+        },
+        "prophet": {
+          "mae": 67.1485,
+          "rmse": 107.3565,
+          "bias": -12.6647,
+          "prediction_count": 21,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 75.2482,
+              "rmse": 121.9649,
+              "bias": -75.2482
+            },
+            "2": {
+              "mae": 60.4533,
+              "rmse": 76.8568,
+              "bias": -9.086
+            },
+            "3": {
+              "mae": 65.7441,
+              "rmse": 117.4472,
+              "bias": 46.3401
+            }
+          }
+        }
+      },
+      "prophet_improvement_over_climatology_percent": -49.3,
+      "provisional_lowest_mae_model": "monthly_climatology",
+      "imputed_training_folds": 0,
+      "skipped_folds": [
+        {
+          "origin": "2025-09-01",
+          "reason": "missing_test_actual",
+          "missing_test_months": [
+            "2025-11-01",
+            "2025-12-01"
+          ]
+        }
+      ],
+      "production_approved": false
+    },
+    {
+      "district_id": 76,
+      "target": "temperature_min_c",
+      "observation_count": 58,
+      "fair_comparison_status": "completed",
+      "common_prediction_count": 21,
+      "model_metrics": {
+        "monthly_climatology": {
+          "mae": 0.6032,
+          "rmse": 0.6962,
+          "bias": -0.5913,
+          "prediction_count": 21,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 0.7869,
+              "rmse": 0.8513,
+              "bias": -0.7512
+            },
+            "2": {
+              "mae": 0.544,
+              "rmse": 0.6902,
+              "bias": -0.544
+            },
+            "3": {
+              "mae": 0.4786,
+              "rmse": 0.5028,
+              "bias": -0.4786
+            }
+          }
+        },
+        "seasonal_naive": {
+          "mae": 0.4524,
+          "rmse": 0.6462,
+          "bias": -0.119,
+          "prediction_count": 21,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 0.6571,
+              "rmse": 0.7964,
+              "bias": -0.3714
+            },
+            "2": {
+              "mae": 0.5571,
+              "rmse": 0.7569,
+              "bias": -0.0429
+            },
+            "3": {
+              "mae": 0.1429,
+              "rmse": 0.2138,
+              "bias": 0.0571
+            }
+          }
+        },
+        "prophet": {
+          "mae": 0.4061,
+          "rmse": 0.5016,
+          "bias": 0.2859,
+          "prediction_count": 21,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 0.2943,
+              "rmse": 0.3129,
+              "bias": 0.1556
+            },
+            "2": {
+              "mae": 0.4385,
+              "rmse": 0.5495,
+              "bias": 0.3376
+            },
+            "3": {
+              "mae": 0.4854,
+              "rmse": 0.5957,
+              "bias": 0.3646
+            }
+          }
+        }
+      },
+      "prophet_improvement_over_climatology_percent": 32.68,
+      "provisional_lowest_mae_model": "prophet",
+      "imputed_training_folds": 7,
+      "skipped_folds": [
+        {
+          "origin": "2025-09-01",
+          "reason": "missing_test_actual",
+          "missing_test_months": [
+            "2025-11-01",
+            "2025-12-01"
+          ]
+        }
+      ],
+      "production_approved": false
+    },
+    {
+      "district_id": 76,
+      "target": "temperature_max_c",
+      "observation_count": 58,
+      "fair_comparison_status": "insufficient_common_predictions",
+      "common_prediction_count": 0,
+      "model_metrics": {
+        "monthly_climatology": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        },
+        "seasonal_naive": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        },
+        "prophet": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        }
+      },
+      "prophet_improvement_over_climatology_percent": null,
+      "provisional_lowest_mae_model": null,
+      "imputed_training_folds": 0,
+      "skipped_folds": [
+        {
+          "origin": "2023-12-01",
+          "reason": "insufficient_coverage",
+          "training_coverage_ratio": 0.9166666666666666,
+          "imputed_months": [],
+          "imputation_methods": {}
+        },
+        {
+          "origin": "2024-03-01",
+          "reason": "insufficient_coverage",
+          "training_coverage_ratio": 0.9230769230769231,
+          "imputed_months": [],
+          "imputation_methods": {}
+        },
+        {
+          "origin": "2024-06-01",
+          "reason": "insufficient_coverage",
+          "training_coverage_ratio": 0.9285714285714286,
+          "imputed_months": [],
+          "imputation_methods": {}
+        },
+        {
+          "origin": "2024-09-01",
+          "reason": "insufficient_coverage",
+          "training_coverage_ratio": 0.9333333333333333,
+          "imputed_months": [],
+          "imputation_methods": {}
+        },
+        {
+          "origin": "2024-12-01",
+          "reason": "insufficient_coverage",
+          "training_coverage_ratio": 0.9375,
+          "imputed_months": [],
+          "imputation_methods": {}
+        },
+        {
+          "origin": "2025-03-01",
+          "reason": "insufficient_coverage",
+          "training_coverage_ratio": 0.9411764705882353,
+          "imputed_months": [],
+          "imputation_methods": {}
+        },
+        {
+          "origin": "2025-06-01",
+          "reason": "insufficient_coverage",
+          "training_coverage_ratio": 0.9444444444444444,
+          "imputed_months": [],
+          "imputation_methods": {}
+        },
+        {
+          "origin": "2025-09-01",
+          "reason": "missing_test_actual",
+          "missing_test_months": [
+            "2025-11-01",
+            "2025-12-01"
+          ]
+        }
+      ],
+      "production_approved": false
+    },
+    {
+      "district_id": 77,
+      "target": "rainfall_mm",
+      "observation_count": 58,
+      "fair_comparison_status": "completed",
+      "common_prediction_count": 21,
+      "model_metrics": {
+        "monthly_climatology": {
+          "mae": 114.9183,
+          "rmse": 131.9266,
+          "bias": 0.954,
+          "prediction_count": 21,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 98.9143,
+              "rmse": 118.4675,
+              "bias": -33.8571
+            },
+            "2": {
+              "mae": 114.2083,
+              "rmse": 132.6612,
+              "bias": -3.906
+            },
+            "3": {
+              "mae": 131.6321,
+              "rmse": 143.4585,
+              "bias": 40.625
+            }
+          }
+        },
+        "seasonal_naive": {
+          "mae": 175.619,
+          "rmse": 205.0286,
+          "bias": 46.7619,
+          "prediction_count": 21,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 119.7429,
+              "rmse": 130.7907,
+              "bias": -3.4
+            },
+            "2": {
+              "mae": 173.4571,
+              "rmse": 199.2598,
+              "bias": 35.8
+            },
+            "3": {
+              "mae": 233.6571,
+              "rmse": 263.2479,
+              "bias": 107.8857
+            }
+          }
+        },
+        "prophet": {
+          "mae": 133.0307,
+          "rmse": 148.1586,
+          "bias": 43.6465,
+          "prediction_count": 21,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 98.9374,
+              "rmse": 117.3722,
+              "bias": -32.6684
+            },
+            "2": {
+              "mae": 133.8287,
+              "rmse": 136.8886,
+              "bias": 47.9146
+            },
+            "3": {
+              "mae": 166.326,
+              "rmse": 182.5876,
+              "bias": 115.6935
+            }
+          }
+        }
+      },
+      "prophet_improvement_over_climatology_percent": -15.76,
+      "provisional_lowest_mae_model": "monthly_climatology",
+      "imputed_training_folds": 0,
+      "skipped_folds": [
+        {
+          "origin": "2025-09-01",
+          "reason": "missing_test_actual",
+          "missing_test_months": [
+            "2025-11-01",
+            "2025-12-01"
+          ]
+        }
+      ],
+      "production_approved": false
+    },
+    {
+      "district_id": 77,
+      "target": "temperature_min_c",
+      "observation_count": 58,
+      "fair_comparison_status": "completed",
+      "common_prediction_count": 18,
+      "model_metrics": {
+        "monthly_climatology": {
+          "mae": 0.463,
+          "rmse": 0.6147,
+          "bias": -0.4296,
+          "prediction_count": 18,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 0.3389,
+              "rmse": 0.3915,
+              "bias": -0.3056
+            },
+            "2": {
+              "mae": 0.3153,
+              "rmse": 0.5227,
+              "bias": -0.3153
+            },
+            "3": {
+              "mae": 0.7347,
+              "rmse": 0.8409,
+              "bias": -0.6681
+            }
+          }
+        },
+        "seasonal_naive": {
+          "mae": 0.6278,
+          "rmse": 0.8357,
+          "bias": -0.2278,
+          "prediction_count": 18,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 0.5667,
+              "rmse": 0.6608,
+              "bias": -0.2
+            },
+            "2": {
+              "mae": 0.4333,
+              "rmse": 0.6055,
+              "bias": 0.0
+            },
+            "3": {
+              "mae": 0.8833,
+              "rmse": 1.1365,
+              "bias": -0.4833
+            }
+          }
+        },
+        "prophet": {
+          "mae": 0.4835,
+          "rmse": 0.5824,
+          "bias": 0.0035,
+          "prediction_count": 18,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 0.4002,
+              "rmse": 0.454,
+              "bias": 0.2369
+            },
+            "2": {
+              "mae": 0.4792,
+              "rmse": 0.5521,
+              "bias": 0.1182
+            },
+            "3": {
+              "mae": 0.5711,
+              "rmse": 0.7119,
+              "bias": -0.3446
+            }
+          }
+        }
+      },
+      "prophet_improvement_over_climatology_percent": -4.43,
+      "provisional_lowest_mae_model": "monthly_climatology",
+      "imputed_training_folds": 5,
+      "skipped_folds": [
+        {
+          "origin": "2024-03-01",
+          "reason": "missing_test_actual",
+          "missing_test_months": [
+            "2024-05-01"
+          ]
+        },
+        {
+          "origin": "2025-09-01",
+          "reason": "missing_test_actual",
+          "missing_test_months": [
+            "2025-11-01",
+            "2025-12-01"
+          ]
+        }
+      ],
+      "production_approved": false
+    },
+    {
+      "district_id": 77,
+      "target": "temperature_max_c",
+      "observation_count": 58,
+      "fair_comparison_status": "completed",
+      "common_prediction_count": 21,
+      "model_metrics": {
+        "monthly_climatology": {
+          "mae": 0.5718,
+          "rmse": 0.6943,
+          "bias": -0.4837,
+          "prediction_count": 21,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 0.5857,
+              "rmse": 0.707,
+              "bias": -0.3929
+            },
+            "2": {
+              "mae": 0.506,
+              "rmse": 0.6396,
+              "bias": -0.4917
+            },
+            "3": {
+              "mae": 0.6238,
+              "rmse": 0.7331,
+              "bias": -0.5667
+            }
+          }
+        },
+        "seasonal_naive": {
+          "mae": 0.6,
+          "rmse": 0.7547,
+          "bias": -0.0667,
+          "prediction_count": 21,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 0.7,
+              "rmse": 0.8185,
+              "bias": -0.0714
+            },
+            "2": {
+              "mae": 0.5143,
+              "rmse": 0.659,
+              "bias": 0.0571
+            },
+            "3": {
+              "mae": 0.5857,
+              "rmse": 0.7774,
+              "bias": -0.1857
+            }
+          }
+        },
+        "prophet": {
+          "mae": 0.506,
+          "rmse": 0.6207,
+          "bias": 0.1983,
+          "prediction_count": 21,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 0.5308,
+              "rmse": 0.6939,
+              "bias": 0.3533
+            },
+            "2": {
+              "mae": 0.4145,
+              "rmse": 0.4831,
+              "bias": 0.1296
+            },
+            "3": {
+              "mae": 0.5727,
+              "rmse": 0.664,
+              "bias": 0.1121
+            }
+          }
+        }
+      },
+      "prophet_improvement_over_climatology_percent": 11.51,
+      "provisional_lowest_mae_model": "prophet",
+      "imputed_training_folds": 7,
+      "skipped_folds": [
+        {
+          "origin": "2025-09-01",
+          "reason": "missing_test_actual",
+          "missing_test_months": [
+            "2025-11-01",
+            "2025-12-01"
+          ]
+        }
+      ],
+      "production_approved": false
+    },
+    {
+      "district_id": 78,
+      "target": "rainfall_mm",
+      "observation_count": 58,
+      "fair_comparison_status": "completed",
+      "common_prediction_count": 21,
+      "model_metrics": {
+        "monthly_climatology": {
+          "mae": 105.0962,
+          "rmse": 128.9326,
+          "bias": -28.5534,
+          "prediction_count": 21,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 123.0458,
+              "rmse": 145.1292,
+              "bias": -88.578
+            },
+            "2": {
+              "mae": 112.1357,
+              "rmse": 136.1985,
+              "bias": -17.6274
+            },
+            "3": {
+              "mae": 80.1071,
+              "rmse": 101.2835,
+              "bias": 20.5452
+            }
+          }
+        },
+        "seasonal_naive": {
+          "mae": 184.2524,
+          "rmse": 232.9297,
+          "bias": 41.781,
+          "prediction_count": 21,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 190.8571,
+              "rmse": 212.2558,
+              "bias": -11.4
+            },
+            "2": {
+              "mae": 156.8,
+              "rmse": 189.9171,
+              "bias": 23.4
+            },
+            "3": {
+              "mae": 205.1,
+              "rmse": 285.7406,
+              "bias": 113.3429
+            }
+          }
+        },
+        "prophet": {
+          "mae": 134.3123,
+          "rmse": 153.8658,
+          "bias": 58.2725,
+          "prediction_count": 21,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 98.171,
+              "rmse": 126.7176,
+              "bias": -8.602
+            },
+            "2": {
+              "mae": 140.2784,
+              "rmse": 154.9111,
+              "bias": 39.4865
+            },
+            "3": {
+              "mae": 164.4877,
+              "rmse": 175.9808,
+              "bias": 143.9331
+            }
+          }
+        }
+      },
+      "prophet_improvement_over_climatology_percent": -27.8,
+      "provisional_lowest_mae_model": "monthly_climatology",
+      "imputed_training_folds": 0,
+      "skipped_folds": [
+        {
+          "origin": "2025-09-01",
+          "reason": "missing_test_actual",
+          "missing_test_months": [
+            "2025-11-01",
+            "2025-12-01"
+          ]
+        }
+      ],
+      "production_approved": false
+    },
+    {
+      "district_id": 78,
+      "target": "temperature_min_c",
+      "observation_count": 58,
+      "fair_comparison_status": "completed",
+      "common_prediction_count": 21,
+      "model_metrics": {
+        "monthly_climatology": {
+          "mae": 0.3756,
+          "rmse": 0.495,
+          "bias": -0.3518,
+          "prediction_count": 21,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 0.3988,
+              "rmse": 0.4658,
+              "bias": -0.3988
+            },
+            "2": {
+              "mae": 0.203,
+              "rmse": 0.3255,
+              "bias": -0.203
+            },
+            "3": {
+              "mae": 0.525,
+              "rmse": 0.642,
+              "bias": -0.4536
+            }
+          }
+        },
+        "seasonal_naive": {
+          "mae": 0.5095,
+          "rmse": 0.6863,
+          "bias": -0.1857,
+          "prediction_count": 21,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 0.5,
+              "rmse": 0.6622,
+              "bias": -0.3857
+            },
+            "2": {
+              "mae": 0.4286,
+              "rmse": 0.5632,
+              "bias": 0.0857
+            },
+            "3": {
+              "mae": 0.6,
+              "rmse": 0.8106,
+              "bias": -0.2571
+            }
+          }
+        },
+        "prophet": {
+          "mae": 0.3762,
+          "rmse": 0.4389,
+          "bias": 0.0989,
+          "prediction_count": 21,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 0.2224,
+              "rmse": 0.2648,
+              "bias": 0.1224
+            },
+            "2": {
+              "mae": 0.4176,
+              "rmse": 0.4547,
+              "bias": 0.2475
+            },
+            "3": {
+              "mae": 0.4887,
+              "rmse": 0.5488,
+              "bias": -0.0732
+            }
+          }
+        }
+      },
+      "prophet_improvement_over_climatology_percent": -0.16,
+      "provisional_lowest_mae_model": "monthly_climatology",
+      "imputed_training_folds": 7,
+      "skipped_folds": [
+        {
+          "origin": "2025-09-01",
+          "reason": "missing_test_actual",
+          "missing_test_months": [
+            "2025-11-01",
+            "2025-12-01"
+          ]
+        }
+      ],
+      "production_approved": false
+    },
+    {
+      "district_id": 78,
+      "target": "temperature_max_c",
+      "observation_count": 58,
+      "fair_comparison_status": "completed",
+      "common_prediction_count": 21,
+      "model_metrics": {
+        "monthly_climatology": {
+          "mae": 0.576,
+          "rmse": 0.7681,
+          "bias": -0.4403,
+          "prediction_count": 21,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 0.7036,
+              "rmse": 0.8178,
+              "bias": -0.2964
+            },
+            "2": {
+              "mae": 0.5804,
+              "rmse": 0.8581,
+              "bias": -0.5804
+            },
+            "3": {
+              "mae": 0.444,
+              "rmse": 0.6041,
+              "bias": -0.444
+            }
+          }
+        },
+        "seasonal_naive": {
+          "mae": 0.7143,
+          "rmse": 0.8886,
+          "bias": -0.019,
+          "prediction_count": 21,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 0.9857,
+              "rmse": 1.0385,
+              "bias": 0.0714
+            },
+            "2": {
+              "mae": 0.7143,
+              "rmse": 0.9769,
+              "bias": -0.0286
+            },
+            "3": {
+              "mae": 0.4429,
+              "rmse": 0.5794,
+              "bias": -0.1
+            }
+          }
+        },
+        "prophet": {
+          "mae": 0.5292,
+          "rmse": 0.6987,
+          "bias": 0.2533,
+          "prediction_count": 21,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 0.5872,
+              "rmse": 0.776,
+              "bias": 0.5051
+            },
+            "2": {
+              "mae": 0.5117,
+              "rmse": 0.6933,
+              "bias": 0.1198
+            },
+            "3": {
+              "mae": 0.4887,
+              "rmse": 0.6177,
+              "bias": 0.1348
+            }
+          }
+        }
+      },
+      "prophet_improvement_over_climatology_percent": 8.12,
+      "provisional_lowest_mae_model": "prophet",
+      "imputed_training_folds": 7,
+      "skipped_folds": [
+        {
+          "origin": "2025-09-01",
+          "reason": "missing_test_actual",
+          "missing_test_months": [
+            "2025-11-01",
+            "2025-12-01"
+          ]
+        }
+      ],
+      "production_approved": false
+    },
+    {
+      "district_id": 79,
+      "target": "rainfall_mm",
+      "observation_count": 58,
+      "fair_comparison_status": "completed",
+      "common_prediction_count": 21,
+      "model_metrics": {
+        "monthly_climatology": {
+          "mae": 75.8454,
+          "rmse": 89.3848,
+          "bias": -2.4688,
+          "prediction_count": 21,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 70.7595,
+              "rmse": 76.6979,
+              "bias": -31.6476
+            },
+            "2": {
+              "mae": 91.2833,
+              "rmse": 110.6436,
+              "bias": -0.2881
+            },
+            "3": {
+              "mae": 65.4935,
+              "rmse": 76.4483,
+              "bias": 24.5292
+            }
+          }
+        },
+        "seasonal_naive": {
+          "mae": 119.2262,
+          "rmse": 149.9642,
+          "bias": 34.1262,
+          "prediction_count": 21,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 81.6714,
+              "rmse": 92.9932,
+              "bias": -8.8
+            },
+            "2": {
+              "mae": 156.1786,
+              "rmse": 180.2287,
+              "bias": 45.5643
+            },
+            "3": {
+              "mae": 119.8286,
+              "rmse": 162.2888,
+              "bias": 65.6143
+            }
+          }
+        },
+        "prophet": {
+          "mae": 90.5816,
+          "rmse": 111.4855,
+          "bias": 15.7731,
+          "prediction_count": 21,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 71.9921,
+              "rmse": 82.3223,
+              "bias": -35.9142
+            },
+            "2": {
+              "mae": 94.6728,
+              "rmse": 115.1838,
+              "bias": -9.4409
+            },
+            "3": {
+              "mae": 105.0798,
+              "rmse": 131.3117,
+              "bias": 92.6744
+            }
+          }
+        }
+      },
+      "prophet_improvement_over_climatology_percent": -19.43,
+      "provisional_lowest_mae_model": "monthly_climatology",
+      "imputed_training_folds": 0,
+      "skipped_folds": [
+        {
+          "origin": "2025-09-01",
+          "reason": "missing_test_actual",
+          "missing_test_months": [
+            "2025-11-01",
+            "2025-12-01"
+          ]
+        }
+      ],
+      "production_approved": false
+    },
+    {
+      "district_id": 79,
+      "target": "temperature_min_c",
+      "observation_count": 58,
+      "fair_comparison_status": "insufficient_common_predictions",
+      "common_prediction_count": 0,
+      "model_metrics": {
+        "monthly_climatology": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        },
+        "seasonal_naive": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        },
+        "prophet": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        }
+      },
+      "prophet_improvement_over_climatology_percent": null,
+      "provisional_lowest_mae_model": null,
+      "imputed_training_folds": 0,
+      "skipped_folds": [
+        {
+          "origin": "2023-12-01",
+          "reason": "insufficient_coverage",
+          "training_coverage_ratio": 0.9444444444444444,
+          "imputed_months": [],
+          "imputation_methods": {}
+        },
+        {
+          "origin": "2024-03-01",
+          "reason": "insufficient_coverage",
+          "training_coverage_ratio": 0.9487179487179487,
+          "imputed_months": [],
+          "imputation_methods": {}
+        },
+        {
+          "origin": "2024-06-01",
+          "reason": "missing_test_actual",
+          "missing_test_months": [
+            "2024-07-01"
+          ]
+        },
+        {
+          "origin": "2024-09-01",
+          "reason": "insufficient_coverage",
+          "training_coverage_ratio": 0.9333333333333333,
+          "imputed_months": [],
+          "imputation_methods": {}
+        },
+        {
+          "origin": "2024-12-01",
+          "reason": "missing_test_actual",
+          "missing_test_months": [
+            "2025-02-01"
+          ]
+        },
+        {
+          "origin": "2025-03-01",
+          "reason": "insufficient_coverage",
+          "training_coverage_ratio": 0.9215686274509803,
+          "imputed_months": [],
+          "imputation_methods": {}
+        },
+        {
+          "origin": "2025-06-01",
+          "reason": "insufficient_coverage",
+          "training_coverage_ratio": 0.9259259259259259,
+          "imputed_months": [],
+          "imputation_methods": {}
+        },
+        {
+          "origin": "2025-09-01",
+          "reason": "missing_test_actual",
+          "missing_test_months": [
+            "2025-11-01",
+            "2025-12-01"
+          ]
+        }
+      ],
+      "production_approved": false
+    },
+    {
+      "district_id": 79,
+      "target": "temperature_max_c",
+      "observation_count": 58,
+      "fair_comparison_status": "insufficient_common_predictions",
+      "common_prediction_count": 0,
+      "model_metrics": {
+        "monthly_climatology": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        },
+        "seasonal_naive": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        },
+        "prophet": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        }
+      },
+      "prophet_improvement_over_climatology_percent": null,
+      "provisional_lowest_mae_model": null,
+      "imputed_training_folds": 0,
+      "skipped_folds": [
+        {
+          "origin": "2023-12-01",
+          "reason": "insufficient_coverage",
+          "training_coverage_ratio": 0.9166666666666666,
+          "imputed_months": [],
+          "imputation_methods": {}
+        },
+        {
+          "origin": "2024-03-01",
+          "reason": "insufficient_coverage",
+          "training_coverage_ratio": 0.9230769230769231,
+          "imputed_months": [],
+          "imputation_methods": {}
+        },
+        {
+          "origin": "2024-06-01",
+          "reason": "insufficient_coverage",
+          "training_coverage_ratio": 0.9285714285714286,
+          "imputed_months": [],
+          "imputation_methods": {}
+        },
+        {
+          "origin": "2024-09-01",
+          "reason": "insufficient_coverage",
+          "training_coverage_ratio": 0.9333333333333333,
+          "imputed_months": [],
+          "imputation_methods": {}
+        },
+        {
+          "origin": "2024-12-01",
+          "reason": "missing_test_actual",
+          "missing_test_months": [
+            "2025-03-01"
+          ]
+        },
+        {
+          "origin": "2025-03-01",
+          "reason": "insufficient_coverage",
+          "training_coverage_ratio": 0.9215686274509803,
+          "imputed_months": [],
+          "imputation_methods": {}
+        },
+        {
+          "origin": "2025-06-01",
+          "reason": "insufficient_coverage",
+          "training_coverage_ratio": 0.9259259259259259,
+          "imputed_months": [],
+          "imputation_methods": {}
+        },
+        {
+          "origin": "2025-09-01",
+          "reason": "missing_test_actual",
+          "missing_test_months": [
+            "2025-11-01",
+            "2025-12-01"
+          ]
+        }
+      ],
+      "production_approved": false
+    },
+    {
+      "district_id": 80,
+      "target": "rainfall_mm",
+      "observation_count": 57,
+      "fair_comparison_status": "insufficient_common_predictions",
+      "common_prediction_count": 0,
+      "model_metrics": {
+        "monthly_climatology": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        },
+        "seasonal_naive": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        },
+        "prophet": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        }
+      },
+      "prophet_improvement_over_climatology_percent": null,
+      "provisional_lowest_mae_model": null,
+      "imputed_training_folds": 0,
+      "skipped_folds": [
+        {
+          "origin": "2024-01-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2024-04-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2024-07-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2024-10-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-01-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-04-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-07-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-10-01",
+          "reason": "incomplete_training_history"
+        }
+      ],
+      "production_approved": false
+    },
+    {
+      "district_id": 80,
+      "target": "temperature_min_c",
+      "observation_count": 57,
+      "fair_comparison_status": "insufficient_common_predictions",
+      "common_prediction_count": 0,
+      "model_metrics": {
+        "monthly_climatology": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        },
+        "seasonal_naive": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        },
+        "prophet": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        }
+      },
+      "prophet_improvement_over_climatology_percent": null,
+      "provisional_lowest_mae_model": null,
+      "imputed_training_folds": 0,
+      "skipped_folds": [
+        {
+          "origin": "2024-01-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2024-04-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2024-07-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2024-10-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-01-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-04-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-07-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-10-01",
+          "reason": "incomplete_training_history"
+        }
+      ],
+      "production_approved": false
+    },
+    {
+      "district_id": 80,
+      "target": "temperature_max_c",
+      "observation_count": 57,
+      "fair_comparison_status": "insufficient_common_predictions",
+      "common_prediction_count": 0,
+      "model_metrics": {
+        "monthly_climatology": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        },
+        "seasonal_naive": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        },
+        "prophet": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        }
+      },
+      "prophet_improvement_over_climatology_percent": null,
+      "provisional_lowest_mae_model": null,
+      "imputed_training_folds": 0,
+      "skipped_folds": [
+        {
+          "origin": "2024-01-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2024-04-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2024-07-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2024-10-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-01-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-04-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-07-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-10-01",
+          "reason": "incomplete_training_history"
+        }
+      ],
+      "production_approved": false
+    },
+    {
+      "district_id": 81,
+      "target": "rainfall_mm",
+      "observation_count": 58,
+      "fair_comparison_status": "completed",
+      "common_prediction_count": 21,
+      "model_metrics": {
+        "monthly_climatology": {
+          "mae": 60.0806,
+          "rmse": 96.6213,
+          "bias": -15.4012,
+          "prediction_count": 21,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 46.4429,
+              "rmse": 53.0767,
+              "bias": 46.4429
+            },
+            "2": {
+              "mae": 102.3726,
+              "rmse": 154.0648,
+              "bias": -74.8107
+            },
+            "3": {
+              "mae": 31.4262,
+              "rmse": 38.1307,
+              "bias": -17.8357
+            }
+          }
+        },
+        "seasonal_naive": {
+          "mae": 81.9381,
+          "rmse": 115.914,
+          "bias": -27.8714,
+          "prediction_count": 21,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 51.9857,
+              "rmse": 75.9723,
+              "bias": -41.3286
+            },
+            "2": {
+              "mae": 142.4,
+              "rmse": 174.0721,
+              "bias": -43.4857
+            },
+            "3": {
+              "mae": 51.4286,
+              "rmse": 65.0789,
+              "bias": 1.2
+            }
+          }
+        },
+        "prophet": {
+          "mae": 66.0338,
+          "rmse": 119.8912,
+          "bias": -44.1844,
+          "prediction_count": 21,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 14.4214,
+              "rmse": 17.4987,
+              "bias": -2.2956
+            },
+            "2": {
+              "mae": 144.7777,
+              "rmse": 202.1389,
+              "bias": -143.6779
+            },
+            "3": {
+              "mae": 38.9023,
+              "rmse": 44.2191,
+              "bias": 13.4204
+            }
+          }
+        }
+      },
+      "prophet_improvement_over_climatology_percent": -9.91,
+      "provisional_lowest_mae_model": "monthly_climatology",
+      "imputed_training_folds": 0,
+      "skipped_folds": [
+        {
+          "origin": "2025-09-01",
+          "reason": "missing_test_actual",
+          "missing_test_months": [
+            "2025-11-01",
+            "2025-12-01"
+          ]
+        }
+      ],
+      "production_approved": false
+    },
+    {
+      "district_id": 81,
+      "target": "temperature_min_c",
+      "observation_count": 58,
+      "fair_comparison_status": "completed",
+      "common_prediction_count": 21,
+      "model_metrics": {
+        "monthly_climatology": {
+          "mae": 0.3933,
+          "rmse": 0.5662,
+          "bias": -0.2194,
+          "prediction_count": 21,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 0.4202,
+              "rmse": 0.5128,
+              "bias": -0.406
+            },
+            "2": {
+              "mae": 0.4048,
+              "rmse": 0.7105,
+              "bias": -0.2286
+            },
+            "3": {
+              "mae": 0.3548,
+              "rmse": 0.4404,
+              "bias": -0.0238
+            }
+          }
+        },
+        "seasonal_naive": {
+          "mae": 0.5952,
+          "rmse": 0.8086,
+          "bias": 0.0143,
+          "prediction_count": 21,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 0.5286,
+              "rmse": 0.6729,
+              "bias": -0.3
+            },
+            "2": {
+              "mae": 0.6714,
+              "rmse": 1.0468,
+              "bias": 0.0143
+            },
+            "3": {
+              "mae": 0.5857,
+              "rmse": 0.6425,
+              "bias": 0.3286
+            }
+          }
+        },
+        "prophet": {
+          "mae": 0.5267,
+          "rmse": 0.6085,
+          "bias": 0.4097,
+          "prediction_count": 21,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 0.3426,
+              "rmse": 0.3709,
+              "bias": 0.2127
+            },
+            "2": {
+              "mae": 0.7661,
+              "rmse": 0.8054,
+              "bias": 0.6605
+            },
+            "3": {
+              "mae": 0.4713,
+              "rmse": 0.5699,
+              "bias": 0.3558
+            }
+          }
+        }
+      },
+      "prophet_improvement_over_climatology_percent": -33.92,
+      "provisional_lowest_mae_model": "monthly_climatology",
+      "imputed_training_folds": 0,
+      "skipped_folds": [
+        {
+          "origin": "2025-09-01",
+          "reason": "missing_test_actual",
+          "missing_test_months": [
+            "2025-11-01",
+            "2025-12-01"
+          ]
+        }
+      ],
+      "production_approved": false
+    },
+    {
+      "district_id": 81,
+      "target": "temperature_max_c",
+      "observation_count": 58,
+      "fair_comparison_status": "completed",
+      "common_prediction_count": 21,
+      "model_metrics": {
+        "monthly_climatology": {
+          "mae": 0.5804,
+          "rmse": 0.7382,
+          "bias": -0.3756,
+          "prediction_count": 21,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 0.556,
+              "rmse": 0.7528,
+              "bias": -0.3726
+            },
+            "2": {
+              "mae": 0.5208,
+              "rmse": 0.6881,
+              "bias": -0.4089
+            },
+            "3": {
+              "mae": 0.6643,
+              "rmse": 0.7711,
+              "bias": -0.3452
+            }
+          }
+        },
+        "seasonal_naive": {
+          "mae": 0.7667,
+          "rmse": 0.8638,
+          "bias": -0.0619,
+          "prediction_count": 21,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 0.6286,
+              "rmse": 0.7445,
+              "bias": -0.0286
+            },
+            "2": {
+              "mae": 0.6857,
+              "rmse": 0.7874,
+              "bias": -0.0
+            },
+            "3": {
+              "mae": 0.9857,
+              "rmse": 1.0316,
+              "bias": -0.1571
+            }
+          }
+        },
+        "prophet": {
+          "mae": 0.5715,
+          "rmse": 0.6847,
+          "bias": 0.1741,
+          "prediction_count": 21,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 0.5433,
+              "rmse": 0.6457,
+              "bias": 0.0407
+            },
+            "2": {
+              "mae": 0.6641,
+              "rmse": 0.7166,
+              "bias": 0.4426
+            },
+            "3": {
+              "mae": 0.5071,
+              "rmse": 0.6899,
+              "bias": 0.0389
+            }
+          }
+        }
+      },
+      "prophet_improvement_over_climatology_percent": 1.53,
+      "provisional_lowest_mae_model": "prophet",
+      "imputed_training_folds": 7,
+      "skipped_folds": [
+        {
+          "origin": "2025-09-01",
+          "reason": "missing_test_actual",
+          "missing_test_months": [
+            "2025-11-01",
+            "2025-12-01"
+          ]
+        }
+      ],
+      "production_approved": false
+    },
+    {
+      "district_id": 83,
+      "target": "rainfall_mm",
+      "observation_count": 57,
+      "fair_comparison_status": "insufficient_common_predictions",
+      "common_prediction_count": 0,
+      "model_metrics": {
+        "monthly_climatology": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        },
+        "seasonal_naive": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        },
+        "prophet": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        }
+      },
+      "prophet_improvement_over_climatology_percent": null,
+      "provisional_lowest_mae_model": null,
+      "imputed_training_folds": 0,
+      "skipped_folds": [
+        {
+          "origin": "2024-01-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2024-04-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2024-07-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2024-10-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-01-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-04-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-07-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-10-01",
+          "reason": "incomplete_training_history"
+        }
+      ],
+      "production_approved": false
+    },
+    {
+      "district_id": 83,
+      "target": "temperature_min_c",
+      "observation_count": 57,
+      "fair_comparison_status": "insufficient_common_predictions",
+      "common_prediction_count": 0,
+      "model_metrics": {
+        "monthly_climatology": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        },
+        "seasonal_naive": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        },
+        "prophet": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        }
+      },
+      "prophet_improvement_over_climatology_percent": null,
+      "provisional_lowest_mae_model": null,
+      "imputed_training_folds": 0,
+      "skipped_folds": [
+        {
+          "origin": "2024-01-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2024-04-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2024-07-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2024-10-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-01-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-04-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-07-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-10-01",
+          "reason": "incomplete_training_history"
+        }
+      ],
+      "production_approved": false
+    },
+    {
+      "district_id": 83,
+      "target": "temperature_max_c",
+      "observation_count": 57,
+      "fair_comparison_status": "insufficient_common_predictions",
+      "common_prediction_count": 0,
+      "model_metrics": {
+        "monthly_climatology": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        },
+        "seasonal_naive": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        },
+        "prophet": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        }
+      },
+      "prophet_improvement_over_climatology_percent": null,
+      "provisional_lowest_mae_model": null,
+      "imputed_training_folds": 0,
+      "skipped_folds": [
+        {
+          "origin": "2024-01-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2024-04-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2024-07-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2024-10-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-01-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-04-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-07-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-10-01",
+          "reason": "incomplete_training_history"
+        }
+      ],
+      "production_approved": false
+    },
+    {
+      "district_id": 87,
+      "target": "rainfall_mm",
+      "observation_count": 57,
+      "fair_comparison_status": "insufficient_common_predictions",
+      "common_prediction_count": 0,
+      "model_metrics": {
+        "monthly_climatology": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        },
+        "seasonal_naive": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        },
+        "prophet": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        }
+      },
+      "prophet_improvement_over_climatology_percent": null,
+      "provisional_lowest_mae_model": null,
+      "imputed_training_folds": 0,
+      "skipped_folds": [
+        {
+          "origin": "2024-01-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2024-04-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2024-07-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2024-10-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-01-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-04-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-07-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-10-01",
+          "reason": "incomplete_training_history"
+        }
+      ],
+      "production_approved": false
+    },
+    {
+      "district_id": 87,
+      "target": "temperature_min_c",
+      "observation_count": 57,
+      "fair_comparison_status": "insufficient_common_predictions",
+      "common_prediction_count": 0,
+      "model_metrics": {
+        "monthly_climatology": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        },
+        "seasonal_naive": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        },
+        "prophet": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        }
+      },
+      "prophet_improvement_over_climatology_percent": null,
+      "provisional_lowest_mae_model": null,
+      "imputed_training_folds": 0,
+      "skipped_folds": [
+        {
+          "origin": "2024-01-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2024-04-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2024-07-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2024-10-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-01-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-04-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-07-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-10-01",
+          "reason": "incomplete_training_history"
+        }
+      ],
+      "production_approved": false
+    },
+    {
+      "district_id": 87,
+      "target": "temperature_max_c",
+      "observation_count": 57,
+      "fair_comparison_status": "insufficient_common_predictions",
+      "common_prediction_count": 0,
+      "model_metrics": {
+        "monthly_climatology": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        },
+        "seasonal_naive": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        },
+        "prophet": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        }
+      },
+      "prophet_improvement_over_climatology_percent": null,
+      "provisional_lowest_mae_model": null,
+      "imputed_training_folds": 0,
+      "skipped_folds": [
+        {
+          "origin": "2024-01-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2024-04-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2024-07-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2024-10-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-01-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-04-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-07-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-10-01",
+          "reason": "incomplete_training_history"
+        }
+      ],
+      "production_approved": false
+    },
+    {
+      "district_id": 92,
+      "target": "rainfall_mm",
+      "observation_count": 58,
+      "fair_comparison_status": "completed",
+      "common_prediction_count": 21,
+      "model_metrics": {
+        "monthly_climatology": {
+          "mae": 101.3012,
+          "rmse": 128.0662,
+          "bias": -23.7615,
+          "prediction_count": 21,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 138.719,
+              "rmse": 163.9155,
+              "bias": -26.681
+            },
+            "2": {
+              "mae": 104.0881,
+              "rmse": 131.9965,
+              "bias": -51.6119
+            },
+            "3": {
+              "mae": 61.0964,
+              "rmse": 70.082,
+              "bias": 7.0083
+            }
+          }
+        },
+        "seasonal_naive": {
+          "mae": 121.2238,
+          "rmse": 152.1844,
+          "bias": -17.9286,
+          "prediction_count": 21,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 135.1,
+              "rmse": 167.6783,
+              "bias": -41.3857
+            },
+            "2": {
+              "mae": 114.7429,
+              "rmse": 149.4366,
+              "bias": -41.6
+            },
+            "3": {
+              "mae": 113.8286,
+              "rmse": 137.9598,
+              "bias": 29.2
+            }
+          }
+        },
+        "prophet": {
+          "mae": 101.1896,
+          "rmse": 124.9279,
+          "bias": -11.2716,
+          "prediction_count": 21,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 128.8582,
+              "rmse": 146.2812,
+              "bias": -45.4791
+            },
+            "2": {
+              "mae": 96.5026,
+              "rmse": 129.3617,
+              "bias": -57.7534
+            },
+            "3": {
+              "mae": 78.208,
+              "rmse": 93.211,
+              "bias": 69.4176
+            }
+          }
+        }
+      },
+      "prophet_improvement_over_climatology_percent": 0.11,
+      "provisional_lowest_mae_model": "prophet",
+      "imputed_training_folds": 0,
+      "skipped_folds": [
+        {
+          "origin": "2025-09-01",
+          "reason": "missing_test_actual",
+          "missing_test_months": [
+            "2025-11-01",
+            "2025-12-01"
+          ]
+        }
+      ],
+      "production_approved": false
+    },
+    {
+      "district_id": 92,
+      "target": "temperature_min_c",
+      "observation_count": 58,
+      "fair_comparison_status": "completed",
+      "common_prediction_count": 21,
+      "model_metrics": {
+        "monthly_climatology": {
+          "mae": 0.7373,
+          "rmse": 0.9401,
+          "bias": -0.5992,
+          "prediction_count": 21,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 1.0048,
+              "rmse": 1.2062,
+              "bias": -1.0048
+            },
+            "2": {
+              "mae": 0.6607,
+              "rmse": 0.9271,
+              "bias": -0.4464
+            },
+            "3": {
+              "mae": 0.5464,
+              "rmse": 0.5806,
+              "bias": -0.3464
+            }
+          }
+        },
+        "seasonal_naive": {
+          "mae": 0.7714,
+          "rmse": 0.9666,
+          "bias": -0.1238,
+          "prediction_count": 21,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 0.8,
+              "rmse": 0.9651,
+              "bias": -0.6571
+            },
+            "2": {
+              "mae": 0.9571,
+              "rmse": 1.1458,
+              "bias": 0.0143
+            },
+            "3": {
+              "mae": 0.5571,
+              "rmse": 0.7474,
+              "bias": 0.2714
+            }
+          }
+        },
+        "prophet": {
+          "mae": 0.4908,
+          "rmse": 0.6538,
+          "bias": 0.1643,
+          "prediction_count": 21,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 0.39,
+              "rmse": 0.6133,
+              "bias": -0.0985
+            },
+            "2": {
+              "mae": 0.6947,
+              "rmse": 0.8339,
+              "bias": 0.2714
+            },
+            "3": {
+              "mae": 0.3876,
+              "rmse": 0.4592,
+              "bias": 0.3201
+            }
+          }
+        }
+      },
+      "prophet_improvement_over_climatology_percent": 33.43,
+      "provisional_lowest_mae_model": "prophet",
+      "imputed_training_folds": 0,
+      "skipped_folds": [
+        {
+          "origin": "2025-09-01",
+          "reason": "missing_test_actual",
+          "missing_test_months": [
+            "2025-11-01",
+            "2025-12-01"
+          ]
+        }
+      ],
+      "production_approved": false
+    },
+    {
+      "district_id": 92,
+      "target": "temperature_max_c",
+      "observation_count": 58,
+      "fair_comparison_status": "completed",
+      "common_prediction_count": 21,
+      "model_metrics": {
+        "monthly_climatology": {
+          "mae": 0.7492,
+          "rmse": 0.9367,
+          "bias": -0.1357,
+          "prediction_count": 21,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 0.9274,
+              "rmse": 1.0876,
+              "bias": -0.006
+            },
+            "2": {
+              "mae": 0.5417,
+              "rmse": 0.6781,
+              "bias": -0.094
+            },
+            "3": {
+              "mae": 0.7786,
+              "rmse": 0.9949,
+              "bias": -0.3071
+            }
+          }
+        },
+        "seasonal_naive": {
+          "mae": 1.0,
+          "rmse": 1.236,
+          "bias": 0.2952,
+          "prediction_count": 21,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 1.1429,
+              "rmse": 1.4462,
+              "bias": 0.3429
+            },
+            "2": {
+              "mae": 0.8,
+              "rmse": 0.9243,
+              "bias": 0.5714
+            },
+            "3": {
+              "mae": 1.0571,
+              "rmse": 1.2795,
+              "bias": -0.0286
+            }
+          }
+        },
+        "prophet": {
+          "mae": 0.7685,
+          "rmse": 0.9624,
+          "bias": 0.4757,
+          "prediction_count": 21,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 0.9888,
+              "rmse": 1.2189,
+              "bias": 0.5551
+            },
+            "2": {
+              "mae": 0.5754,
+              "rmse": 0.6544,
+              "bias": 0.4041
+            },
+            "3": {
+              "mae": 0.7413,
+              "rmse": 0.9299,
+              "bias": 0.4677
+            }
+          }
+        }
+      },
+      "prophet_improvement_over_climatology_percent": -2.58,
+      "provisional_lowest_mae_model": "monthly_climatology",
+      "imputed_training_folds": 0,
+      "skipped_folds": [
+        {
+          "origin": "2025-09-01",
+          "reason": "missing_test_actual",
+          "missing_test_months": [
+            "2025-11-01",
+            "2025-12-01"
+          ]
+        }
+      ],
+      "production_approved": false
+    },
+    {
+      "district_id": 93,
+      "target": "rainfall_mm",
+      "observation_count": 58,
+      "fair_comparison_status": "completed",
+      "common_prediction_count": 21,
+      "model_metrics": {
+        "monthly_climatology": {
+          "mae": 79.1982,
+          "rmse": 99.5078,
+          "bias": -12.8272,
+          "prediction_count": 21,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 75.5101,
+              "rmse": 88.0188,
+              "bias": -11.4768
+            },
+            "2": {
+              "mae": 109.6125,
+              "rmse": 136.6639,
+              "bias": -50.9101
+            },
+            "3": {
+              "mae": 52.472,
+              "rmse": 57.2806,
+              "bias": 23.9054
+            }
+          }
+        },
+        "seasonal_naive": {
+          "mae": 102.3238,
+          "rmse": 125.5404,
+          "bias": -8.6905,
+          "prediction_count": 21,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 91.7,
+              "rmse": 117.8298,
+              "bias": -53.6286
+            },
+            "2": {
+              "mae": 145.2571,
+              "rmse": 157.1348,
+              "bias": 1.3
+            },
+            "3": {
+              "mae": 70.0143,
+              "rmse": 93.3058,
+              "bias": 26.2571
+            }
+          }
+        },
+        "prophet": {
+          "mae": 90.8949,
+          "rmse": 110.3293,
+          "bias": -6.6781,
+          "prediction_count": 21,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 78.7222,
+              "rmse": 97.2764,
+              "bias": -48.5027
+            },
+            "2": {
+              "mae": 110.0015,
+              "rmse": 134.0639,
+              "bias": -43.2613
+            },
+            "3": {
+              "mae": 83.9611,
+              "rmse": 95.2986,
+              "bias": 71.7296
+            }
+          }
+        }
+      },
+      "prophet_improvement_over_climatology_percent": -14.77,
+      "provisional_lowest_mae_model": "monthly_climatology",
+      "imputed_training_folds": 0,
+      "skipped_folds": [
+        {
+          "origin": "2025-09-01",
+          "reason": "missing_test_actual",
+          "missing_test_months": [
+            "2025-11-01",
+            "2025-12-01"
+          ]
+        }
+      ],
+      "production_approved": false
+    },
+    {
+      "district_id": 93,
+      "target": "temperature_min_c",
+      "observation_count": 58,
+      "fair_comparison_status": "completed",
+      "common_prediction_count": 18,
+      "model_metrics": {
+        "monthly_climatology": {
+          "mae": 0.5435,
+          "rmse": 0.6804,
+          "bias": -0.4,
+          "prediction_count": 18,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 0.6764,
+              "rmse": 0.7705,
+              "bias": -0.6597
+            },
+            "2": {
+              "mae": 0.5167,
+              "rmse": 0.6256,
+              "bias": -0.125
+            },
+            "3": {
+              "mae": 0.4375,
+              "rmse": 0.6352,
+              "bias": -0.4153
+            }
+          }
+        },
+        "seasonal_naive": {
+          "mae": 0.6556,
+          "rmse": 0.8117,
+          "bias": -0.1222,
+          "prediction_count": 18,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 0.7,
+              "rmse": 0.9609,
+              "bias": -0.3333
+            },
+            "2": {
+              "mae": 0.75,
+              "rmse": 0.8337,
+              "bias": 0.0167
+            },
+            "3": {
+              "mae": 0.5167,
+              "rmse": 0.5986,
+              "bias": -0.05
+            }
+          }
+        },
+        "prophet": {
+          "mae": 0.5068,
+          "rmse": 0.6692,
+          "bias": 0.281,
+          "prediction_count": 18,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 0.1885,
+              "rmse": 0.231,
+              "bias": -0.0034
+            },
+            "2": {
+              "mae": 0.763,
+              "rmse": 0.9458,
+              "bias": 0.7549
+            },
+            "3": {
+              "mae": 0.5688,
+              "rmse": 0.629,
+              "bias": 0.0916
+            }
+          }
+        }
+      },
+      "prophet_improvement_over_climatology_percent": 6.75,
+      "provisional_lowest_mae_model": "prophet",
+      "imputed_training_folds": 6,
+      "skipped_folds": [
+        {
+          "origin": "2024-09-01",
+          "reason": "missing_test_actual",
+          "missing_test_months": [
+            "2024-10-01"
+          ]
+        },
+        {
+          "origin": "2025-09-01",
+          "reason": "missing_test_actual",
+          "missing_test_months": [
+            "2025-11-01",
+            "2025-12-01"
+          ]
+        }
+      ],
+      "production_approved": false
+    },
+    {
+      "district_id": 93,
+      "target": "temperature_max_c",
+      "observation_count": 58,
+      "fair_comparison_status": "completed",
+      "common_prediction_count": 18,
+      "model_metrics": {
+        "monthly_climatology": {
+          "mae": 0.5824,
+          "rmse": 0.7117,
+          "bias": -0.2917,
+          "prediction_count": 18,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 0.5958,
+              "rmse": 0.6335,
+              "bias": -0.1042
+            },
+            "2": {
+              "mae": 0.4333,
+              "rmse": 0.5891,
+              "bias": -0.2111
+            },
+            "3": {
+              "mae": 0.7181,
+              "rmse": 0.8783,
+              "bias": -0.5597
+            }
+          }
+        },
+        "seasonal_naive": {
+          "mae": 0.687,
+          "rmse": 0.8431,
+          "bias": -0.0907,
+          "prediction_count": 18,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 0.6667,
+              "rmse": 0.7483,
+              "bias": 0.0667
+            },
+            "2": {
+              "mae": 0.5278,
+              "rmse": 0.818,
+              "bias": -0.0722
+            },
+            "3": {
+              "mae": 0.8667,
+              "rmse": 0.9504,
+              "bias": -0.2667
+            }
+          }
+        },
+        "prophet": {
+          "mae": 0.6979,
+          "rmse": 0.8329,
+          "bias": 0.3058,
+          "prediction_count": 18,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 0.565,
+              "rmse": 0.7377,
+              "bias": 0.3633
+            },
+            "2": {
+              "mae": 0.7803,
+              "rmse": 0.8932,
+              "bias": 0.6495
+            },
+            "3": {
+              "mae": 0.7485,
+              "rmse": 0.8596,
+              "bias": -0.0955
+            }
+          }
+        }
+      },
+      "prophet_improvement_over_climatology_percent": -19.83,
+      "provisional_lowest_mae_model": "monthly_climatology",
+      "imputed_training_folds": 6,
+      "skipped_folds": [
+        {
+          "origin": "2024-06-01",
+          "reason": "missing_test_actual",
+          "missing_test_months": [
+            "2024-08-01"
+          ]
+        },
+        {
+          "origin": "2025-09-01",
+          "reason": "missing_test_actual",
+          "missing_test_months": [
+            "2025-11-01",
+            "2025-12-01"
+          ]
+        }
+      ],
+      "production_approved": false
+    },
+    {
+      "district_id": 94,
+      "target": "temperature_min_c",
+      "observation_count": 57,
+      "fair_comparison_status": "insufficient_common_predictions",
+      "common_prediction_count": 0,
+      "model_metrics": {
+        "monthly_climatology": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        },
+        "seasonal_naive": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        },
+        "prophet": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        }
+      },
+      "prophet_improvement_over_climatology_percent": null,
+      "provisional_lowest_mae_model": null,
+      "imputed_training_folds": 0,
+      "skipped_folds": [
+        {
+          "origin": "2023-12-01",
+          "reason": "missing_test_actual",
+          "missing_test_months": [
+            "2024-01-01"
+          ]
+        },
+        {
+          "origin": "2024-03-01",
+          "reason": "missing_test_actual",
+          "missing_test_months": [
+            "2024-05-01"
+          ]
+        },
+        {
+          "origin": "2024-07-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2024-10-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-01-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-04-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-07-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-10-01",
+          "reason": "incomplete_training_history"
+        }
+      ],
+      "production_approved": false
+    },
+    {
+      "district_id": 94,
+      "target": "temperature_max_c",
+      "observation_count": 57,
+      "fair_comparison_status": "insufficient_common_predictions",
+      "common_prediction_count": 0,
+      "model_metrics": {
+        "monthly_climatology": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        },
+        "seasonal_naive": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        },
+        "prophet": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        }
+      },
+      "prophet_improvement_over_climatology_percent": null,
+      "provisional_lowest_mae_model": null,
+      "imputed_training_folds": 0,
+      "skipped_folds": [
+        {
+          "origin": "2023-12-01",
+          "reason": "insufficient_coverage",
+          "training_coverage_ratio": 0.9166666666666666,
+          "imputed_months": [],
+          "imputation_methods": {}
+        },
+        {
+          "origin": "2024-03-01",
+          "reason": "missing_test_actual",
+          "missing_test_months": [
+            "2024-05-01"
+          ]
+        },
+        {
+          "origin": "2024-07-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2024-10-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-01-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-04-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-07-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-10-01",
+          "reason": "incomplete_training_history"
+        }
+      ],
+      "production_approved": false
+    },
+    {
+      "district_id": 95,
+      "target": "rainfall_mm",
+      "observation_count": 58,
+      "fair_comparison_status": "completed",
+      "common_prediction_count": 21,
+      "model_metrics": {
+        "monthly_climatology": {
+          "mae": 119.3889,
+          "rmse": 135.1799,
+          "bias": 29.3071,
+          "prediction_count": 21,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 113.631,
+              "rmse": 121.4568,
+              "bias": 12.469
+            },
+            "2": {
+              "mae": 108.0143,
+              "rmse": 133.65,
+              "bias": 38.1095
+            },
+            "3": {
+              "mae": 136.5214,
+              "rmse": 149.0192,
+              "bias": 37.3429
+            }
+          }
+        },
+        "seasonal_naive": {
+          "mae": 183.6476,
+          "rmse": 207.5456,
+          "bias": 56.4857,
+          "prediction_count": 21,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 179.0571,
+              "rmse": 184.4595,
+              "bias": 39.0571
+            },
+            "2": {
+              "mae": 157.7714,
+              "rmse": 180.1338,
+              "bias": 7.2571
+            },
+            "3": {
+              "mae": 214.1143,
+              "rmse": 250.5036,
+              "bias": 123.1429
+            }
+          }
+        },
+        "prophet": {
+          "mae": 123.3566,
+          "rmse": 137.3445,
+          "bias": 56.9511,
+          "prediction_count": 21,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 105.163,
+              "rmse": 129.3452,
+              "bias": 69.015
+            },
+            "2": {
+              "mae": 110.3982,
+              "rmse": 119.6666,
+              "bias": 36.2998
+            },
+            "3": {
+              "mae": 154.5087,
+              "rmse": 159.8132,
+              "bias": 65.5385
+            }
+          }
+        }
+      },
+      "prophet_improvement_over_climatology_percent": -3.32,
+      "provisional_lowest_mae_model": "monthly_climatology",
+      "imputed_training_folds": 0,
+      "skipped_folds": [
+        {
+          "origin": "2025-09-01",
+          "reason": "missing_test_actual",
+          "missing_test_months": [
+            "2025-11-01",
+            "2025-12-01"
+          ]
+        }
+      ],
+      "production_approved": false
+    },
+    {
+      "district_id": 95,
+      "target": "temperature_min_c",
+      "observation_count": 58,
+      "fair_comparison_status": "completed",
+      "common_prediction_count": 21,
+      "model_metrics": {
+        "monthly_climatology": {
+          "mae": 0.5028,
+          "rmse": 0.6193,
+          "bias": -0.4869,
+          "prediction_count": 21,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 0.5988,
+              "rmse": 0.728,
+              "bias": -0.5988
+            },
+            "2": {
+              "mae": 0.3286,
+              "rmse": 0.4156,
+              "bias": -0.281
+            },
+            "3": {
+              "mae": 0.581,
+              "rmse": 0.6693,
+              "bias": -0.581
+            }
+          }
+        },
+        "seasonal_naive": {
+          "mae": 0.5095,
+          "rmse": 0.6694,
+          "bias": -0.281,
+          "prediction_count": 21,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 0.6429,
+              "rmse": 0.7883,
+              "bias": -0.5
+            },
+            "2": {
+              "mae": 0.3429,
+              "rmse": 0.4309,
+              "bias": -0.0857
+            },
+            "3": {
+              "mae": 0.5429,
+              "rmse": 0.7329,
+              "bias": -0.2571
+            }
+          }
+        },
+        "prophet": {
+          "mae": 0.3464,
+          "rmse": 0.4229,
+          "bias": 0.0868,
+          "prediction_count": 21,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 0.2798,
+              "rmse": 0.3603,
+              "bias": -0.0375
+            },
+            "2": {
+              "mae": 0.4404,
+              "rmse": 0.4687,
+              "bias": 0.2289
+            },
+            "3": {
+              "mae": 0.3189,
+              "rmse": 0.4325,
+              "bias": 0.0691
+            }
+          }
+        }
+      },
+      "prophet_improvement_over_climatology_percent": 31.11,
+      "provisional_lowest_mae_model": "prophet",
+      "imputed_training_folds": 0,
+      "skipped_folds": [
+        {
+          "origin": "2025-09-01",
+          "reason": "missing_test_actual",
+          "missing_test_months": [
+            "2025-11-01",
+            "2025-12-01"
+          ]
+        }
+      ],
+      "production_approved": false
+    },
+    {
+      "district_id": 95,
+      "target": "temperature_max_c",
+      "observation_count": 58,
+      "fair_comparison_status": "completed",
+      "common_prediction_count": 21,
+      "model_metrics": {
+        "monthly_climatology": {
+          "mae": 0.8274,
+          "rmse": 0.9897,
+          "bias": -0.5591,
+          "prediction_count": 21,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 0.9583,
+              "rmse": 1.0499,
+              "bias": -0.3298
+            },
+            "2": {
+              "mae": 0.669,
+              "rmse": 0.849,
+              "bias": -0.6214
+            },
+            "3": {
+              "mae": 0.8548,
+              "rmse": 1.0561,
+              "bias": -0.7262
+            }
+          }
+        },
+        "seasonal_naive": {
+          "mae": 1.0,
+          "rmse": 1.2189,
+          "bias": -0.019,
+          "prediction_count": 21,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 1.0857,
+              "rmse": 1.2201,
+              "bias": 0.1429
+            },
+            "2": {
+              "mae": 0.8857,
+              "rmse": 1.0915,
+              "bias": 0.2286
+            },
+            "3": {
+              "mae": 1.0286,
+              "rmse": 1.3331,
+              "bias": -0.4286
+            }
+          }
+        },
+        "prophet": {
+          "mae": 0.6802,
+          "rmse": 0.9224,
+          "bias": 0.3077,
+          "prediction_count": 21,
+          "metrics_by_horizon": {
+            "1": {
+              "mae": 0.6092,
+              "rmse": 1.0817,
+              "bias": 0.5319
+            },
+            "2": {
+              "mae": 0.5997,
+              "rmse": 0.643,
+              "bias": 0.169
+            },
+            "3": {
+              "mae": 0.8318,
+              "rmse": 0.9842,
+              "bias": 0.222
+            }
+          }
+        }
+      },
+      "prophet_improvement_over_climatology_percent": 17.79,
+      "provisional_lowest_mae_model": "prophet",
+      "imputed_training_folds": 0,
+      "skipped_folds": [
+        {
+          "origin": "2025-09-01",
+          "reason": "missing_test_actual",
+          "missing_test_months": [
+            "2025-11-01",
+            "2025-12-01"
+          ]
+        }
+      ],
+      "production_approved": false
+    },
+    {
+      "district_id": 96,
+      "target": "rainfall_mm",
+      "observation_count": 57,
+      "fair_comparison_status": "insufficient_common_predictions",
+      "common_prediction_count": 0,
+      "model_metrics": {
+        "monthly_climatology": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        },
+        "seasonal_naive": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        },
+        "prophet": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        }
+      },
+      "prophet_improvement_over_climatology_percent": null,
+      "provisional_lowest_mae_model": null,
+      "imputed_training_folds": 0,
+      "skipped_folds": [
+        {
+          "origin": "2024-01-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2024-04-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2024-07-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2024-10-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-01-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-04-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-07-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-10-01",
+          "reason": "incomplete_training_history"
+        }
+      ],
+      "production_approved": false
+    },
+    {
+      "district_id": 96,
+      "target": "temperature_min_c",
+      "observation_count": 57,
+      "fair_comparison_status": "insufficient_common_predictions",
+      "common_prediction_count": 0,
+      "model_metrics": {
+        "monthly_climatology": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        },
+        "seasonal_naive": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        },
+        "prophet": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        }
+      },
+      "prophet_improvement_over_climatology_percent": null,
+      "provisional_lowest_mae_model": null,
+      "imputed_training_folds": 0,
+      "skipped_folds": [
+        {
+          "origin": "2024-01-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2024-04-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2024-07-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2024-10-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-01-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-04-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-07-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-10-01",
+          "reason": "incomplete_training_history"
+        }
+      ],
+      "production_approved": false
+    },
+    {
+      "district_id": 96,
+      "target": "temperature_max_c",
+      "observation_count": 57,
+      "fair_comparison_status": "insufficient_common_predictions",
+      "common_prediction_count": 0,
+      "model_metrics": {
+        "monthly_climatology": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        },
+        "seasonal_naive": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        },
+        "prophet": {
+          "mae": null,
+          "rmse": null,
+          "bias": null,
+          "prediction_count": null,
+          "metrics_by_horizon": {}
+        }
+      },
+      "prophet_improvement_over_climatology_percent": null,
+      "provisional_lowest_mae_model": null,
+      "imputed_training_folds": 0,
+      "skipped_folds": [
+        {
+          "origin": "2024-01-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2024-04-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2024-07-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2024-10-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-01-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-04-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-07-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-10-01",
+          "reason": "incomplete_training_history"
+        }
+      ],
+      "production_approved": false
+    }
+  ],
+  "failures": [
+    {
+      "district_id": 94,
+      "target": "rainfall_mm",
+      "return_code": 1,
+      "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/app/app/weather_model/backtesting/run_database_backtest.py\", line 222, in <module>\n    main()\n  File \"/app/app/weather_model/backtesting/run_database_backtest.py\", line 152, in main\n    results = rolling_origin_comparison(\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/app/weather_model/backtesting/rolling_origin.py\", line 214, in rolling_origin_comparison\n    ordered = _validate_observations(observations, allow_missing=missing_aware_training)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/app/weather_model/backtesting/rolling_origin.py\", line 52, in _validate_observations\n    raise ValueError(\"Missing observations require the missing-aware training policy\")\nValueError: Missing observations require the missing-aware training policy\n"
+    }
+  ],
+  "skipped": [
+    {
+      "district_id": 73,
+      "target": "temperature_min_c",
+      "reason": "insufficient_observed_months",
+      "observed_months": 0
+    },
+    {
+      "district_id": 73,
+      "target": "temperature_max_c",
+      "reason": "insufficient_observed_months",
+      "observed_months": 0
+    },
+    {
+      "district_id": 88,
+      "target": "rainfall_mm",
+      "reason": "insufficient_observed_months",
+      "observed_months": 22
+    },
+    {
+      "district_id": 88,
+      "target": "temperature_min_c",
+      "reason": "insufficient_observed_months",
+      "observed_months": 0
+    },
+    {
+      "district_id": 88,
+      "target": "temperature_max_c",
+      "reason": "insufficient_observed_months",
+      "observed_months": 0
+    }
+  ],
+  "production_approved": false
+}

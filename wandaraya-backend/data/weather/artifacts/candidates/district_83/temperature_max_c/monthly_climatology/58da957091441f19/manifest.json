@@ -1,0 +1,48 @@
+{
+  "artifact_version": "58da957091441f19",
+  "district_id": 83,
+  "target": "temperature_max_c",
+  "model_name": "monthly_climatology",
+  "artifact_path": "data/weather/artifacts/candidates/district_83/temperature_max_c/monthly_climatology/58da957091441f19/climatology.json",
+  "artifact_sha256": "9f4b278354845a007dcb46ab6bdfefb53206b8aa1ff7ab023937a11faaa31efb",
+  "configuration": {
+    "monthly_means": {
+      "1": 28.96,
+      "2": 30.275,
+      "3": 31.88,
+      "4": 32.02,
+      "5": 30.3,
+      "6": 29.38,
+      "7": 29.02,
+      "8": 29.439999999999998,
+      "9": 29.14,
+      "10": 29.3,
+      "11": 29.125,
+      "12": 28.975
+    }
+  },
+  "provenance": {
+    "training_start": "2021-01-01",
+    "training_cutoff": "2025-10-01",
+    "calendar_months": 58,
+    "observed_months": 56,
+    "missing_source_months": 2,
+    "imputed_training_months": 2,
+    "training_policy": {
+      "name": "missing_aware_training_only",
+      "min_coverage": 0.95,
+      "imputed_months": [
+        "2022-05-01",
+        "2025-02-01"
+      ],
+      "imputation_methods": {
+        "2022-05-01": "training_only_adjacent_linear_interpolation",
+        "2025-02-01": "historical_same_calendar_month_mean"
+      }
+    },
+    "data_fingerprint": "25b89f645c4efc812abd9b17266aeeba081d6b0fc0b4e2b258bc71b9118a07ba"
+  },
+  "registry_evidence_fingerprint": "15700e27412df46a55d9993bf8668388f63142f0f1798716e873934c27ad137b",
+  "created_at_utc": "2026-10-12T01:23:01.611723+00:00",
+  "production_approved": false
+}
