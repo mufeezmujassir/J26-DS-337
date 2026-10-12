@@ -315,26 +315,40 @@ class DistrictWeatherBacktester:
             & (history["ds"] <= "2025-10-01")
         ].dropna(subset=["y"])
 
-        holdout = self.predict_model(
-            winner,
-            target,
-            train,
-            test,
-        )
+        # Score every candidate against the untouched holdout.  Keeping the
+        # baseline scores is essential for later approval: a Prophet model is
+        # not useful merely because it won a validation comparison if it does
+        # not also beat a simple established baseline on unseen observations.
+        holdout_scores = []
+        selected_holdout = None
+        for name in MODELS:
+            prediction = self.predict_model(name, target, train, test)
+            aligned_holdout = test.merge(
+                prediction[["ds", "yhat"]],
+                on="ds",
+                how="inner",
+                validate="one_to_one",
+            ).dropna(subset=["y", "yhat"])
+            if aligned_holdout.empty:
+                raise ValueError(f"No valid holdout predictions for {name}")
 
-        holdout = test.merge(
-            holdout[["ds", "yhat"]],
-            on="ds",
-            how="inner",
-            validate="one_to_one",
-        ).dropna(subset=["y", "yhat"])
+            error = aligned_holdout["y"] - aligned_holdout["yhat"]
+            holdout_scores.append({
+                "model": name,
+                "mae": float(error.abs().mean()),
+                "rmse": float(np.sqrt((error ** 2).mean())),
+                "months": len(aligned_holdout),
+            })
+            if name == winner:
+                selected_holdout = aligned_holdout
 
-        if holdout.empty:
-            raise ValueError(
-                "No valid holdout predictions"
-            )
+        if selected_holdout is None:
+            raise ValueError("Selected model has no valid holdout predictions")
 
-        error = holdout["y"] - holdout["yhat"]
+        holdout_scores_df = pd.DataFrame(holdout_scores)
+        winner_holdout = holdout_scores_df.loc[
+            holdout_scores_df["model"] == winner
+        ].iloc[0]
 
         prefix = f"district_{district_id}_{target}"
 
@@ -352,10 +366,17 @@ class DistrictWeatherBacktester:
             index=False,
         )
 
-        holdout.to_csv(
+        selected_holdout.to_csv(
             self.output
             / "holdout"
             / f"{prefix}_predictions.csv",
+            index=False,
+        )
+
+        holdout_scores_df.to_csv(
+            self.output
+            / "holdout"
+            / f"{prefix}_scores.csv",
             index=False,
         )
 
@@ -375,12 +396,8 @@ class DistrictWeatherBacktester:
             "validation_folds": int(
                 scores.iloc[0]["folds"]
             ),
-            "holdout_mae": float(
-                error.abs().mean()
-            ),
-            "holdout_rmse": float(
-                np.sqrt((error ** 2).mean())
-            ),
-            "holdout_months": len(holdout),
+            "holdout_mae": float(winner_holdout["mae"]),
+            "holdout_rmse": float(winner_holdout["rmse"]),
+            "holdout_months": int(winner_holdout["months"]),
             "status": "evaluated",
         }

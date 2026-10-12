@@ -1,0 +1,1037 @@
+{
+  "total_model_runs": 43,
+  "total_forecasts": 129,
+  "integrity_passed": 43,
+  "production_ready_for_review": 0,
+  "orphan_forecast_run_ids": [],
+  "issue_counts": {},
+  "warning_counts": {
+    "forecast_horizon_expired": 43,
+    "latest_month_missing": 3,
+    "stale_training_observations": 43
+  },
+  "runs": [
+    {
+      "run_id": "d96_temperature_min_c_monthly_climatology_20261010T082625Z",
+      "district_id": 96,
+      "target": "temperature_min_c",
+      "model_name": "monthly_climatology",
+      "forecast_count": 3,
+      "forecast_horizon_months": 3,
+      "latest_forecast_month": "2026-01-01",
+      "observation_age_months": 12,
+      "integrity_passed": true,
+      "quality_eligible_for_review": false,
+      "production_ready_for_review": false,
+      "issues": [],
+      "warnings": [
+        "forecast_horizon_expired",
+        "stale_training_observations"
+      ],
+      "readiness_blockers": [
+        "forecast_horizon_expired",
+        "quality_gate_not_passed",
+        "stale_training_observations",
+        "validation_gate_not_passed"
+      ]
+    },
+    {
+      "run_id": "d96_temperature_max_c_prophet_20261010T082625Z",
+      "district_id": 96,
+      "target": "temperature_max_c",
+      "model_name": "prophet",
+      "forecast_count": 3,
+      "forecast_horizon_months": 3,
+      "latest_forecast_month": "2026-01-01",
+      "observation_age_months": 12,
+      "integrity_passed": true,
+      "quality_eligible_for_review": false,
+      "production_ready_for_review": false,
+      "issues": [],
+      "warnings": [
+        "forecast_horizon_expired",
+        "stale_training_observations"
+      ],
+      "readiness_blockers": [
+        "forecast_horizon_expired",
+        "quality_gate_not_passed",
+        "stale_training_observations",
+        "validation_gate_not_passed"
+      ]
+    },
+    {
+      "run_id": "d96_rainfall_mm_monthly_climatology_20261010T082624Z",
+      "district_id": 96,
+      "target": "rainfall_mm",
+      "model_name": "monthly_climatology",
+      "forecast_count": 3,
+      "forecast_horizon_months": 3,
+      "latest_forecast_month": "2026-01-01",
+      "observation_age_months": 12,
+      "integrity_passed": true,
+      "quality_eligible_for_review": false,
+      "production_ready_for_review": false,
+      "issues": [],
+      "warnings": [
+        "forecast_horizon_expired",
+        "stale_training_observations"
+      ],
+      "readiness_blockers": [
+        "forecast_horizon_expired",
+        "quality_gate_not_passed",
+        "stale_training_observations",
+        "validation_gate_not_passed"
+      ]
+    },
+    {
+      "run_id": "d95_temperature_min_c_seasonal_naive_20261010T082624Z",
+      "district_id": 95,
+      "target": "temperature_min_c",
+      "model_name": "seasonal_naive",
+      "forecast_count": 3,
+      "forecast_horizon_months": 3,
+      "latest_forecast_month": "2026-01-01",
+      "observation_age_months": 12,
+      "integrity_passed": true,
+      "quality_eligible_for_review": false,
+      "production_ready_for_review": false,
+      "issues": [],
+      "warnings": [
+        "forecast_horizon_expired",
+        "stale_training_observations"
+      ],
+      "readiness_blockers": [
+        "forecast_horizon_expired",
+        "quality_gate_not_passed",
+        "stale_training_observations"
+      ]
+    },
+    {
+      "run_id": "d95_temperature_max_c_prophet_20261010T082624Z",
+      "district_id": 95,
+      "target": "temperature_max_c",
+      "model_name": "prophet",
+      "forecast_count": 3,
+      "forecast_horizon_months": 3,
+      "latest_forecast_month": "2026-01-01",
+      "observation_age_months": 12,
+      "integrity_passed": true,
+      "quality_eligible_for_review": false,
+      "production_ready_for_review": false,
+      "issues": [],
+      "warnings": [
+        "forecast_horizon_expired",
+        "stale_training_observations"
+      ],
+      "readiness_blockers": [
+        "forecast_horizon_expired",
+        "quality_gate_not_passed",
+        "stale_training_observations"
+      ]
+    },
+    {
+      "run_id": "d95_rainfall_mm_prophet_20261010T082624Z",
+      "district_id": 95,
+      "target": "rainfall_mm",
+      "model_name": "prophet",
+      "forecast_count": 3,
+      "forecast_horizon_months": 3,
+      "latest_forecast_month": "2026-01-01",
+      "observation_age_months": 12,
+      "integrity_passed": true,
+      "quality_eligible_for_review": false,
+      "production_ready_for_review": false,
+      "issues": [],
+      "warnings": [
+        "forecast_horizon_expired",
+        "stale_training_observations"
+      ],
+      "readiness_blockers": [
+        "forecast_horizon_expired",
+        "quality_gate_not_passed",
+        "stale_training_observations"
+      ]
+    },
+    {
+      "run_id": "d94_temperature_min_c_prophet_20261010T082623Z",
+      "district_id": 94,
+      "target": "temperature_min_c",
+      "model_name": "prophet",
+      "forecast_count": 3,
+      "forecast_horizon_months": 3,
+      "latest_forecast_month": "2026-01-01",
+      "observation_age_months": 12,
+      "integrity_passed": true,
+      "quality_eligible_for_review": false,
+      "production_ready_for_review": false,
+      "issues": [],
+      "warnings": [
+        "forecast_horizon_expired",
+        "stale_training_observations"
+      ],
+      "readiness_blockers": [
+        "forecast_horizon_expired",
+        "quality_gate_not_passed",
+        "stale_training_observations",
+        "validation_gate_not_passed"
+      ]
+    },
+    {
+      "run_id": "d94_temperature_max_c_seasonal_naive_20261010T082623Z",
+      "district_id": 94,
+      "target": "temperature_max_c",
+      "model_name": "seasonal_naive",
+      "forecast_count": 3,
+      "forecast_horizon_months": 3,
+      "latest_forecast_month": "2026-01-01",
+      "observation_age_months": 12,
+      "integrity_passed": true,
+      "quality_eligible_for_review": false,
+      "production_ready_for_review": false,
+      "issues": [],
+      "warnings": [
+        "forecast_horizon_expired",
+        "stale_training_observations"
+      ],
+      "readiness_blockers": [
+        "forecast_horizon_expired",
+        "quality_gate_not_passed",
+        "stale_training_observations",
+        "validation_gate_not_passed"
+      ]
+    },
+    {
+      "run_id": "d94_rainfall_mm_monthly_climatology_20261010T082623Z",
+      "district_id": 94,
+      "target": "rainfall_mm",
+      "model_name": "monthly_climatology",
+      "forecast_count": 3,
+      "forecast_horizon_months": 3,
+      "latest_forecast_month": "2026-01-01",
+      "observation_age_months": 13,
+      "integrity_passed": true,
+      "quality_eligible_for_review": false,
+      "production_ready_for_review": false,
+      "issues": [],
+      "warnings": [
+        "forecast_horizon_expired",
+        "latest_month_missing",
+        "stale_training_observations"
+      ],
+      "readiness_blockers": [
+        "forecast_horizon_expired",
+        "latest_month_missing",
+        "quality_gate_not_passed",
+        "stale_training_observations"
+      ]
+    },
+    {
+      "run_id": "d93_temperature_min_c_monthly_climatology_20261010T082623Z",
+      "district_id": 93,
+      "target": "temperature_min_c",
+      "model_name": "monthly_climatology",
+      "forecast_count": 3,
+      "forecast_horizon_months": 3,
+      "latest_forecast_month": "2026-01-01",
+      "observation_age_months": 12,
+      "integrity_passed": true,
+      "quality_eligible_for_review": false,
+      "production_ready_for_review": false,
+      "issues": [],
+      "warnings": [
+        "forecast_horizon_expired",
+        "stale_training_observations"
+      ],
+      "readiness_blockers": [
+        "forecast_horizon_expired",
+        "quality_gate_not_passed",
+        "stale_training_observations",
+        "validation_gate_not_passed"
+      ]
+    },
+    {
+      "run_id": "d93_temperature_max_c_prophet_20261010T082623Z",
+      "district_id": 93,
+      "target": "temperature_max_c",
+      "model_name": "prophet",
+      "forecast_count": 3,
+      "forecast_horizon_months": 3,
+      "latest_forecast_month": "2026-01-01",
+      "observation_age_months": 12,
+      "integrity_passed": true,
+      "quality_eligible_for_review": false,
+      "production_ready_for_review": false,
+      "issues": [],
+      "warnings": [
+        "forecast_horizon_expired",
+        "stale_training_observations"
+      ],
+      "readiness_blockers": [
+        "forecast_horizon_expired",
+        "quality_gate_not_passed",
+        "stale_training_observations",
+        "validation_gate_not_passed"
+      ]
+    },
+    {
+      "run_id": "d93_rainfall_mm_prophet_20261010T082622Z",
+      "district_id": 93,
+      "target": "rainfall_mm",
+      "model_name": "prophet",
+      "forecast_count": 3,
+      "forecast_horizon_months": 3,
+      "latest_forecast_month": "2026-01-01",
+      "observation_age_months": 12,
+      "integrity_passed": true,
+      "quality_eligible_for_review": false,
+      "production_ready_for_review": false,
+      "issues": [],
+      "warnings": [
+        "forecast_horizon_expired",
+        "stale_training_observations"
+      ],
+      "readiness_blockers": [
+        "forecast_horizon_expired",
+        "quality_gate_not_passed",
+        "stale_training_observations"
+      ]
+    },
+    {
+      "run_id": "d92_temperature_min_c_prophet_20261010T082622Z",
+      "district_id": 92,
+      "target": "temperature_min_c",
+      "model_name": "prophet",
+      "forecast_count": 3,
+      "forecast_horizon_months": 3,
+      "latest_forecast_month": "2026-01-01",
+      "observation_age_months": 12,
+      "integrity_passed": true,
+      "quality_eligible_for_review": false,
+      "production_ready_for_review": false,
+      "issues": [],
+      "warnings": [
+        "forecast_horizon_expired",
+        "stale_training_observations"
+      ],
+      "readiness_blockers": [
+        "forecast_horizon_expired",
+        "quality_gate_not_passed",
+        "stale_training_observations"
+      ]
+    },
+    {
+      "run_id": "d92_temperature_max_c_prophet_20261010T082621Z",
+      "district_id": 92,
+      "target": "temperature_max_c",
+      "model_name": "prophet",
+      "forecast_count": 3,
+      "forecast_horizon_months": 3,
+      "latest_forecast_month": "2026-01-01",
+      "observation_age_months": 12,
+      "integrity_passed": true,
+      "quality_eligible_for_review": false,
+      "production_ready_for_review": false,
+      "issues": [],
+      "warnings": [
+        "forecast_horizon_expired",
+        "stale_training_observations"
+      ],
+      "readiness_blockers": [
+        "forecast_horizon_expired",
+        "quality_gate_not_passed",
+        "stale_training_observations"
+      ]
+    },
+    {
+      "run_id": "d92_rainfall_mm_monthly_climatology_20261010T082621Z",
+      "district_id": 92,
+      "target": "rainfall_mm",
+      "model_name": "monthly_climatology",
+      "forecast_count": 3,
+      "forecast_horizon_months": 3,
+      "latest_forecast_month": "2026-01-01",
+      "observation_age_months": 12,
+      "integrity_passed": true,
+      "quality_eligible_for_review": false,
+      "production_ready_for_review": false,
+      "issues": [],
+      "warnings": [
+        "forecast_horizon_expired",
+        "stale_training_observations"
+      ],
+      "readiness_blockers": [
+        "forecast_horizon_expired",
+        "quality_gate_not_passed",
+        "stale_training_observations"
+      ]
+    },
+    {
+      "run_id": "d87_temperature_min_c_monthly_climatology_20261010T082621Z",
+      "district_id": 87,
+      "target": "temperature_min_c",
+      "model_name": "monthly_climatology",
+      "forecast_count": 3,
+      "forecast_horizon_months": 3,
+      "latest_forecast_month": "2026-01-01",
+      "observation_age_months": 12,
+      "integrity_passed": true,
+      "quality_eligible_for_review": false,
+      "production_ready_for_review": false,
+      "issues": [],
+      "warnings": [
+        "forecast_horizon_expired",
+        "stale_training_observations"
+      ],
+      "readiness_blockers": [
+        "forecast_horizon_expired",
+        "quality_gate_not_passed",
+        "stale_training_observations",
+        "validation_gate_not_passed"
+      ]
+    },
+    {
+      "run_id": "d87_temperature_max_c_prophet_20261010T082621Z",
+      "district_id": 87,
+      "target": "temperature_max_c",
+      "model_name": "prophet",
+      "forecast_count": 3,
+      "forecast_horizon_months": 3,
+      "latest_forecast_month": "2026-01-01",
+      "observation_age_months": 12,
+      "integrity_passed": true,
+      "quality_eligible_for_review": false,
+      "production_ready_for_review": false,
+      "issues": [],
+      "warnings": [
+        "forecast_horizon_expired",
+        "stale_training_observations"
+      ],
+      "readiness_blockers": [
+        "forecast_horizon_expired",
+        "quality_gate_not_passed",
+        "stale_training_observations",
+        "validation_gate_not_passed"
+      ]
+    },
+    {
+      "run_id": "d87_rainfall_mm_monthly_climatology_20261010T082620Z",
+      "district_id": 87,
+      "target": "rainfall_mm",
+      "model_name": "monthly_climatology",
+      "forecast_count": 3,
+      "forecast_horizon_months": 3,
+      "latest_forecast_month": "2026-01-01",
+      "observation_age_months": 12,
+      "integrity_passed": true,
+      "quality_eligible_for_review": false,
+      "production_ready_for_review": false,
+      "issues": [],
+      "warnings": [
+        "forecast_horizon_expired",
+        "stale_training_observations"
+      ],
+      "readiness_blockers": [
+        "forecast_horizon_expired",
+        "quality_gate_not_passed",
+        "stale_training_observations",
+        "validation_gate_not_passed"
+      ]
+    },
+    {
+      "run_id": "d83_temperature_min_c_monthly_climatology_20261010T082620Z",
+      "district_id": 83,
+      "target": "temperature_min_c",
+      "model_name": "monthly_climatology",
+      "forecast_count": 3,
+      "forecast_horizon_months": 3,
+      "latest_forecast_month": "2026-01-01",
+      "observation_age_months": 12,
+      "integrity_passed": true,
+      "quality_eligible_for_review": false,
+      "production_ready_for_review": false,
+      "issues": [],
+      "warnings": [
+        "forecast_horizon_expired",
+        "stale_training_observations"
+      ],
+      "readiness_blockers": [
+        "forecast_horizon_expired",
+        "quality_gate_not_passed",
+        "stale_training_observations",
+        "validation_gate_not_passed"
+      ]
+    },
+    {
+      "run_id": "d83_temperature_max_c_prophet_20261010T082620Z",
+      "district_id": 83,
+      "target": "temperature_max_c",
+      "model_name": "prophet",
+      "forecast_count": 3,
+      "forecast_horizon_months": 3,
+      "latest_forecast_month": "2026-01-01",
+      "observation_age_months": 12,
+      "integrity_passed": true,
+      "quality_eligible_for_review": false,
+      "production_ready_for_review": false,
+      "issues": [],
+      "warnings": [
+        "forecast_horizon_expired",
+        "stale_training_observations"
+      ],
+      "readiness_blockers": [
+        "forecast_horizon_expired",
+        "quality_gate_not_passed",
+        "stale_training_observations",
+        "validation_gate_not_passed"
+      ]
+    },
+    {
+      "run_id": "d83_rainfall_mm_monthly_climatology_20261010T082620Z",
+      "district_id": 83,
+      "target": "rainfall_mm",
+      "model_name": "monthly_climatology",
+      "forecast_count": 3,
+      "forecast_horizon_months": 3,
+      "latest_forecast_month": "2026-01-01",
+      "observation_age_months": 12,
+      "integrity_passed": true,
+      "quality_eligible_for_review": false,
+      "production_ready_for_review": false,
+      "issues": [],
+      "warnings": [
+        "forecast_horizon_expired",
+        "stale_training_observations"
+      ],
+      "readiness_blockers": [
+        "forecast_horizon_expired",
+        "quality_gate_not_passed",
+        "stale_training_observations",
+        "validation_gate_not_passed"
+      ]
+    },
+    {
+      "run_id": "d81_temperature_min_c_monthly_climatology_20261010T082620Z",
+      "district_id": 81,
+      "target": "temperature_min_c",
+      "model_name": "monthly_climatology",
+      "forecast_count": 3,
+      "forecast_horizon_months": 3,
+      "latest_forecast_month": "2026-01-01",
+      "observation_age_months": 12,
+      "integrity_passed": true,
+      "quality_eligible_for_review": false,
+      "production_ready_for_review": false,
+      "issues": [],
+      "warnings": [
+        "forecast_horizon_expired",
+        "stale_training_observations"
+      ],
+      "readiness_blockers": [
+        "forecast_horizon_expired",
+        "quality_gate_not_passed",
+        "stale_training_observations"
+      ]
+    },
+    {
+      "run_id": "d81_temperature_max_c_prophet_20261010T082620Z",
+      "district_id": 81,
+      "target": "temperature_max_c",
+      "model_name": "prophet",
+      "forecast_count": 3,
+      "forecast_horizon_months": 3,
+      "latest_forecast_month": "2026-01-01",
+      "observation_age_months": 12,
+      "integrity_passed": true,
+      "quality_eligible_for_review": false,
+      "production_ready_for_review": false,
+      "issues": [],
+      "warnings": [
+        "forecast_horizon_expired",
+        "stale_training_observations"
+      ],
+      "readiness_blockers": [
+        "forecast_horizon_expired",
+        "quality_gate_not_passed",
+        "stale_training_observations",
+        "validation_gate_not_passed"
+      ]
+    },
+    {
+      "run_id": "d81_rainfall_mm_prophet_20261010T082619Z",
+      "district_id": 81,
+      "target": "rainfall_mm",
+      "model_name": "prophet",
+      "forecast_count": 3,
+      "forecast_horizon_months": 3,
+      "latest_forecast_month": "2026-01-01",
+      "observation_age_months": 12,
+      "integrity_passed": true,
+      "quality_eligible_for_review": false,
+      "production_ready_for_review": false,
+      "issues": [],
+      "warnings": [
+        "forecast_horizon_expired",
+        "stale_training_observations"
+      ],
+      "readiness_blockers": [
+        "forecast_horizon_expired",
+        "quality_gate_not_passed",
+        "stale_training_observations"
+      ]
+    },
+    {
+      "run_id": "d80_temperature_min_c_prophet_20261010T082619Z",
+      "district_id": 80,
+      "target": "temperature_min_c",
+      "model_name": "prophet",
+      "forecast_count": 3,
+      "forecast_horizon_months": 3,
+      "latest_forecast_month": "2026-01-01",
+      "observation_age_months": 12,
+      "integrity_passed": true,
+      "quality_eligible_for_review": false,
+      "production_ready_for_review": false,
+      "issues": [],
+      "warnings": [
+        "forecast_horizon_expired",
+        "stale_training_observations"
+      ],
+      "readiness_blockers": [
+        "forecast_horizon_expired",
+        "quality_gate_not_passed",
+        "stale_training_observations",
+        "validation_gate_not_passed"
+      ]
+    },
+    {
+      "run_id": "d80_temperature_max_c_monthly_climatology_20261010T082619Z",
+      "district_id": 80,
+      "target": "temperature_max_c",
+      "model_name": "monthly_climatology",
+      "forecast_count": 3,
+      "forecast_horizon_months": 3,
+      "latest_forecast_month": "2026-01-01",
+      "observation_age_months": 12,
+      "integrity_passed": true,
+      "quality_eligible_for_review": false,
+      "production_ready_for_review": false,
+      "issues": [],
+      "warnings": [
+        "forecast_horizon_expired",
+        "stale_training_observations"
+      ],
+      "readiness_blockers": [
+        "forecast_horizon_expired",
+        "quality_gate_not_passed",
+        "stale_training_observations",
+        "validation_gate_not_passed"
+      ]
+    },
+    {
+      "run_id": "d80_rainfall_mm_monthly_climatology_20261010T082619Z",
+      "district_id": 80,
+      "target": "rainfall_mm",
+      "model_name": "monthly_climatology",
+      "forecast_count": 3,
+      "forecast_horizon_months": 3,
+      "latest_forecast_month": "2026-01-01",
+      "observation_age_months": 12,
+      "integrity_passed": true,
+      "quality_eligible_for_review": false,
+      "production_ready_for_review": false,
+      "issues": [],
+      "warnings": [
+        "forecast_horizon_expired",
+        "stale_training_observations"
+      ],
+      "readiness_blockers": [
+        "forecast_horizon_expired",
+        "quality_gate_not_passed",
+        "stale_training_observations",
+        "validation_gate_not_passed"
+      ]
+    },
+    {
+      "run_id": "d79_temperature_min_c_prophet_20261010T082618Z",
+      "district_id": 79,
+      "target": "temperature_min_c",
+      "model_name": "prophet",
+      "forecast_count": 3,
+      "forecast_horizon_months": 3,
+      "latest_forecast_month": "2026-01-01",
+      "observation_age_months": 12,
+      "integrity_passed": true,
+      "quality_eligible_for_review": false,
+      "production_ready_for_review": false,
+      "issues": [],
+      "warnings": [
+        "forecast_horizon_expired",
+        "stale_training_observations"
+      ],
+      "readiness_blockers": [
+        "forecast_horizon_expired",
+        "quality_gate_not_passed",
+        "stale_training_observations",
+        "validation_gate_not_passed"
+      ]
+    },
+    {
+      "run_id": "d79_temperature_max_c_prophet_20261010T082618Z",
+      "district_id": 79,
+      "target": "temperature_max_c",
+      "model_name": "prophet",
+      "forecast_count": 3,
+      "forecast_horizon_months": 3,
+      "latest_forecast_month": "2026-01-01",
+      "observation_age_months": 12,
+      "integrity_passed": true,
+      "quality_eligible_for_review": false,
+      "production_ready_for_review": false,
+      "issues": [],
+      "warnings": [
+        "forecast_horizon_expired",
+        "stale_training_observations"
+      ],
+      "readiness_blockers": [
+        "forecast_horizon_expired",
+        "quality_gate_not_passed",
+        "stale_training_observations",
+        "validation_gate_not_passed"
+      ]
+    },
+    {
+      "run_id": "d79_rainfall_mm_monthly_climatology_20261010T082618Z",
+      "district_id": 79,
+      "target": "rainfall_mm",
+      "model_name": "monthly_climatology",
+      "forecast_count": 3,
+      "forecast_horizon_months": 3,
+      "latest_forecast_month": "2026-01-01",
+      "observation_age_months": 12,
+      "integrity_passed": true,
+      "quality_eligible_for_review": false,
+      "production_ready_for_review": false,
+      "issues": [],
+      "warnings": [
+        "forecast_horizon_expired",
+        "stale_training_observations"
+      ],
+      "readiness_blockers": [
+        "forecast_horizon_expired",
+        "quality_gate_not_passed",
+        "stale_training_observations"
+      ]
+    },
+    {
+      "run_id": "d78_temperature_min_c_prophet_20261010T082618Z",
+      "district_id": 78,
+      "target": "temperature_min_c",
+      "model_name": "prophet",
+      "forecast_count": 3,
+      "forecast_horizon_months": 3,
+      "latest_forecast_month": "2026-01-01",
+      "observation_age_months": 12,
+      "integrity_passed": true,
+      "quality_eligible_for_review": false,
+      "production_ready_for_review": false,
+      "issues": [],
+      "warnings": [
+        "forecast_horizon_expired",
+        "stale_training_observations"
+      ],
+      "readiness_blockers": [
+        "forecast_horizon_expired",
+        "quality_gate_not_passed",
+        "stale_training_observations",
+        "validation_gate_not_passed"
+      ]
+    },
+    {
+      "run_id": "d78_temperature_max_c_prophet_20261010T082617Z",
+      "district_id": 78,
+      "target": "temperature_max_c",
+      "model_name": "prophet",
+      "forecast_count": 3,
+      "forecast_horizon_months": 3,
+      "latest_forecast_month": "2026-01-01",
+      "observation_age_months": 12,
+      "integrity_passed": true,
+      "quality_eligible_for_review": false,
+      "production_ready_for_review": false,
+      "issues": [],
+      "warnings": [
+        "forecast_horizon_expired",
+        "stale_training_observations"
+      ],
+      "readiness_blockers": [
+        "forecast_horizon_expired",
+        "quality_gate_not_passed",
+        "stale_training_observations",
+        "validation_gate_not_passed"
+      ]
+    },
+    {
+      "run_id": "d78_rainfall_mm_monthly_climatology_20261010T082617Z",
+      "district_id": 78,
+      "target": "rainfall_mm",
+      "model_name": "monthly_climatology",
+      "forecast_count": 3,
+      "forecast_horizon_months": 3,
+      "latest_forecast_month": "2026-01-01",
+      "observation_age_months": 12,
+      "integrity_passed": true,
+      "quality_eligible_for_review": false,
+      "production_ready_for_review": false,
+      "issues": [],
+      "warnings": [
+        "forecast_horizon_expired",
+        "stale_training_observations"
+      ],
+      "readiness_blockers": [
+        "forecast_horizon_expired",
+        "quality_gate_not_passed",
+        "stale_training_observations"
+      ]
+    },
+    {
+      "run_id": "d77_temperature_min_c_prophet_20261010T082617Z",
+      "district_id": 77,
+      "target": "temperature_min_c",
+      "model_name": "prophet",
+      "forecast_count": 3,
+      "forecast_horizon_months": 3,
+      "latest_forecast_month": "2026-01-01",
+      "observation_age_months": 12,
+      "integrity_passed": true,
+      "quality_eligible_for_review": false,
+      "production_ready_for_review": false,
+      "issues": [],
+      "warnings": [
+        "forecast_horizon_expired",
+        "stale_training_observations"
+      ],
+      "readiness_blockers": [
+        "forecast_horizon_expired",
+        "quality_gate_not_passed",
+        "stale_training_observations"
+      ]
+    },
+    {
+      "run_id": "d77_temperature_max_c_monthly_climatology_20261010T082616Z",
+      "district_id": 77,
+      "target": "temperature_max_c",
+      "model_name": "monthly_climatology",
+      "forecast_count": 3,
+      "forecast_horizon_months": 3,
+      "latest_forecast_month": "2026-01-01",
+      "observation_age_months": 12,
+      "integrity_passed": true,
+      "quality_eligible_for_review": false,
+      "production_ready_for_review": false,
+      "issues": [],
+      "warnings": [
+        "forecast_horizon_expired",
+        "stale_training_observations"
+      ],
+      "readiness_blockers": [
+        "forecast_horizon_expired",
+        "quality_gate_not_passed",
+        "stale_training_observations"
+      ]
+    },
+    {
+      "run_id": "d77_rainfall_mm_monthly_climatology_20261010T082616Z",
+      "district_id": 77,
+      "target": "rainfall_mm",
+      "model_name": "monthly_climatology",
+      "forecast_count": 3,
+      "forecast_horizon_months": 3,
+      "latest_forecast_month": "2026-01-01",
+      "observation_age_months": 12,
+      "integrity_passed": true,
+      "quality_eligible_for_review": false,
+      "production_ready_for_review": false,
+      "issues": [],
+      "warnings": [
+        "forecast_horizon_expired",
+        "stale_training_observations"
+      ],
+      "readiness_blockers": [
+        "forecast_horizon_expired",
+        "quality_gate_not_passed",
+        "stale_training_observations"
+      ]
+    },
+    {
+      "run_id": "d76_temperature_min_c_seasonal_naive_20261010T082616Z",
+      "district_id": 76,
+      "target": "temperature_min_c",
+      "model_name": "seasonal_naive",
+      "forecast_count": 3,
+      "forecast_horizon_months": 3,
+      "latest_forecast_month": "2026-01-01",
+      "observation_age_months": 12,
+      "integrity_passed": true,
+      "quality_eligible_for_review": false,
+      "production_ready_for_review": false,
+      "issues": [],
+      "warnings": [
+        "forecast_horizon_expired",
+        "stale_training_observations"
+      ],
+      "readiness_blockers": [
+        "forecast_horizon_expired",
+        "quality_gate_not_passed",
+        "stale_training_observations",
+        "validation_gate_not_passed"
+      ]
+    },
+    {
+      "run_id": "d76_temperature_max_c_prophet_20261010T082616Z",
+      "district_id": 76,
+      "target": "temperature_max_c",
+      "model_name": "prophet",
+      "forecast_count": 3,
+      "forecast_horizon_months": 3,
+      "latest_forecast_month": "2026-01-01",
+      "observation_age_months": 12,
+      "integrity_passed": true,
+      "quality_eligible_for_review": false,
+      "production_ready_for_review": false,
+      "issues": [],
+      "warnings": [
+        "forecast_horizon_expired",
+        "stale_training_observations"
+      ],
+      "readiness_blockers": [
+        "forecast_horizon_expired",
+        "quality_gate_not_passed",
+        "stale_training_observations",
+        "validation_gate_not_passed"
+      ]
+    },
+    {
+      "run_id": "d76_rainfall_mm_monthly_climatology_20261010T082616Z",
+      "district_id": 76,
+      "target": "rainfall_mm",
+      "model_name": "monthly_climatology",
+      "forecast_count": 3,
+      "forecast_horizon_months": 3,
+      "latest_forecast_month": "2026-01-01",
+      "observation_age_months": 12,
+      "integrity_passed": true,
+      "quality_eligible_for_review": false,
+      "production_ready_for_review": false,
+      "issues": [],
+      "warnings": [
+        "forecast_horizon_expired",
+        "stale_training_observations"
+      ],
+      "readiness_blockers": [
+        "forecast_horizon_expired",
+        "quality_gate_not_passed",
+        "stale_training_observations"
+      ]
+    },
+    {
+      "run_id": "d74_temperature_min_c_monthly_climatology_20261010T082615Z",
+      "district_id": 74,
+      "target": "temperature_min_c",
+      "model_name": "monthly_climatology",
+      "forecast_count": 3,
+      "forecast_horizon_months": 3,
+      "latest_forecast_month": "2026-01-01",
+      "observation_age_months": 12,
+      "integrity_passed": true,
+      "quality_eligible_for_review": false,
+      "production_ready_for_review": false,
+      "issues": [],
+      "warnings": [
+        "forecast_horizon_expired",
+        "stale_training_observations"
+      ],
+      "readiness_blockers": [
+        "forecast_horizon_expired",
+        "quality_gate_not_passed",
+        "stale_training_observations",
+        "validation_gate_not_passed"
+      ]
+    },
+    {
+      "run_id": "d74_temperature_max_c_prophet_20261010T082615Z",
+      "district_id": 74,
+      "target": "temperature_max_c",
+      "model_name": "prophet",
+      "forecast_count": 3,
+      "forecast_horizon_months": 3,
+      "latest_forecast_month": "2026-01-01",
+      "observation_age_months": 14,
+      "integrity_passed": true,
+      "quality_eligible_for_review": false,
+      "production_ready_for_review": false,
+      "issues": [],
+      "warnings": [
+        "forecast_horizon_expired",
+        "latest_month_missing",
+        "stale_training_observations"
+      ],
+      "readiness_blockers": [
+        "forecast_horizon_expired",
+        "latest_month_missing",
+        "quality_gate_not_passed",
+        "stale_training_observations",
+        "validation_gate_not_passed"
+      ]
+    },
+    {
+      "run_id": "d74_rainfall_mm_seasonal_naive_20261010T082615Z",
+      "district_id": 74,
+      "target": "rainfall_mm",
+      "model_name": "seasonal_naive",
+      "forecast_count": 3,
+      "forecast_horizon_months": 3,
+      "latest_forecast_month": "2026-01-01",
+      "observation_age_months": 12,
+      "integrity_passed": true,
+      "quality_eligible_for_review": false,
+      "production_ready_for_review": false,
+      "issues": [],
+      "warnings": [
+        "forecast_horizon_expired",
+        "stale_training_observations"
+      ],
+      "readiness_blockers": [
+        "forecast_horizon_expired",
+        "quality_gate_not_passed",
+        "stale_training_observations",
+        "validation_gate_not_passed"
+      ]
+    },
+    {
+      "run_id": "d73_rainfall_mm_seasonal_naive_20261010T082615Z",
+      "district_id": 73,
+      "target": "rainfall_mm",
+      "model_name": "seasonal_naive",
+      "forecast_count": 3,
+      "forecast_horizon_months": 3,
+      "latest_forecast_month": "2026-01-01",
+      "observation_age_months": 16,
+      "integrity_passed": true,
+      "quality_eligible_for_review": false,
+      "production_ready_for_review": false,
+      "issues": [],
+      "warnings": [
+        "forecast_horizon_expired",
+        "latest_month_missing",
+        "stale_training_observations"
+      ],
+      "readiness_blockers": [
+        "forecast_horizon_expired",
+        "latest_month_missing",
+        "quality_gate_not_passed",
+        "stale_training_observations",
+        "validation_gate_not_passed"
+      ]
+    }
+  ]
+}

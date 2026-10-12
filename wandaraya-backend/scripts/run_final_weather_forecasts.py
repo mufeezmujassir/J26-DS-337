@@ -9,6 +9,35 @@ REGISTRY = Path(
     "registry/model_selection_results.csv"
 )
 
+
+def quality_metrics_for(row) -> dict:
+    """Attach Stage 5 evidence to the immutable Stage 6 model-run artifact."""
+    prefix = f"district_{int(row.district_id)}_{row.target}"
+    scores_path = Path("data/weather/experiments/stage5/holdout") / f"{prefix}_scores.csv"
+    baseline_holdout_mae: dict[str, float] = {}
+    if scores_path.exists():
+        scores = pd.read_csv(scores_path)
+        required_scores = {"model", "mae"}
+        if not required_scores.issubset(scores.columns):
+            raise ValueError(f"Holdout score file is malformed: {scores_path}")
+        baseline_holdout_mae = {
+            str(item.model): float(item.mae)
+            for item in scores.itertuples(index=False)
+            if str(item.model) in {"seasonal_naive", "monthly_climatology"}
+        }
+
+    return {
+        "schema_version": "stage9.8.v1",
+        "validation_mae": float(row.validation_mae),
+        "validation_rmse": float(row.validation_rmse),
+        "validation_months": int(row.validation_months),
+        "validation_folds": int(row.validation_folds),
+        "holdout_mae": float(row.holdout_mae),
+        "holdout_rmse": float(row.holdout_rmse),
+        "holdout_months": int(row.holdout_months),
+        "baseline_holdout_mae": baseline_holdout_mae,
+    }
+
 def main():
     parser = argparse.ArgumentParser()
 
@@ -40,7 +69,11 @@ def main():
         "status",
         "validation_folds",
         "validation_months",
+        "validation_mae",
+        "validation_rmse",
         "holdout_months",
+        "holdout_mae",
+        "holdout_rmse",
     }
 
     missing = required - set(registry.columns)
@@ -104,6 +137,14 @@ def main():
                 horizon=args.horizon,
                 approved=False,
             )
+
+            # Stored with the run for a reproducible, post-import quality
+            # audit.  Empty baseline evidence is intentionally preserved as
+            # empty; Stage 9.8 will reject it from approval rather than infer.
+            metadata["parameters"] = {
+                **metadata["parameters"],
+                "quality_metrics": quality_metrics_for(row),
+            }
 
             all_forecasts.append(forecast)
 
