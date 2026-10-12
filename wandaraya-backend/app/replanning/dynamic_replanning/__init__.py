@@ -18,6 +18,9 @@ from app.schemas.replanning import (
 from app.replanning.dynamic_replanning.state_manager import (
     ReplanningStateManager,
 )
+from app.replanning.dynamic_replanning.intent_preserver import (
+    IntentPreserver,
+)
 from app.replanning.dynamic_replanning.utils import (
     DEFAULT_CONFIG,
     DEFAULT_CONFIG_PATH,
@@ -60,4 +63,6 @@ __all__ = [
     "ConfirmationResult",
     # State
     "ReplanningStateManager",
+    # Intent
+    "IntentPreserver",
 ]
