@@ -28,6 +28,8 @@ class Edge:
             "distance_km": None,
             "travel_time_min": None,
             "cost_lkr": None,
+            "waiting_time_min": None,
+            "transfer_time_min": None,
             "source_id": None,
             "source_dataset": None,
             "transfer_type": None,

@@ -116,7 +116,7 @@ async def calculate_dijkstra_route(
 
     # 5. Run Dijkstra routing
     try:
-        router = DijkstraRouter(graph)
+        router = DijkstraRouter(graph, objective=payload.objective)
         result = router.route(origin_node, dest_node)
     except ValueError as e:
         err_msg = str(e)
@@ -145,11 +145,24 @@ async def calculate_dijkstra_route(
         nodes_count=result.node_count,
         edges_count=result.edge_count,
         modes_used=result.modes_used,
+        mode_sequence=result.mode_sequence,
+        mode_changes_count=result.mode_changes_count,
         transfers_count=result.transfers_count,
+        transfer_locations=result.transfer_locations,
         total_travel_time_min=result.total_travel_time_min,
         travel_time_complete=result.travel_time_complete,
+        known_travel_time_min=result.known_travel_time_min,
+        total_waiting_time_min=result.total_waiting_time_min,
+        total_transfer_time_min=result.total_transfer_time_min,
+        total_journey_time_min=result.total_journey_time_min,
+        journey_time_complete=result.journey_time_complete,
+        is_travel_time_estimated=result.is_travel_time_estimated,
         total_cost_lkr=result.total_cost_lkr,
         cost_complete=result.cost_complete,
+        known_cost_lkr=result.known_cost_lkr,
+        is_cost_estimated=result.is_cost_estimated,
+        objective=result.objective,
+        optimized_weight=result.optimized_weight,
         warnings=result.warnings,
         edges=[
             RouteEdgeResponse(
@@ -159,6 +172,9 @@ async def calculate_dijkstra_route(
                 distance_km=e.attributes.get("distance_km"),
                 travel_time_min=e.attributes.get("travel_time_min"),
                 cost_lkr=e.attributes.get("cost_lkr"),
+                waiting_time_min=e.attributes.get("waiting_time_min"),
+                transfer_time_min=e.attributes.get("transfer_time_min"),
+                transfer_type=e.attributes.get("transfer_type"),
                 source_id=e.attributes.get("source_id"),
                 source_dataset=e.attributes.get("source_dataset"),
                 is_estimated=e.attributes.get("is_estimated", False)

@@ -2,6 +2,7 @@ import math
 import heapq
 from typing import List, Tuple, Dict, Optional, Any
 from app.services.graph import MultimodalGraph, Edge
+from app.services.route_metrics import RouteMetricsService, CalculatedRouteMetrics
 
 class DistanceCostModel:
     """
@@ -27,112 +28,109 @@ class DistanceCostModel:
             return None
         return val
 
+class CostCostModel:
+    """
+    Cost-based cost model for Dijkstra routing.
+    Minimizes monetary cost in LKR (cost_lkr).
+    Enforces strict numeric validation: finite, non-negative, non-boolean numeric values.
+    Rejects missing, negative, NaN, infinite, or non-numeric edge weights.
+    """
+    @staticmethod
+    def get_weight(edge: Edge) -> Optional[float]:
+        if not hasattr(edge, "attributes") or not isinstance(edge.attributes, dict):
+            return None
+        w = edge.attributes.get("cost_lkr")
+        if w is None or isinstance(w, bool):
+            return None
+        if not isinstance(w, (int, float)):
+            return None
+        try:
+            val = float(w)
+        except (ValueError, TypeError):
+            return None
+        if not math.isfinite(val) or val < 0.0:
+            return None
+        return val
+
+class TimeCostModel:
+    """
+    Travel-time-based cost model for Dijkstra routing.
+    Minimizes journey time in minutes (travel_time_min).
+    Enforces strict numeric validation: finite, non-negative, non-boolean numeric values.
+    Rejects missing, negative, NaN, infinite, or non-numeric edge weights.
+    """
+    @staticmethod
+    def get_weight(edge: Edge) -> Optional[float]:
+        if not hasattr(edge, "attributes") or not isinstance(edge.attributes, dict):
+            return None
+        w = edge.attributes.get("travel_time_min")
+        if w is None or isinstance(w, bool):
+            return None
+        if not isinstance(w, (int, float)):
+            return None
+        try:
+            val = float(w)
+        except (ValueError, TypeError):
+            return None
+        if not math.isfinite(val) or val < 0.0:
+            return None
+        return val
+
 class DijkstraPathResult:
     """
     Result of a Dijkstra route calculation.
     Contains ordered node IDs, ordered Edge objects, total distance in kilometres,
-    and derived route metadata from actual edges.
+    and derived route metrics calculated via RouteMetricsService.
     Compatible with tuple unpacking: `path, dist = router.route(...)`
     """
-    def __init__(self, nodes: List[str], edges: List[Edge], total_distance_km: float):
+    def __init__(
+        self,
+        nodes: List[str],
+        edges: List[Edge],
+        total_distance_km: Optional[float] = None,
+        objective: str = "distance",
+        optimized_weight: Optional[float] = None
+    ):
         self.nodes = nodes
         self.edges = edges
-        self.total_distance_km = round(total_distance_km, 6)
         self.node_count = len(nodes)
         self.edge_count = len(edges)
+        self.objective = objective
 
-        # Modes used: unique modes in order of first appearance
-        seen_modes = set()
-        self.modes_used: List[str] = []
-        for e in edges:
-            m_val = e.mode.value if hasattr(e.mode, "value") else str(e.mode)
-            if m_val not in seen_modes:
-                seen_modes.add(m_val)
-                self.modes_used.append(m_val)
+        # Calculate comprehensive metrics via RouteMetricsService
+        metrics: CalculatedRouteMetrics = RouteMetricsService.calculate_metrics(edges, nodes)
+        self.metrics = metrics
 
-        # Transfers count: count mode changes and explicit transfer links without double-counting
-        self.transfers_count = self._calculate_transfers(edges)
+        # Total distance: use calculated metric or explicit distance
+        calc_dist = metrics.total_distance_km if total_distance_km is None else total_distance_km
+        self.total_distance_km = round(calc_dist, 6)
 
-        # Travel time: calculate only when ALL edge values are available, numeric and finite
-        self.total_travel_time_min, self.travel_time_complete = self._calculate_total_time(edges)
+        # Mode and transfer statistics
+        self.modes_used = metrics.modes_used
+        self.mode_sequence = metrics.mode_sequence
+        self.mode_changes_count = metrics.mode_changes_count
+        self.transfers_count = metrics.transfers_count
+        self.transfer_locations = metrics.transfer_locations
 
-        # Travel cost: calculate only when ALL edge values are available, numeric and finite
-        self.total_cost_lkr, self.cost_complete = self._calculate_total_cost(edges)
+        # Time metrics
+        self.total_travel_time_min = metrics.total_travel_time_min
+        self.travel_time_complete = metrics.travel_time_complete
+        self.known_travel_time_min = metrics.known_travel_time_min
+        self.total_waiting_time_min = metrics.total_waiting_time_min
+        self.total_transfer_time_min = metrics.total_transfer_time_min
+        self.total_journey_time_min = metrics.total_journey_time_min
+        self.journey_time_complete = metrics.journey_time_complete
+        self.is_travel_time_estimated = metrics.is_travel_time_estimated
 
-        # Warnings / Provenance
-        self.warnings: List[str] = []
-        if not self.travel_time_complete and self.edge_count > 0:
-            missing_time = sum(
-                1 for e in edges
-                if e.attributes.get("travel_time_min") is None
-                or isinstance(e.attributes.get("travel_time_min"), bool)
-                or not isinstance(e.attributes.get("travel_time_min"), (int, float))
-            )
-            self.warnings.append(
-                f"Travel time unavailable for {missing_time} of {self.edge_count} edge(s). "
-                "Total duration not estimated (no hardcoded speed assumption)."
-            )
-        if not self.cost_complete and self.edge_count > 0:
-            missing_cost = sum(
-                1 for e in edges
-                if e.attributes.get("cost_lkr") is None
-                or isinstance(e.attributes.get("cost_lkr"), bool)
-                or not isinstance(e.attributes.get("cost_lkr"), (int, float))
-            )
-            self.warnings.append(
-                f"Travel cost unavailable for {missing_cost} of {self.edge_count} edge(s). "
-                "Total cost not estimated."
-            )
+        # Cost metrics
+        self.total_cost_lkr = metrics.total_cost_lkr
+        self.cost_complete = metrics.cost_complete
+        self.known_cost_lkr = metrics.known_cost_lkr
+        self.is_cost_estimated = metrics.is_cost_estimated
 
-    @staticmethod
-    def _calculate_transfers(edges: List[Edge]) -> int:
-        if not edges:
-            return 0
-        transfers = 0
-        prev_mode = None
-        for e in edges:
-            m_val = e.mode.value if hasattr(e.mode, "value") else str(e.mode)
-            is_transfer_edge = (
-                m_val == "transfer"
-                or (hasattr(e, "mode") and getattr(e.mode, "name", None) == "TRANSFER")
-                or bool(e.attributes.get("transfer_type"))
-            )
-            if is_transfer_edge:
-                transfers += 1
-            elif prev_mode is not None and m_val != prev_mode and prev_mode != "transfer":
-                transfers += 1
-            prev_mode = m_val
-        return transfers
-
-    @staticmethod
-    def _calculate_total_time(edges: List[Edge]) -> Tuple[Optional[float], bool]:
-        if not edges:
-            return 0.0, True
-        total = 0.0
-        for e in edges:
-            val = e.attributes.get("travel_time_min")
-            if val is None or isinstance(val, bool) or not isinstance(val, (int, float)):
-                return None, False
-            f_val = float(val)
-            if not math.isfinite(f_val) or f_val < 0.0:
-                return None, False
-            total += f_val
-        return round(total, 4), True
-
-    @staticmethod
-    def _calculate_total_cost(edges: List[Edge]) -> Tuple[Optional[float], bool]:
-        if not edges:
-            return 0.0, True
-        total = 0.0
-        for e in edges:
-            val = e.attributes.get("cost_lkr")
-            if val is None or isinstance(val, bool) or not isinstance(val, (int, float)):
-                return None, False
-            f_val = float(val)
-            if not math.isfinite(f_val) or f_val < 0.0:
-                return None, False
-            total += f_val
-        return round(total, 4), True
+        # Warnings & optimization tracking
+        self.warnings: List[str] = list(metrics.warnings)
+        self.optimized_weight = optimized_weight
 
     def to_dict(self) -> Dict[str, Any]:
         return {
@@ -141,11 +139,24 @@ class DijkstraPathResult:
             "nodes_count": self.node_count,
             "edges_count": self.edge_count,
             "modes_used": self.modes_used,
+            "mode_sequence": self.mode_sequence,
+            "mode_changes_count": self.mode_changes_count,
             "transfers_count": self.transfers_count,
+            "transfer_locations": self.transfer_locations,
             "total_travel_time_min": self.total_travel_time_min,
             "travel_time_complete": self.travel_time_complete,
+            "known_travel_time_min": self.known_travel_time_min,
+            "total_waiting_time_min": self.total_waiting_time_min,
+            "total_transfer_time_min": self.total_transfer_time_min,
+            "total_journey_time_min": self.total_journey_time_min,
+            "journey_time_complete": self.journey_time_complete,
+            "is_travel_time_estimated": self.is_travel_time_estimated,
             "total_cost_lkr": self.total_cost_lkr,
             "cost_complete": self.cost_complete,
+            "known_cost_lkr": self.known_cost_lkr,
+            "is_cost_estimated": self.is_cost_estimated,
+            "objective": self.objective,
+            "optimized_weight": self.optimized_weight,
             "warnings": self.warnings,
             "edges": [
                 {
@@ -155,6 +166,9 @@ class DijkstraPathResult:
                     "distance_km": e.attributes.get("distance_km"),
                     "travel_time_min": e.attributes.get("travel_time_min"),
                     "cost_lkr": e.attributes.get("cost_lkr"),
+                    "waiting_time_min": e.attributes.get("waiting_time_min"),
+                    "transfer_time_min": e.attributes.get("transfer_time_min"),
+                    "transfer_type": e.attributes.get("transfer_type"),
                     "source_id": e.attributes.get("source_id"),
                     "source_dataset": e.attributes.get("source_dataset"),
                     "is_estimated": e.attributes.get("is_estimated", False),
@@ -185,21 +199,42 @@ class DijkstraPathResult:
             f"DijkstraPathResult(nodes={self.nodes}, "
             f"distance_km={self.total_distance_km}, "
             f"modes={self.modes_used}, "
-            f"transfers={self.transfers_count})"
+            f"transfers={self.transfers_count}, "
+            f"objective={self.objective})"
         )
 
 class DijkstraRouter:
-    def __init__(self, graph: MultimodalGraph, cost_model: Optional[Any] = None):
+    def __init__(
+        self,
+        graph: MultimodalGraph,
+        cost_model: Optional[Any] = None,
+        objective: str = "distance"
+    ):
         self.graph = graph
-        self.cost_model = cost_model or DistanceCostModel()
+        self.objective = objective.lower().strip() if objective else "distance"
+
+        if cost_model is not None:
+            self.cost_model = cost_model
+        elif self.objective == "distance":
+            self.cost_model = DistanceCostModel()
+        elif self.objective == "cost":
+            self.cost_model = CostCostModel()
+        elif self.objective == "time":
+            self.cost_model = TimeCostModel()
+        else:
+            raise ValueError(
+                f"Unsupported routing objective '{objective}'. "
+                "Supported objectives are: 'distance', 'cost', 'time'."
+            )
 
     def route(self, from_node: str, to_node: str) -> DijkstraPathResult:
         """
-        Calculates shortest path by distance_km.
+        Calculates shortest path using Dijkstra algorithm with the selected cost model.
+        Default objective: distance minimization.
+        Optional objectives: cost minimization, travel-time minimization.
         Reconstructs ordered node path and corresponding ordered edge sequence.
-        Calculates total distance from actual path edges.
-        Preserves transport mode and source edge metadata.
-        Returns DijkstraPathResult (which unpacks as (nodes, total_distance_km)).
+        Calculates comprehensive route metrics without fabricating missing values.
+        Returns DijkstraPathResult (unpacks as (nodes, total_distance_km)).
         Raises ValueError if origin/destination is invalid or destination is unreachable.
         """
         if from_node is None or to_node is None:
@@ -210,7 +245,13 @@ class DijkstraRouter:
 
         # Handle identical origin and destination
         if from_node == to_node:
-            return DijkstraPathResult(nodes=[from_node], edges=[], total_distance_km=0.0)
+            return DijkstraPathResult(
+                nodes=[from_node],
+                edges=[],
+                total_distance_km=0.0,
+                objective=self.objective,
+                optimized_weight=0.0
+            )
 
         distances: Dict[str, float] = {node_id: math.inf for node_id in self.graph.nodes}
         distances[from_node] = 0.0
@@ -230,7 +271,6 @@ class DijkstraRouter:
                 
             if current_node in self.graph.edges:
                 for neighbor, edge_list in self.graph.edges[current_node].items():
-                    # Find candidate edge with minimum valid weight between current_node and neighbor
                     best_edge = None
                     min_edge_dist = math.inf
                     
@@ -268,14 +308,18 @@ class DijkstraRouter:
         path_nodes = list(reversed(reversed_nodes))
         path_edges = list(reversed(reversed_edges))
 
-        # Recalculate total distance directly from actual path edges
-        total_distance = sum(
-            self.cost_model.get_weight(e) or 0.0
+        # Direct sum of distances from actual path edges
+        actual_total_distance = sum(
+            float(e.attributes.get("distance_km") or 0.0)
             for e in path_edges
         )
+
+        optimized_weight = distances[to_node]
 
         return DijkstraPathResult(
             nodes=path_nodes,
             edges=path_edges,
-            total_distance_km=total_distance
+            total_distance_km=actual_total_distance,
+            objective=self.objective,
+            optimized_weight=optimized_weight
         )
