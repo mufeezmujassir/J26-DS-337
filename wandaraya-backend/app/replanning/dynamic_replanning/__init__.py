@@ -33,6 +33,9 @@ from app.replanning.dynamic_replanning.cross_turn_consistency import (
 from app.replanning.dynamic_replanning.confirmation_flow import (
     ConfirmationFlow,
 )
+from app.replanning.dynamic_replanning.replanner import (
+    DynamicReplanner,
+)
 from app.replanning.dynamic_replanning.utils import (
     DEFAULT_CONFIG,
     DEFAULT_CONFIG_PATH,
@@ -84,4 +87,6 @@ __all__ = [
     "CrossTurnConsistency",
     # Confirmation
     "ConfirmationFlow",
+    # Replanner
+    "DynamicReplanner",
 ]
