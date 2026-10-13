@@ -21,6 +21,9 @@ from app.replanning.dynamic_replanning.state_manager import (
 from app.replanning.dynamic_replanning.intent_preserver import (
     IntentPreserver,
 )
+from app.replanning.dynamic_replanning.alternative_finder import (
+    AlternativeFinder,
+)
 from app.replanning.dynamic_replanning.utils import (
     DEFAULT_CONFIG,
     DEFAULT_CONFIG_PATH,
@@ -65,4 +68,6 @@ __all__ = [
     "ReplanningStateManager",
     # Intent
     "IntentPreserver",
+    # Alternatives
+    "AlternativeFinder",
 ]
