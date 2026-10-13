@@ -30,6 +30,9 @@ from app.replanning.dynamic_replanning.multi_turn_tracker import (
 from app.replanning.dynamic_replanning.cross_turn_consistency import (
     CrossTurnConsistency,
 )
+from app.replanning.dynamic_replanning.confirmation_flow import (
+    ConfirmationFlow,
+)
 from app.replanning.dynamic_replanning.utils import (
     DEFAULT_CONFIG,
     DEFAULT_CONFIG_PATH,
@@ -79,4 +82,6 @@ __all__ = [
     # Multi-turn
     "MultiTurnTracker",
     "CrossTurnConsistency",
+    # Confirmation
+    "ConfirmationFlow",
 ]
