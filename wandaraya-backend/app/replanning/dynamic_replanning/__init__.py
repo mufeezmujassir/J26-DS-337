@@ -24,6 +24,12 @@ from app.replanning.dynamic_replanning.intent_preserver import (
 from app.replanning.dynamic_replanning.alternative_finder import (
     AlternativeFinder,
 )
+from app.replanning.dynamic_replanning.multi_turn_tracker import (
+    MultiTurnTracker,
+)
+from app.replanning.dynamic_replanning.cross_turn_consistency import (
+    CrossTurnConsistency,
+)
 from app.replanning.dynamic_replanning.utils import (
     DEFAULT_CONFIG,
     DEFAULT_CONFIG_PATH,
@@ -70,4 +76,7 @@ __all__ = [
     "IntentPreserver",
     # Alternatives
     "AlternativeFinder",
+    # Multi-turn
+    "MultiTurnTracker",
+    "CrossTurnConsistency",
 ]
