@@ -1,13 +1,4 @@
-"""Confirmation flow for the Dynamic Replanning module.
-
-Presents the revised plan to the user and captures their decision. The
-flow stores the result in memory (per user) so that the replanner can
-determine whether to apply the plan or request another alternative.
-
-In a real system this would integrate with the conversational interface;
-here it is a deterministic in-memory flow suitable for unit tests and
-for the module's internal orchestration.
-"""
+"""Confirmation flow for the Dynamic Replanning module."""
 
 from __future__ import annotations
 
@@ -26,11 +17,7 @@ class ConfirmationFlow:
     """Handle presenting a revised plan and capturing user confirmation."""
 
     def __init__(self, state_manager: ReplanningStateManager | None = None):
-        """Create a confirmation flow.
-
-        Args:
-            state_manager: State manager used to read the latest plan.
-        """
+        """Create a confirmation flow."""
 
         self._state_manager = state_manager or ReplanningStateManager()
         self._last_presented: Dict[str, RevisedPlan] = {}
@@ -44,11 +31,7 @@ class ConfirmationFlow:
         revised_plan: RevisedPlan,
         preserved: Dict[str, Any],
     ) -> Dict[str, Any]:
-        """Present the revised plan summary to the user.
-
-        The method stores the presented plan for later lookup and returns
-        the structured presentation payload required by the prompt.
-        """
+        """Present the revised plan summary to the user."""
 
         self._last_presented[user_id] = revised_plan
 
@@ -65,7 +48,9 @@ class ConfirmationFlow:
             disruption_summary += f" (location: {affected.location})"
 
         revised_activities = revised_plan.revised_activities
-        revised_plan_summary = f"Proposing {len(revised_activities)} revised activity(ies)"
+        revised_plan_summary = (
+            f"Proposing {len(revised_activities)} revised activity(ies)"
+        )
 
         if revised_activities:
             first = revised_activities[0]
@@ -92,46 +77,35 @@ class ConfirmationFlow:
         return presentation
 
     def get_user_confirmation(self, user_id: str) -> ConfirmationResult:
-        """Return the stored confirmation result for ``user_id``.
-
-        If no explicit result has been recorded, a default result
-        (rejected with feedback) is returned. This keeps the flow
-        deterministic in automated scenarios while still signalling
-        that confirmation is required.
-        """
+        """Return the stored confirmation result for ``user_id``."""
 
         result = self._results.get(user_id)
 
         if result is not None:
             LOGGER.info(
-                "Returning stored confirmation for user %s: accepted=%s next=%s",
+                "Returning stored confirmation for user %s: accepted=%s "
+                "next=%s",
                 user_id,
                 result.accepted,
                 result.next_action,
             )
             return result
 
-        plan = self._last_presented.get(user_id) or self._state_manager.get_current_plan(user_id)
+        plan = self._last_presented.get(user_id) or (
+            self._state_manager.get_current_plan(user_id)
+        )
+
+        default = ConfirmationResult(
+            accepted=False,
+            user_feedback="No confirmation received",
+            next_action="find_alternative",
+        )
 
         if plan is not None:
-            # Default to not accepting unless explicitly confirmed.
-            default = ConfirmationResult(
-                accepted=False,
-                user_feedback="No confirmation received",
-                next_action="find_alternative",
+            LOGGER.debug(
+                "No stored confirmation for user %s; returning default",
+                user_id,
             )
-        else:
-            default = ConfirmationResult(
-                accepted=False,
-                user_feedback="No confirmation received",
-                next_action="find_alternative",
-            )
-
-        LOGGER.debug(
-            "No stored confirmation for user %s; returning default (accepted=%s)",
-            user_id,
-            default.accepted,
-        )
 
         return default
 

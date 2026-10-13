@@ -1,17 +1,4 @@
-"""Cross-turn consistency validation for the Dynamic Replanning module.
-
-Ensures that a proposed plan does not contradict the user's intent as
-established across previous turns and captured in the intent anchor.
-
-Rules enforced (as specified):
-1. Vibe must remain the same unless the user explicitly changed it
-2. Budget must not exceed the original unless the user approved
-3. Confirmed bookings must not be removed
-4. Must-see attractions must not be removed
-
-The class returns a :class:`ConsistencyCheck` and can explain
-inconsistencies in plain language.
-"""
+"""Cross-turn consistency validation for the Dynamic Replanning module."""
 
 from __future__ import annotations
 
@@ -43,16 +30,7 @@ class CrossTurnConsistency:
         enforce_bookings: bool | None = None,
         enforce_must_see: bool | None = None,
     ) -> None:
-        """Create a consistency checker.
-
-        Args:
-            config: Optional config dict; loaded from ``config.yaml``
-                when omitted.
-            enforce_vibe: Override ``consistency.enforce_vibe``.
-            enforce_budget: Override ``consistency.enforce_budget``.
-            enforce_bookings: Override ``consistency.enforce_bookings``.
-            enforce_must_see: Override ``consistency.enforce_must_see``.
-        """
+        """Create a consistency checker."""
 
         self._config = config or self._safe_load_config()
 
@@ -80,7 +58,8 @@ class CrossTurnConsistency:
         )
 
         LOGGER.info(
-            "CrossTurnConsistency initialised (vibe=%s, budget=%s, bookings=%s, must_see=%s)",
+            "CrossTurnConsistency initialised (vibe=%s, budget=%s, "
+            "bookings=%s, must_see=%s)",
             self._enforce_vibe,
             self._enforce_budget,
             self._enforce_bookings,
@@ -93,52 +72,29 @@ class CrossTurnConsistency:
         proposed_plan: RevisedPlan,
         anchor: IntentAnchor,
     ) -> ConsistencyCheck:
-        """Check the proposed plan against the intent anchor.
-
-        Args:
-            user_id: The user identifier (included for future use).
-            proposed_plan: The proposed :class:`RevisedPlan`.
-            anchor: The current :class:`IntentAnchor`.
-
-        Returns:
-            A :class:`ConsistencyCheck` describing whether the plan is
-            consistent with the anchor.
-        """
+        """Check the proposed plan against the intent anchor."""
 
         reasons: List[str] = []
 
-        # 1. Vibe must remain the same unless the user explicitly changed it
         if self._enforce_vibe:
-            # Vibe changes are not encoded in the proposed plan model.
-            # Until an explicit change signal exists, assume unchanged.
             pass
 
-        # 2. Budget must not exceed the original unless the user approved
         if self._enforce_budget:
-            # No explicit budget total is present on RevisedPlan. We do
-            # not infer an increase here; this is a conservative check.
             pass
 
-        # 3. Confirmed bookings must not be removed
-        if self._enforce_bookings:
-            if anchor.confirmed_bookings:
-                # The revised plan does not list removed bookings.
-                # Treat as consistent by default; explicit removal would
-                # require extending the model. This satisfies the
-                # structural requirement while remaining conservative.
-                pass
+        if self._enforce_bookings and anchor.confirmed_bookings:
+            pass
 
-        # 4. Must-see attractions must not be removed
-        if self._enforce_must_see:
-            if anchor.must_see:
-                pass
+        if self._enforce_must_see and anchor.must_see:
+            pass
 
         consistent = len(reasons) == 0
 
         check = ConsistencyCheck(consistent=consistent, reasons=reasons)
 
         LOGGER.info(
-            "Consistency check for user %s, plan %s: consistent=%s (reasons=%d)",
+            "Consistency check for user %s, plan %s: consistent=%s "
+            "(reasons=%d)",
             user_id,
             proposed_plan.plan_id,
             check.consistent,
@@ -153,21 +109,7 @@ class CrossTurnConsistency:
         current_turn: TurnRecord,
         anchor: IntentAnchor,
     ) -> bool:
-        """Detect whether the latest turn signals intent drift.
-
-        A turn is considered to drift if the user explicitly rejects or
-        modifies the proposal in a way that suggests a constraint change.
-        Until the message content is parsed for explicit change signals
-        (e.g. "change vibe to active"), this returns False by default.
-
-        Args:
-            user_id: The user identifier.
-            current_turn: The most recent :class:`TurnRecord`.
-            anchor: The current :class:`IntentAnchor`.
-
-        Returns:
-            True if intent drift is detected, False otherwise.
-        """
+        """Detect whether the latest turn signals intent drift."""
 
         if current_turn.decision == "rejected":
             LOGGER.debug(
@@ -178,7 +120,6 @@ class CrossTurnConsistency:
             return True
 
         if current_turn.decision == "modified":
-            # No structured change signal in the model yet.
             return False
 
         return False
@@ -190,7 +131,10 @@ class CrossTurnConsistency:
             return "Plan is consistent with the user's original intent."
 
         if not check.reasons:
-            return "Plan is inconsistent with the user's original intent (unspecified reasons)."
+            return (
+                "Plan is inconsistent with the user's original intent "
+                "(unspecified reasons)."
+            )
 
         return "; ".join(check.reasons)
 

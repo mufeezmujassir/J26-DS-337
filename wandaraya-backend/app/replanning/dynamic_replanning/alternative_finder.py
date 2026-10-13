@@ -1,15 +1,4 @@
-"""Alternative finder for the Dynamic Replanning module.
-
-Calls the external agents to retrieve replacement activities:
-
-- Component 1 (Destination Agent) - returns alternatives for affected
-  elements at Step/Day/Plan levels.
-- Component 2 (Transport Agent) - called additionally at Plan-Level to
-  update transport arrangements.
-
-All HTTP calls are routed through utils helpers, so endpoints/timeouts
-are read from config.yaml and errors are handled gracefully (never raised).
-"""
+"""Alternative finder for the Dynamic Replanning module."""
 
 from __future__ import annotations
 
@@ -36,14 +25,19 @@ class AlternativeFinder:
         call_c1: Any | None = None,
         call_c2: Any | None = None,
     ) -> None:
+        """Create a finder with optional injected component callers."""
+
         self._config = config or self._safe_load_config()
         self._call_c1 = call_c1 or call_component1_api
         self._call_c2 = call_c2 or call_component2_api
 
         replanning_cfg = self._config.get("replanning", {}) or {}
         plan_cfg = replanning_cfg.get("plan_level", {}) or {}
+
         if isinstance(plan_cfg, dict):
-            self._plan_call_c2 = bool(plan_cfg.get("call_component2", True))
+            self._plan_call_c2 = bool(
+                plan_cfg.get("call_component2", True)
+            )
         else:
             self._plan_call_c2 = True
 
@@ -58,16 +52,24 @@ class AlternativeFinder:
         anchor: IntentAnchor,
         context: Dict[str, Any] | None = None,
     ) -> List[dict]:
+        """Retrieve single-activity replacements via Component 1."""
+
         context = context or {}
+
         payload: Dict[str, Any] = {
             "action": "replace_single_activity",
             "affected": affected.model_dump(mode="json"),
             "anchor": anchor.model_dump(mode="json"),
             "context": context,
         }
+
         response = self._call_c1(payload)
         alternatives = self._extract_alternatives(response)
-        LOGGER.info("Step-Level alternatives found: %d", len(alternatives))
+
+        LOGGER.info(
+            "Step-Level alternatives found: %d", len(alternatives)
+        )
+
         return alternatives
 
     def find_for_day_level(
@@ -76,17 +78,27 @@ class AlternativeFinder:
         anchor: IntentAnchor,
         context: Dict[str, Any] | None = None,
     ) -> List[dict]:
+        """Retrieve full-day replacements via Component 1."""
+
         context = context or {}
         context.setdefault("affected_day", affected_day)
+
         payload: Dict[str, Any] = {
             "action": "replace_full_day",
             "affected": {"day": affected_day},
             "anchor": anchor.model_dump(mode="json"),
             "context": context,
         }
+
         response = self._call_c1(payload)
         alternatives = self._extract_alternatives(response)
-        LOGGER.info("Day-Level alternatives found: %d (day=%s)", len(alternatives), affected_day or "n/a")
+
+        LOGGER.info(
+            "Day-Level alternatives found: %d (day=%s)",
+            len(alternatives),
+            affected_day or "n/a",
+        )
+
         return alternatives
 
     def find_for_plan_level(
@@ -95,20 +107,26 @@ class AlternativeFinder:
         anchor: IntentAnchor,
         context: Dict[str, Any] | None = None,
     ) -> List[dict]:
+        """Retrieve replacements from the disruption point onward."""
+
         context = context or {}
+
         affected = (
             disruption.get("affected_element", {})
             if isinstance(disruption.get("affected_element"), dict)
             else {}
         )
+
         payload: Dict[str, Any] = {
             "action": "replace_from_disruption_point",
             "affected": affected,
             "anchor": anchor.model_dump(mode="json"),
             "context": context,
         }
+
         response = self._call_c1(payload)
         alternatives = self._extract_alternatives(response)
+
         if self._plan_call_c2:
             try:
                 self._call_c2(
@@ -122,24 +140,46 @@ class AlternativeFinder:
                 )
             except Exception as error:  # noqa: BLE001
                 LOGGER.warning("Component 2 call failed: %s", error)
-        LOGGER.info("Plan-Level alternatives found: %d", len(alternatives))
+
+        LOGGER.info(
+            "Plan-Level alternatives found: %d", len(alternatives)
+        )
+
         return alternatives
 
     @staticmethod
     def _extract_alternatives(response: Dict[str, Any]) -> List[dict]:
+        """Pull the alternatives list out of a Component 1 response."""
+
         if not isinstance(response, dict):
             return []
-        for key in ("alternatives", "results", "replacements", "activities"):
+
+        for key in (
+            "alternatives",
+            "results",
+            "replacements",
+            "activities",
+        ):
             if key in response and isinstance(response[key], list):
-                return [alt for alt in response[key] if isinstance(alt, dict)]
+                return [
+                    alt
+                    for alt in response[key]
+                    if isinstance(alt, dict)
+                ]
+
         return []
 
     @staticmethod
     def _safe_load_config() -> Dict[str, Any]:
+        """Load config, falling back to defaults on any failure."""
+
         try:
             return load_config()
         except (FileNotFoundError, ValueError) as error:
-            LOGGER.warning("Could not load replanning config (%s), using defaults", error)
+            LOGGER.warning(
+                "Could not load replanning config (%s), using defaults",
+                error,
+            )
             return DEFAULT_CONFIG
 
 
