@@ -6,10 +6,10 @@ from app.services.route_metrics import RouteMetricsService, CalculatedRouteMetri
 
 class DistanceCostModel:
     """
-    Distance-based cost model for Dijkstra routing.
+    Distance-based cost model for shortest-route Dijkstra routing.
     Minimizes distance in kilometres (distance_km).
     Enforces strict numeric validation: finite, non-negative, non-boolean numeric values.
-    Rejects missing, negative, NaN, infinite, or non-numeric edge weights.
+    Rejects missing, negative, NaN, infinite, or non-numeric edge weights (returns None).
     """
     @staticmethod
     def get_weight(edge: Edge) -> Optional[float]:
@@ -30,10 +30,11 @@ class DistanceCostModel:
 
 class CostCostModel:
     """
-    Cost-based cost model for Dijkstra routing.
+    Cost-based cost model for cheapest-route Dijkstra routing.
     Minimizes monetary cost in LKR (cost_lkr).
     Enforces strict numeric validation: finite, non-negative, non-boolean numeric values.
-    Rejects missing, negative, NaN, infinite, or non-numeric edge weights.
+    Distinguishes explicitly free edges (cost_lkr = 0.0) from missing fares (cost_lkr is None).
+    Rejects missing, negative, NaN, infinite, or non-numeric edge weights (returns None).
     """
     @staticmethod
     def get_weight(edge: Edge) -> Optional[float]:
@@ -52,29 +53,109 @@ class CostCostModel:
             return None
         return val
 
-class TimeCostModel:
+class SlowerCostModel:
     """
-    Travel-time-based cost model for Dijkstra routing.
-    Minimizes journey time in minutes (travel_time_min).
-    Enforces strict numeric validation: finite, non-negative, non-boolean numeric values.
-    Rejects missing, negative, NaN, infinite, or non-numeric edge weights.
+    Slower / Leisurely route cost model for WANDARAYA scenic routing.
+    Favors relaxed, leisurely travel pace with lower transit speeds (e.g. scenic coastal
+    or hill-country bus/train) over rushed express highways.
+    Calculates cost proportional to edge transit speed in km/h.
+    Minimizing speed steers Dijkstra towards slower, more leisurely options.
+    Enforces strict numeric validation: finite, non-negative, non-boolean numbers.
+    Rejects missing, negative, NaN, infinite, or non-numeric edge weights (returns None).
     """
     @staticmethod
     def get_weight(edge: Edge) -> Optional[float]:
         if not hasattr(edge, "attributes") or not isinstance(edge.attributes, dict):
             return None
-        w = edge.attributes.get("travel_time_min")
-        if w is None or isinstance(w, bool):
+
+        attrs = edge.attributes
+        d = attrs.get("distance_km")
+        t = attrs.get("travel_time_min")
+
+        def _val(val):
+            if val is None or isinstance(val, bool) or not isinstance(val, (int, float)):
+                return None
+            try:
+                f = float(val)
+                return f if math.isfinite(f) and f >= 0.0 else None
+            except (ValueError, TypeError):
+                return None
+
+        val_d = _val(d)
+        val_t = _val(t)
+
+        if val_d is None:
             return None
-        if not isinstance(w, (int, float)):
+
+        # If travel time is provided, speed = distance / (time / 60)
+        if val_t is not None and val_t > 0.0:
+            speed_kmh = val_d / (val_t / 60.0)
+        else:
+            # Mode default speed baseline
+            mode_str = str(getattr(edge.mode, "value", edge.mode)).lower()
+            if "walk" in mode_str:
+                speed_kmh = 4.5
+            elif "bus" in mode_str:
+                speed_kmh = 30.0
+            elif "rail" in mode_str:
+                speed_kmh = 40.0
+            else:
+                speed_kmh = 50.0
+
+        # Non-negative, finite positive weight
+        return max(0.1, round(speed_kmh, 4))
+
+class TimeCostModel:
+    """
+    Journey-time cost model for fastest-route Dijkstra routing.
+    Minimizes total journey time in minutes, accounting for:
+      - in-vehicle or road travel time (travel_time_min)
+      - walking duration
+      - scheduled waiting time (waiting_time_min)
+      - transfer time (transfer_time_min)
+    Avoids double-counting and enforces strict numeric validation:
+    finite, non-negative, non-boolean numbers.
+    Rejects missing, negative, NaN, infinite, or non-numeric edge weights (returns None).
+    """
+    @staticmethod
+    def get_weight(edge: Edge) -> Optional[float]:
+        if not hasattr(edge, "attributes") or not isinstance(edge.attributes, dict):
             return None
-        try:
-            val = float(w)
-        except (ValueError, TypeError):
+
+        attrs = edge.attributes
+        t = attrs.get("travel_time_min")
+        w = attrs.get("waiting_time_min")
+        tr = attrs.get("transfer_time_min")
+
+        def _val(val):
+            if val is None or isinstance(val, bool) or not isinstance(val, (int, float)):
+                return None
+            try:
+                f = float(val)
+                return f if math.isfinite(f) and f >= 0.0 else None
+            except (ValueError, TypeError):
+                return None
+
+        val_t = _val(t)
+        val_w = _val(w)
+        val_tr = _val(tr)
+
+        # If neither motion travel time nor transfer time is provided, journey time is unknown
+        if val_t is None and val_tr is None:
             return None
-        if not math.isfinite(val) or val < 0.0:
-            return None
-        return val
+
+        # Base motion time
+        motion_time = val_t if val_t is not None else val_tr
+
+        # Additional transfer time (only add if distinct from motion_time to prevent double-counting)
+        add_transfer = 0.0
+        if val_tr is not None and val_t is not None and val_tr != val_t:
+            add_transfer = val_tr
+
+        add_waiting = val_w if val_w is not None else 0.0
+
+        total_edge_time = motion_time + add_transfer + add_waiting
+        return round(total_edge_time, 4)
 
 class DijkstraPathResult:
     """
@@ -88,7 +169,7 @@ class DijkstraPathResult:
         nodes: List[str],
         edges: List[Edge],
         total_distance_km: Optional[float] = None,
-        objective: str = "distance",
+        objective: str = "shortest",
         optimized_weight: Optional[float] = None
     ):
         self.nodes = nodes
@@ -98,21 +179,11 @@ class DijkstraPathResult:
         self.objective = objective
 
         # Calculate comprehensive metrics via RouteMetricsService
-        metrics: CalculatedRouteMetrics = RouteMetricsService.calculate_metrics(edges, nodes)
-        self.metrics = metrics
-
-        # Total distance: use calculated metric or explicit distance
-        calc_dist = metrics.total_distance_km if total_distance_km is None else total_distance_km
-        self.total_distance_km = round(calc_dist, 6)
-
-        # Mode and transfer statistics
-        self.modes_used = metrics.modes_used
-        self.mode_sequence = metrics.mode_sequence
-        self.mode_changes_count = metrics.mode_changes_count
-        self.transfers_count = metrics.transfers_count
-        self.transfer_locations = metrics.transfer_locations
-
-        # Time metrics
+        metrics = RouteMetricsService.calculate_metrics(edges, nodes)
+        self.total_distance_km = total_distance_km if total_distance_km is not None else metrics.total_distance_km
+        self.total_cost_lkr = metrics.total_cost_lkr
+        self.cost_complete = metrics.cost_complete
+        self.known_cost_lkr = metrics.known_cost_lkr
         self.total_travel_time_min = metrics.total_travel_time_min
         self.travel_time_complete = metrics.travel_time_complete
         self.known_travel_time_min = metrics.known_travel_time_min
@@ -121,17 +192,33 @@ class DijkstraPathResult:
         self.total_journey_time_min = metrics.total_journey_time_min
         self.journey_time_complete = metrics.journey_time_complete
         self.is_travel_time_estimated = metrics.is_travel_time_estimated
-
-        # Cost metrics
-        self.total_cost_lkr = metrics.total_cost_lkr
-        self.cost_complete = metrics.cost_complete
-        self.known_cost_lkr = metrics.known_cost_lkr
         self.is_cost_estimated = metrics.is_cost_estimated
+        self.modes_used = metrics.modes_used
+        self.mode_sequence = metrics.mode_sequence
+        self.mode_changes_count = metrics.mode_changes_count
+        self.transfers_count = metrics.transfers_count
+        self.transfer_locations = metrics.transfer_locations
+        self.warnings = list(metrics.warnings)
 
-        # Warnings & optimization tracking
-        self.warnings: List[str] = list(metrics.warnings)
-        self.optimized_weight = optimized_weight
-
+        # Map optimized weight and warnings per objective
+        if self.objective in ("shortest", "distance"):
+            self.optimized_weight = self.total_distance_km
+        elif self.objective in ("fastest", "time"):
+            self.optimized_weight = self.total_journey_time_min if self.total_journey_time_min is not None else self.total_travel_time_min
+            if not any("timetable" in w.lower() for w in self.warnings):
+                self.warnings.append(
+                    "Fastest-route objective calculated using static link journey times; "
+                    "real-time GTFS timetable departures and headway delays are not modeled."
+                )
+        elif self.objective in ("cheapest", "cost"):
+            self.optimized_weight = self.total_cost_lkr
+        elif self.objective in ("slower", "slowest", "leisurely"):
+            self.optimized_weight = self.total_journey_time_min if self.total_journey_time_min is not None else self.total_travel_time_min
+            self.warnings.append(
+                "Slower-route objective optimized for a relaxed, leisurely journey pace with lower transit speed."
+            )
+        else:
+            self.optimized_weight = optimized_weight
     def to_dict(self) -> Dict[str, Any]:
         return {
             "total_distance_km": self.total_distance_km,
@@ -204,28 +291,44 @@ class DijkstraPathResult:
         )
 
 class DijkstraRouter:
+    SUPPORTED_OBJECTIVES = {
+        "shortest": "shortest",
+        "distance": "shortest",
+        "fastest": "fastest",
+        "time": "fastest",
+        "cheapest": "cheapest",
+        "cost": "cheapest",
+        "slower": "slower",
+        "slowest": "slower",
+        "leisurely": "slower",
+    }
+
     def __init__(
         self,
         graph: MultimodalGraph,
         cost_model: Optional[Any] = None,
-        objective: str = "distance"
+        objective: str = "shortest"
     ):
         self.graph = graph
-        self.objective = objective.lower().strip() if objective else "distance"
+        raw_obj = (objective or "shortest").lower().strip()
+        if raw_obj not in self.SUPPORTED_OBJECTIVES:
+            raise ValueError(
+                f"Unsupported routing objective '{objective}'. "
+                "Supported objectives are: 'shortest' (distance), 'fastest' (time), 'cheapest' (cost), 'slower' (leisurely pace)."
+            )
+        self.canonical_objective = self.SUPPORTED_OBJECTIVES[raw_obj]
+        self.objective = raw_obj
 
         if cost_model is not None:
             self.cost_model = cost_model
-        elif self.objective == "distance":
+        elif self.canonical_objective == "shortest":
             self.cost_model = DistanceCostModel()
-        elif self.objective == "cost":
-            self.cost_model = CostCostModel()
-        elif self.objective == "time":
+        elif self.canonical_objective == "fastest":
             self.cost_model = TimeCostModel()
-        else:
-            raise ValueError(
-                f"Unsupported routing objective '{objective}'. "
-                "Supported objectives are: 'distance', 'cost', 'time'."
-            )
+        elif self.canonical_objective == "cheapest":
+            self.cost_model = CostCostModel()
+        elif self.canonical_objective == "slower":
+            self.cost_model = SlowerCostModel()
 
     def route(self, from_node: str, to_node: str) -> DijkstraPathResult:
         """

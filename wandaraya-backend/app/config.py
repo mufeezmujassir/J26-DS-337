@@ -17,6 +17,11 @@ class Settings(BaseSettings):
     AIRFLOW_API_TOKEN: str = ""
     ROUTE_API_BASE_URL: str = "https://api.openrouteservice.org"
     ROUTE_API_KEY: str = ""
+    ORS_API_KEY: str = ""
+
+    @property
+    def effective_route_api_key(self) -> str:
+        return self.ROUTE_API_KEY or self.ORS_API_KEY
 
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8", extra="ignore")
 

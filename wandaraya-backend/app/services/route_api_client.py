@@ -8,7 +8,7 @@ logger = logging.getLogger(__name__)
 class RouteAPIClient:
     def __init__(self):
         self.base_url = settings.ROUTE_API_BASE_URL.rstrip("/")
-        self.api_key = settings.ROUTE_API_KEY
+        self.api_key = settings.effective_route_api_key if hasattr(settings, "effective_route_api_key") else settings.ROUTE_API_KEY
         # OpenRouteService driving-car endpoint format
         self.endpoint = f"{self.base_url}/v2/directions/driving-car"
 

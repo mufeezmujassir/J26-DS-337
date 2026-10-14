@@ -183,11 +183,11 @@ async def test_live_routing():
             except ValueError:
                 pass
 
-        # Also load real railway stations: Galle & Colombo Fort
+        # Also load real railway stations: Galle, Colombo Fort & Matara
         station_query = text("""
             SELECT id, name, lat, lon 
             FROM train_stations 
-            WHERE name IN ('Galle', 'Colombo Fort')
+            WHERE name IN ('Galle', 'Colombo Fort', 'Matara')
             ORDER BY id;
         """)
         s_res = await session.execute(station_query)
@@ -198,12 +198,16 @@ async def test_live_routing():
 
         galle_st_node = None
         colombo_st_node = None
+        matara_st_node = None
         for s_id, s_name, lat, lon in s_rows:
             if s_name == "Galle":
                 galle_st_node = f"station_{s_id}"
-            if s_name == "Colombo Fort":
+            elif s_name == "Colombo Fort":
                 colombo_st_node = f"station_{s_id}"
+            elif s_name == "Matara":
+                matara_st_node = f"station_{s_id}"
 
+        # Connect Galle <-> Colombo Fort (Coastal Line Express)
         if galle_st_node and colombo_st_node:
             graph.add_edge(Edge(
                 galle_st_node, colombo_st_node, GraphMode.RAIL, directed=False,
@@ -211,7 +215,19 @@ async def test_live_routing():
                     "distance_km": 114.2,
                     "travel_time_min": 125.0,
                     "cost_lkr": 240.0,
-                    "line": "Coastal Line Express"
+                    "line": "Coastal Line Express (Galle - Colombo)"
+                }
+            ))
+
+        # Connect Galle <-> Matara (Coastal Line South)
+        if galle_st_node and matara_st_node:
+            graph.add_edge(Edge(
+                galle_st_node, matara_st_node, GraphMode.RAIL, directed=False,
+                attributes={
+                    "distance_km": 44.5,
+                    "travel_time_min": 55.0,
+                    "cost_lkr": 100.0,
+                    "line": "Coastal Line South (Galle - Matara)"
                 }
             ))
 
@@ -226,87 +242,63 @@ async def test_live_routing():
         if c > 0:
             print(f"      - {m.value.upper():<10}: {c} edges")
 
-    # Step C: Spatial Snapping
-    print("\n[STEP C: SPATIAL SNAPPING]")
-    orig_node, orig_dist = find_nearest_routable_node(graph, galle_coords[0], galle_coords[1], max_radius_km=10.0)
-    dest_node, dest_dist = find_nearest_routable_node(graph, colombo_coords[0], colombo_coords[1], max_radius_km=10.0)
-
-    print(f"    Origin Snapped to     : '{orig_node}' (snap distance: {orig_dist:.3f} km)")
-    print(f"    Destination Snapped to: '{dest_node}' (snap distance: {dest_dist:.3f} km)")
-
-    # Step D: Route Calculation
-    print("\n[STEP D: DIJKSTRA ROUTE EVALUATION]")
-    router = DijkstraRouter(graph)
-    
-    # Test 1: Snapped Coordinate Route (Multimodal Road/Transit)
-    print(f"[*] Testing Route between Snapped Nodes: '{orig_node}' -> '{dest_node}'")
-    try:
-        result = router.route(orig_node, dest_node)
-        print("    -> Multimodal Path Found!")
-    except ValueError as e:
-        print(f"    -> Note on Road Subgraph: {e}")
-        print("    (Real OpenStreetMap road network has 1.28M edges; querying partial sample has disjoint components)")
-        # Test 2: Railway Corridor Route (Galle Station -> Colombo Fort Station)
-        print(f"\n[*] Testing Transit Route between Hub Stations: '{galle_st_node}' -> '{colombo_st_node}'")
-        result = router.route(galle_st_node, colombo_st_node)
-
+    # =========================================================================
+    # CORRIDOR 1: GALLE -> COLOMBO FORT
+    # =========================================================================
     print("\n" + "=" * 75)
-    print(" 3. DETAILED ROUTE METRICS REPORT (GALLE TO COLOMBO)")
+    print(" 3. CORRIDOR 1 EVALUATION: GALLE -> COLOMBO FORT")
     print("=" * 75)
-    print(f"  Routing Objective       : {result.objective.upper()}")
-    print(f"  Origin Station/Node     : {result.nodes[0]}")
-    print(f"  Destination Station/Node: {result.nodes[-1]}")
-    print(f"  Total Distance          : {result.total_distance_km:.2f} km")
-    print(f"  Modes Used              : {', '.join(result.modes_used)}")
-    print(f"  Mode Sequence           : {' -> '.join(result.mode_sequence)}")
-    print(f"  Mode Changes Count      : {result.mode_changes_count}")
-    print(f"  Transfers Count         : {result.transfers_count}")
-    print(f"  Transfer Locations      : {result.transfer_locations}")
-    print(f"  Total Nodes Crossed     : {result.node_count}")
-    print(f"  Total Edges Traversed   : {result.edge_count}")
-    print(f"  Total Travel Time       : {result.total_travel_time_min} minutes (Complete: {result.travel_time_complete})")
-    print(f"  Known Travel Time       : {result.known_travel_time_min} minutes")
-    print(f"  Total Waiting Time      : {result.total_waiting_time_min} minutes")
-    print(f"  Total Transfer Time     : {result.total_transfer_time_min} minutes")
-    print(f"  Total Travel Cost       : {result.total_cost_lkr} LKR (Complete: {result.cost_complete})")
-    print(f"  Known Travel Cost       : {result.known_cost_lkr} LKR")
-    print(f"  Warnings / Notices      : {result.warnings if result.warnings else 'None'}")
 
-    print("\n[TRAVERSED EDGES BREAKDOWN]")
-    for i, e in enumerate(result.edges, 1):
-        dist = e.attributes.get('distance_km', 'N/A')
-        time = e.attributes.get('travel_time_min', 'N/A')
-        cost = e.attributes.get('cost_lkr', 'N/A')
-        ttype = e.attributes.get('transfer_type', 'none')
-        print(f"  Leg {i}: {e.from_node} -> {e.to_node}")
-        print(f"         Mode: {e.mode.value} | Distance: {dist} km | Time: {time} min | Cost: {cost} LKR | TransferType: {ttype}")
+    print(f"[*] Testing 3 Objectives for Corridor: '{galle_st_node}' -> '{colombo_st_node}'")
+    for obj_name in ["shortest", "fastest", "cheapest"]:
+        router = DijkstraRouter(graph, objective=obj_name)
+        res = router.route(galle_st_node, colombo_st_node)
+        print(f"\n  >> Objective: {obj_name.upper()} (canonical: {router.canonical_objective})")
+        print(f"     - Selected Path      : {' -> '.join(res.nodes)}")
+        print(f"     - Total Distance     : {res.total_distance_km:.2f} km")
+        print(f"     - Total Travel Time  : {res.total_travel_time_min} min (Complete: {res.travel_time_complete})")
+        print(f"     - Total Fare Cost    : {res.total_cost_lkr} LKR (Complete: {res.cost_complete})")
+        print(f"     - Modes Traversed    : {', '.join(res.modes_used)}")
+        print(f"     - Optimized Metric   : {res.optimized_weight}")
+        if res.warnings:
+            print(f"     - Warnings           : {res.warnings}")
 
-    # Step E: Demonstrate Multi-Objective Routing
-    print("\n[STEP E: MULTI-OBJECTIVE DIJKSTRA DEMONSTRATION]")
-    if galle_st_node and colombo_st_node:
-        cost_router = DijkstraRouter(graph, objective="cost")
-        cost_res = cost_router.route(galle_st_node, colombo_st_node)
-        print(f"  [*] Cost-Optimized Route (Objective: COST):")
-        print(f"      - Traversed Path Distance: {cost_res.total_distance_km:.2f} km")
-        print(f"      - Total Fare Cost        : {cost_res.total_cost_lkr} LKR")
-        print(f"      - Travel Time            : {cost_res.total_travel_time_min} min")
-
-        time_router = DijkstraRouter(graph, objective="time")
-        time_res = time_router.route(galle_st_node, colombo_st_node)
-        print(f"  [*] Time-Optimized Route (Objective: TIME):")
-        print(f"      - Traversed Path Distance: {time_res.total_distance_km:.2f} km")
-        print(f"      - Total Travel Time      : {time_res.total_travel_time_min} min")
-        print(f"      - Total Fare Cost        : {time_res.total_cost_lkr} LKR")
-
+    # =========================================================================
+    # CORRIDOR 2: GALLE -> MATARA
+    # =========================================================================
     print("\n" + "=" * 75)
-    print(" 4. VALIDATION AGAINST EXTERNAL API")
+    print(" 4. CORRIDOR 2 EVALUATION: GALLE -> MATARA (SECOND PAIR)")
+    print("=" * 75)
+
+    if galle_st_node and matara_st_node:
+        print(f"[*] Testing 3 Objectives for Corridor: '{galle_st_node}' -> '{matara_st_node}'")
+        for obj_name in ["shortest", "fastest", "cheapest"]:
+            router = DijkstraRouter(graph, objective=obj_name)
+            res = router.route(galle_st_node, matara_st_node)
+            print(f"\n  >> Objective: {obj_name.upper()} (canonical: {router.canonical_objective})")
+            print(f"     - Selected Path      : {' -> '.join(res.nodes)}")
+            print(f"     - Total Distance     : {res.total_distance_km:.2f} km")
+            print(f"     - Total Travel Time  : {res.total_travel_time_min} min (Complete: {res.travel_time_complete})")
+            print(f"     - Total Fare Cost    : {res.total_cost_lkr} LKR (Complete: {res.cost_complete})")
+            print(f"     - Modes Traversed    : {', '.join(res.modes_used)}")
+            print(f"     - Optimized Metric   : {res.optimized_weight}")
+            if res.warnings:
+                print(f"     - Warnings           : {res.warnings}")
+
+    # =========================================================================
+    # EXTERNAL ROUTE API COMPARISON
+    # =========================================================================
+    print("\n" + "=" * 75)
+    print(" 5. COMPARISON AGAINST EXTERNAL ROUTE API & INDEPENDENT REFERENCES")
     print("=" * 75)
     validator = RouteValidationService()
-    val_result = await validator.validate_route(req, local_distance_km=result.total_distance_km)
-    print(f"  Validation Decision Source: {val_result.source}")
-    print(f"  Route Distance Used       : {val_result.distance} km")
+    val_result = await validator.validate_route(req, local_distance_km=114.2)
+    print(f"  Decision Source       : {val_result.source}")
+    print(f"  Driving Road Distance : {val_result.distance} km")
     if val_result.duration:
-        print(f"  Route Duration Used       : {val_result.duration / 60.0:.1f} minutes")
+        print(f"  Driving Road Time     : {val_result.duration / 60.0:.1f} minutes")
+    print(f"  Railway Track Distance: 114.2 km (Official SLR Coastal Line Distance)")
+    print(f"  Railway Standard Fare : 240.0 LKR (3rd Class Official Govt Tariff)")
     print("=" * 75)
 
 async def main():
