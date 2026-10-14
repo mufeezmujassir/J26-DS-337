@@ -105,6 +105,73 @@ class SlowerCostModel:
         # Non-negative, finite positive weight
         return max(0.1, round(speed_kmh, 4))
 
+class ScenicCostModel:
+    """
+    Scenic route cost model for WANDARAYA scenic routing.
+    Prioritizes aesthetically pleasing transit options (such as scenic coastal
+    railway lines, hill country rail, or scenic trunk routes with picturesque landscapes)
+    over utilitarian high-speed expressway bypasses.
+
+    Dijkstra minimizes total edge weight, so higher scenic value results in lower weight.
+    Cost formulation:
+      base_weight = distance_km * scenic_factor
+      where scenic_factor:
+        - Rail (Coastal, Main/Hill Country, Eastern lines): 0.40 (highly favored for scenic beauty)
+        - Regular bus (scenic coastal / landmark routes): 0.85
+        - Walking: 1.00
+        - High-speed highway/expressway: 2.50 (penalized for low scenic interaction)
+      If explicit 'scenic_score' attribute is present (0-100), adjusts factor accordingly.
+    Enforces strict numeric validation: finite, non-negative, non-boolean numbers.
+    Rejects missing, negative, NaN, infinite, or non-numeric edge weights (returns None).
+    """
+    @staticmethod
+    def get_weight(edge: Edge) -> Optional[float]:
+        if not hasattr(edge, "attributes") or not isinstance(edge.attributes, dict):
+            return None
+
+        attrs = edge.attributes
+        d = attrs.get("distance_km")
+
+        def _val(val):
+            if val is None or isinstance(val, bool) or not isinstance(val, (int, float)):
+                return None
+            try:
+                f = float(val)
+                return f if math.isfinite(f) and f >= 0.0 else None
+            except (ValueError, TypeError):
+                return None
+
+        val_d = _val(d)
+        if val_d is None:
+            return None
+
+        mode_str = str(getattr(edge.mode, "value", edge.mode)).lower()
+        route_no = str(attrs.get("route_no", "")).upper()
+        via = str(attrs.get("via", "")).lower()
+        corridor = str(attrs.get("corridor", "")).lower()
+
+        # Scenic multiplier: lower multiplier means preferred in Dijkstra
+        if "rail" in mode_str:
+            if any(k in corridor for k in ("main", "coastal", "hill", "eastern")):
+                scenic_factor = 0.40
+            else:
+                scenic_factor = 0.50
+        elif "expressway" in via or "ex" in route_no or "highway" in via:
+            scenic_factor = 2.50
+        elif "walk" in mode_str:
+            scenic_factor = 1.00
+        elif "bus" in mode_str:
+            scenic_factor = 0.85
+        else:
+            scenic_factor = 1.00
+
+        # Incorporate explicit scenic_score on edge if present (0 to 100)
+        explicit_score = _val(attrs.get("scenic_score"))
+        if explicit_score is not None and explicit_score > 0:
+            scenic_factor *= (1.5 - (min(100.0, explicit_score) / 100.0) * 1.2)
+
+        return max(0.01, round(val_d * scenic_factor, 4))
+
 class TimeCostModel:
     """
     Journey-time cost model for fastest-route Dijkstra routing.
@@ -217,6 +284,11 @@ class DijkstraPathResult:
             self.warnings.append(
                 "Slower-route objective optimized for a relaxed, leisurely journey pace with lower transit speed."
             )
+        elif self.objective in ("scenic", "picturesque"):
+            self.optimized_weight = self.total_distance_km
+            self.warnings.append(
+                "Scenic-route objective optimized for picturesque landscapes, coastal/hill corridors, and scenic vistas."
+            )
         else:
             self.optimized_weight = optimized_weight
     def to_dict(self) -> Dict[str, Any]:
@@ -301,6 +373,8 @@ class DijkstraRouter:
         "slower": "slower",
         "slowest": "slower",
         "leisurely": "slower",
+        "scenic": "scenic",
+        "picturesque": "scenic",
     }
 
     def __init__(
@@ -314,7 +388,7 @@ class DijkstraRouter:
         if raw_obj not in self.SUPPORTED_OBJECTIVES:
             raise ValueError(
                 f"Unsupported routing objective '{objective}'. "
-                "Supported objectives are: 'shortest' (distance), 'fastest' (time), 'cheapest' (cost), 'slower' (leisurely pace)."
+                "Supported objectives are: 'shortest' (distance), 'fastest' (time), 'cheapest' (cost), 'slower' (leisurely pace), 'scenic' (picturesque landscape)."
             )
         self.canonical_objective = self.SUPPORTED_OBJECTIVES[raw_obj]
         self.objective = raw_obj
@@ -329,6 +403,8 @@ class DijkstraRouter:
             self.cost_model = CostCostModel()
         elif self.canonical_objective == "slower":
             self.cost_model = SlowerCostModel()
+        elif self.canonical_objective == "scenic":
+            self.cost_model = ScenicCostModel()
 
     def route(self, from_node: str, to_node: str) -> DijkstraPathResult:
         """

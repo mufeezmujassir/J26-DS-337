@@ -2,7 +2,7 @@
 WANDARAYA Component 2 - Dedicated Swagger UI Runner
 ====================================================
 Runs interactive Swagger UI documentation exclusively for Component 2:
-- Multimodal Dijkstra Routing (Shortest, Fastest, Cheapest, Slower)
+- Multimodal Dijkstra Routing (Shortest, Fastest, Cheapest, Slower, Scenic)
 - Sri Lanka Railways (SLR) 1st, 2nd, and 3rd Class Fares
 - National Transport Commission (NTC) Regulated Bus Fares
 - Live Groq AI Fare Audit Verification
@@ -47,7 +47,7 @@ app = FastAPI(
 ## All-Island Multimodal Routing, Fare Verification & Scenic Scoring Engine
 
 This interactive Swagger UI exposes all Component 2 services:
-* **All 4 Routing Objectives**: Shortest (km), Fastest (min), Cheapest (LKR), and Slower (Leisure/Scenic).
+* **All 5 Routing Objectives**: Shortest (km), Fastest (min), Cheapest (LKR), Slower (Leisure), and Scenic (Picturesque Landscapes).
 * **Official Public Transit Tariffs**: Sri Lanka Railways (1st/2nd/3rd class) & NTC Regulated Bus Fares.
 * **Live AI Audit**: Real-time fare verification via Groq Cloud (`openai/gpt-oss-20b`).
 * **Continuous Corridor Scenic Scoring**: Decoupled Railway vs. Bus scenic ratings & journey progress landmarks.
@@ -161,7 +161,7 @@ class MultimodalPlanRequest(BaseModel):
 @app.post(
     "/api/routes/multimodal-plan",
     tags=["Component 2 - High Level Plan"],
-    summary="Complete Multimodal Plan (4 Objectives, Rail & Bus Fares, Groq AI & Scenic Scores)"
+    summary="Complete Multimodal Plan (5 Objectives, Rail & Bus Fares, Groq AI & Scenic Scores)"
 )
 @app.get(
     "/api/routes/multimodal-plan",
@@ -171,7 +171,7 @@ class MultimodalPlanRequest(BaseModel):
 async def plan_journey(start: str = "Colombo", end: str = "Badulla"):
     """
     Computes complete all-island multimodal journey plans:
-    * **4 Routing Objectives**: Shortest, Fastest, Cheapest, Slower
+    * **5 Routing Objectives**: Shortest, Fastest, Cheapest, Slower, Scenic
     * **Sri Lanka Railways 1st, 2nd, and 3rd Class Fares**
     * **National Transport Commission Regulated Bus Fares**
     * **Live Groq AI Fare Audit Verification (`openai/gpt-oss-20b`)**
@@ -209,7 +209,7 @@ async def plan_journey(start: str = "Colombo", end: str = "Badulla"):
         bus_s, bus_s_dist = s_nodes["bus"]
         bus_e, bus_e_dist = e_nodes["bus"]
 
-        objectives = ["shortest", "fastest", "cheapest", "slower"]
+        objectives = ["shortest", "fastest", "cheapest", "slower", "scenic"]
         objectives_comparison = {}
         scenic_results = {}
 

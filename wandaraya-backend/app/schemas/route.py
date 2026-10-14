@@ -21,7 +21,7 @@ class DijkstraRouteRequest(BaseModel):
     origin_node_id: Optional[str] = None
     destination_node_id: Optional[str] = None
     max_snap_distance_km: float = Field(default=25.0, ge=0.1, le=100.0)
-    objective: str = Field(default="shortest", description="Routing objective: 'shortest'/'distance', 'fastest'/'time', 'cheapest'/'cost'")
+    objective: str = Field(default="shortest", description="Routing objective: 'shortest'/'distance', 'fastest'/'time', 'cheapest'/'cost', 'slower'/'leisurely', 'scenic'/'picturesque'")
 
 class RouteEdgeResponse(BaseModel):
     from_node: str

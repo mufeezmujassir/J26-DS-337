@@ -10,6 +10,7 @@ from app.services.dijkstra import (
     DistanceCostModel,
     CostCostModel,
     TimeCostModel,
+    ScenicCostModel,
     DijkstraPathResult
 )
 
@@ -267,7 +268,7 @@ def test_i_invalid_objective():
     g.add_node(Node("I1", lat=6.9, lon=79.8))
 
     with pytest.raises(ValueError, match="Unsupported routing objective"):
-        DijkstraRouter(g, objective="scenic")
+        DijkstraRouter(g, objective="unknown_goal")
 
     with pytest.raises(ValueError, match="Unsupported routing objective"):
         DijkstraRouter(g, objective="random_goal")
@@ -332,7 +333,19 @@ def test_j_end_to_end_api():
         assert data_c["total_cost_lkr"] == 200.0
         assert data_c["objective"] == "cheapest"
 
-        # 4. Invalid objective
+        # 4. Objective: scenic
+        req_scenic = {
+            "origin_node_id": "api_A",
+            "destination_node_id": "api_C",
+            "objective": "scenic"
+        }
+        res_sc = client.post("/routes/dijkstra", json=req_scenic)
+        assert res_sc.status_code == 200
+        data_sc = res_sc.json()
+        assert data_sc["objective"] == "scenic"
+        assert len(data_sc["nodes"]) == 3
+
+        # 5. Invalid objective
         req_invalid = {
             "origin_node_id": "api_A",
             "destination_node_id": "api_C",
@@ -342,3 +355,57 @@ def test_j_end_to_end_api():
         assert res_inv.status_code == 422
     finally:
         test_app.dependency_overrides.clear()
+
+
+# ---------------------------------------------------------------------------
+# Test K — Scenic route objective
+# ---------------------------------------------------------------------------
+def test_k_scenic_route_objective():
+    """
+    Test K: Construct a graph comparing a shorter Expressway Highway vs. a longer Scenic Rail corridor.
+    - Path 1 (Expressway Bus): 10.0 km, high-speed bypass
+    - Path 2 (Coastal Railway): 14.0 km, famous picturesque coastal rail corridor
+    Under objective='scenic', Path 2 MUST be selected because of its high scenic appeal.
+    Under objective='shortest', Path 1 MUST be selected (10.0 km < 14.0 km).
+    """
+    g = MultimodalGraph()
+    for n in ["K_start", "K_express", "K_scenic_rail", "K_end"]:
+        g.add_node(Node(n, lat=6.9, lon=79.8))
+
+    # Path 1: Expressway bus (10 km, low scenic)
+    g.add_edge(Edge(
+        "K_start", "K_express", GraphMode.BUS, directed=True,
+        attributes={"distance_km": 5.0, "travel_time_min": 5.0, "via": "Southern Expressway", "route_no": "EX 1"}
+    ))
+    g.add_edge(Edge(
+        "K_express", "K_end", GraphMode.BUS, directed=True,
+        attributes={"distance_km": 5.0, "travel_time_min": 5.0, "via": "Southern Expressway", "route_no": "EX 1"}
+    ))
+
+    # Path 2: Scenic coastal rail (14 km total, high scenic)
+    g.add_edge(Edge(
+        "K_start", "K_scenic_rail", GraphMode.RAIL, directed=True,
+        attributes={"distance_km": 7.0, "travel_time_min": 10.0, "corridor": "coastal", "line_name": "Coastal Line"}
+    ))
+    g.add_edge(Edge(
+        "K_scenic_rail", "K_end", GraphMode.RAIL, directed=True,
+        attributes={"distance_km": 7.0, "travel_time_min": 10.0, "corridor": "coastal", "line_name": "Coastal Line"}
+    ))
+
+    # 1. Scenic router selects the picturesque rail route
+    router_scenic = DijkstraRouter(g, objective="scenic")
+    res_scenic = router_scenic.route("K_start", "K_end")
+    assert res_scenic.nodes == ["K_start", "K_scenic_rail", "K_end"]
+    assert res_scenic.objective == "scenic"
+    assert res_scenic.total_distance_km == 14.0
+
+    # 2. Shortest router selects the shorter expressway route
+    router_shortest = DijkstraRouter(g, objective="shortest")
+    res_shortest = router_shortest.route("K_start", "K_end")
+    assert res_shortest.nodes == ["K_start", "K_express", "K_end"]
+    assert res_shortest.total_distance_km == 10.0
+
+    # 3. ScenicCostModel edge validation
+    assert ScenicCostModel.get_weight(Edge("A", "B", GraphMode.RAIL, True, {"distance_km": 10.0})) is not None
+    assert ScenicCostModel.get_weight(Edge("A", "B", GraphMode.RAIL, True, {"distance_km": None})) is None
+    assert ScenicCostModel.get_weight(Edge("A", "B", GraphMode.RAIL, True, {"distance_km": -5.0})) is None
