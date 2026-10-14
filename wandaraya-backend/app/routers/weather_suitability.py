@@ -29,6 +29,7 @@ async def get_weather_suitability(
     activity_type: str,
     latitude: float | None = Query(default=None, ge=-90, le=90),
     longitude: float | None = Query(default=None, ge=-180, le=180),
+    forecast_mode: str = Query(default="production", pattern="^(production|planning)$"),
     db: AsyncSession = Depends(get_db),
 ):
     if district_id <= 0:
@@ -54,6 +55,7 @@ async def get_weather_suitability(
             activity_type=activity_type,
             latitude=latitude,
             longitude=longitude,
+            planning_mode=forecast_mode == "planning",
         )
     except ValueError as exc:
         raise HTTPException(status_code=422, detail=str(exc)) from exc

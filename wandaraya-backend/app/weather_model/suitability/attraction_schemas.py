@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from datetime import date
-from typing import Any
+from typing import Any, Literal
 
 from pydantic import BaseModel, Field, model_validator
 
@@ -31,6 +31,7 @@ class AttractionWeatherCandidate(BaseModel):
 class AttractionWeatherBatchRequest(BaseModel):
     travel_date: date
     attractions: list[AttractionWeatherCandidate] = Field(min_length=1, max_length=50)
+    forecast_mode: Literal["production", "planning"] = "production"
 
 
 class ActivityWeatherScore(BaseModel):

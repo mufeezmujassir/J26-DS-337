@@ -26,6 +26,7 @@ class WeatherSuitabilityService:
         activity_type: str,
         latitude: float | None = None,
         longitude: float | None = None,
+        planning_mode: bool = False,
     ) -> IntegratedSuitabilityResponse:
         if activity_type not in ACTIVITY_PROFILES:
             raise ValueError(f"Unsupported activity type: {activity_type}")
@@ -35,6 +36,7 @@ class WeatherSuitabilityService:
             travel_date=travel_date,
             latitude=latitude,
             longitude=longitude,
+            planning_mode=planning_mode,
         )
 
         response_fields = {

@@ -35,6 +35,7 @@ class KnowledgeBaseWeatherService:
         district_id: int,
         travel_date: date,
         limit: int = 50,
+        forecast_mode: str = "production",
     ) -> AttractionWeatherBatchResponse:
         candidates = await AttractionWeatherRepository.get_candidates(
             self.db,
@@ -54,6 +55,7 @@ class KnowledgeBaseWeatherService:
             AttractionWeatherBatchRequest(
                 travel_date=travel_date,
                 attractions=candidates,
+                forecast_mode=forecast_mode,
             )
         )
         return calibrate_attraction_response(response)

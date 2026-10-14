@@ -89,6 +89,36 @@ async def test_monthly_unapproved_is_rejected():
 
 
 @pytest.mark.asyncio
+async def test_planning_mode_uses_historical_monthly_patterns_before_90_days():
+    provider = Mock()
+    provider.get_climatology.return_value = ClimatologyResult(
+        district_id=78,
+        requested_month=date(2026, 11, 1),
+        available=True,
+        rainfall=ClimatologyValue(
+            target="rainfall_mm", mean=250.0, minimum=150.0, maximum=350.0,
+            unit="mm/month", observation_years=5, first_year=2021, last_year=2025,
+        ),
+        message="Historical climatology",
+    )
+    service = WeatherContextService(climatology_provider=provider)
+
+    result = await service.get_context(
+        district_id=78,
+        travel_date=date(2026, 11, 15),
+        reference_date=REFERENCE_DATE,
+        planning_mode=True,
+    )
+
+    assert result.available is True
+    assert result.selected_source == "climatology"
+    assert result.actual_source == "historical_climatology"
+    assert result.rainfall_period == "historical_calendar_month_mean"
+    assert result.provenance["planning_mode"] is True
+    assert "not a day-specific forecast" in result.message
+
+
+@pytest.mark.asyncio
 async def test_climatology_routing():
 
     provider = Mock()
