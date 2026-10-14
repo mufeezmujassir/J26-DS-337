@@ -196,8 +196,8 @@ async def evaluate_all_objectives(start_input: str, end_input: str):
     print(f"  Origin Transit Access  : Rail -> {rail_s} ({rail_s_dist:.2f} km) | Bus -> {bus_s} ({bus_s_dist:.2f} km)")
     print(f"  Dest. Transit Access   : Rail -> {rail_e} ({rail_e_dist:.2f} km) | Bus -> {bus_e} ({bus_e_dist:.2f} km)")
 
-    # 3. Side-by-Side Comparison Table for ALL 4 Objectives with SCENIC SCORE
-    objectives = ["shortest", "fastest", "cheapest", "slower"]
+    # 3. Side-by-Side Comparison Table for ALL 5 Objectives with SCENIC SCORE
+    objectives = ["shortest", "fastest", "cheapest", "slower", "scenic"]
     results = {}
     scenic_results = {}
 
@@ -224,7 +224,7 @@ async def evaluate_all_objectives(start_input: str, end_input: str):
             scenic_results[obj] = None
 
     print("\n" + "=" * 80)
-    print("                     ALL 4 OBJECTIVES COMPARISON TABLE")
+    print("                     ALL 5 OBJECTIVES COMPARISON TABLE")
     print("=" * 80)
     header = f"{'Objective':<10} | {'Distance':<11} | {'Travel Time':<15} | {'Fare Cost':<12} | {'Modes':<14} | {'Transfers':<9} | {'Scenic Score'}"
     print(header)
