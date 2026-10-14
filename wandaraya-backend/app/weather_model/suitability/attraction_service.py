@@ -45,6 +45,7 @@ class AttractionWeatherSuitabilityService:
                     travel_date=payload.travel_date,
                     latitude=attraction.latitude,
                     longitude=attraction.longitude,
+                    planning_mode=payload.forecast_mode == "planning",
                 )
                 context_cache[cache_key] = context
 
@@ -194,6 +195,11 @@ class AttractionWeatherSuitabilityService:
         )
         first_scored = next(item for item in activity_scores if item.score is not None)
         message = "Experimental attraction-level weather suitability."
+        if context.provenance.get("planning_mode"):
+            message += (
+                " This is a historical monthly travel-planning estimate, "
+                "not a day-specific weather forecast."
+            )
         if unsupported:
             message += " Unsupported activities were excluded from the average."
 

@@ -27,6 +27,7 @@ async def get_attraction_weather(
     district_id: int = Query(gt=0),
     travel_date: date = Query(...),
     limit: int = Query(default=50, ge=1, le=50),
+    forecast_mode: str = Query(default="production", pattern="^(production|planning)$"),
     db: AsyncSession = Depends(get_db),
 ):
     async def monthly_lookup(requested_district_id: int, requested_travel_date: date):
@@ -46,4 +47,5 @@ async def get_attraction_weather(
         district_id=district_id,
         travel_date=travel_date,
         limit=limit,
+        forecast_mode=forecast_mode,
     )

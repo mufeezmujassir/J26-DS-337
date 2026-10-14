@@ -1,0 +1,49 @@
+{
+  "stage": "10.0.2",
+  "name": "Semantic Candidate–Weather Context Integration",
+  "status": "COMPLETE_WITH_LIMITATIONS",
+  "date": "2026-10-13",
+  "scope": {
+    "read_only_integration": true,
+    "final_ranking_applied": false,
+    "database_writes": false,
+    "qdrant_writes": false,
+    "model_approval_changes": false,
+    "airflow_schedule_changes": false
+  },
+  "endpoint": {
+    "method": "POST",
+    "path": "/api/v1/recommendations/context-enrich",
+    "forecast_modes": ["production", "planning"],
+    "route_registration_verified": true
+  },
+  "contracts": {
+    "semantic_source": "qdrant:sri_lanka_attractions",
+    "candidate_identity": "attraction_id",
+    "deduplication": "First Qdrant occurrence retained; original rank and score are preserved.",
+    "weather_batch_service": "AttractionWeatherSuitabilityService.evaluate_batch",
+    "weather_dimension_adapter": "WeatherDimensionAdapter",
+    "raw_weather_score_scale": "0_to_100",
+    "weather_dimension_score_scale": "0_to_1_calibrated",
+    "unknown_score_policy": "null; never replaced with zero",
+    "monthly_rainfall_policy": "Monthly totals are not interpreted as daily rainfall or precipitation probability."
+  },
+  "tests": {
+    "environment": "wandaraya-api Docker container",
+    "command": "python -m pytest tests/test_knowledge_base_api.py tests/weather_model/test_weather_context_service.py tests/weather_model/test_attraction_suitability.py tests/recommendation/test_weather_adapter.py tests/recommendation/test_semantic_weather_context_enrichment.py -q",
+    "passed": 22,
+    "failed": 0,
+    "skipped": 0,
+    "warnings": 1,
+    "focused_command": "python -m pytest tests/recommendation/test_semantic_weather_context_enrichment.py tests/recommendation/test_weather_adapter.py tests/weather_model/test_attraction_suitability.py -q",
+    "focused_passed": 14
+  },
+  "known_limitations": [
+    "No final context ranking is implemented.",
+    "Semantic retrieval requires BGE and Qdrant to be operational.",
+    "Production monthly model forecasts remain unavailable until manually approved models exist.",
+    "Planning-mode climatology is not a daily forecast.",
+    "No live external providers were called during automated tests."
+  ],
+  "readiness_for_stage_10_1": "conditionally_ready"
+}

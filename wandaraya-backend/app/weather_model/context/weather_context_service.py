@@ -45,6 +45,7 @@ class WeatherContextService:
         latitude: float | None = None,
         longitude: float | None = None,
         reference_date: date | None = None,
+        planning_mode: bool = False,
     ) -> UnifiedWeatherContext:
 
         decision = WeatherSourceSelector.select(
@@ -52,6 +53,27 @@ class WeatherContextService:
             travel_date=travel_date,
             reference_date=reference_date,
         )
+
+        # A daily forecast does not exist weeks in advance.  Planning mode is
+        # an explicit opt-in for a historical *monthly* estimate, not a way to
+        # bypass the production-approval gate for candidate model artifacts.
+        # Keep the normal path unchanged: it only accepts an approved monthly
+        # model between the live-provider and long-range climatology windows.
+        if (
+            planning_mode
+            and decision.selected_source == WeatherSource.MONTHLY_FORECAST
+        ):
+            decision = decision.model_copy(
+                update={
+                    "selected_source": WeatherSource.CLIMATOLOGY,
+                    "forecast_resolution": "monthly_climatology",
+                    "requires_production_approval": False,
+                    "message": (
+                        "Travel-planning mode uses historical monthly climate "
+                        "patterns; it is not a day-specific weather forecast."
+                    ),
+                }
+            )
 
         common = {
             "district_id": district_id,
@@ -244,6 +266,7 @@ class WeatherContextService:
                 missing_targets=result.missing_targets,
                 provenance={
                     "dataset": "district_monthly_observations",
+                    "planning_mode": planning_mode,
                     "rainfall_observation_years": (
                         result.rainfall.observation_years
                         if result.rainfall else None
@@ -258,7 +281,12 @@ class WeatherContextService:
                     ),
                     "is_daily_forecast": False,
                 },
-                message=result.message,
+                message=(
+                    "Travel-planning estimate based on historical monthly "
+                    "climate patterns; not a day-specific forecast."
+                    if planning_mode
+                    else result.message
+                ),
             )
 
         return self._unavailable(
