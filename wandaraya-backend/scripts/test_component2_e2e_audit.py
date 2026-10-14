@@ -375,7 +375,7 @@ async def test_g_external_api_failure_handling():
     # 1. Timeout simulation
     with patch("httpx.AsyncClient.post", side_effect=httpx.TimeoutException("Mock ORS Timeout")):
         client = RouteAPIClient()
-        client.api_key = "secret_ors_key_xyz_123"
+        client.api_key = "mock_ors_key_test_123"
         result = await client.get_route(req)
         assert result.source == "route_api_timeout"
         assert result.distance is None
@@ -384,19 +384,19 @@ async def test_g_external_api_failure_handling():
     mock_resp = httpx.Response(status_code=500, request=httpx.Request("POST", "https://api.openrouteservice.org"))
     with patch("httpx.AsyncClient.post", side_effect=httpx.HTTPStatusError("500 Internal", request=mock_resp.request, response=mock_resp)):
         client = RouteAPIClient()
-        client.api_key = "secret_ors_key_xyz_123"
+        client.api_key = "mock_ors_key_test_123"
         result = await client.get_route(req)
         assert result.source == "route_api_http_error"
 
     # 3. Graceful fallback in RouteValidationService
     service = RouteValidationService()
-    service.api_client.api_key = "secret_ors_key_xyz_123"
+    service.api_client.api_key = "mock_ors_key_test_123"
     with patch.object(service.api_client, "get_route", side_effect=httpx.TimeoutException("Timeout")):
         val_result = await service.validate_route(req, local_distance_km=115.5, local_duration=150.0)
         # Should gracefully return local database fallback without exposing secrets
         assert val_result.source == "local_database_fallback"
         assert val_result.distance == 115.5
-        assert "secret_ors_key_xyz_123" not in str(val_result)
+        assert "mock_ors_key_test_123" not in str(val_result)
 
 
 # =====================================================================

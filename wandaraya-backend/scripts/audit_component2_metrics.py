@@ -2,13 +2,21 @@
 Audit script for Step 4 & 5:
 Extracts exact counts and statistics from PostgreSQL and MultimodalGraph.
 """
+import os
 import psycopg
 import json
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
+
 from app.services.graph import MultimodalGraph, Node, Edge, GraphMode
 from app.services.transfer_loader import build_transfers
 
 def audit_database():
-    conn = psycopg.connect("postgresql://postgres:root@localhost:5432/wandaraya")
+    db_url = os.environ.get("DATABASE_URL", "postgresql://postgres@localhost:5432/wandaraya").replace("+psycopg", "")
+    conn = psycopg.connect(db_url)
     cur = conn.cursor()
     
     stats = {}

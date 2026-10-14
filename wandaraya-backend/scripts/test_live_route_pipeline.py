@@ -9,15 +9,22 @@ if sys.platform == 'win32':
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
-# Ensure default database connection works locally if not set in environment
-os.environ.setdefault("DATABASE_URL", "postgresql+psycopg://postgres:root@localhost:5432/wandaraya")
+# Load environment securely from .env
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
 
-# Inject OpenRouteService API Key
-ORS_KEY = os.environ.get(
-    "ROUTE_API_KEY", 
-    "eyJvcmciOiI1YjNjZTM1OTc4NTExMTAwMDFjZjYyNDgiLCJpZCI6ImZiZDRiY2NkMzI4NzRkZDBiODE1ZTE1MmNhN2E5M2NkIiwiaCI6Im11cm11cjY0In0="
-)
-os.environ["ROUTE_API_KEY"] = ORS_KEY
+try:
+    from app.config import settings
+    if not os.environ.get("DATABASE_URL") and hasattr(settings, "DATABASE_URL"):
+        os.environ["DATABASE_URL"] = settings.DATABASE_URL
+    if not os.environ.get("ROUTE_API_KEY") and hasattr(settings, "effective_route_api_key"):
+        os.environ["ROUTE_API_KEY"] = settings.effective_route_api_key
+except Exception:
+    pass
+
 os.environ.setdefault("ROUTE_API_BASE_URL", "https://api.openrouteservice.org")
 
 from sqlalchemy import text

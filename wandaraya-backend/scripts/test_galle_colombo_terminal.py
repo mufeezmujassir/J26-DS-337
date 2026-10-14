@@ -12,8 +12,19 @@ if sys.platform == 'win32':
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
-# Set local database connection before importing app.database
-os.environ["DATABASE_URL"] = "postgresql+psycopg://postgres:root@localhost:5432/wandaraya"
+# Set local database connection securely
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
+
+try:
+    from app.config import settings
+    if not os.environ.get("DATABASE_URL") and hasattr(settings, "DATABASE_URL"):
+        os.environ["DATABASE_URL"] = settings.DATABASE_URL
+except Exception:
+    pass
 
 import psycopg
 from sqlalchemy import text
@@ -25,7 +36,7 @@ from app.schemas.route import RouteRequest, Coordinate
 from app.services.route_validation import RouteValidationService
 from app.services.route_api_client import RouteAPIClient
 
-DB_URL = "postgresql://postgres:root@localhost:5432/wandaraya"
+DB_URL = os.environ.get("DATABASE_URL", "postgresql://postgres@localhost:5432/wandaraya").replace("+psycopg", "")
 
 async def inspect_database_records():
     print("\n" + "=" * 75)

@@ -12,8 +12,19 @@ import json
 if sys.platform == 'win32':
     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-os.environ.setdefault("DATABASE_URL", "postgresql+psycopg://postgres:root@localhost:5432/wandaraya")
+# Load environment securely from .env
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
+
+try:
+    from app.config import settings
+    if not os.environ.get("DATABASE_URL") and hasattr(settings, "DATABASE_URL"):
+        os.environ["DATABASE_URL"] = settings.DATABASE_URL
+except Exception:
+    pass
 
 from sqlalchemy import text
 from app.database import AsyncSessionLocal

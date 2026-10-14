@@ -62,8 +62,12 @@ def _open_csv(path: Path):
 def _with_session(func, *, validate=False):
     from sqlalchemy import create_engine
     from sqlalchemy.orm import sessionmaker
-    import os
-    db_url = os.environ.get('DATABASE_URL', 'postgresql+psycopg://postgres:root@localhost:5432/wandaraya')
+    try:
+        from dotenv import load_dotenv
+        load_dotenv()
+    except ImportError:
+        pass
+    db_url = os.environ.get('DATABASE_URL', 'postgresql+psycopg://postgres@localhost:5432/wandaraya')
     engine = create_engine(db_url, echo=False)
     SyncSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
     with SyncSessionLocal() as session:

@@ -13,6 +13,15 @@ if hasattr(sys.stdout, "reconfigure"):
     except Exception:
         pass
 
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+try:
+    from dotenv import load_dotenv
+    env_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".env"))
+    load_dotenv(dotenv_path=env_path)
+except ImportError:
+    pass
+
 from app.schemas.route import RouteRequest, Coordinate
 from app.services.route_api_client import RouteAPIClient
 from app.services.graph import MultimodalGraph, Node, Edge, GraphMode
