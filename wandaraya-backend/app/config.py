@@ -18,6 +18,7 @@ class Settings(BaseSettings):
     ROUTE_API_BASE_URL: str = "https://api.openrouteservice.org"
     ROUTE_API_KEY: str = ""
     ORS_API_KEY: str = ""
+    GROQ_API_KEY: str = ""
 
     @property
     def effective_route_api_key(self) -> str:
