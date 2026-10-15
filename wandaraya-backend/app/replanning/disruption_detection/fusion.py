@@ -3,13 +3,17 @@
 from __future__ import annotations
 
 import logging
-from typing import Any, Dict, Optional
+from typing import Any, Dict, List, Optional
 
+from app.replanning.disruption_detection.severity_classifier import (
+    classify_severity,
+    rank as severity_rank,
+)
 from app.replanning.disruption_detection.utils import load_config
 
 LOGGER = logging.getLogger(__name__)
 
-#: Intensity -> base weather score.
+# Intensity -> base weather score.
 _RAIN_SCORES = {
     "none": 0.0,
     "light": 0.4,
@@ -17,12 +21,33 @@ _RAIN_SCORES = {
     "storm": 1.0,
 }
 
-#: Heat warning floors the weather score at this value (rain or not).
+# Heat warning floors the weather score at this value (rain or not).
 _HEAT_FLOOR = 0.5
 
 _PLACES_CROWD_SCORES = {"low": 0.0, "medium": 0.3, "high": 0.6}
 
 _SOURCES = ("weather", "places", "complaint", "gps")
+
+# ML probability at/above which a disruption is considered strong.
+DEFAULT_CONFIRM_THRESHOLD = 0.7
+
+# ML probability below which (with no firing rule) there is no disruption.
+DEFAULT_NO_DISRUPTION_THRESHOLD = 0.4
+
+# Hybrid decision vocabulary.
+DECISION_CONFIRMED = "confirmed"
+DECISION_NEEDS_CONFIRMATION = "needs_confirmation"
+DECISION_NONE = "none"
+DECISION_UNCERTAIN = "uncertain"
+
+# Severity used when no disruption is present.
+SEVERITY_NONE = "none"
+
+
+def _highest_severity(*levels: str) -> str:
+    """Return the strongest severity among ``levels`` (ties keep the first)."""
+    resolved = [level or SEVERITY_NONE for level in levels]
+    return max(resolved, key=severity_rank)
 
 
 class FusionEngine:
@@ -37,6 +62,13 @@ class FusionEngine:
         )
         self.confirmation_threshold: float = fusion_config.get(
             "confirmation_threshold", 0.75
+        )
+        hybrid_config = self.config.get("hybrid", {})
+        self.confirm_threshold: float = hybrid_config.get(
+            "confirm_threshold", DEFAULT_CONFIRM_THRESHOLD
+        )
+        self.no_disruption_threshold: float = hybrid_config.get(
+            "no_disruption_threshold", DEFAULT_NO_DISRUPTION_THRESHOLD
         )
 
     def fuse(self, signals: Dict[str, Any]) -> Dict[str, Any]:
@@ -73,10 +105,106 @@ class FusionEngine:
             "contributing_sources": contributing,
         }
 
+    def fuse_hybrid(
+        self,
+        candidates: List[Dict[str, Any]],
+        ml_prediction: Optional[Dict[str, Any]] = None,
+    ) -> Dict[str, Any]:
+        """Combine rule-based triggers with an ML prediction.
+
+        Args:
+            candidates: rule triggers from :func:`trigger_rules.apply_rules`.
+            ml_prediction: output of :meth:`MLClassifier.predict` (or
+                ``None`` to run in rules-only mode).
+
+        Returns:
+            A decision mapping with ``decision``, ``is_disruption``,
+            ``requires_confirmation``, the effective ``severity`` and a
+            ``detected_by`` provenance block.
+        """
+        rule_fired = bool(candidates)
+        ml_probability = 0.0
+        ml_severity = SEVERITY_NONE
+        ml_is_disruption = False
+
+        if ml_prediction:
+            ml_probability = float(
+                ml_prediction.get("probability", 0.0) or 0.0
+            )
+            ml_is_disruption = bool(
+                ml_prediction.get("is_disruption", False)
+            )
+            ml_severity = str(
+                ml_prediction.get(
+                    "ml_severity", ml_prediction.get("severity", SEVERITY_NONE)
+                )
+            )
+
+        rule_severity = classify_severity(candidates)
+
+        if rule_fired and ml_probability >= self.confirm_threshold:
+            decision = DECISION_CONFIRMED
+            is_disruption = True
+            requires_confirmation = False
+        elif rule_fired or ml_probability >= self.confirm_threshold:
+            decision = DECISION_NEEDS_CONFIRMATION
+            is_disruption = True
+            requires_confirmation = True
+        elif ml_probability < self.no_disruption_threshold:
+            decision = DECISION_NONE
+            is_disruption = False
+            requires_confirmation = False
+        else:
+            decision = DECISION_UNCERTAIN
+            is_disruption = False
+            requires_confirmation = True
+
+        # Highest severity across the rule engine and the ML severity model.
+        severity = _highest_severity(rule_severity, ml_severity)
+        if not is_disruption:
+            LOGGER.info(
+                "Hybrid fusion: decision=%s (rule_fired=%s, p=%.3f) "
+                "logged only",
+                decision,
+                rule_fired,
+                ml_probability,
+            )
+            effective_severity = SEVERITY_NONE
+        else:
+            effective_severity = severity
+
+        detected_by = {
+            "rules": [rule.get("name", "") for rule in candidates],
+            "ml_classifier": bool(ml_prediction)
+            and (ml_is_disruption or ml_probability >= self.confirm_threshold),
+            "ml_severity": ml_severity,
+        }
+
+        LOGGER.info(
+            "Hybrid fusion: decision=%s rule_fired=%s ml_p=%.3f "
+            "severity=%s requires_confirmation=%s",
+            decision,
+            rule_fired,
+            ml_probability,
+            effective_severity,
+            requires_confirmation,
+        )
+
+        return {
+            "decision": decision,
+            "is_disruption": is_disruption,
+            "requires_confirmation": requires_confirmation,
+            "severity": effective_severity,
+            "rule_severity": rule_severity,
+            "ml_severity": ml_severity,
+            "ml_probability": round(ml_probability, 4),
+            "detected_by": detected_by,
+        }
+
     def source_score(
         self, signals: Dict[str, Any], source: str
     ) -> float:
-        """Public probe of one source's normalised score, used for per-disruption confidence."""
+        """Public probe of one source's normalised score."""
         return self._source_score(signals, source)
 
     def _source_score(
@@ -144,4 +272,21 @@ def fuse(signals: Dict[str, Any], config: Optional[dict] = None) -> Dict[str, An
     return FusionEngine(config).fuse(signals)
 
 
-__all__ = ["FusionEngine", "fuse"]
+def fuse_hybrid(
+    candidates: List[Dict[str, Any]],
+    ml_prediction: Optional[Dict[str, Any]] = None,
+    config: Optional[dict] = None,
+) -> Dict[str, Any]:
+    """Convenience wrapper around :meth:`FusionEngine.fuse_hybrid`."""
+    return FusionEngine(config).fuse_hybrid(candidates, ml_prediction)
+
+
+__all__ = [
+    "FusionEngine",
+    "fuse",
+    "fuse_hybrid",
+    "DECISION_CONFIRMED",
+    "DECISION_NEEDS_CONFIRMATION",
+    "DECISION_NONE",
+    "DECISION_UNCERTAIN",
+]

@@ -7,6 +7,7 @@ from app.schemas.disruption import (
     SEVERITIES,
     SOURCES,
     AffectedElement,
+    DetectedBy,
     Disruption,
     DisruptionBatch,
     DisruptionReason,
@@ -18,6 +19,7 @@ from app.replanning.disruption_detection.detector import DisruptionDetector
 from app.replanning.disruption_detection.fusion import (
     FusionEngine,
     fuse,
+    fuse_hybrid,
 )
 from app.replanning.disruption_detection.gps_monitor import GpsMonitor
 from app.replanning.disruption_detection.places_monitor import PlacesMonitor
@@ -43,7 +45,7 @@ from app.replanning.disruption_detection.weather_monitor import (
     WeatherMonitor,
 )
 
-__version__ = "0.3.0"
+__version__ = "0.4.0"
 
 __all__ = [
     "__version__",
@@ -54,6 +56,7 @@ __all__ = [
     "Disruption",
     "DisruptionBatch",
     "DisruptionReason",
+    "DetectedBy",
     # Schema vocabularies
     "SOURCES",
     "CATEGORIES",
@@ -73,6 +76,7 @@ __all__ = [
     # Fusion
     "FusionEngine",
     "fuse",
+    "fuse_hybrid",
     # Utils
     "load_config",
     "haversine_distance",
