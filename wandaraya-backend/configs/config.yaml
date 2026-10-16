@@ -1,0 +1,29 @@
+
+seed: 42
+
+emotion_baseline:
+  dataset:
+    hf_path: google-research-datasets/go_emotions
+    hf_fallback_path: go_emotions
+    config_name: simplified
+    num_classes: 28
+
+  vectorizer:
+    ngram_range: [1, 2]
+    max_features: 50000
+    sublinear_tf: true
+
+  classifier:
+    solver: lbfgs
+    max_iter: 1000
+    class_weight: balanced
+    n_jobs: -1
+
+  threshold_tuning:
+    min_threshold: 0.05
+    max_threshold: 0.95
+    step: 0.02
+
+  paths:
+    results_json: data/group_decision/reports/baseline_emotion_results.json
+    f1_figure: data/group_decision/reports/figures/baseline_emotion_f1.png
