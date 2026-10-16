@@ -4,6 +4,10 @@ from app.schemas.route import RouteRequest, Coordinate
 from app.services.route_api_client import RouteAPIClient
 from app.services.route_validation import RouteValidationService
 
+@pytest.fixture(autouse=True)
+def set_test_api_key(monkeypatch):
+    monkeypatch.setattr("app.config.settings.ROUTE_API_KEY", "test_key_mock")
+
 def test_coordinate_validation():
     with pytest.raises(ValueError):
         Coordinate(latitude=100.0, longitude=0.0)
@@ -14,8 +18,10 @@ def test_coordinate_validation():
     assert valid.latitude == 6.9271
 
 @pytest.mark.asyncio
-async def test_route_api_timeout(mocker):
-    mocker.patch("httpx.AsyncClient.post", side_effect=httpx.TimeoutException("Timeout"))
+async def test_route_api_timeout(monkeypatch):
+    async def mock_post(*args, **kwargs):
+        raise httpx.TimeoutException("Timeout")
+    monkeypatch.setattr(httpx.AsyncClient, "post", mock_post)
     
     client = RouteAPIClient()
     req = RouteRequest(
@@ -27,8 +33,9 @@ async def test_route_api_timeout(mocker):
     assert result.source == "route_api_timeout"
 
 @pytest.mark.asyncio
-async def test_route_api_success_and_validation(mocker):
-    mock_response = mocker.Mock()
+async def test_route_api_success_and_validation(monkeypatch):
+    from unittest.mock import MagicMock
+    mock_response = MagicMock()
     mock_response.status_code = 200
     mock_response.json.return_value = {
         "routes": [{
@@ -39,7 +46,9 @@ async def test_route_api_success_and_validation(mocker):
             "geometry": "encodedpolyline"
         }]
     }
-    mocker.patch("httpx.AsyncClient.post", return_value=mock_response)
+    async def mock_post(*args, **kwargs):
+        return mock_response
+    monkeypatch.setattr(httpx.AsyncClient, "post", mock_post)
     
     validator = RouteValidationService()
     req = RouteRequest(
@@ -54,8 +63,10 @@ async def test_route_api_success_and_validation(mocker):
     assert result.geometry == "encodedpolyline"
     
 @pytest.mark.asyncio
-async def test_route_api_fallback(mocker):
-    mocker.patch("httpx.AsyncClient.post", side_effect=httpx.ConnectError("No connection"))
+async def test_route_api_fallback(monkeypatch):
+    async def mock_post(*args, **kwargs):
+        raise httpx.ConnectError("No connection")
+    monkeypatch.setattr(httpx.AsyncClient, "post", mock_post)
     
     validator = RouteValidationService()
     req = RouteRequest(
