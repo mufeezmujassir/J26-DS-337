@@ -1,0 +1,25 @@
+{
+  "stage": "10.1.3C", "inventory_status": "offline_initial_reference_only", "source": {"organization": "Sri Lanka Tourism", "domain": "srilanka.travel", "base_url": "https://srilanka.travel/", "permission_status": "verbal_researcher_reported_undocumented", "automated_fetch_allowed": false, "persistent_storage_allowed": false, "embeddings_allowed": false},
+  "pages": [
+    {"section":"Tourist Attractions","url":null,"content_type":"attraction","expected_fields":["title","name","location_text","description","categories","opening_hours","entrance_fee","visitor_restrictions"],"readiness":"review_required","target_component":"knowledge_base,time_context"},
+    {"section":"Things to See & Do","url":null,"content_type":"activity","expected_fields":["title","description","categories","activities","seasonality_notes"],"readiness":"review_required","target_component":"knowledge_base"},
+    {"section":"Beach Holidays","url":null,"content_type":"activity","expected_fields":["title","description","activities","seasonality_notes"],"readiness":"review_required","target_component":"knowledge_base"},
+    {"section":"Wild Safaris","url":null,"content_type":"activity","expected_fields":["title","description","activities","visitor_restrictions"],"readiness":"review_required","target_component":"knowledge_base,time_context"},
+    {"section":"Adventure Sports","url":null,"content_type":"activity","expected_fields":["title","description","activities","visitor_restrictions"],"readiness":"review_required","target_component":"knowledge_base"},
+    {"section":"Trekking and Hiking","url":null,"content_type":"activity","expected_fields":["title","description","activities","visitor_restrictions","seasonality_notes"],"readiness":"review_required","target_component":"knowledge_base"},
+    {"section":"Diving","url":null,"content_type":"activity","expected_fields":["title","description","activities","seasonality_notes"],"readiness":"review_required","target_component":"knowledge_base"},
+    {"section":"Whale Watching","url":null,"content_type":"activity","expected_fields":["title","description","activities","seasonality_notes"],"readiness":"review_required","target_component":"knowledge_base"},
+    {"section":"Heritage","url":null,"content_type":"attraction","expected_fields":["title","name","description","categories","opening_hours","entrance_fee"],"readiness":"review_required","target_component":"knowledge_base,time_context"},
+    {"section":"Pilgrimage","url":null,"content_type":"attraction","expected_fields":["title","name","description","categories","visitor_restrictions","opening_hours"],"readiness":"review_required","target_component":"knowledge_base,time_context"},
+    {"section":"Nature Trails","url":null,"content_type":"activity","expected_fields":["title","description","activities","visitor_restrictions"],"readiness":"review_required","target_component":"knowledge_base"},
+    {"section":"Scenic Beauty","url":null,"content_type":"destination","expected_fields":["title","name","description","categories","seasonality_notes"],"readiness":"review_required","target_component":"knowledge_base"},
+    {"section":"Upcoming Events","url":null,"content_type":"event","expected_fields":["title","event_name","event_date","location_text","source_url"],"readiness":"review_required","target_component":"future_holiday_event_context"},
+    {"section":"Public Holidays","url":null,"content_type":"public_holiday","expected_fields":["title","holiday_date","source_url"],"readiness":"review_required","target_component":"future_holiday_event_context"},
+    {"section":"Suggested Itineraries","url":null,"content_type":"travel_information","expected_fields":["title","description","activities","seasonality_notes"],"readiness":"review_required","target_component":"knowledge_base"},
+    {"section":"Getting Around","url":null,"content_type":"travel_information","expected_fields":["title","description"],"readiness":"review_required","target_component":"travel_information"},
+    {"section":"Transport","url":null,"content_type":"travel_information","expected_fields":["title","description"],"readiness":"review_required","target_component":"travel_information"},
+    {"section":"Sri Lanka Weather","url":null,"content_type":"travel_information","expected_fields":["title","description","seasonality_notes"],"readiness":"review_required","target_component":"weather_context_reference_only"},
+    {"section":"Buy E-Tickets for Attractions","url":null,"content_type":"operating_information","expected_fields":["title","ticket_url","entrance_fee","visitor_restrictions","opening_hours"],"readiness":"review_required","target_component":"knowledge_base,time_context"}
+  ],
+  "notes":["Section names were supplied by the research task.","Only the base domain URL is recorded as verified in this offline stage.","Null page URLs are intentional: no sitemap crawl or URL guessing occurred."]
+}

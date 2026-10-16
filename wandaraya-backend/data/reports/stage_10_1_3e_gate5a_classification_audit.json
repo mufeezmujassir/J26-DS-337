@@ -1,0 +1,49 @@
+{
+  "stage": "10.1.3E_gate_5a",
+  "measured_audit": {
+    "raw_links": 277,
+    "gate4_external_links": 76,
+    "gate4_duplicate_internal_links": 109,
+    "unique_normalized_internal_urls": 82,
+    "cross_hostname_or_canonical_duplicates": 10,
+    "rejected_unsupported_records": 0,
+    "before_category_distribution": {
+      "activities": 1,
+      "attractions": 10,
+      "events": 4,
+      "operating_information": 1,
+      "other_unclassified": 72,
+      "public_holidays": 2,
+      "travel_information": 2
+    },
+    "after_category_distribution": {
+      "accommodation_tourism_services": 5,
+      "administrative_corporate_information": 7,
+      "adventure_outdoor_activities": 2,
+      "attraction_detail": 6,
+      "attraction_listing": 2,
+      "beach_marine_activities": 2,
+      "culture_heritage_religious_tourism": 3,
+      "destination_geographic_information": 7,
+      "events_festivals": 2,
+      "food_culinary_tourism": 4,
+      "nature_wildlife": 2,
+      "operating_information": 2,
+      "other_unknown": 26,
+      "public_holidays_poya": 1,
+      "transportation_travel_information": 8,
+      "wellness_ayurveda": 3
+    },
+    "authorization": "all discovered URLs remain unapproved for fetching"
+  },
+  "classification_validation": {
+    "manually_labelled_regression_sample": 11,
+    "correct": 11,
+    "accuracy": 1.0,
+    "limitation": "Engineering regression sample, not an independent statistical evaluation."
+  },
+  "limitations": [
+    "Classification is deterministic URL/link-text analysis, not extracted source facts.",
+    "No PostgreSQL reconciliation snapshot was used; attraction details remain insufficient evidence unless source mappings are supplied."
+  ]
+}

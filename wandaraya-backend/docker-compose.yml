@@ -28,7 +28,9 @@ services:
       - ./redis-data:/data
 
   qdrant:
-    image: qdrant/qdrant:latest
+    # Keep the server pinned to the Python client version for reproducible,
+    # warning-free vector indexing.  Do not use `latest` with persisted data.
+    image: qdrant/qdrant:v1.18.2
     container_name: wandaraya-qdrant
     restart: unless-stopped
     ports:

@@ -357,6 +357,9 @@ class AttractionIngestionPipeline:
                 "[7/13] Wikipedia enrichment"
             )
 
+            wikipedia_record = None
+            wikivoyage_record = None
+
             try:
 
                 wikipedia_record = await self.wikipedia_enricher.enrich(
@@ -414,8 +417,22 @@ class AttractionIngestionPipeline:
                 "[9/13] Generating semantic mappings"
             )
 
+            # The mapper may use verified Wikipedia text as strong evidence and
+            # Wikivoyage only as supporting evidence.  If either source was
+            # unavailable or rate-limited, its value remains absent; mappings
+            # are never fabricated from that failure.
             mappings = self.mapper.map(
-                normalized
+                normalized,
+                primary_text=(
+                    wikipedia_record.description
+                    if wikipedia_record is not None
+                    else ""
+                ),
+                supporting_text=(
+                    wikivoyage_record.description
+                    if wikivoyage_record is not None
+                    else ""
+                ),
             )
 
             result.categories_mapped = len(mappings.categories)

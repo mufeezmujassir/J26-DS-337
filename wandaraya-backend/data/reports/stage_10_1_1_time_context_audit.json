@@ -1,0 +1,82 @@
+{
+  "stage": "10.1.1",
+  "name": "Time-of-Day Context Data and Architecture Audit",
+  "audit_date": "2026-10-14",
+  "status": "READY_WITH_GAPS",
+  "scope": {
+    "read_only": true,
+    "application_code_modified": false,
+    "database_modified": false,
+    "external_apis_called": false,
+    "scraping_performed": false,
+    "dependencies_installed": false
+  },
+  "verified_architecture": {
+    "attraction_opening_hours": "app/models/attraction.py:25",
+    "activity_duration": "app/models/attraction_activities.py:14",
+    "google_hours_normalizer": "app/knowledge_base/processors/normalizer.py:278-299",
+    "google_place_details": "app/knowledge_base/connectors/google_places.py:117-149",
+    "semantic_weather_contract": "app/recommendation/context_enrichment/schemas.py",
+    "weather_dimension_contract": "app/recommendation/context_dimensions/weather_context_contract.py:17-46",
+    "local_time_precedent": "app/weather_model/context/live_weather_client.py:95-103",
+    "api_router_registration": "app/main.py:148-155",
+    "time_context_engine_exists": false
+  },
+  "database_audit": {
+    "verified": true,
+    "transaction_mode": "SET TRANSACTION READ ONLY",
+    "active_attractions": 222,
+    "with_coordinate_pair": 222,
+    "with_district_id": 222,
+    "with_google_place_id": 222,
+    "opening_hours_sql_non_null": 222,
+    "opening_hours_structured_object": 121,
+    "opening_hours_json_null": 101,
+    "opening_hours_empty_object_or_string": 0,
+    "opening_hours_parseable_nonempty_periods": 121,
+    "opening_hours_top_level_keys": ["open_now", "periods", "weekday_descriptions"],
+    "period_entries": 380,
+    "periods_with_close": 301,
+    "malformed_open_entries": 0,
+    "malformed_close_entries": 0,
+    "cross_day_period_entries": 2,
+    "activity_linked_attractions": 146,
+    "activity_duration_links": 0,
+    "activity_duration_distribution": [],
+    "duplicate_attraction_activity_pairs": 0,
+    "opening_hours_provenance": "not independently persisted",
+    "freshness_policy": "not defined; staleness not evaluated",
+    "last_sync_range_utc_naive": ["2026-10-02T12:37:26.087204", "2026-10-13T16:47:20.175001"]
+  },
+  "coverage_by_category_examples": {
+    "Urban & City Attractions": {"attractions": 106, "structured_hours": 83},
+    "Culture & Heritage": {"attractions": 108, "structured_hours": 44},
+    "Religious & Spiritual": {"attractions": 17, "structured_hours": 15},
+    "Beaches & Coastal": {"attractions": 3, "structured_hours": 0},
+    "Water & Marine Activities": {"attractions": 3, "structured_hours": 0}
+  },
+  "source_feasibility": {
+    "existing_knowledge_base": "usable for structured weekly schedules and canonical identity; no duration or hours-specific provenance",
+    "google_places_new": "feasible with existing place IDs; policy, billing, field-tier, retention and attribution review required before collection",
+    "official_sites": "potentially high reliability for managed attractions; permissions and source-specific terms require verification",
+    "openstreetmap": "supplemental only; opening_hours parser, ODbL compliance and source freshness required",
+    "astronomical_calculation": "feasible after dependency review; zoneinfo already available, astral not installed"
+  },
+  "proposed_contract": {
+    "request": ["attraction_id", "planned_visit_at_local", "optional_activity", "optional_visit_duration_minutes", "timezone"],
+    "response": ["hard_constraint_status", "soft_suitability_score", "evidence_reliability", "source_provenance", "explanations", "rule_version"],
+    "semantic_and_weather_scores_modified": false,
+    "unknown_score_policy": "null, never zero"
+  },
+  "blockers_and_decisions": [
+    "Define source precedence and conflict policy.",
+    "Approve Google billing, retention and attribution approach before refresh implementation.",
+    "Define manual-verification scope and staleness threshold.",
+    "Define activities requiring explicit duration before visit-fit hard constraints."
+  ],
+  "next_stage": {
+    "stage": "10.1.2",
+    "recommendation": "Implement read-only typed schemas and deterministic opening-hours normalization/parser only.",
+    "readiness": "READY_WITH_GAPS"
+  }
+}

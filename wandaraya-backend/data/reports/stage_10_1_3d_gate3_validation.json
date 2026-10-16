@@ -1,0 +1,42 @@
+{
+  "stage": "10.1.3D_gate_3",
+  "status": "ready_for_separately_confirmed_one_page_pilot",
+  "live_execution": false,
+  "network_requests_during_validation": 0,
+  "tests": {
+    "passed": 47,
+    "failed": 0,
+    "skipped": 0,
+    "scope": "authorization, configuration, URL validation, governance adapters, and HTTP mocks"
+  },
+  "configuration": {
+    "json_valid": true,
+    "visible_in_wandaraya_api_container": true,
+    "permission_evidence_status": "undocumented",
+    "technical_execution_approval": "present_with_timezone_aware_timestamp",
+    "exact_homepage_url": "https://srilanka.travel/",
+    "url_plan_syntactically_valid": true,
+    "approved_domain_match": true
+  },
+  "remaining_blockers": [],
+  "known_limitations": [
+    "Permission evidence is researcher-reported verbal permission and remains undocumented.",
+    "Live execution remains a separate deliberate action; it was not performed during Gate 3 validation."
+  ],
+  "writes": {
+    "production_database": 0,
+    "embeddings": 0,
+    "qdrant": 0
+  },
+  "controls": [
+    "researcher_proposals_do_not_count_as_source_confirmation",
+    "exact_https_url_allowlist",
+    "max_pages_10",
+    "concurrency_1",
+    "minimum_interval_seconds_3",
+    "max_retries_1",
+    "redirect_validation",
+    "response_size_and_content_type_validation",
+    "emergency_stop"
+  ]
+}
