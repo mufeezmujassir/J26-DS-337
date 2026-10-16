@@ -39,9 +39,9 @@ class FareVerifier:
         Sends fare details to Groq LLM to verify accuracy against Sri Lanka transit standards.
         """
         train_fares = train_fares or {}
-        c3 = train_fares.get("3rd_class_rs", 0.0)
-        c2 = train_fares.get("2nd_class_rs", 0.0)
-        c1 = train_fares.get("1st_class_rs", 0.0)
+        c3 = train_fares.get("third_class") or train_fares.get("3rd_class_rs") or 0.0
+        c2 = train_fares.get("second_class") or train_fares.get("2nd_class_rs") or 0.0
+        c1 = train_fares.get("first_class") or train_fares.get("1st_class_rs") or 0.0
 
         bus_section = f"   - Service: {bus_service_name or 'Regulated NTC Bus'}\n   - Regulated Fare: {bus_fare:.2f} LKR\n" if bus_fare else "   - Bus fare: Not applicable\n"
 

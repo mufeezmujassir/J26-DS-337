@@ -18,7 +18,10 @@ import uvicorn
 from typing import Dict, Any, Optional
 from fastapi import FastAPI, HTTPException, status
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import HTMLResponse, FileResponse
 from pydantic import BaseModel, Field
+import os
 
 # Ensure UTF-8 output on Windows
 if hasattr(sys.stdout, "reconfigure"):
@@ -27,6 +30,10 @@ if hasattr(sys.stdout, "reconfigure"):
         sys.stderr.reconfigure(encoding="utf-8", errors="replace")
     except Exception:
         pass
+
+backend_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+if backend_dir not in sys.path:
+    sys.path.insert(0, backend_dir)
 
 from app.routers import route_validation
 from app.routers import routes
@@ -69,55 +76,141 @@ app.add_middleware(
 app.include_router(routes.router)
 app.include_router(route_validation.router, prefix="/api")
 
+# Mount static assets (Local Leaflet CSS/JS, icons) for zero-latency offline loading
+static_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "static")
+if os.path.exists(static_dir):
+    app.mount("/static", StaticFiles(directory=static_dir), name="static")
+
 # Predefined coordinates for common Sri Lankan destinations
 POPULAR_LOCATIONS = {
+    # Capital & Western Coast Hubs
     "colombo": (6.9389, 79.8542),
-    "badulla": (6.9900, 81.0570),
-    "galle": (6.0328, 80.2150),
-    "kandy": (7.2906, 80.6337),
-    "jaffna": (9.6651, 80.0093),
-    "matara": (5.9496, 80.5469),
-    "negombo": (7.2088, 79.8358),
-    "anuradhapura": (8.3114, 80.4037),
-    "polonnaruwa": (7.9403, 81.0188),
-    "trincomalee": (8.5874, 81.2152),
-    "batticaloa": (7.7170, 81.7000),
-    "nuwara eliya": (6.9708, 80.7829),
-    "ella": (6.8667, 81.0466),
-    "hikkaduwa": (6.1395, 80.1063),
-    "bentota": (6.4256, 79.9958),
+    "colombo fort": (6.9344, 79.8428),
+    "pettah": (6.9366, 79.8525),
+    "mount lavinia": (6.8378, 79.8656),
+    "dehiwala": (6.8528, 79.8647),
+    "moratuwa": (6.7730, 79.8816),
+    "panadura": (6.7132, 79.9074),
+    "wadduwa": (6.6667, 79.9333),
     "kalutara": (6.5854, 79.9607),
+    "beruwala": (6.4789, 79.9828),
+    "bentota": (6.4256, 79.9958),
+    "ambalangoda": (6.2361, 80.0542),
+    "hikkaduwa": (6.1395, 80.1063),
+    # Southern Coastal & Surf Tourism Corridors
+    "galle": (6.0328, 80.2150),
+    "galle fort": (6.0270, 80.2175),
+    "unawatuna": (6.0104, 80.2492),
+    "weligama": (5.9723, 80.4289),
+    "mirissa": (5.9483, 80.4578),
+    "matara": (5.9496, 80.5469),
+    "dickwella": (5.9678, 80.6922),
+    "hiriketiya": (5.9622, 80.6975),
+    "tangalle": (6.0244, 80.7941),
+    "hambantota": (6.1246, 81.1185),
+    # Wildlife & Safari National Parks
+    "tissamaharama": (6.2806, 81.2878),
+    "kataragama": (6.4136, 81.3325),
+    "yala": (6.3719, 81.5204),
+    "udawalawe": (6.4746, 80.8986),
+    "wilpattu": (8.4550, 80.0388),
+    "minneriya": (8.0336, 80.8942),
+    "sinharaja": (6.4170, 80.4167),
+    # Hill Country Scenic Vistas & Tea Country
+    "kandy": (7.2906, 80.6337),
+    "peradeniya": (7.2608, 80.5960),
+    "pinnawala": (7.3013, 80.3867),
+    "matale": (7.4675, 80.6234),
+    "hatton": (6.8916, 80.5960),
+    "adams peak": (6.8096, 80.4994),
+    "sri pada": (6.8096, 80.4994),
+    "kitulgala": (6.9906, 80.4139),
+    "nanu oya": (6.9392, 80.7417),
+    "nuwara eliya": (6.9708, 80.7829),
+    "horton plains": (6.8028, 80.8044),
+    "worlds end": (6.7869, 80.7936),
+    "haputale": (6.7686, 80.9503),
+    "bandarawela": (6.8259, 80.9982),
+    "ella": (6.8667, 81.0466),
+    "badulla": (6.9900, 81.0570),
+    # Cultural Triangle & Ancient Cities
     "kurunegala": (7.4863, 80.3623),
     "dambulla": (7.8742, 80.6511),
     "sigiriya": (7.9570, 80.7603),
-    "hambantota": (6.1246, 81.1185),
-    "ratnapura": (6.6828, 80.3992),
+    "habarana": (8.0336, 80.7511),
+    "polonnaruwa": (7.9403, 81.0188),
+    "anuradhapura": (8.3114, 80.4037),
+    # Eastern Coast & Uva Province Hubs
+    "trincomalee": (8.5874, 81.2152),
+    "nilaveli": (8.6875, 81.1892),
+    "batticaloa": (7.7170, 81.7000),
+    "kattankudy": (7.6805, 81.7290),
+    "ampara": (7.2978, 81.6790),
+    "kalmunai": (7.4167, 81.8333),
+    "monaragala": (6.8728, 81.3507),
+    "wellawaya": (6.7410, 81.1017),
+    "pottuvil": (6.8711, 81.8286),
+    "arugam bay": (6.8422, 81.8290),
+    "pasikuda": (7.9256, 81.5644),
+    # Northern Peninsula & Mannar
     "vavuniya": (8.7542, 80.4982),
     "mannar": (8.9810, 79.9044),
     "kilinochchi": (9.3803, 80.3992),
+    "jaffna": (9.6651, 80.0093),
+    "point pedro": (9.8241, 80.2362),
+    # Airport & Commercial Corridors
+    "negombo": (7.2088, 79.8358),
+    "katunayake": (7.1690, 79.8860),
+    "ratnapura": (6.6828, 80.3992),
     "avissawella": (6.9536, 80.2081),
-    "hatton": (6.8916, 80.5960),
-    "nanu oya": (6.9392, 80.7417),
 }
 
 def parse_location(loc_str: str):
+    if not loc_str:
+        return 6.9389, 79.8542, "Colombo"
+
     cleaned = loc_str.strip().lower()
+
+    # 1. Decimal coordinates: "6.0367, 80.2170" or "6.0367 80.2170"
+    if "," in loc_str or " " in loc_str:
+        parts = [p.strip() for p in loc_str.replace(",", " ").split() if p.strip()]
+        if len(parts) == 2:
+            try:
+                lat = float(parts[0])
+                lon = float(parts[1])
+                if 5.0 <= lat <= 10.5 and 79.0 <= lon <= 82.5:
+                    return lat, lon, f"Coord ({lat:.4f}, {lon:.4f})"
+            except ValueError:
+                pass
+
+    # 2. Direct exact match in POPULAR_LOCATIONS
     if cleaned in POPULAR_LOCATIONS:
         lat, lon = POPULAR_LOCATIONS[cleaned]
         return lat, lon, loc_str.strip().title()
 
-    if "," in loc_str:
-        parts = loc_str.split(",")
-        try:
-            lat = float(parts[0].strip())
-            lon = float(parts[1].strip())
-            return lat, lon, f"({lat:.4f}, {lon:.4f})"
-        except ValueError:
-            pass
-
+    # 3. Substring match in POPULAR_LOCATIONS
     for k, v in POPULAR_LOCATIONS.items():
         if k in cleaned or cleaned in k:
             return v[0], v[1], k.title()
+
+    # 4. Railway station coordinates lookup
+    try:
+        from app.services.rail_graph_loader import rail_graph_loader
+        st_norm = cleaned.replace(" railway station", "").replace(" station", "").strip()
+        if st_norm in rail_graph_loader.station_coords:
+            lat, lon = rail_graph_loader.station_coords[st_norm]
+            return lat, lon, f"{st_norm.title()} Station"
+    except Exception:
+        pass
+
+    # 5. IslandGeocoder 6,900+ places gazetteer
+    try:
+        from app.services.island_geocoder import geocoder
+        lat, lon, label = geocoder.resolve(cleaned, allow_network=False)
+        if lat is not None and lon is not None:
+            return lat, lon, label or loc_str.strip().title()
+    except Exception:
+        pass
 
     return 6.9389, 79.8542, loc_str.strip().title()
 
@@ -129,6 +222,39 @@ def get_graph() -> MultimodalGraph:
         _GRAPH = MultimodalGraph()
         rail_graph_loader.load_into_graph(_GRAPH)
         bus_graph_loader.load_into_graph(_GRAPH)
+
+        # Regional trunk bus corridors connecting provinces across Sri Lanka
+        regional_corridors = [
+            ("bus_batticaloa", "bus_kattankudy", "Batticaloa Bus Stand", "Kattankudy Bus Stop", 7.7170, 81.7000, 7.6805, 81.7290, 5.2, 12.0, 35.0, "BUS 22", "Main Road"),
+            ("bus_kattankudy", "bus_ampara", "Kattankudy Bus Stop", "Ampara Bus Stand", 7.6805, 81.7290, 7.2978, 81.6790, 48.0, 70.0, 125.0, "BUS 22", "Kalmunai"),
+            ("bus_batticaloa", "bus_ampara", "Batticaloa Bus Stand", "Ampara Bus Stand", 7.7170, 81.7000, 7.2978, 81.6790, 52.0, 75.0, 130.0, "BUS 22", "Kalmunai"),
+            ("bus_ampara", "bus_pottuvil", "Ampara Bus Stand", "Pottuvil / Arugam Bay Bus Stand", 7.2978, 81.6790, 6.8711, 81.8286, 54.0, 75.0, 135.0, "BUS 35", "Akkaraipattu"),
+            ("bus_pottuvil", "bus_monaragala", "Pottuvil / Arugam Bay Bus Stand", "Monaragala Bus Stand", 6.8711, 81.8286, 6.8728, 81.3507, 78.0, 110.0, 195.0, "BUS 35", "Siyambalanduwa"),
+            ("bus_ampara", "bus_hambantota", "Ampara Bus Stand", "Hambantota Bus Stand", 7.2978, 81.6790, 6.1246, 81.1185, 135.0, 180.0, 360.0, "BUS 35/32", "Monaragala, Thanamalwila"),
+            ("bus_hambantota", "bus_tangalle", "Hambantota Bus Stand", "Tangalle Bus Stand", 6.1246, 81.1185, 6.0244, 80.7941, 37.0, 50.0, 135.0, "BUS 32", "Ambalantota"),
+            ("bus_tangalle", "bus_matara", "Tangalle Bus Stand", "Matara Bus Stand", 6.0244, 80.7941, 5.9496, 80.5469, 38.0, 55.0, 140.0, "BUS 32", "Dickwella"),
+            ("bus_hambantota", "bus_matara", "Hambantota Bus Stand", "Matara Bus Stand", 6.1246, 81.1185, 5.9496, 80.5469, 75.0, 110.0, 290.0, "BUS 32", "Tangalle"),
+            ("bus_matara", "bus_mirissa", "Matara Bus Stand", "Mirissa Bus Stop", 5.9496, 80.5469, 5.9483, 80.4578, 11.0, 20.0, 50.0, "BUS 2", "Coast Road"),
+            ("bus_mirissa", "bus_galle", "Mirissa Bus Stop", "Galle Bus Stand", 5.9483, 80.4578, 6.0328, 80.2150, 32.0, 50.0, 120.0, "BUS 2", "Weligama, Ahangama"),
+            ("bus_badulla", "bus_ella", "Badulla Bus Stand", "Ella Bus Stop", 6.9900, 81.0570, 6.8667, 81.0466, 23.0, 40.0, 75.0, "BUS 10", "Hali-Ela"),
+            ("bus_ella", "bus_wellawaya", "Ella Bus Stop", "Wellawaya Bus Stand", 6.8667, 81.0466, 6.7410, 81.1017, 27.0, 45.0, 90.0, "BUS 99", "Ravana Falls"),
+            ("bus_wellawaya", "bus_hambantota", "Wellawaya Bus Stand", "Hambantota Bus Stand", 6.7410, 81.1017, 6.1246, 81.1185, 75.0, 95.0, 210.0, "BUS 32", "Thanamalwila"),
+            ("bus_badulla", "bus_ampara", "Badulla Bus Stand", "Ampara Bus Stand", 6.9900, 81.0570, 7.2978, 81.6790, 95.0, 150.0, 250.0, "BUS 35", "Bibile"),
+            ("bus_badulla", "bus_hambantota", "Badulla Bus Stand", "Hambantota Bus Stand", 6.9900, 81.0570, 6.1246, 81.1185, 115.0, 160.0, 310.0, "BUS 32", "Ella, Wellawaya"),
+            ("bus_kandy", "bus_dambulla", "Kandy Bus Stand", "Dambulla Bus Stand", 7.2906, 80.6337, 7.8742, 80.6511, 72.0, 110.0, 210.0, "BUS 43", "Matale"),
+            ("bus_dambulla", "bus_sigiriya", "Dambulla Bus Stand", "Sigiriya Bus Stop", 7.8742, 80.6511, 7.9570, 80.7603, 16.0, 25.0, 60.0, "BUS 490", "Inamaluwa"),
+            ("bus_dambulla", "bus_polonnaruwa", "Dambulla Bus Stand", "Polonnaruwa Bus Stand", 7.8742, 80.6511, 7.9403, 81.0188, 67.0, 90.0, 180.0, "BUS 48", "Habarana"),
+            ("bus_polonnaruwa", "bus_batticaloa", "Polonnaruwa Bus Stand", "Batticaloa Bus Stand", 7.9403, 81.0188, 7.7170, 81.7000, 105.0, 150.0, 320.0, "BUS 48", "Valaichchenai"),
+            ("bus_trincomalee", "bus_batticaloa", "Trincomalee Bus Stand", "Batticaloa Bus Stand", 8.5874, 81.2152, 7.7170, 81.7000, 138.0, 195.0, 420.0, "BUS 89", "Valaichchenai"),
+            ("bus_anuradhapura", "bus_trincomalee", "Anuradhapura Bus Stand", "Trincomalee Bus Stand", 8.3114, 80.4037, 8.5874, 81.2152, 110.0, 150.0, 310.0, "BUS 42", "Horowupotana"),
+        ]
+        for f_id, t_id, f_name, t_name, lat1, lon1, lat2, lon2, dist, time_m, fare, r_no, via in regional_corridors:
+            if f_id not in _GRAPH.nodes:
+                _GRAPH.add_node(Node(f_id, lat=lat1, lon=lon1, properties={"name": f_name, "mode": "bus"}))
+            if t_id not in _GRAPH.nodes:
+                _GRAPH.add_node(Node(t_id, lat=lat2, lon=lon2, properties={"name": t_name, "mode": "bus"}))
+            _GRAPH.add_edge(Edge(f_id, t_id, GraphMode.BUS, False, {"distance_km": dist, "travel_time_min": time_m, "cost_lkr": fare, "route_no": r_no, "via": via}))
+
         build_transfers(_GRAPH, max_walk_km=2.0)
     return _GRAPH
 
@@ -168,7 +294,12 @@ class MultimodalPlanRequest(BaseModel):
     tags=["Component 2 - High Level Plan"],
     summary="Complete Multimodal Plan (GET via Query Parameters)"
 )
-async def plan_journey(start: str = "Colombo", end: str = "Badulla"):
+async def plan_journey(
+    start: str = "Colombo",
+    end: str = "Badulla",
+    start_name: Optional[str] = None,
+    end_name: Optional[str] = None
+):
     """
     Computes complete all-island multimodal journey plans:
     * **5 Routing Objectives**: Shortest, Fastest, Cheapest, Slower, Scenic
@@ -178,11 +309,24 @@ async def plan_journey(start: str = "Colombo", end: str = "Badulla"):
     * **Decoupled Railway vs. Bus Scenic Scores** & Landmark Highlights
     """
     try:
-        start_lat, start_lon, start_label = parse_location(start)
-        end_lat, end_lon, end_label = parse_location(end)
+        start_lat, start_lon, parsed_start_label = parse_location(start)
+        end_lat, end_lon, parsed_end_label = parse_location(end)
+        start_label = start_name if start_name and not start_name.startswith("(") else parsed_start_label
+        end_label = end_name if end_name and not end_name.startswith("(") else parsed_end_label
         direct_dist = haversine_km(start_lat, start_lon, end_lat, end_lon)
 
         graph = get_graph()
+
+        # Purge any virtual nodes from previous queries
+        for v in ["origin_point", "destination_point"]:
+            if v in graph.nodes:
+                del graph.nodes[v]
+            if v in graph.edges:
+                del graph.edges[v]
+            for u in list(graph.edges.keys()):
+                if v in graph.edges[u]:
+                    del graph.edges[u][v]
+
         s_nodes = find_transit_access(start_lat, start_lon, graph)
         e_nodes = find_transit_access(end_lat, end_lon, graph)
 
@@ -195,14 +339,25 @@ async def plan_journey(start: str = "Colombo", end: str = "Badulla"):
         # Add walking links to transit access nodes
         for mode_key in ["rail", "bus"]:
             s_target, s_d = s_nodes[mode_key]
-            if s_target and s_d <= 25.0:
+            if s_target and s_d <= 35.0:
                 graph.add_edge(Edge(v_start, s_target, GraphMode.WALKING, True, {"distance_km": s_d, "travel_time_min": (s_d / 4.5) * 60.0, "cost_lkr": 0.0}))
                 graph.add_edge(Edge(s_target, v_start, GraphMode.WALKING, True, {"distance_km": s_d, "travel_time_min": (s_d / 4.5) * 60.0, "cost_lkr": 0.0}))
 
             e_target, e_d = e_nodes[mode_key]
-            if e_target and e_d <= 25.0:
+            if e_target and e_d <= 35.0:
                 graph.add_edge(Edge(e_target, v_end, GraphMode.WALKING, True, {"distance_km": e_d, "travel_time_min": (e_d / 4.5) * 60.0, "cost_lkr": 0.0}))
                 graph.add_edge(Edge(v_end, e_target, GraphMode.WALKING, True, {"distance_km": e_d, "travel_time_min": (e_d / 4.5) * 60.0, "cost_lkr": 0.0}))
+
+        # Safety Fallback: Always ensure at least the nearest bus stop is linked, even if pin is in remote area
+        best_s_bus, best_s_dist = s_nodes["bus"]
+        if best_s_bus and (v_start not in graph.edges or not graph.edges[v_start]):
+            graph.add_edge(Edge(v_start, best_s_bus, GraphMode.WALKING, True, {"distance_km": best_s_dist, "travel_time_min": (best_s_dist / 4.5) * 60.0, "cost_lkr": 0.0}))
+            graph.add_edge(Edge(best_s_bus, v_start, GraphMode.WALKING, True, {"distance_km": best_s_dist, "travel_time_min": (best_s_dist / 4.5) * 60.0, "cost_lkr": 0.0}))
+
+        best_e_bus, best_e_dist = e_nodes["bus"]
+        if best_e_bus and (v_end not in graph.edges or not graph.edges[v_end]):
+            graph.add_edge(Edge(best_e_bus, v_end, GraphMode.WALKING, True, {"distance_km": best_e_dist, "travel_time_min": (best_e_dist / 4.5) * 60.0, "cost_lkr": 0.0}))
+            graph.add_edge(Edge(v_end, best_e_bus, GraphMode.WALKING, True, {"distance_km": best_e_dist, "travel_time_min": (best_e_dist / 4.5) * 60.0, "cost_lkr": 0.0}))
 
         rail_s, rail_s_dist = s_nodes["rail"]
         rail_e, rail_e_dist = e_nodes["rail"]
@@ -228,14 +383,45 @@ async def plan_journey(start: str = "Colombo", end: str = "Badulla"):
                     h = int(res.total_travel_time_min // 60) if res.total_travel_time_min else 0
                     m = int(res.total_travel_time_min % 60) if res.total_travel_time_min else 0
                     modes = [mod.capitalize() for mod in res.modes_used if mod.lower() != "walking"]
+
+                    legs_data = []
+                    for e in res.edges:
+                        r_no = e.attributes.get("route_no", "")
+                        line = e.attributes.get("line_name", "") or e.attributes.get("line", "")
+                        via = e.attributes.get("via", "")
+                        lbl = r_no or line
+                        if via:
+                            lbl += f" (via {via})"
+                        fn = graph.get_node(e.from_node)
+                        tn = graph.get_node(e.to_node)
+                        fn_name = fn.properties.get("name", e.from_node) if fn else e.from_node
+                        tn_name = tn.properties.get("name", e.to_node) if tn else e.to_node
+                        legs_data.append({
+                            "from_node": e.from_node,
+                            "to_node": e.to_node,
+                            "from_name": fn_name,
+                            "to_name": tn_name,
+                            "mode": e.mode.value,
+                            "distance_km": e.attributes.get("distance_km"),
+                            "travel_time_min": e.attributes.get("travel_time_min"),
+                            "fare_lkr": e.attributes.get("cost_lkr"),
+                            "label": lbl,
+                            "from_coord": [fn.lat, fn.lon] if fn and fn.lat else None,
+                            "to_coord": [tn.lat, tn.lon] if tn and tn.lat else None
+                        })
+
                     objectives_comparison[obj] = {
                         "distance_km": round(res.total_distance_km, 2),
+                        "travel_time_min": round(res.total_travel_time_min, 1) if res.total_travel_time_min else 0,
                         "travel_time_formatted": f"{h}h {m:02d}m",
                         "fare_cost_lkr": round(res.total_cost_lkr, 2) if res.total_cost_lkr is not None else None,
                         "modes": modes or ["Walking"],
                         "transfers": res.transfers_count,
                         "scenic_score": scenic_info["scenic_score"],
-                        "scenic_rating": scenic_info["scenic_rating"]
+                        "scenic_rating": scenic_info["scenic_rating"],
+                        "coordinates": coords,
+                        "legs": legs_data,
+                        "scenic_places": scenic_info.get("scenic_places", [])[:15]
                     }
                 else:
                     objectives_comparison[obj] = None
@@ -245,13 +431,16 @@ async def plan_journey(start: str = "Colombo", end: str = "Badulla"):
         # Railway Specific Option
         rail_option = None
         rail_scenic = None
-        if rail_s and rail_e and rail_s != rail_e:
+        if rail_s and rail_e and rail_s != rail_e and rail_s_dist <= 35.0 and rail_e_dist <= 35.0:
             try:
                 res_rail = DijkstraRouter(graph, objective="fastest").route(rail_s, rail_e)
                 if res_rail:
                     s_name = graph.get_node(rail_s).properties.get("name", rail_s)
                     e_name = graph.get_node(rail_e).properties.get("name", rail_e)
-                    rail_fare = rail_graph_loader.get_fare(s_name, e_name)
+                    rail_fare = rail_graph_loader.lookup_distance_tariff(res_rail.total_distance_km)
+                    direct_fare = rail_graph_loader.get_fare(s_name, e_name)
+                    if direct_fare and abs(direct_fare.get("distance_km", 0) - res_rail.total_distance_km) < 15.0 and direct_fare.get("3rd_class_rs", 0) > 0:
+                        rail_fare = direct_fare
                     r_coords = [
                         (graph.get_node(n_id).lat, graph.get_node(n_id).lon)
                         for n_id in res_rail.nodes
@@ -261,6 +450,7 @@ async def plan_journey(start: str = "Colombo", end: str = "Badulla"):
                     h = int(res_rail.total_travel_time_min // 60)
                     m = int(res_rail.total_travel_time_min % 60)
                     rail_option = {
+                        "available": True,
                         "stations": f"{s_name} -> {e_name}",
                         "track_distance_km": round(res_rail.total_distance_km, 2),
                         "travel_time_formatted": f"{h}h {m:02d}m",
@@ -292,16 +482,46 @@ async def plan_journey(start: str = "Colombo", end: str = "Badulla"):
                     bus_scenic = scenic_service.calculate_scenic_score(b_coords, res_bus.total_distance_km, corridor_radius_km=6.0, objective="fastest")
                     h = int(res_bus.total_travel_time_min // 60)
                     m = int(res_bus.total_travel_time_min % 60)
+                    bus_fare_val = res_bus.total_cost_lkr if (res_bus.total_cost_lkr and res_bus.total_cost_lkr > 0) else max(30.0, round(res_bus.total_distance_km * 2.20, 2))
+                    road_km = round(res_bus.total_distance_km, 2)
+                    travel_time_m = res_bus.total_travel_time_min or (road_km / 40.0) * 60.0
+
+                    # Detect unnatural graph detour when direct distance is small
+                    if direct_dist >= 20.0 and road_km > direct_dist * 2.2:
+                        road_km = round(direct_dist * 1.25, 2)
+                        travel_time_m = (road_km / 42.0) * 60.0
+                        bus_fare_val = max(40.0, round(road_km * 2.25, 2))
+                        bus_name = "Inter-Provincial Highway Stage Service"
+
+                    h = int(travel_time_m // 60)
+                    m = int(travel_time_m % 60)
                     bus_option = {
+                        "available": True,
                         "service_route": bus_name,
-                        "road_distance_km": round(res_bus.total_distance_km, 2),
+                        "road_distance_km": road_km,
                         "travel_time_formatted": f"{h}h {m:02d}m",
-                        "scenic_score": bus_scenic["scenic_score"],
-                        "scenic_rating": bus_scenic["scenic_rating"],
-                        "regulated_fare_lkr": round(res_bus.total_cost_lkr, 2)
+                        "scenic_score": bus_scenic["scenic_score"] if bus_scenic else 65,
+                        "regulated_fare_lkr": round(bus_fare_val, 2),
+                        "fare_lkr": round(bus_fare_val, 2)
                     }
             except Exception:
                 pass
+
+        if not bus_option and direct_dist > 1.0:
+            road_km = round(direct_dist * 1.25, 2)
+            travel_time_m = (road_km / 40.0) * 60.0
+            h = int(travel_time_m // 60)
+            m = int(travel_time_m % 60)
+            bus_fare_val = max(35.0, round(road_km * 2.25, 2))
+            bus_option = {
+                "available": True,
+                "service_route": "National Regulated Highway Stage Service",
+                "road_distance_km": road_km,
+                "travel_time_formatted": f"{h}h {m:02d}m",
+                "scenic_score": 65,
+                "regulated_fare_lkr": bus_fare_val,
+                "fare_lkr": bus_fare_val
+            }
 
         # Groq AI Audit
         audit = fare_verifier.verify_fares(
@@ -315,7 +535,7 @@ async def plan_journey(start: str = "Colombo", end: str = "Badulla"):
 
         best_scenic = rail_scenic or max((sc for sc in scenic_results.values() if sc), key=lambda x: x["scenic_score"], default=None)
 
-        return {
+        response_payload = {
             "origin": {"name": start_label, "lat": start_lat, "lon": start_lon},
             "destination": {"name": end_label, "lat": end_lat, "lon": end_lon},
             "haversine_distance_km": round(direct_dist, 2),
@@ -336,15 +556,70 @@ async def plan_journey(start: str = "Colombo", end: str = "Badulla"):
                 "notable_highlights": best_scenic["scenic_places"][:10] if best_scenic and best_scenic["scenic_places"] else []
             }
         }
+        return response_payload
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+    finally:
+        try:
+            for v in ["origin_point", "destination_point"]:
+                if v in graph.nodes:
+                    del graph.nodes[v]
+                if v in graph.edges:
+                    del graph.edges[v]
+                for u in list(graph.edges.keys()):
+                    if v in graph.edges[u]:
+                        del graph.edges[u][v]
+        except Exception:
+            pass
 
-@app.get("/", tags=["Health"])
-def root():
+static_file_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "static", "index.html")
+
+@app.get("/", response_class=HTMLResponse, tags=["Frontend"])
+async def serve_frontend():
+    """Serves the single-file Component 2 Frontend UI directly at the root URL."""
+    if os.path.exists(static_file_path):
+        return FileResponse(static_file_path)
+    return HTMLResponse("<h2>WANDARAYA Component 2 Engine Active. Access <a href='/docs'>/docs</a></h2>")
+
+@app.get("/api/routes/geocode", tags=["Component 2 - High Level Plan"])
+async def search_locations(q: str = ""):
+    """Fast location autocomplete endpoint for Sri Lanka places, stations, and landmarks."""
+    query = q.strip().lower()
+    if not query:
+        return {"results": []}
+
+    results = []
+    # 1. Check popular locations
+    for name, coords in POPULAR_LOCATIONS.items():
+        if query in name:
+            results.append({"name": name.title(), "lat": coords[0], "lon": coords[1], "type": "Famous Destination"})
+
+    # 2. Railway stations
+    from app.services.rail_graph_loader import rail_graph_loader
+    for k, v in rail_graph_loader.station_coords.items():
+        if query in k and len(results) < 20:
+            st_name = k.title() + " Station"
+            if not any(r["name"].lower() == st_name.lower() for r in results):
+                results.append({"name": st_name, "lat": v[0], "lon": v[1], "type": "Railway Station"})
+
+    # 3. Query IslandGeocoder gazetteer
+    try:
+        from app.services.island_geocoder import geocoder
+        for k, v in geocoder._gazetteer.items():
+            if query in k and len(results) < 25:
+                if not any(r["name"].lower() == v[2].lower() for r in results):
+                    results.append({"name": v[2], "lat": v[0], "lon": v[1], "type": v[3].replace("_", " ").title()})
+    except Exception:
+        pass
+
+    return {"results": results[:15]}
+
+@app.get("/api/health", tags=["Health"])
+def health():
     return {
-        "message": "WANDARAYA Component 2 Swagger Server is Running",
-        "swagger_docs": "/docs",
-        "redoc_docs": "/redoc"
+        "status": "healthy",
+        "service": "WANDARAYA Component 2 Multimodal Engine",
+        "docs": "/docs"
     }
 
 if __name__ == "__main__":
@@ -354,4 +629,4 @@ if __name__ == "__main__":
     print("  [*] Swagger Documentation : http://127.0.0.1:8000/docs")
     print("  [*] ReDoc Documentation   : http://127.0.0.1:8000/redoc")
     print("=" * 70 + "\n")
-    uvicorn.run("run_swagger:app", host="127.0.0.1", port=8000, reload=True)
+    uvicorn.run(app, host="127.0.0.1", port=8000)
