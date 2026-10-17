@@ -352,6 +352,17 @@ def capture_batch_directory(*, capture_root: Path, batch_id: str) -> Path:
     return capture_root / batch_id
 
 
+def redact_embedded_credentials(content: bytes) -> bytes:
+    """Remove third-party browser keys from review fixtures before persistence.
+
+    The fixture remains useful for selectors while preventing captured public HTML
+    from becoming a transport mechanism for API keys or GitGuardian findings.
+    """
+    text = content.decode("utf-8", errors="replace")
+    text = re.sub(r"AIza[0-9A-Za-z_-]{20,}", "REDACTED_GOOGLE_MAPS_KEY", text)
+    return text.encode("utf-8")
+
+
 def write_captured_html_fixtures(*, fetched: list[StagedTourismChange], capture_root: Path, batch_id: str) -> Path:
     """Persist exact fetched HTML once for offline, reproducible review.
 
@@ -369,10 +380,11 @@ def write_captured_html_fixtures(*, fetched: list[StagedTourismChange], capture_
         source_id = extract_external_source_id(item.source_url) or f"page_{index}"
         filename = f"{source_id.replace(':', '_')}_{item.content_sha256}.html"
         path = batch_dir / filename
-        path.write_bytes(item.raw_content)
+        path.write_bytes(redact_embedded_credentials(item.raw_content))
         artifacts.append({"source_url": item.source_url, "file": filename, "content_sha256": item.content_sha256,
                           "http_status": item.http_status, "content_type": item.content_type,
-                          "response_size_bytes": item.response_size_bytes, "retrieved_at": item.retrieved_at})
+                          "response_size_bytes": item.response_size_bytes, "retrieved_at": item.retrieved_at,
+                          "embedded_credentials_redacted": True})
     manifest_path = batch_dir / "capture_manifest.json"
     manifest_path.write_text(json.dumps({"batch_id": batch_id, "artifacts": artifacts}, indent=2, default=str), encoding="utf-8")
     return manifest_path
