@@ -290,5 +290,8 @@ def write_gate5d_reports(*, results: list[dict[str, Any]], usage: dict[str, Any]
     }
     paths = {}
     for name, payload in payloads.items():
-        path = reports_dir / f"{prefix}{name}.json"; path.write_text(json.dumps(payload, indent=2, sort_keys=True, default=str), encoding="utf-8"); paths[name] = path
+        path = reports_dir / f"{prefix}{name}.json"
+        if path.exists():
+            raise FileExistsError(f"Gate 5D report already exists; use a new batch_id: {path}")
+        path.write_text(json.dumps(payload, indent=2, sort_keys=True, default=str), encoding="utf-8"); paths[name] = path
     return paths

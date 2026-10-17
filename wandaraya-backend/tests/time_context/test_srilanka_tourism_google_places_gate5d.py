@@ -1,9 +1,12 @@
 from __future__ import annotations
 
 import asyncio
+import json
+from pathlib import Path
 
 from app.time_context.governance.catalogue_reconciliation import ExistingAttraction
-from app.time_context.governance.google_places_reconciliation import Gate5DSettings, build_search_query, classify_result, consolidate_manifests, process_queue, score_candidate, source_is_compound
+from app.time_context.governance.google_places_reconciliation import Gate5DSettings, build_search_query, classify_result, consolidate_manifests, process_queue, score_candidate, source_is_compound, write_gate5d_reports
+from app.time_context.governance.google_places_orchestrator import checkpoint
 
 
 def existing(place_id=None):
@@ -103,3 +106,43 @@ def test_consolidation_deduplicates_and_marks_api_errors_retriable():
     assert output["completed_records"] == ["one"]
     assert output["retriable_records"] == ["two"]
     assert output["network_requests"] == 0 and output["postgresql_writes"] is False
+
+
+def test_checkpoint_is_idempotent_and_plans_only_remaining_records(tmp_path: Path):
+    queue_path = tmp_path / "queue.json"; queue_path.write_text(json.dumps({"records": [record(external_source_id="one"), record(external_source_id="two")]}))
+    manifest = tmp_path / "stage_10_1_3e_gate5d_one_google_places_full_enrichment_manifest.json"
+    summary = tmp_path / "stage_10_1_3e_gate5d_one_google_places_discovery_summary.json"
+    manifest.write_text(json.dumps({"mode": "live", "results": [{"external_source_id": "one", "classification": "no_google_place_match", "candidates": []}]}))
+    from hashlib import sha256
+    summary.write_text(json.dumps({"queue_sha256": sha256(queue_path.read_bytes()).hexdigest()}))
+    first = checkpoint(queue_path=queue_path, manifest_paths=[manifest]); second = checkpoint(queue_path=queue_path, manifest_paths=[manifest])
+    assert first["completed_records"] == ["one"] == second["completed_records"]
+    assert first["planned_batches"] == [["two"]]
+
+
+def test_checkpoint_rejects_queue_sha_mismatch(tmp_path: Path):
+    queue_path = tmp_path / "queue.json"; queue_path.write_text(json.dumps({"records": [record()]}))
+    manifest = tmp_path / "stage_10_1_3e_gate5d_one_google_places_full_enrichment_manifest.json"; manifest.write_text(json.dumps({"mode":"live", "results": []}))
+    summary = tmp_path / "stage_10_1_3e_gate5d_one_google_places_discovery_summary.json"; summary.write_text(json.dumps({"queue_sha256":"wrong"}))
+    import pytest
+    with pytest.raises(ValueError, match="SHA-256"):
+        checkpoint(queue_path=queue_path, manifest_paths=[manifest])
+
+
+def test_two_consecutive_manifests_advance_ten_without_duplicate_ids(tmp_path: Path):
+    queue_path=tmp_path/"queue.json"; queue_path.write_text(json.dumps({"records":[record(external_source_id=str(i)) for i in range(10)]}))
+    from hashlib import sha256
+    paths=[]
+    for name, ids in (("first", range(5)), ("second", range(5,10))):
+        manifest=tmp_path/f"stage_10_1_3e_gate5d_{name}_google_places_full_enrichment_manifest.json"; summary=tmp_path/f"stage_10_1_3e_gate5d_{name}_google_places_discovery_summary.json"
+        manifest.write_text(json.dumps({"mode":"live","results":[{"external_source_id":str(i),"classification":"no_google_place_match","candidates":[]} for i in ids]})); summary.write_text(json.dumps({"queue_sha256":sha256(queue_path.read_bytes()).hexdigest()})); paths.append(manifest)
+    result=checkpoint(queue_path=queue_path,manifest_paths=paths)
+    assert result["progress"]["completed"] == 10 and result["progress"]["remaining"] == 0
+
+
+def test_reports_are_never_silently_overwritten(tmp_path: Path):
+    queue_path=tmp_path/"queue.json"; queue_path.write_text(json.dumps({"records":[]}))
+    write_gate5d_reports(results=[],usage={"mode":"offline"},queue_path=queue_path,reports_dir=tmp_path,batch_id="same")
+    import pytest
+    with pytest.raises(FileExistsError):
+        write_gate5d_reports(results=[],usage={"mode":"offline"},queue_path=queue_path,reports_dir=tmp_path,batch_id="same")

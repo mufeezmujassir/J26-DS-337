@@ -28,6 +28,8 @@ async def run(args: argparse.Namespace) -> dict:
         if not resume_path.is_file():
             raise FileNotFoundError(f"resume manifest not found: {resume_path}")
         resume = json.loads(resume_path.read_text(encoding="utf-8"))
+        if resume.get("queue_sha256") and resume["queue_sha256"] != __import__("hashlib").sha256(queue_path.read_bytes()).hexdigest():
+            raise ValueError("resume checkpoint queue SHA-256 does not match the current queue")
         completed = {str(item.get("external_source_id")) for item in resume.get("results", []) if item.get("classification") != "api_error"}
     pending = [item for item in records if str(item.get("external_source_id")) not in completed]
     selected = pending[args.offset: args.offset + args.max_records]
