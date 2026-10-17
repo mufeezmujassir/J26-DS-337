@@ -1,0 +1,422 @@
+{
+  "records": [
+    {
+      "attraction_name": "Delft Temple",
+      "candidates": [
+        {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.6316,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.587995,
+            "longitude": 81.78041499999999
+          },
+          "display_name": "Delft Koththiyaladi temple",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "HQQJ+55V Delft west, Kurukkalmadam, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=4218923468369490265&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJhzGGZwA35ToRWfG4qoqgjDo",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "hindu_temple",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.4987,
+          "types": [
+            "hindu_temple",
+            "place_of_worship",
+            "association_or_organization",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.5833,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 9.525165,
+            "longitude": 79.65707200000001
+          },
+          "display_name": "Sivan Temple",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "GMG4+3R, Delft Centre, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=10038788742154114536&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJ9xXfayQ5_joR6FVJVyzxUIs",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "historical_landmark",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.4625,
+          "types": [
+            "historical_landmark",
+            "historical_place",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.5833,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 9.5141523,
+            "longitude": 79.6838878
+          },
+          "display_name": "Delft Island",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "GM7M+MH6, Unnamed Road, Delft Centre, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=14883405889064949269&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJYZqRt3Q5_joRFVas6cx6jM4",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "tourist_attraction",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.4625,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.5185,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 9.495505,
+            "longitude": 79.6878042
+          },
+          "display_name": "Delft Sanctuary",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "FMWQ+64, Delft Centre, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=4589376635159326648&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJH1LObNo5_joRuC8m77u9sD8",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "tourist_attraction",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.4139,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.3333,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 9.5004685,
+            "longitude": 79.7257095
+          },
+          "display_name": "Large Banyan Tree - Delft Island \ud83c\udf33\ud83c\uddf1\ud83c\uddf0",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "Delft Island, GP2G+57P, Delft Centre, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=14857255101904189135&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJsaFeXFA5_joRz_ZbTsySL84",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "tourist_attraction",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.275,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        }
+      ],
+      "classification": "ambiguous_multiple_candidates",
+      "details": {
+        "data": {
+          "addressComponents": [
+            {
+              "languageCode": "en",
+              "longText": "Delft west",
+              "shortText": "Delft west",
+              "types": [
+                "point_of_interest",
+                "establishment"
+              ]
+            },
+            {
+              "languageCode": "en-US",
+              "longText": "HQQJ+55V",
+              "shortText": "HQQJ+55V",
+              "types": [
+                "plus_code"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Kurukkalmadam",
+              "shortText": "Kurukkalmadam",
+              "types": [
+                "locality",
+                "political"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Batticaloa",
+              "shortText": "Batticaloa",
+              "types": [
+                "administrative_area_level_2",
+                "political"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Eastern Province",
+              "shortText": "EP",
+              "types": [
+                "administrative_area_level_1",
+                "political"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Sri Lanka",
+              "shortText": "LK",
+              "types": [
+                "country",
+                "political"
+              ]
+            }
+          ],
+          "businessStatus": "OPERATIONAL",
+          "currentOpeningHours": {
+            "openNow": true,
+            "periods": [
+              {
+                "close": {
+                  "date": {
+                    "day": 23,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 5,
+                  "hour": 23,
+                  "minute": 59,
+                  "truncated": true
+                },
+                "open": {
+                  "date": {
+                    "day": 17,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 6,
+                  "hour": 0,
+                  "minute": 0,
+                  "truncated": true
+                }
+              }
+            ],
+            "weekdayDescriptions": [
+              "Monday: Open 24 hours",
+              "Tuesday: Open 24 hours",
+              "Wednesday: Open 24 hours",
+              "Thursday: Open 24 hours",
+              "Friday: Open 24 hours",
+              "Saturday: Open 24 hours",
+              "Sunday: Open 24 hours"
+            ]
+          },
+          "displayName": {
+            "languageCode": "en",
+            "text": "Delft Koththiyaladi temple"
+          },
+          "formattedAddress": "HQQJ+55V Delft west, Kurukkalmadam, Sri Lanka",
+          "googleMapsUri": "https://maps.google.com/?cid=4218923468369490265&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+          "id": "ChIJhzGGZwA35ToRWfG4qoqgjDo",
+          "location": {
+            "latitude": 7.587995,
+            "longitude": 81.78041499999999
+          },
+          "photos": [
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Abaragithan",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWy-luJyigIdZodufq-cdT0MDO-N0Fs9qxS7kHJouMNffX9ul6a9Q=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/102852651246060314507"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIABIhCdsg4LqXQ-RyHgzPobQtrq&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIABIhCdsg4LqXQ-RyHgzPobQtrq!2e10!4m2!3m1!1s0x3ae5370067863187:0x3a8ca08aaab8f159",
+              "heightPx": 4624,
+              "name": "places/ChIJhzGGZwA35ToRWfG4qoqgjDo/photos/Aa-ngMbaReOExvcSd_8oZZLaLLY8Vfe4Eh9IKKkMveUeBWksJT-NuDe3djrLR6bIg6Z929TGkp7gwSeberP3jo634zJ1j9VDwQUPha9jkZ6OG5GGIctHsBh1wUyG16_e8g9v0EQjB8m1S5naLvWXCaaXo3bDwnMiTMKy-Y0SMQmbnuoKqpd5puRWIOvE9fIq1lhIKuxQEb5ZkpHHOVNhShK9w4up2b-mnbMKcsDebJRH54Sl2GgyZVcK7YJW_8LIx2yQC_4yeAwNpYVGBslK2dBXEuUtnnCeCTa5fRt3Fn7juhgGLtkVxg4nr12stl6z2_1leaHpPB3h6Eil4q8K-qE77TocuHXbKxnjzyXv5vVipIpppw8cUS2VHc4-toJysGNcd07LaQnvgAeJguF-S5ZFQ-CDsji9iGnPpENjQ__4lrBq",
+              "widthPx": 2604
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Abaragithan",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWy-luJyigIdZodufq-cdT0MDO-N0Fs9qxS7kHJouMNffX9ul6a9Q=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/102852651246060314507"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIABIhCCwYqxqlqYzAyyhKtSZcEF&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIABIhCCwYqxqlqYzAyyhKtSZcEF!2e10!4m2!3m1!1s0x3ae5370067863187:0x3a8ca08aaab8f159",
+              "heightPx": 4624,
+              "name": "places/ChIJhzGGZwA35ToRWfG4qoqgjDo/photos/Aa-ngMaidH5mog_7jdif0grLUBGR_5nZcKnEoBkv_RSB5zEctRKqw-vsNHpp7WyZruvEFbG7ViiJc7phyukLwlJYasW316gvrP6BCukJN_MFgIw3v1HlQdCLF3GSzSyooh1FfnitFut3L2KApan5Ym0IlNAllQ1zdNkI0xRO17eovUBvf4NfZPr1HFN0MisL2SyOn_3vnvAIyYdH75_RrtWQjVMKxDDoSsrrfXxsggMT8jApAf_dImApSn00X8XNRhkEYFrcIpmMC7XaobhZdZZY1YO_w0naNN0pUNmkk8k7BaMxOo61sc-K6M-zS0vKmKHCaFMRf1zFyacOH-JfBsuhgVEVXEt-C3s1C4Pw7uKTE0K4Uh16F_3vT_yd9EYb_GpDsgfUyJvKKUaS-PCN-8wWzIOb_sxfMieVCOWKUeLmpi0N",
+              "widthPx": 2604
+            }
+          ],
+          "primaryType": "hindu_temple",
+          "regularOpeningHours": {
+            "openNow": true,
+            "periods": [
+              {
+                "open": {
+                  "day": 0,
+                  "hour": 0,
+                  "minute": 0
+                }
+              }
+            ],
+            "weekdayDescriptions": [
+              "Monday: Open 24 hours",
+              "Tuesday: Open 24 hours",
+              "Wednesday: Open 24 hours",
+              "Thursday: Open 24 hours",
+              "Friday: Open 24 hours",
+              "Saturday: Open 24 hours",
+              "Sunday: Open 24 hours"
+            ]
+          },
+          "types": [
+            "hindu_temple",
+            "place_of_worship",
+            "association_or_organization",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "error": null,
+        "provenance": {
+          "google_place_id": "ChIJhzGGZwA35ToRWfG4qoqgjDo",
+          "source": "google_places_details"
+        }
+      },
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:12",
+      "google_candidate_kb_identity": "no_existing_kb_place_id_match",
+      "official_source_candidate_identity": "not_evaluated",
+      "query": "Delft Temple, Sri Lanka",
+      "review_reasons": [],
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=12",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=12"
+    }
+  ]
+}

@@ -3,7 +3,7 @@ from __future__ import annotations
 import asyncio
 
 from app.time_context.governance.catalogue_reconciliation import ExistingAttraction
-from app.time_context.governance.google_places_reconciliation import Gate5DSettings, build_search_query, classify_result, process_queue, score_candidate
+from app.time_context.governance.google_places_reconciliation import Gate5DSettings, build_search_query, classify_result, consolidate_manifests, process_queue, score_candidate, source_is_compound
 
 
 def existing(place_id=None):
@@ -72,3 +72,34 @@ def test_live_api_failure_is_explicit_and_bounded():
     assert results[0]["classification"] == "api_error"
     assert client.calls == 2
     assert usage["network_requests"] == 1
+
+
+def test_locality_is_not_accepted_as_an_attraction():
+    local = candidate(primaryType="locality", types=["locality", "political"], displayName={"text": "Inginiyagala"})
+    result = classify_result(record(attraction_name="Senanayaka Samudraya of Inginiyagala"), [local], [], Gate5DSettings())
+    assert result["classification"] == "related_locality_not_attraction"
+    assert result["official_source_candidate_identity"] == "locality_only_result_not_identity_proof"
+
+
+def test_delft_location_conflict_penalizes_colombo_candidate():
+    good = candidate(id="places/delft", formattedAddress="Delft Island, Sri Lanka")
+    wrong = candidate(id="places/colombo", formattedAddress="Colombo, Sri Lanka")
+    assert score_candidate(record(attraction_name="Delft Dutch Fort"), good, [])["score"] > score_candidate(record(attraction_name="Delft Dutch Fort"), wrong, [])["score"]
+    assert score_candidate(record(attraction_name="Delft Dutch Fort"), wrong, [])["location_conflict"]
+
+
+def test_compound_source_never_inherits_kb_place_verification():
+    result = classify_result(record(attraction_name="Arugambay & Pottuvil Point"), [candidate(id="places/exact")], existing("places/exact"), Gate5DSettings())
+    assert source_is_compound("Arugambay & Pottuvil Point")
+    assert result["google_candidate_kb_identity"] == "verified_existing_kb_place"
+    assert result["official_source_candidate_identity"] == "compound_source_record_review_required"
+
+
+def test_consolidation_deduplicates_and_marks_api_errors_retriable():
+    queue = [record(external_source_id="one"), record(external_source_id="two")]
+    complete = {"mode": "live", "results": [{"external_source_id": "one", "classification": "new_google_place_candidate", "candidates": [candidate(id="places/shared")]}]}
+    failed = {"mode": "live", "results": [{"external_source_id": "two", "classification": "api_error", "candidates": []}]}
+    output = consolidate_manifests(queue=queue, manifests=[complete, failed])
+    assert output["completed_records"] == ["one"]
+    assert output["retriable_records"] == ["two"]
+    assert output["network_requests"] == 0 and output["postgresql_writes"] is False

@@ -1,0 +1,472 @@
+{
+  "records": [
+    {
+      "attraction_name": "Ancient Veheragala of Pulukunawa",
+      "candidates": [
+        {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.5306,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.724879999999999,
+            "longitude": 80.42682769999999
+          },
+          "display_name": "Veheragala Temple",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "PCFG+XP4, Rambe, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=4826195020226676984&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJAQDANVnK_DoR-Mhe9cwW-kI",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "buddhist_temple",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.423,
+          "types": [
+            "buddhist_temple",
+            "place_of_worship",
+            "association_or_organization",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.3846,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.538546899999999,
+            "longitude": 81.6180418
+          },
+          "display_name": "Pulukunawa Water Dam",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "GJQ9+C67, Pulukunawa, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=4639180604401204193&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJN3-nvTov5ToR4Ts3Ji6uYUA",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "tourist_attraction",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.3135,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.3188,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.7634342,
+            "longitude": 80.41683859999999
+          },
+          "display_name": "Kabella Lena Purana Rajamaha Viharaya",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "QC78+9PG, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=18392485804794309829&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJK6mn4ynK_DoRxewtU2Q8P_8",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "historical_landmark",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.2641,
+          "types": [
+            "historical_landmark",
+            "historical_place",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.274,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.9017094,
+            "longitude": 80.4981193
+          },
+          "display_name": "Upulwehera Rajama Viharaya (Ancient Temple)",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "WF2X+M6Q, A12, Puttalam, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=6970499478418609695&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJ78Pbhf-4_DoRH9YvJlgwvGA",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "buddhist_temple",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.2305,
+          "types": [
+            "buddhist_temple",
+            "place_of_worship",
+            "association_or_organization",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.2469,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.5295317,
+            "longitude": 81.62425520000001
+          },
+          "display_name": "Pulukunawa Raja Maha Viharaya|\u0db4\u0dd4\u0dc5\u0dd4\u0d9a\u0dd4\u0dab\u0dcf\u0dc0 \u0db4\u0dd4\u0dbb\u0dcf\u0dab \u0dbb\u0da2 \u0db8\u0dc4\u0dcf \u0dc0\u0dd2\u0dc4\u0dcf\u0dbb\u0dba (\u0db4\u0dd4\u0dbb\u0dcf\u0dc0\u0dd2\u0daf\u0dca\u200d\u0dba\u0dcf \u0dc3\u0dca\u0dae\u0dcf\u0db1\u0dba- Archaeological Site)",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "GJHF+RP6, Mangalagama, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=13414159062997049586&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJW8mFPvUl5ToR8qCGtpiqKLo",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "buddhist_temple",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.2102,
+          "types": [
+            "buddhist_temple",
+            "place_of_worship",
+            "association_or_organization",
+            "point_of_interest",
+            "establishment"
+          ]
+        }
+      ],
+      "classification": "new_google_place_candidate",
+      "details": {
+        "data": {
+          "addressComponents": [
+            {
+              "languageCode": "en-US",
+              "longText": "PCFG+XP4",
+              "shortText": "PCFG+XP4",
+              "types": [
+                "plus_code"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Rambe",
+              "shortText": "Rambe",
+              "types": [
+                "locality",
+                "political"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Kurunegala",
+              "shortText": "Kurunegala",
+              "types": [
+                "administrative_area_level_2",
+                "political"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "North Western Province",
+              "shortText": "NW",
+              "types": [
+                "administrative_area_level_1",
+                "political"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Sri Lanka",
+              "shortText": "LK",
+              "types": [
+                "country",
+                "political"
+              ]
+            }
+          ],
+          "businessStatus": "OPERATIONAL",
+          "displayName": {
+            "languageCode": "en",
+            "text": "Veheragala Temple"
+          },
+          "formattedAddress": "PCFG+XP4, Rambe, Sri Lanka",
+          "googleMapsUri": "https://maps.google.com/?cid=4826195020226676984&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+          "id": "ChIJAQDANVnK_DoR-Mhe9cwW-kI",
+          "location": {
+            "latitude": 7.724879999999999,
+            "longitude": 80.42682769999999
+          },
+          "photos": [
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Kamal Nadeeshantha",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXDZnKOgOD5h_oabSDfmPMYj4vOwW8KleJIkkQEPu58FGCJJ4lq=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/107679510999850946147"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIDRz6-R3gE&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDRz6-R3gE!2e10!4m2!3m1!1s0x3afcca5935c00001:0x42fa16ccf55ec8f8",
+              "heightPx": 3000,
+              "name": "places/ChIJAQDANVnK_DoR-Mhe9cwW-kI/photos/Aa-ngMaFBr3yHrXaVMDI2IfazTKFlt-pB0XFImGTKMwlHFAxNdqjXR3iAeCNw3eA6NjH6VXR3jrENWWOpDxnZw_LBR04m7mUAilJrYTw-Vr_Ey8gSgNSNvv54QB2oZ6iHr_hy7NxCIBlXxFxNGWDlhP5t1aphP-tsxsu4342Zu9SRkh9joH-EzcJ3_vTgcmStQwX45fWmVtYSO4Jn-_AF7fCB7lLtzM2AEd47XK-29W41FXLuKD9caHi0l7knjGRA-Fabq1FEDBIfrcHjfFwGYd5kuRE3TUX9yseHuN-Lowk1f6nlGhvGQuQ0U_Hpmrq8Ha6gmKn3Dod35mFloSWG3pgjiE72Qsb0AOmwYIAu6ftUQSpMo-fdxAO79FTV6NRdhCnDG7mWUox8yoh5dLJieOG0TZe7GfxWRY",
+              "widthPx": 4000
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Dinesh Priyasad",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjU9nBW3DZAG1Kl2xeyrJzg3j90Cz7r_L5YTI4FE3uNftlvBEnfiiQ=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/115598172386973097558"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIABIhAGbyfQ9husIme2prYABHzX&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIABIhAGbyfQ9husIme2prYABHzX!2e10!4m2!3m1!1s0x3afcca5935c00001:0x42fa16ccf55ec8f8",
+              "heightPx": 3120,
+              "name": "places/ChIJAQDANVnK_DoR-Mhe9cwW-kI/photos/Aa-ngMZywoeVqvHgQf30Wf7qL5EHPAvQ_VsRphBmVwW_MQGjFAphjGDC42Q_q1KnocMdsBF_TZDvasc6sKQjF7J7sngBe5gMC4JrZyFaGqmMGrUYxkI0OR-ZELwZQL2V8Z1763di9WFUJuW0WDNXvuAnsHzuKbcy46Atn5EP3C43yBOkBOP8p1Ib9Ad9bt3oCGQL_0AI2b0pQdcE9frg7lieyF_q2MNXF4f2wFS-t-S-dL3d9n64yGlfRDQdFe1XwYdyhr51p1Hp4DlKuB17oRNlBwEq-TXZAu313PV4UsmUZREuGk3qULkjjV5hxOphfg_MD3PyTtMbewbG90ZtsmwwGW1WO49E_gogA6auPrMwOIXhEOCORql78nq54JR3kpArj_WazsI4O3nzZPKS-H28_o8lDAPFpxWEIl78Ryk7q9Mj_Q",
+              "widthPx": 4160
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Dinesh Priyasad",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjU9nBW3DZAG1Kl2xeyrJzg3j90Cz7r_L5YTI4FE3uNftlvBEnfiiQ=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/115598172386973097558"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIABIhAGbwPTrQP-AGe2pvEADXIl&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIABIhAGbwPTrQP-AGe2pvEADXIl!2e10!4m2!3m1!1s0x3afcca5935c00001:0x42fa16ccf55ec8f8",
+              "heightPx": 3120,
+              "name": "places/ChIJAQDANVnK_DoR-Mhe9cwW-kI/photos/Aa-ngMaEQ9phnRUOS6jpybWsfQ16scxbmQqO91hvvIFbLJHC5CMSRgk3Pjopov-R46eHBu5rf3VN5t8cT-Xcx4i1LddR8ptMbU7f37mUVt5p6MXb4qIWAbLB0nqng0sgZo7h3nwJjMO7ubfx4WA8QLDWVIQ_sq1jbnkMnVID_e3qWXRp0UKr7xCw7p8LIxCD8U3Zh6lAxDKyMy5Jj8S9AnoQPK4WSw2v0ddL_lIBjO4ZysqccRPPmcVK0akVK144Pm0CF9PWgTjD3FAwvbgZPwKo6dAehusFK7J5hOj3k_0X38mF_W43xpE7Cpq5eWBZlOvtnBRnLje5aUIXa-rWH0nGG29mxIAltVCUhkmZrlzIL2o67Dw108XQgCF5sqKqqMkW9TwPHcdvdFWElLNxQuiKFba0F7qZBC5ZYBGnYz6AzUn8",
+              "widthPx": 4160
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "\u0dc3\u0dd2\u0dad\u0dca \u0dc3\u0db1 \u0dc3\u0db1 \u0db6\u0dd4\u0daf\u0dd4 \u0db6\u0dab . sith sana sana budu bana",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXqwMy50VuXDcJhEd1U71KZn7yabcKmPwVu-RsT7vw4NVE5NCQq=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/108785418945352611373"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIDZ5fK5Cg&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDZ5fK5Cg!2e10!4m2!3m1!1s0x3afcca5935c00001:0x42fa16ccf55ec8f8",
+              "heightPx": 3120,
+              "name": "places/ChIJAQDANVnK_DoR-Mhe9cwW-kI/photos/Aa-ngMa8jotl6aCd1XspAUFUXNulICcgm6qCpZKU2v6rQgmgtxY7PhcZe9CCCt34ZI0Rsl9ixLS-N6dmcBt5l2JiakPPj_V-DQkv1EvugGm2N6OlyhShOkdtOTuJm__kRHA4e7TBrzzoFIucGxgSg_coXdS8-vBHvQQ3IVH_ysKh7Is8Tyo8U8A3tpQL1yrkr6KYpE7ZReTbyU2OXAxsahyQKvWw18Cc9kuwr7heJLUENZePnesDoro318FJ_YBxs6jH3y0mfqhQBsAZuWWaiLZq33RLwmLxMWlHE5psd4WswB8auvzTQDIhawkedMR-tsHiiJsF55kUQCLC7qIlUhL2h8ZiWbTrFyJvAP67iOPxV1w8WRd3Rrjt46JzFGz-KfGxq1NxvIqWq2cdRmxS42m0iTqXBA",
+              "widthPx": 4160
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "\u0dc3\u0dd2\u0dad\u0dca \u0dc3\u0db1 \u0dc3\u0db1 \u0db6\u0dd4\u0daf\u0dd4 \u0db6\u0dab . sith sana sana budu bana",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXqwMy50VuXDcJhEd1U71KZn7yabcKmPwVu-RsT7vw4NVE5NCQq=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/108785418945352611373"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIDZ5YqUCg&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDZ5YqUCg!2e10!4m2!3m1!1s0x3afcca5935c00001:0x42fa16ccf55ec8f8",
+              "heightPx": 3120,
+              "name": "places/ChIJAQDANVnK_DoR-Mhe9cwW-kI/photos/Aa-ngMYUlCTp9FcP7ztHfxn37Ds_6NdV6qoB_E1pIAhxBq92icADSGTlI_dS_3lae5T-QlQSnzGWeEoDI283HrNBvAOsQax9wPoN0ixiY6NRb1jvtoP-ioVAHiLgBuy5n7q3b3KAeuEaw3ZaiLU6evnkWEmJ8qopTLOKOOHzyxKtGmrR6Je689hzYwc_40CioErmF3JQfX5YRZD7rLtQ0XGpR2lcfdjTtUXEqCdZt6O37KJ-eu2AjWBncXL5w6gWcuNSQ_OpQZX2tdvQGZyX1KJ7C7Z-yR_3a9ahXFqUtvNGB5yEpXQOmvxvwv5NAY1excItvege0c1aS_3Id9HWA520CLaLDm4GkylJkAainlHZpcuuuYsT9Baue8Fjl9iad_xkonV2YgjN-77_9G9HjISKZaa_bcI",
+              "widthPx": 4160
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "\u0dc3\u0dd2\u0dad\u0dca \u0dc3\u0db1 \u0dc3\u0db1 \u0db6\u0dd4\u0daf\u0dd4 \u0db6\u0dab . sith sana sana budu bana",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXqwMy50VuXDcJhEd1U71KZn7yabcKmPwVu-RsT7vw4NVE5NCQq=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/108785418945352611373"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIDZ5crI_gE&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDZ5crI_gE!2e10!4m2!3m1!1s0x3afcca5935c00001:0x42fa16ccf55ec8f8",
+              "heightPx": 3120,
+              "name": "places/ChIJAQDANVnK_DoR-Mhe9cwW-kI/photos/Aa-ngMZKSeGfswUpu1mPCkJmwEoq16oOJkh6RXX0g-B1qZK5tLfwOewpTpMqYUZtA3WEHl4qG-FOJx6hEApXI24cVJo8Aa_BnC1JjPgWsjHSluL_QitQteoHgX9Ve8f10gAMTaNRcSPqv-XNVH2CKcx0N5zx7izqHsuUfO3RCQ_AaJFN3ni__foNkJDknBpFS91wMbBBb3ygoVzJ2BbprKML7mIL0bZQxFw7XTj9dW1c0SuihaNGkN2qVkK2EP58w0UZSt3_4-XgkSL2RIA5Wwnfypg27c2UBpmIw_82jqFalJR3TjUVmYV08lVCaj0ai8_PPpn1rzwztTjxq_TRBL1_Dh8RLdsbbOFMEzTHC-c3YLfnUvsYXRLZ16vhtK8GOPiIUJ83VR1Fho3-uSwuCUvr22gCWWAZGuc",
+              "widthPx": 4160
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Kamal Nadeeshantha",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXDZnKOgOD5h_oabSDfmPMYj4vOwW8KleJIkkQEPu58FGCJJ4lq=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/107679510999850946147"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIDRz-_CCQ&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDRz-_CCQ!2e10!4m2!3m1!1s0x3afcca5935c00001:0x42fa16ccf55ec8f8",
+              "heightPx": 3000,
+              "name": "places/ChIJAQDANVnK_DoR-Mhe9cwW-kI/photos/Aa-ngMa7W5O-oPqQUtI3j-mi1AP5ONFkvMuthemCTYkuNA-TycQZ03o-I4bVM-8PO5NNzqrJANciZhl5zulitARdL9eylHvj6m-0QcShVGKOSXU9Tu4RagP-2yGMukNAW9ttFvyL1gFALxCorji8QOfNL6OoHBP0K9OowLy2Xietxmbc6Prmq0O6vdNLlhXqzjnyFWfR__ckTeAHbBQijoX9vXRfiJ-i99M7J0j0txf4PLfXLh5SsWxlb4Jw0U3Ro-TU1sfqgs3_MQsnDEqFUPOyp-HG0KDHXhD5456YcMkhW_pLR3U8wBCjDCJe3IARNYiyjjKH862baFK7nU5_sVvXDM2hvy4aZWAmUVFS8CNOiX2T7lVczs5TyCl02ZOsfx4_IQ6Xy4zBO_z-0lltP1_TRWy7ww",
+              "widthPx": 4000
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Kamal Nadeeshantha",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXDZnKOgOD5h_oabSDfmPMYj4vOwW8KleJIkkQEPu58FGCJJ4lq=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/107679510999850946147"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIDRz-_CAQ&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDRz-_CAQ!2e10!4m2!3m1!1s0x3afcca5935c00001:0x42fa16ccf55ec8f8",
+              "heightPx": 4000,
+              "name": "places/ChIJAQDANVnK_DoR-Mhe9cwW-kI/photos/Aa-ngMaC4cpJQm-xKxIx1EybVLy295Pa2GYfXrHS4NTA1LHtzrkG6iVgHgrxzcb4TbyycNBEA6NJd-i8ibNB-ybd5J3E56ccHtUM1GGXzH4yICABj8JM72l8PK9NFsHLrHroAUI7ypVDwPoEkNrxoPBhZH-MvNkNz80S0nNyIpaNbnoiOKDlZCGLfy4IdelNW6j9spS5M8FfqWawTwsyURFfm-FnkQzIN3NEfl9p-JiDhJfgcexxbqNa5N7qeuj93OXGWctGXqgL5MJRCPsXC14IJ0vbU12k-Ef2npAmeL_Be-_3psp2aKNQIlGfnHnqDxaSeRYhiqxOgODbYhhJ97dfY1yfbwSeYmrxGlTPFrvbc4j7GAt7Y4e9MRkpR_h03D3q0cLIDu9ItB_bNUFNFyfv-jMuFyI",
+              "widthPx": 3000
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Dinesh Priyasad",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjU9nBW3DZAG1Kl2xeyrJzg3j90Cz7r_L5YTI4FE3uNftlvBEnfiiQ=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/115598172386973097558"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIABIhAGbyfQ9husIme2ptMAAuap&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIABIhAGbyfQ9husIme2ptMAAuap!2e10!4m2!3m1!1s0x3afcca5935c00001:0x42fa16ccf55ec8f8",
+              "heightPx": 3120,
+              "name": "places/ChIJAQDANVnK_DoR-Mhe9cwW-kI/photos/Aa-ngMYYWeUyqcD25fPK8TI9v0rEIRIlnS91pFMArCsLPAr8tj8vUErmbC_45fsCvrgXDlvkjNbDyzoaeQ3EV0vuF_Q_WmsoLyOP-3kTQv9JghacO6vHySV2zVVzzRI7YVsBCZaIRckix8ePiOC0pWuDRDnevzqt92FMPZUu4KARbutGz3LxtsQuMwm19Nj37LzDOW44OrOSTvCJRC-z6erB9jnTyfoTJkjgSN47WsdI8898v3JsPmHhN7CPo1SWiUhFRaHniX54t0vFs5yahn07N2oVQp7_5vIeQ850kfrSe9jjdLYyITq3fPTOrHvMod7fLgz6W78f4iyDPUj_wBqKWLM-VtcrJhh_0ZGZY-9URaOa95iA11d-FhsXLWL-60S_HL_VW1VoUPU27acAo2m7it1aKDbMyIRHTEJEuyfnq0F0kw",
+              "widthPx": 4160
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Kamal Nadeeshantha",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXDZnKOgOD5h_oabSDfmPMYj4vOwW8KleJIkkQEPu58FGCJJ4lq=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/107679510999850946147"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIDRz--dzQE&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDRz--dzQE!2e10!4m2!3m1!1s0x3afcca5935c00001:0x42fa16ccf55ec8f8",
+              "heightPx": 3000,
+              "name": "places/ChIJAQDANVnK_DoR-Mhe9cwW-kI/photos/Aa-ngMZsOsSEL8d2zM7v9npQ8tm399-PCwE-iX-NFI6NZfpcimtZYYCCwcd0dlgy6N249fD-cV2FvIq10PcJdU49l-qbPwadmBE6r2oJjHxLp1mUlztbdQUuJF0dKnt_1wMKfCCQ2iUoTRU-3gz9i8MF0BribQToleE_dbZ_RX5cD_uyAG9i2zlHvjwz_IfCW1wtqdGPNlmvcAklEy4Vc1LIgMtkhpJn2GzJ40gGeK8QkQKx3EfWRneXmtmlc2vB0w281g6tgmXmp-8WDi--JUoFtaH1zUz74o0k3MbdojDS2mgMIK1xIHjGYm-c7ntfw5F3WEhlNLfz-epLtT-Jzn3TlcK2U_805CzlLMjTWXqW82Z9KPBVVHTQgm47K04Va8dDoyne40GQJp3sFWpHzHbEHyozmm580Vw",
+              "widthPx": 4000
+            }
+          ],
+          "primaryType": "buddhist_temple",
+          "rating": 5,
+          "types": [
+            "buddhist_temple",
+            "place_of_worship",
+            "association_or_organization",
+            "point_of_interest",
+            "establishment"
+          ],
+          "userRatingCount": 4
+        },
+        "error": null,
+        "provenance": {
+          "google_place_id": "ChIJAQDANVnK_DoR-Mhe9cwW-kI",
+          "source": "google_places_details"
+        }
+      },
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:114",
+      "google_candidate_kb_identity": "no_existing_kb_place_id_match",
+      "official_source_candidate_identity": "not_evaluated",
+      "query": "Ancient Veheragala of Pulukunawa, Sri Lanka",
+      "review_reasons": [],
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=114",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=114"
+    }
+  ]
+}

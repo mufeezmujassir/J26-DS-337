@@ -22,7 +22,15 @@ async def run(args: argparse.Namespace) -> dict:
     records = payload.get("records", [])
     if not isinstance(records, list):
         raise ValueError("queue JSON must contain a records list")
-    selected = records[args.offset: args.offset + args.max_records]
+    completed: set[str] = set()
+    if args.resume_manifest:
+        resume_path = Path(args.resume_manifest)
+        if not resume_path.is_file():
+            raise FileNotFoundError(f"resume manifest not found: {resume_path}")
+        resume = json.loads(resume_path.read_text(encoding="utf-8"))
+        completed = {str(item.get("external_source_id")) for item in resume.get("results", []) if item.get("classification") != "api_error"}
+    pending = [item for item in records if str(item.get("external_source_id")) not in completed]
+    selected = pending[args.offset: args.offset + args.max_records]
     settings = Gate5DSettings(max_records=args.max_records, max_candidates=args.max_candidates,
                               request_interval_seconds=args.request_interval_seconds, max_retries=args.max_retries,
                               include_details=args.include_details)
@@ -35,7 +43,7 @@ async def run(args: argparse.Namespace) -> dict:
         client = GooglePlacesConnector()
     results, usage = await process_queue(queue=selected, existing=existing, settings=settings, client=client, live=args.live)
     reports = write_gate5d_reports(results=results, usage=usage, queue_path=queue_path, reports_dir=Path(args.reports_dir), batch_id=args.batch_id)
-    return {"mode": usage["mode"], "queue_records": len(records), "offset": args.offset, "processed_records": len(results),
+    return {"mode": usage["mode"], "queue_records": len(records), "already_completed": len(completed), "pending_records": len(pending), "offset": args.offset, "processed_records": len(results),
             "network_requests": usage["network_requests"], "postgresql_writes": False, "qdrant_writes": False,
             "reports": {key: str(value) for key, value in reports.items()}}
 
@@ -48,6 +56,7 @@ def main() -> None:
     parser.add_argument("--max-records", type=int, default=5)
     parser.add_argument("--max-candidates", type=int, default=5)
     parser.add_argument("--offset", type=int, default=0)
+    parser.add_argument("--resume-manifest", help="saved live consolidation manifest; completed records are skipped")
     parser.add_argument("--request-interval-seconds", type=float, default=1.0)
     parser.add_argument("--max-retries", type=int, default=1)
     parser.add_argument("--include-details", action="store_true")

@@ -8,6 +8,7 @@ from __future__ import annotations
 import asyncio
 import json
 import math
+import re
 from collections import defaultdict
 from dataclasses import asdict, dataclass
 from datetime import UTC, datetime
@@ -85,9 +86,72 @@ def _existing_identity(candidate_id: str | None, existing: list[ExistingAttracti
     return [item for item in existing if candidate_id and item.google_place_id == candidate_id]
 
 
+_LOCALITY_TYPES = {"locality", "administrative_area_level_1", "administrative_area_level_2", "administrative_area_level_3", "country", "political", "neighborhood", "sublocality"}
+_ATTRACTION_TYPES = {"tourist_attraction", "historical_landmark", "historical_place", "national_park", "museum", "hindu_temple", "buddhist_temple", "place_of_worship", "zoo", "aquarium", "park", "beach"}
+
+
+def source_is_compound(name: str | None) -> bool:
+    """A compound official title cannot be proved by a single Place ID."""
+    return bool(name and re.search(r"\s(?:&|/|and)\s", name, re.IGNORECASE))
+
+
+def consolidate_manifests(*, queue: list[dict[str, Any]], manifests: list[dict[str, Any]]) -> dict[str, Any]:
+    """Merge saved live manifests only; this function never constructs a client."""
+    by_source: dict[str, dict[str, Any]] = {}
+    retriable: set[str] = set()
+    place_sources: dict[str, set[str]] = defaultdict(set)
+    for manifest in manifests:
+        if manifest.get("mode") != "live":
+            continue
+        for result in manifest.get("results", []):
+            source_id = str(result.get("external_source_id") or "")
+            if not source_id:
+                continue
+            if result.get("classification") == "api_error":
+                retriable.add(source_id); continue
+            previous = by_source.get(source_id)
+            if previous is None or str(result.get("created_at_utc", "")) >= str(previous.get("created_at_utc", "")):
+                by_source[source_id] = result
+            for candidate in result.get("candidates", []):
+                if candidate.get("google_place_id"):
+                    place_sources[str(candidate["google_place_id"])].add(source_id)
+    queue_ids = {str(item.get("external_source_id")) for item in queue}
+    completed = set(by_source)
+    return {"mode": "offline_consolidation", "network_requests": 0, "postgresql_writes": False, "qdrant_writes": False,
+            "completed_records": sorted(completed), "retriable_records": sorted(retriable),
+            "remaining_records": sorted(queue_ids - completed),
+            "results": [by_source[key] for key in sorted(by_source)],
+            "duplicate_google_place_clusters": [{"google_place_id": place, "external_source_ids": sorted(ids)} for place, ids in sorted(place_sources.items()) if len(ids) > 1]}
+
+
+def _candidate_kind(candidate: dict[str, Any]) -> str:
+    types = {normalize_name(item) for item in candidate.get("types", []) if item}
+    primary = normalize_name(candidate.get("primaryType"))
+    if primary in _LOCALITY_TYPES or (types & _LOCALITY_TYPES and not types & _ATTRACTION_TYPES):
+        return "locality_or_administrative_area"
+    if types & _ATTRACTION_TYPES:
+        return "physical_attraction"
+    return "insufficient_type_evidence"
+
+
+def _location_conflict(record: dict[str, Any], candidate: dict[str, Any]) -> tuple[bool, str | None]:
+    """Use only explicit source locality; Delft is explicit in the official title."""
+    source_name = normalize_name(record.get("attraction_name"))
+    expected = [normalize_name(record.get(key)) for key in ("district", "city") if normalize_name(record.get(key))]
+    if "delft" in source_name:  # An official source-title geographic qualifier, not inferred coordinates.
+        expected.append("delft")
+    if not expected:
+        return False, None
+    address = normalize_name(candidate.get("formattedAddress"))
+    if address and not any(term in address for term in expected):
+        return True, f"source locality evidence ({', '.join(expected)}) is absent from candidate address"
+    return False, None
+
+
 def score_candidate(record: dict[str, Any], candidate: dict[str, Any], existing: list[ExistingAttraction]) -> dict[str, Any]:
     """Return deterministic, inspectable evidence. Fuzzy similarity is never verification."""
-    display_name = (candidate.get("displayName") or {}).get("text") or candidate.get("displayName") or ""
+    display_raw = candidate.get("displayName") or {}
+    display_name = display_raw.get("text", "") if isinstance(display_raw, dict) else str(display_raw)
     source_name = record.get("attraction_name") or ""
     aliases = [source_name, *(record.get("aliases") or []), *(record.get("raw_source_names") or [])]
     name_score = max((_name_similarity(alias, display_name) for alias in aliases), default=0.0)
@@ -102,14 +166,20 @@ def score_candidate(record: dict[str, Any], candidate: dict[str, Any], existing:
     # Google type data is weak supporting evidence only; missing types remain neutral.
     types = {normalize_name(item) for item in candidate.get("types", []) if item}
     type_score = 0.5 if types else 0.0
-    score = 1.0 if direct else round(name_score * 0.75 + locality_score * 0.10 + geo_score * 0.10 + type_score * 0.05, 4)
+    candidate_kind = _candidate_kind(candidate)
+    conflict, conflict_reason = _location_conflict(record, candidate)
+    type_penalty = 0.35 if candidate_kind == "locality_or_administrative_area" else 0.0
+    conflict_penalty = 0.45 if conflict else 0.0
+    score = 1.0 if direct else round(max(0.0, name_score * 0.75 + locality_score * 0.10 + geo_score * 0.10 + type_score * 0.05 - type_penalty - conflict_penalty), 4)
     return {
         "google_place_id": candidate_id, "display_name": display_name, "formatted_address": candidate.get("formattedAddress"),
         "coordinates": {"latitude": candidate_point[0], "longitude": candidate_point[1]} if candidate_point else None,
         "types": candidate.get("types") or [], "primary_type": candidate.get("primaryType"),
         "google_maps_uri": candidate.get("googleMapsUri"), "business_status": candidate.get("businessStatus"),
-        "score": score, "component_scores": {"name_similarity": round(name_score, 4), "locality_agreement": locality_score,
-            "geographic_proximity": geo_score, "type_compatibility": type_score, "existing_google_place_id": 1.0 if direct else 0.0},
+        "score": score, "candidate_kind": candidate_kind, "location_conflict": conflict, "location_conflict_reason": conflict_reason,
+        "component_scores": {"name_similarity": round(name_score, 4), "locality_agreement": locality_score,
+            "geographic_proximity": geo_score, "type_compatibility": type_score, "existing_google_place_id": 1.0 if direct else 0.0,
+            "location_conflict_penalty": -conflict_penalty, "locality_type_penalty": -type_penalty},
         "distance_km": round(distance, 4) if distance is not None else None,
         "existing_kb_matches": [{"id": item.id, "name": item.name} for item in direct],
         "provenance": {"source": "google_places_search", "field_mask": ["id", "displayName", "formattedAddress", "location", "primaryType", "types", "businessStatus", "googleMapsUri"]},
@@ -119,7 +189,8 @@ def score_candidate(record: dict[str, Any], candidate: dict[str, Any], existing:
 def classify_result(record: dict[str, Any], candidates: list[dict[str, Any]], existing: list[ExistingAttraction], settings: Gate5DSettings, *, error: str | None = None) -> dict[str, Any]:
     base = {"external_source_id": record.get("external_source_id"), "attraction_name": record.get("attraction_name"),
             "source_url": record.get("source_url"), "query": None, "classification": "insufficient_evidence", "candidates": [],
-            "details": None, "error": error, "source_provenance": {"official_source_url": record.get("source_url"), "queue_reason": record.get("reason")}}
+            "details": None, "error": error, "source_provenance": {"official_source_url": record.get("source_url"), "queue_reason": record.get("reason")},
+            "google_candidate_kb_identity": "not_evaluated", "official_source_candidate_identity": "not_evaluated", "review_reasons": []}
     if error:
         base["classification"] = "api_error"; return base
     if not record.get("attraction_name"):
@@ -127,10 +198,26 @@ def classify_result(record: dict[str, Any], candidates: list[dict[str, Any]], ex
     base["query"] = build_search_query(record)
     ranked = sorted((score_candidate(record, item, existing) for item in candidates), key=lambda item: (-item["score"], str(item["google_place_id"])))
     base["candidates"] = ranked
+    compound = source_is_compound(record.get("attraction_name"))
+    base["google_candidate_kb_identity"] = "verified_existing_kb_place" if any(item["existing_kb_matches"] for item in ranked) else "no_existing_kb_place_id_match"
     if not ranked:
         base["classification"] = "no_google_place_match"
+        base["official_source_candidate_identity"] = "no_candidate_returned"
+    elif compound:
+        base["classification"] = "high_confidence_candidate_review"
+        base["official_source_candidate_identity"] = "compound_source_record_review_required"
+        base["review_reasons"].append("official source title may describe multiple distinct destinations")
+    elif ranked[0]["candidate_kind"] == "locality_or_administrative_area":
+        base["classification"] = "related_locality_not_attraction"
+        base["official_source_candidate_identity"] = "locality_only_result_not_identity_proof"
+        base["review_reasons"].append("top Google result is a locality or administrative area, not a physical attraction")
+    elif ranked[0]["location_conflict"]:
+        base["classification"] = "high_confidence_candidate_review"
+        base["official_source_candidate_identity"] = "location_conflict_review_required"
+        base["review_reasons"].append(ranked[0]["location_conflict_reason"])
     elif any(item["existing_kb_matches"] for item in ranked):
         base["classification"] = "verified_existing_kb_match"
+        base["official_source_candidate_identity"] = "strong_candidate_identity_evidence"
     elif len(ranked) > 1 and ranked[0]["score"] - ranked[1]["score"] < settings.ambiguity_margin:
         base["classification"] = "ambiguous_multiple_candidates"
     elif ranked[0]["score"] >= settings.high_confidence_threshold:
