@@ -1,0 +1,27 @@
+{
+  "status": "review_only",
+  "registry_path": "data/reports/stage_10_1_3e_gate5b2_catalogue_all_batches_v2_attraction_registry.json",
+  "registry_sha256": "c1412bacd58b95257bbd4668173619d775b24a76689cf0a836bc9320194251fe",
+  "existing_kb_active_attractions": 6096,
+  "discovered_registry_records": 92,
+  "classifications": {
+    "existing_kb_match": 10,
+    "probable_match_review_required": 8,
+    "ambiguous_multiple_matches": 2,
+    "new_attraction_candidate": 72,
+    "insufficient_evidence": 0
+  },
+  "google_places_queue_count": 82,
+  "registry_validation": {
+    "input_records": 92,
+    "duplicate_external_source_ids": [],
+    "duplicate_canonical_source_urls": [],
+    "missing_normalized_name": [],
+    "missing_source_provenance": []
+  },
+  "postgresql_writes": false,
+  "qdrant_writes": false,
+  "schema_limitations": [
+    "No dedicated attraction alias or external-source-reference table exists; description titles and source URLs were used as available evidence."
+  ]
+}
