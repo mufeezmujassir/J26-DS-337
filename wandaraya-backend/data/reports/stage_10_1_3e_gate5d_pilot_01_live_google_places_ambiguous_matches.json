@@ -1,0 +1,382 @@
+{
+  "records": [
+    {
+      "attraction_name": "Delft Dutch Fort",
+      "candidates": [
+        {
+          "business_status": "OPERATIONAL",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "name_similarity": 0.625,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 9.5276911,
+            "longitude": 79.6998574
+          },
+          "display_name": "Dutch Fort - Delft",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "Delft Island, GMHX+3WH, Delft Centre, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=3791058705613443253&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJS009z1U4_joRtdC9js6LnDQ",
+          "primary_type": "historical_landmark",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.4938,
+          "types": [
+            "historical_landmark",
+            "tourist_attraction",
+            "historical_place",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "business_status": "OPERATIONAL",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "name_similarity": 0.619,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 6.935564599999999,
+            "longitude": 79.84577449999999
+          },
+          "display_name": "Delft Gateway - Colombo Fort",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "WRPW+68C, Duke St, Colombo, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=17009923608586673766&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJzzAepiZZ4joRZt5WSmZjD-w",
+          "primary_type": "historical_place",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.4893,
+          "types": [
+            "historical_place",
+            "point_of_interest",
+            "establishment"
+          ]
+        }
+      ],
+      "classification": "ambiguous_multiple_candidates",
+      "details": {
+        "data": {
+          "addressComponents": [
+            {
+              "languageCode": "si",
+              "longText": "Delft Island"
+            },
+            {
+              "languageCode": "en-US",
+              "longText": "GMHX+3WH",
+              "shortText": "GMHX+3WH",
+              "types": [
+                "plus_code"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Delft Centre",
+              "shortText": "Delft Centre",
+              "types": [
+                "locality",
+                "political"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Jaffna",
+              "shortText": "Jaffna",
+              "types": [
+                "administrative_area_level_2",
+                "political"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Northern Province",
+              "shortText": "NP",
+              "types": [
+                "administrative_area_level_1",
+                "political"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Sri Lanka",
+              "shortText": "LK",
+              "types": [
+                "country",
+                "political"
+              ]
+            }
+          ],
+          "businessStatus": "OPERATIONAL",
+          "currentOpeningHours": {
+            "openNow": true,
+            "periods": [
+              {
+                "close": {
+                  "date": {
+                    "day": 23,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 5,
+                  "hour": 23,
+                  "minute": 59,
+                  "truncated": true
+                },
+                "open": {
+                  "date": {
+                    "day": 17,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 6,
+                  "hour": 0,
+                  "minute": 0,
+                  "truncated": true
+                }
+              }
+            ],
+            "weekdayDescriptions": [
+              "Monday: Open 24 hours",
+              "Tuesday: Open 24 hours",
+              "Wednesday: Open 24 hours",
+              "Thursday: Open 24 hours",
+              "Friday: Open 24 hours",
+              "Saturday: Open 24 hours",
+              "Sunday: Open 24 hours"
+            ]
+          },
+          "displayName": {
+            "languageCode": "en",
+            "text": "Dutch Fort - Delft"
+          },
+          "formattedAddress": "Delft Island, GMHX+3WH, Delft Centre, Sri Lanka",
+          "googleMapsUri": "https://maps.google.com/?cid=3791058705613443253&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+          "id": "ChIJS009z1U4_joRtdC9js6LnDQ",
+          "location": {
+            "latitude": 9.5276911,
+            "longitude": 79.6998574
+          },
+          "photos": [
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "lionel bost",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXye8_bXarlIXJB_rTuo3M0NJmyRSZJah7DfZ5w0D9OrYHa17N5rQ=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/101167751492403225002"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIC18vDIDA&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIC18vDIDA!2e10!4m2!3m1!1s0x3afe3855cf3d4d4b:0x349c8bce8ebdd0b5",
+              "heightPx": 3024,
+              "name": "places/ChIJS009z1U4_joRtdC9js6LnDQ/photos/Aa-ngMa0s5JnIjNVfWZbzr3PFCR2nDPQ3Cz9x0V1TQxxe-FCCj6h0908AR51ttbHH1h1i1AAwkpqtRf8QuLgQqg_IdWjs3G0aijVGdc26HTzM5ObLpGLSS4V0nhD63pE4uITJv3WS_c_UVBi5d9bw-7AkTK4uqQ3DTz4z2i5-T665TGIxCeAS9H_mAkvmyPC7VlGoPS3dNvdptpPbIrqy2KXmyf8vi7HLUimMmlu98qd6BAZfF5AdyCX7ydH_07dCzhLwClzq1u_VAX7bh9-QRPAiBj-9N90wiieULjNkU2UbbU6uhuuHDZPJDRMGSVt1qJ3iTbvao2FBxwmzVAmbqz42G_gasHnNGKQuJWwKIRRt3oZNacqecgm9eWfrjZ31Lc77WvFSjm9m5XQiYei-NLUq-1Vtg",
+              "widthPx": 4032
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Jeewanthi Harshani",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWtS8x4kOWn90TVZxvxwPNFFZfYVzEvELLGH6qRRIQgoEQZ3li_=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/108856823803149114817"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIABIhAB6yJmZgm4i-J9_eN2pSvK&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIABIhAB6yJmZgm4i-J9_eN2pSvK!2e10!4m2!3m1!1s0x3afe3855cf3d4d4b:0x349c8bce8ebdd0b5",
+              "heightPx": 1040,
+              "name": "places/ChIJS009z1U4_joRtdC9js6LnDQ/photos/Aa-ngMYYJ9Ob-hC1PX6jL9lz_9ebb55U7d8sSfdd8mLpc-Z97f4QwlHqHP8Ctxm8I6qQvk5mkoz100GAsFJ1gkveLt3NbMgG4I3-wfMigKMq7qcZE4hevq9xxWvdholMYJOuRaLOkS60OL8xYbCoqocnsjJcnNMKiq-FNDGgJgFodZeq56T_dd11eOjLH3qsKgfqTIYj5c5k8nPirkx-7e4p0-xmDlJdc664o7ZbBCZnA2f-sfcjNTMOMNZ-vSs1-kiT2pFxHVKCvxhtj2vinvjF7LCH2usavEaTvp21GGBoWrs_P5c7in2m-kObyo9JlXSU4eG4YcdK_LxUlXPXre07IOP9TJMKpEjJozCpwYHlEZn7TbZR6EfcA5PLjp3qVx-qSeAXf9QTd8qvH6SJdFrlkKUAWZFOlUhv2iEWTl8o1sSD",
+              "widthPx": 780
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "P Dilinika",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUtI_iJRvDSdexN-sRuckECJwgGxfb2CjlqUyRv0SfObvyRyrvz=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/113001133118614249513"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIABIhD-mgiCU1VzM0r3qpDDmYRj&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIABIhD-mgiCU1VzM0r3qpDDmYRj!2e10!4m2!3m1!1s0x3afe3855cf3d4d4b:0x349c8bce8ebdd0b5",
+              "heightPx": 4032,
+              "name": "places/ChIJS009z1U4_joRtdC9js6LnDQ/photos/Aa-ngMZSQ1Ur2LWEcjg42JDRj3C-QSBg4nrQvdj9YzmjZRL43v2Rnx2tePZBMT8DX7CpcX-LJwVixGt6m-cmVPcwQ4lpkGx0Fc1CR7sOElv80Cwf2neq-JNpUExgdFkrHjBJvWfkngyj4QTE5AwzJwwuP-DsrKu48mV984i05Y37f5Ei931OAwikPYBQAnM2pOSsX3WUbjJ_jcESQDROJOxbfjYv3VieNU5vIajju1Klzbw73eTKwiIx61lyE7XwonUskTfk_zySPqyddbtC2I5qj1_rzti4_l0uHnCYheq2GAgNd6ZA8LAYElbHfvzEg96HEcG189PXQb2Kq1iJ9SAcjYbHhLKUpQcyGPzxhuTXFEf_9JAvOAYjch1ZQEw_Uf1RAmh4wAyO1R5yosSftoTQzY9JK8rfuewKi_K3b5WjB8oBXg",
+              "widthPx": 3024
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Nandula Jayamaha",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjV0hqv8flDDg46woAMHIGPeFCOInhGi7Og6G8GRmaP5IwPrD6O9VQ=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/107748770759320366660"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIDGgpKUhwE&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDGgpKUhwE!2e10!4m2!3m1!1s0x3afe3855cf3d4d4b:0x349c8bce8ebdd0b5",
+              "heightPx": 3599,
+              "name": "places/ChIJS009z1U4_joRtdC9js6LnDQ/photos/Aa-ngMYgxr5r3NXbuHadwqKk-30zp5lhkREJSgZP3b53e69752VjkDIKO_CsFi6WE_7HilJHFQGbGB9psbuSUQQ5GIPw34bob84moXX9UAx2cYCpjM5Vpb7My6UU8CsSRIuxR8H3k74h3-aRO77FXa-S1g7zc3napGOAGIX3Q4NQlFps1nMtxXWrk48U8Wq6NA0RjiPCA4BJfZThWz2MgV-1kTSIb-LHre7gFx7N-qKHqHAg_replklyprtThcLbZi_XiYy2znRWerNJNuqS0mxIzeK3wGxjvyqnEkzNWbcTiR_LC4Tccjo2rGXEe0VYNOTj1B4Uar9O1GfG2fQzfjEWy00hhlRowikcFrlHJFraooATiiAQ5cHR8z82L4KgkbFftkOn-iWKZDf8PMxjPiCRyH2DrPAa074",
+              "widthPx": 4800
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "lionel bost",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXye8_bXarlIXJB_rTuo3M0NJmyRSZJah7DfZ5w0D9OrYHa17N5rQ=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/101167751492403225002"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIC18rCLWg&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIC18rCLWg!2e10!4m2!3m1!1s0x3afe3855cf3d4d4b:0x349c8bce8ebdd0b5",
+              "heightPx": 3024,
+              "name": "places/ChIJS009z1U4_joRtdC9js6LnDQ/photos/Aa-ngMahpU8DutlAESgrbBAo2JjIMvQ2VZ6icqp_JvzuYGSC5Pvy4UTkVK_FibOqndEdJ5g1DV7t9eQaVQhwkfIGur28Txpm2rXvI2UEbb2yfRuyGHv7nhzAm_pF2eV_0ZsWpLKx3o9DTkc7V16j62WrtOSK92dfzzNcWKfHlssVuIyobo58o8eitAIDIitiUPFhQdu4PTuGJjrhvF-fLchQR9pvosVl1LHM6yvO0bYGrqi4C_sMIJjCn47063TPjGMvfAfxN_7tYRzhBDPZqrjRlW81XYI0GerPUiGcAUgHxeJSQv1G77H4egsW6mwf8aaGIeFZy2jIXIsBPnx7RjBByzv8sF6NFEeicWnqlAq40ctR7fOk1xGlgmGZjRcfCbmubILmgMh6GzOa-nST_yi0luk5ti4",
+              "widthPx": 4032
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Malith Devappriya",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXTegFNsvA8CeOyxtVWybzEfuaadpfHZTUqYnvEjUqEfHIrwb6x=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/112904356514567392016"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIABIhBBQujlfQOmgVxErswXuuk1&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIABIhBBQujlfQOmgVxErswXuuk1!2e10!4m2!3m1!1s0x3afe3855cf3d4d4b:0x349c8bce8ebdd0b5",
+              "heightPx": 4032,
+              "name": "places/ChIJS009z1U4_joRtdC9js6LnDQ/photos/Aa-ngMZy6pCNg0mZEFhEGVeoZcBATM_ve2t8JgviL1mcOMRXODVUupDSdThihvs2oZvrnvrSL43eKQCqFdJOnogj6clt2lsvFcj80CmsDLmEYR79SNcp-PGjORBbJCWg0nSG03_dcEqj-qCSZ3YNuzHa2ggwxwUidimZE8vDVB3T-X1B8EZQOSHrdcGr6WKW34pdQrB1TFBCggBslYn7Gzn-lfUR44oPX5veWGEV8dGEh_K2KOpMeqiE8uh160-_YMXYGhTu_iOYlC099qTSXYPhubvCrQEiO6vbKwkU5mTNjEKxlhkSA4mGFEEK197VYcVddQuDYn43B8mMae6UEDIgikFLJ4AfSOEZGvqGmL6zEMNmnA3wD7HUuZ0rrzTKETfpLu5akdjaYuq8ggN9JoQTOg1gsQdWFrfbLxEQMkX5zt59WA",
+              "widthPx": 3024
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Thanuja Perera",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWISc3pLAcQ_WIj1S_vONEAE1-lsA2ToPjL_vbPJShjlYHt3CwA_g=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/105366977781697466974"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIABIhBGG7BON75QD9IezibNjaLv&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIABIhBGG7BON75QD9IezibNjaLv!2e10!4m2!3m1!1s0x3afe3855cf3d4d4b:0x349c8bce8ebdd0b5",
+              "heightPx": 4000,
+              "name": "places/ChIJS009z1U4_joRtdC9js6LnDQ/photos/Aa-ngMYka3Mwc9sr9M_1sgv5DurLI56-psbxLUBk7Y7cbVFajA4gJRNaIiGrBPzTUtuuvQCVZMGsGtSzgq7C4s0_YEUdgfy0cSLZ12f8pn-Ps3B-D33W5I7CivyH7dZCbs60AZzcB5fNlUm0HJfIB8-ep2SfFtWVi_TEDh_ZJLPjTCqj6NV53QbrmUqDuyQTDydKvaM2IxI-6CzZqofQg3gLxm3SHb2sA-b_lAPpAH95knKrACeIZ_LBpiJ3RkuGrhpa0cuqRLJcxccnZBVpli4p_StylpaB77SkhB1HjIA8TD4Lo4Exnh6eEbY43_xtJ2E1OCDiQquEjHAGseZz-d7XlMYJC6rYyflJOJ6WY_-VkyoirTeoI2Wabc_yrBJCNstQZBq_ZzyPhQVmAjln7gIZVzxa4gqkMBhBadKPCfhz82D0",
+              "widthPx": 1848
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "P Dilinika",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUtI_iJRvDSdexN-sRuckECJwgGxfb2CjlqUyRv0SfObvyRyrvz=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/113001133118614249513"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIABIhAjPlrf2o7nE7MQb33tIpW1&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIABIhAjPlrf2o7nE7MQb33tIpW1!2e10!4m2!3m1!1s0x3afe3855cf3d4d4b:0x349c8bce8ebdd0b5",
+              "heightPx": 4032,
+              "name": "places/ChIJS009z1U4_joRtdC9js6LnDQ/photos/Aa-ngMYyNbR96mKtrkdE6Rm-seDUmRtX9w2RLcr348Y1nlUB5Qmtl8fO5fKfiPMsi3W2w0bXY58FXI9t4pRka0TWipYKNCIGOwIMgFmh9kk09kfR-jcPsvu2rcZbMv-fIDtc8IBxNUikeEiim8QCr5CamhqN_uKE5jgQ26hSoXrO_IWyX3nneCX_LvzAdgMFs_NLH7TuxPFiUev191Vb_vEM0F8RKPQ2gyjXXwZI2uFeRaXdI-eUKXPb6buZOxb7fpGV7RWT2v7Ynf4zoCBvAEyCA5XYNeqrKHyeI8GfdxSsfKYke_dGA0TFg-4i-VFw2TQwasQ3RfYtjg9JIzXKn_akVj4jUpu9gtmgXby5AzuCKkP56Z7F1hdXSCibdVLrIYdKNo_fk77Db96vTe9-DIJkWt-0XSnOETIMpF9MQV-GhCWx9Q",
+              "widthPx": 3024
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Yasiru Deshan",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjV4fQrNJ02-tc4g-TE5G8wpZ-EBk_xGr0kD3UKof6CeHbki_ztx=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/104326984747242656028"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIABIhAmZqWMN8NHMMZaPY9vANEd&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIABIhAmZqWMN8NHMMZaPY9vANEd!2e10!4m2!3m1!1s0x3afe3855cf3d4d4b:0x349c8bce8ebdd0b5",
+              "heightPx": 4800,
+              "name": "places/ChIJS009z1U4_joRtdC9js6LnDQ/photos/Aa-ngMa9ijzuXdt_yKqBtY8qJaaaYdYVxiRd5v9N7CITGK4nlaxuX29gX78dJkx8m-Su0NWsbH0bSz7rNHAYG_wnX3zDiIEkSFhuXn-qvFmLmlBJXZcfh9ZsLX7GW0OpEuc_w6ElD9Yd5B23q7FNKxGm6_5cKZDUXNaDfy1K4hBBlV_ixFFKVpSeEDVcEaQ3rXJHzqSyMZffVEOB_fqNd0R4INuCacn06jY4slnjvSgAj-lbO-PC-v_ic82zWFjd6ThoSoZLUtJ7h9NgUct4ll1c68CO_1wZ6SoAMMxwcFF7FekxZ2uu4UChBegdUcna4iUATiT_SKtYLzgVPZ1tgxuF3twPT0bu6nIPehCQzniJFGwbWX2oQ4MxfYbzq_dQmaXIofVglatDMCFvd0ZQA2-HlluSUIpi9O2Rp8BVUHWt5WRjNg",
+              "widthPx": 3600
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Duminda Chathuranga",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWW46rkluC5K07R6zbY04TmAoCOAFj7laq396YD8N4VIld65xxCZQ=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/117643726295408737273"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgICkyIbxkgE&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICkyIbxkgE!2e10!4m2!3m1!1s0x3afe3855cf3d4d4b:0x349c8bce8ebdd0b5",
+              "heightPx": 1536,
+              "name": "places/ChIJS009z1U4_joRtdC9js6LnDQ/photos/Aa-ngMaKp3XrmBkBe_5mJzd-7LbUGAoREQ_fQBxL4QxX0mH8noCWMTH_SsOT5L22vfT_MzmyZWtEre5xk4kRGPBkAfpjMvWGtjjEVPhK7cZNmjuQ8iCMfRB90p5vr1defTY08CECnQm9BplxuxwBvKCxeTEcyA4sbxMHzc4WCymizQJt41p6eJkwS3fwxpPTtYCIeZ6jvjwn7VxojiifLQXPaVCEpGFNCtXmsFZ2rWCjsRvKvPJXlocsNmQlZN9z6zN_5mk0nmV9_ChAVoRaIAKYu0gTjNcrJm2O1SrTfdTMcOcwnMAiPyBtorcSMyvUtVF-NCzm3qGzG33LUAhUE0_5UFiOmtkJo2-qyRr7C8RlOvlnE1el5PJ9_PNo8eKBGBM7zCxL2z5TWpL8QMMnb4hTNLdJ8MWr0d8",
+              "widthPx": 2560
+            }
+          ],
+          "primaryType": "historical_landmark",
+          "rating": 4.4,
+          "regularOpeningHours": {
+            "openNow": true,
+            "periods": [
+              {
+                "open": {
+                  "day": 0,
+                  "hour": 0,
+                  "minute": 0
+                }
+              }
+            ],
+            "weekdayDescriptions": [
+              "Monday: Open 24 hours",
+              "Tuesday: Open 24 hours",
+              "Wednesday: Open 24 hours",
+              "Thursday: Open 24 hours",
+              "Friday: Open 24 hours",
+              "Saturday: Open 24 hours",
+              "Sunday: Open 24 hours"
+            ]
+          },
+          "types": [
+            "historical_landmark",
+            "tourist_attraction",
+            "historical_place",
+            "point_of_interest",
+            "establishment"
+          ],
+          "userRatingCount": 229
+        },
+        "error": null,
+        "provenance": {
+          "google_place_id": "ChIJS009z1U4_joRtdC9js6LnDQ",
+          "source": "google_places_details"
+        }
+      },
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:10",
+      "query": "Delft Dutch Fort, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=10",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=10"
+    }
+  ]
+}
