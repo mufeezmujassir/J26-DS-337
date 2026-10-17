@@ -115,16 +115,22 @@
       "original_url": "https://srilanka.travel/what-to-do",
       "canonical_url": "https://srilanka.travel/what-to-do",
       "visible_link_text": "WHAT TO DO",
-      "primary_category": "other_unknown",
-      "secondary_tags": [],
-      "knowledge_base_categories": [],
+      "primary_category": "activity_listing",
+      "secondary_tags": [
+        "activity",
+        "listing"
+      ],
+      "knowledge_base_categories": [
+        "activity",
+        "listing"
+      ],
       "classification_evidence": [
         "path=what-to-do",
         "link_text=what to do",
-        "no deterministic category rule matched"
+        "known activity listing path"
       ],
       "external_source_id": null,
-      "research_relevance_score": 20,
+      "research_relevance_score": 92,
       "proposed_acquisition_priority": 5,
       "authorization_status": "discovered_unapproved",
       "human_review_status": "pending_review",

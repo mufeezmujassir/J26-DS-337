@@ -1,0 +1,26 @@
+{
+  "stage": "10.1.3E_gate_5b_3_batch_configuration_fix",
+  "network_requests_performed": 0,
+  "base_authorization_config": "config/srilanka_tourism_pilot.local.json",
+  "base_exact_url_count": 1,
+  "base_exact_urls_scope": "homepage_only",
+  "existing_batch_02_plan": "config/srilanka_tourism_gate5b3_batch_02.local.json",
+  "observed_problems": [
+    "approval_reference_missing",
+    "researcher_execution_approved_at_missing",
+    "all_urls_discovered_unapproved",
+    "batch_id_missing",
+    "source_manifest_provenance_missing",
+    "batch_urls_absent_from_base_homepage_exact_url_allowlist"
+  ],
+  "correct_workflow": {
+    "base_config": "preserved unchanged",
+    "batch_plan": "generated with source-manifest path and SHA-256",
+    "batch_authorization_config": "generated separately with exactly the selected at-most-ten URLs",
+    "validation": "requires plan URLs and batch authorization exact URLs to match"
+  },
+  "source_manifest": "data/reports/stage_10_1_3e_gate5b2_catalogue_seed_01_corrected_v5_full_discovery_manifest.json",
+  "candidate_urls_in_batch_02": 10,
+  "postgresql_writes": false,
+  "qdrant_writes": false
+}

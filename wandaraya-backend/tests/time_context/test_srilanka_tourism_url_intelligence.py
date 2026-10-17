@@ -18,6 +18,10 @@ from app.time_context.governance.url_intelligence import (
     ("https://srilanka.travel/attraction?attraction_id=163", "Yala", TourismUrlCategory.ATTRACTION_DETAIL),
     ("https://srilanka.travel/index.php?route=information/information&information_id=223", "Public Holidays in Sri Lanka", TourismUrlCategory.PUBLIC_HOLIDAYS_POYA),
     ("https://srilanka.travel/index.php?route=event/upcoming&dev=asd", "Upcoming Events", TourismUrlCategory.EVENTS_FESTIVALS),
+    ("https://srilanka.travel/what-to-do", "What to do", TourismUrlCategory.ACTIVITY_LISTING),
+    ("https://srilanka.travel/sitemap", "Site map", TourismUrlCategory.NAVIGATION_DISCOVERY),
+    ("https://srilanka.travel/terms-and-conditions", "Terms", TourismUrlCategory.LEGAL_GOVERNANCE),
+    ("https://srilanka.travel/tourist-guides", "Tourist guides", TourismUrlCategory.ACCOMMODATION_SERVICES),
 ])
 def test_manually_labelled_regression_sample(url, text, expected):
     assert classify_tourism_url(url, text)[0] is expected

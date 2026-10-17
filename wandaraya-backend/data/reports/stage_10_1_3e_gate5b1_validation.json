@@ -1,0 +1,18 @@
+{
+  "stage": "10.1.3E_gate_5b_1",
+  "status": "detail_pilot_prepared_awaiting_researcher_execution",
+  "listing_report_repaired": true,
+  "listing_records_repaired": 1,
+  "detail_pages_acquired": 0,
+  "prepared_detail_urls": [
+    "https://srilanka.travel/attraction?attraction_id=163",
+    "https://srilanka.travel/attraction?attraction_id=160"
+  ],
+  "network_requests_during_implementation": 0,
+  "production_database_writes": 0,
+  "qdrant_writes": 0,
+  "tests": {
+    "passed": 38,
+    "failed": 0
+  }
+}

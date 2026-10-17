@@ -1,0 +1,32 @@
+{
+  "batch_id": "batch01_reacquire_v2",
+  "artifacts": [
+    {
+      "source_url": "https://srilanka.travel/attraction?attraction_id=163",
+      "file": "srilanka_tourism_attraction_163_5603df85573528c666d96a8aec31a07873bc0825c7a15f158523f34af6a2c943.html",
+      "content_sha256": "5603df85573528c666d96a8aec31a07873bc0825c7a15f158523f34af6a2c943",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "response_size_bytes": 141780,
+      "retrieved_at": "2026-10-16 13:15:00.119077+00:00"
+    },
+    {
+      "source_url": "https://srilanka.travel/attraction?attraction_id=160",
+      "file": "srilanka_tourism_attraction_160_801cce6b10de0cb64c68568a9987aadc9701df003a41ab2a46953905e40117d5.html",
+      "content_sha256": "801cce6b10de0cb64c68568a9987aadc9701df003a41ab2a46953905e40117d5",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "response_size_bytes": 150460,
+      "retrieved_at": "2026-10-16 13:15:03.375601+00:00"
+    },
+    {
+      "source_url": "https://srilanka.travel/attraction?attraction_id=153",
+      "file": "srilanka_tourism_attraction_153_200616f08528fd12cc378655cb2627b50a7ef54cd272ee1e201a7d19ee29e5c4.html",
+      "content_sha256": "200616f08528fd12cc378655cb2627b50a7ef54cd272ee1e201a7d19ee29e5c4",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "response_size_bytes": 149420,
+      "retrieved_at": "2026-10-16 13:15:06.647889+00:00"
+    }
+  ]
+}

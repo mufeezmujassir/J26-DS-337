@@ -14,6 +14,7 @@ from pydantic import BaseModel, Field
 class TourismUrlCategory(StrEnum):
     ATTRACTION_DETAIL = "attraction_detail"
     ATTRACTION_LISTING = "attraction_listing"
+    ACTIVITY_LISTING = "activity_listing"
     DESTINATION = "destination_geographic_information"
     NATURE_WILDLIFE = "nature_wildlife"
     BEACH_MARINE = "beach_marine_activities"
@@ -27,6 +28,8 @@ class TourismUrlCategory(StrEnum):
     ACCOMMODATION_SERVICES = "accommodation_tourism_services"
     OPERATING_INFORMATION = "operating_information"
     ADMINISTRATIVE_CORPORATE = "administrative_corporate_information"
+    NAVIGATION_DISCOVERY = "navigation_discovery"
+    LEGAL_GOVERNANCE = "legal_governance"
     OTHER_UNKNOWN = "other_unknown"
 
 
@@ -134,6 +137,16 @@ def classify_tourism_url(original_url: str, visible_link_text: str | None = None
         return TourismUrlCategory.OPERATING_INFORMATION, ["information_detail"], evidence + ["information_id query parameter"]
     if path in {"attractions", "top-attractions"}:
         return TourismUrlCategory.ATTRACTION_LISTING, ["attraction", "listing"], evidence + ["known attraction listing path"]
+    if path == "what-to-do":
+        return TourismUrlCategory.ACTIVITY_LISTING, ["activity", "listing"], evidence + ["known activity listing path"]
+    if path == "sitemap":
+        return TourismUrlCategory.NAVIGATION_DISCOVERY, ["discovery"], evidence + ["site navigation path"]
+    if path == "terms-and-conditions":
+        return TourismUrlCategory.LEGAL_GOVERNANCE, ["governance"], evidence + ["legal governance path"]
+    if path == "tourist-guides":
+        return TourismUrlCategory.ACCOMMODATION_SERVICES, ["tourism_service", "guide"], evidence + ["tourism service path"]
+    if path == "bliss-nature-trails":
+        return TourismUrlCategory.OTHER_UNKNOWN, ["path_link_text_conflict", "manual_review_required"], evidence + ["path/link-text conflict requires content review"]
     # Beach must precede holiday to avoid the known pristine-beach-holidays error.
     if _has_any(combined, ("beach", "whale-watching", "whale watching", "marine", "snorkel", "dive")):
         return TourismUrlCategory.BEACH_MARINE, ["outdoor", "water_activities"], evidence + ["beach or marine keyword"]
@@ -173,6 +186,7 @@ def relevance_score(category: TourismUrlCategory) -> int:
     return {
         TourismUrlCategory.ATTRACTION_DETAIL: 100,
         TourismUrlCategory.ATTRACTION_LISTING: 95,
+        TourismUrlCategory.ACTIVITY_LISTING: 92,
         TourismUrlCategory.NATURE_WILDLIFE: 90,
         TourismUrlCategory.BEACH_MARINE: 90,
         TourismUrlCategory.ADVENTURE_OUTDOOR: 88,
@@ -186,6 +200,8 @@ def relevance_score(category: TourismUrlCategory) -> int:
         TourismUrlCategory.ACCOMMODATION_SERVICES: 60,
         TourismUrlCategory.OPERATING_INFORMATION: 50,
         TourismUrlCategory.ADMINISTRATIVE_CORPORATE: 10,
+        TourismUrlCategory.NAVIGATION_DISCOVERY: 10,
+        TourismUrlCategory.LEGAL_GOVERNANCE: 5,
         TourismUrlCategory.OTHER_UNKNOWN: 20,
     }[category]
 

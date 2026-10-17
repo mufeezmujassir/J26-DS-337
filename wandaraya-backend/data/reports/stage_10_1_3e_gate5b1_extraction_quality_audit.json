@@ -1,0 +1,64 @@
+{
+  "stage": "10.1.3E_gate_5b_1_extraction_quality_fix",
+  "status": "implemented_pending_controlled_fixture_reacquisition",
+  "batch_01": {
+    "approved_detail_urls": [
+      "https://srilanka.travel/attraction?attraction_id=163",
+      "https://srilanka.travel/attraction?attraction_id=160",
+      "https://srilanka.travel/attraction?attraction_id=153"
+    ],
+    "http_statuses": [200, 200, 200],
+    "raw_html_persisted": false,
+    "baseline_report": "data/reports/stage_10_1_3e_gate5b_extraction_results.json",
+    "baseline_completeness": {
+      "records": 3,
+      "fields_observed_or_null": 51,
+      "populated_source_supported_fields": 9,
+      "missing_or_unknown_fields": 42,
+      "completeness_ratio": 0.1765
+    },
+    "baseline_populated_fields_per_page": [
+      "title",
+      "source_attraction_id",
+      "attraction_name"
+    ]
+  },
+  "correction": {
+    "adapter_version": "gate5b_v2",
+    "raw_fixture_retention": "immutable SHA-256-addressed HTML fixtures with capture manifest",
+    "description_evidence": [
+      "[data-attraction-description]",
+      ".attraction-description",
+      ".attraction-details .description",
+      "#attraction-description",
+      "[itemprop='description']",
+      "application/ld+json description"
+    ],
+    "labelled_field_evidence": ["table th/td", "definition-list dt/dd"],
+    "generic_paragraphs_used_for_detail_description": false,
+    "selector_diagnostics_recorded": true,
+    "postgresql_writes": false,
+    "qdrant_writes": false
+  },
+  "after_completeness": {
+    "status": "not_measured",
+    "reason": "Batch 01 raw HTML was not retained; no live re-acquisition was performed during this fix."
+  },
+  "remaining_unknown_fields_until_fixture_review": [
+    "description",
+    "location_text",
+    "district",
+    "attraction_category",
+    "activities",
+    "features_highlights",
+    "opening_hours",
+    "closing_days",
+    "entry_fees",
+    "ticketing_information",
+    "recommended_visiting_periods",
+    "seasonal_guidance",
+    "accessibility_information",
+    "contact_details"
+  ],
+  "next_action": "Run an explicitly approved, unique batch-id re-acquisition, then run the offline capture-batch extractor."
+}

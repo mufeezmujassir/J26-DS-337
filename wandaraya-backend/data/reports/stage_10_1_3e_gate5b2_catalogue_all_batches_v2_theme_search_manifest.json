@@ -1,0 +1,3538 @@
+{
+  "observed_theme_search_urls": [],
+  "pages": [
+    {
+      "source_url": "https://srilanka.travel/tourist-attractions?page=1",
+      "retrieved_at": "2026-10-16T18:18:38.299520Z",
+      "content_sha256": "dd415ac1a6f5c0e1a38748eeb87f763cbb5eb0463cba11e417cca417177e1172",
+      "main_content_sha256": "9efc5c192f37567281e4747ce937bd8e982a630a19516a3769baba14dcc1b0ba",
+      "cards": [
+        {
+          "attraction_name": "Rajagala",
+          "raw_source_name": "Rajagala",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=1",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=103",
+          "external_source_id": "srilanka_tourism_attraction:103",
+          "listing_description": "A monastery in perfect form amidst the jungle",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 1,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=103",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Piyangala Forest Hermitage",
+          "raw_source_name": "Piyangala Forest Hermitage",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=1",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=106",
+          "external_source_id": "srilanka_tourism_attraction:106",
+          "listing_description": "A forest hermitage of ancient tradition",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 1,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=106",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Jathika Namal Uyana",
+          "raw_source_name": "Jathika Namal Uyana",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=1",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=28",
+          "external_source_id": "srilanka_tourism_attraction:28",
+          "listing_description": "The largest Na-forest and pink quartz mountain in Asia\"",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 1,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=28",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Ridee Viharaya",
+          "raw_source_name": "Ridee Viharaya",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=1",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=90",
+          "external_source_id": "srilanka_tourism_attraction:90",
+          "listing_description": "King Dutugemunu found a silver (ridi) ore mine which was used to finance the building of the gigantic Ruwanweli Seya .",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 1,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=90",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Unawatuna",
+          "raw_source_name": "Unawatuna",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=1",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=162",
+          "external_source_id": "srilanka_tourism_attraction:162",
+          "listing_description": "Unawatuna is a coastal town in Galle district of Sri Lanka. Unawatuna is a major tourist attraction in Sri Lanka and famous for its beautiful beach and corals.",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 1,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=162",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Delft island",
+          "raw_source_name": "Delft island ",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=1",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=171",
+          "external_source_id": "srilanka_tourism_attraction:171",
+          "listing_description": "Neduntheevu or Neduntivu an island in the Palk Strait, northern Sri Lanka. It is situated in 288 kilometers away from Colombo.",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 1,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=171",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Okanda Beach",
+          "raw_source_name": "Okanda Beach",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=1",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=99",
+          "external_source_id": "srilanka_tourism_attraction:99",
+          "listing_description": "One of the top surfs in the Eastern coast.",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 1,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=99",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Panavitiya Ambalama",
+          "raw_source_name": "Panavitiya Ambalama",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=1",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=36",
+          "external_source_id": "srilanka_tourism_attraction:36",
+          "listing_description": "Famous for wood carving.",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 1,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=36",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Colombo Lighthouse",
+          "raw_source_name": "Colombo Lighthouse",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=1",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=208",
+          "external_source_id": "srilanka_tourism_attraction:208",
+          "listing_description": "Lighthouse is one of the attractive place in Colombo",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 1,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=208",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Dome Houses",
+          "raw_source_name": "Dome Houses",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=1",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=144",
+          "external_source_id": "srilanka_tourism_attraction:144",
+          "listing_description": "Dome shaped dwellings constructed for tsunami displaced.",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 1,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=144",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Alankuda Beach",
+          "raw_source_name": "Alankuda Beach",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=1",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=51",
+          "external_source_id": "srilanka_tourism_attraction:51",
+          "listing_description": "A stretch beach recently developed in the Kalpitiya",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 1,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=51",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Pettah Market",
+          "raw_source_name": "Pettah Market",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=1",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=212",
+          "external_source_id": "srilanka_tourism_attraction:212",
+          "listing_description": "Main market in Sri Lanka that can get a new experience.",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 1,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=212",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        }
+      ],
+      "pagination_urls": [
+        "https://srilanka.travel/tourist-attractions?page=10",
+        "https://srilanka.travel/tourist-attractions?page=11",
+        "https://srilanka.travel/tourist-attractions?page=15",
+        "https://srilanka.travel/tourist-attractions?page=2",
+        "https://srilanka.travel/tourist-attractions?page=3",
+        "https://srilanka.travel/tourist-attractions?page=4",
+        "https://srilanka.travel/tourist-attractions?page=5",
+        "https://srilanka.travel/tourist-attractions?page=6",
+        "https://srilanka.travel/tourist-attractions?page=7",
+        "https://srilanka.travel/tourist-attractions?page=8",
+        "https://srilanka.travel/tourist-attractions?page=9"
+      ],
+      "theme_search_urls": [],
+      "category_filter_urls": [],
+      "destination_filter_urls": [],
+      "total_page_count": 15,
+      "total_attraction_count": 169,
+      "javascript_or_ajax_indicators": [
+        "script_src_present"
+      ],
+      "duplicate_card_references": 0,
+      "pagination_content_duplicate": false,
+      "failed": false
+    },
+    {
+      "source_url": "https://srilanka.travel/tourist-attractions?page=10",
+      "retrieved_at": "2026-10-16T18:18:41.448599Z",
+      "content_sha256": "f1d0510506da57bdc07349ca66b8c5d60fdfa8f00141b7037af990ca61d53a7a",
+      "main_content_sha256": "d163daf3bb1eb2958999d82236ded0c74ec65fccfc5f33d166cb15a38fbd7e9e",
+      "cards": [
+        {
+          "attraction_name": "Diyatha Uyana",
+          "raw_source_name": "Diyatha Uyana",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=10",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=201",
+          "external_source_id": "srilanka_tourism_attraction:201",
+          "listing_description": "Another gorgeous place in the city of Battaramulla.",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 10,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=201",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Bowattegala Monastery",
+          "raw_source_name": "Bowattegala Monastery",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=10",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=111",
+          "external_source_id": "srilanka_tourism_attraction:111",
+          "listing_description": "A monastery built by the ten Royal brothers of South.",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 10,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=111",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Veddagala",
+          "raw_source_name": "Veddagala",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=10",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=138",
+          "external_source_id": "srilanka_tourism_attraction:138",
+          "listing_description": "A ruined monastery atop a mountain",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 10,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=138",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Gal Oya National Park",
+          "raw_source_name": "Gal Oya National Park",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=10",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=132",
+          "external_source_id": "srilanka_tourism_attraction:132",
+          "listing_description": "A national park in the south-east of Sri Lanka.",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 10,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=132",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Attanagalla Raja Maha Viharava",
+          "raw_source_name": "Attanagalla Raja Maha Viharava",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=10",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=59",
+          "external_source_id": "srilanka_tourism_attraction:59",
+          "listing_description": "Immortalizing the pious King of Lanka.",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 10,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=59",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Hot Water Springs in Wahawa",
+          "raw_source_name": "Hot Water Springs in Wahawa",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=10",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=143",
+          "external_source_id": "srilanka_tourism_attraction:143",
+          "listing_description": "Eighteen hot water springs scattered within a village.",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 10,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=143",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Delft Temple",
+          "raw_source_name": "Delft Temple",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=10",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=12",
+          "external_source_id": "srilanka_tourism_attraction:12",
+          "listing_description": "The first stop of Arhat Sangamitta Their",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 10,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=12",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Sigiriya",
+          "raw_source_name": "Sigiriya",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=10",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=160",
+          "external_source_id": "srilanka_tourism_attraction:160",
+          "listing_description": "Sigiriya is located in matale district in the central province of sri lanka. It is within the cultural triangle which includes five of the seven world heritage sites in sri lanka.",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 10,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=160",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Ratmullukanda Viharaya",
+          "raw_source_name": "Ratmullukanda Viharaya",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=10",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=89",
+          "external_source_id": "srilanka_tourism_attraction:89",
+          "listing_description": "The highest peak that can be reached by a vehicle",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 10,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=89",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Dambulla CaveTemple",
+          "raw_source_name": "Dambulla CaveTemple",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=10",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=157",
+          "external_source_id": "srilanka_tourism_attraction:157",
+          "listing_description": "Dambulla cave temple and, also known as Golden Temple of Dambulla is a world heritage site, situated in central part of the Sri Lanka. This dambulla cave temple situated in 148km e",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 10,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=157",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Weweldeniya",
+          "raw_source_name": "Weweldeniya",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=10",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=61",
+          "external_source_id": "srilanka_tourism_attraction:61",
+          "listing_description": "A Piece of tradition.",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 10,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=61",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Bandaraduwa",
+          "raw_source_name": "Bandaraduwa",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=10",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=145",
+          "external_source_id": "srilanka_tourism_attraction:145",
+          "listing_description": "The adopted home of Sri Lankan Indigenous community.",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 10,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=145",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        }
+      ],
+      "pagination_urls": [
+        "https://srilanka.travel/tourist-attractions?page=1",
+        "https://srilanka.travel/tourist-attractions?page=11",
+        "https://srilanka.travel/tourist-attractions?page=12",
+        "https://srilanka.travel/tourist-attractions?page=13",
+        "https://srilanka.travel/tourist-attractions?page=14",
+        "https://srilanka.travel/tourist-attractions?page=15",
+        "https://srilanka.travel/tourist-attractions?page=5",
+        "https://srilanka.travel/tourist-attractions?page=6",
+        "https://srilanka.travel/tourist-attractions?page=7",
+        "https://srilanka.travel/tourist-attractions?page=8",
+        "https://srilanka.travel/tourist-attractions?page=9"
+      ],
+      "theme_search_urls": [],
+      "category_filter_urls": [],
+      "destination_filter_urls": [],
+      "total_page_count": 15,
+      "total_attraction_count": 169,
+      "javascript_or_ajax_indicators": [
+        "script_src_present"
+      ],
+      "duplicate_card_references": 0,
+      "pagination_content_duplicate": false,
+      "failed": false
+    },
+    {
+      "source_url": "https://srilanka.travel/tourist-attractions?page=11",
+      "retrieved_at": "2026-10-16T18:18:44.596592Z",
+      "content_sha256": "31beff21b3b0a9d74fccba9e01d71ff799de0a3c656588a2b6b326e482ada7c4",
+      "main_content_sha256": "c270357a54b5ca943fd1f1f7cdb221d2f0fcdb5339729b6ee93b76e1ac1f00ba",
+      "cards": [
+        {
+          "attraction_name": "The Nagapooshani Amman Kovil",
+          "raw_source_name": "The Nagapooshani Amman Kovil ",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=11",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=19",
+          "external_source_id": "srilanka_tourism_attraction:19",
+          "listing_description": "One of the prominent 64 Shakti Peethams.",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 11,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=19",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "The Steaming Hot Water Wells of Mahaoya",
+          "raw_source_name": "The Steaming Hot Water Wells of Mahaoya",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=11",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=140",
+          "external_source_id": "srilanka_tourism_attraction:140",
+          "listing_description": "The hottest natural hot water source in the country",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 11,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=140",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Viharamahadevi Park",
+          "raw_source_name": "Viharamahadevi Park",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=11",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=216",
+          "external_source_id": "srilanka_tourism_attraction:216",
+          "listing_description": "Viharamahadevi Park is the oldest and largest park in the central of Colombo.",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 11,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=216",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Maligathenna Raja Maha Viharaya",
+          "raw_source_name": "Maligathenna Raja Maha Viharaya",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=11",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=69",
+          "external_source_id": "srilanka_tourism_attraction:69",
+          "listing_description": "A refuge of sacred relics and Kings",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 11,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=69",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Rawana ella and Ravana falls",
+          "raw_source_name": "Rawana ella and Ravana falls",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=11",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=188",
+          "external_source_id": "srilanka_tourism_attraction:188",
+          "listing_description": "This is the one of most popular and elegant water fall in Sri Lanka.",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 11,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=188",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Sinharaja",
+          "raw_source_name": "Sinharaja",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=11",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=151",
+          "external_source_id": "srilanka_tourism_attraction:151",
+          "listing_description": "Sinharaja Forest Reserve is a national park and a biodiversity hotspot in Sri Lanka. It is of international significance and has been designated a Biosphere Reserve and World Herit",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 11,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=151",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Asupini Ella",
+          "raw_source_name": "Asupini Ella",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=11",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=185",
+          "external_source_id": "srilanka_tourism_attraction:185",
+          "listing_description": "Asupini Ella or Asupini Falls is a main waterfall of Kegalle District.",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 11,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=185",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Craft Village",
+          "raw_source_name": "Craft Village",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=11",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=211",
+          "external_source_id": "srilanka_tourism_attraction:211",
+          "listing_description": "This village is a structure of Sri Lankan Rural cultural village.",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 11,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=211",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Sangamankanda Point",
+          "raw_source_name": "Sangamankanda Point",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=11",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=126",
+          "external_source_id": "srilanka_tourism_attraction:126",
+          "listing_description": "The Eastern most point of the country.",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 11,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=126",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Kumana National Park",
+          "raw_source_name": "Kumana National Park",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=11",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=166",
+          "external_source_id": "srilanka_tourism_attraction:166",
+          "listing_description": "Kumana National Park in Sri Lanka is renowned for its avifauna, particularly its large flocks of migratory waterfowl and wading birds. The park is 391 kilometers (243 mi) southeast",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 11,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=166",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Baron's Cap or Thoppigala",
+          "raw_source_name": "Baron's Cap or Thoppigala",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=11",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=5",
+          "external_source_id": "srilanka_tourism_attraction:5",
+          "listing_description": "An ancient Buddhist monastery and a present day war memorial",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 11,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=5",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Whale Watching in Mirissa",
+          "raw_source_name": "Whale Watching in Mirissa",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=11",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=6",
+          "external_source_id": "srilanka_tourism_attraction:6",
+          "listing_description": "Whale and dolphin watching in south sea.",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 11,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=6",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        }
+      ],
+      "pagination_urls": [
+        "https://srilanka.travel/tourist-attractions?page=1",
+        "https://srilanka.travel/tourist-attractions?page=10",
+        "https://srilanka.travel/tourist-attractions?page=12",
+        "https://srilanka.travel/tourist-attractions?page=13",
+        "https://srilanka.travel/tourist-attractions?page=14",
+        "https://srilanka.travel/tourist-attractions?page=15",
+        "https://srilanka.travel/tourist-attractions?page=5",
+        "https://srilanka.travel/tourist-attractions?page=6",
+        "https://srilanka.travel/tourist-attractions?page=7",
+        "https://srilanka.travel/tourist-attractions?page=8",
+        "https://srilanka.travel/tourist-attractions?page=9"
+      ],
+      "theme_search_urls": [],
+      "category_filter_urls": [],
+      "destination_filter_urls": [],
+      "total_page_count": 15,
+      "total_attraction_count": 169,
+      "javascript_or_ajax_indicators": [
+        "script_src_present"
+      ],
+      "duplicate_card_references": 0,
+      "pagination_content_duplicate": false,
+      "failed": false
+    },
+    {
+      "source_url": "https://srilanka.travel/tourist-attractions?page=15",
+      "retrieved_at": "2026-10-16T18:18:47.717397Z",
+      "content_sha256": "d320ba881c6546acc14c9002abc5ef2c5fd589ad5a01bf84e9ae5e8926fd00aa",
+      "main_content_sha256": "2d3ddfc004ca7133d085d609ab62fd3e674904f91e04547a76314c8b72d8ba3b",
+      "cards": [
+        {
+          "attraction_name": "Kudagala Forest Reserve & Monastery",
+          "raw_source_name": "Kudagala Forest Reserve & Monastery",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=15",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=129",
+          "external_source_id": "srilanka_tourism_attraction:129",
+          "listing_description": "A monastery with cave murals.",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 15,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=129",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        }
+      ],
+      "pagination_urls": [
+        "https://srilanka.travel/tourist-attractions?page=1",
+        "https://srilanka.travel/tourist-attractions?page=10",
+        "https://srilanka.travel/tourist-attractions?page=11",
+        "https://srilanka.travel/tourist-attractions?page=12",
+        "https://srilanka.travel/tourist-attractions?page=13",
+        "https://srilanka.travel/tourist-attractions?page=14",
+        "https://srilanka.travel/tourist-attractions?page=5",
+        "https://srilanka.travel/tourist-attractions?page=6",
+        "https://srilanka.travel/tourist-attractions?page=7",
+        "https://srilanka.travel/tourist-attractions?page=8",
+        "https://srilanka.travel/tourist-attractions?page=9"
+      ],
+      "theme_search_urls": [],
+      "category_filter_urls": [],
+      "destination_filter_urls": [],
+      "total_page_count": 15,
+      "total_attraction_count": 169,
+      "javascript_or_ajax_indicators": [
+        "script_src_present"
+      ],
+      "duplicate_card_references": 0,
+      "pagination_content_duplicate": false,
+      "failed": false
+    },
+    {
+      "source_url": "https://srilanka.travel/tourist-attractions?page=2&theme=2",
+      "retrieved_at": "2026-10-16T18:18:50.864853Z",
+      "content_sha256": "4c79c93318d87e51335854e49a1e5d1e6cd127d14f9bdbdea58bc4517448ccb4",
+      "main_content_sha256": "23980d74a50dd2beee967a670b93d01a9c5283d071eb074d1fd63c625014be54",
+      "cards": [
+        {
+          "attraction_name": "Independence Memorial Hall",
+          "raw_source_name": "Independence Memorial Hall",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=2&theme=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=202",
+          "external_source_id": "srilanka_tourism_attraction:202",
+          "listing_description": "This building made for commemorate the brave soldiers in Sri Lanka who died in wars.",
+          "observed_theme_ids": [
+            "2"
+          ],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 2,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=202",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Dambulla CaveTemple",
+          "raw_source_name": "Dambulla CaveTemple",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=2&theme=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=157",
+          "external_source_id": "srilanka_tourism_attraction:157",
+          "listing_description": "Dambulla cave temple and, also known as Golden Temple of Dambulla is a world heritage site, situated in central part of the Sri Lanka. This dambulla cave temple situated in 148km e",
+          "observed_theme_ids": [
+            "2"
+          ],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 2,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=157",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Okanda Devalaya ( A Destination of Mass Pilgrim)",
+          "raw_source_name": " Okanda Devalaya ( A Destination of Mass Pilgrim)",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=2&theme=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=149",
+          "external_source_id": "srilanka_tourism_attraction:149",
+          "listing_description": "A temple of Lord Skanda on the Eastern coast.",
+          "observed_theme_ids": [
+            "2"
+          ],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 2,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=149",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Nagapabbatha Monastery",
+          "raw_source_name": "Nagapabbatha Monastery ",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=2&theme=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=105",
+          "external_source_id": "srilanka_tourism_attraction:105",
+          "listing_description": "A monastery amidst the wildlife sanctuary of Kumana.",
+          "observed_theme_ids": [
+            "2"
+          ],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 2,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=105",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Angurukaramulla Temple",
+          "raw_source_name": "Angurukaramulla Temple",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=2&theme=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=66",
+          "external_source_id": "srilanka_tourism_attraction:66",
+          "listing_description": "A portray of colors, faith and history.",
+          "observed_theme_ids": [
+            "2"
+          ],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 2,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=66",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Sri Shakhyasinharamaya",
+          "raw_source_name": "Sri Shakhyasinharamaya",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=2&theme=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=220",
+          "external_source_id": "srilanka_tourism_attraction:220",
+          "listing_description": "This is a One of Splendored temple in Colombo 14.",
+          "observed_theme_ids": [
+            "2"
+          ],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 2,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=220",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Sri Pada (Adam's Peak)",
+          "raw_source_name": "Sri Pada (Adam's Peak)",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=2&theme=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=150",
+          "external_source_id": "srilanka_tourism_attraction:150",
+          "listing_description": "Sri pada, or samanala kanda is 2243m tall conical mountain located in central in sri lanka.  This is the fourth highest mountain in sri lanka.",
+          "observed_theme_ids": [
+            "2"
+          ],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 2,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=150",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "DambakolaPatuna Viharaya",
+          "raw_source_name": "DambakolaPatuna Viharaya",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=2&theme=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=8",
+          "external_source_id": "srilanka_tourism_attraction:8",
+          "listing_description": "A temple built in reminiscence of a great arrival.",
+          "observed_theme_ids": [
+            "2"
+          ],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 2,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=8",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Kotaveheragala",
+          "raw_source_name": "Kotaveheragala",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=2&theme=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=134",
+          "external_source_id": "srilanka_tourism_attraction:134",
+          "listing_description": "The abode of the novice monk who was reincarnated as King Dutugamunu",
+          "observed_theme_ids": [
+            "2"
+          ],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 2,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=134",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Panavitiya Ambalama",
+          "raw_source_name": "Panavitiya Ambalama",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=2&theme=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=94",
+          "external_source_id": "srilanka_tourism_attraction:94",
+          "listing_description": "Famous for wood carving.",
+          "observed_theme_ids": [
+            "2"
+          ],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 2,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=94",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Ancient Veheragala of Pulukunawa",
+          "raw_source_name": "Ancient Veheragala of Pulukunawa",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=2&theme=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=114",
+          "external_source_id": "srilanka_tourism_attraction:114",
+          "listing_description": "A monastery complex of unknown origin",
+          "observed_theme_ids": [
+            "2"
+          ],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 2,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=114",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Shasthrawela",
+          "raw_source_name": "Shasthrawela",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=2&theme=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=125",
+          "external_source_id": "srilanka_tourism_attraction:125",
+          "listing_description": "A Buddhist learning seat in the East",
+          "observed_theme_ids": [
+            "2"
+          ],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 2,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=125",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        }
+      ],
+      "pagination_urls": [
+        "https://srilanka.travel/tourist-attractions?page=1&theme=2",
+        "https://srilanka.travel/tourist-attractions?page=3&theme=2",
+        "https://srilanka.travel/tourist-attractions?page=4&theme=2",
+        "https://srilanka.travel/tourist-attractions?page=5&theme=2",
+        "https://srilanka.travel/tourist-attractions?page=6&theme=2"
+      ],
+      "theme_search_urls": [],
+      "category_filter_urls": [],
+      "destination_filter_urls": [],
+      "total_page_count": 6,
+      "total_attraction_count": 69,
+      "javascript_or_ajax_indicators": [
+        "script_src_present"
+      ],
+      "duplicate_card_references": 0,
+      "pagination_content_duplicate": false,
+      "failed": false
+    },
+    {
+      "source_url": "https://srilanka.travel/tourist-attractions?page=3",
+      "retrieved_at": "2026-10-16T18:18:53.993097Z",
+      "content_sha256": "2ce22239c6bc494935b7e37eedf6de2e0db14a7012c868ee0e8f26904f0c366b",
+      "main_content_sha256": "7c5650da312f98579ef2b459cfeb87d57c10478630d5bfdfa83d6d743fd50952",
+      "cards": [
+        {
+          "attraction_name": "Mullikulamalai",
+          "raw_source_name": "Mullikulamalai",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=3",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=148",
+          "external_source_id": "srilanka_tourism_attraction:148",
+          "listing_description": "The monastery where Queen Viharamadevi was living as a Bikkhuni.",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 3,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=148",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Colombo Lighthouse",
+          "raw_source_name": "Colombo Lighthouse",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=3",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=208",
+          "external_source_id": "srilanka_tourism_attraction:208",
+          "listing_description": "Lighthouse is one of the attractive place in Colombo",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 3,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=208",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Meemure",
+          "raw_source_name": "Meemure",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=3",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=152",
+          "external_source_id": "srilanka_tourism_attraction:152",
+          "listing_description": "Meemure is a tradition village in Sri Lanka, It is located near the border between Kandy District and Matale District in the Knuckles Mountain Range.",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 3,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=152",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Ridee Viharaya",
+          "raw_source_name": "Ridee Viharaya",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=3",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=90",
+          "external_source_id": "srilanka_tourism_attraction:90",
+          "listing_description": "King Dutugemunu found a silver (ridi) ore mine which was used to finance the building of the gigantic Ruwanweli Seya .",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 3,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=90",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Nagadeepa Purana Raja Maha Viharaya",
+          "raw_source_name": "Nagadeepa Purana Raja Maha Viharaya",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=3",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=16",
+          "external_source_id": "srilanka_tourism_attraction:16",
+          "listing_description": "A site graced by Lord Buddha",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 3,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=16",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Owagiriya Ancient Monastery",
+          "raw_source_name": "Owagiriya Ancient Monastery",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=3",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=121",
+          "external_source_id": "srilanka_tourism_attraction:121",
+          "listing_description": "An ancient monastery of second century BC",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 3,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=121",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Kaluthara Bodhiya",
+          "raw_source_name": "Kaluthara Bodhiya",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=3",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=181",
+          "external_source_id": "srilanka_tourism_attraction:181",
+          "listing_description": "Kaluthara Bodhiya is believed to be one of the 32 saplings of the Jaya Sri Maha Bodhi in Anuradhapura, Sri Lanka.",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 3,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=181",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Panavitiya Ambalama",
+          "raw_source_name": "Panavitiya Ambalama",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=3",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=94",
+          "external_source_id": "srilanka_tourism_attraction:94",
+          "listing_description": "Famous for wood carving.",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 3,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=94",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Sri Dalada Maligawa (Temple of the Tooth)",
+          "raw_source_name": "Sri Dalada Maligawa (Temple of the Tooth) ",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=3",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=155",
+          "external_source_id": "srilanka_tourism_attraction:155",
+          "listing_description": "Sri Dalada Maligawa or the Temple of the Sacred Tooth Relic is a Buddhist temple in the city of Kandy, Sri Lanka.This a World Heritage Site mainly due to the temple.",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 3,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=155",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Hot Water Springs in Wahawa",
+          "raw_source_name": "Hot Water Springs in Wahawa",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=3",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=143",
+          "external_source_id": "srilanka_tourism_attraction:143",
+          "listing_description": "Eighteen hot water springs scattered within a village.",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 3,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=143",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Dambulla CaveTemple",
+          "raw_source_name": "Dambulla CaveTemple",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=3",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=157",
+          "external_source_id": "srilanka_tourism_attraction:157",
+          "listing_description": "Dambulla cave temple and, also known as Golden Temple of Dambulla is a world heritage site, situated in central part of the Sri Lanka. This dambulla cave temple situated in 148km e",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 3,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=157",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Bowattegala Monastery",
+          "raw_source_name": "Bowattegala Monastery",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=3",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=111",
+          "external_source_id": "srilanka_tourism_attraction:111",
+          "listing_description": "A monastery built by the ten Royal brothers of South.",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 3,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=111",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        }
+      ],
+      "pagination_urls": [
+        "https://srilanka.travel/tourist-attractions?page=1",
+        "https://srilanka.travel/tourist-attractions?page=10",
+        "https://srilanka.travel/tourist-attractions?page=11",
+        "https://srilanka.travel/tourist-attractions?page=15",
+        "https://srilanka.travel/tourist-attractions?page=2",
+        "https://srilanka.travel/tourist-attractions?page=4",
+        "https://srilanka.travel/tourist-attractions?page=5",
+        "https://srilanka.travel/tourist-attractions?page=6",
+        "https://srilanka.travel/tourist-attractions?page=7",
+        "https://srilanka.travel/tourist-attractions?page=8",
+        "https://srilanka.travel/tourist-attractions?page=9"
+      ],
+      "theme_search_urls": [],
+      "category_filter_urls": [],
+      "destination_filter_urls": [],
+      "total_page_count": 15,
+      "total_attraction_count": 169,
+      "javascript_or_ajax_indicators": [
+        "script_src_present"
+      ],
+      "duplicate_card_references": 0,
+      "pagination_content_duplicate": false,
+      "failed": false
+    },
+    {
+      "source_url": "https://srilanka.travel/tourist-attractions?page=3&theme=2",
+      "retrieved_at": "2026-10-16T18:18:57.117322Z",
+      "content_sha256": "d0d34ae640be3aeb326f24579cad55e54b9f10e44ce2fd716f651fb42516ccd9",
+      "main_content_sha256": "7092eb09a1a4bc71b2523f49b5a5ad9e2c6e74b7d1e61066533b9a20dfdd03c1",
+      "cards": [
+        {
+          "attraction_name": "Pannathgoda Purana Raja Maha Viharaya",
+          "raw_source_name": "Pannathgoda Purana Raja Maha Viharaya",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=3&theme=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=97",
+          "external_source_id": "srilanka_tourism_attraction:97",
+          "listing_description": "A first Century BC temple which hosts an ancient map of Sri Lanka.",
+          "observed_theme_ids": [
+            "2"
+          ],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 3,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=97",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Mullikulamalai",
+          "raw_source_name": "Mullikulamalai",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=3&theme=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=148",
+          "external_source_id": "srilanka_tourism_attraction:148",
+          "listing_description": "The monastery where Queen Viharamadevi was living as a Bikkhuni.",
+          "observed_theme_ids": [
+            "2"
+          ],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 3,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=148",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Panavitiya Ambalama",
+          "raw_source_name": "Panavitiya Ambalama",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=3&theme=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=94",
+          "external_source_id": "srilanka_tourism_attraction:94",
+          "listing_description": "Famous for wood carving.",
+          "observed_theme_ids": [
+            "2"
+          ],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 3,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=94",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Bowattegala Monastery",
+          "raw_source_name": "Bowattegala Monastery",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=3&theme=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=111",
+          "external_source_id": "srilanka_tourism_attraction:111",
+          "listing_description": "A monastery built by the ten Royal brothers of South.",
+          "observed_theme_ids": [
+            "2"
+          ],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 3,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=111",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Piyangala Forest Hermitage",
+          "raw_source_name": "Piyangala Forest Hermitage",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=3&theme=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=106",
+          "external_source_id": "srilanka_tourism_attraction:106",
+          "listing_description": "A forest hermitage of ancient tradition",
+          "observed_theme_ids": [
+            "2"
+          ],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 3,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=106",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Nikayalannuwara Historical Temple",
+          "raw_source_name": "Nikayalannuwara Historical Temple",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=3&theme=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=88",
+          "external_source_id": "srilanka_tourism_attraction:88",
+          "listing_description": "A Buddhist learning seat in the East Western",
+          "observed_theme_ids": [
+            "2"
+          ],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 3,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=88",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Sri Pada (Adam's Peak)",
+          "raw_source_name": "Sri Pada (Adam's Peak)",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=3&theme=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=150",
+          "external_source_id": "srilanka_tourism_attraction:150",
+          "listing_description": "Sri pada, or samanala kanda is 2243m tall conical mountain located in central in sri lanka.  This is the fourth highest mountain in sri lanka.",
+          "observed_theme_ids": [
+            "2"
+          ],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 3,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=150",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Rajagala",
+          "raw_source_name": "Rajagala",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=3&theme=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=103",
+          "external_source_id": "srilanka_tourism_attraction:103",
+          "listing_description": "A monastery in perfect form amidst the jungle",
+          "observed_theme_ids": [
+            "2"
+          ],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 3,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=103",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Neelagiri Stupa",
+          "raw_source_name": "Neelagiri Stupa",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=3&theme=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=104",
+          "external_source_id": "srilanka_tourism_attraction:104",
+          "listing_description": "The largest stupa of the east",
+          "observed_theme_ids": [
+            "2"
+          ],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 3,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=104",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Jathika Namal Uyana",
+          "raw_source_name": "Jathika Namal Uyana",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=3&theme=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=28",
+          "external_source_id": "srilanka_tourism_attraction:28",
+          "listing_description": "The largest Na-forest and pink quartz mountain in Asia\"",
+          "observed_theme_ids": [
+            "2"
+          ],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 3,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=28",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Kadurugoda Temple",
+          "raw_source_name": "Kadurugoda Temple",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=3&theme=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=14",
+          "external_source_id": "srilanka_tourism_attraction:14",
+          "listing_description": "The monastery of sixty stupas",
+          "observed_theme_ids": [
+            "2"
+          ],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 3,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=14",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Kotaveheragala",
+          "raw_source_name": "Kotaveheragala",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=3&theme=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=134",
+          "external_source_id": "srilanka_tourism_attraction:134",
+          "listing_description": "The abode of the novice monk who was reincarnated as King Dutugamunu",
+          "observed_theme_ids": [
+            "2"
+          ],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 3,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=134",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        }
+      ],
+      "pagination_urls": [
+        "https://srilanka.travel/tourist-attractions?page=1&theme=2",
+        "https://srilanka.travel/tourist-attractions?page=2&theme=2",
+        "https://srilanka.travel/tourist-attractions?page=4&theme=2",
+        "https://srilanka.travel/tourist-attractions?page=5&theme=2",
+        "https://srilanka.travel/tourist-attractions?page=6&theme=2"
+      ],
+      "theme_search_urls": [],
+      "category_filter_urls": [],
+      "destination_filter_urls": [],
+      "total_page_count": 6,
+      "total_attraction_count": 69,
+      "javascript_or_ajax_indicators": [
+        "script_src_present"
+      ],
+      "duplicate_card_references": 0,
+      "pagination_content_duplicate": false,
+      "failed": false
+    },
+    {
+      "source_url": "https://srilanka.travel/tourist-attractions?page=4",
+      "retrieved_at": "2026-10-16T18:19:00.262583Z",
+      "content_sha256": "bfa527b7bba371864db206c2436de43e0d4d5291efdb50ab2a78d36a0200f8ee",
+      "main_content_sha256": "6ab3d5c8d9645dc85cadba7572950d8cf0e8a8fe6ce25963a8e3c4e80997a5c3",
+      "cards": [
+        {
+          "attraction_name": "Delft Growing Stone",
+          "raw_source_name": "Delft Growing Stone",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=4",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=11",
+          "external_source_id": "srilanka_tourism_attraction:11",
+          "listing_description": "Rocks that increase in size",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 4,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=11",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Piyangala Forest Hermitage",
+          "raw_source_name": "Piyangala Forest Hermitage",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=4",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=106",
+          "external_source_id": "srilanka_tourism_attraction:106",
+          "listing_description": "A forest hermitage of ancient tradition",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 4,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=106",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Nagadeepa Purana Raja Maha Viharaya",
+          "raw_source_name": "Nagadeepa Purana Raja Maha Viharaya",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=4",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=16",
+          "external_source_id": "srilanka_tourism_attraction:16",
+          "listing_description": "A site graced by Lord Buddha",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 4,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=16",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Kadurugoda Temple",
+          "raw_source_name": "Kadurugoda Temple",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=4",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=14",
+          "external_source_id": "srilanka_tourism_attraction:14",
+          "listing_description": "The monastery of sixty stupas",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 4,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=14",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Bopagama Water Fall",
+          "raw_source_name": "Bopagama Water Fall",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=4",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=79",
+          "external_source_id": "srilanka_tourism_attraction:79",
+          "listing_description": "A waterfall amidst the shaded groves.",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 4,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=79",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Senanayaka Samudraya of Inginiyagala",
+          "raw_source_name": "Senanayaka Samudraya of Inginiyagala",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=4",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=102",
+          "external_source_id": "srilanka_tourism_attraction:102",
+          "listing_description": "The largest manmade reservoir in the country.",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 4,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=102",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "The Nagapooshani Amman Kovil",
+          "raw_source_name": "The Nagapooshani Amman Kovil ",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=4",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=19",
+          "external_source_id": "srilanka_tourism_attraction:19",
+          "listing_description": "One of the prominent 64 Shakti Peethams.",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 4,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=19",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Ratmullukanda Viharaya",
+          "raw_source_name": "Ratmullukanda Viharaya",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=4",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=89",
+          "external_source_id": "srilanka_tourism_attraction:89",
+          "listing_description": "The highest peak that can be reached by a vehicle",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 4,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=89",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Kumana National Park",
+          "raw_source_name": "Kumana National Park",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=4",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=166",
+          "external_source_id": "srilanka_tourism_attraction:166",
+          "listing_description": "Kumana National Park in Sri Lanka is renowned for its avifauna, particularly its large flocks of migratory waterfowl and wading birds. The park is 391 kilometers (243 mi) southeast",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 4,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=166",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Pallan Hela Mountain",
+          "raw_source_name": "Pallan Hela Mountain",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=4",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=136",
+          "external_source_id": "srilanka_tourism_attraction:136",
+          "listing_description": "A mountain fortress with a breath taking view",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 4,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=136",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Koggala Beach",
+          "raw_source_name": "Koggala Beach ",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=4",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=192",
+          "external_source_id": "srilanka_tourism_attraction:192",
+          "listing_description": "Koggala Beach is a coastal Area located within Galle District",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 4,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=192",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Nikayalannuwara Historical Temple",
+          "raw_source_name": "Nikayalannuwara Historical Temple",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=4",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=88",
+          "external_source_id": "srilanka_tourism_attraction:88",
+          "listing_description": "A Buddhist learning seat in the East Western",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 4,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=88",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        }
+      ],
+      "pagination_urls": [
+        "https://srilanka.travel/tourist-attractions?page=1",
+        "https://srilanka.travel/tourist-attractions?page=10",
+        "https://srilanka.travel/tourist-attractions?page=11",
+        "https://srilanka.travel/tourist-attractions?page=15",
+        "https://srilanka.travel/tourist-attractions?page=2",
+        "https://srilanka.travel/tourist-attractions?page=3",
+        "https://srilanka.travel/tourist-attractions?page=5",
+        "https://srilanka.travel/tourist-attractions?page=6",
+        "https://srilanka.travel/tourist-attractions?page=7",
+        "https://srilanka.travel/tourist-attractions?page=8",
+        "https://srilanka.travel/tourist-attractions?page=9"
+      ],
+      "theme_search_urls": [],
+      "category_filter_urls": [],
+      "destination_filter_urls": [],
+      "total_page_count": 15,
+      "total_attraction_count": 169,
+      "javascript_or_ajax_indicators": [
+        "script_src_present"
+      ],
+      "duplicate_card_references": 0,
+      "pagination_content_duplicate": false,
+      "failed": false
+    },
+    {
+      "source_url": "https://srilanka.travel/tourist-attractions?page=4&theme=2",
+      "retrieved_at": "2026-10-16T18:19:03.386173Z",
+      "content_sha256": "a4aa3b3f7d769e7ab630e2238a5f01e84135704c719ae1d8959b490120c64300",
+      "main_content_sha256": "e3f4df9a22bcfb29d8b1047c0788a88a093eed55a2d4276be64b737237cc5d9f",
+      "cards": [
+        {
+          "attraction_name": "Maligathenna Raja Maha Viharaya",
+          "raw_source_name": "Maligathenna Raja Maha Viharaya",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=4&theme=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=69",
+          "external_source_id": "srilanka_tourism_attraction:69",
+          "listing_description": "A refuge of sacred relics and Kings",
+          "observed_theme_ids": [
+            "2"
+          ],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 4,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=69",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Thewatta Besilika Church - National Basilica of Our Lady of Lan",
+          "raw_source_name": "Thewatta Besilika Church - National Basilica of Our Lady of Lan ",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=4&theme=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=87",
+          "external_source_id": "srilanka_tourism_attraction:87",
+          "listing_description": "Built to keep the promise of faith.",
+          "observed_theme_ids": [
+            "2"
+          ],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 4,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=87",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Muhudu Maha Viharaya",
+          "raw_source_name": "Muhudu Maha Viharaya",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=4&theme=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=142",
+          "external_source_id": "srilanka_tourism_attraction:142",
+          "listing_description": "The pier of a Storm tossed princess.",
+          "observed_theme_ids": [
+            "2"
+          ],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 4,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=142",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Ridee Viharaya",
+          "raw_source_name": "Ridee Viharaya",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=4&theme=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=90",
+          "external_source_id": "srilanka_tourism_attraction:90",
+          "listing_description": "King Dutugemunu found a silver (ridi) ore mine which was used to finance the building of the gigantic Ruwanweli Seya .",
+          "observed_theme_ids": [
+            "2"
+          ],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 4,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=90",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "The Nagapooshani Amman Kovil",
+          "raw_source_name": "The Nagapooshani Amman Kovil ",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=4&theme=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=19",
+          "external_source_id": "srilanka_tourism_attraction:19",
+          "listing_description": "One of the prominent 64 Shakti Peethams.",
+          "observed_theme_ids": [
+            "2"
+          ],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 4,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=19",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Diva Guhawa - Batatota Lena",
+          "raw_source_name": "Diva Guhawa - Batatota Lena",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=4&theme=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=23",
+          "external_source_id": "srilanka_tourism_attraction:23",
+          "listing_description": "The legendary resting place of the Buddha during his visit to the Samanalakanda.",
+          "observed_theme_ids": [
+            "2"
+          ],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 4,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=23",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Sinharaja",
+          "raw_source_name": "Sinharaja",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=4&theme=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=151",
+          "external_source_id": "srilanka_tourism_attraction:151",
+          "listing_description": "Sinharaja Forest Reserve is a national park and a biodiversity hotspot in Sri Lanka. It is of international significance and has been designated a Biosphere Reserve and World Herit",
+          "observed_theme_ids": [
+            "2"
+          ],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 4,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=151",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Sri Pada (Adam's Peak)",
+          "raw_source_name": "Sri Pada (Adam's Peak)",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=4&theme=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=150",
+          "external_source_id": "srilanka_tourism_attraction:150",
+          "listing_description": "Sri pada, or samanala kanda is 2243m tall conical mountain located in central in sri lanka.  This is the fourth highest mountain in sri lanka.",
+          "observed_theme_ids": [
+            "2"
+          ],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 4,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=150",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Seema Malakaya Meditation Centre",
+          "raw_source_name": "Seema Malakaya Meditation Centre",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=4&theme=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=204",
+          "external_source_id": "srilanka_tourism_attraction:204",
+          "listing_description": "This is a calm and beautiful place in the busy Colombo city.",
+          "observed_theme_ids": [
+            "2"
+          ],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 4,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=204",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Gonagolla Monastery",
+          "raw_source_name": "Gonagolla Monastery",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=4&theme=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=128",
+          "external_source_id": "srilanka_tourism_attraction:128",
+          "listing_description": "A monastery with cave murals.",
+          "observed_theme_ids": [
+            "2"
+          ],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 4,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=128",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Habuthala Viharaya or Tharulengala Monastery",
+          "raw_source_name": "Habuthala Viharaya or Tharulengala Monastery",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=4&theme=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=122",
+          "external_source_id": "srilanka_tourism_attraction:122",
+          "listing_description": "The largest drip ledged caves in Sri Lanka and pre historic drawings.",
+          "observed_theme_ids": [
+            "2"
+          ],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 4,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=122",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Richmond Castle",
+          "raw_source_name": "Richmond Castle",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=4&theme=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=198",
+          "external_source_id": "srilanka_tourism_attraction:198",
+          "listing_description": "Richmond Castle is like an amazing Royal Palace in Sri Lanka.",
+          "observed_theme_ids": [
+            "2"
+          ],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 4,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=198",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        }
+      ],
+      "pagination_urls": [
+        "https://srilanka.travel/tourist-attractions?page=1&theme=2",
+        "https://srilanka.travel/tourist-attractions?page=2&theme=2",
+        "https://srilanka.travel/tourist-attractions?page=3&theme=2",
+        "https://srilanka.travel/tourist-attractions?page=5&theme=2",
+        "https://srilanka.travel/tourist-attractions?page=6&theme=2"
+      ],
+      "theme_search_urls": [],
+      "category_filter_urls": [],
+      "destination_filter_urls": [],
+      "total_page_count": 6,
+      "total_attraction_count": 69,
+      "javascript_or_ajax_indicators": [
+        "script_src_present"
+      ],
+      "duplicate_card_references": 0,
+      "pagination_content_duplicate": false,
+      "failed": false
+    },
+    {
+      "source_url": "https://srilanka.travel/tourist-attractions?page=5",
+      "retrieved_at": "2026-10-16T18:19:06.509172Z",
+      "content_sha256": "3b16c6be31d2f8142227fd810d9988ce72a87b26dc53db86ec88db9821f7bc8d",
+      "main_content_sha256": "d4c10b69759fe9dcb1f98b6f52d2d0fb3966eb9b49f134f5c135d2c8f53c8415",
+      "cards": [
+        {
+          "attraction_name": "Green path Colombo",
+          "raw_source_name": "Green path Colombo",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=5",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=214",
+          "external_source_id": "srilanka_tourism_attraction:214",
+          "listing_description": "This is Street that bright with festive and events.",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 5,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=214",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Henanegala Len Viharaya",
+          "raw_source_name": "Henanegala Len Viharaya",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=5",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=124",
+          "external_source_id": "srilanka_tourism_attraction:124",
+          "listing_description": "A rock temple, where King Dutugamunu gathered his warriors.",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 5,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=124",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Kataragama",
+          "raw_source_name": "Kataragama",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=5",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=169",
+          "external_source_id": "srilanka_tourism_attraction:169",
+          "listing_description": "Kataragama is a pilgrimage town sacred to Buddhist, Hindu, Muslim and indigenous Vedda people of Sri Lanka. People from South India also come there to worship. Kataragama is in the",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 5,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=169",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Galle Fort",
+          "raw_source_name": "Galle Fort",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=5",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=153",
+          "external_source_id": "srilanka_tourism_attraction:153",
+          "listing_description": "Galle Fort, in the Bay of Galle, World Heritage Site on the southwest coast of Sri Lanka, was built first in 1588 by the Portuguese.",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 5,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=153",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Alioluwa Lake",
+          "raw_source_name": "Alioluwa Lake",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=5",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=135",
+          "external_source_id": "srilanka_tourism_attraction:135",
+          "listing_description": "A peculiar lake and a waterway.",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 5,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=135",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Hot Water Springs in Wahawa",
+          "raw_source_name": "Hot Water Springs in Wahawa",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=5",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=143",
+          "external_source_id": "srilanka_tourism_attraction:143",
+          "listing_description": "Eighteen hot water springs scattered within a village.",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 5,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=143",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Delft Temple",
+          "raw_source_name": "Delft Temple",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=5",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=12",
+          "external_source_id": "srilanka_tourism_attraction:12",
+          "listing_description": "The first stop of Arhat Sangamitta Their",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 5,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=12",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Owagiriya Ancient Monastery",
+          "raw_source_name": "Owagiriya Ancient Monastery",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=5",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=121",
+          "external_source_id": "srilanka_tourism_attraction:121",
+          "listing_description": "An ancient monastery of second century BC",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 5,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=121",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Aukana",
+          "raw_source_name": "Aukana ",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=5",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=176",
+          "external_source_id": "srilanka_tourism_attraction:176",
+          "listing_description": "This is the one of tallest and gorgeous buddha statue in sri lanka.",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 5,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=176",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Koneswaram Kovil",
+          "raw_source_name": "Koneswaram Kovil",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=5",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=167",
+          "external_source_id": "srilanka_tourism_attraction:167",
+          "listing_description": "Koneswaram temple also known as Dakshinakailasha is a classical-medieval Hindu temple dedicated to Lord Shiva in Trincomalee, Eastern Sri Lanka.",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 5,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=167",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Henanigala Panchawasa Raja Maha Viharaya",
+          "raw_source_name": "Henanigala Panchawasa Raja Maha Viharaya",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=5",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=107",
+          "external_source_id": "srilanka_tourism_attraction:107",
+          "listing_description": "A rock temple, where King Dutugamunu gathered his warriors",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 5,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=107",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Weweldeniya",
+          "raw_source_name": "Weweldeniya",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=5",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=61",
+          "external_source_id": "srilanka_tourism_attraction:61",
+          "listing_description": "A Piece of tradition.",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 5,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=61",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        }
+      ],
+      "pagination_urls": [
+        "https://srilanka.travel/tourist-attractions?page=1",
+        "https://srilanka.travel/tourist-attractions?page=10",
+        "https://srilanka.travel/tourist-attractions?page=11",
+        "https://srilanka.travel/tourist-attractions?page=15",
+        "https://srilanka.travel/tourist-attractions?page=2",
+        "https://srilanka.travel/tourist-attractions?page=3",
+        "https://srilanka.travel/tourist-attractions?page=4",
+        "https://srilanka.travel/tourist-attractions?page=6",
+        "https://srilanka.travel/tourist-attractions?page=7",
+        "https://srilanka.travel/tourist-attractions?page=8",
+        "https://srilanka.travel/tourist-attractions?page=9"
+      ],
+      "theme_search_urls": [],
+      "category_filter_urls": [],
+      "destination_filter_urls": [],
+      "total_page_count": 15,
+      "total_attraction_count": 169,
+      "javascript_or_ajax_indicators": [
+        "script_src_present"
+      ],
+      "duplicate_card_references": 0,
+      "pagination_content_duplicate": false,
+      "failed": false
+    },
+    {
+      "source_url": "https://srilanka.travel/attractions",
+      "retrieved_at": "2026-10-16T13:36:32.325910Z",
+      "content_sha256": "8e6aed7901ebea2e4a75be0330ef85b091dcd2c4f9599751aa082fbfd4fe2115",
+      "main_content_sha256": "4dd1a777bf591d7dbfe504f51bef0983ac472dc548269cd9544ddd6afab1620d",
+      "cards": [
+        {
+          "attraction_name": "Rambodagalla Buddha Statue",
+          "raw_source_name": "Rambodagalla Buddha Statue",
+          "source_url": "https://srilanka.travel/attractions",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=92",
+          "external_source_id": "srilanka_tourism_attraction:92",
+          "listing_description": "The world\u00e2\u20ac\u2122s Largest Granite Statue of Samadhi Buddha.",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 1,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=92",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Richmond Castle",
+          "raw_source_name": "Richmond Castle",
+          "source_url": "https://srilanka.travel/attractions",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=198",
+          "external_source_id": "srilanka_tourism_attraction:198",
+          "listing_description": "Richmond Castle is like an amazing Royal Palace in Sri Lanka.",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 1,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=198",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Pannathgoda Purana Raja Maha Viharaya",
+          "raw_source_name": "Pannathgoda Purana Raja Maha Viharaya",
+          "source_url": "https://srilanka.travel/attractions",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=97",
+          "external_source_id": "srilanka_tourism_attraction:97",
+          "listing_description": "A first Century BC temple which hosts an ancient map of Sri Lanka.",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 1,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=97",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Delft Biobab Tree",
+          "raw_source_name": "Delft Biobab Tree ",
+          "source_url": "https://srilanka.travel/attractions",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=9",
+          "external_source_id": "srilanka_tourism_attraction:9",
+          "listing_description": "Ancient trees with hallowed trunks",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 1,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=9",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Green path Colombo",
+          "raw_source_name": "Green path Colombo",
+          "source_url": "https://srilanka.travel/attractions",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=214",
+          "external_source_id": "srilanka_tourism_attraction:214",
+          "listing_description": "This is Street that bright with festive and events.",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 1,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=214",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Wilpattu National Park",
+          "raw_source_name": "Wilpattu National Park",
+          "source_url": "https://srilanka.travel/attractions",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=219",
+          "external_source_id": "srilanka_tourism_attraction:219",
+          "listing_description": "Wilpattu is the largest and one of the oldest National Parks in Sri Lanka.",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 1,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=219",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Udawalawe National Park",
+          "raw_source_name": "Udawalawe National Park",
+          "source_url": "https://srilanka.travel/attractions",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=164",
+          "external_source_id": "srilanka_tourism_attraction:164",
+          "listing_description": "Udawalawe National Park lies on the boundary of Sabaragamuwa and Uva Provinces, in Sri Lanka.",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 1,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=164",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Piyangala Forest Hermitage",
+          "raw_source_name": "Piyangala Forest Hermitage",
+          "source_url": "https://srilanka.travel/attractions",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=106",
+          "external_source_id": "srilanka_tourism_attraction:106",
+          "listing_description": "A forest hermitage of ancient tradition",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 1,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=106",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Henanigala Panchawasa Raja Maha Viharaya",
+          "raw_source_name": "Henanigala Panchawasa Raja Maha Viharaya",
+          "source_url": "https://srilanka.travel/attractions",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=107",
+          "external_source_id": "srilanka_tourism_attraction:107",
+          "listing_description": "A rock temple, where King Dutugamunu gathered his warriors",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 1,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=107",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Nagapabbatha Monastery",
+          "raw_source_name": "Nagapabbatha Monastery ",
+          "source_url": "https://srilanka.travel/attractions",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=105",
+          "external_source_id": "srilanka_tourism_attraction:105",
+          "listing_description": "A monastery amidst the wildlife sanctuary of Kumana.",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 1,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=105",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Ancient Veheragala of Pulukunawa",
+          "raw_source_name": "Ancient Veheragala of Pulukunawa",
+          "source_url": "https://srilanka.travel/attractions",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=114",
+          "external_source_id": "srilanka_tourism_attraction:114",
+          "listing_description": "A monastery complex of unknown origin",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 1,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=114",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Beira Lake",
+          "raw_source_name": "Beira Lake",
+          "source_url": "https://srilanka.travel/attractions",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=172",
+          "external_source_id": "srilanka_tourism_attraction:172",
+          "listing_description": "Beira Lake is a lake in the center of the city of Colombo, Sri Lanka.",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 1,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=172",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        }
+      ],
+      "pagination_urls": [
+        "https://srilanka.travel/tourist-attractions?page=10",
+        "https://srilanka.travel/tourist-attractions?page=11",
+        "https://srilanka.travel/tourist-attractions?page=15",
+        "https://srilanka.travel/tourist-attractions?page=2",
+        "https://srilanka.travel/tourist-attractions?page=3",
+        "https://srilanka.travel/tourist-attractions?page=4",
+        "https://srilanka.travel/tourist-attractions?page=5",
+        "https://srilanka.travel/tourist-attractions?page=6",
+        "https://srilanka.travel/tourist-attractions?page=7",
+        "https://srilanka.travel/tourist-attractions?page=8",
+        "https://srilanka.travel/tourist-attractions?page=9"
+      ],
+      "theme_search_urls": [],
+      "category_filter_urls": [],
+      "destination_filter_urls": [],
+      "total_page_count": 15,
+      "total_attraction_count": 169,
+      "javascript_or_ajax_indicators": [
+        "script_src_present"
+      ],
+      "duplicate_card_references": 0,
+      "pagination_content_duplicate": false,
+      "failed": false
+    },
+    {
+      "source_url": "https://srilanka.travel/tourist-attractions?page=2",
+      "retrieved_at": "2026-10-16T13:36:35.544262Z",
+      "content_sha256": "287de2524fe6a5267842c9f7c61ba98844f4d7e2caed4f9b5b9600530b669767",
+      "main_content_sha256": "6828a1eec7d7f94baf44ab2eb68f6af997ffced7a83638a255366a219c64cd02",
+      "cards": [
+        {
+          "attraction_name": "Kataragama",
+          "raw_source_name": "Kataragama",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=169",
+          "external_source_id": "srilanka_tourism_attraction:169",
+          "listing_description": "Kataragama is a pilgrimage town sacred to Buddhist, Hindu, Muslim and indigenous Vedda people of Sri Lanka. People from South India also come there to worship. Kataragama is in the",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 2,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=169",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Piyangala Forest Hermitage",
+          "raw_source_name": "Piyangala Forest Hermitage",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=106",
+          "external_source_id": "srilanka_tourism_attraction:106",
+          "listing_description": "A forest hermitage of ancient tradition",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 2,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=106",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Kotaveheragala",
+          "raw_source_name": "Kotaveheragala",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=134",
+          "external_source_id": "srilanka_tourism_attraction:134",
+          "listing_description": "The abode of the novice monk who was reincarnated as King Dutugamunu",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 2,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=134",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Galle Fort",
+          "raw_source_name": "Galle Fort",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=153",
+          "external_source_id": "srilanka_tourism_attraction:153",
+          "listing_description": "Galle Fort, in the Bay of Galle, World Heritage Site on the southwest coast of Sri Lanka, was built first in 1588 by the Portuguese.",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 2,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=153",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Kirinda",
+          "raw_source_name": "Kirinda",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=179",
+          "external_source_id": "srilanka_tourism_attraction:179",
+          "listing_description": "Kirinda is an ancient temple in Sri Lanka built on rocky mountain.",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 2,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=179",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Balla Mala Ella",
+          "raw_source_name": "Balla Mala Ella",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=20",
+          "external_source_id": "srilanka_tourism_attraction:20",
+          "listing_description": "In honour of man\u00e2\u20ac\u2122s best friend",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 2,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=20",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Doovili Ella",
+          "raw_source_name": "Doovili Ella",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=24",
+          "external_source_id": "srilanka_tourism_attraction:24",
+          "listing_description": "A pristine waterfall within virgin forest land",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 2,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=24",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Dambulla CaveTemple",
+          "raw_source_name": "Dambulla CaveTemple",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=157",
+          "external_source_id": "srilanka_tourism_attraction:157",
+          "listing_description": "Dambulla cave temple and, also known as Golden Temple of Dambulla is a world heritage site, situated in central part of the Sri Lanka. This dambulla cave temple situated in 148km e",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 2,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=157",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Yapahuwa Rock Fortress",
+          "raw_source_name": "Yapahuwa Rock Fortress",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=184",
+          "external_source_id": "srilanka_tourism_attraction:184",
+          "listing_description": "This was the fourth ancient kindom in Sri Lanka.",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 2,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=184",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Arugambay & Pottuvil Point",
+          "raw_source_name": "Arugambay & Pottuvil Point",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=101",
+          "external_source_id": "srilanka_tourism_attraction:101",
+          "listing_description": "Where the shore is white and wide",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 2,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=101",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Kosgoda",
+          "raw_source_name": "Kosgoda",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=53",
+          "external_source_id": "srilanka_tourism_attraction:53",
+          "listing_description": "Kosgoda beach is one of popular tourist destination in Southwest where can visit lots of Turtles.",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 2,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=53",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Rawana ella and Ravana falls",
+          "raw_source_name": "Rawana ella and Ravana falls",
+          "source_url": "https://srilanka.travel/tourist-attractions?page=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=188",
+          "external_source_id": "srilanka_tourism_attraction:188",
+          "listing_description": "This is the one of most popular and elegant water fall in Sri Lanka.",
+          "observed_theme_ids": [],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 2,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=188",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        }
+      ],
+      "pagination_urls": [
+        "https://srilanka.travel/tourist-attractions?page=1",
+        "https://srilanka.travel/tourist-attractions?page=10",
+        "https://srilanka.travel/tourist-attractions?page=11",
+        "https://srilanka.travel/tourist-attractions?page=15",
+        "https://srilanka.travel/tourist-attractions?page=3",
+        "https://srilanka.travel/tourist-attractions?page=4",
+        "https://srilanka.travel/tourist-attractions?page=5",
+        "https://srilanka.travel/tourist-attractions?page=6",
+        "https://srilanka.travel/tourist-attractions?page=7",
+        "https://srilanka.travel/tourist-attractions?page=8",
+        "https://srilanka.travel/tourist-attractions?page=9"
+      ],
+      "theme_search_urls": [],
+      "category_filter_urls": [],
+      "destination_filter_urls": [],
+      "total_page_count": 15,
+      "total_attraction_count": 169,
+      "javascript_or_ajax_indicators": [
+        "script_src_present"
+      ],
+      "duplicate_card_references": 0,
+      "pagination_content_duplicate": false,
+      "failed": false
+    },
+    {
+      "source_url": "https://srilanka.travel/index.php?route=attractions%2Fattractions-search&theme=2",
+      "retrieved_at": "2026-10-16T13:36:38.740593Z",
+      "content_sha256": "85ff0b0dd38404cc1ab5864f50d742d4a05e85b6c9f33aef0ac96951a347c8c5",
+      "main_content_sha256": "b4c3d663ba334d7b73686470d5098a45e26e59f04e81281869c03d65f49ef5b3",
+      "cards": [
+        {
+          "attraction_name": "Kirinda",
+          "raw_source_name": "Kirinda",
+          "source_url": "https://srilanka.travel/index.php?route=attractions%2Fattractions-search&theme=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=179",
+          "external_source_id": "srilanka_tourism_attraction:179",
+          "listing_description": "Kirinda is an ancient temple in Sri Lanka built on rocky mountain.",
+          "observed_theme_ids": [
+            "2"
+          ],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 1,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=179",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Nagapabbatha Monastery",
+          "raw_source_name": "Nagapabbatha Monastery ",
+          "source_url": "https://srilanka.travel/index.php?route=attractions%2Fattractions-search&theme=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=105",
+          "external_source_id": "srilanka_tourism_attraction:105",
+          "listing_description": "A monastery amidst the wildlife sanctuary of Kumana.",
+          "observed_theme_ids": [
+            "2"
+          ],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 1,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=105",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Ancient Veheragala of Pulukunawa",
+          "raw_source_name": "Ancient Veheragala of Pulukunawa",
+          "source_url": "https://srilanka.travel/index.php?route=attractions%2Fattractions-search&theme=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=114",
+          "external_source_id": "srilanka_tourism_attraction:114",
+          "listing_description": "A monastery complex of unknown origin",
+          "observed_theme_ids": [
+            "2"
+          ],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 1,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=114",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Delft Dutch Fort",
+          "raw_source_name": "Delft Dutch Fort ",
+          "source_url": "https://srilanka.travel/index.php?route=attractions%2Fattractions-search&theme=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=10",
+          "external_source_id": "srilanka_tourism_attraction:10",
+          "listing_description": "A ruined fort of 17th Century",
+          "observed_theme_ids": [
+            "2"
+          ],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 1,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=10",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Galle Fort",
+          "raw_source_name": "Galle Fort",
+          "source_url": "https://srilanka.travel/index.php?route=attractions%2Fattractions-search&theme=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=153",
+          "external_source_id": "srilanka_tourism_attraction:153",
+          "listing_description": "Galle Fort, in the Bay of Galle, World Heritage Site on the southwest coast of Sri Lanka, was built first in 1588 by the Portuguese.",
+          "observed_theme_ids": [
+            "2"
+          ],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 1,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=153",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Kebiliththa Devalaya",
+          "raw_source_name": "Kebiliththa Devalaya",
+          "source_url": "https://srilanka.travel/index.php?route=attractions%2Fattractions-search&theme=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=131",
+          "external_source_id": "srilanka_tourism_attraction:131",
+          "listing_description": "The shrine of God Kataragama in the middle of jungle.",
+          "observed_theme_ids": [
+            "2"
+          ],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 1,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=131",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Ratmullukanda Viharaya",
+          "raw_source_name": "Ratmullukanda Viharaya",
+          "source_url": "https://srilanka.travel/index.php?route=attractions%2Fattractions-search&theme=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=89",
+          "external_source_id": "srilanka_tourism_attraction:89",
+          "listing_description": "The highest peak that can be reached by a vehicle",
+          "observed_theme_ids": [
+            "2"
+          ],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 1,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=89",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Nagadeepa Purana Raja Maha Viharaya",
+          "raw_source_name": "Nagadeepa Purana Raja Maha Viharaya",
+          "source_url": "https://srilanka.travel/index.php?route=attractions%2Fattractions-search&theme=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=16",
+          "external_source_id": "srilanka_tourism_attraction:16",
+          "listing_description": "A site graced by Lord Buddha",
+          "observed_theme_ids": [
+            "2"
+          ],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 1,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=16",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Henanigala Panchawasa Raja Maha Viharaya",
+          "raw_source_name": "Henanigala Panchawasa Raja Maha Viharaya",
+          "source_url": "https://srilanka.travel/index.php?route=attractions%2Fattractions-search&theme=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=107",
+          "external_source_id": "srilanka_tourism_attraction:107",
+          "listing_description": "A rock temple, where King Dutugamunu gathered his warriors",
+          "observed_theme_ids": [
+            "2"
+          ],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 1,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=107",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Sri Dalada Maligawa (Temple of the Tooth)",
+          "raw_source_name": "Sri Dalada Maligawa (Temple of the Tooth) ",
+          "source_url": "https://srilanka.travel/index.php?route=attractions%2Fattractions-search&theme=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=155",
+          "external_source_id": "srilanka_tourism_attraction:155",
+          "listing_description": "Sri Dalada Maligawa or the Temple of the Sacred Tooth Relic is a Buddhist temple in the city of Kandy, Sri Lanka.This a World Heritage Site mainly due to the temple.",
+          "observed_theme_ids": [
+            "2"
+          ],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 1,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=155",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Samangala Forest Hermitage",
+          "raw_source_name": "Samangala Forest Hermitage",
+          "source_url": "https://srilanka.travel/index.php?route=attractions%2Fattractions-search&theme=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=115",
+          "external_source_id": "srilanka_tourism_attraction:115",
+          "listing_description": "A monastery with rare Brahmin inscriptions",
+          "observed_theme_ids": [
+            "2"
+          ],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 1,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=115",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        },
+        {
+          "attraction_name": "Rajagala",
+          "raw_source_name": "Rajagala",
+          "source_url": "https://srilanka.travel/index.php?route=attractions%2Fattractions-search&theme=2",
+          "canonical_detail_url": "https://srilanka.travel/attraction?attraction_id=103",
+          "external_source_id": "srilanka_tourism_attraction:103",
+          "listing_description": "A monastery in perfect form amidst the jungle",
+          "observed_theme_ids": [
+            "2"
+          ],
+          "observed_theme_names": [],
+          "observed_categories": [],
+          "observed_destinations": [],
+          "listing_page_number": 1,
+          "source_provenance": [
+            ".attractions-grid > article.attraction-card: source card container",
+            "card detail link href=http://www.srilanka.travel/attraction&attraction_id=103",
+            ".attraction-card-body > p: explicit card field"
+          ],
+          "extraction_status": "partial_source_supported",
+          "extraction_warnings": [],
+          "card_selector": ".attractions-grid > article.attraction-card"
+        }
+      ],
+      "pagination_urls": [
+        "https://srilanka.travel/tourist-attractions?page=2&theme=2",
+        "https://srilanka.travel/tourist-attractions?page=3&theme=2",
+        "https://srilanka.travel/tourist-attractions?page=4&theme=2",
+        "https://srilanka.travel/tourist-attractions?page=5&theme=2",
+        "https://srilanka.travel/tourist-attractions?page=6&theme=2"
+      ],
+      "theme_search_urls": [],
+      "category_filter_urls": [],
+      "destination_filter_urls": [],
+      "total_page_count": 6,
+      "total_attraction_count": 69,
+      "javascript_or_ajax_indicators": [
+        "script_src_present"
+      ],
+      "duplicate_card_references": 0,
+      "pagination_content_duplicate": false,
+      "failed": false
+    }
+  ]
+}

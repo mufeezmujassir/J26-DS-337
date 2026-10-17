@@ -1,0 +1,25 @@
+{
+  "stage": "10.1.3E_gate_5b_2",
+  "status": "review_only_seed_manifest",
+  "known_distinct_url_structures": [
+    {
+      "canonical_url": "https://srilanka.travel/attractions",
+      "authorization_status": "requires_separate_approved_batch",
+      "observed": false
+    },
+    {
+      "canonical_url": "https://srilanka.travel/tourist-attractions?page=2",
+      "authorization_status": "requires_separate_approved_batch",
+      "observed": false
+    },
+    {
+      "canonical_url": "https://srilanka.travel/index.php?route=attractions%2Fattractions-search&theme=2",
+      "authorization_status": "requires_separate_approved_batch",
+      "observed": false
+    }
+  ],
+  "limitations": [
+    "No saved listing/search HTML was available when this manifest was generated.",
+    "Pagination, theme names, categories, destinations, page counts and catalogue totals remain unverified until captured."
+  ]
+}

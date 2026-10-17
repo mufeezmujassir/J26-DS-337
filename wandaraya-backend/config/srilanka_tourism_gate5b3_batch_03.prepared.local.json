@@ -1,0 +1,62 @@
+{
+  "batch_id": "catalogue_batch_03",
+  "source_manifest_path": "data/reports/stage_10_1_3e_gate5b2_catalogue_all_batches_v2_full_discovery_manifest.json",
+  "source_manifest_sha256": "6f7f062697f1e51f845760971d9485e126024bb9ed571556b5e729b274f641a6",
+  "approval_reference": "WANDARAYA-GATE5B3-BATCH-03",
+  "researcher_execution_approved_at": "2026-10-16T23:00:00+05:30",
+  "emergency_stop": false,
+  "exact_urls": [
+    "https://srilanka.travel/tourist-attractions?page=1&theme=2",
+    "https://srilanka.travel/tourist-attractions?page=12",
+    "https://srilanka.travel/tourist-attractions?page=13",
+    "https://srilanka.travel/tourist-attractions?page=14",
+    "https://srilanka.travel/tourist-attractions?page=5&theme=2",
+    "https://srilanka.travel/tourist-attractions?page=6",
+    "https://srilanka.travel/tourist-attractions?page=6&theme=2",
+    "https://srilanka.travel/tourist-attractions?page=7",
+    "https://srilanka.travel/tourist-attractions?page=8",
+    "https://srilanka.travel/tourist-attractions?page=9"
+  ],
+  "approved_urls": [
+    {
+      "canonical_url": "https://srilanka.travel/tourist-attractions?page=1&theme=2",
+      "authorization_status": "approved_for_pilot"
+    },
+    {
+      "canonical_url": "https://srilanka.travel/tourist-attractions?page=12",
+      "authorization_status": "approved_for_pilot"
+    },
+    {
+      "canonical_url": "https://srilanka.travel/tourist-attractions?page=13",
+      "authorization_status": "approved_for_pilot"
+    },
+    {
+      "canonical_url": "https://srilanka.travel/tourist-attractions?page=14",
+      "authorization_status": "approved_for_pilot"
+    },
+    {
+      "canonical_url": "https://srilanka.travel/tourist-attractions?page=5&theme=2",
+      "authorization_status": "approved_for_pilot"
+    },
+    {
+      "canonical_url": "https://srilanka.travel/tourist-attractions?page=6",
+      "authorization_status": "approved_for_pilot"
+    },
+    {
+      "canonical_url": "https://srilanka.travel/tourist-attractions?page=6&theme=2",
+      "authorization_status": "approved_for_pilot"
+    },
+    {
+      "canonical_url": "https://srilanka.travel/tourist-attractions?page=7",
+      "authorization_status": "approved_for_pilot"
+    },
+    {
+      "canonical_url": "https://srilanka.travel/tourist-attractions?page=8",
+      "authorization_status": "approved_for_pilot"
+    },
+    {
+      "canonical_url": "https://srilanka.travel/tourist-attractions?page=9",
+      "authorization_status": "approved_for_pilot"
+    }
+  ]
+}
