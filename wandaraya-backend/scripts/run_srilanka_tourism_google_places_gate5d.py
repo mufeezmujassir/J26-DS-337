@@ -15,6 +15,16 @@ async def run(args: argparse.Namespace) -> dict:
         raise PermissionError("live Google Places execution requires --live --execute --confirm-execute")
     if args.live and args.max_records > 25:
         raise ValueError("live execution is limited to 25 records per batch; use bounded batches")
+    # Check report names before constructing the Google client or issuing a
+    # request.  Previously this was checked while writing reports, after a
+    # successful API response, which could consume duplicate quota on retry.
+    prefix = f"stage_10_1_3e_gate5d_{args.batch_id}_google_places_"
+    existing_reports = list(Path(args.reports_dir).glob(prefix + "*.json"))
+    if existing_reports:
+        raise FileExistsError(
+            "Gate 5D batch_id already has saved reports; no request was made. "
+            "Use the existing manifest or choose a new batch_id: " + str(existing_reports[0])
+        )
     queue_path = Path(args.queue)
     if not queue_path.is_file():
         raise FileNotFoundError(f"Google Places queue not found: {queue_path}")

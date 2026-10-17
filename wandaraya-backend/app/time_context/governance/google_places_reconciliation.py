@@ -87,7 +87,7 @@ def _existing_identity(candidate_id: str | None, existing: list[ExistingAttracti
 
 
 _LOCALITY_TYPES = {"locality", "administrative_area_level_1", "administrative_area_level_2", "administrative_area_level_3", "country", "political", "neighborhood", "sublocality"}
-_ATTRACTION_TYPES = {"tourist_attraction", "historical_landmark", "historical_place", "national_park", "museum", "hindu_temple", "buddhist_temple", "place_of_worship", "zoo", "aquarium", "park", "beach"}
+_ATTRACTION_TYPES = {"tourist_attraction", "historical_landmark", "historical_place", "national_park", "museum", "hindu_temple", "buddhist_temple", "place_of_worship", "zoo", "aquarium", "park", "beach", "hiking_area", "natural_feature", "island", "lake", "waterfall", "mountain"}
 
 
 def source_is_compound(name: str | None) -> bool:

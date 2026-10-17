@@ -1,0 +1,99 @@
+{
+  "batch_id": "gate5e2c2_district_dry_run_01",
+  "created_at_utc": "2026-10-17T12:26:38.468681+00:00",
+  "mode": "offline",
+  "postgresql_writes": false,
+  "qdrant_writes": false,
+  "results": [
+    {
+      "attraction_name": "Senanayaka Samudraya of Inginiyagala",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:102",
+      "google_candidate_kb_identity": "no_existing_kb_place_id_match",
+      "official_source_candidate_identity": "no_candidate_returned",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Senanayaka Samudraya of Inginiyagala, Sri Lanka",
+      "review_reasons": [],
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=102",
+        "queue_reason": "gate5e2c2_missing_verified_district"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=102"
+    },
+    {
+      "attraction_name": "Rajagala",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:103",
+      "google_candidate_kb_identity": "no_existing_kb_place_id_match",
+      "official_source_candidate_identity": "no_candidate_returned",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Rajagala, Sri Lanka",
+      "review_reasons": [],
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=103",
+        "queue_reason": "gate5e2c2_missing_verified_district"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=103"
+    },
+    {
+      "attraction_name": "Piyangala Forest Hermitage",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:106",
+      "google_candidate_kb_identity": "no_existing_kb_place_id_match",
+      "official_source_candidate_identity": "no_candidate_returned",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Piyangala Forest Hermitage, Sri Lanka",
+      "review_reasons": [],
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=106",
+        "queue_reason": "gate5e2c2_missing_verified_district"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=106"
+    },
+    {
+      "attraction_name": "Pallan Hela Mountain",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:136",
+      "google_candidate_kb_identity": "no_existing_kb_place_id_match",
+      "official_source_candidate_identity": "no_candidate_returned",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Pallan Hela Mountain, Sri Lanka",
+      "review_reasons": [],
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=136",
+        "queue_reason": "gate5e2c2_missing_verified_district"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=136"
+    },
+    {
+      "attraction_name": "Kadurugoda Temple",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:14",
+      "google_candidate_kb_identity": "no_existing_kb_place_id_match",
+      "official_source_candidate_identity": "no_candidate_returned",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Kadurugoda Temple, Sri Lanka",
+      "review_reasons": [],
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=14",
+        "queue_reason": "gate5e2c2_missing_verified_district"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=14"
+    }
+  ]
+}
