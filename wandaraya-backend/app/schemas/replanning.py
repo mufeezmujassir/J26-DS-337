@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from datetime import datetime, timezone
-from typing import List, Literal
+from typing import List, Literal, Optional
 from uuid import uuid4
 
 from pydantic import BaseModel, Field
@@ -89,6 +89,8 @@ class ConsistencyCheck(BaseModel):
 
     consistent: bool
     reasons: List[str] = Field(default_factory=list)
+    drift_probability: Optional[float] = None
+    reason: str = ""
 
 
 class ConfirmationResult(BaseModel):
