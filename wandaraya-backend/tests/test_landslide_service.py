@@ -102,3 +102,37 @@ def test_landslide_spatial_proximity_matching(tmp_path):
     summary_haz = service.assess_route_summary(route_coords, buffer_meters=1000.0)
     assert summary_haz["status"] == "RISK_DETECTED"
     assert summary_haz["hazard_count"] == 1
+
+
+def test_nbro_polygon_footprint_matching_and_database_status(tmp_path):
+    """Verifies that NBRO landslide footprint polygons are matched and database status is reported."""
+    csv_inc = tmp_path / "incidents.csv"
+    csv_inc.write_text("Case_ID,Inc_Type,District,Date,Latitude,Longitude\nREC1,Landslide,Kandy,2021-01-01,7.29,80.63\n", encoding="utf-8")
+
+    csv_poly = tmp_path / "polygons.csv"
+    # Polygon around (7.29, 80.63)
+    poly_wkt = "POLYGON((80.62 7.28, 80.64 7.28, 80.64 7.30, 80.62 7.30, 80.62 7.28))"
+    csv_poly.write_text(
+        f"Name,Descript,Source_KMZ,Layer_Name,District,Centroid_Longitude,Centroid_Latitude,WKT_Geometry\n"
+        f"Footprint_1,High Risk Slope,Kandy.kmz,Active_Slope,Kandy,80.63,7.29,\"{poly_wkt}\"\n",
+        encoding="utf-8"
+    )
+
+    service = LandslideService(data_path=str(csv_inc), polygon_path=str(csv_poly))
+    assert len(service.records) == 1
+    assert len(service.polygons) == 1
+    assert service.polygons[0].shapely_geom is not None
+
+    # Route intersecting the polygon footprint directly at (7.29, 80.63)
+    route = [(7.289, 80.629), (7.291, 80.631)]
+    summary = service.assess_route_summary(route, buffer_meters=500.0)
+
+    assert summary["status"] == "RISK_DETECTED"
+    assert summary["polygon_count"] >= 1
+    assert summary["closest_polygon_distance_m"] == 0.0  # Direct intersection
+    assert any(h["record"]["is_polygon"] for h in summary["hazards"])
+
+    # Test database status helper
+    db_status = LandslideService.get_database_status()
+    assert "connected" in db_status
+
