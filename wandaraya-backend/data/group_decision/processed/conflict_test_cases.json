@@ -1,0 +1,445 @@
+[
+  {
+    "case_id": "DEST_01",
+    "category_focus": "Destination",
+    "name": "Hard conflict over Ella (positive vs negative)",
+    "expected_conflict": true,
+    "ground_truth_type": "Destination",
+    "records": [
+      {"member": "Alice", "category": "Destination", "stance": "positive", "value": {"name": "ella"}},
+      {"member": "Bob", "category": "Destination", "stance": "negative", "value": {"name": "ella"}}
+    ]
+  },
+  {
+    "case_id": "DEST_02",
+    "category_focus": "Destination",
+    "name": "Soft conflict between Ella and Kandy (no common choice)",
+    "expected_conflict": true,
+    "ground_truth_type": "Destination",
+    "records": [
+      {"member": "Alice", "category": "Destination", "stance": "positive", "value": {"name": "ella"}},
+      {"member": "Bob", "category": "Destination", "stance": "positive", "value": {"name": "kandy"}}
+    ]
+  },
+  {
+    "case_id": "DEST_03",
+    "category_focus": "Destination",
+    "name": "Hard conflict using synonym alias (nuwaraeliya vs nuwara eliya)",
+    "expected_conflict": true,
+    "ground_truth_type": "Destination",
+    "records": [
+      {"member": "Alice", "category": "Destination", "stance": "positive", "value": {"name": "nuwaraeliya"}},
+      {"member": "Bob", "category": "Destination", "stance": "negative", "value": {"name": "nuwara eliya"}}
+    ]
+  },
+  {
+    "case_id": "DEST_04",
+    "category_focus": "Destination",
+    "name": "Proposal scenario: 3 members with beach vs historical site",
+    "expected_conflict": true,
+    "ground_truth_type": "Destination",
+    "records": [
+      {"member": "Alice", "category": "Destination", "stance": "positive", "value": {"name": "beach"}},
+      {"member": "Bob", "category": "Destination", "stance": "positive", "value": {"name": "beach"}},
+      {"member": "Charlie", "category": "Destination", "stance": "positive", "value": {"name": "historical site"}}
+    ]
+  },
+  {
+    "case_id": "DEST_05",
+    "category_focus": "Destination",
+    "name": "Hard conflict on Mirissa with 3 members (2 positive, 1 negative)",
+    "expected_conflict": true,
+    "ground_truth_type": "Destination",
+    "records": [
+      {"member": "Alice", "category": "Destination", "stance": "positive", "value": {"name": "mirissa"}},
+      {"member": "Bob", "category": "Destination", "stance": "positive", "value": {"name": "mirissa"}},
+      {"member": "Charlie", "category": "Destination", "stance": "negative", "value": {"name": "mirissa"}}
+    ]
+  },
+  {
+    "case_id": "DEST_06",
+    "category_focus": "Destination",
+    "name": "No conflict: Both members positive about Sigiriya",
+    "expected_conflict": false,
+    "ground_truth_type": "None",
+    "records": [
+      {"member": "Alice", "category": "Destination", "stance": "positive", "value": {"name": "sigiriya"}},
+      {"member": "Bob", "category": "Destination", "stance": "positive", "value": {"name": "sigiriya"}}
+    ]
+  },
+  {
+    "case_id": "DEST_07",
+    "category_focus": "Destination",
+    "name": "No conflict: Shared destination avoids soft conflict",
+    "expected_conflict": false,
+    "ground_truth_type": "None",
+    "records": [
+      {"member": "Alice", "category": "Destination", "stance": "positive", "value": {"name": "galle"}},
+      {"member": "Alice", "category": "Destination", "stance": "positive", "value": {"name": "colombo"}},
+      {"member": "Bob", "category": "Destination", "stance": "positive", "value": {"name": "colombo"}}
+    ]
+  },
+  {
+    "case_id": "DEST_08",
+    "category_focus": "Destination",
+    "name": "No conflict: One member positive, one neutral",
+    "expected_conflict": false,
+    "ground_truth_type": "None",
+    "records": [
+      {"member": "Alice", "category": "Destination", "stance": "positive", "value": {"name": "kandy"}},
+      {"member": "Bob", "category": "Destination", "stance": "neutral", "value": {"name": "kandy"}}
+    ]
+  },
+  {
+    "case_id": "DEST_09",
+    "category_focus": "Destination",
+    "name": "No conflict: Self-contradiction corrected to positive agreement",
+    "expected_conflict": false,
+    "ground_truth_type": "None",
+    "records": [
+      {"member": "Alice", "category": "Destination", "stance": "negative", "value": {"name": "ella"}},
+      {"member": "Alice", "category": "Destination", "stance": "positive", "value": {"name": "ella"}},
+      {"member": "Bob", "category": "Destination", "stance": "positive", "value": {"name": "ella"}}
+    ]
+  },
+  {
+    "case_id": "DEST_10",
+    "category_focus": "Destination",
+    "name": "No conflict: Only one member in group",
+    "expected_conflict": false,
+    "ground_truth_type": "None",
+    "records": [
+      {"member": "Alice", "category": "Destination", "stance": "positive", "value": {"name": "colombo"}}
+    ]
+  },
+  {
+    "case_id": "ACT_01",
+    "category_focus": "Activity",
+    "name": "Hard activity conflict on hiking (positive vs negative)",
+    "expected_conflict": true,
+    "ground_truth_type": "Activity",
+    "records": [
+      {"member": "Alice", "category": "Activity", "stance": "positive", "value": {"name": "hiking"}},
+      {"member": "Bob", "category": "Activity", "stance": "negative", "value": {"name": "hiking"}}
+    ]
+  },
+  {
+    "case_id": "ACT_02",
+    "category_focus": "Activity",
+    "name": "Hard activity conflict on surfing via synonyms (surfing vs surf)",
+    "expected_conflict": true,
+    "ground_truth_type": "Activity",
+    "records": [
+      {"member": "Alice", "category": "Activity", "stance": "positive", "value": {"name": "surfing"}},
+      {"member": "Bob", "category": "Activity", "stance": "negative", "value": {"name": "surf"}}
+    ]
+  },
+  {
+    "case_id": "ACT_03",
+    "category_focus": "Activity",
+    "name": "Hard activity conflict on trekking vs hiking",
+    "expected_conflict": true,
+    "ground_truth_type": "Activity",
+    "records": [
+      {"member": "Alice", "category": "Activity", "stance": "positive", "value": {"name": "trekking"}},
+      {"member": "Bob", "category": "Activity", "stance": "negative", "value": {"name": "hike"}}
+    ]
+  },
+  {
+    "case_id": "ACT_04",
+    "category_focus": "Activity",
+    "name": "Hard activity conflict on wildlife safari (positive vs negative)",
+    "expected_conflict": true,
+    "ground_truth_type": "Activity",
+    "records": [
+      {"member": "Alice", "category": "Activity", "stance": "positive", "value": {"name": "wildlife safari"}},
+      {"member": "Bob", "category": "Activity", "stance": "negative", "value": {"name": "safari"}}
+    ]
+  },
+  {
+    "case_id": "ACT_05",
+    "category_focus": "Activity",
+    "name": "Hard activity conflict on snorkeling (positive vs negative)",
+    "expected_conflict": true,
+    "ground_truth_type": "Activity",
+    "records": [
+      {"member": "Alice", "category": "Activity", "stance": "positive", "value": {"name": "snorkeling"}},
+      {"member": "Bob", "category": "Activity", "stance": "negative", "value": {"name": "scuba diving"}}
+    ]
+  },
+  {
+    "case_id": "ACT_06",
+    "category_focus": "Activity",
+    "name": "No conflict: Mutual agreement on hiking",
+    "expected_conflict": false,
+    "ground_truth_type": "None",
+    "records": [
+      {"member": "Alice", "category": "Activity", "stance": "positive", "value": {"name": "hiking"}},
+      {"member": "Bob", "category": "Activity", "stance": "positive", "value": {"name": "hiking"}}
+    ]
+  },
+  {
+    "case_id": "ACT_07",
+    "category_focus": "Activity",
+    "name": "No conflict: Both members like different activities without opposition",
+    "expected_conflict": false,
+    "ground_truth_type": "None",
+    "records": [
+      {"member": "Alice", "category": "Activity", "stance": "positive", "value": {"name": "hiking"}},
+      {"member": "Bob", "category": "Activity", "stance": "positive", "value": {"name": "surfing"}}
+    ]
+  },
+  {
+    "case_id": "ACT_08",
+    "category_focus": "Activity",
+    "name": "No conflict: Neutral stance on camping",
+    "expected_conflict": false,
+    "ground_truth_type": "None",
+    "records": [
+      {"member": "Alice", "category": "Activity", "stance": "positive", "value": {"name": "camping"}},
+      {"member": "Bob", "category": "Activity", "stance": "neutral", "value": {"name": "camping"}}
+    ]
+  },
+  {
+    "case_id": "ACT_09",
+    "category_focus": "Activity",
+    "name": "No conflict: Self-contradiction updated to agreement on sightseeing",
+    "expected_conflict": false,
+    "ground_truth_type": "None",
+    "records": [
+      {"member": "Alice", "category": "Activity", "stance": "negative", "value": {"name": "sightseeing"}},
+      {"member": "Alice", "category": "Activity", "stance": "positive", "value": {"name": "sightseeing"}},
+      {"member": "Bob", "category": "Activity", "stance": "positive", "value": {"name": "sightseeing"}}
+    ]
+  },
+  {
+    "case_id": "ACT_10",
+    "category_focus": "Activity",
+    "name": "No conflict: Single member activity",
+    "expected_conflict": false,
+    "ground_truth_type": "None",
+    "records": [
+      {"member": "Alice", "category": "Activity", "stance": "positive", "value": {"name": "hiking"}}
+    ]
+  },
+  {
+    "case_id": "BUD_01",
+    "category_focus": "Budget",
+    "name": "Disjoint budget ranges (1000-3000 vs 6000-9000)",
+    "expected_conflict": true,
+    "ground_truth_type": "Budget",
+    "records": [
+      {"member": "Alice", "category": "Budget", "stance": "positive", "value": {"min": 1000.0, "max": 3000.0, "currency": "LKR", "scope": "per_person"}},
+      {"member": "Bob", "category": "Budget", "stance": "positive", "value": {"min": 6000.0, "max": 9000.0, "currency": "LKR", "scope": "per_person"}}
+    ]
+  },
+  {
+    "case_id": "BUD_02",
+    "category_focus": "Budget",
+    "name": "Budget ranges touching at single point (1000-3000 vs 3000-5000)",
+    "expected_conflict": true,
+    "ground_truth_type": "Budget",
+    "records": [
+      {"member": "Alice", "category": "Budget", "stance": "positive", "value": {"min": 1000.0, "max": 3000.0, "currency": "LKR", "scope": "per_person"}},
+      {"member": "Bob", "category": "Budget", "stance": "positive", "value": {"min": 3000.0, "max": 5000.0, "currency": "LKR", "scope": "per_person"}}
+    ]
+  },
+  {
+    "case_id": "BUD_03",
+    "category_focus": "Budget",
+    "name": "Incompatible open-ended budget (Alice at least 10000 vs Bob under 4000)",
+    "expected_conflict": true,
+    "ground_truth_type": "Budget",
+    "records": [
+      {"member": "Alice", "category": "Budget", "stance": "positive", "value": {"min": 10000.0, "max": null, "currency": "LKR", "scope": "per_person"}},
+      {"member": "Bob", "category": "Budget", "stance": "positive", "value": {"min": 0.0, "max": 4000.0, "currency": "LKR", "scope": "per_person"}}
+    ]
+  },
+  {
+    "case_id": "BUD_04",
+    "category_focus": "Budget",
+    "name": "Insufficient overlap below 30% threshold (1000-5000 vs 4500-9000)",
+    "expected_conflict": true,
+    "ground_truth_type": "Budget",
+    "records": [
+      {"member": "Alice", "category": "Budget", "stance": "positive", "value": {"min": 1000.0, "max": 5000.0, "currency": "LKR", "scope": "per_person"}},
+      {"member": "Bob", "category": "Budget", "stance": "positive", "value": {"min": 4500.0, "max": 9000.0, "currency": "LKR", "scope": "per_person"}}
+    ]
+  },
+  {
+    "case_id": "BUD_05",
+    "category_focus": "Budget",
+    "name": "Disjoint total budget scopes (20000-40000 vs 60000-100000)",
+    "expected_conflict": true,
+    "ground_truth_type": "Budget",
+    "records": [
+      {"member": "Alice", "category": "Budget", "stance": "positive", "value": {"min": 20000.0, "max": 40000.0, "currency": "LKR", "scope": "total"}},
+      {"member": "Bob", "category": "Budget", "stance": "positive", "value": {"min": 60000.0, "max": 100000.0, "currency": "LKR", "scope": "total"}}
+    ]
+  },
+  {
+    "case_id": "BUD_06",
+    "category_focus": "Budget",
+    "name": "No conflict: Overlapping budget ranges >= 30% (2000-6000 vs 3000-7000)",
+    "expected_conflict": false,
+    "ground_truth_type": "None",
+    "records": [
+      {"member": "Alice", "category": "Budget", "stance": "positive", "value": {"min": 2000.0, "max": 6000.0, "currency": "LKR", "scope": "per_person"}},
+      {"member": "Bob", "category": "Budget", "stance": "positive", "value": {"min": 3000.0, "max": 7000.0, "currency": "LKR", "scope": "per_person"}}
+    ]
+  },
+  {
+    "case_id": "BUD_07",
+    "category_focus": "Budget",
+    "name": "No conflict: Compatible open-ended budget (Alice at least 3000 vs Bob 2000-8000)",
+    "expected_conflict": false,
+    "ground_truth_type": "None",
+    "records": [
+      {"member": "Alice", "category": "Budget", "stance": "positive", "value": {"min": 3000.0, "max": null, "currency": "LKR", "scope": "per_person"}},
+      {"member": "Bob", "category": "Budget", "stance": "positive", "value": {"min": 2000.0, "max": 8000.0, "currency": "LKR", "scope": "per_person"}}
+    ]
+  },
+  {
+    "case_id": "BUD_08",
+    "category_focus": "Budget",
+    "name": "No conflict: Mismatched currency (USD vs LKR) skipped",
+    "expected_conflict": false,
+    "ground_truth_type": "None",
+    "records": [
+      {"member": "Alice", "category": "Budget", "stance": "positive", "value": {"min": 100.0, "max": 200.0, "currency": "USD", "scope": "per_person"}},
+      {"member": "Bob", "category": "Budget", "stance": "positive", "value": {"min": 50000.0, "max": 100000.0, "currency": "LKR", "scope": "per_person"}}
+    ]
+  },
+  {
+    "case_id": "BUD_09",
+    "category_focus": "Budget",
+    "name": "No conflict: Mismatched scope (per_person vs total) skipped",
+    "expected_conflict": false,
+    "ground_truth_type": "None",
+    "records": [
+      {"member": "Alice", "category": "Budget", "stance": "positive", "value": {"min": 2000.0, "max": 4000.0, "currency": "LKR", "scope": "per_person"}},
+      {"member": "Bob", "category": "Budget", "stance": "positive", "value": {"min": 30000.0, "max": 60000.0, "currency": "LKR", "scope": "total"}}
+    ]
+  },
+  {
+    "case_id": "BUD_10",
+    "category_focus": "Budget",
+    "name": "No conflict: Identical budget limits",
+    "expected_conflict": false,
+    "ground_truth_type": "None",
+    "records": [
+      {"member": "Alice", "category": "Budget", "stance": "positive", "value": {"min": 5000.0, "max": 10000.0, "currency": "LKR", "scope": "per_person"}},
+      {"member": "Bob", "category": "Budget", "stance": "positive", "value": {"min": 5000.0, "max": 10000.0, "currency": "LKR", "scope": "per_person"}}
+    ]
+  },
+  {
+    "case_id": "SCH_01",
+    "category_focus": "Schedule",
+    "name": "Completely disjoint travel dates (Nov 1-4 vs Nov 10-14)",
+    "expected_conflict": true,
+    "ground_truth_type": "Schedule",
+    "records": [
+      {"member": "Alice", "category": "Schedule", "stance": "positive", "value": {"start_date": "2026-11-01", "end_date": "2026-11-04"}},
+      {"member": "Bob", "category": "Schedule", "stance": "positive", "value": {"start_date": "2026-11-10", "end_date": "2026-11-14"}}
+    ]
+  },
+  {
+    "case_id": "SCH_02",
+    "category_focus": "Schedule",
+    "name": "Insufficient date overlap (1 day overlap when min 2 required)",
+    "expected_conflict": true,
+    "ground_truth_type": "Schedule",
+    "records": [
+      {"member": "Alice", "category": "Schedule", "stance": "positive", "value": {"start_date": "2026-11-01", "end_date": "2026-11-05"}},
+      {"member": "Bob", "category": "Schedule", "stance": "positive", "value": {"start_date": "2026-11-05", "end_date": "2026-11-09"}}
+    ]
+  },
+  {
+    "case_id": "SCH_03",
+    "category_focus": "Schedule",
+    "name": "Time of day conflict on overlapping dates (morning vs afternoon)",
+    "expected_conflict": true,
+    "ground_truth_type": "Schedule",
+    "records": [
+      {"member": "Alice", "category": "Schedule", "stance": "positive", "value": {"start_date": "2026-11-01", "end_date": "2026-11-04", "time_of_day": "morning"}},
+      {"member": "Bob", "category": "Schedule", "stance": "positive", "value": {"start_date": "2026-11-01", "end_date": "2026-11-04", "time_of_day": "afternoon"}}
+    ]
+  },
+  {
+    "case_id": "SCH_04",
+    "category_focus": "Schedule",
+    "name": "Time of day conflict (morning vs evening)",
+    "expected_conflict": true,
+    "ground_truth_type": "Schedule",
+    "records": [
+      {"member": "Alice", "category": "Schedule", "stance": "positive", "value": {"start_date": "2026-11-02", "end_date": "2026-11-06", "time_of_day": "morning"}},
+      {"member": "Bob", "category": "Schedule", "stance": "positive", "value": {"start_date": "2026-11-02", "end_date": "2026-11-06", "time_of_day": "evening"}}
+    ]
+  },
+  {
+    "case_id": "SCH_05",
+    "category_focus": "Schedule",
+    "name": "Single date conflict with no overlap",
+    "expected_conflict": true,
+    "ground_truth_type": "Schedule",
+    "records": [
+      {"member": "Alice", "category": "Schedule", "stance": "positive", "value": {"start_date": "2026-12-01", "end_date": "2026-12-01"}},
+      {"member": "Bob", "category": "Schedule", "stance": "positive", "value": {"start_date": "2026-12-05", "end_date": "2026-12-05"}}
+    ]
+  },
+  {
+    "case_id": "SCH_06",
+    "category_focus": "Schedule",
+    "name": "No conflict: Ample overlap of 4 days with no time discrepancy",
+    "expected_conflict": false,
+    "ground_truth_type": "None",
+    "records": [
+      {"member": "Alice", "category": "Schedule", "stance": "positive", "value": {"start_date": "2026-11-01", "end_date": "2026-11-06"}},
+      {"member": "Bob", "category": "Schedule", "stance": "positive", "value": {"start_date": "2026-11-03", "end_date": "2026-11-08"}}
+    ]
+  },
+  {
+    "case_id": "SCH_07",
+    "category_focus": "Schedule",
+    "name": "No conflict: Identical dates and matching time_of_day (morning)",
+    "expected_conflict": false,
+    "ground_truth_type": "None",
+    "records": [
+      {"member": "Alice", "category": "Schedule", "stance": "positive", "value": {"start_date": "2026-11-10", "end_date": "2026-11-15", "time_of_day": "morning"}},
+      {"member": "Bob", "category": "Schedule", "stance": "positive", "value": {"start_date": "2026-11-10", "end_date": "2026-11-15", "time_of_day": "morning"}}
+    ]
+  },
+  {
+    "case_id": "SCH_08",
+    "category_focus": "Schedule",
+    "name": "No conflict: Records with no dates are skipped",
+    "expected_conflict": false,
+    "ground_truth_type": "None",
+    "records": [
+      {"member": "Alice", "category": "Schedule", "stance": "positive", "value": {"start_date": null, "end_date": null, "time_of_day": "morning"}},
+      {"member": "Bob", "category": "Schedule", "stance": "positive", "value": {"start_date": null, "end_date": null, "time_of_day": "evening"}}
+    ]
+  },
+  {
+    "case_id": "SCH_09",
+    "category_focus": "Schedule",
+    "name": "No conflict: Only one member specifies schedule dates",
+    "expected_conflict": false,
+    "ground_truth_type": "None",
+    "records": [
+      {"member": "Alice", "category": "Schedule", "stance": "positive", "value": {"start_date": "2026-11-01", "end_date": "2026-11-05"}},
+      {"member": "Bob", "category": "Schedule", "stance": "positive", "value": {"start_date": null, "end_date": null}}
+    ]
+  },
+  {
+    "case_id": "SCH_10",
+    "category_focus": "Schedule",
+    "name": "No conflict: Matching date range without time_of_day restrictions",
+    "expected_conflict": false,
+    "ground_truth_type": "None",
+    "records": [
+      {"member": "Alice", "category": "Schedule", "stance": "positive", "value": {"start_date": "2026-12-10", "end_date": "2026-12-14", "time_of_day": null}},
+      {"member": "Bob", "category": "Schedule", "stance": "positive", "value": {"start_date": "2026-12-10", "end_date": "2026-12-14", "time_of_day": null}}
+    ]
+  }
+]
