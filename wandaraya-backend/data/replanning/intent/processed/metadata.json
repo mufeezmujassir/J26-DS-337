@@ -1,0 +1,47 @@
+{
+  "builder_version": "1.0.0",
+  "random_seed": 42,
+  "num_rows": 3000,
+  "rows_from_real_itineraries": 3000,
+  "real_data_ratio": 1.0,
+  "train_rows": 2400,
+  "dev_rows": 300,
+  "test_rows": 300,
+  "label_distribution": {
+    "preserved": 1660,
+    "broken": 1340
+  },
+  "broken_type_distribution": {
+    "vibe_mismatch": 160,
+    "budget_overrun": 160,
+    "location_shift": 100,
+    "missing_booking": 140,
+    "missing_must_see": 140,
+    "multiple_minor": 80,
+    "time_shift": 120
+  },
+  "source_attractions_count": 300,
+  "source_districts_count": 118,
+  "duration_distribution": {
+    "3": 867,
+    "5": 948,
+    "7": 756,
+    "10": 267,
+    "14": 162
+  },
+  "source_categories": [
+    "History & Archaeology",
+    "Nature & Landscapes",
+    "Urban & City Attractions",
+    "Culture & Heritage",
+    "Religious & Spiritual",
+    "Beaches & Coastal",
+    "Uncategorized",
+    "Wellness & Ayurveda",
+    "Food & Culinary",
+    "Photography & Scenic Spots",
+    "Wildlife & Safari"
+  ],
+  "generated_at": "2026-10-17T23:17:09.324354+00:00",
+  "dataset_hash_sha256": "614eca04da3a022a00399db8adbf6911271f2bba5460d68b0004aab722a62810"
+}

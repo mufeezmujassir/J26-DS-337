@@ -3,6 +3,85 @@ intent_preservation:
   strict_budget: true
   strict_bookings: true
 
+# Hybrid intent-preservation classifier (hard rules + Random Forest).
+intent_classifier:
+  enabled: true
+  model_filename: "intent_classifier_rf.pkl"
+  random_state: 42
+  decision_threshold: 0.5
+  label_noise_rate: 0.05
+  # Hybrid fusion thresholds (hard rules + Random Forest cross-check).
+  hybrid:
+    confirm_threshold: 0.7
+    no_preserve_threshold: 0.4
+  # Rule thresholds mirrored from the dataset labeler.
+  rules:
+    budget_overrun_threshold: 0.10
+    time_shift_threshold_minutes: 60
+    location_shift_threshold_km: 5.0
+    min_minor_changes: 3
+  # The 14 model features, in canonical training order.
+  features:
+    - vibe_match
+    - budget_diff_ratio
+    - bookings_preserved_ratio
+    - must_see_preserved_ratio
+    - time_shift_minutes
+    - activity_count_change
+    - location_distance_km
+    - num_activities_changed
+    - ratio_activities_changed
+    - anchor_age_minutes
+    - num_turns_since_anchor
+    - user_explicitly_changed_vibe
+    - user_explicitly_changed_budget
+    - num_prior_replans
+  # Sri-Lanka-specific trip-duration distribution (real tour-package weights).
+  durations:
+    values: [3, 5, 7, 10, 14]
+    weights: [0.30, 0.30, 0.25, 0.10, 0.05]
+    names:
+      3: "weekend_trip"
+      5: "standard_package"
+      7: "classic_full_week"
+      10: "extended_tour"
+      14: "grand_tour"
+  # Persona -> vibe and the exact real attraction categories they target.
+  personas:
+    "Adventure Seeker":
+      vibe: "active"
+      categories:
+        - "Nature & Landscapes"
+        - "Wildlife & Safari"
+        - "Photography & Scenic Spots"
+    "Cultural Explorer":
+      vibe: "cultural"
+      categories:
+        - "History & Archaeology"
+        - "Culture & Heritage"
+        - "Religious & Spiritual"
+    "Family":
+      vibe: "relaxed"
+      categories:
+        - "Beaches & Coastal"
+        - "Nature & Landscapes"
+        - "Photography & Scenic Spots"
+        - "Urban & City Attractions"
+    "Budget":
+      vibe: "mixed"
+      categories:
+        - "History & Archaeology"
+        - "Nature & Landscapes"
+        - "Urban & City Attractions"
+        - "Culture & Heritage"
+        - "Religious & Spiritual"
+        - "Beaches & Coastal"
+        - "Uncategorized"
+        - "Wellness & Ayurveda"
+        - "Food & Culinary"
+        - "Photography & Scenic Spots"
+        - "Wildlife & Safari"
+
 replanning:
   step_level:
     replace_scope: "single_activity"
