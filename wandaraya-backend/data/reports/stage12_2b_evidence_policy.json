@@ -1,0 +1,8 @@
+{
+  "verified_operator_time_evidence": "Only stored verified operating-hours evidence may determine OPEN/CLOSED.",
+  "source_supported_advisory": "Cited URL must belong to an active stored description. It remains explanatory; claim entailment is not silently treated as verified.",
+  "llm_generated_advisory": "No source citation; explicitly model-generated, low evidence confidence.",
+  "advisory_unavailable": "Null text; does not penalize or exclude a candidate.",
+  "ranking": "Best-time advisory is not included in baseline_score or final_experimental_score.",
+  "groq": "The public API never invokes Groq; only an explicit CLI --execute can do so."
+}

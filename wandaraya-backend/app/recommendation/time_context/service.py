@@ -8,6 +8,7 @@ from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.models.attraction import Attraction
+from app.recommendation.time_context.advisory import load_advisory_for_attraction
 from app.recommendation.content_based.service import ContentBasedRecommendationService
 from app.recommendation.time_context.schemas import TimeAwareRecommendationRequest, TimeAwareResponse, TimeContextEvidenceItem
 from app.time_context.opening_hours.evaluator import evaluate_weekly_schedule
@@ -79,6 +80,7 @@ class TimeAwareRecommendationService:
                 time_explanation=evaluation.explanation,
                 time_unavailable_dimensions=unavailable,
                 final_experimental_score=round(final_score, 6),
+                best_time_advisory=(load_advisory_for_attraction(attraction.id) if request.include_best_time_advisory else None),
             ))
         result.sort(key=lambda item: (-item.final_experimental_score, item.attraction_id))
         return TimeAwareResponse(

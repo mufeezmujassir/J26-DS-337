@@ -17,6 +17,7 @@ class TimeAwareRecommendationRequest(ContentBasedRecommendationRequest):
     # Lanka-local semantics; otherwise timezone ambiguity is rejected.
     assume_sri_lanka_local: bool = False
     time_weight: float = Field(default=0.35, ge=0, le=1)
+    include_best_time_advisory: bool = True
 
     @model_validator(mode="after")
     def resolve_visit_timezone(self) -> "TimeAwareRecommendationRequest":
@@ -37,6 +38,7 @@ class TimeContextEvidenceItem(ContentBasedRecommendationItem):
     time_explanation: str
     time_unavailable_dimensions: list[str] = Field(default_factory=list)
     final_experimental_score: float = Field(ge=0, le=1)
+    best_time_advisory: dict | None = None
 
 
 from pydantic import BaseModel
