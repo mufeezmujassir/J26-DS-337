@@ -1,0 +1,25 @@
+{
+  "attraction_id": 27,
+  "attraction_name": "Unawatuna Beach",
+  "status": "LLM_GENERATED_ADVISORY_AVAILABLE",
+  "opening_hours_modified": false,
+  "postgresql_writes": false,
+  "qdrant_writes": false,
+  "source_excerpts": [],
+  "limitations": [
+    "Not opening-hours evidence.",
+    "Must not determine OPEN/CLOSED.",
+    "Best-time advice is not a guarantee of accessibility, safety, or weather."
+  ],
+  "llm_advisory": {
+    "best_time_advisory": "Morning hours (around 8-10\u202fAM) are often quieter and cooler, but this is a model\u2011generated suggestion.",
+    "confidence": 0.4,
+    "source_supported_claims": [],
+    "cited_source_urls": [],
+    "limitations": "model-generated low-confidence guidance"
+  },
+  "advisory_evidence_tier": "llm_generated_advisory",
+  "confidence": "low",
+  "automatically_usable_for_best_time_guidance": true,
+  "generated_at_utc": "2026-10-18T14:59:54.249421+00:00"
+}

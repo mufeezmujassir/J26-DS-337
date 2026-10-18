@@ -1,0 +1,39 @@
+{
+  "attraction_id": 1,
+  "attraction_name": "Galle Dutch Fort",
+  "status": "SOURCE_SUPPORTED_ADVISORY_AVAILABLE",
+  "opening_hours_modified": false,
+  "postgresql_writes": false,
+  "qdrant_writes": false,
+  "source_excerpts": [
+    {
+      "title": "Galle",
+      "source_url": "https://en.wikivoyage.org/wiki/Galle"
+    },
+    {
+      "title": "Galle Fort",
+      "source_url": "https://en.wikipedia.org/wiki/Galle_Fort"
+    }
+  ],
+  "limitations": [
+    "Not opening-hours evidence.",
+    "Must not determine OPEN/CLOSED.",
+    "Best-time advice is not a guarantee of accessibility, safety, or weather."
+  ],
+  "llm_advisory": {
+    "best_time_advisory": "Morning and evening are ideal for walking around the ramparts of Galle Fort.",
+    "confidence": 0.9,
+    "source_supported_claims": [
+      "Walk around the ramparts first thing in the morning",
+      "Evenings are lovely too"
+    ],
+    "cited_source_urls": [
+      "https://en.wikivoyage.org/wiki/Galle"
+    ],
+    "limitations": "The excerpt only suggests that mornings and evenings are generally pleasant for walking around the ramparts; it does not provide specific times, seasonal considerations, weather conditions, crowd levels, or other factors that might affect the best time to visit."
+  },
+  "advisory_evidence_tier": "source_supported_advisory",
+  "confidence": "low",
+  "automatically_usable_for_best_time_guidance": true,
+  "generated_at_utc": "2026-10-18T14:58:54.173655+00:00"
+}
