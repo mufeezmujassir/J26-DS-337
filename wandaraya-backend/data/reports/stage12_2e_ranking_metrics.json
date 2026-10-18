@@ -1,0 +1,39 @@
+{
+  "status": "JUDGED_POOL_METRICS_COMPLETED",
+  "binary_relevance": "human score >= 2",
+  "recall_scope": "judged-pool only; this is not global attraction recall",
+  "per_query": {
+    "q01_galle_heritage": {
+      "content_baseline_v1": {
+        "precision_at_5": 0.0,
+        "judged_pool_recall_at_5": 0.0,
+        "ndcg_at_5": 0.024225728948115435,
+        "mrr_at_5": null,
+        "judged_candidates_in_ranked_list": 30,
+        "recall_denominator": "judged_pool_only_not_global_relevance",
+        "precision_at_10": 0.1,
+        "judged_pool_recall_at_10": 0.1111111111111111,
+        "ndcg_at_10": 0.1065238749115855,
+        "mrr_at_10": 0.1111111111111111
+      },
+      "content_evidence_review_experiment_v1": {
+        "precision_at_5": 0.2,
+        "judged_pool_recall_at_5": 0.1111111111111111,
+        "ndcg_at_5": 0.18600027285110401,
+        "mrr_at_5": 0.2,
+        "judged_candidates_in_ranked_list": 30,
+        "recall_denominator": "judged_pool_only_not_global_relevance",
+        "precision_at_10": 0.2,
+        "judged_pool_recall_at_10": 0.2222222222222222,
+        "ndcg_at_10": 0.23730290144616728,
+        "mrr_at_10": 0.2
+      }
+    }
+  },
+  "unavailable_policy_comparisons": [
+    "semantic_only: equivalent saved ranking unavailable",
+    "time_aware: equivalent candidate universe and visit-time ranking unavailable"
+  ],
+  "statistical_significance_claimed": false,
+  "limitation": "One labeled query is insufficient for statistical inference or a production policy decision."
+}

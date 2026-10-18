@@ -1,0 +1,202 @@
+{
+  "generated_at_utc": "2026-10-18T15:24:31.137406+00:00",
+  "pools": [
+    {
+      "candidate_pool": 30,
+      "retrieved_candidate_count": 30,
+      "target_id": 1,
+      "target_in_initial_pool": true,
+      "target_semantic_rank": 14,
+      "target_in_final_top5": false,
+      "target_final_rank_in_bounded_pool": 9,
+      "target_scoring_components": {
+        "baseline_score": 0.759554,
+        "semantic_relevance_score": 0.849257,
+        "category_match_score": 1.0,
+        "activity_match_score": 0.0,
+        "district_match_score": 1.0,
+        "unavailable_dimensions": [
+          "region"
+        ]
+      },
+      "hard_filter_survival_count_if_district_and_category_are_strict": 9,
+      "final_top5": [
+        {
+          "id": 2281,
+          "name": "Travel Sri Lanka offers",
+          "score": 0.872015
+        },
+        {
+          "id": 1064,
+          "name": "Hero's Bridge",
+          "score": 0.867679
+        },
+        {
+          "id": 121,
+          "name": "Thawalama Batahena Ambalama",
+          "score": 0.769302
+        },
+        {
+          "id": 80,
+          "name": "Jayanthi Junction",
+          "score": 0.766789
+        },
+        {
+          "id": 78,
+          "name": "Kottawa Junction",
+          "score": 0.765544
+        }
+      ],
+      "candidate_missing_category_or_activity_count": 12,
+      "latency_ms": 5789.76
+    },
+    {
+      "candidate_pool": 50,
+      "retrieved_candidate_count": 50,
+      "target_id": 1,
+      "target_in_initial_pool": true,
+      "target_semantic_rank": 14,
+      "target_in_final_top5": false,
+      "target_final_rank_in_bounded_pool": 11,
+      "target_scoring_components": {
+        "baseline_score": 0.759554,
+        "semantic_relevance_score": 0.849257,
+        "category_match_score": 1.0,
+        "activity_match_score": 0.0,
+        "district_match_score": 1.0,
+        "unavailable_dimensions": [
+          "region"
+        ]
+      },
+      "hard_filter_survival_count_if_district_and_category_are_strict": 9,
+      "final_top5": [
+        {
+          "id": 2281,
+          "name": "Travel Sri Lanka offers",
+          "score": 0.872015
+        },
+        {
+          "id": 1064,
+          "name": "Hero's Bridge",
+          "score": 0.867679
+        },
+        {
+          "id": 1102,
+          "name": "Rotti Shop ( \u0dbb\u0ddc\u0da7\u0dd2 \u0d9a\u0db8\u0dd4)",
+          "score": 0.852595
+        },
+        {
+          "id": 1024,
+          "name": "Higurahena ella",
+          "score": 0.852009
+        },
+        {
+          "id": 121,
+          "name": "Thawalama Batahena Ambalama",
+          "score": 0.769302
+        }
+      ],
+      "candidate_missing_category_or_activity_count": 21,
+      "latency_ms": 137.43
+    },
+    {
+      "candidate_pool": 100,
+      "retrieved_candidate_count": 100,
+      "target_id": 1,
+      "target_in_initial_pool": true,
+      "target_semantic_rank": 14,
+      "target_in_final_top5": false,
+      "target_final_rank_in_bounded_pool": 18,
+      "target_scoring_components": {
+        "baseline_score": 0.759554,
+        "semantic_relevance_score": 0.849257,
+        "category_match_score": 1.0,
+        "activity_match_score": 0.0,
+        "district_match_score": 1.0,
+        "unavailable_dimensions": [
+          "region"
+        ]
+      },
+      "hard_filter_survival_count_if_district_and_category_are_strict": 9,
+      "final_top5": [
+        {
+          "id": 2281,
+          "name": "Travel Sri Lanka offers",
+          "score": 0.872015
+        },
+        {
+          "id": 1064,
+          "name": "Hero's Bridge",
+          "score": 0.867679
+        },
+        {
+          "id": 1102,
+          "name": "Rotti Shop ( \u0dbb\u0ddc\u0da7\u0dd2 \u0d9a\u0db8\u0dd4)",
+          "score": 0.852595
+        },
+        {
+          "id": 1024,
+          "name": "Higurahena ella",
+          "score": 0.852009
+        },
+        {
+          "id": 2315,
+          "name": "Excellent Tea Trade Center",
+          "score": 0.851481
+        }
+      ],
+      "candidate_missing_category_or_activity_count": 50,
+      "latency_ms": 146.37
+    },
+    {
+      "candidate_pool": 200,
+      "retrieved_candidate_count": 200,
+      "target_id": 1,
+      "target_in_initial_pool": true,
+      "target_semantic_rank": 14,
+      "target_in_final_top5": false,
+      "target_final_rank_in_bounded_pool": 26,
+      "target_scoring_components": {
+        "baseline_score": 0.759554,
+        "semantic_relevance_score": 0.849257,
+        "category_match_score": 1.0,
+        "activity_match_score": 0.0,
+        "district_match_score": 1.0,
+        "unavailable_dimensions": [
+          "region"
+        ]
+      },
+      "hard_filter_survival_count_if_district_and_category_are_strict": 10,
+      "final_top5": [
+        {
+          "id": 2281,
+          "name": "Travel Sri Lanka offers",
+          "score": 0.872015
+        },
+        {
+          "id": 1064,
+          "name": "Hero's Bridge",
+          "score": 0.867679
+        },
+        {
+          "id": 1102,
+          "name": "Rotti Shop ( \u0dbb\u0ddc\u0da7\u0dd2 \u0d9a\u0db8\u0dd4)",
+          "score": 0.852595
+        },
+        {
+          "id": 1024,
+          "name": "Higurahena ella",
+          "score": 0.852009
+        },
+        {
+          "id": 2315,
+          "name": "Excellent Tea Trade Center",
+          "score": 0.851481
+        }
+      ],
+      "candidate_missing_category_or_activity_count": 90,
+      "latency_ms": 156.63
+    }
+  ],
+  "conclusion": "Pool-size results are descriptive only; no unbounded Qdrant scan was performed."
+}

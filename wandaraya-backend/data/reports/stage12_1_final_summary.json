@@ -1,0 +1,18 @@
+{
+  "status": "CONTENT_BASELINE_VERIFIED_END_TO_END",
+  "manual_checks_passed": 9,
+  "api_smoke_status": "passed",
+  "reports": [
+    "stage12_1_content_based_implementation.json",
+    "stage12_1_ranking_evaluation.json",
+    "stage12_1_api_smoke_test.json",
+    "stage12_1_test_results.json",
+    "stage12_1_final_summary.json"
+  ],
+  "limitations": [
+    "Offline ranking metrics use a controlled fixture and are not real-world quality claims.",
+    "This baseline is not the final five-layer Context Re-Ranker."
+  ],
+  "postgresql_writes_executed": false,
+  "qdrant_writes_executed": false
+}

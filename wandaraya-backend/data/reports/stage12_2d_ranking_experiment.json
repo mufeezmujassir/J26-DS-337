@@ -1,0 +1,90 @@
+{
+  "generated_at_utc": "2026-10-18T15:30:42.403195+00:00",
+  "policy_version": "content_evidence_review_experiment_v1",
+  "query": "heritage attractions and walking in Galle",
+  "baseline_top5": [
+    {
+      "id": 2281,
+      "name": "Travel Sri Lanka offers",
+      "score": 0.872015
+    },
+    {
+      "id": 1064,
+      "name": "Hero's Bridge",
+      "score": 0.867679
+    },
+    {
+      "id": 121,
+      "name": "Thawalama Batahena Ambalama",
+      "score": 0.769302
+    },
+    {
+      "id": 80,
+      "name": "Jayanthi Junction",
+      "score": 0.766789
+    },
+    {
+      "id": 78,
+      "name": "Kottawa Junction",
+      "score": 0.765544
+    }
+  ],
+  "experimental_top5": [
+    {
+      "attraction_id": 1064,
+      "name": "Hero's Bridge",
+      "baseline_score": 0.867679,
+      "eligibility_bucket": 1,
+      "eligibility_review_flags": [
+        "missing_category_metadata",
+        "missing_activity_metadata"
+      ],
+      "category_match_score": null,
+      "activity_match_score": null,
+      "district_match_score": 1.0
+    },
+    {
+      "attraction_id": 121,
+      "name": "Thawalama Batahena Ambalama",
+      "baseline_score": 0.769302,
+      "eligibility_bucket": 1,
+      "eligibility_review_flags": [],
+      "category_match_score": 1.0,
+      "activity_match_score": 0.0,
+      "district_match_score": 1.0
+    },
+    {
+      "attraction_id": 70,
+      "name": "War Heroes Memorial Statue Padinnoruwa",
+      "baseline_score": 0.762812,
+      "eligibility_bucket": 1,
+      "eligibility_review_flags": [],
+      "category_match_score": 1.0,
+      "activity_match_score": 0.0,
+      "district_match_score": 1.0
+    },
+    {
+      "attraction_id": 108,
+      "name": "Buddha statue",
+      "baseline_score": 0.76232,
+      "eligibility_bucket": 1,
+      "eligibility_review_flags": [],
+      "category_match_score": 1.0,
+      "activity_match_score": 0.0,
+      "district_match_score": 1.0
+    },
+    {
+      "attraction_id": 1,
+      "name": "Galle Dutch Fort",
+      "baseline_score": 0.759554,
+      "eligibility_bucket": 1,
+      "eligibility_review_flags": [],
+      "category_match_score": 1.0,
+      "activity_match_score": 0.0,
+      "district_match_score": 1.0
+    }
+  ],
+  "production_policy_changed": false,
+  "score_mutation": false,
+  "method": "Ordering buckets: verified positive preference evidence, then partial/unknown evidence, then name-based eligibility-review records."
+}

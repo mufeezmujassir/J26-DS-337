@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "http_status": 200,
+  "latency_ms": 260.77,
+  "request": {
+    "interests": "heritage attractions and walking in Galle",
+    "preferred_district_ids": [
+      78
+    ],
+    "limit": 3,
+    "candidate_pool_size": 15
+  },
+  "candidate_count": 15,
+  "result_attraction_ids": [
+    2281,
+    1064,
+    80
+  ],
+  "score_configuration_version": "content_baseline_v1",
+  "baseline_scope": "Semantic similarity and verified category/activity/district metadata only; weather, holiday, seasonality, time-of-day, group emotion, and itinerary optimization are not applied.",
+  "postgresql_writes_executed": false,
+  "qdrant_writes_executed": false
+}

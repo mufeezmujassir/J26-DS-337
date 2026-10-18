@@ -1,0 +1,9 @@
+{
+  "endpoint": "POST /api/v1/recommendations/time-aware",
+  "request_flag": "include_best_time_advisory=true",
+  "storage": "Existing JSON reports only; no migration or database writes.",
+  "opening_hours_independence": true,
+  "ranking_independence": true,
+  "automatic_groq_calls": false,
+  "deployment_note": "The source implementation is ready; an already-running non-reload FastAPI process requires a separately authorized API restart before the new response field is served."
+}

@@ -1,0 +1,18 @@
+{
+  "command": ".\\venv\\Scripts\\python.exe -m pytest tests/recommendation/test_recommendation_diagnostics.py tests/recommendation/test_time_advisory_policy.py -q",
+  "passed": 9,
+  "failed": 0,
+  "skipped": 0,
+  "coverage": [
+    "low-quality entity review flags",
+    "missing metadata reporting",
+    "deterministic metadata coverage",
+    "duplicate advisory JSON key rejection",
+    "source attribution validation",
+    "advisory evidence tier handling",
+    "opening-hours and ranking independence"
+  ],
+  "postgresql_writes": false,
+  "qdrant_writes": false,
+  "groq_requests": 0
+}

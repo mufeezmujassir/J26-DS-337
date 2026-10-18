@@ -1,0 +1,386 @@
+{
+  "status": "MULTI_QUERY_EVALUATION_COMPLETED",
+  "per_query": {
+    "q01_galle_heritage": {
+      "semantic_only": {
+        "precision_at_5": 0.0,
+        "judged_pool_recall_at_5": 0.0,
+        "ndcg_at_5": 0.030569466390646793,
+        "mrr_at_5": null,
+        "judged_candidates_in_ranked_list": 30,
+        "recall_denominator": "judged_pool_only_not_global_relevance",
+        "precision_at_10": 0.0,
+        "judged_pool_recall_at_10": 0.0,
+        "ndcg_at_10": 0.03376109566199547,
+        "mrr_at_10": null
+      },
+      "content_baseline_v1": {
+        "precision_at_5": 0.0,
+        "judged_pool_recall_at_5": 0.0,
+        "ndcg_at_5": 0.024225728948115435,
+        "mrr_at_5": null,
+        "judged_candidates_in_ranked_list": 30,
+        "recall_denominator": "judged_pool_only_not_global_relevance",
+        "precision_at_10": 0.1,
+        "judged_pool_recall_at_10": 0.1111111111111111,
+        "ndcg_at_10": 0.1065238749115855,
+        "mrr_at_10": 0.1111111111111111
+      },
+      "content_evidence_review_experiment_v1": {
+        "precision_at_5": 0.2,
+        "judged_pool_recall_at_5": 0.1111111111111111,
+        "ndcg_at_5": 0.18600027285110401,
+        "mrr_at_5": 0.2,
+        "judged_candidates_in_ranked_list": 30,
+        "recall_denominator": "judged_pool_only_not_global_relevance",
+        "precision_at_10": 0.2,
+        "judged_pool_recall_at_10": 0.2222222222222222,
+        "ndcg_at_10": 0.23730290144616728,
+        "mrr_at_10": 0.2
+      }
+    },
+    "q02_southern_beaches": {
+      "semantic_only": {
+        "precision_at_5": 0.8,
+        "judged_pool_recall_at_5": 0.26666666666666666,
+        "ndcg_at_5": 0.5773721662448373,
+        "mrr_at_5": 0.5,
+        "judged_candidates_in_ranked_list": 30,
+        "recall_denominator": "judged_pool_only_not_global_relevance",
+        "precision_at_10": 0.7,
+        "judged_pool_recall_at_10": 0.4666666666666667,
+        "ndcg_at_10": 0.5956615759952891,
+        "mrr_at_10": 0.5
+      },
+      "content_baseline_v1": {
+        "precision_at_5": 0.6,
+        "judged_pool_recall_at_5": 0.2,
+        "ndcg_at_5": 0.3718791999848038,
+        "mrr_at_5": 0.3333333333333333,
+        "judged_candidates_in_ranked_list": 30,
+        "recall_denominator": "judged_pool_only_not_global_relevance",
+        "precision_at_10": 0.6,
+        "judged_pool_recall_at_10": 0.4,
+        "ndcg_at_10": 0.46999674200217845,
+        "mrr_at_10": 0.3333333333333333
+      },
+      "content_evidence_review_experiment_v1": {
+        "precision_at_5": 0.8,
+        "judged_pool_recall_at_5": 0.26666666666666666,
+        "ndcg_at_5": 0.5773721662448373,
+        "mrr_at_5": 0.5,
+        "judged_candidates_in_ranked_list": 30,
+        "recall_denominator": "judged_pool_only_not_global_relevance",
+        "precision_at_10": 0.7,
+        "judged_pool_recall_at_10": 0.4666666666666667,
+        "ndcg_at_10": 0.5956615759952891,
+        "mrr_at_10": 0.5
+      }
+    },
+    "q03_wildlife_safari": {
+      "semantic_only": {
+        "precision_at_5": 1.0,
+        "judged_pool_recall_at_5": 0.16666666666666666,
+        "ndcg_at_5": 0.6343169226155623,
+        "mrr_at_5": 1.0,
+        "judged_candidates_in_ranked_list": 30,
+        "recall_denominator": "judged_pool_only_not_global_relevance",
+        "precision_at_10": 1.0,
+        "judged_pool_recall_at_10": 0.3333333333333333,
+        "ndcg_at_10": 0.7230217205568464,
+        "mrr_at_10": 1.0
+      },
+      "content_baseline_v1": {
+        "precision_at_5": 1.0,
+        "judged_pool_recall_at_5": 0.16666666666666666,
+        "ndcg_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "judged_candidates_in_ranked_list": 30,
+        "recall_denominator": "judged_pool_only_not_global_relevance",
+        "precision_at_10": 1.0,
+        "judged_pool_recall_at_10": 0.3333333333333333,
+        "ndcg_at_10": 0.9603250160361273,
+        "mrr_at_10": 1.0
+      },
+      "content_evidence_review_experiment_v1": {
+        "precision_at_5": 1.0,
+        "judged_pool_recall_at_5": 0.16666666666666666,
+        "ndcg_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "judged_candidates_in_ranked_list": 30,
+        "recall_denominator": "judged_pool_only_not_global_relevance",
+        "precision_at_10": 1.0,
+        "judged_pool_recall_at_10": 0.3333333333333333,
+        "ndcg_at_10": 1.0,
+        "mrr_at_10": 1.0
+      }
+    },
+    "q04_cultural_religious": {
+      "semantic_only": {
+        "precision_at_5": 1.0,
+        "judged_pool_recall_at_5": 0.1724137931034483,
+        "ndcg_at_5": 0.6886039320648765,
+        "mrr_at_5": 1.0,
+        "judged_candidates_in_ranked_list": 30,
+        "recall_denominator": "judged_pool_only_not_global_relevance",
+        "precision_at_10": 0.9,
+        "judged_pool_recall_at_10": 0.3103448275862069,
+        "ndcg_at_10": 0.735309858027533,
+        "mrr_at_10": 1.0
+      },
+      "content_baseline_v1": {
+        "precision_at_5": 1.0,
+        "judged_pool_recall_at_5": 0.1724137931034483,
+        "ndcg_at_5": 0.6886039320648765,
+        "mrr_at_5": 1.0,
+        "judged_candidates_in_ranked_list": 30,
+        "recall_denominator": "judged_pool_only_not_global_relevance",
+        "precision_at_10": 0.9,
+        "judged_pool_recall_at_10": 0.3103448275862069,
+        "ndcg_at_10": 0.735309858027533,
+        "mrr_at_10": 1.0
+      },
+      "content_evidence_review_experiment_v1": {
+        "precision_at_5": 1.0,
+        "judged_pool_recall_at_5": 0.1724137931034483,
+        "ndcg_at_5": 0.6886039320648765,
+        "mrr_at_5": 1.0,
+        "judged_candidates_in_ranked_list": 30,
+        "recall_denominator": "judged_pool_only_not_global_relevance",
+        "precision_at_10": 0.9,
+        "judged_pool_recall_at_10": 0.3103448275862069,
+        "ndcg_at_10": 0.735309858027533,
+        "mrr_at_10": 1.0
+      }
+    },
+    "q05_hiking_adventure": {
+      "semantic_only": {
+        "precision_at_5": 1.0,
+        "judged_pool_recall_at_5": 0.1724137931034483,
+        "ndcg_at_5": 0.9250256699929476,
+        "mrr_at_5": 1.0,
+        "judged_candidates_in_ranked_list": 30,
+        "recall_denominator": "judged_pool_only_not_global_relevance",
+        "precision_at_10": 1.0,
+        "judged_pool_recall_at_10": 0.3448275862068966,
+        "ndcg_at_10": 0.9513467899190737,
+        "mrr_at_10": 1.0
+      },
+      "content_baseline_v1": {
+        "precision_at_5": 0.8,
+        "judged_pool_recall_at_5": 0.13793103448275862,
+        "ndcg_at_5": 0.3868376143306553,
+        "mrr_at_5": 1.0,
+        "judged_candidates_in_ranked_list": 30,
+        "recall_denominator": "judged_pool_only_not_global_relevance",
+        "precision_at_10": 0.9,
+        "judged_pool_recall_at_10": 0.3103448275862069,
+        "ndcg_at_10": 0.6020995671333589,
+        "mrr_at_10": 1.0
+      },
+      "content_evidence_review_experiment_v1": {
+        "precision_at_5": 1.0,
+        "judged_pool_recall_at_5": 0.1724137931034483,
+        "ndcg_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "judged_candidates_in_ranked_list": 30,
+        "recall_denominator": "judged_pool_only_not_global_relevance",
+        "precision_at_10": 1.0,
+        "judged_pool_recall_at_10": 0.3448275862068966,
+        "ndcg_at_10": 1.0,
+        "mrr_at_10": 1.0
+      }
+    },
+    "q06_family": {
+      "semantic_only": {
+        "precision_at_5": 0.8,
+        "judged_pool_recall_at_5": 0.14285714285714285,
+        "ndcg_at_5": 0.7860137352654724,
+        "mrr_at_5": 1.0,
+        "judged_candidates_in_ranked_list": 30,
+        "recall_denominator": "judged_pool_only_not_global_relevance",
+        "precision_at_10": 0.9,
+        "judged_pool_recall_at_10": 0.32142857142857145,
+        "ndcg_at_10": 0.8337603702662298,
+        "mrr_at_10": 1.0
+      },
+      "content_baseline_v1": {
+        "precision_at_5": 0.8,
+        "judged_pool_recall_at_5": 0.14285714285714285,
+        "ndcg_at_5": 0.7860137352654724,
+        "mrr_at_5": 1.0,
+        "judged_candidates_in_ranked_list": 30,
+        "recall_denominator": "judged_pool_only_not_global_relevance",
+        "precision_at_10": 0.9,
+        "judged_pool_recall_at_10": 0.32142857142857145,
+        "ndcg_at_10": 0.8337603702662298,
+        "mrr_at_10": 1.0
+      },
+      "content_evidence_review_experiment_v1": {
+        "precision_at_5": 0.8,
+        "judged_pool_recall_at_5": 0.14285714285714285,
+        "ndcg_at_5": 0.7860137352654724,
+        "mrr_at_5": 1.0,
+        "judged_candidates_in_ranked_list": 30,
+        "recall_denominator": "judged_pool_only_not_global_relevance",
+        "precision_at_10": 0.9,
+        "judged_pool_recall_at_10": 0.32142857142857145,
+        "ndcg_at_10": 0.8337603702662298,
+        "mrr_at_10": 1.0
+      }
+    },
+    "q07_hill_country": {
+      "semantic_only": {
+        "precision_at_5": 1.0,
+        "judged_pool_recall_at_5": 0.17857142857142858,
+        "ndcg_at_5": 0.46330760591184034,
+        "mrr_at_5": 1.0,
+        "judged_candidates_in_ranked_list": 30,
+        "recall_denominator": "judged_pool_only_not_global_relevance",
+        "precision_at_10": 1.0,
+        "judged_pool_recall_at_10": 0.35714285714285715,
+        "ndcg_at_10": 0.6237162589915131,
+        "mrr_at_10": 1.0
+      },
+      "content_baseline_v1": {
+        "precision_at_5": 1.0,
+        "judged_pool_recall_at_5": 0.17857142857142858,
+        "ndcg_at_5": 0.46330760591184034,
+        "mrr_at_5": 1.0,
+        "judged_candidates_in_ranked_list": 30,
+        "recall_denominator": "judged_pool_only_not_global_relevance",
+        "precision_at_10": 1.0,
+        "judged_pool_recall_at_10": 0.35714285714285715,
+        "ndcg_at_10": 0.6237162589915131,
+        "mrr_at_10": 1.0
+      },
+      "content_evidence_review_experiment_v1": {
+        "precision_at_5": 1.0,
+        "judged_pool_recall_at_5": 0.17857142857142858,
+        "ndcg_at_5": 0.46330760591184034,
+        "mrr_at_5": 1.0,
+        "judged_candidates_in_ranked_list": 30,
+        "recall_denominator": "judged_pool_only_not_global_relevance",
+        "precision_at_10": 1.0,
+        "judged_pool_recall_at_10": 0.35714285714285715,
+        "ndcg_at_10": 0.6237162589915131,
+        "mrr_at_10": 1.0
+      }
+    },
+    "q08_archaeology": {
+      "semantic_only": {
+        "precision_at_5": 0.8,
+        "judged_pool_recall_at_5": 0.14814814814814814,
+        "ndcg_at_5": 0.8165832016561192,
+        "mrr_at_5": 1.0,
+        "judged_candidates_in_ranked_list": 30,
+        "recall_denominator": "judged_pool_only_not_global_relevance",
+        "precision_at_10": 0.7,
+        "judged_pool_recall_at_10": 0.25925925925925924,
+        "ndcg_at_10": 0.7501557436419941,
+        "mrr_at_10": 1.0
+      },
+      "content_baseline_v1": {
+        "precision_at_5": 1.0,
+        "judged_pool_recall_at_5": 0.18518518518518517,
+        "ndcg_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "judged_candidates_in_ranked_list": 30,
+        "recall_denominator": "judged_pool_only_not_global_relevance",
+        "precision_at_10": 1.0,
+        "judged_pool_recall_at_10": 0.37037037037037035,
+        "ndcg_at_10": 1.0,
+        "mrr_at_10": 1.0
+      },
+      "content_evidence_review_experiment_v1": {
+        "precision_at_5": 1.0,
+        "judged_pool_recall_at_5": 0.18518518518518517,
+        "ndcg_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "judged_candidates_in_ranked_list": 30,
+        "recall_denominator": "judged_pool_only_not_global_relevance",
+        "precision_at_10": 1.0,
+        "judged_pool_recall_at_10": 0.37037037037037035,
+        "ndcg_at_10": 1.0,
+        "mrr_at_10": 1.0
+      }
+    },
+    "q09_culinary": {
+      "semantic_only": {
+        "precision_at_5": 0.8,
+        "judged_pool_recall_at_5": 0.15384615384615385,
+        "ndcg_at_5": 0.4901104712675658,
+        "mrr_at_5": 0.5,
+        "judged_candidates_in_ranked_list": 30,
+        "recall_denominator": "judged_pool_only_not_global_relevance",
+        "precision_at_10": 0.9,
+        "judged_pool_recall_at_10": 0.34615384615384615,
+        "ndcg_at_10": 0.5081810404565194,
+        "mrr_at_10": 0.5
+      },
+      "content_baseline_v1": {
+        "precision_at_5": 1.0,
+        "judged_pool_recall_at_5": 0.19230769230769232,
+        "ndcg_at_5": 0.6004486743709427,
+        "mrr_at_5": 1.0,
+        "judged_candidates_in_ranked_list": 30,
+        "recall_denominator": "judged_pool_only_not_global_relevance",
+        "precision_at_10": 0.9,
+        "judged_pool_recall_at_10": 0.34615384615384615,
+        "ndcg_at_10": 0.6364070420428419,
+        "mrr_at_10": 1.0
+      },
+      "content_evidence_review_experiment_v1": {
+        "precision_at_5": 1.0,
+        "judged_pool_recall_at_5": 0.19230769230769232,
+        "ndcg_at_5": 0.6004486743709427,
+        "mrr_at_5": 1.0,
+        "judged_candidates_in_ranked_list": 30,
+        "recall_denominator": "judged_pool_only_not_global_relevance",
+        "precision_at_10": 0.9,
+        "judged_pool_recall_at_10": 0.34615384615384615,
+        "ndcg_at_10": 0.6364070420428419,
+        "mrr_at_10": 1.0
+      }
+    },
+    "q10_photography": {
+      "semantic_only": {
+        "precision_at_5": 0.6,
+        "judged_pool_recall_at_5": 0.1111111111111111,
+        "ndcg_at_5": 0.6587165028191821,
+        "mrr_at_5": 1.0,
+        "judged_candidates_in_ranked_list": 30,
+        "recall_denominator": "judged_pool_only_not_global_relevance",
+        "precision_at_10": 0.7,
+        "judged_pool_recall_at_10": 0.25925925925925924,
+        "ndcg_at_10": 0.5974425699350437,
+        "mrr_at_10": 1.0
+      },
+      "content_baseline_v1": {
+        "precision_at_5": 1.0,
+        "judged_pool_recall_at_5": 0.18518518518518517,
+        "ndcg_at_5": 0.7192801759488139,
+        "mrr_at_5": 1.0,
+        "judged_candidates_in_ranked_list": 30,
+        "recall_denominator": "judged_pool_only_not_global_relevance",
+        "precision_at_10": 1.0,
+        "judged_pool_recall_at_10": 0.37037037037037035,
+        "ndcg_at_10": 0.736678295392941,
+        "mrr_at_10": 1.0
+      },
+      "content_evidence_review_experiment_v1": {
+        "precision_at_5": 1.0,
+        "judged_pool_recall_at_5": 0.18518518518518517,
+        "ndcg_at_5": 0.7192801759488139,
+        "mrr_at_5": 1.0,
+        "judged_candidates_in_ranked_list": 30,
+        "recall_denominator": "judged_pool_only_not_global_relevance",
+        "precision_at_10": 1.0,
+        "judged_pool_recall_at_10": 0.37037037037037035,
+        "ndcg_at_10": 0.736678295392941,
+        "mrr_at_10": 1.0
+      }
+    }
+  },
+  "recall_scope": "judged-pool only"
+}

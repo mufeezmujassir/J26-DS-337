@@ -1,0 +1,11 @@
+{
+  "status": "AWAITING_HUMAN_RELEVANCE_LABELS",
+  "workbook": "data/reports/stage12_2d_human_relevance_workbook.csv",
+  "metrics_after_labels": [
+    "Precision@5",
+    "Recall@5",
+    "NDCG@5",
+    "ranking stability"
+  ],
+  "no_real_world_accuracy_claim": true
+}

@@ -1,0 +1,20 @@
+{
+  "stage": "12.1",
+  "status": "CONTENT_BASELINE_VERIFIED_END_TO_END",
+  "endpoint": "POST /api/v1/recommendations/content-based",
+  "retrieval": "existing SemanticAttractionRetriever and existing configured Qdrant collection",
+  "metadata": "read-only PostgreSQL hydration of active attractions, categories, and available activities",
+  "hard_filter_policy": "exclude candidates when requested hard-filter metadata is absent or does not match",
+  "region_policy": "province preferences are resolved only through stored districts.province values",
+  "score": "shifted cosine similarity plus available metadata preference scores with dynamic weight normalization",
+  "excluded_dimensions": [
+    "weather",
+    "holiday",
+    "seasonality",
+    "time_of_day",
+    "group_emotion",
+    "itinerary_optimization"
+  ],
+  "database_writes": false,
+  "qdrant_writes": false
+}
