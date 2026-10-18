@@ -23,6 +23,12 @@ wandaraya-backend\.env
 /data/replanning/intent/processed/results_*.json
 /data/replanning/intent/processed/plots/
 
+#==== dynamic replanning consistency classifier ML artifacts ====
+/app/replanning/dynamic_replanning/model_files/consistency_classifier_rf.pkl
+# Evaluation outputs
+/data/replanning/consistency/processed/results_*.json
+/data/replanning/consistency/processed/plots/
+
 
 #==== Jupyter checkpoints ====
 .ipynb_checkpoints/

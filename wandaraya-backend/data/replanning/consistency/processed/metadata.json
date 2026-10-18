@@ -1,0 +1,26 @@
+{
+  "builder_version": "1.0.0",
+  "random_seed": 42,
+  "num_rows": 3000,
+  "rows_from_real_itineraries": 3000,
+  "real_data_ratio": 1.0,
+  "train_rows": 2400,
+  "dev_rows": 300,
+  "test_rows": 300,
+  "label_distribution": {
+    "consistent": 1773,
+    "drift": 1227
+  },
+  "drift_type_distribution": {
+    "none": 1800,
+    "vibe_changed_without_approval": 201,
+    "rejected_alternative_reintroduced": 198,
+    "constraint_contradiction": 201,
+    "confirmed_must_see_removed": 201,
+    "no_rushing_violated": 198,
+    "budget_exceeded": 201
+  },
+  "source_attractions_count": 300,
+  "generated_at": "2026-10-18T11:38:11.596876+00:00",
+  "dataset_hash_sha256": "34a03c408e65c9b95cf63bb1a2cb16f1bebb4c473c2df65b876bbaed689444be"
+}
