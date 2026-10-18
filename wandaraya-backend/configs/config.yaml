@@ -27,3 +27,34 @@ emotion_baseline:
   paths:
     results_json: data/group_decision/reports/baseline_emotion_results.json
     f1_figure: data/group_decision/reports/figures/baseline_emotion_f1.png
+
+
+roberta_emotion:
+  model_name_or_path: "roberta-base"
+  dataset:
+    hf_path: "google-research-datasets/go_emotions"
+    hf_fallback_path: "go_emotions"
+    config_name: "simplified"
+    num_classes: 28
+  training:
+    learning_rate: 2.0e-5
+    weight_decay: 0.01
+    batch_size: 32
+    max_length: 64
+    warmup_ratio: 0.1
+    max_epochs: 5
+    fp16: true
+    early_stopping_patience: 2
+    early_stopping_metric: "val_macro_f1"
+    pos_weight_max_clip: 10.0
+  threshold_tuning:
+    min_threshold: 0.1
+    max_threshold: 0.9
+    step: 0.02
+  paths:
+    model_dir: "models/roberta_emotion"
+    checkpoint_dir: "models/roberta_emotion/checkpoints"
+    thresholds_json: "models/roberta_emotion/thresholds.json"
+    results_json: "reports/roberta_emotion_results.json"
+    baseline_results_json: "reports/baseline_emotion_results.json"
+    figures_dir: "reports/figures"

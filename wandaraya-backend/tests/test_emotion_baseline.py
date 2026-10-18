@@ -7,7 +7,7 @@ from pathlib import Path
 import numpy as np
 import pytest
 
-from src.emotion.baseline import (
+from scripts.emotion_baseline import (
     DEFAULT_GOEMOTIONS_LABELS,
     binarize_labels,
     evaluate_model,
