@@ -139,6 +139,13 @@ class DynamicReplanner:
             LOGGER.warning("Alternative finder failed (step): %s", error)
             alts = []
 
+        selected = self._select_best_alternative(
+            alts, disruption, affected_elem, "step", user_id,
+            original_itinerary, anchor, "Step-Level replacement",
+        )
+        if selected is not None:
+            return selected
+
         revised_activities = self._alts_to_activities(alts, "Step-Level replacement")
 
         revised = RevisedPlan(
@@ -176,6 +183,13 @@ class DynamicReplanner:
             LOGGER.warning("Alternative finder failed (day): %s", error)
             alts = []
 
+        selected = self._select_best_alternative(
+            alts, disruption, affected_elem, "day", user_id,
+            original_itinerary, anchor, "Day-Level replacement",
+        )
+        if selected is not None:
+            return selected
+
         revised_activities = self._alts_to_activities(alts, "Day-Level replacement")
 
         revised = RevisedPlan(
@@ -211,6 +225,13 @@ class DynamicReplanner:
             LOGGER.warning("Alternative finder failed (plan): %s", error)
             alts = []
 
+        selected = self._select_best_alternative(
+            alts, disruption, affected_elem, "plan", user_id,
+            original_itinerary, anchor, "Plan-Level replacement",
+        )
+        if selected is not None:
+            return selected
+
         revised_activities = self._alts_to_activities(alts, "Plan-Level replacement")
 
         revised = RevisedPlan(
@@ -237,6 +258,120 @@ class DynamicReplanner:
             LOGGER.info("Apply recorded for user %s, plan %s", user_id, revised_plan.plan_id)
         except Exception as error:  # noqa: BLE001
             LOGGER.warning("Apply failed: %s", error)
+
+    def _select_best_alternative(
+        self,
+        alts: List[Dict[str, Any]],
+        disruption: Dict[str, Any],
+        affected_elem: AffectedElement,
+        severity: str,
+        user_id: str,
+        original_itinerary: Dict[str, Any],
+        anchor: IntentAnchor,
+        reason: str,
+    ) -> RevisedPlan | None:
+        """Gate each alternative through intent then consistency checks.
+
+        Alternatives are evaluated in order. An alternative is rejected when
+        the Intent Preservation check fails (``is_preserved == False``) or
+        when the Cross-Turn Consistency check fails
+        (``consistent == False``). The first alternative that passes both
+        checks is selected.
+        """
+        for index, alt in enumerate(alts):
+            if not isinstance(alt, dict):
+                continue
+            label = alt.get("activity_name") or alt.get("name") or f"alt_{index}"
+            candidate = self._build_candidate_plan(
+                alt, disruption, affected_elem, severity,
+                original_itinerary, anchor, reason,
+            )
+
+            # Step 1 — Intent Preservation check (must run first).
+            try:
+                report = self._intent_preserver.preserve(
+                    original_itinerary, candidate, anchor
+                )
+            except Exception as error:  # noqa: BLE001
+                LOGGER.warning(
+                    "Rejected alternative '%s' due to intent check error: %s",
+                    label,
+                    error,
+                )
+                continue
+            if not report.get("is_preserved", True):
+                LOGGER.info(
+                    "Rejected alternative '%s' due to intent not preserved "
+                    "(broken=%s)",
+                    label,
+                    report.get("broken_elements", []),
+                )
+                continue
+
+            # Step 2 — Cross-Turn Consistency check.
+            try:
+                check = self._consistency_checker.check_consistency(
+                    user_id, candidate, anchor
+                )
+            except Exception as error:  # noqa: BLE001
+                LOGGER.warning(
+                    "Rejected alternative '%s' due to consistency check "
+                    "error: %s",
+                    label,
+                    error,
+                )
+                continue
+            if not check.consistent:
+                LOGGER.info(
+                    "Rejected alternative '%s' due to consistency failure: %s",
+                    label,
+                    check.reason or "; ".join(check.reasons),
+                )
+                continue
+
+            LOGGER.info(
+                "Selected alternative '%s': intent and consistency checks "
+                "both passed",
+                label,
+            )
+            return candidate
+
+        LOGGER.warning(
+            "No alternative passed both safety checks for user %s "
+            "(%d candidates evaluated); falling back to combined plan",
+            user_id,
+            len(alts),
+        )
+        return None
+
+    def _build_candidate_plan(
+        self,
+        alt: Dict[str, Any],
+        disruption: Dict[str, Any],
+        affected_elem: AffectedElement,
+        severity: str,
+        original_itinerary: Dict[str, Any],
+        anchor: IntentAnchor,
+        reason: str,
+    ) -> RevisedPlan:
+        """Build a single-alternative candidate plan for safety evaluation."""
+        activities = self._alts_to_activities([alt], reason)
+        preserved = self._intent_preserver.get_preserved_elements(
+            original_itinerary,
+            RevisedPlan.model_construct(
+                severity=severity, affected_element=affected_elem
+            ),
+            anchor,
+        ) or ["vibe", "budget", "bookings"]
+        return RevisedPlan(
+            original_plan_id=str(original_itinerary.get("plan_id", "")),
+            disruption_id=str(disruption.get("disruption_id", "")),
+            severity=severity,
+            affected_element=affected_elem,
+            revised_activities=activities,
+            preserved_elements=preserved,
+            requires_confirmation=True,
+        )
 
     @staticmethod
     def _extract_affected(disruption: Dict[str, Any]) -> AffectedElement:
