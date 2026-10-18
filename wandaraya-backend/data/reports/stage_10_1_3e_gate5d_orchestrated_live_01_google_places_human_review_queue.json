@@ -1,0 +1,408 @@
+{
+  "records": [
+    {
+      "attraction_name": "Pallan Hela Mountain",
+      "candidates": [
+        {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.7097,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.213815599999999,
+            "longitude": 81.54318719999999
+          },
+          "display_name": "Pallan Hela",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "6G7V+G7F, Inginiyagala, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=4074498511107709146&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJtXaJP3Qd5ToR2thu6M6Gizg",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "hiking_area",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.5573,
+          "types": [
+            "hiking_area",
+            "sports_activity_location",
+            "point_of_interest",
+            "establishment"
+          ]
+        }
+      ],
+      "classification": "new_google_place_candidate",
+      "details": {
+        "data": {
+          "addressComponents": [
+            {
+              "languageCode": "en-US",
+              "longText": "6G7V+G7F",
+              "shortText": "6G7V+G7F",
+              "types": [
+                "plus_code"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Inginiyagala",
+              "shortText": "Inginiyagala",
+              "types": [
+                "locality",
+                "political"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Ampara",
+              "shortText": "Ampara",
+              "types": [
+                "administrative_area_level_2",
+                "political"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Eastern Province",
+              "shortText": "EP",
+              "types": [
+                "administrative_area_level_1",
+                "political"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Sri Lanka",
+              "shortText": "LK",
+              "types": [
+                "country",
+                "political"
+              ]
+            }
+          ],
+          "businessStatus": "OPERATIONAL",
+          "displayName": {
+            "languageCode": "en",
+            "text": "Pallan Hela"
+          },
+          "formattedAddress": "6G7V+G7F, Inginiyagala, Sri Lanka",
+          "googleMapsUri": "https://maps.google.com/?cid=4074498511107709146&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+          "id": "ChIJtXaJP3Qd5ToR2thu6M6Gizg",
+          "location": {
+            "latitude": 7.213815599999999,
+            "longitude": 81.54318719999999
+          },
+          "primaryType": "hiking_area",
+          "types": [
+            "hiking_area",
+            "sports_activity_location",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "error": null,
+        "provenance": {
+          "google_place_id": "ChIJtXaJP3Qd5ToR2thu6M6Gizg",
+          "source": "google_places_details"
+        }
+      },
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:136",
+      "google_candidate_kb_identity": "no_existing_kb_place_id_match",
+      "official_source_candidate_identity": "not_evaluated",
+      "query": "Pallan Hela Mountain, Sri Lanka",
+      "review_reasons": [],
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=136",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=136"
+    },
+    {
+      "attraction_name": "Veddagala",
+      "candidates": [
+        {
+          "business_status": null,
+          "candidate_kind": "locality_or_administrative_area",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.35,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.8889,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 6.464584599999999,
+            "longitude": 80.4320286
+          },
+          "display_name": "Weddagala",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "Weddagala, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=1214300174554473147&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJNUaEKBXd4zoRu6IDO5MP2hA",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": null,
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.3417,
+          "types": [
+            "locality",
+            "political"
+          ]
+        }
+      ],
+      "classification": "related_locality_not_attraction",
+      "details": {
+        "data": {
+          "addressComponents": [
+            {
+              "languageCode": "en",
+              "longText": "Weddagala",
+              "shortText": "Weddagala",
+              "types": [
+                "locality",
+                "political"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Ratnapura",
+              "shortText": "Ratnapura",
+              "types": [
+                "administrative_area_level_2",
+                "political"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Sabaragamuwa Province",
+              "shortText": "SG",
+              "types": [
+                "administrative_area_level_1",
+                "political"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Sri Lanka",
+              "shortText": "LK",
+              "types": [
+                "country",
+                "political"
+              ]
+            }
+          ],
+          "displayName": {
+            "languageCode": "en",
+            "text": "Weddagala"
+          },
+          "formattedAddress": "Weddagala, Sri Lanka",
+          "googleMapsUri": "https://maps.google.com/?cid=1214300174554473147&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+          "id": "ChIJNUaEKBXd4zoRu6IDO5MP2hA",
+          "location": {
+            "latitude": 6.464584599999999,
+            "longitude": 80.4320286
+          },
+          "photos": [
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Visal Nuwantha",
+                  "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocLtmdFhu9HX8sRUqgLMNzAA262x5pkqEH-NrgSYwIgGiHRiiw=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/114162824489613769812"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgID4isX0Cg&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgID4isX0Cg!2e10!4m2!3m1!1s0x3ae3dd1528844635:0x10da0f933b03a2bb",
+              "heightPx": 1536,
+              "name": "places/ChIJNUaEKBXd4zoRu6IDO5MP2hA/photos/Aa-ngMZ2UxmQC9t1C56BLH-GVSIKJ6gRyQShb-BzhHM5kAFHQIZmB9H35hCJ_0nwRC36OFC8amGVIiMMH_FB8NqMIrifVlFVP6F4euYvt-qjNWz2J08AwiExCA4S1gQ3bTFHCAzoUUgqDcKOoji9Raru2Dzu4odOjf4x7Obo5QUAsKcQM3O1R_PGPciK-0SZuDVKrpqG-qq3gpOF4CrKpdtunyrFE19z-xwr-2YaUvuE4UJcvM4VMRES6igPnafzU7lkCo9yBeCNeWLwTqN9WBE--SWYdhiWFnFdrpZz2vI9h_qPkVC8Aahsy3AWW2m1q3nMxLS5QC5JmMteBQ1csyYXp3wHfZ9W7_XkWbCgbvbAddtVvXjg1QGv1KUHmLGbBgZ0FItGAJtIf7vYcahUGxiOTNHALA",
+              "widthPx": 2560
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "J.M.Senanayaka Bandara",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUoqakKqA6j7XL1_Y-ApID4tj_DZ1c-3W3rrYYfUsTmzlhvz7O5kBs=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/110980684488387417089"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgICFh7Hs1wE&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICFh7Hs1wE!2e10!4m2!3m1!1s0x3ae3dd1528844635:0x10da0f933b03a2bb",
+              "heightPx": 2268,
+              "name": "places/ChIJNUaEKBXd4zoRu6IDO5MP2hA/photos/Aa-ngMZ-v9CIVhVZ0Rs9F4vrdQpRhXzLli1vLnZoKXfU8Da1QRvip0s5m8cDx6YSQXruOvKbosCpQ4w4w_d2-ijvKM_tAqyr-Dj54VaTTPssRRMflTuOHqQfknMnZonaA_hd-RpZ2Hc35er_ZzGnytOpYD6VlbL-lAmuFepgXFvtuEcuXOfTEzY35j8jrpPlz_3zMH7dr83j5JsHLHhMwWyVl93IuWme119z742fwC6c66ZqUaE7BsBTTyrnWvxgBWVafK9zlEOwo0uoSYhGrutT8wuTGVEwztwsxaZjNNZ2jXynSxXU7FDcOtbOVAHmK1ItqceMKiZiaA-TllvUz-R1tDWtfQ1eM7xSSudDQZHeaI-yVCAmmYDJ6i0-r5oEyWSWxJueMkwCPePWV0_zf_dxNhQpngNmnzU",
+              "widthPx": 4032
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "J.M.Senanayaka Bandara",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUoqakKqA6j7XL1_Y-ApID4tj_DZ1c-3W3rrYYfUsTmzlhvz7O5kBs=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/110980684488387417089"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgICFh7GohgE&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICFh7GohgE!2e10!4m2!3m1!1s0x3ae3dd1528844635:0x10da0f933b03a2bb",
+              "heightPx": 2268,
+              "name": "places/ChIJNUaEKBXd4zoRu6IDO5MP2hA/photos/Aa-ngMYAGPMFCEgJH27S43WKOyblraJV-HLFbLraGJUuF-gawlBR4VOlwY-AgUENIC7Hn6fs0gEyTkcWNReU0TwlESvoSwdZ2maTHsTiM8qOL0eh61ZNs2p0c8GUj5kDutzLELC6C4gxFsCn8nUGuRQ0OG3pCJuB2JqNJZIxLSFLa4Nd64p0t8bQ96i7Ua4sWjqv31y7G451farkAY5ujCPjRt5ls9hkLqtc2RZfwirC3bSoIB8NGePwpyKLOpQVr7Gb2dE5l871Jhhyo_N4i_jw_OdhOSErISHyXMZME0-QBi1rGgkDPN1YAx_G7U3TsGPKkQVPekcT4uXeaiWqujxuvjQFhdVQpHBYQHFPQ_ZuCQqs9NBLt0YO7bXIY2-OO2KscubgTxFavaOZ2SB6SAZP3hqczX0ucns",
+              "widthPx": 4032
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Visal Nuwantha",
+                  "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocLtmdFhu9HX8sRUqgLMNzAA262x5pkqEH-NrgSYwIgGiHRiiw=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/114162824489613769812"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgID4isX0igE&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgID4isX0igE!2e10!4m2!3m1!1s0x3ae3dd1528844635:0x10da0f933b03a2bb",
+              "heightPx": 2448,
+              "name": "places/ChIJNUaEKBXd4zoRu6IDO5MP2hA/photos/Aa-ngMavt16ZZ3S9OmvsD3yx-_QGXOv0X-OzoLsRLyLYnnrF4H0Lq9pXBVtUYgszjubpbYu9cpBcb26CsDzo-kWiyrMOILvpnJwlGngo7_NJuaM7yLUMSaoNLqWmK5Ue_1ZLE3cdBH7L_ICJviwse0wEEel2ta9kQCEJE-Egq9IQbF6oG27OaJfmp6Kf1qGUjWu6Q1v7yBJgoVAbXdUh8bU6eV_g4DnUTjylRbBdGvWm1w22YAO7CiHruMTj5n13ZOMqBpSPlWEZ191diFPIKp6-6b7OGnBhesOBYY_B6s48_IVPFW59KpRHl_5jFgBvPOsOeluIhanTt2mwCITjNlH4jYpI7QpKesMTu06_YiqSfG0emkkRQKH6tl672N-YII7VQvMrT54yzsy7iFSZMoD4jZjv0d_xVhw",
+              "widthPx": 3264
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "ofer agiv",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVRLyXMduDXejYhG0-JM1UgX-drIlbt8lA4UpEtlNq-wEYPYimt7A=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/113407590987344884655"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgICEv_yxmAE&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICEv_yxmAE!2e10!4m2!3m1!1s0x3ae3dd1528844635:0x10da0f933b03a2bb",
+              "heightPx": 1080,
+              "name": "places/ChIJNUaEKBXd4zoRu6IDO5MP2hA/photos/Aa-ngMZbmiMrYiR7Yl8S_YE4nwZjX0wBk6VPVEDBBPu4m0eWHLGn_2jsagDcFoEER44P1VH8IP1mUM6QXEH6As8jYL51TtKjsi_Gs5vpV5JziAuyFBC4EssuueDWYveoMOPyJobIrCjxVBcK6QPpsQmFpvtkfnmddOFWpojedvWMFXTI11Jr2JbSGYa8W9Yb3t3u6-KIC1LCiHzDFobxgmWSawlK-zoVVOsfc-j2ebmcbXHRcZ8fjYkZsfNxpUAjN6CWD7OFJX1Yq__fNkWcHFrFhA29IZonunp7Wc4GghidK9TYXqoLAXSADTf7CZq5teIFQxW4GXUopTNdj6N1vsQCmr-i26GZncrgsHlIfhLNFJ5pTEcUuf7TeJstm0ozfScQhKzzsfp0fUfMGKa3In-62-DCWRBkBAI",
+              "widthPx": 1920
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Visal Nuwantha",
+                  "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocLtmdFhu9HX8sRUqgLMNzAA262x5pkqEH-NrgSYwIgGiHRiiw=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/114162824489613769812"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgID4isX0cg&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgID4isX0cg!2e10!4m2!3m1!1s0x3ae3dd1528844635:0x10da0f933b03a2bb",
+              "heightPx": 2976,
+              "name": "places/ChIJNUaEKBXd4zoRu6IDO5MP2hA/photos/Aa-ngMa2243OFLqBTm_qZrevmQAhYPwlhOjtcMEeDo6ob61lJMJfYS6k1vPUerXY8oq6sjsK4fwa0KpA5vU3iNiLTD_jRhBiJxc7AQ4RWitZLRcqT6sTY0ueImHH2eRBJLJBjp-STgbv9rHM9NFx9-WsmsW9fvU9JLTs0ysHN0TuPhhAbNIV0OGHsMKj5oYLQ5fw_AevpzQks99L-sfWWlNYKco2c6juF_Dj_a_EO_6AHWp3iHQyBVK4UfzeuJJbt6PH7LOXBbPDLmPL0KjLweOMOQwVC1935SYWzh2PNh0yvfL9ATsDHlR0ayIs6exdgoja5jBUHPWGZwrys6qVB438MbSdZxIwnpV_6cL0z3F1TnFVXxobciwGLGsl74CQUlu2lsjPr52rSrsJi-SjtOWjpNTOsys",
+              "widthPx": 3968
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "ofer agiv",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVRLyXMduDXejYhG0-JM1UgX-drIlbt8lA4UpEtlNq-wEYPYimt7A=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/113407590987344884655"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgICEn52zBw&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICEn52zBw!2e10!4m2!3m1!1s0x3ae3dd1528844635:0x10da0f933b03a2bb",
+              "heightPx": 1280,
+              "name": "places/ChIJNUaEKBXd4zoRu6IDO5MP2hA/photos/Aa-ngMaJ2mtve65cPSoPMNgK3uPj7l3X8ldDGDcRK4XEWk8hvorKc5JXwxuoFPnE7yrxuYRlSoSKwClNSR7QoERa0bWILAN2G6RsyxnFeCAcpTGlwgxP_TS5AB5QPVVvDN0iOdfA_R6G3YbHORuLoK-mpW0DUAMzaQY8JP_HTAVvIc_7fkwnIWHJI1eMHB05qE_1peUeTk-TK34C4EwJKdDJtxGwp1ZzUxvNlHAhFTXtU1pLYPujOQwEYByrnhuqwaJdFa6sgX0tuCDS0BDs5y_oyZvZ0iZ4iRhNX4Mw1mrA3UtV4EW8CGlb6-MXwmoB2MKg2bNPLDXtjQDfzhElpTJDeXj2vaJUejRzxbRnRc-didEhYcRNaD31LgyMRmxhTFp8-Bd6Lil86cmKkZ6nSPL1u5wKClw",
+              "widthPx": 1920
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Visal Nuwantha",
+                  "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocLtmdFhu9HX8sRUqgLMNzAA262x5pkqEH-NrgSYwIgGiHRiiw=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/114162824489613769812"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIDc3fXlGw&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDc3fXlGw!2e10!4m2!3m1!1s0x3ae3dd1528844635:0x10da0f933b03a2bb",
+              "heightPx": 1536,
+              "name": "places/ChIJNUaEKBXd4zoRu6IDO5MP2hA/photos/Aa-ngMYvySQkMFIp6V-Kwh-eo9jU_QMcvo1wsha3HQwUjmLqzw0unY6sMH4hHyVERprnm8oKI063HH2VVNhB43AXLmoy2q0m_Dzt2q92VfbYpDrRC8_gGUvG8-kjDGH-jE7BLXSghGnAC0CxCCXERGKF6pVe3k0OnfzHnBsP571VeckA6PLWrID2UsKriu9W3KGDQTtuy7oFveOyw_DR5f1ZD4K4bNfXgwvHLdxc0w_h4wDmeL57aUl3XzrJFOsRSzYks94Ot4n_TVFJUU1YaKQYxLyY7s8IvZa3U7sy_syrcDdvqdSOo_dwSgqFaYy1TAdSug88PeJ0EStJZ9TKu55xHoKKe3oCcvYfo30_tf5M98KkoEflWtVptT8EZFIvOXTEZc6itNvdC2xKpNF1HhbFvSSNHlo",
+              "widthPx": 2560
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Anuruddha Vijekumara",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVO9bPEZasNTrYzKxNC0pObP2Mu9LZrQtRujefjmmfYDFZ00ZU5=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/114067302542308047218"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIC47L7hnAE&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIC47L7hnAE!2e10!4m2!3m1!1s0x3ae3dd1528844635:0x10da0f933b03a2bb",
+              "heightPx": 3264,
+              "name": "places/ChIJNUaEKBXd4zoRu6IDO5MP2hA/photos/Aa-ngMZVFD-GXzXHOPR-t_hxd4L9aTf4Gpndhnh4zXpj3ErR_awAK7GbwcJMnbSlUQQHfP1il5krk1CVBWbUKDXVY0_wYsV7ObvWNbE4doNlV-vVEqDCbPp4NNubj0xwUxBOLT2lD1bpDmATiXjIiRbQdyxncsksw06pPTzrRhG7BlDWQMKbNWgLnhcRukTJg-c2nbMcPBK-8dvey0gSaFpUNh0APNgk-RAvqi-WPREbZY4-4GRrsF8_eYDjYgH6Erw4macR-p-uH-2YGZ-arvOe4F8i1NNrcIxpeG-rWfndbsBIKuoAA0KDRWbHo6HEY8QKyR9z0GdeJGpF7eOHz4kfw5bApGGS2sfjSjnxPlqczq3cv9tivoqkb5zDnWUyf3L3o5Aa4qmYzylrlmkHRVGGQyPZGqwgN_I",
+              "widthPx": 2448
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "ofer agiv",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVRLyXMduDXejYhG0-JM1UgX-drIlbt8lA4UpEtlNq-wEYPYimt7A=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/113407590987344884655"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgICEv6-SogE&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICEv6-SogE!2e10!4m2!3m1!1s0x3ae3dd1528844635:0x10da0f933b03a2bb",
+              "heightPx": 1280,
+              "name": "places/ChIJNUaEKBXd4zoRu6IDO5MP2hA/photos/Aa-ngMaLhfgkZD5ofSY54X8jzILY0gI4MQ6DQAptgdv_OPrCUcqgykaSfp6YbA5nCH2TfJylFoxzJgSpjyAqkItF7WlTyYL6uuG9-IXvD2vRPBG9DBQleuVYANVcL7dXOMwHFPnLMQVn3vK0Qrec2WN9-4Yv_TYkQ7FH0qCAbrrqr4So80e2cDETcwqfoTtG8zeDy4qvEo-FekkUHVb8y1juVeHewHG2PQRHBi_sQJwqem-JklzgN9esPWB65-0Jfg-uftN2fW04WhX1ZVyZYE_wYhxVJnrzLa68MvbzCRNgDc8kAaABV7khlMpNHXjH4SQnnANHrQyIstZMpcI2CWxwFBPvb3VVy_0E68cKLKyulDdWW99VZXYnTkfp1QClY8Gh0dLqW5jGbo3DQ7AHXEz7JI9zlgSaA_o",
+              "widthPx": 1920
+            }
+          ],
+          "types": [
+            "locality",
+            "political"
+          ]
+        },
+        "error": null,
+        "provenance": {
+          "google_place_id": "ChIJNUaEKBXd4zoRu6IDO5MP2hA",
+          "source": "google_places_details"
+        }
+      },
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:138",
+      "google_candidate_kb_identity": "no_existing_kb_place_id_match",
+      "official_source_candidate_identity": "locality_only_result_not_identity_proof",
+      "query": "Veddagala, Sri Lanka",
+      "review_reasons": [
+        "top Google result is a locality or administrative area, not a physical attraction"
+      ],
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=138",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=138"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "embedding_model": "BAAI/bge-large-en-v1.5",
+  "existing_current_vectors": 0,
+  "external_api_requests": 0,
+  "identity_conflicts": 0,
+  "invalid_semantic_documents": 0,
+  "missing_vectors": 24,
+  "mode": "dry_run",
+  "postgresql_imported_records": 24,
+  "postgresql_writes_executed": false,
+  "qdrant_collection_name": "sri_lanka_attractions",
+  "qdrant_point_count": 6098,
+  "qdrant_writes_executed": false,
+  "ready_to_sync": 24,
+  "reasons": [],
+  "semantic_documents_prepared": 24,
+  "stale_vectors": 0,
+  "status": "READY_FOR_EXPLICIT_QDRANT_SYNC",
+  "vector_dimension": 1024
+}

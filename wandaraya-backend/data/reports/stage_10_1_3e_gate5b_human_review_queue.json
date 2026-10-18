@@ -1,0 +1,32 @@
+{
+  "status": "human_review_required",
+  "items": [
+    {
+      "source_url": "https://srilanka.travel/attraction?attraction_id=163",
+      "category": "attraction_detail",
+      "warnings": [
+        "No supported main description selector matched.",
+        "missing_fee_information"
+      ],
+      "reconciliation": "insufficient_evidence"
+    },
+    {
+      "source_url": "https://srilanka.travel/attraction?attraction_id=160",
+      "category": "attraction_detail",
+      "warnings": [
+        "No supported main description selector matched.",
+        "missing_fee_information"
+      ],
+      "reconciliation": "insufficient_evidence"
+    },
+    {
+      "source_url": "https://srilanka.travel/attraction?attraction_id=153",
+      "category": "attraction_detail",
+      "warnings": [
+        "No supported main description selector matched.",
+        "missing_fee_information"
+      ],
+      "reconciliation": "insufficient_evidence"
+    }
+  ]
+}

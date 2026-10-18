@@ -34,7 +34,11 @@ class RouteValidationService:
         Implements safe fallback to use local data if API is unavailable.
         DOES NOT modify the local database.
         """
-        api_result = await self.api_client.get_route(request)
+        try:
+            api_result = await self.api_client.get_route(request)
+        except Exception as exc:
+            logger.error(f"External Route API unhandled exception: {exc}")
+            api_result = RouteResult(source="route_api_error")
         
         # Validating Distance
         if api_result.distance is not None and local_distance_km is not None:
@@ -52,7 +56,7 @@ class RouteValidationService:
         if api_result.geometry:
             logger.info("Geometry Validation: Geometry successfully retrieved and parsed from API.")
             
-        # Fallback Handling
+        final_res = api_result
         if api_result.source in ["route_api_timeout", "route_api_error", "route_api_http_error", "route_api_invalid_response", "route_api_unavailable"]:
             logger.warning(f"Route API failed with source: {api_result.source}. Checking local data fallback.")
             if local_distance_km is not None:

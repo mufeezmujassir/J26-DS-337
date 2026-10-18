@@ -1,5 +1,12 @@
 """Live routing verification using real ingested road data from PostgreSQL."""
+import os
 import psycopg
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
+
 from app.services.graph import MultimodalGraph, Node, Edge, GraphMode
 from app.services.dijkstra import DijkstraRouter
 from app.services.transfer_loader import build_transfers
@@ -10,7 +17,8 @@ def test_live_route():
     print("==================================================")
     graph = MultimodalGraph()
 
-    conn = psycopg.connect("postgresql://postgres:root@localhost:5432/wandaraya")
+    db_url = os.environ.get("DATABASE_URL", "postgresql://postgres@localhost:5432/wandaraya").replace("+psycopg", "")
+    conn = psycopg.connect(db_url)
     cur = conn.cursor()
 
     # 1. Fetch real road segments from DB

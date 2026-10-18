@@ -1,0 +1,179 @@
+{
+  "status": "review_only",
+  "records": [
+    {
+      "source_url": "https://srilanka.travel/attraction?attraction_id=163",
+      "canonical_url": "https://srilanka.travel/attraction?attraction_id=163",
+      "source_domain": "srilanka.travel",
+      "source_attribution": "Sri Lanka Tourism (srilanka.travel)",
+      "source_page_category": "attraction_detail",
+      "http_status": 200,
+      "retrieved_at": "2026-10-16 12:41:37.983851+00:00",
+      "content_sha256": "f67c7af2daa4a1ccf200be5232064534e27eb90a8423cd3da38647d0d65d40a9",
+      "extraction_adapter_version": "gate5b_v1",
+      "extracted_fields": {
+        "title": "Yala National Park",
+        "description": null,
+        "source_attraction_id": "srilanka_tourism_attraction:163",
+        "attraction_name": "Yala National Park",
+        "location_text": null,
+        "district": null,
+        "attraction_category": null,
+        "activities": null,
+        "features_highlights": null,
+        "opening_hours": null,
+        "closing_days": null,
+        "entry_fees": null,
+        "ticketing_information": null,
+        "recommended_visiting_periods": null,
+        "seasonal_guidance": null,
+        "accessibility_information": null,
+        "contact_details": null
+      },
+      "field_provenance": [
+        {
+          "field_name": "title",
+          "selector_or_basis": "h1 or title",
+          "source_excerpt": "Yala National Park"
+        },
+        {
+          "field_name": "source_attraction_id",
+          "selector_or_basis": "attraction_id URL query parameter",
+          "source_excerpt": "srilanka_tourism_attraction:163"
+        },
+        {
+          "field_name": "attraction_name",
+          "selector_or_basis": "h1 or title",
+          "source_excerpt": "Yala National Park"
+        }
+      ],
+      "validation_warnings": [
+        "No supported main description selector matched.",
+        "missing_fee_information"
+      ],
+      "extraction_confidence": "review_required",
+      "authorization_reference": "WANDARAYA-GATE5B1-BATCH-01",
+      "authorization_status": "approved_for_pilot",
+      "processing_status": "extraction_review_required",
+      "reconciliation_status": "insufficient_evidence",
+      "production_write_performed": false,
+      "qdrant_write_performed": false
+    },
+    {
+      "source_url": "https://srilanka.travel/attraction?attraction_id=160",
+      "canonical_url": "https://srilanka.travel/attraction?attraction_id=160",
+      "source_domain": "srilanka.travel",
+      "source_attribution": "Sri Lanka Tourism (srilanka.travel)",
+      "source_page_category": "attraction_detail",
+      "http_status": 200,
+      "retrieved_at": "2026-10-16 12:41:41.241210+00:00",
+      "content_sha256": "9489cd801fba097df829628e584436470e2193fbd953a481d1a4200efd3f33d0",
+      "extraction_adapter_version": "gate5b_v1",
+      "extracted_fields": {
+        "title": "Sigiriya",
+        "description": null,
+        "source_attraction_id": "srilanka_tourism_attraction:160",
+        "attraction_name": "Sigiriya",
+        "location_text": null,
+        "district": null,
+        "attraction_category": null,
+        "activities": null,
+        "features_highlights": null,
+        "opening_hours": null,
+        "closing_days": null,
+        "entry_fees": null,
+        "ticketing_information": null,
+        "recommended_visiting_periods": null,
+        "seasonal_guidance": null,
+        "accessibility_information": null,
+        "contact_details": null
+      },
+      "field_provenance": [
+        {
+          "field_name": "title",
+          "selector_or_basis": "h1 or title",
+          "source_excerpt": "Sigiriya"
+        },
+        {
+          "field_name": "source_attraction_id",
+          "selector_or_basis": "attraction_id URL query parameter",
+          "source_excerpt": "srilanka_tourism_attraction:160"
+        },
+        {
+          "field_name": "attraction_name",
+          "selector_or_basis": "h1 or title",
+          "source_excerpt": "Sigiriya"
+        }
+      ],
+      "validation_warnings": [
+        "No supported main description selector matched.",
+        "missing_fee_information"
+      ],
+      "extraction_confidence": "review_required",
+      "authorization_reference": "WANDARAYA-GATE5B1-BATCH-01",
+      "authorization_status": "approved_for_pilot",
+      "processing_status": "extraction_review_required",
+      "reconciliation_status": "insufficient_evidence",
+      "production_write_performed": false,
+      "qdrant_write_performed": false
+    },
+    {
+      "source_url": "https://srilanka.travel/attraction?attraction_id=153",
+      "canonical_url": "https://srilanka.travel/attraction?attraction_id=153",
+      "source_domain": "srilanka.travel",
+      "source_attribution": "Sri Lanka Tourism (srilanka.travel)",
+      "source_page_category": "attraction_detail",
+      "http_status": 200,
+      "retrieved_at": "2026-10-16 12:41:44.422837+00:00",
+      "content_sha256": "fe5d48b0a63b39f0b9e6eb08f84c33a78e290296413761747c9aca4528ae79a2",
+      "extraction_adapter_version": "gate5b_v1",
+      "extracted_fields": {
+        "title": "Galle Fort",
+        "description": null,
+        "source_attraction_id": "srilanka_tourism_attraction:153",
+        "attraction_name": "Galle Fort",
+        "location_text": null,
+        "district": null,
+        "attraction_category": null,
+        "activities": null,
+        "features_highlights": null,
+        "opening_hours": null,
+        "closing_days": null,
+        "entry_fees": null,
+        "ticketing_information": null,
+        "recommended_visiting_periods": null,
+        "seasonal_guidance": null,
+        "accessibility_information": null,
+        "contact_details": null
+      },
+      "field_provenance": [
+        {
+          "field_name": "title",
+          "selector_or_basis": "h1 or title",
+          "source_excerpt": "Galle Fort"
+        },
+        {
+          "field_name": "source_attraction_id",
+          "selector_or_basis": "attraction_id URL query parameter",
+          "source_excerpt": "srilanka_tourism_attraction:153"
+        },
+        {
+          "field_name": "attraction_name",
+          "selector_or_basis": "h1 or title",
+          "source_excerpt": "Galle Fort"
+        }
+      ],
+      "validation_warnings": [
+        "No supported main description selector matched.",
+        "missing_fee_information"
+      ],
+      "extraction_confidence": "review_required",
+      "authorization_reference": "WANDARAYA-GATE5B1-BATCH-01",
+      "authorization_status": "approved_for_pilot",
+      "processing_status": "extraction_review_required",
+      "reconciliation_status": "insufficient_evidence",
+      "production_write_performed": false,
+      "qdrant_write_performed": false
+    }
+  ]
+}

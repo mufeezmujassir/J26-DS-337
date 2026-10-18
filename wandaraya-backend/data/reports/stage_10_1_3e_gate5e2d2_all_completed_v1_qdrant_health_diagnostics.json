@@ -1,0 +1,30 @@
+{
+  "client_server_minor_versions_compatible": true,
+  "client_version": "1.18.0",
+  "collection_status": "green",
+  "direct_retrieve": {
+    "returned_points": 0,
+    "status": "ok"
+  },
+  "disk_space": "unavailable_from_fastapi_container: qdrant storage is not mounted here",
+  "filtered_scroll": {
+    "error": "Unexpected Response: 500 (Internal Server Error)\nRaw response content:\nb'{\"status\":{\"error\":\"Service internal error: 1 of 1 read operations failed:\\\\n  Service internal error: task 341 panicked with message \\\\\"called `Result::unwrap()` on an `Err` value: OffsetZero\\\\\"\"},\"t ...'",
+    "error_type": "UnexpectedResponse",
+    "status": "failed"
+  },
+  "health_status": "degraded",
+  "indexed_vectors_count": 0,
+  "point_count": 6098,
+  "qdrant_url": "http://qdrant:6333",
+  "server_metadata": {
+    "commit": "44ad62f8cd69642be5afa6441612525e24a0d063",
+    "title": "qdrant - vector search engine",
+    "version": "1.18.2"
+  },
+  "server_root_error": null,
+  "server_root_http_status": 200,
+  "unfiltered_scroll": {
+    "sample_points": 1,
+    "status": "ok"
+  }
+}

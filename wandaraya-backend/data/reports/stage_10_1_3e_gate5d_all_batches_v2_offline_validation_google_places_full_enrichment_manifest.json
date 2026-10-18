@@ -1,0 +1,1239 @@
+{
+  "batch_id": "all_batches_v2_offline_validation",
+  "created_at_utc": "2026-10-17T04:05:37.141413+00:00",
+  "mode": "offline",
+  "postgresql_writes": false,
+  "qdrant_writes": false,
+  "results": [
+    {
+      "attraction_name": "Delft Dutch Fort",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:10",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Delft Dutch Fort, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=10",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=10"
+    },
+    {
+      "attraction_name": "Arugambay & Pottuvil Point",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:101",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Arugambay & Pottuvil Point, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=101",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=101"
+    },
+    {
+      "attraction_name": "Senanayaka Samudraya of Inginiyagala",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:102",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Senanayaka Samudraya of Inginiyagala, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=102",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=102"
+    },
+    {
+      "attraction_name": "Rajagala",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:103",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Rajagala, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=103",
+        "queue_reason": "probable_match_review_required"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=103"
+    },
+    {
+      "attraction_name": "Neelagiri Stupa",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:104",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Neelagiri Stupa, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=104",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=104"
+    },
+    {
+      "attraction_name": "Nagapabbatha Monastery",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:105",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Nagapabbatha Monastery, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=105",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=105"
+    },
+    {
+      "attraction_name": "Piyangala Forest Hermitage",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:106",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Piyangala Forest Hermitage, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=106",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=106"
+    },
+    {
+      "attraction_name": "Henanigala Panchawasa Raja Maha Viharaya",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:107",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Henanigala Panchawasa Raja Maha Viharaya, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=107",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=107"
+    },
+    {
+      "attraction_name": "Delft Growing Stone",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:11",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Delft Growing Stone, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=11",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=11"
+    },
+    {
+      "attraction_name": "Bowattegala Monastery",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:111",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Bowattegala Monastery, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=111",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=111"
+    },
+    {
+      "attraction_name": "Ancient Veheragala of Pulukunawa",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:114",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Ancient Veheragala of Pulukunawa, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=114",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=114"
+    },
+    {
+      "attraction_name": "Samangala Forest Hermitage",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:115",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Samangala Forest Hermitage, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=115",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=115"
+    },
+    {
+      "attraction_name": "Delft Temple",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:12",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Delft Temple, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=12",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=12"
+    },
+    {
+      "attraction_name": "Owagiriya Ancient Monastery",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:121",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Owagiriya Ancient Monastery, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=121",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=121"
+    },
+    {
+      "attraction_name": "Habuthala Viharaya or Tharulengala Monastery",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:122",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Habuthala Viharaya or Tharulengala Monastery, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=122",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=122"
+    },
+    {
+      "attraction_name": "Henanegala Len Viharaya",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:124",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Henanegala Len Viharaya, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=124",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=124"
+    },
+    {
+      "attraction_name": "Shasthrawela",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:125",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Shasthrawela, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=125",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=125"
+    },
+    {
+      "attraction_name": "Sangamankanda Point",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:126",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Sangamankanda Point, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=126",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=126"
+    },
+    {
+      "attraction_name": "Gonagolla Monastery",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:128",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Gonagolla Monastery, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=128",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=128"
+    },
+    {
+      "attraction_name": "Kudagala Forest Reserve & Monastery",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:129",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Kudagala Forest Reserve & Monastery, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=129",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=129"
+    },
+    {
+      "attraction_name": "Gal Oya National Park",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:132",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Gal Oya National Park, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=132",
+        "queue_reason": "ambiguous_multiple_matches"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=132"
+    },
+    {
+      "attraction_name": "Kotaveheragala",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:134",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Kotaveheragala, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=134",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=134"
+    },
+    {
+      "attraction_name": "Alioluwa Lake",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:135",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Alioluwa Lake, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=135",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=135"
+    },
+    {
+      "attraction_name": "Pallan Hela Mountain",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:136",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Pallan Hela Mountain, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=136",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=136"
+    },
+    {
+      "attraction_name": "Veddagala",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:138",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Veddagala, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=138",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=138"
+    },
+    {
+      "attraction_name": "Kadurugoda Temple",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:14",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Kadurugoda Temple, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=14",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=14"
+    },
+    {
+      "attraction_name": "The Steaming Hot Water Wells of Mahaoya",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:140",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "The Steaming Hot Water Wells of Mahaoya, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=140",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=140"
+    },
+    {
+      "attraction_name": "Muhudu Maha Viharaya",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:142",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Muhudu Maha Viharaya, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=142",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=142"
+    },
+    {
+      "attraction_name": "Hot Water Springs in Wahawa",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:143",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Hot Water Springs in Wahawa, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=143",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=143"
+    },
+    {
+      "attraction_name": "Dome Houses",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:144",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Dome Houses, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=144",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=144"
+    },
+    {
+      "attraction_name": "Bandaraduwa",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:145",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Bandaraduwa, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=145",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=145"
+    },
+    {
+      "attraction_name": "Mullikulamalai",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:148",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Mullikulamalai, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=148",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=148"
+    },
+    {
+      "attraction_name": "Okanda Devalaya ( A Destination of Mass Pilgrim)",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:149",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Okanda Devalaya ( A Destination of Mass Pilgrim), Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=149",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=149"
+    },
+    {
+      "attraction_name": "Sinharaja",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:151",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Sinharaja, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=151",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=151"
+    },
+    {
+      "attraction_name": "Meemure",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:152",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Meemure, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=152",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=152"
+    },
+    {
+      "attraction_name": "Sri Dalada Maligawa (Temple of the Tooth)",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:155",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Sri Dalada Maligawa (Temple of the Tooth), Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=155",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=155"
+    },
+    {
+      "attraction_name": "Dambulla CaveTemple",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:157",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Dambulla CaveTemple, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=157",
+        "queue_reason": "probable_match_review_required"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=157"
+    },
+    {
+      "attraction_name": "Nagadeepa Purana Raja Maha Viharaya",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:16",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Nagadeepa Purana Raja Maha Viharaya, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=16",
+        "queue_reason": "probable_match_review_required"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=16"
+    },
+    {
+      "attraction_name": "Unawatuna",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:162",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Unawatuna, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=162",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=162"
+    },
+    {
+      "attraction_name": "Koneswaram Kovil",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:167",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Koneswaram Kovil, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=167",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=167"
+    },
+    {
+      "attraction_name": "Kataragama",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:169",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Kataragama, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=169",
+        "queue_reason": "ambiguous_multiple_matches"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=169"
+    },
+    {
+      "attraction_name": "Delft island",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:171",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Delft island, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=171",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=171"
+    },
+    {
+      "attraction_name": "Beira Lake",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:172",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Beira Lake, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=172",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=172"
+    },
+    {
+      "attraction_name": "Aukana",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:176",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Aukana, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=176",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=176"
+    },
+    {
+      "attraction_name": "Kirinda",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:179",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Kirinda, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=179",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=179"
+    },
+    {
+      "attraction_name": "Kaluthara Bodhiya",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:181",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Kaluthara Bodhiya, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=181",
+        "queue_reason": "probable_match_review_required"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=181"
+    },
+    {
+      "attraction_name": "Yapahuwa Rock Fortress",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:184",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Yapahuwa Rock Fortress, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=184",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=184"
+    },
+    {
+      "attraction_name": "Asupini Ella",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:185",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Asupini Ella, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=185",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=185"
+    },
+    {
+      "attraction_name": "Rawana ella and Ravana falls",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:188",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Rawana ella and Ravana falls, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=188",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=188"
+    },
+    {
+      "attraction_name": "The Nagapooshani Amman Kovil",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:19",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "The Nagapooshani Amman Kovil, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=19",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=19"
+    },
+    {
+      "attraction_name": "Koggala Beach",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:192",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Koggala Beach, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=192",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=192"
+    },
+    {
+      "attraction_name": "Balla Mala Ella",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:20",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Balla Mala Ella, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=20",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=20"
+    },
+    {
+      "attraction_name": "Diyatha Uyana",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:201",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Diyatha Uyana, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=201",
+        "queue_reason": "probable_match_review_required"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=201"
+    },
+    {
+      "attraction_name": "Independence Memorial Hall",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:202",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Independence Memorial Hall, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=202",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=202"
+    },
+    {
+      "attraction_name": "Seema Malakaya Meditation Centre",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:204",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Seema Malakaya Meditation Centre, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=204",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=204"
+    },
+    {
+      "attraction_name": "Colombo Lighthouse",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:208",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Colombo Lighthouse, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=208",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=208"
+    },
+    {
+      "attraction_name": "Craft Village",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:211",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Craft Village, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=211",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=211"
+    },
+    {
+      "attraction_name": "Green path Colombo",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:214",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Green path Colombo, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=214",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=214"
+    },
+    {
+      "attraction_name": "Sri Shakhyasinharamaya",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:220",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Sri Shakhyasinharamaya, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=220",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=220"
+    },
+    {
+      "attraction_name": "Diva Guhawa - Batatota Lena",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:23",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Diva Guhawa - Batatota Lena, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=23",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=23"
+    },
+    {
+      "attraction_name": "Doovili Ella",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:24",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Doovili Ella, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=24",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=24"
+    },
+    {
+      "attraction_name": "Jathika Namal Uyana",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:28",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Jathika Namal Uyana, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=28",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=28"
+    },
+    {
+      "attraction_name": "Panavitiya Ambalama",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:36",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Panavitiya Ambalama, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=36",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=36"
+    },
+    {
+      "attraction_name": "Baron's Cap or Thoppigala",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:5",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Baron's Cap or Thoppigala, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=5",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=5"
+    },
+    {
+      "attraction_name": "Alankuda Beach",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:51",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Alankuda Beach, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=51",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=51"
+    },
+    {
+      "attraction_name": "Kosgoda",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:53",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Kosgoda, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=53",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=53"
+    },
+    {
+      "attraction_name": "Attanagalla Raja Maha Viharava",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:59",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Attanagalla Raja Maha Viharava, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=59",
+        "queue_reason": "probable_match_review_required"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=59"
+    },
+    {
+      "attraction_name": "Whale Watching in Mirissa",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:6",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Whale Watching in Mirissa, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=6",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=6"
+    },
+    {
+      "attraction_name": "Weweldeniya",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:61",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Weweldeniya, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=61",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=61"
+    },
+    {
+      "attraction_name": "Angurukaramulla Temple",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:66",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Angurukaramulla Temple, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=66",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=66"
+    },
+    {
+      "attraction_name": "Maligathenna Raja Maha Viharaya",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:69",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Maligathenna Raja Maha Viharaya, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=69",
+        "queue_reason": "probable_match_review_required"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=69"
+    },
+    {
+      "attraction_name": "Bopagama Water Fall",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:79",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Bopagama Water Fall, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=79",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=79"
+    },
+    {
+      "attraction_name": "DambakolaPatuna Viharaya",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:8",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "DambakolaPatuna Viharaya, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=8",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=8"
+    },
+    {
+      "attraction_name": "Thewatta Besilika Church - National Basilica of Our Lady of Lan",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:87",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Thewatta Besilika Church - National Basilica of Our Lady of Lan, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=87",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=87"
+    },
+    {
+      "attraction_name": "Nikayalannuwara Historical Temple",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:88",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Nikayalannuwara Historical Temple, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=88",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=88"
+    },
+    {
+      "attraction_name": "Ratmullukanda Viharaya",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:89",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Ratmullukanda Viharaya, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=89",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=89"
+    },
+    {
+      "attraction_name": "Delft Biobab Tree",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:9",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Delft Biobab Tree, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=9",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=9"
+    },
+    {
+      "attraction_name": "Ridee Viharaya",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:90",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Ridee Viharaya, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=90",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=90"
+    },
+    {
+      "attraction_name": "Rambodagalla Buddha Statue",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:92",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Rambodagalla Buddha Statue, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=92",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=92"
+    },
+    {
+      "attraction_name": "Panavitiya Ambalama",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:94",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Panavitiya Ambalama, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=94",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=94"
+    },
+    {
+      "attraction_name": "Pannathgoda Purana Raja Maha Viharaya",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:97",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Pannathgoda Purana Raja Maha Viharaya, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=97",
+        "queue_reason": "probable_match_review_required"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=97"
+    },
+    {
+      "attraction_name": "Okanda Beach",
+      "candidates": [],
+      "classification": "insufficient_evidence",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:99",
+      "offline_reason": "Google Places was not queried; live execution requires explicit flags.",
+      "query": "Okanda Beach, Sri Lanka",
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=99",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=99"
+    }
+  ]
+}

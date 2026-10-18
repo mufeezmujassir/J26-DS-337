@@ -1,0 +1,71 @@
+{
+  "client_version": "1.18.0",
+  "collection_http": {
+    "http_status": 200,
+    "request_body": null,
+    "response_body": {
+      "result": {
+        "config": {
+          "hnsw_config": {
+            "ef_construct": 100,
+            "full_scan_threshold": 10000,
+            "m": 16,
+            "max_indexing_threads": 0,
+            "on_disk": false
+          },
+          "optimizer_config": {
+            "default_segment_number": 0,
+            "deleted_threshold": 0.2,
+            "flush_interval_sec": 5,
+            "indexing_threshold": 10000,
+            "max_optimization_threads": null,
+            "max_segment_size": null,
+            "memmap_threshold": null,
+            "prevent_unoptimized": null,
+            "vacuum_min_vector_number": 1000
+          },
+          "params": {
+            "on_disk_payload": true,
+            "replication_factor": 1,
+            "shard_number": 1,
+            "vectors": {
+              "distance": "Cosine",
+              "size": 1024
+            },
+            "write_consistency_factor": 1
+          },
+          "quantization_config": null,
+          "wal_config": {
+            "wal_capacity_mb": 32,
+            "wal_retain_closed": 1,
+            "wal_segments_ahead": 0
+          }
+        },
+        "indexed_vectors_count": 0,
+        "optimizer_status": "ok",
+        "payload_schema": {},
+        "points_count": 6098,
+        "segments_count": 8,
+        "status": "green",
+        "update_queue": {
+          "length": 0
+        }
+      },
+      "status": "ok",
+      "time": 0.000481012
+    },
+    "response_time_ms": 2.75,
+    "status": "ok"
+  },
+  "collection_mutations_performed": false,
+  "collection_status": "green",
+  "container_disk_and_memory": "not visible from FastAPI container; requires Docker host inspection",
+  "container_logs": "captured externally; Qdrant reports OffsetZero in MmapPayloadStorage during filtered scroll",
+  "indexed_vectors_count": 0,
+  "point_count": 6098,
+  "server_metadata": {
+    "commit": "44ad62f8cd69642be5afa6441612525e24a0d063",
+    "title": "qdrant - vector search engine",
+    "version": "1.18.2"
+  }
+}

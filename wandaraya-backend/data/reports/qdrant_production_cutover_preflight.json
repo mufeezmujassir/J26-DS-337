@@ -1,0 +1,10 @@
+{
+  "cutover_plan_sha256": "1835be7009d6238bbccaf68da5f65e14c102e7aaf9a65c85442bc3eea761b4d4",
+  "failures": [],
+  "mode": "read_only_preflight",
+  "next_action": "Requires a separate human authorization before any Docker service switch.",
+  "postgresql_writes_executed": false,
+  "qdrant_writes_executed": false,
+  "status": "READY_FOR_SEPARATE_EXPLICIT_CUTOVER_EXECUTION",
+  "validated_scope_sha256": "c67bbe9f958049587c6b8a200b2d13a1738e38be218ed37d404362379d538568"
+}

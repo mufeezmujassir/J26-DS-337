@@ -1,0 +1,362 @@
+[
+  {
+    "action_payload_sha256": "e4b50fd5d489a9aa5867fec6e7236e5bb774c88c854dbe8da0e7a4f8df444d99",
+    "checkpoint_sha256": "c5ff4ce5e7e4ed46fabd6a4ce395b7815a05b4cbec5e0e7012e7e4aac1baf5ff",
+    "classification": "ambiguous_multiple_candidates",
+    "confidence": "CONFLICTING_EVIDENCE",
+    "decision": "DEFER",
+    "duplicate_cluster_ids": [],
+    "existing_kb_candidates": [],
+    "external_source_id": "srilanka_tourism_attraction:10",
+    "google_candidate_name": "Dutch Fort - Delft",
+    "google_place_id": "ChIJS009z1U4_joRtdC9js6LnDQ",
+    "identity_conflicts": [
+      "ambiguous_multiple_candidates"
+    ],
+    "missing_information": [],
+    "official_name": "Delft Dutch Fort",
+    "official_source_url": "https://srilanka.travel/attraction?attraction_id=10",
+    "proposed_action": "MANUAL_REVIEW_REQUIRED",
+    "recommended_next_review_action": "VERIFY_AND_DECIDE"
+  },
+  {
+    "action_payload_sha256": "990547c99a08e99f6c411e8d577841af2352105cad38784671d1db0c387a83b7",
+    "checkpoint_sha256": "c5ff4ce5e7e4ed46fabd6a4ce395b7815a05b4cbec5e0e7012e7e4aac1baf5ff",
+    "classification": "verified_existing_kb_match",
+    "confidence": "WEAK_EVIDENCE",
+    "decision": "DEFER",
+    "duplicate_cluster_ids": [],
+    "existing_kb_candidates": [
+      {
+        "id": 4112,
+        "name": "Pottuvil point"
+      }
+    ],
+    "external_source_id": "srilanka_tourism_attraction:101",
+    "google_candidate_name": "Pottuvil point",
+    "google_place_id": "ChIJfdWB7_Si5ToRd7r5g1IBLW0",
+    "identity_conflicts": [
+      "insufficient identity evidence"
+    ],
+    "missing_information": [],
+    "official_name": "Arugambay & Pottuvil Point",
+    "official_source_url": "https://srilanka.travel/attraction?attraction_id=101",
+    "proposed_action": "MANUAL_REVIEW_REQUIRED",
+    "recommended_next_review_action": "VERIFY_AND_DECIDE"
+  },
+  {
+    "action_payload_sha256": "9d5ac71ad6185cbb1db844c193caf18d773ef44506ed0fce122d4544a204f676",
+    "checkpoint_sha256": "c5ff4ce5e7e4ed46fabd6a4ce395b7815a05b4cbec5e0e7012e7e4aac1baf5ff",
+    "classification": "verified_existing_kb_match",
+    "confidence": "WEAK_EVIDENCE",
+    "decision": "DEFER",
+    "duplicate_cluster_ids": [],
+    "existing_kb_candidates": [
+      {
+        "id": 4150,
+        "name": "\u0ba8\u0bc0\u0bb2\u0b95\u0bbf\u0bb0\u0bbf \u0b95\u0bc1\u0b95\u0bc8\u0b95\u0bcd \u0b95\u0bcb\u0baf\u0bbf\u0bb2\u0bcd | \u0db1\u0dd3\u0dbd\u0d9c\u0dd2\u0dbb\u0dd2 \u0dbd\u0dd9\u0db1\u0dca \u0dc0\u0dd2\u0dc4\u0dcf\u0dbb\u0dba | Neelagirihela Natabun Viharaya"
+      }
+    ],
+    "external_source_id": "srilanka_tourism_attraction:104",
+    "google_candidate_name": "\u0ba8\u0bc0\u0bb2\u0b95\u0bbf\u0bb0\u0bbf \u0b95\u0bc1\u0b95\u0bc8\u0b95\u0bcd \u0b95\u0bcb\u0baf\u0bbf\u0bb2\u0bcd | \u0db1\u0dd3\u0dbd\u0d9c\u0dd2\u0dbb\u0dd2 \u0dbd\u0dd9\u0db1\u0dca \u0dc0\u0dd2\u0dc4\u0dcf\u0dbb\u0dba | Neelagirihela Natabun Viharaya",
+    "google_place_id": "ChIJC_aBwfK75ToRK5BXUcJL9fU",
+    "identity_conflicts": [
+      "insufficient identity evidence"
+    ],
+    "missing_information": [],
+    "official_name": "Neelagiri Stupa",
+    "official_source_url": "https://srilanka.travel/attraction?attraction_id=104",
+    "proposed_action": "MANUAL_REVIEW_REQUIRED",
+    "recommended_next_review_action": "VERIFY_AND_DECIDE"
+  },
+  {
+    "action_payload_sha256": "d1d89e35e33bf6a1487c65bb72106a61d1294b649603c06f52ce82b0eea5fb95",
+    "checkpoint_sha256": "c5ff4ce5e7e4ed46fabd6a4ce395b7815a05b4cbec5e0e7012e7e4aac1baf5ff",
+    "classification": "ambiguous_multiple_candidates",
+    "confidence": "CONFLICTING_EVIDENCE",
+    "decision": "DEFER",
+    "duplicate_cluster_ids": [],
+    "existing_kb_candidates": [],
+    "external_source_id": "srilanka_tourism_attraction:12",
+    "google_candidate_name": "Delft Koththiyaladi temple",
+    "google_place_id": "ChIJhzGGZwA35ToRWfG4qoqgjDo",
+    "identity_conflicts": [
+      "ambiguous_multiple_candidates"
+    ],
+    "missing_information": [],
+    "official_name": "Delft Temple",
+    "official_source_url": "https://srilanka.travel/attraction?attraction_id=12",
+    "proposed_action": "MANUAL_REVIEW_REQUIRED",
+    "recommended_next_review_action": "VERIFY_AND_DECIDE"
+  },
+  {
+    "action_payload_sha256": "7f6efd110d7e7fde1c7dcbf0695354815653d9f29274227a7894596a0533769a",
+    "checkpoint_sha256": "c5ff4ce5e7e4ed46fabd6a4ce395b7815a05b4cbec5e0e7012e7e4aac1baf5ff",
+    "classification": "related_locality_not_attraction",
+    "confidence": "CONFLICTING_EVIDENCE",
+    "decision": "DEFER",
+    "duplicate_cluster_ids": [],
+    "existing_kb_candidates": [],
+    "external_source_id": "srilanka_tourism_attraction:125",
+    "google_candidate_name": "Shasthrawela",
+    "google_place_id": "ChIJmwia3Tm85ToRkXyieh3xgBA",
+    "identity_conflicts": [
+      "top Google result is a locality or administrative area, not a physical attraction"
+    ],
+    "missing_information": [],
+    "official_name": "Shasthrawela",
+    "official_source_url": "https://srilanka.travel/attraction?attraction_id=125",
+    "proposed_action": "MANUAL_REVIEW_REQUIRED",
+    "recommended_next_review_action": "VERIFY_AND_DECIDE"
+  },
+  {
+    "action_payload_sha256": "54bbef62f4a27f9d5754a8438fe1ed9e502f236b78cf05e3327ba587c693d7f2",
+    "checkpoint_sha256": "c5ff4ce5e7e4ed46fabd6a4ce395b7815a05b4cbec5e0e7012e7e4aac1baf5ff",
+    "classification": "high_confidence_candidate_review",
+    "confidence": "WEAK_EVIDENCE",
+    "decision": "DEFER",
+    "duplicate_cluster_ids": [],
+    "existing_kb_candidates": [
+      {
+        "id": 1974,
+        "name": "Bodhinagala Forest Reserve (Dombagaskanda)"
+      }
+    ],
+    "external_source_id": "srilanka_tourism_attraction:129",
+    "google_candidate_name": "Bodhinagala Forest Reserve (Dombagaskanda)",
+    "google_place_id": "ChIJe_xaN3e04zoRvxk8lTvu0vU",
+    "identity_conflicts": [
+      "official source title may describe multiple distinct destinations"
+    ],
+    "missing_information": [],
+    "official_name": "Kudagala Forest Reserve & Monastery",
+    "official_source_url": "https://srilanka.travel/attraction?attraction_id=129",
+    "proposed_action": "MANUAL_REVIEW_REQUIRED",
+    "recommended_next_review_action": "VERIFY_AND_DECIDE"
+  },
+  {
+    "action_payload_sha256": "5fea2cecaefec98e238b1b897309aa08b983357878e2e92e6cdc8bc6be840eb3",
+    "checkpoint_sha256": "c5ff4ce5e7e4ed46fabd6a4ce395b7815a05b4cbec5e0e7012e7e4aac1baf5ff",
+    "classification": "related_locality_not_attraction",
+    "confidence": "CONFLICTING_EVIDENCE",
+    "decision": "DEFER",
+    "duplicate_cluster_ids": [],
+    "existing_kb_candidates": [],
+    "external_source_id": "srilanka_tourism_attraction:138",
+    "google_candidate_name": "Weddagala",
+    "google_place_id": "ChIJNUaEKBXd4zoRu6IDO5MP2hA",
+    "identity_conflicts": [
+      "top Google result is a locality or administrative area, not a physical attraction"
+    ],
+    "missing_information": [],
+    "official_name": "Veddagala",
+    "official_source_url": "https://srilanka.travel/attraction?attraction_id=138",
+    "proposed_action": "MANUAL_REVIEW_REQUIRED",
+    "recommended_next_review_action": "VERIFY_AND_DECIDE"
+  },
+  {
+    "action_payload_sha256": "2d66688cd2115ceca97d72988a79fbc3b488eea9a7d09f72f4dd99c55447a713",
+    "checkpoint_sha256": "c5ff4ce5e7e4ed46fabd6a4ce395b7815a05b4cbec5e0e7012e7e4aac1baf5ff",
+    "classification": "ambiguous_multiple_candidates",
+    "confidence": "CONFLICTING_EVIDENCE",
+    "decision": "DEFER",
+    "duplicate_cluster_ids": [],
+    "existing_kb_candidates": [],
+    "external_source_id": "srilanka_tourism_attraction:140",
+    "google_candidate_name": "Maha Oya Hot Water Spring",
+    "google_place_id": "ChIJQdafhjzQ5DoR0cj7cy_ntjk",
+    "identity_conflicts": [
+      "ambiguous_multiple_candidates"
+    ],
+    "missing_information": [],
+    "official_name": "The Steaming Hot Water Wells of Mahaoya",
+    "official_source_url": "https://srilanka.travel/attraction?attraction_id=140",
+    "proposed_action": "MANUAL_REVIEW_REQUIRED",
+    "recommended_next_review_action": "VERIFY_AND_DECIDE"
+  },
+  {
+    "action_payload_sha256": "379a14fbc08a5b53927061c67b4aaf54bcf8d85855318e19bba6b917f72f9bb6",
+    "checkpoint_sha256": "c5ff4ce5e7e4ed46fabd6a4ce395b7815a05b4cbec5e0e7012e7e4aac1baf5ff",
+    "classification": "related_locality_not_attraction",
+    "confidence": "CONFLICTING_EVIDENCE",
+    "decision": "DEFER",
+    "duplicate_cluster_ids": [],
+    "existing_kb_candidates": [],
+    "external_source_id": "srilanka_tourism_attraction:145",
+    "google_candidate_name": "Bandaraduwa",
+    "google_place_id": "ChIJH_oJiyUh5ToRysGVQpmXafM",
+    "identity_conflicts": [
+      "top Google result is a locality or administrative area, not a physical attraction"
+    ],
+    "missing_information": [],
+    "official_name": "Bandaraduwa",
+    "official_source_url": "https://srilanka.travel/attraction?attraction_id=145",
+    "proposed_action": "MANUAL_REVIEW_REQUIRED",
+    "recommended_next_review_action": "VERIFY_AND_DECIDE"
+  },
+  {
+    "action_payload_sha256": "776e2fc2d15258e7f4817415f6b9bf945ba2db821d9d4c9257ee2dfd8b2c245f",
+    "checkpoint_sha256": "c5ff4ce5e7e4ed46fabd6a4ce395b7815a05b4cbec5e0e7012e7e4aac1baf5ff",
+    "classification": "related_locality_not_attraction",
+    "confidence": "CONFLICTING_EVIDENCE",
+    "decision": "DEFER",
+    "duplicate_cluster_ids": [],
+    "existing_kb_candidates": [],
+    "external_source_id": "srilanka_tourism_attraction:152",
+    "google_candidate_name": "Meemure",
+    "google_place_id": "ChIJ0UwsDS2n5DoR5sC8NhyDIAM",
+    "identity_conflicts": [
+      "top Google result is a locality or administrative area, not a physical attraction"
+    ],
+    "missing_information": [],
+    "official_name": "Meemure",
+    "official_source_url": "https://srilanka.travel/attraction?attraction_id=152",
+    "proposed_action": "MANUAL_REVIEW_REQUIRED",
+    "recommended_next_review_action": "VERIFY_AND_DECIDE"
+  },
+  {
+    "action_payload_sha256": "18aa9632944b0976dd9fd8f105fb4a3a04e379dd36d84f23f66936812e6a32f9",
+    "checkpoint_sha256": "c5ff4ce5e7e4ed46fabd6a4ce395b7815a05b4cbec5e0e7012e7e4aac1baf5ff",
+    "classification": "related_locality_not_attraction",
+    "confidence": "CONFLICTING_EVIDENCE",
+    "decision": "DEFER",
+    "duplicate_cluster_ids": [],
+    "existing_kb_candidates": [],
+    "external_source_id": "srilanka_tourism_attraction:162",
+    "google_candidate_name": "Unawatuna",
+    "google_place_id": "ChIJbZK_YvFy4ToRbER3g15MRMA",
+    "identity_conflicts": [
+      "top Google result is a locality or administrative area, not a physical attraction"
+    ],
+    "missing_information": [],
+    "official_name": "Unawatuna",
+    "official_source_url": "https://srilanka.travel/attraction?attraction_id=162",
+    "proposed_action": "MANUAL_REVIEW_REQUIRED",
+    "recommended_next_review_action": "VERIFY_AND_DECIDE"
+  },
+  {
+    "action_payload_sha256": "d485d92cd38970d44a3098076ffcdbfb2fee97f016821fd25496201411ebd1b5",
+    "checkpoint_sha256": "c5ff4ce5e7e4ed46fabd6a4ce395b7815a05b4cbec5e0e7012e7e4aac1baf5ff",
+    "classification": "related_locality_not_attraction",
+    "confidence": "CONFLICTING_EVIDENCE",
+    "decision": "DEFER",
+    "duplicate_cluster_ids": [],
+    "existing_kb_candidates": [],
+    "external_source_id": "srilanka_tourism_attraction:169",
+    "google_candidate_name": "Kataragama",
+    "google_place_id": "ChIJoZ7BJgQm5DoRyiq8WfNrLXI",
+    "identity_conflicts": [
+      "top Google result is a locality or administrative area, not a physical attraction"
+    ],
+    "missing_information": [],
+    "official_name": "Kataragama",
+    "official_source_url": "https://srilanka.travel/attraction?attraction_id=169",
+    "proposed_action": "MANUAL_REVIEW_REQUIRED",
+    "recommended_next_review_action": "VERIFY_AND_DECIDE"
+  },
+  {
+    "action_payload_sha256": "d99955aa0a92dd559c3aaae02b0d6493ffdf52e02029a6ce2e600178642b43c9",
+    "checkpoint_sha256": "c5ff4ce5e7e4ed46fabd6a4ce395b7815a05b4cbec5e0e7012e7e4aac1baf5ff",
+    "classification": "related_locality_not_attraction",
+    "confidence": "CONFLICTING_EVIDENCE",
+    "decision": "DEFER",
+    "duplicate_cluster_ids": [],
+    "existing_kb_candidates": [],
+    "external_source_id": "srilanka_tourism_attraction:179",
+    "google_candidate_name": "Kirinda",
+    "google_place_id": "ChIJW98AADeb5joRfzSNCzvUD3U",
+    "identity_conflicts": [
+      "top Google result is a locality or administrative area, not a physical attraction"
+    ],
+    "missing_information": [],
+    "official_name": "Kirinda",
+    "official_source_url": "https://srilanka.travel/attraction?attraction_id=179",
+    "proposed_action": "MANUAL_REVIEW_REQUIRED",
+    "recommended_next_review_action": "VERIFY_AND_DECIDE"
+  },
+  {
+    "action_payload_sha256": "181e81f5e81ddb6ed89a2fc99cdddb52abef187fe35e66f64e210fc4b82568d5",
+    "checkpoint_sha256": "c5ff4ce5e7e4ed46fabd6a4ce395b7815a05b4cbec5e0e7012e7e4aac1baf5ff",
+    "classification": "high_confidence_candidate_review",
+    "confidence": "WEAK_EVIDENCE",
+    "decision": "DEFER",
+    "duplicate_cluster_ids": [],
+    "existing_kb_candidates": [
+      {
+        "id": 36,
+        "name": "Kuda Ravana Ella waterfall"
+      }
+    ],
+    "external_source_id": "srilanka_tourism_attraction:188",
+    "google_candidate_name": "Kuda Ravana Ella waterfall",
+    "google_place_id": "ChIJk6Socrtl5DoR4NnxYbPPr6c",
+    "identity_conflicts": [
+      "official source title may describe multiple distinct destinations"
+    ],
+    "missing_information": [],
+    "official_name": "Rawana ella and Ravana falls",
+    "official_source_url": "https://srilanka.travel/attraction?attraction_id=188",
+    "proposed_action": "MANUAL_REVIEW_REQUIRED",
+    "recommended_next_review_action": "VERIFY_AND_DECIDE"
+  },
+  {
+    "action_payload_sha256": "463bbf1f87ab8996131d11b439c247cbfb40d4b350fde9c7ff4383d1be83ba98",
+    "checkpoint_sha256": "c5ff4ce5e7e4ed46fabd6a4ce395b7815a05b4cbec5e0e7012e7e4aac1baf5ff",
+    "classification": "ambiguous_multiple_candidates",
+    "confidence": "CONFLICTING_EVIDENCE",
+    "decision": "DEFER",
+    "duplicate_cluster_ids": [],
+    "existing_kb_candidates": [],
+    "external_source_id": "srilanka_tourism_attraction:220",
+    "google_candidate_name": "Sri Shakyasinharamaya",
+    "google_place_id": "ChIJDY_ion5V4joRCHhoIOEhnIk",
+    "identity_conflicts": [
+      "ambiguous_multiple_candidates"
+    ],
+    "missing_information": [],
+    "official_name": "Sri Shakhyasinharamaya",
+    "official_source_url": "https://srilanka.travel/attraction?attraction_id=220",
+    "proposed_action": "MANUAL_REVIEW_REQUIRED",
+    "recommended_next_review_action": "VERIFY_AND_DECIDE"
+  },
+  {
+    "action_payload_sha256": "abe266fd09606891909da861d2351c2019f04ce7c451be4c3e1dd0d00b1bbe3a",
+    "checkpoint_sha256": "c5ff4ce5e7e4ed46fabd6a4ce395b7815a05b4cbec5e0e7012e7e4aac1baf5ff",
+    "classification": "related_locality_not_attraction",
+    "confidence": "CONFLICTING_EVIDENCE",
+    "decision": "DEFER",
+    "duplicate_cluster_ids": [],
+    "existing_kb_candidates": [],
+    "external_source_id": "srilanka_tourism_attraction:53",
+    "google_candidate_name": "Kosgoda",
+    "google_place_id": "ChIJW0-Pi8wr4joRf1NQmifKLWc",
+    "identity_conflicts": [
+      "top Google result is a locality or administrative area, not a physical attraction"
+    ],
+    "missing_information": [],
+    "official_name": "Kosgoda",
+    "official_source_url": "https://srilanka.travel/attraction?attraction_id=53",
+    "proposed_action": "MANUAL_REVIEW_REQUIRED",
+    "recommended_next_review_action": "VERIFY_AND_DECIDE"
+  },
+  {
+    "action_payload_sha256": "aa02f2f795a95958c078a5b894669e2048a5dfaab00659080370bb9af73c6293",
+    "checkpoint_sha256": "c5ff4ce5e7e4ed46fabd6a4ce395b7815a05b4cbec5e0e7012e7e4aac1baf5ff",
+    "classification": "related_locality_not_attraction",
+    "confidence": "CONFLICTING_EVIDENCE",
+    "decision": "DEFER",
+    "duplicate_cluster_ids": [],
+    "existing_kb_candidates": [],
+    "external_source_id": "srilanka_tourism_attraction:61",
+    "google_candidate_name": "Weweldeniya",
+    "google_place_id": "ChIJ1ys7Efoc4zoRYDdHnzYmncQ",
+    "identity_conflicts": [
+      "top Google result is a locality or administrative area, not a physical attraction"
+    ],
+    "missing_information": [],
+    "official_name": "Weweldeniya",
+    "official_source_url": "https://srilanka.travel/attraction?attraction_id=61",
+    "proposed_action": "MANUAL_REVIEW_REQUIRED",
+    "recommended_next_review_action": "VERIFY_AND_DECIDE"
+  }
+]

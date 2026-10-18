@@ -1,0 +1,179 @@
+{
+  "audit_name": "WANDARAYA Component 1 implementation audit",
+  "audit_date": "2026-10-18",
+  "method": "Static inspection of source, routes, tests, migrations, Docker/DAG definitions, and existing saved execution reports. No services, databases, Qdrant collections, paid APIs, training jobs, or production writes were invoked by this audit.",
+  "status_vocabulary": ["NOT_STARTED", "SCAFFOLDED", "PARTIALLY_IMPLEMENTED", "IMPLEMENTED_NOT_TESTED", "TESTED", "INTEGRATED_END_TO_END"],
+  "modules": [
+    {
+      "id": 1,
+      "name": "PostgreSQL/PostGIS Tourism Knowledge Base",
+      "status": "TESTED",
+      "evidence": {
+        "models": ["app/models/attraction.py:Attraction", "app/models/tourism_sync.py:AttractionSourceReference", "app/models/tourism_sync.py:AttractionFieldProvenance"],
+        "migrations": ["migrations/versions/c3634af3e5c7_initial_schema_setup.py", "migrations/versions/f5e2a1d7b903_add_tourism_sync_governance.py"],
+        "routes": ["app/routers/knowledge_base.py:/api/v1/knowledge-base/status", "app/routers/knowledge_base.py:/api/v1/knowledge-base/attractions", "app/routers/knowledge_base.py:/api/v1/knowledge-base/quality"],
+        "tests": ["tests/test_knowledge_base_api.py", "tests/time_context/test_gate5e2c3_sync.py", "tests/time_context/test_gate5e2c4_preflight.py"],
+        "execution_reports": ["data/reports/stage_10_1_3e_gate5e2d4b_all_completed_v1_summary.json"]
+      },
+      "observed_state": "The saved post-import report records 6,120 active attractions. Governance-aware source references and field provenance are implemented. This audit did not independently query PostgreSQL.",
+      "limitations": ["Source enrichment remains uneven across legacy records.", "The audit does not certify all historical source data as complete or correct."]
+    },
+    {
+      "id": 2,
+      "name": "Qdrant semantic vector storage and synchronization",
+      "status": "PARTIALLY_IMPLEMENTED",
+      "evidence": {
+        "implementation": ["app/knowledge_base/embeddings/qdrant_indexer.py:AttractionQdrantIndexer", "scripts/sync_srilanka_tourism_gate5e2d1.py", "scripts/sync_srilanka_tourism_gate5e2d2.py", "scripts/sync_srilanka_tourism_gate5e2d3.py", "scripts/sync_srilanka_tourism_gate5e2d4.py", "scripts/sync_srilanka_tourism_gate5e2d4b.py"],
+        "tests": ["tests/time_context/test_gate5e2d1_qdrant_preflight.py", "tests/time_context/test_gate5e2d2_qdrant_sync.py", "tests/time_context/test_gate5e2d3_authorization.py", "tests/time_context/test_gate5e2d4_qdrant_diagnostics.py", "tests/time_context/test_gate5e2d4b_recovery_assessment.py"],
+        "execution_reports": ["data/reports/stage_10_1_3e_gate5e2d2_all_completed_v1_summary.json", "data/reports/stage_10_1_3e_gate5e2d4b_all_completed_v1_summary.json"]
+      },
+      "observed_state": "Existing production collection sri_lanka_attractions has 6,098 points. The 24 imported attraction vectors were intentionally not upserted.",
+      "blockers": ["filtered payload scroll is unhealthy", "bounded identity audit is incomplete", "isolated snapshot restoration failed", "production storage disk was recorded as 99 percent used"],
+      "not_completion_evidence": "D4B summary status is NOT_READY_FOR_QDRANT_EXECUTION. A Qdrant collection existing is not evidence of healthy synchronization."
+    },
+    {
+      "id": 3,
+      "name": "BGE-large-en-v1.5 embedding pipeline",
+      "status": "TESTED",
+      "evidence": {
+        "implementation": ["app/knowledge_base/embeddings/embedding_service.py:AttractionEmbeddingService", "app/knowledge_base/embeddings/document_builder.py", "app/knowledge_base/embeddings/attraction_embeddings.py"],
+        "configuration": ["docker/fastapi/requirements-fastapi.txt:sentence-transformers==5.0.0", "app/knowledge_base/embeddings/embedding_service.py:MODEL_NAME and EXPECTED_DIMENSION"],
+        "tests": ["scripts/test_embedding.py", "scripts/test_semantic_document.py", "tests/time_context/test_gate5e2d2_qdrant_sync.py"],
+        "execution_reports": ["data/reports/stage_10_1_3e_gate5e2d2_all_completed_v1_summary.json"]
+      },
+      "observed_state": "D2 dry-run generated and validated 24 embeddings with BAAI/bge-large-en-v1.5 at 1,024 dimensions. This is embedding validation, not completed production indexing.",
+      "limitations": ["The embedding service lazily downloads/loads the model at runtime.", "Production vector persistence is blocked by the Qdrant health issue."]
+    },
+    {
+      "id": 4,
+      "name": "Weather forecasting layer, trained models, APIs, cached forecasts and integration",
+      "status": "TESTED",
+      "evidence": {
+        "implementation": ["app/weather_model/backtesting/rolling_origin.py", "app/weather_model/backtesting/model_selection_validation.py", "app/weather_model/training/candidate_artifacts.py", "app/weather_model/forecasting/forecast_service.py", "app/weather_model/context/weather_context_service.py", "app/weather_model/context/monthly_forecast_provider.py", "app/weather_model/suitability/attraction_service.py"],
+        "routes": ["app/routers/weather_forecasts.py:/api/v1/weather/forecasts/{district_id}", "app/routers/weather_context.py", "app/routers/weather_attractions.py:/api/v1/weather/attractions", "app/routers/weather_suitability.py"],
+        "tests": ["tests/weather_model/test_end_to_end_weather_pipeline.py", "tests/weather_model/test_monthly_forecast_provider.py", "tests/weather_model/test_forecast_reliability_service.py", "tests/weather_model/test_weather_suitability.py", "tests/weather_model/test_airflow_weather_orchestration.py"],
+        "execution_reports": ["data/weather/reports/validation/weather_layer_end_to_end_validation.json", "data/weather/reports/backtesting/national_benchmark_report.json", "data/weather/reports/backtesting/model_selection_validation.json", "data/weather/reports/registry/weather_model_registry.json"]
+      },
+      "observed_state": "The saved Stage 9.8.12 report recorded 204 passed tests, 16 districts with observations, 43 district-target candidate pairs, 58 valid artifact checksums, and zero production-approved models.",
+      "limitations": ["Long-range model forecasts correctly remain unavailable until manual approval.", "The validation report explicitly does not claim Airflow task execution.", "Live forecast availability still depends on valid provider credentials and provider horizon."]
+    },
+    {
+      "id": 5,
+      "name": "Semantic candidate retrieval",
+      "status": "PARTIALLY_IMPLEMENTED",
+      "evidence": {
+        "implementation": ["app/knowledge_base/retrieval/semantic_retriever.py:SemanticAttractionRetriever", "app/routers/knowledge_base.py:/api/v1/knowledge-base/semantic-search"],
+        "tests": ["scripts/test_semantic_retrieval.py", "evaluation/retrieval_evaluator.py", "scripts/evaluate_semantic_retrieval.py"]
+      },
+      "observed_state": "The code encodes a query, calls Qdrant query_points, and hydrates active PostgreSQL attractions. It has an HTTP route.",
+      "blockers": ["The production vector collection is degraded; retrieval may work for query_points but full collection health is not verified.", "24 newly imported attractions are not indexed."]
+    },
+    {
+      "id": 6,
+      "name": "Content-based recommendation",
+      "status": "SCAFFOLDED",
+      "evidence": {
+        "implementation": ["app/recommendation/context_enrichment/service.py:SemanticWeatherContextEnrichmentService", "app/routers/context_enrichment.py:/api/v1/recommendations/context-enrich"],
+        "tests": ["tests/recommendation/test_semantic_weather_context_enrichment.py"]
+      },
+      "observed_state": "The endpoint retrieves semantic candidates and adds weather evidence. Its source comment and response schema explicitly state ranking_applied is false; it does not compute a final recommendation rank.",
+      "not_implemented": ["app/routers/recommend.py is empty", "No preference-profile ranking, diversity policy, or final recommendation API was found."]
+    },
+    {
+      "id": 7,
+      "name": "Neural Collaborative Filtering",
+      "status": "NOT_STARTED",
+      "evidence": {"search_result": "No NCF model, interaction dataset, trainer, inference service, dependency, route, or test was found in app, tests, evaluation, or scripts."}
+    },
+    {
+      "id": 8,
+      "name": "Graph-based recommendation",
+      "status": "NOT_STARTED",
+      "evidence": {"related_but_not_equivalent": ["app/services/graph.py", "app/services/graph_builder.py", "app/services/dijkstra.py"]},
+      "observed_state": "A multimodal transport/routing graph exists, but no graph recommender, graph embeddings, user-item graph, ranker, or recommendation test was found."
+    },
+    {
+      "id": 9,
+      "name": "Time-of-Day context layer",
+      "status": "PARTIALLY_IMPLEMENTED",
+      "evidence": {
+        "implementation": ["app/time_context/opening_hours/google_period_parser.py", "app/time_context/opening_hours/evaluator.py", "app/time_context/schemas.py", "app/time_context/governance/policy.py"],
+        "tests": ["tests/time_context/test_google_period_parser.py", "tests/time_context/test_gate1_timing_adapters.py"]
+      },
+      "observed_state": "Opening-hour parsing/evaluation and source-governance structures exist. No attraction time-of-day scoring route or final re-ranker integration was found."
+    },
+    {
+      "id": 10,
+      "name": "Poya/Holiday context layer",
+      "status": "SCAFFOLDED",
+      "evidence": {"models_and_extraction": ["app/models/holiday_calendar.py", "app/time_context/governance/multi_page_pilot.py:poya_indicator", "app/time_context/governance/url_intelligence.py:PUBLIC_HOLIDAYS_POYA"], "tests": ["tests/time_context/test_srilanka_tourism_gate5b.py", "tests/time_context/test_srilanka_tourism_offline.py"]},
+      "observed_state": "Data structures and controlled extraction categorization exist; no calendar-population workflow, scoring model, or reranker integration was found."
+    },
+    {
+      "id": 11,
+      "name": "Seasonality context layer",
+      "status": "SCAFFOLDED",
+      "evidence": {"fields_and_extraction": ["app/models/attraction.py:best_visit_months", "app/time_context/governance/srilanka_tourism.py:seasonality_notes", "app/time_context/governance/multi_page_pilot.py:seasonal_guidance"]},
+      "observed_state": "Storage/extraction hints exist; no seasonal suitability service, API, or recommendation integration was found."
+    },
+    {
+      "id": 12,
+      "name": "Group Emotion integration",
+      "status": "NOT_STARTED",
+      "evidence": {"related_but_not_integration": ["app/models/group.py"]},
+      "observed_state": "No emotion acquisition, inference, group-emotion scoring, context contract, route, or test was found."
+    },
+    {
+      "id": 13,
+      "name": "Unified five-layer Context Re-Ranker",
+      "status": "SCAFFOLDED",
+      "evidence": {"weather_only_contract": ["app/recommendation/context_dimensions/weather_context_contract.py", "app/recommendation/context_dimensions/weather_adapter.py"], "empty_target": ["app/context_stack/__init__.py"]},
+      "observed_state": "A typed weather dimension adapter exists. Time, Poya/holiday, seasonality, and emotion dimensions plus any weighting/fusion/reranking engine were not found."
+    },
+    {
+      "id": 14,
+      "name": "Genetic algorithm or itinerary optimization",
+      "status": "NOT_STARTED",
+      "evidence": {"related_but_not_equivalent": ["app/schedular/trip_scheduler.py", "app/replanning/dynamic_replanning/replanner.py", "app/services/dijkstra.py"]},
+      "observed_state": "Scheduling, routing, and replanning code are present, but no genetic algorithm, population/fitness loop, optimizer, or optimizer test was found."
+    },
+    {
+      "id": 15,
+      "name": "LangGraph agent orchestration",
+      "status": "NOT_STARTED",
+      "evidence": {"empty_files": ["app/agents/graph.py (0 bytes)"], "dependency_search": "No LangGraph dependency or import was found."}
+    },
+    {
+      "id": 16,
+      "name": "Airflow DAGs and scheduled refresh jobs",
+      "status": "TESTED",
+      "evidence": {
+        "dags": ["dags/weather_live.py:weather_live", "dags/weather_historical.py:weather_historical", "dags/weather_model_train.py:weather_model_train", "dags/weather_predictions_cache.py:weather_predictions_cache", "dags/tourism_data_ingestion.py", "dags/tourism_attraction_discovery.py"],
+        "tests": ["tests/weather_model/test_airflow_weather_orchestration.py"],
+        "execution_report": ["data/weather/reports/validation/weather_layer_end_to_end_validation.json"]
+      },
+      "observed_state": "The four weather DAGs are defined, paused by default, and their saved validation reports say import passed. The report expressly does not claim real task execution succeeded.",
+      "schedules": {"weather_live": "0 */3 * * *", "weather_historical": "0 2 1 * *", "weather_model_train": "0 3 2 * *", "weather_predictions_cache": "0 4 * * 1"}
+    },
+    {
+      "id": 17,
+      "name": "Recommendation APIs",
+      "status": "PARTIALLY_IMPLEMENTED",
+      "evidence": {"routes": ["app/routers/context_enrichment.py:/api/v1/recommendations/context-enrich", "app/routers/weather_attractions.py:/api/v1/weather/attractions", "app/routers/knowledge_base.py:/api/v1/knowledge-base/semantic-search"], "registration": ["app/main.py:include_router(context_enrichment_router)"]},
+      "observed_state": "Read-only semantic retrieval and weather context responses are available. No final personalized recommendation endpoint is registered; app/routers/recommend.py is empty."
+    },
+    {
+      "id": 18,
+      "name": "Automated tests and research evaluation",
+      "status": "TESTED",
+      "evidence": {"test_inventory": "65 test files under tests; 151 test functions found under tests/weather_model and tests/recommendation.", "weather_report": "data/weather/reports/validation/weather_layer_end_to_end_validation.json records 204 passed, 0 failed, 0 skipped on 2026-10-12.", "evaluation": ["evaluation/retrieval_evaluator.py", "evaluation/metrics/retrieval_metrics.py", "scripts/evaluate_semantic_retrieval.py"]},
+      "limitations": ["This audit did not rerun the suite, so it does not assert the current branch still produces the historical 204-pass result.", "No completed NCF, graph-recommender, full re-ranker, or itinerary-optimization evaluation was found."]
+    }
+  ],
+  "cross_cutting_findings": [
+    "The knowledge-base relational layer and weather layer have substantially more implementation and evidence than the recommendation research layers.",
+    "Qdrant is the immediate integration blocker: it prevents a healthy full semantic index and leaves 24 PostgreSQL-imported attractions absent from the production vector collection.",
+    "Weather uses three compared models: monthly climatology, seasonal naive, and Prophet. Candidate artifacts do not equal production approval; the saved registry has zero production-approved models.",
+    "No final recommendation ranking is currently implemented. The context-enrichment endpoint intentionally preserves semantic order and sets ranking_applied to false."
+  ]
+}

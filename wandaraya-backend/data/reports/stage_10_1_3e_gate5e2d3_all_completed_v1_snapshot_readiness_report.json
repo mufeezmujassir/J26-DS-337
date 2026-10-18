@@ -1,0 +1,15 @@
+{
+  "existing_snapshots": [
+    {
+      "checksum": "04aa6ca28416dfa5060089ac67321a6da3958582b1134476cfa7b68f4ff24d42",
+      "creation_time": "2026-10-18T07:31:40",
+      "name": "sri_lanka_attractions-1336472673414113-2026-10-18-07-30-23.snapshot",
+      "size": 621225984
+    }
+  ],
+  "inspection_error": null,
+  "inspection_http_status": 200,
+  "ready_for_write": true,
+  "requirement": "A separately authorized pre-write collection snapshot must be present and named before live upsert.",
+  "snapshot_creation_performed": false
+}

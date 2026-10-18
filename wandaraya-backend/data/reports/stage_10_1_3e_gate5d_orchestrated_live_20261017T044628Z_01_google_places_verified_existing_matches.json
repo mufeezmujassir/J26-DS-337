@@ -1,0 +1,766 @@
+{
+  "records": [
+    {
+      "attraction_name": "Craft Village",
+      "candidates": [
+        {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 1.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.5517,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.1583993999999995,
+            "longitude": 80.1759543
+          },
+          "display_name": "Sri Craft Algama",
+          "distance_km": null,
+          "existing_kb_matches": [
+            {
+              "id": 5245,
+              "name": "Sri Craft Algama"
+            }
+          ],
+          "formatted_address": "Junior School Road, Egodagama Algama, Warakapola 71607, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=4231945325634806519&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJSeG6awAD4zoR92JWE9rjujo",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "campground",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 1.0,
+          "types": [
+            "campground",
+            "camping_cabin",
+            "event_venue",
+            "lodging",
+            "restaurant",
+            "food",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 1.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.5143,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 5.9660122,
+            "longitude": 80.7072475
+          },
+          "display_name": "The Village Collective",
+          "distance_km": null,
+          "existing_kb_matches": [
+            {
+              "id": 797,
+              "name": "The Village Collective"
+            }
+          ],
+          "formatted_address": "Hiriketiya Rd, Dickwella 81200, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=8882674988166686466&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJWW579i034ToRAifs3NaZRXs",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "gift_shop",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 1.0,
+          "types": [
+            "gift_shop",
+            "store",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.4848,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 6.438404,
+            "longitude": 80.8886235
+          },
+          "display_name": "Craft Tunnel (Pvt) Ltd.",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "Sevanagala 70250, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=2778301504646071325&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJy_KDGXkH5DoRHcRcl3-CjiY",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "restaurant",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.3886,
+          "types": [
+            "restaurant",
+            "food",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.4242,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.279975800000001,
+            "longitude": 80.5926296
+          },
+          "display_name": "Thilona crafts Kandy",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "8/B Gannoruwa Road, Kandy 20000, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=11170583651110649888&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJG4UPzmBp4zoRIIA8eqXiBZs",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "manufacturer",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.3432,
+          "types": [
+            "building_materials_store",
+            "general_contractor",
+            "manufacturer",
+            "educational_institution",
+            "supplier",
+            "store",
+            "point_of_interest",
+            "service",
+            "establishment"
+          ]
+        },
+        {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.3881,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.9672052,
+            "longitude": 80.9975915
+          },
+          "display_name": "Muniyandi Traditional Craft Village and Adventure Park",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "XX8X+V2P, Nissankamallapura, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=9604454088588538754&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJy4WdDgBD-zoRgjPeYxvgSYU",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "adventure_sports_center",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.316,
+          "types": [
+            "adventure_sports_center",
+            "sports_complex",
+            "sports_activity_location",
+            "point_of_interest",
+            "establishment"
+          ]
+        }
+      ],
+      "classification": "verified_existing_kb_match",
+      "details": {
+        "data": {
+          "addressComponents": [
+            {
+              "languageCode": "en",
+              "longText": "Junior School Road, Egodagama Algama"
+            },
+            {
+              "languageCode": "en",
+              "longText": "Warakapola",
+              "shortText": "Warakapola",
+              "types": [
+                "locality",
+                "political"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Kegalle",
+              "shortText": "Kegalle",
+              "types": [
+                "administrative_area_level_2",
+                "political"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Sabaragamuwa Province",
+              "shortText": "SG",
+              "types": [
+                "administrative_area_level_1",
+                "political"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Sri Lanka",
+              "shortText": "LK",
+              "types": [
+                "country",
+                "political"
+              ]
+            },
+            {
+              "languageCode": "en-US",
+              "longText": "71607",
+              "shortText": "71607",
+              "types": [
+                "postal_code"
+              ]
+            }
+          ],
+          "businessStatus": "OPERATIONAL",
+          "currentOpeningHours": {
+            "nextCloseTime": "2026-10-17T11:30:00Z",
+            "openNow": true,
+            "periods": [
+              {
+                "close": {
+                  "date": {
+                    "day": 18,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 0,
+                  "hour": 17,
+                  "minute": 0
+                },
+                "open": {
+                  "date": {
+                    "day": 18,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 0,
+                  "hour": 9,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "date": {
+                    "day": 19,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 1,
+                  "hour": 17,
+                  "minute": 0
+                },
+                "open": {
+                  "date": {
+                    "day": 19,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 1,
+                  "hour": 9,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "date": {
+                    "day": 20,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 2,
+                  "hour": 17,
+                  "minute": 0
+                },
+                "open": {
+                  "date": {
+                    "day": 20,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 2,
+                  "hour": 9,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "date": {
+                    "day": 21,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 3,
+                  "hour": 17,
+                  "minute": 0
+                },
+                "open": {
+                  "date": {
+                    "day": 21,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 3,
+                  "hour": 9,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "date": {
+                    "day": 22,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 4,
+                  "hour": 17,
+                  "minute": 0
+                },
+                "open": {
+                  "date": {
+                    "day": 22,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 4,
+                  "hour": 9,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "date": {
+                    "day": 23,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 5,
+                  "hour": 17,
+                  "minute": 0
+                },
+                "open": {
+                  "date": {
+                    "day": 23,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 5,
+                  "hour": 9,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "date": {
+                    "day": 17,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 6,
+                  "hour": 17,
+                  "minute": 0
+                },
+                "open": {
+                  "date": {
+                    "day": 17,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 6,
+                  "hour": 9,
+                  "minute": 0
+                }
+              }
+            ],
+            "weekdayDescriptions": [
+              "Monday: 9:00\u202fAM\u2009\u2013\u20095:00\u202fPM",
+              "Tuesday: 9:00\u202fAM\u2009\u2013\u20095:00\u202fPM",
+              "Wednesday: 9:00\u202fAM\u2009\u2013\u20095:00\u202fPM",
+              "Thursday: 9:00\u202fAM\u2009\u2013\u20095:00\u202fPM",
+              "Friday: 9:00\u202fAM\u2009\u2013\u20095:00\u202fPM",
+              "Saturday: 9:00\u202fAM\u2009\u2013\u20095:00\u202fPM",
+              "Sunday: 9:00\u202fAM\u2009\u2013\u20095:00\u202fPM"
+            ]
+          },
+          "displayName": {
+            "languageCode": "en",
+            "text": "Sri Craft Algama"
+          },
+          "formattedAddress": "Junior School Road, Egodagama Algama, Warakapola 71607, Sri Lanka",
+          "googleMapsUri": "https://maps.google.com/?cid=4231945325634806519&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+          "id": "ChIJSeG6awAD4zoR92JWE9rjujo",
+          "internationalPhoneNumber": "+94 78 688 8888",
+          "location": {
+            "latitude": 7.1583993999999995,
+            "longitude": 80.1759543
+          },
+          "photos": [
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Sri Craft Algama",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWmSwy_xDiz01CsinHt83bQ9vBah2fx5ZWHwUonmFNXX6OWgts=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/104695470815042071674"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgID9ndXgggE&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgID9ndXgggE!2e10!4m2!3m1!1s0x3ae303006bbae149:0x3abae3da135662f7",
+              "heightPx": 3024,
+              "name": "places/ChIJSeG6awAD4zoR92JWE9rjujo/photos/Aa-ngMaNy1oftjXtYh_4tth5X4ktbw1kD4AwULvRSHQwWfLek2bTvR0aVyCYEE4EpS5jcSvcGy3Rw7cLmKWo2uz4ir9cByY6xP2Juk7YUs8ycC_ZwDlgXJPM-mtiGTdt8Cv_ejUCuZeSyzw69zmgM-l-aYNgtzGKyy_wOxJhPlW6jJI-Ri1cvvByApUJAffIuuiXa3imu87UThHgWNI6Ys1rk16luXL7WfrHX00lCknenSVovcSKiy4y-yjTWtNQXpxnihfVWKG7cvZGKodqi7IWM-ysIQct3CDvG2k89cA83XCK0HnwlSlUL5u1-Z0ciB62AZqs47qsesZZQq6leHt-G9jzTJU3vt5NZq4fJRdF1no2EqMuFAzQGpAX_HR4B6DhkWWaZ5bBQpVzIXrdQY1jAXPV2XWPfPM",
+              "widthPx": 4032
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Team Sri Craft",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUMEcp9ywnyRKurTW2tWlXzkeSSiwaXryVQnz7j6mn1z55MeRk=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/112883426935196840518"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgMCI7vPsJQ&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgMCI7vPsJQ!2e10!4m2!3m1!1s0x3ae303006bbae149:0x3abae3da135662f7",
+              "heightPx": 1280,
+              "name": "places/ChIJSeG6awAD4zoR92JWE9rjujo/photos/Aa-ngMZ7JlQ1cbQ_xgx_5xQoO704C1TovJFFwFpQGG4gRbjPrZ_MaKmyslhZtKUIxw-HMh69c5_yYi5Q967e9MLwU8XpfvpF1rU2LKTpJupUTnhvtV9jUE1Z0x0GTXsdnjZGCmABGyKvviIZLJQVuh1lQYRpmIlx6YEXytFBuQC3hlnV-ZPOSAlhcGFNxWfsl58mLIRW3tq2QUpAM0ZxFjeloCcuCvPbXcxSyLkWzW4oR9lzjD6MbP_IKRYPYFEGvgXZDD4pCsZCnRzKMUZWzTfLFth1K9liZZSdKIp-tZY-ZvyYD0Spa8lztxrFhj0idJw56-vuc531_JPCURHVuvRYBdhhRTat6eeH62O-Jo04imPgXHH56E0-5If-ImNiITqxk3577B4NAFRTGRE7AhizxQTeCg",
+              "widthPx": 960
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Team Sri Craft",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUMEcp9ywnyRKurTW2tWlXzkeSSiwaXryVQnz7j6mn1z55MeRk=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/112883426935196840518"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIABIhCtS52zCJy9uTth9AlegYTH&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIABIhCtS52zCJy9uTth9AlegYTH!2e10!4m2!3m1!1s0x3ae303006bbae149:0x3abae3da135662f7",
+              "heightPx": 3056,
+              "name": "places/ChIJSeG6awAD4zoR92JWE9rjujo/photos/Aa-ngMa8DxfRMQJaTEoUvuuY5cDfjqmzdun0YuK6RxWAmr3Zp464z4WE93OtQMXu-D_C6RfBr76Px4kvA-9kfJTY1AN9cJudKlvnxpk_QhBMv_EZ7jmdzNj_J2bjV-gH8uHKQueUuC6ldPZJNnvoyU_Z03DNpZzF9IVBOfYBHmQoWuF1fVmul73JTMecOM81GdDAhU4N6Eic0O4iNIWBwyeEpPHu2ogFZSVSAVZCLs7MBMFI7I9V6yOgPqK4mN2ipzgPmYjY-3O62AqlrV_NWV7YtYgbd-asKawrslkmGQpZ_2Io5ZLB4Z4ZxXjyBJX2nuC2AeVuMQKP3EPwmbuMgy9NrcJYyLAuRUxjhQoHTt3pv9ddEtMAe6L7Rvmy-1DznDBCBphYfplaINZlCcNNesBmFKwe97a3nJwW6miaJLHcpTtLMQ",
+              "widthPx": 4080
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Sri Craft Algama",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWmSwy_xDiz01CsinHt83bQ9vBah2fx5ZWHwUonmFNXX6OWgts=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/104695470815042071674"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIABIhBmkoKauCVu1XvXtJC6eKq-&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIABIhBmkoKauCVu1XvXtJC6eKq-!2e10!4m2!3m1!1s0x3ae303006bbae149:0x3abae3da135662f7",
+              "heightPx": 3000,
+              "name": "places/ChIJSeG6awAD4zoR92JWE9rjujo/photos/Aa-ngMYfOwr3ueW8oB9yG2GdExeiC7jtschJe7ub7OokNLCrUyxty190fL9CTOwW3A5SxFpO4q0oE6L6PJgGOGNY6T5Bhlhs0yIgBg2ENyIcFrqGoPCDICHAwsdCO2f0End2ILgo5TSrWCdeoDGhnP2rCurvVJXtLtArHYc_rNJYuiBTinYp65e8a5dNxugQvKWsaabrJd3r6SR2Ty9TrHERqBSTJUdMeRZ2GgWmdeFfaIxwCXn_v4PgqVZ3f83X_itEea2rDu6iFe4pPv2gCZWPOd_C-WuUueFU6H9_1p-OXRcCYJ-SpeM1J-92ZXIQ8rEryLJXN-pcU3Vp05iugg4soAFNWWZYqwxOopL9Djvk_Rr9z67eO4bctmdc7Vq98ykl536cXivxQ6ltXu6Va8-aIoQaxjWKJyTh0rSyJj-I4DV5",
+              "widthPx": 4000
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Sri Craft Algama",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWmSwy_xDiz01CsinHt83bQ9vBah2fx5ZWHwUonmFNXX6OWgts=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/104695470815042071674"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgID9neWJew&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgID9neWJew!2e10!4m2!3m1!1s0x3ae303006bbae149:0x3abae3da135662f7",
+              "heightPx": 3024,
+              "name": "places/ChIJSeG6awAD4zoR92JWE9rjujo/photos/Aa-ngMZiDWKCWzQMPHP2OWHRf5oCTbCGWTBab5HbE0fwY_PQ5ZkOz5Ft9oAiupFOhvzaIO8q5lBGvN6BL19FVCh0YS0o1pbRNO4cPA1Fpa2zrJSmDVJDTNIRQn2G5OL3dYlljPwblur3tFt5mOlDca1kRZ_bNmz6iVUsDvdPab9pqEzBR-Zxi_Q3xU3ZVudNslclY2han9R2LcCxexlD3-9t_tlj1LzuR4PPjRWpXkrBdajHxsPJl0cd7OewvVb78li20WqqHLFx5kyNmRvnuSoAga8MuA-zGTz8m3sKBqCdDRFxiGbItdKrG5dGHTw1RimONTA03QKtT306pS2SD_hsSu26aryW57IbWVlGk41Um6B2xfyqITs9V3swiRUeCVRG_RPPZSrAyJqW4y1LdZC3Amo9MqI",
+              "widthPx": 4032
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Sri Craft Algama",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWmSwy_xDiz01CsinHt83bQ9vBah2fx5ZWHwUonmFNXX6OWgts=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/104695470815042071674"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIABIhBe9qyYiw6QHmcL0lLXbFXz&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIABIhBe9qyYiw6QHmcL0lLXbFXz!2e10!4m2!3m1!1s0x3ae303006bbae149:0x3abae3da135662f7",
+              "heightPx": 3024,
+              "name": "places/ChIJSeG6awAD4zoR92JWE9rjujo/photos/Aa-ngMY1mrMSZ9WoWZyyUYdT5mZ_LfCKWiubN6fehTxIlM9HSUmfpS_lQ1abOGtB2kN7rAcoc4Z0oAAT7uvmalZvj_Mo_C7TCJQvVSTJFGmnxnBI5ImC5whRBHUl2JBJYtkModRkHkv62YTFXqctu0YMLl781CvJuHcEdmWcmTIJCn1C_OpzjwiXy6Bwj4QwymwCXuoDhdi4jmzU9m1lTu_sKM3T5A37hdEje05qcKJ9BfsZ9vFGWyO8PxmSLyGmlXI_hO95qLP0tsY0JacsclozhNPaY1RXg7RW6mmqdxzHxJDbbDTJYHUkiejsH-3rQ1YQXDVpIyBrJmUbauSiH2XFIl64J75tXy-s2q2g5iNm0ZiwkG98PVQ_hI4j5b7tBaVKaJkJTST0I0Q_KU381dSBkg9uPGaONzCczwn_d0cvFgaqAg",
+              "widthPx": 4032
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Sri Craft Algama",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWmSwy_xDiz01CsinHt83bQ9vBah2fx5ZWHwUonmFNXX6OWgts=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/104695470815042071674"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIABIhC30dj2FBL1F5XFoWBxQwx5&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIABIhC30dj2FBL1F5XFoWBxQwx5!2e10!4m2!3m1!1s0x3ae303006bbae149:0x3abae3da135662f7",
+              "heightPx": 1792,
+              "name": "places/ChIJSeG6awAD4zoR92JWE9rjujo/photos/Aa-ngMbtOh2Ffje_mEiLP_7FkRcUdgCoXqvDbPsddWaNIkF3Q3Td4TFjLPleaEhGO4xryUm_CWejh0qkcWZzYmSDKeCFoakdiM50tNuU__Cx6WB8A8of999PsVh2xdCaLQxX6PJ740K5BXKPpomAzXaj6BqKO_ZfvpmO3S0Tt41K7f-CZY1sP2OQv5BytzA96N9XdD7u1Sl6b8-uoiqiWfgDOce-SHZVl5wdQbPJiLdbdZwdsFauN7FPFo4UTmYas2qDSEOXkH0jGVnlLgakW6ydhTjqEK_Ql9-yQ7bpmlVcT9r-aPvzmE7ReJbERnvFbL9Ir0aYabgwWFERBrNd653LqfGrNSP0VplspuzwwTVXQbKPWKMRzXg5xwP4prrkNf6Vpuj4fM0AJAWxues3-lr0nKoDArCex5kSQEmjo6dp62Lx",
+              "widthPx": 1344
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Sri Craft Algama",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWmSwy_xDiz01CsinHt83bQ9vBah2fx5ZWHwUonmFNXX6OWgts=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/104695470815042071674"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIABIhBpiCBiExMsba3q3tJduKa6&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIABIhBpiCBiExMsba3q3tJduKa6!2e10!4m2!3m1!1s0x3ae303006bbae149:0x3abae3da135662f7",
+              "heightPx": 794,
+              "name": "places/ChIJSeG6awAD4zoR92JWE9rjujo/photos/Aa-ngMbZqpZ56K-ExrLodWJfTlOZX55P5Wt_uZ7A4YAIY10RG6SDY0g1ffPHEWpjg-AlhlyksxTYerAVdgZlKBVsWsyyRSsDWKo4OGa0irpMusyVK1rt9PtkgeAm2mFvxtDLObWTLCPiRAZTp60EbzawZFYVCKooT4SfFQXqa2JB4B0DplqUsYwFBPYVfF2Px9MuP81u4J5v0prdgnUdYvdKfm8p_OmKbVqzdyDxM9q8VK9zKkmi7vltBDRmQaV8N_f0Y_k3h75jmTgYchsKIGtu5dcDQ0h_kqrEOpG2t3lEhyfVhBeccDOc_zPILeniJg61Xf5DX7WD35sOhja2RFf32909CyUvacDmbb4iHb5uszdj156I5oTm8_aHlhkVA9gCwNVcdw5tBH1Ca2HV2wpqezEkRuSray1xGRPPcFTrDVF4Sw",
+              "widthPx": 1191
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Sri Craft Algama",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWmSwy_xDiz01CsinHt83bQ9vBah2fx5ZWHwUonmFNXX6OWgts=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/104695470815042071674"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIABIhB05RecRVz6sfiic7k2QRF8&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIABIhB05RecRVz6sfiic7k2QRF8!2e10!4m2!3m1!1s0x3ae303006bbae149:0x3abae3da135662f7",
+              "heightPx": 1120,
+              "name": "places/ChIJSeG6awAD4zoR92JWE9rjujo/photos/Aa-ngMYcJUX2pywc3kAnPzwCBfY4IN8HhizxD_2nrdu1WhQ88PE800eJWnynG-QLD_DS6oDHkxFuTRoaKk8f4Y1dB_jFQ22mObDfU2GOZPkIlhWFGgmHcJWV1N2G3Y6jDdgkpSG3xUgtZiSJHLGAQEBusfuosxZOnmPqjxDd5oqGNdJosvDzPtXAtgyxf8jnQertTAVeEJRw-iDkbydREKBLjiy3ldOiPLKhSA6cgBB7bTJBfWr2092q8n1zpNgXskahx0CQV9bW3nqjO8p9DE05cOZgSAZryjZejvMXPrjP89hEnAjuigztH-R1fPXtVKzR7bIaxanAgdgjjl77DSS6hx7GggvVHE7qpqMQcNsQMTXCUhV7qZCIOPNRtC1QlaKN5rCRnVUCYwO-UQ1PO62bNnmhsJNUwmEPCxkVEdD1ZtW-",
+              "widthPx": 2016
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Sri Craft Algama",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWmSwy_xDiz01CsinHt83bQ9vBah2fx5ZWHwUonmFNXX6OWgts=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/104695470815042071674"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIABIhCGhcd_gUIbnG2iq18IXfwI&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIABIhCGhcd_gUIbnG2iq18IXfwI!2e10!4m2!3m1!1s0x3ae303006bbae149:0x3abae3da135662f7",
+              "heightPx": 4080,
+              "name": "places/ChIJSeG6awAD4zoR92JWE9rjujo/photos/Aa-ngMaNnq7YXGWATi7nBbCZqFkEfHpdYKkcQJ1yhd5PNCYjq8L9KI-Z1Z0wtLTU9231u-6a_YmCdGp1DNlp4qISAAtDJz9FAib7S1Z5y-hfyIZyi8rbJs6vuZtFxoy9dFQw21TG9br1cFfMXuZKxxYC4P_qqmKlcHXgMXSTpw4ADoty124dciNCGI-ch76TE5EUNediOX_CLsQ6RqIIFXAsUqWADfVQZ_i5VDc0LmTjUr4zRQBFBpTGKDdzQxkgCe9g_0tqqHSQX1ie35veWFRYMsyhbVaP4ZGgxYz8cCbySrNcixKs1c2AplzaRLwCRhoqAlhwSBDS8t-wG0QeycHEqMLT_DbW9iv5s9S-yBs9m-vO4Ek1_jP0yy4sujCAHEpPW6q99XI9DJNFHogJWaprbFYiczcKWKy9zSonbNFjQCEE",
+              "widthPx": 3056
+            }
+          ],
+          "primaryType": "campground",
+          "rating": 4.9,
+          "regularOpeningHours": {
+            "nextCloseTime": "2026-10-17T11:30:00Z",
+            "openNow": true,
+            "periods": [
+              {
+                "close": {
+                  "day": 0,
+                  "hour": 17,
+                  "minute": 0
+                },
+                "open": {
+                  "day": 0,
+                  "hour": 9,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "day": 1,
+                  "hour": 17,
+                  "minute": 0
+                },
+                "open": {
+                  "day": 1,
+                  "hour": 9,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "day": 2,
+                  "hour": 17,
+                  "minute": 0
+                },
+                "open": {
+                  "day": 2,
+                  "hour": 9,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "day": 3,
+                  "hour": 17,
+                  "minute": 0
+                },
+                "open": {
+                  "day": 3,
+                  "hour": 9,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "day": 4,
+                  "hour": 17,
+                  "minute": 0
+                },
+                "open": {
+                  "day": 4,
+                  "hour": 9,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "day": 5,
+                  "hour": 17,
+                  "minute": 0
+                },
+                "open": {
+                  "day": 5,
+                  "hour": 9,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "day": 6,
+                  "hour": 17,
+                  "minute": 0
+                },
+                "open": {
+                  "day": 6,
+                  "hour": 9,
+                  "minute": 0
+                }
+              }
+            ],
+            "weekdayDescriptions": [
+              "Monday: 9:00\u202fAM\u2009\u2013\u20095:00\u202fPM",
+              "Tuesday: 9:00\u202fAM\u2009\u2013\u20095:00\u202fPM",
+              "Wednesday: 9:00\u202fAM\u2009\u2013\u20095:00\u202fPM",
+              "Thursday: 9:00\u202fAM\u2009\u2013\u20095:00\u202fPM",
+              "Friday: 9:00\u202fAM\u2009\u2013\u20095:00\u202fPM",
+              "Saturday: 9:00\u202fAM\u2009\u2013\u20095:00\u202fPM",
+              "Sunday: 9:00\u202fAM\u2009\u2013\u20095:00\u202fPM"
+            ]
+          },
+          "types": [
+            "campground",
+            "camping_cabin",
+            "lodging",
+            "restaurant",
+            "food",
+            "event_venue",
+            "point_of_interest",
+            "establishment"
+          ],
+          "userRatingCount": 64
+        },
+        "error": null,
+        "provenance": {
+          "google_place_id": "ChIJSeG6awAD4zoR92JWE9rjujo",
+          "source": "google_places_details"
+        }
+      },
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:211",
+      "google_candidate_kb_identity": "verified_existing_kb_place",
+      "official_source_candidate_identity": "strong_candidate_identity_evidence",
+      "query": "Craft Village, Sri Lanka",
+      "review_reasons": [],
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=211",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=211"
+    }
+  ]
+}

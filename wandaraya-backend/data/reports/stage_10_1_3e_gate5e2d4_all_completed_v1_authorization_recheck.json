@@ -1,0 +1,41 @@
+{
+  "approved_scope": [
+    6604,
+    6605,
+    6606,
+    6607,
+    6608,
+    6609,
+    6610,
+    6611,
+    6612,
+    6613,
+    6614,
+    6615,
+    6616,
+    6617,
+    6618,
+    6619,
+    6620,
+    6621,
+    6622,
+    6623,
+    6624,
+    6625,
+    6626,
+    6627
+  ],
+  "blockers": [
+    "qdrant_filtered_payload_scroll_unhealthy",
+    "snapshot_persistent_storage_not_verified",
+    "bounded_identity_scan_incomplete"
+  ],
+  "embedding_model": "BAAI/bge-large-en-v1.5",
+  "execution_plan_sha256": "142282dc6352eb5a8b55259bb1c15ceb0c5c0deff50e389ca2d1d35b0b4906c7",
+  "normalization_enabled": true,
+  "postgresql_writes_executed": false,
+  "qdrant_writes_executed": false,
+  "scope_sha256": "5eeffa59a551560c1e085e72b63c184bfee4f8dee321f9f248a48c8f2161452f",
+  "status": "NOT_READY_FOR_QDRANT_EXECUTION",
+  "vector_dimension": 1024
+}

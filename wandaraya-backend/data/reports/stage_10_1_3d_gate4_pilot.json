@@ -1,0 +1,510 @@
+{
+  "status": "review_required",
+  "pilot": {
+    "source_url": "https://srilanka.travel/",
+    "content_sha256": "c450cfed313ccbd8f19d184894f4091d68188859c93e22d7fe3dcf75f1982470",
+    "requested_url": "https://srilanka.travel/",
+    "final_url": "https://srilanka.travel/",
+    "http_status": 200,
+    "redirect_history": [],
+    "content_type": "text/html; charset=utf-8",
+    "response_size_bytes": 168546,
+    "retrieved_at": "2026-10-14 16:48:56.998821+00:00",
+    "fetch_success": true,
+    "persistence_allowed": true,
+    "review_required": true,
+    "production_write_performed": false,
+    "qdrant_write_performed": false
+  },
+  "extraction": {
+    "source_url": "https://srilanka.travel/",
+    "page_title": "Sri Lanka Tourism - The Official Website of Sri Lanka Tourism",
+    "meta_description": "Find travel ideas for planning your holiday to Sri Lanka. Discover things to see and do, places to stay and more.. This is the official site of Sri Lanka Tourism..",
+    "main_headings": [
+      "An island escape awaits you",
+      "Welcome to Sri Lanka",
+      "New Products"
+    ],
+    "navigation_links": [
+      {
+        "url": "https://srilanka.travel/",
+        "link_text": null,
+        "in_navigation": true,
+        "classification": "other_unclassified",
+        "classification_basis": "no supported category keyword present"
+      },
+      {
+        "url": "https://srilanka.travel/tourism-updates",
+        "link_text": "WHAT'S NEW",
+        "in_navigation": true,
+        "classification": "other_unclassified",
+        "classification_basis": "no supported category keyword present"
+      },
+      {
+        "url": "https://srilanka.travel/what-to-do",
+        "link_text": "WHAT TO DO",
+        "in_navigation": true,
+        "classification": "other_unclassified",
+        "classification_basis": "no supported category keyword present"
+      },
+      {
+        "url": "https://srilanka.travel/top-attractions",
+        "link_text": "Top Attractions",
+        "in_navigation": true,
+        "classification": "attractions",
+        "classification_basis": "keyword heuristic from URL or visible link text"
+      },
+      {
+        "url": "https://srilanka.travel/top-cities-and-provinces",
+        "link_text": "Top Cities and Provinces",
+        "in_navigation": true,
+        "classification": "other_unclassified",
+        "classification_basis": "no supported category keyword present"
+      },
+      {
+        "url": "https://srilanka.travel/whale-watching",
+        "link_text": "Mirissa Whale Watching",
+        "in_navigation": true,
+        "classification": "other_unclassified",
+        "classification_basis": "no supported category keyword present"
+      },
+      {
+        "url": "https://srilanka.travel/attraction?attraction_id=163",
+        "link_text": "Yala National Park",
+        "in_navigation": true,
+        "classification": "attractions",
+        "classification_basis": "keyword heuristic from URL or visible link text"
+      },
+      {
+        "url": "https://srilanka.travel/attraction?attraction_id=160",
+        "link_text": "Sigiriya",
+        "in_navigation": true,
+        "classification": "attractions",
+        "classification_basis": "keyword heuristic from URL or visible link text"
+      },
+      {
+        "url": "https://srilanka.travel/attraction?attraction_id=153",
+        "link_text": "Gall\n                                Fort",
+        "in_navigation": true,
+        "classification": "attractions",
+        "classification_basis": "keyword heuristic from URL or visible link text"
+      },
+      {
+        "url": "https://srilanka.travel/attraction?attraction_id=154",
+        "link_text": "Ella",
+        "in_navigation": true,
+        "classification": "attractions",
+        "classification_basis": "keyword heuristic from URL or visible link text"
+      },
+      {
+        "url": "https://srilanka.travel/attraction?attraction_id=156",
+        "link_text": "Hikkaduwa\n                                Beach",
+        "in_navigation": true,
+        "classification": "attractions",
+        "classification_basis": "keyword heuristic from URL or visible link text"
+      },
+      {
+        "url": "https://srilanka.travel/attraction?attraction_id=157",
+        "link_text": "Dambulla\n                                Cave Temple",
+        "in_navigation": true,
+        "classification": "attractions",
+        "classification_basis": "keyword heuristic from URL or visible link text"
+      },
+      {
+        "url": "https://srilanka.travel/wild-safaris",
+        "link_text": "Wild\n                                Safaris",
+        "in_navigation": true,
+        "classification": "other_unclassified",
+        "classification_basis": "no supported category keyword present"
+      },
+      {
+        "url": "https://srilanka.travel/colombo-city-tour",
+        "link_text": "Colombo City Tour",
+        "in_navigation": true,
+        "classification": "other_unclassified",
+        "classification_basis": "no supported category keyword present"
+      },
+      {
+        "url": "https://srilanka.travel/attractions",
+        "link_text": "See\n                                  All Attractions",
+        "in_navigation": true,
+        "classification": "attractions",
+        "classification_basis": "keyword heuristic from URL or visible link text"
+      },
+      {
+        "url": "https://srilanka.travel/things-to-do-in-colombo",
+        "link_text": "12 Things to Do in Colombo",
+        "in_navigation": true,
+        "classification": "activities",
+        "classification_basis": "keyword heuristic from URL or visible link text"
+      },
+      {
+        "url": "https://srilanka.travel/provincial-tourism",
+        "link_text": "Provincial Tourism",
+        "in_navigation": true,
+        "classification": "other_unclassified",
+        "classification_basis": "no supported category keyword present"
+      },
+      {
+        "url": "https://srilanka.travel/interactivemap/index.php",
+        "link_text": "Explore Sri Lanka",
+        "in_navigation": true,
+        "classification": "other_unclassified",
+        "classification_basis": "no supported category keyword present"
+      },
+      {
+        "url": "https://srilanka.travel/about-sri-lanka",
+        "link_text": "About Sri Lanka",
+        "in_navigation": true,
+        "classification": "other_unclassified",
+        "classification_basis": "no supported category keyword present"
+      },
+      {
+        "url": "https://srilanka.travel/before-you-go",
+        "link_text": "Before You Go",
+        "in_navigation": true,
+        "classification": "other_unclassified",
+        "classification_basis": "no supported category keyword present"
+      },
+      {
+        "url": "https://srilanka.travel/book-your-trip",
+        "link_text": "Book Your Trip",
+        "in_navigation": true,
+        "classification": "other_unclassified",
+        "classification_basis": "no supported category keyword present"
+      },
+      {
+        "url": "https://srilanka.travel/index.php?route=information/information&information_id=223",
+        "link_text": "Public Holidays in Sri Lanka",
+        "in_navigation": true,
+        "classification": "public_holidays",
+        "classification_basis": "keyword heuristic from URL or visible link text"
+      },
+      {
+        "url": "https://srilanka.travel/marvels-of-sri-lanka",
+        "link_text": "Marvels of Sri\n                                Lanka",
+        "in_navigation": true,
+        "classification": "other_unclassified",
+        "classification_basis": "no supported category keyword present"
+      },
+      {
+        "url": "https://srilanka.travel/international-endorsements",
+        "link_text": "International\n                                Endorsements",
+        "in_navigation": true,
+        "classification": "other_unclassified",
+        "classification_basis": "no supported category keyword present"
+      },
+      {
+        "url": "https://srilanka.travel/tourist-map",
+        "link_text": "Tourist Map of Sri\n                                Lanka",
+        "in_navigation": true,
+        "classification": "other_unclassified",
+        "classification_basis": "no supported category keyword present"
+      },
+      {
+        "url": "https://srilanka.travel/emergency-services",
+        "link_text": "Emergency\n                                Services",
+        "in_navigation": true,
+        "classification": "other_unclassified",
+        "classification_basis": "no supported category keyword present"
+      },
+      {
+        "url": "https://srilanka.travel/travel-news",
+        "link_text": "Tourism News",
+        "in_navigation": true,
+        "classification": "other_unclassified",
+        "classification_basis": "no supported category keyword present"
+      },
+      {
+        "url": "https://srilanka.travel/getting-around",
+        "link_text": "Getting Around",
+        "in_navigation": true,
+        "classification": "travel_information",
+        "classification_basis": "keyword heuristic from URL or visible link text"
+      },
+      {
+        "url": "https://srilanka.travel/travel-tips",
+        "link_text": "General tips and tricks",
+        "in_navigation": true,
+        "classification": "other_unclassified",
+        "classification_basis": "no supported category keyword present"
+      },
+      {
+        "url": "https://srilanka.travel/tourist-guides",
+        "link_text": "Tour\n                                Guides",
+        "in_navigation": true,
+        "classification": "travel_information",
+        "classification_basis": "keyword heuristic from URL or visible link text"
+      },
+      {
+        "url": "https://srilanka.travel/travel-agents",
+        "link_text": "Travel Agents",
+        "in_navigation": true,
+        "classification": "other_unclassified",
+        "classification_basis": "no supported category keyword present"
+      },
+      {
+        "url": "https://srilanka.travel/transport",
+        "link_text": "Transport",
+        "in_navigation": true,
+        "classification": "other_unclassified",
+        "classification_basis": "no supported category keyword present"
+      },
+      {
+        "url": "https://srilanka.travel/travel-magazines-and-directories",
+        "link_text": "Travel\n                                Magazines and Directories",
+        "in_navigation": true,
+        "classification": "other_unclassified",
+        "classification_basis": "no supported category keyword present"
+      },
+      {
+        "url": "https://srilanka.travel/travel-apps",
+        "link_text": "Travel Apps",
+        "in_navigation": true,
+        "classification": "other_unclassified",
+        "classification_basis": "no supported category keyword present"
+      },
+      {
+        "url": "https://srilanka.travel/flight-booking",
+        "link_text": "Book Your Flights",
+        "in_navigation": true,
+        "classification": "other_unclassified",
+        "classification_basis": "no supported category keyword present"
+      },
+      {
+        "url": "https://srilanka.travel/accommodation",
+        "link_text": "Book Your Accommodation",
+        "in_navigation": true,
+        "classification": "other_unclassified",
+        "classification_basis": "no supported category keyword present"
+      },
+      {
+        "url": "https://srilanka.travel/online-services",
+        "link_text": "Online Services",
+        "in_navigation": true,
+        "classification": "other_unclassified",
+        "classification_basis": "no supported category keyword present"
+      },
+      {
+        "url": "https://srilanka.travel/online-ticketing",
+        "link_text": "Buy\n                                E-Tickets for Attractions",
+        "in_navigation": true,
+        "classification": "attractions",
+        "classification_basis": "keyword heuristic from URL or visible link text"
+      },
+      {
+        "url": "https://srilanka.travel/index.php?route=event/upcoming&dev=asd",
+        "link_text": "UPCOMING EVENTS",
+        "in_navigation": true,
+        "classification": "events",
+        "classification_basis": "keyword heuristic from URL or visible link text"
+      },
+      {
+        "url": "https://srilanka.travel/what_world_has_to_say",
+        "link_text": "WHAT THE WORLD HAS TO SAY",
+        "in_navigation": true,
+        "classification": "other_unclassified",
+        "classification_basis": "no supported category keyword present"
+      },
+      {
+        "url": "https://www.srilanka.travel/about-us",
+        "link_text": "ABOUT US",
+        "in_navigation": true,
+        "classification": "other_unclassified",
+        "classification_basis": "no supported category keyword present"
+      },
+      {
+        "url": "https://srilanka.travel/about-us",
+        "link_text": "About Us",
+        "in_navigation": true,
+        "classification": "other_unclassified",
+        "classification_basis": "no supported category keyword present"
+      },
+      {
+        "url": "https://srilanka.travel/srilanka-at-a-glance",
+        "link_text": "Sri Lanka At A Glance",
+        "in_navigation": true,
+        "classification": "other_unclassified",
+        "classification_basis": "no supported category keyword present"
+      },
+      {
+        "url": "https://srilanka.travel/interactivemap",
+        "link_text": "Interactive Map",
+        "in_navigation": true,
+        "classification": "other_unclassified",
+        "classification_basis": "no supported category keyword present"
+      },
+      {
+        "url": "https://srilanka.travel/adventure-sports",
+        "link_text": "Adventure Sports",
+        "in_navigation": true,
+        "classification": "other_unclassified",
+        "classification_basis": "no supported category keyword present"
+      },
+      {
+        "url": "https://srilanka.travel/bliss-nature-trails",
+        "link_text": "Ayurveda",
+        "in_navigation": true,
+        "classification": "other_unclassified",
+        "classification_basis": "no supported category keyword present"
+      },
+      {
+        "url": "https://srilanka.travel/eco-tourism",
+        "link_text": "Eco Tourism",
+        "in_navigation": true,
+        "classification": "other_unclassified",
+        "classification_basis": "no supported category keyword present"
+      },
+      {
+        "url": "https://srilanka.travel/restaurants",
+        "link_text": "Dining",
+        "in_navigation": true,
+        "classification": "other_unclassified",
+        "classification_basis": "no supported category keyword present"
+      },
+      {
+        "url": "https://srilanka.travel/eating-places",
+        "link_text": "Tourist Friendly Eating Places",
+        "in_navigation": true,
+        "classification": "other_unclassified",
+        "classification_basis": "no supported category keyword present"
+      },
+      {
+        "url": "https://srilanka.travel/spa-and-wellness-centers",
+        "link_text": "Spa & Wellness Centers",
+        "in_navigation": true,
+        "classification": "other_unclassified",
+        "classification_basis": "no supported category keyword present"
+      },
+      {
+        "url": "https://srilanka.travel/spice-gardens",
+        "link_text": "Spice Gardens",
+        "in_navigation": true,
+        "classification": "other_unclassified",
+        "classification_basis": "no supported category keyword present"
+      },
+      {
+        "url": "https://srilanka.travel/tourist-shops",
+        "link_text": "Tourist Shops",
+        "in_navigation": true,
+        "classification": "other_unclassified",
+        "classification_basis": "no supported category keyword present"
+      },
+      {
+        "url": "https://srilanka.travel/volunteer_tourism",
+        "link_text": "Volunteer Tourism",
+        "in_navigation": true,
+        "classification": "other_unclassified",
+        "classification_basis": "no supported category keyword present"
+      },
+      {
+        "url": "https://srilanka.travel/research_tourism",
+        "link_text": "Research Tourism",
+        "in_navigation": true,
+        "classification": "other_unclassified",
+        "classification_basis": "no supported category keyword present"
+      },
+      {
+        "url": "https://srilanka.travel/gemstone-srilanka",
+        "link_text": "Buy Gemstone",
+        "in_navigation": true,
+        "classification": "other_unclassified",
+        "classification_basis": "no supported category keyword present"
+      },
+      {
+        "url": "https://srilanka.travel/travel_habits",
+        "link_text": "Travel Habits",
+        "in_navigation": true,
+        "classification": "other_unclassified",
+        "classification_basis": "no supported category keyword present"
+      },
+      {
+        "url": "https://srilanka.travel/airports",
+        "link_text": "Airports",
+        "in_navigation": true,
+        "classification": "other_unclassified",
+        "classification_basis": "no supported category keyword present"
+      },
+      {
+        "url": "https://srilanka.travel/authorized-tourist-drivers",
+        "link_text": "Authorized Tourist Drivers",
+        "in_navigation": true,
+        "classification": "other_unclassified",
+        "classification_basis": "no supported category keyword present"
+      },
+      {
+        "url": "https://srilanka.travel/authorized-tuk-tuk-drivers",
+        "link_text": "Authorized Tuk Tuk Drivers",
+        "in_navigation": true,
+        "classification": "other_unclassified",
+        "classification_basis": "no supported category keyword present"
+      },
+      {
+        "url": "https://srilanka.travel/foreign-embassies",
+        "link_text": "Foreign Embassies",
+        "in_navigation": true,
+        "classification": "other_unclassified",
+        "classification_basis": "no supported category keyword present"
+      },
+      {
+        "url": "https://srilanka.travel/newly-registered-hotels-and-other-accommodation",
+        "link_text": "Newly Registered Hotels & Other Accommodation",
+        "in_navigation": true,
+        "classification": "other_unclassified",
+        "classification_basis": "no supported category keyword present"
+      },
+      {
+        "url": "https://srilanka.travel/promotionalkit",
+        "link_text": "SLTPB Promotional KIT",
+        "in_navigation": true,
+        "classification": "other_unclassified",
+        "classification_basis": "no supported category keyword present"
+      },
+      {
+        "url": "https://srilanka.travel/board-of-directors",
+        "link_text": "Board of Directors",
+        "in_navigation": true,
+        "classification": "other_unclassified",
+        "classification_basis": "no supported category keyword present"
+      },
+      {
+        "url": "https://srilanka.travel/Key_Contacts",
+        "link_text": "Key Contacts",
+        "in_navigation": true,
+        "classification": "operating_information",
+        "classification_basis": "keyword heuristic from URL or visible link text"
+      },
+      {
+        "url": "https://srilanka.travel/meet-us",
+        "link_text": "Meet Us",
+        "in_navigation": true,
+        "classification": "other_unclassified",
+        "classification_basis": "no supported category keyword present"
+      }
+    ],
+    "structured_metadata": [],
+    "relevant_category_labels": [
+      "activities",
+      "attractions",
+      "events",
+      "operating_information",
+      "public_holidays",
+      "travel_information"
+    ],
+    "parsing_warnings": []
+  },
+  "quality": {
+    "raw_link_count": 277,
+    "external_link_count": 76,
+    "duplicate_internal_link_count": 109,
+    "category_distribution": {
+      "activities": 1,
+      "attractions": 10,
+      "events": 4,
+      "operating_information": 1,
+      "other_unclassified": 72,
+      "public_holidays": 2,
+      "travel_information": 2
+    }
+  }
+}

@@ -114,6 +114,32 @@ class GooglePlacesConnector:
             max_results=min(max_results, 20),
         )
 
+    async def text_search(self, *, query: str, max_results: int = 5) -> List[Dict[str, Any]]:
+        """Search Google Places API (New) by text for review-only identity work.
+
+        This deliberately returns only identity fields.  Callers that need optional
+        enrichment fields must explicitly request ``get_place_details`` for a
+        selected candidate, keeping request volume and field usage visible.
+        """
+        query = " ".join(query.split())
+        if not query:
+            raise ValueError("query is required")
+        if not 1 <= max_results <= 20:
+            raise ValueError("max_results must be between 1 and 20")
+        field_mask = ",".join((
+            "places.id", "places.displayName", "places.formattedAddress",
+            "places.location", "places.primaryType", "places.types",
+            "places.businessStatus", "places.googleMapsUri",
+        ))
+        async with httpx.AsyncClient(timeout=self.timeout) as client:
+            response = await client.post(
+                f"{self.base_url}/places:searchText",
+                json={"textQuery": query, "maxResultCount": max_results},
+                headers=self._build_headers(field_mask),
+            )
+            response.raise_for_status()
+            return response.json().get("places", [])
+
     async def get_place_details(
             self, place_id:str)->Dict[str,Any]:
         url=f"{self.base_url}/places/{place_id}"
@@ -131,6 +157,7 @@ class GooglePlacesConnector:
                 "websiteUri",
                 "internationalPhoneNumber",
                 "regularOpeningHours",
+                "currentOpeningHours",
                 "priceLevel",
                 "businessStatus",
                 "googleMapsUri",

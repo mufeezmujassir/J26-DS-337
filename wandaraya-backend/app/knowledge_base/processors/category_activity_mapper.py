@@ -51,6 +51,9 @@ class CategoryActivityMapper:
             "cultural_landmark",
             "historical_landmark",
             "monument",
+            "art_gallery",
+            "art_museum",
+            "cultural_center",
         },
 
         "History & Archaeology": {
@@ -301,6 +304,9 @@ class CategoryActivityMapper:
         "local culture",
         "tradition",
         "traditional culture",
+        "art gallery",
+        "art museum",
+        "cultural center",
     },
 
     "Historical Exploration": {
@@ -436,7 +442,11 @@ class CategoryActivityMapper:
             [
                 name,
                 primary_text,
+                # Google Places uses snake_case type names.  Preserve the raw
+                # tokens for category matching while also exposing readable
+                # words to the activity rules.
                 " ".join(google_types),
+                " ".join(item.replace("_", " ") for item in google_types),
             ]
         ).casefold()
 

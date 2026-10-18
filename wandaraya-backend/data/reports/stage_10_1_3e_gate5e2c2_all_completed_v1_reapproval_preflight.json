@@ -1,0 +1,9 @@
+{
+  "dry_run": true,
+  "postgresql_writes": false,
+  "qdrant_writes": false,
+  "reasons": [
+    "blocked records remain excluded from the approved write scope"
+  ],
+  "status": "READY_FOR_EXPLICITLY_AUTHORIZED_WRITE"
+}

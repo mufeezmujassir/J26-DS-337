@@ -1,0 +1,126 @@
+{
+  "complete_collection_pagination_completed": false,
+  "duplicate_payload_attraction_ids": {},
+  "identity_conflict_count": 0,
+  "identity_conflicts": {},
+  "limitations": [
+    "Legacy points do not expose Google Place IDs in the sampled payload schema.",
+    "This scan does not make failed filtered-scroll functionality healthy."
+  ],
+  "method": "bounded_unfiltered_scroll_pagination",
+  "page_size": 256,
+  "pages": 17,
+  "pagination_error": {
+    "error": "Unexpected Response: 500 (Internal Server Error)\nRaw response content:\nb'{\"status\":{\"error\":\"Service internal error: 1 of 1 read operations failed:\\\\n  Service internal error: task 872 panicked with message \\\\\"called `Result::unwrap()` on an `Err` value: OffsetZero\\\\\"\"},\"t ...'",
+    "error_type": "UnexpectedResponse"
+  },
+  "payload_schema": {
+    "confirmed_identity_fields": {
+      "attraction_id": true,
+      "category_ids": false,
+      "district_id": false,
+      "google_place_id": false,
+      "name": true
+    },
+    "examples": {
+      "activities": [
+        "Heritage Exploration",
+        "Sightseeing",
+        "Historical Exploration",
+        "Photography",
+        "Cultural Experience"
+      ],
+      "attraction_id": 1,
+      "categories": [
+        "History & Archaeology",
+        "Urban & City Attractions",
+        "Culture & Heritage",
+        "Photography & Scenic Spots"
+      ],
+      "city": "Galle",
+      "district": "Galle",
+      "name": "Galle Dutch Fort",
+      "province": "Southern"
+    },
+    "fields": {
+      "activities": [
+        "list"
+      ],
+      "attraction_id": [
+        "int"
+      ],
+      "categories": [
+        "list"
+      ],
+      "city": [
+        "NoneType",
+        "str"
+      ],
+      "district": [
+        "str"
+      ],
+      "name": [
+        "str"
+      ],
+      "province": [
+        "str"
+      ]
+    }
+  },
+  "points_seen": 4352,
+  "scope_attraction_ids": [
+    6604,
+    6605,
+    6606,
+    6607,
+    6608,
+    6609,
+    6610,
+    6611,
+    6612,
+    6613,
+    6614,
+    6615,
+    6616,
+    6617,
+    6618,
+    6619,
+    6620,
+    6621,
+    6622,
+    6623,
+    6624,
+    6625,
+    6626,
+    6627
+  ],
+  "stable_point_ids": [
+    6604,
+    6605,
+    6606,
+    6607,
+    6608,
+    6609,
+    6610,
+    6611,
+    6612,
+    6613,
+    6614,
+    6615,
+    6616,
+    6617,
+    6618,
+    6619,
+    6620,
+    6621,
+    6622,
+    6623,
+    6624,
+    6625,
+    6626,
+    6627
+  ],
+  "status": "failed",
+  "target_google_place_id_matches": {},
+  "target_payload_attraction_id_matches": {}
+}

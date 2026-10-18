@@ -1,0 +1,12 @@
+{
+  "classifications": {
+    "new_google_place_candidate": 4,
+    "verified_existing_kb_match": 1
+  },
+  "postgresql_writes": false,
+  "processed_records": 5,
+  "qdrant_writes": false,
+  "queue_path": "data/reports/stage_10_1_3e_gate5e2c2_district_lookup_queue.json",
+  "queue_sha256": "869649901099f863daa9af9119fcec8919af8178498657b4e90a139b8874f26e",
+  "status": "review_only"
+}

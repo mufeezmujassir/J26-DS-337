@@ -68,3 +68,28 @@ def test_multiple_possible_paths_dijkstra():
     path, dist = router.route("A", "C")
     assert path == ["A", "C"]
     assert dist == 8.0
+
+def test_slower_route_objective():
+    graph = MultimodalGraph()
+    graph.add_node(Node("A"))
+    graph.add_node(Node("B_express"))
+    graph.add_node(Node("B_scenic"))
+    graph.add_node(Node("C"))
+
+    # Express path: higher speed (10 km in 6 min = 100 km/h)
+    graph.add_edge(Edge("A", "B_express", GraphMode.ROAD, attributes={"distance_km": 10.0, "travel_time_min": 6.0}))
+    graph.add_edge(Edge("B_express", "C", GraphMode.ROAD, attributes={"distance_km": 10.0, "travel_time_min": 6.0}))
+
+    # Scenic/leisurely path: lower speed (10 km in 30 min = 20 km/h)
+    graph.add_edge(Edge("A", "B_scenic", GraphMode.BUS, attributes={"distance_km": 10.0, "travel_time_min": 30.0}))
+    graph.add_edge(Edge("B_scenic", "C", GraphMode.BUS, attributes={"distance_km": 10.0, "travel_time_min": 30.0}))
+
+    router_fast = DijkstraRouter(graph, objective="fastest")
+    res_fast = router_fast.route("A", "C")
+    assert "B_express" in res_fast.nodes
+
+    router_slow = DijkstraRouter(graph, objective="slower")
+    res_slow = router_slow.route("A", "C")
+    assert "B_scenic" in res_slow.nodes
+    assert res_slow.objective == "slower"
+

@@ -17,6 +17,7 @@ from app.models.weather_reading import WeatherReading
 from app.models.district_weather_monthly import DistrictWeatherMonthly
 from app.models.weather_model_run import WeatherModelRun
 from app.models.weather_forecast import WeatherForecast
+from app.models.tourism_sync import AttractionSourceReference, AttractionFieldProvenance, TourismImportBatch, TourismSyncReview, TourismDuplicateCluster
 
 from app.models.roads import Road
 from app.models.transport import BusFare, TrainStation, TrainFare

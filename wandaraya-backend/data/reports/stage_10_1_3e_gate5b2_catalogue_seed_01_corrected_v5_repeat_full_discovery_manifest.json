@@ -1,0 +1,120 @@
+{
+  "stage": "10.1.3E_gate_5b_3",
+  "status": "review_only_full_discovery_manifest",
+  "acquired_urls": [
+    "https://srilanka.travel/attractions",
+    "https://srilanka.travel/index.php?route=attractions%2Fattractions-search&theme=2",
+    "https://srilanka.travel/tourist-attractions?page=2"
+  ],
+  "discovered_urls": [
+    "https://srilanka.travel/attractions",
+    "https://srilanka.travel/index.php?route=attractions%2Fattractions-search&theme=2",
+    "https://srilanka.travel/tourist-attractions?page=1",
+    "https://srilanka.travel/tourist-attractions?page=10",
+    "https://srilanka.travel/tourist-attractions?page=11",
+    "https://srilanka.travel/tourist-attractions?page=15",
+    "https://srilanka.travel/tourist-attractions?page=2",
+    "https://srilanka.travel/tourist-attractions?page=2&theme=2",
+    "https://srilanka.travel/tourist-attractions?page=3",
+    "https://srilanka.travel/tourist-attractions?page=3&theme=2",
+    "https://srilanka.travel/tourist-attractions?page=4",
+    "https://srilanka.travel/tourist-attractions?page=4&theme=2",
+    "https://srilanka.travel/tourist-attractions?page=5",
+    "https://srilanka.travel/tourist-attractions?page=5&theme=2",
+    "https://srilanka.travel/tourist-attractions?page=6",
+    "https://srilanka.travel/tourist-attractions?page=6&theme=2",
+    "https://srilanka.travel/tourist-attractions?page=7",
+    "https://srilanka.travel/tourist-attractions?page=8",
+    "https://srilanka.travel/tourist-attractions?page=9"
+  ],
+  "remaining_urls": [
+    "https://srilanka.travel/tourist-attractions?page=1",
+    "https://srilanka.travel/tourist-attractions?page=10",
+    "https://srilanka.travel/tourist-attractions?page=11",
+    "https://srilanka.travel/tourist-attractions?page=15",
+    "https://srilanka.travel/tourist-attractions?page=2&theme=2",
+    "https://srilanka.travel/tourist-attractions?page=3",
+    "https://srilanka.travel/tourist-attractions?page=3&theme=2",
+    "https://srilanka.travel/tourist-attractions?page=4",
+    "https://srilanka.travel/tourist-attractions?page=4&theme=2",
+    "https://srilanka.travel/tourist-attractions?page=5",
+    "https://srilanka.travel/tourist-attractions?page=5&theme=2",
+    "https://srilanka.travel/tourist-attractions?page=6",
+    "https://srilanka.travel/tourist-attractions?page=6&theme=2",
+    "https://srilanka.travel/tourist-attractions?page=7",
+    "https://srilanka.travel/tourist-attractions?page=8",
+    "https://srilanka.travel/tourist-attractions?page=9"
+  ],
+  "counters": {
+    "discovered_urls": 19,
+    "acquired_urls": 3,
+    "remaining_urls": 16,
+    "failed_urls": 0
+  },
+  "candidates": [
+    {
+      "canonical_url": "https://srilanka.travel/tourist-attractions?page=1",
+      "authorization_status": "discovered_unapproved"
+    },
+    {
+      "canonical_url": "https://srilanka.travel/tourist-attractions?page=10",
+      "authorization_status": "discovered_unapproved"
+    },
+    {
+      "canonical_url": "https://srilanka.travel/tourist-attractions?page=11",
+      "authorization_status": "discovered_unapproved"
+    },
+    {
+      "canonical_url": "https://srilanka.travel/tourist-attractions?page=15",
+      "authorization_status": "discovered_unapproved"
+    },
+    {
+      "canonical_url": "https://srilanka.travel/tourist-attractions?page=2&theme=2",
+      "authorization_status": "discovered_unapproved"
+    },
+    {
+      "canonical_url": "https://srilanka.travel/tourist-attractions?page=3",
+      "authorization_status": "discovered_unapproved"
+    },
+    {
+      "canonical_url": "https://srilanka.travel/tourist-attractions?page=3&theme=2",
+      "authorization_status": "discovered_unapproved"
+    },
+    {
+      "canonical_url": "https://srilanka.travel/tourist-attractions?page=4",
+      "authorization_status": "discovered_unapproved"
+    },
+    {
+      "canonical_url": "https://srilanka.travel/tourist-attractions?page=4&theme=2",
+      "authorization_status": "discovered_unapproved"
+    },
+    {
+      "canonical_url": "https://srilanka.travel/tourist-attractions?page=5",
+      "authorization_status": "discovered_unapproved"
+    },
+    {
+      "canonical_url": "https://srilanka.travel/tourist-attractions?page=5&theme=2",
+      "authorization_status": "discovered_unapproved"
+    },
+    {
+      "canonical_url": "https://srilanka.travel/tourist-attractions?page=6",
+      "authorization_status": "discovered_unapproved"
+    },
+    {
+      "canonical_url": "https://srilanka.travel/tourist-attractions?page=6&theme=2",
+      "authorization_status": "discovered_unapproved"
+    },
+    {
+      "canonical_url": "https://srilanka.travel/tourist-attractions?page=7",
+      "authorization_status": "discovered_unapproved"
+    },
+    {
+      "canonical_url": "https://srilanka.travel/tourist-attractions?page=8",
+      "authorization_status": "discovered_unapproved"
+    },
+    {
+      "canonical_url": "https://srilanka.travel/tourist-attractions?page=9",
+      "authorization_status": "discovered_unapproved"
+    }
+  ]
+}

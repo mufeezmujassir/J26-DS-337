@@ -1,0 +1,45 @@
+{
+  "observed_pagination_urls": [
+    "https://srilanka.travel/tourist-attractions?page=1",
+    "https://srilanka.travel/tourist-attractions?page=10",
+    "https://srilanka.travel/tourist-attractions?page=11",
+    "https://srilanka.travel/tourist-attractions?page=15",
+    "https://srilanka.travel/tourist-attractions?page=2",
+    "https://srilanka.travel/tourist-attractions?page=2&theme=2",
+    "https://srilanka.travel/tourist-attractions?page=3",
+    "https://srilanka.travel/tourist-attractions?page=3&theme=2",
+    "https://srilanka.travel/tourist-attractions?page=4",
+    "https://srilanka.travel/tourist-attractions?page=4&theme=2",
+    "https://srilanka.travel/tourist-attractions?page=5",
+    "https://srilanka.travel/tourist-attractions?page=5&theme=2",
+    "https://srilanka.travel/tourist-attractions?page=6",
+    "https://srilanka.travel/tourist-attractions?page=6&theme=2",
+    "https://srilanka.travel/tourist-attractions?page=7",
+    "https://srilanka.travel/tourist-attractions?page=8",
+    "https://srilanka.travel/tourist-attractions?page=9"
+  ],
+  "observed_page_count": 15,
+  "pages": [
+    {
+      "source_url": "https://srilanka.travel/attractions",
+      "main_content_sha256": "4dd1a777bf591d7dbfe504f51bef0983ac472dc548269cd9544ddd6afab1620d",
+      "catalogue_card_count": 12,
+      "pagination_content_duplicate": false,
+      "site_reported_total": 169
+    },
+    {
+      "source_url": "https://srilanka.travel/tourist-attractions?page=2",
+      "main_content_sha256": "6828a1eec7d7f94baf44ab2eb68f6af997ffced7a83638a255366a219c64cd02",
+      "catalogue_card_count": 12,
+      "pagination_content_duplicate": false,
+      "site_reported_total": 169
+    },
+    {
+      "source_url": "https://srilanka.travel/index.php?route=attractions%2Fattractions-search&theme=2",
+      "main_content_sha256": "b4c3d663ba334d7b73686470d5098a45e26e59f04e81281869c03d65f49ef5b3",
+      "catalogue_card_count": 12,
+      "pagination_content_duplicate": false,
+      "site_reported_total": 69
+    }
+  ]
+}

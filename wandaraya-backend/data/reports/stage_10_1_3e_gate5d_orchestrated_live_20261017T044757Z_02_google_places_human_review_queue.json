@@ -1,0 +1,550 @@
+{
+  "records": [
+    {
+      "attraction_name": "Pannathgoda Purana Raja Maha Viharaya",
+      "candidates": [
+        {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.8788,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.1469352,
+            "longitude": 81.55244379999999
+          },
+          "display_name": "Pannathgoda Rajamaha Viharaya",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "Pallanoya, Wadinagala, Ampara, Pallang Oya - Inginiyagala, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=270618309991364184&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJN7o74_gC5ToRWHbATOttwQM",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "buddhist_temple",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.6841,
+          "types": [
+            "buddhist_temple",
+            "place_of_worship",
+            "association_or_organization",
+            "point_of_interest",
+            "establishment"
+          ]
+        }
+      ],
+      "classification": "new_google_place_candidate",
+      "details": {
+        "data": {
+          "addressComponents": [
+            {
+              "languageCode": "si",
+              "longText": "Pallanoya, Wadinagala, Ampara"
+            },
+            {
+              "languageCode": "en",
+              "longText": "Pallang Oya - Inginiyagala",
+              "shortText": "Pallang Oya - Inginiyagala",
+              "types": [
+                "route"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Ampara",
+              "shortText": "Ampara",
+              "types": [
+                "administrative_area_level_2",
+                "political"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Eastern Province",
+              "shortText": "EP",
+              "types": [
+                "administrative_area_level_1",
+                "political"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Sri Lanka",
+              "shortText": "LK",
+              "types": [
+                "country",
+                "political"
+              ]
+            }
+          ],
+          "businessStatus": "OPERATIONAL",
+          "currentOpeningHours": {
+            "nextCloseTime": "2026-10-17T18:00:00Z",
+            "openNow": true,
+            "periods": [
+              {
+                "close": {
+                  "date": {
+                    "day": 18,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 0,
+                  "hour": 23,
+                  "minute": 30
+                },
+                "open": {
+                  "date": {
+                    "day": 18,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 0,
+                  "hour": 0,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "date": {
+                    "day": 19,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 1,
+                  "hour": 23,
+                  "minute": 30
+                },
+                "open": {
+                  "date": {
+                    "day": 19,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 1,
+                  "hour": 0,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "date": {
+                    "day": 20,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 2,
+                  "hour": 23,
+                  "minute": 30
+                },
+                "open": {
+                  "date": {
+                    "day": 20,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 2,
+                  "hour": 0,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "date": {
+                    "day": 21,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 3,
+                  "hour": 23,
+                  "minute": 30
+                },
+                "open": {
+                  "date": {
+                    "day": 21,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 3,
+                  "hour": 0,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "date": {
+                    "day": 22,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 4,
+                  "hour": 23,
+                  "minute": 30
+                },
+                "open": {
+                  "date": {
+                    "day": 22,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 4,
+                  "hour": 0,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "date": {
+                    "day": 23,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 5,
+                  "hour": 23,
+                  "minute": 30
+                },
+                "open": {
+                  "date": {
+                    "day": 23,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 5,
+                  "hour": 0,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "date": {
+                    "day": 17,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 6,
+                  "hour": 23,
+                  "minute": 30
+                },
+                "open": {
+                  "date": {
+                    "day": 17,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 6,
+                  "hour": 0,
+                  "minute": 0
+                }
+              }
+            ],
+            "weekdayDescriptions": [
+              "Monday: 12:00\u202fAM\u2009\u2013\u200911:30\u202fPM",
+              "Tuesday: 12:00\u202fAM\u2009\u2013\u200911:30\u202fPM",
+              "Wednesday: 12:00\u202fAM\u2009\u2013\u200911:30\u202fPM",
+              "Thursday: 12:00\u202fAM\u2009\u2013\u200911:30\u202fPM",
+              "Friday: 12:00\u202fAM\u2009\u2013\u200911:30\u202fPM",
+              "Saturday: 12:00\u202fAM\u2009\u2013\u200911:30\u202fPM",
+              "Sunday: 12:00\u202fAM\u2009\u2013\u200911:30\u202fPM"
+            ]
+          },
+          "displayName": {
+            "languageCode": "en",
+            "text": "Pannathgoda Rajamaha Viharaya"
+          },
+          "formattedAddress": "Pallanoya, Wadinagala, Ampara, Pallang Oya - Inginiyagala, Sri Lanka",
+          "googleMapsUri": "https://maps.google.com/?cid=270618309991364184&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+          "id": "ChIJN7o74_gC5ToRWHbATOttwQM",
+          "location": {
+            "latitude": 7.1469352,
+            "longitude": 81.55244379999999
+          },
+          "photos": [
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Thiran Ediriweera",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXOHZ23MTXD79kRa4DjhiUOdfR3xZLwgqDgGMDJzFzYY20dHMevuw=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/116215104954348876251"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIDKjoqLYg&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDKjoqLYg!2e10!4m2!3m1!1s0x3ae502f8e33bba37:0x3c16deb4cc07658",
+              "heightPx": 2448,
+              "name": "places/ChIJN7o74_gC5ToRWHbATOttwQM/photos/Aa-ngMbTORv1UJHS67qPmFIT_HQnDOzbCaC8WDOAE11k9uPiIODQ0OG-oU8GbYpIjoCwEQc6sSD5s_1Hqumb8AIsmDVUL9C-01wXgArOIOAC9oFqfjwjybwL_KNJo6M7vG3tvO-6nPvjHCWzcDKKNqsSdYr_muTfZpHGYinF0VFz4ThR5m9ZZEJyc3c6z-TjNPBtb5vmKh1ffm5-aK3LibmTKJaMJubr--EXygsizeRA56gF_8dE8cnpad8vTiGQ4YRYOH6noMUSiUxo9OqqmOPH_elbA_62jqfgUZFdySOP7RkISDf4N9DhU4-2kKqdVZ7hizAhzk2-nusOvP6DmoU_8l2Q2MmtzZJUkBY0Qt2SlA6ugBL8zelKTACDwzZ7Ujq3YbwGu9q1ia6IvoujONfy6-iogQ",
+              "widthPx": 3264
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Thiran Ediriweera",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXOHZ23MTXD79kRa4DjhiUOdfR3xZLwgqDgGMDJzFzYY20dHMevuw=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/116215104954348876251"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIDK9sXN9QE&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDK9sXN9QE!2e10!4m2!3m1!1s0x3ae502f8e33bba37:0x3c16deb4cc07658",
+              "heightPx": 4000,
+              "name": "places/ChIJN7o74_gC5ToRWHbATOttwQM/photos/Aa-ngMYjmNPa6DdAgc_T7j8zTEY7F7AVDtOJr2PZHrgVVhXo142WYYe1ekmVgclZJxH4wbXxIUDrSVxwsy-gaCI_c_860_wFxB864bMAoBLj-SqX3eWDHCFv26IqntQ-j5wRs41dD4OP2fPDhcX03vxs6eI29e6eEVE6m-5u2osqwnitXW5VtRs1a4aXrfdTnsUcd601-oAQXaXUjjwvCvLFp2VpA-i9SU-LASYMDifTW_KIg6TfqXO1h412wSIG1FCo234COJHEPqwkRMmg_VUIar713QYy5zSUGM5coNR6XxuNJEYq_LCt1-ymguHyk6_V8fznbxhSjgxZOkpmzaoTnXYM5ZgEbVxiEYa3ovBSW6Fii6lASOCBP_iqEzADlPS2AM2ii-iP9Pzk9V82ez2F4tCAG2oIPgQ",
+              "widthPx": 3000
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Thiran Ediriweera",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXOHZ23MTXD79kRa4DjhiUOdfR3xZLwgqDgGMDJzFzYY20dHMevuw=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/116215104954348876251"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIDKtr3zpAE&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDKtr3zpAE!2e10!4m2!3m1!1s0x3ae502f8e33bba37:0x3c16deb4cc07658",
+              "heightPx": 4000,
+              "name": "places/ChIJN7o74_gC5ToRWHbATOttwQM/photos/Aa-ngMaoNduPhQOO4fiZWwty4g1yKP-bSxTuJwkb-kroO0jpWnYgOycm7n7Yeq1lAb1p05CDca-1yJdPbGBmlEBqVKlij7YoBF2BpLDwYC5DKr60gx4sct1j4eOimQl2ku5cqf3cD-2DFlPABVmZINJ-zkEy_s9sfLhVB69bJ86ogPIRgk0fibOEwwn3BkZSNHGd1Ge7wn5sUu01Hfr9AVA2jJJxrXB0wgZaE3_Ey-2Uzzsn60ZapN1splFCm2NbzkUvNmcZSz5KxHVf4emGOyG_8-dvHTCDS574Lb75gxW0ZDhv4JQRlKR6YJDrYQN_TB050lrpN7arXgoFXd7A_gIkoWPxKNC3q-0t-IfjRzryz-iBja5yMMPB6a_10JOOwQ00-NlRqsAAg4SARssPARsA-nTtTxwESRM",
+              "widthPx": 3000
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Thiran Ediriweera",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXOHZ23MTXD79kRa4DjhiUOdfR3xZLwgqDgGMDJzFzYY20dHMevuw=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/116215104954348876251"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIDK_syUEg&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDK_syUEg!2e10!4m2!3m1!1s0x3ae502f8e33bba37:0x3c16deb4cc07658",
+              "heightPx": 3000,
+              "name": "places/ChIJN7o74_gC5ToRWHbATOttwQM/photos/Aa-ngMap1Y0dFtFoA325GvpxE5BFsvsOcW7rgFdQLq-IUGLhToSrL-7G__68TnoVblTUUz3DfFhXZxLzdbsu17qJi-ExR9v9RzEE-cDlcvdBw1-b4YMOM2qPx28ZO_lqBGa8CW7KzUAb9GR0J_nCgWRxmOvKEHg5fsVlnqASe3hua-Id23cHzpbmWUgXe1GRvoFkVmhqkJ5EncTp7rH8Wm-GrgNZZs4Ak9O0rVj6LNYkpL17taxI3JTaFmB4nPmZ3PHSaSi5f0bLY-VIGSZvk8IvVo9Qml1NlbVJOA1LsYSmHuHcCw0hWjgFIiV5bHg0EJ6MPI5rOsu6xkhW0hwhzUbObmAIcRbQSEElVsG3oQZjkN8ZRTs81kcNQCfWX9FA4yXVfqgXaKyJNVYKRJHRs9mDtDXq6x0",
+              "widthPx": 4000
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Thiran Ediriweera",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXOHZ23MTXD79kRa4DjhiUOdfR3xZLwgqDgGMDJzFzYY20dHMevuw=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/116215104954348876251"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIDKle268wE&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDKle268wE!2e10!4m2!3m1!1s0x3ae502f8e33bba37:0x3c16deb4cc07658",
+              "heightPx": 4000,
+              "name": "places/ChIJN7o74_gC5ToRWHbATOttwQM/photos/Aa-ngMYolydZp47j1RqqLbCNkIQ3pnX9C6kIvYT83F8Pp_JbRSuAycHW1-WZHUkinpJb81rRxUli1eU2OQwfej_qmotCs3Nb_IjeC1p16pwBmaPrcbIKUetyGnmPmB_uX24CbeekH-klxDlEsP6dhVDoE58n74h1_lmyMvl1qAm-TNA1Ck3_sIfY5gWXEhCM_-iN15R_0tPHOSoZeLfNx8UZz5APFlqNjh_S9bymgxvszMaw0tq6YaVFhoZOtDKmJflf3eFzoBVtO0Qz_E03Kjg19vaShtyLAdvyWJFO-c4mC70_jVv8xE3TGZWjpYY0VJSKBDzocsW2ws4HE6qjhGb5LMQRzsd7eZn6HJ_L4N9am5KtInpSrrpzb-Hf_P7DqwfM9ZFh9LMn1c6x7_7paM7DdN1EU6XGaZ0",
+              "widthPx": 3000
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Thiran Ediriweera",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXOHZ23MTXD79kRa4DjhiUOdfR3xZLwgqDgGMDJzFzYY20dHMevuw=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/116215104954348876251"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIDKtr2ZkQE&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDKtr2ZkQE!2e10!4m2!3m1!1s0x3ae502f8e33bba37:0x3c16deb4cc07658",
+              "heightPx": 4000,
+              "name": "places/ChIJN7o74_gC5ToRWHbATOttwQM/photos/Aa-ngMZ29_Jk8Tz_hhHqf4pgccrWNLjPXVBbUPkOL9WqTW___K7DRUFOo1zwpsTC0WgtnE77Lyzi5Vj02WyZE5tIImYpdWZZJCOJLtEjPr1xzGx_57jFMRwWeyDYvyTUAYYkSB_UOPIQT7ZVR6dDUd9MO_m3znPSJUC2j1yEvrPaa2lVAPupZhr_nXF9dggN4181R4QjVGEaDuMGvPiBx2yrgfSh3N6YaazXROo7X84ehF80LSqwF7EBqPdqWdtufsOOK8zkcBhfZVxY-88N_jG43xhwFN2RoVBgdrbWLoy3aVd-a1YNeJnv76vSJji_GkLELcWKbH8hU8-qu4sHcZTvXRIHFgjlVHvkexxlhJgF2ag9_IW3uGErTrn9GQ2hURFk4VNrJW1syK_CFYFZVGx_eI5bn7z5",
+              "widthPx": 3000
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Thiran Ediriweera",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXOHZ23MTXD79kRa4DjhiUOdfR3xZLwgqDgGMDJzFzYY20dHMevuw=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/116215104954348876251"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIDKjoqDVw&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDKjoqDVw!2e10!4m2!3m1!1s0x3ae502f8e33bba37:0x3c16deb4cc07658",
+              "heightPx": 4000,
+              "name": "places/ChIJN7o74_gC5ToRWHbATOttwQM/photos/Aa-ngMbspxfE3b3U7qJrkr0596o7POnWtJS_LfjpS-ozo6ot2mS8o3nGjfSnuUbxd32z9fkqjoxGM9UUWDTzk4b_6BTD1PdAYlAqbTzfto00JnBH1hIeXNqxZ2NRUySnIyjkUdsEO61y-D04v6e2JFlsmAG6NThA32_YEabJPMpXKMkvSgZHd74LzvTMgYhep3GiUgDesVNbp6LhI5T1ZDf7Yv-TWhMu0pj85SeUzjpsSxPV5cm9EwsMktFcXGd9FCV1CyeBy_7qqt0rSCK57YqcEtty94ak-xXCeiWld3X1QziVXYY3aHHly4ie7C5tabQapRsOuAvrbYA6jrm00KIKwbYecwdHxH59dscFl1CzgKtcbrgt7Jl1puERQ24wjSajG5kkjf2gEG1Coqu8ui87lMctwro",
+              "widthPx": 3000
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Thiran Ediriweera",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXOHZ23MTXD79kRa4DjhiUOdfR3xZLwgqDgGMDJzFzYY20dHMevuw=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/116215104954348876251"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIDK2dWFqgE&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDK2dWFqgE!2e10!4m2!3m1!1s0x3ae502f8e33bba37:0x3c16deb4cc07658",
+              "heightPx": 4000,
+              "name": "places/ChIJN7o74_gC5ToRWHbATOttwQM/photos/Aa-ngMadWntVmYDxS_ldKQPEd4aSbPgTxa_hitIwyO3UdRgX034FAcC-d7btqG2VI-pkBFfyhZI_7Usk-SAzVB9iypL5G6PGTFg6q6oWbcMZRg5rf6OiPeIWkFZ0U_x-VH2VLuLMG1_0dffKEg2P909lqgxYH24NBgnTaDSDjHfKmKE4xgem7-037zyUj3malJPjtCvXYi-PJJW1yZf6fxbBBFyeGbGCByax1svGfKNAQz9HWW8A6X4XSLncvb80Gpk7OUZOHT-_bNaAG_qoDmD_Lo_69-APVDf2qpbgox4Zz3XaDnFRWweXtl3JauF0qsLHE-6GjopZxutGydRCH1kjxJvhHjJUSTlkg4bovPgPqHPlQVLZnDi7BQKDPaXy-gy6sxyQKZ_In2Ab0KJrPOrQElfjGAOH2SA",
+              "widthPx": 3000
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Thiran Ediriweera",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXOHZ23MTXD79kRa4DjhiUOdfR3xZLwgqDgGMDJzFzYY20dHMevuw=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/116215104954348876251"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIDKle389gE&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDKle389gE!2e10!4m2!3m1!1s0x3ae502f8e33bba37:0x3c16deb4cc07658",
+              "heightPx": 3264,
+              "name": "places/ChIJN7o74_gC5ToRWHbATOttwQM/photos/Aa-ngMZauXy3f1L1jHWNMXyC19rDVGVUM-7h9fvukMvy6JVW7J8whB_T8wMk9SNyRii6exA34fXjeTC5R8FubIq_jyb-_rLjMYlJOKLRvqeo7FLRiCcvK4n8wppmmcpSw_ZYAY0fgzKynAEnqBXgerwxWALoHm2QXMRhb-477y-G8DPqlceYRkzfnW6CZQmnIAUB_Edo8A3OK7xbgzSJqSoVjcYKCFlcjrNn3c75e4VSuoH9WsBqnX4Jt0H3j-R8-JkZhb5GNRgCKdTW5_PTMpSysKQKx79n5otA-gdmY--78cJhMYYH30gj8G2Ps4iKz7AfxThVbAd1K6PRGzzPbNYKoJjeJ1Et6jhezsyBWjNw566vvU_NjMw5Cs2aeqb5_x8ZkKoSczgXrVHPQ3p3vEHRGTABp_-VlBk",
+              "widthPx": 2448
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Thiran Ediriweera",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXOHZ23MTXD79kRa4DjhiUOdfR3xZLwgqDgGMDJzFzYY20dHMevuw=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/116215104954348876251"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIDKtv2QlgE&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDKtv2QlgE!2e10!4m2!3m1!1s0x3ae502f8e33bba37:0x3c16deb4cc07658",
+              "heightPx": 3000,
+              "name": "places/ChIJN7o74_gC5ToRWHbATOttwQM/photos/Aa-ngMaX_lcyh3hmaST_16JUpltuN8kOyjyInT-QhWYIwxNDvmZeYtWPm0uYT5sXMwDeQXWuhgdzszBA6wh55Z-vaM0wTfLXqv7tKUQqmgylec_D2Q9XP0u51n4QSYWb9PZtCc8jymyXQst_9HHWgUgppOthDKyIKpf3nr_wZdlfXun5BAQ2PMQDIL7Y27Y_njOD4vnaGCZ5wrOoxNjKHCieZEMjgwXoWbPv9SmWtiGcA33loNtbNeLREmkQrZMrFzjYHporIKL-c6jVEtlkYnENMzN71Y72wExTQ0QQZrFK_jR_35rPjVQEXNacwp2_wUFsdgvfhqpiU8oMug6YT7f7xfYk7LpDQ5gUkjINxF-UG-pder0A-gtKtQ60bZ9dyPQprmeNjJbTn_wTxoaubSpkMtztKGIM",
+              "widthPx": 4000
+            }
+          ],
+          "primaryType": "buddhist_temple",
+          "rating": 5,
+          "regularOpeningHours": {
+            "nextCloseTime": "2026-10-17T18:00:00Z",
+            "openNow": true,
+            "periods": [
+              {
+                "close": {
+                  "day": 0,
+                  "hour": 23,
+                  "minute": 30
+                },
+                "open": {
+                  "day": 0,
+                  "hour": 0,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "day": 1,
+                  "hour": 23,
+                  "minute": 30
+                },
+                "open": {
+                  "day": 1,
+                  "hour": 0,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "day": 2,
+                  "hour": 23,
+                  "minute": 30
+                },
+                "open": {
+                  "day": 2,
+                  "hour": 0,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "day": 3,
+                  "hour": 23,
+                  "minute": 30
+                },
+                "open": {
+                  "day": 3,
+                  "hour": 0,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "day": 4,
+                  "hour": 23,
+                  "minute": 30
+                },
+                "open": {
+                  "day": 4,
+                  "hour": 0,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "day": 5,
+                  "hour": 23,
+                  "minute": 30
+                },
+                "open": {
+                  "day": 5,
+                  "hour": 0,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "day": 6,
+                  "hour": 23,
+                  "minute": 30
+                },
+                "open": {
+                  "day": 6,
+                  "hour": 0,
+                  "minute": 0
+                }
+              }
+            ],
+            "weekdayDescriptions": [
+              "Monday: 12:00\u202fAM\u2009\u2013\u200911:30\u202fPM",
+              "Tuesday: 12:00\u202fAM\u2009\u2013\u200911:30\u202fPM",
+              "Wednesday: 12:00\u202fAM\u2009\u2013\u200911:30\u202fPM",
+              "Thursday: 12:00\u202fAM\u2009\u2013\u200911:30\u202fPM",
+              "Friday: 12:00\u202fAM\u2009\u2013\u200911:30\u202fPM",
+              "Saturday: 12:00\u202fAM\u2009\u2013\u200911:30\u202fPM",
+              "Sunday: 12:00\u202fAM\u2009\u2013\u200911:30\u202fPM"
+            ]
+          },
+          "types": [
+            "buddhist_temple",
+            "place_of_worship",
+            "association_or_organization",
+            "point_of_interest",
+            "establishment"
+          ],
+          "userRatingCount": 2
+        },
+        "error": null,
+        "provenance": {
+          "google_place_id": "ChIJN7o74_gC5ToRWHbATOttwQM",
+          "source": "google_places_details"
+        }
+      },
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:97",
+      "google_candidate_kb_identity": "no_existing_kb_place_id_match",
+      "official_source_candidate_identity": "not_evaluated",
+      "query": "Pannathgoda Purana Raja Maha Viharaya, Sri Lanka",
+      "review_reasons": [],
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=97",
+        "queue_reason": "probable_match_review_required"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=97"
+    }
+  ]
+}

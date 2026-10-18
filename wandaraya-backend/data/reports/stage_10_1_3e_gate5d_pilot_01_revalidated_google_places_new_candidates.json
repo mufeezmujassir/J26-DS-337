@@ -1,0 +1,184 @@
+{
+  "records": [
+    {
+      "attraction_name": "Delft Dutch Fort",
+      "candidates": [
+        {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.625,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 9.5276911,
+            "longitude": 79.6998574
+          },
+          "display_name": "Dutch Fort - Delft",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "Delft Island, GMHX+3WH, Delft Centre, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=3791058705613443253&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJS009z1U4_joRtdC9js6LnDQ",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "historical_landmark",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.4938,
+          "types": [
+            "historical_landmark",
+            "tourist_attraction",
+            "historical_place",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.45,
+            "name_similarity": 0.619,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 6.935564599999999,
+            "longitude": 79.84577449999999
+          },
+          "display_name": "Delft Gateway - Colombo Fort",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "WRPW+68C, Duke St, Colombo, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=17009923608586673766&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJzzAepiZZ4joRZt5WSmZjD-w",
+          "location_conflict": true,
+          "location_conflict_reason": "source locality evidence (delft) is absent from candidate address",
+          "primary_type": "historical_place",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.0393,
+          "types": [
+            "historical_place",
+            "point_of_interest",
+            "establishment"
+          ]
+        }
+      ],
+      "classification": "new_google_place_candidate",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:10",
+      "google_candidate_kb_identity": "no_existing_kb_place_id_match",
+      "official_source_candidate_identity": "not_evaluated",
+      "query": "Delft Dutch Fort, Sri Lanka",
+      "review_reasons": [],
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=10",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=10"
+    },
+    {
+      "attraction_name": "Arugambay & Pottuvil Point",
+      "candidates": [
+        {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "physical_attraction",
+          "component_scores": {
+            "existing_google_place_id": 1.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.7368,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 6.8901011,
+            "longitude": 81.8429276
+          },
+          "display_name": "Pottuvil point",
+          "distance_km": null,
+          "existing_kb_matches": [
+            {
+              "id": 4112,
+              "name": "Pottuvil point"
+            }
+          ],
+          "formatted_address": "Pottuvil point, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=7866945577999252087&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJfdWB7_Si5ToRd7r5g1IBLW0",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "beach",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 1.0,
+          "types": [
+            "beach",
+            "natural_feature",
+            "establishment"
+          ]
+        }
+      ],
+      "classification": "high_confidence_candidate_review",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:101",
+      "google_candidate_kb_identity": "verified_existing_kb_place",
+      "official_source_candidate_identity": "compound_source_record_review_required",
+      "query": "Arugambay & Pottuvil Point, Sri Lanka",
+      "review_reasons": [
+        "official source title may describe multiple distinct destinations"
+      ],
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=101",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=101"
+    }
+  ]
+}

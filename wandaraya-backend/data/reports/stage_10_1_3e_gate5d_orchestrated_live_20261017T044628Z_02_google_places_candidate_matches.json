@@ -1,0 +1,1884 @@
+{
+  "records": [
+    {
+      "attraction_name": "Doovili Ella",
+      "candidates": [
+        {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 1.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.6897,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 6.3912983,
+            "longitude": 80.3922753
+          },
+          "display_name": "Neluwa Dooli Ella",
+          "distance_km": null,
+          "existing_kb_matches": [
+            {
+              "id": 94,
+              "name": "Neluwa Dooli Ella"
+            }
+          ],
+          "formatted_address": "Warukandeniya, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=7030603163959473157&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJSTeraJfe4zoRBbSK8FO4kWE",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "tourist_attraction",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 1.0,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.5455,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 6.6623190999999995,
+            "longitude": 80.8658203
+          },
+          "display_name": "Duwili Ella Waterfall",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "Duwili Ella Rd, Kalthota, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=12640051998315656315&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJTcnugjIL5DoRezQSllJ8aq8",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "tourist_attraction",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.4341,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        }
+      ],
+      "classification": "verified_existing_kb_match",
+      "details": {
+        "data": {
+          "addressComponents": [
+            {
+              "languageCode": "en",
+              "longText": "Warukandeniya",
+              "shortText": "Warukandeniya",
+              "types": [
+                "locality",
+                "political"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Galle",
+              "shortText": "Galle",
+              "types": [
+                "administrative_area_level_2",
+                "political"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Southern Province",
+              "shortText": "SP",
+              "types": [
+                "administrative_area_level_1",
+                "political"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Sri Lanka",
+              "shortText": "LK",
+              "types": [
+                "country",
+                "political"
+              ]
+            }
+          ],
+          "businessStatus": "OPERATIONAL",
+          "currentOpeningHours": {
+            "nextCloseTime": "2026-10-17T12:30:00Z",
+            "openNow": true,
+            "periods": [
+              {
+                "close": {
+                  "date": {
+                    "day": 18,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 0,
+                  "hour": 18,
+                  "minute": 0
+                },
+                "open": {
+                  "date": {
+                    "day": 18,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 0,
+                  "hour": 8,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "date": {
+                    "day": 19,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 1,
+                  "hour": 18,
+                  "minute": 0
+                },
+                "open": {
+                  "date": {
+                    "day": 19,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 1,
+                  "hour": 8,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "date": {
+                    "day": 20,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 2,
+                  "hour": 18,
+                  "minute": 0
+                },
+                "open": {
+                  "date": {
+                    "day": 20,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 2,
+                  "hour": 8,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "date": {
+                    "day": 21,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 3,
+                  "hour": 18,
+                  "minute": 0
+                },
+                "open": {
+                  "date": {
+                    "day": 21,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 3,
+                  "hour": 8,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "date": {
+                    "day": 22,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 4,
+                  "hour": 18,
+                  "minute": 0
+                },
+                "open": {
+                  "date": {
+                    "day": 22,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 4,
+                  "hour": 8,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "date": {
+                    "day": 23,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 5,
+                  "hour": 18,
+                  "minute": 0
+                },
+                "open": {
+                  "date": {
+                    "day": 23,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 5,
+                  "hour": 8,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "date": {
+                    "day": 17,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 6,
+                  "hour": 18,
+                  "minute": 0
+                },
+                "open": {
+                  "date": {
+                    "day": 17,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 6,
+                  "hour": 8,
+                  "minute": 0
+                }
+              }
+            ],
+            "weekdayDescriptions": [
+              "Monday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+              "Tuesday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+              "Wednesday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+              "Thursday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+              "Friday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+              "Saturday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+              "Sunday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fPM"
+            ]
+          },
+          "displayName": {
+            "languageCode": "en",
+            "text": "Neluwa Dooli Ella"
+          },
+          "formattedAddress": "Warukandeniya, Sri Lanka",
+          "googleMapsUri": "https://maps.google.com/?cid=7030603163959473157&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+          "id": "ChIJSTeraJfe4zoRBbSK8FO4kWE",
+          "internationalPhoneNumber": "+94 913 783 005",
+          "location": {
+            "latitude": 6.3912983,
+            "longitude": 80.3922753
+          },
+          "photos": [
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Yashodha Sankalpa",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWFC853Mc0Qg06dn5vt255VP0UVRlXRcGhuJLLZdSPJfqeWerq5=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/103607287976295867595"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgICb083SpwE&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICb083SpwE!2e10!4m2!3m1!1s0x3ae3de9768ab3749:0x6191b853f08ab405",
+              "heightPx": 3024,
+              "name": "places/ChIJSTeraJfe4zoRBbSK8FO4kWE/photos/Aa-ngMap5-IrrLbOMNjhzqDYQY9lWNZdbhdF7rUauEV73Mw-z1L03BavqJVixvNCgTrzNRME9aDkufjWJopQT1oVd0Lt6FMUMskmStUnaLTUVJqMcaQygXkqQcH9qabr02lK35Nq4evmNByUBnS2bNnaDIMgoFbBXZeNdro1h-QmzFFPP3Eehg-IBtntjAI8-90dCPeSvd9PMg7Dup24WJcty3jCFzeluVxrHYb34CEJdj1A8KMM0n51ezcdi5JQbpA5l5Hv64G9TovLnH7JZJcP-dmR0kDHQwH9V9pFXbpPMfjljHvWfMhycDC_bcqvPLuoMUcvtohV4qTk-S3AxMIXkc5PrVe2BMkBwbyrQy9WoyqtkbBAKUkzZwR7dasUiBduqI8UIaIFu7OF_duZPRPwtN9bR9iN0Co",
+              "widthPx": 4032
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Suprakash De",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVSLkvh2kXr-eN8zueMCSVC3Rs8wTutz4hAt3wqrSQcsqywQJpQUw=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/108751964057115453508"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIC0q5eN_AE&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIC0q5eN_AE!2e10!4m2!3m1!1s0x3ae3de9768ab3749:0x6191b853f08ab405",
+              "heightPx": 3024,
+              "name": "places/ChIJSTeraJfe4zoRBbSK8FO4kWE/photos/Aa-ngMYvmcY8S-EkjKmzyS187uoGlCucAA5yq60-qBmIR8L78OPfWmggcHkVSgSoJ9mvTN29b29qg12Mfs8G6L2exbxRQUhLNvE4DKiICt4z6HWgMe5KMU867tSlKIox8QVORcePOFlV4OGycgJzy9c5Rggr7x-zsf0lmHLSxc4aj_NIvoqgttWZX4LyXFN52ZBWYsZGftV-Qj_fKs0nLwZeElf-HUSggTEY3W1dhx7Dv01YTPXwjRDJ6E2f3P7W2vOSdalnRtRnYFo_9PSPFTDJ7oNlCAQ6voIOPU4Oa5Gjddt52qpDJJ_RKVB46hiBOm2VVPExHQsJx0R9KxpmCNg4IEiNVtDSDRFh5ra5lAJXN3rf6L_4yGzakBoQwDo7FQOeBtGf0H3mL_n8rFCInw-w_sw_3Baq",
+              "widthPx": 4032
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Ashan Ariyarathne",
+                  "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocJ-hzjKcTjRLyVAu4wWHo69dCu4eD0QMq33kNOVTP9EcUGJ-Q=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/100690388655767722206"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIDsrMrNuAE&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDsrMrNuAE!2e10!4m2!3m1!1s0x3ae3de9768ab3749:0x6191b853f08ab405",
+              "heightPx": 810,
+              "name": "places/ChIJSTeraJfe4zoRBbSK8FO4kWE/photos/Aa-ngMaV3CEkf-EBwZstEs1eOJFtizrqBBSm7JRbpYFQ2cOKeUTzy_rk2AWJHNJ3aLysELxqu3qho0ubLypMtmwZR6uMGkSuQkkGN2tuh3tjf-pVa_3vWtIQyplr4wRA5RJ_CvwNvmjKvXMaCxMcp_Pu_DqK3hE7URe2axD6ASlU5SgnLcuocw5bjpzKaG-F0SwKGE3cCwSw1zYaHwzsLP4fnD8PGHdlt3Tjd7yHFXUCkE9yy-A-76KU6JzpK25edjKLuDVpWqluKzSfsoDgoY8j9PjX0GVGCt8M4LkEC5uG5CIS-3FgMcibSc0Su5VJPdbWPq1HDhHk_LADK9T7HraUY08PCNC1nsiR7J4sWJiqDIQStHfsZ8QMq3hKYUyEhu6-ZnIYKlvIEHwgGLZI83H1KEDyndGeQi4",
+              "widthPx": 1080
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Raveen Meegahapola",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWkEPh30W5TrXenc4v-Kzxw7JOC2zmRKj1mtH7JqY7eXtCFiNF8=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/102814115176946304577"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgICU6IXxCA&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICU6IXxCA!2e10!4m2!3m1!1s0x3ae3de9768ab3749:0x6191b853f08ab405",
+              "heightPx": 4032,
+              "name": "places/ChIJSTeraJfe4zoRBbSK8FO4kWE/photos/Aa-ngMajzGA7BjKElEZvjWbiBcx-MW6wpusEXSzpRVIilPXBDiDj7DgxgWmhl3_9_xpPXLCYwAfw85aRBitooVw_JBksRnsnjaj2CJAq-nUCdxrXkJYP_f61Zs1Uhh0Mv4Pc1WtJOcIcYWLHZdpAbUIOL8dazy3LMT9oqKfEuE6tXafUOo0L0Ir6T-mamb3M7Ea95StXXjbmU8qwWDroj0xcW_0lB9GFcH1nySJEY8Ic1ZV5tSuQeyECNWk2CvrjSVLs7fweL5QXGa6DReRc0gqlIDijOBTXdfVSaVXhdZPtx6r8r4-hW-5Jytgg8ER8V6ECKFi-u7DH10Vu4rkkOc9ogBe29g18hcyXOYdkT3AyzGDdEVmUXRvLsrOzLpLxpbX5RqNYQPv4076JiWPfL6JFN3Lf7W0",
+              "widthPx": 3024
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "ROMESH MALIKA",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUO71GVLMBT_Eg6iBqB23p_EDRAzuDz_1Vqj4CEWxxRbrkEAKjWpA=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/103199127300799557085"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgICj5bmgSg&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICj5bmgSg!2e10!4m2!3m1!1s0x3ae3de9768ab3749:0x6191b853f08ab405",
+              "heightPx": 4080,
+              "name": "places/ChIJSTeraJfe4zoRBbSK8FO4kWE/photos/Aa-ngMYSJv6r-IZd449wj4EX08z2RdithfOeeXU9NMMkn1UyevwCPaKz6XoxXEpsWtE26taZSKQYa9XfjO96BDqYP-EOEkNbE2qd8ZdAxUOGl2SE3gRnwbgpSVhCwm1AcDcMRoiHwshsQUPe3_gGkoYlyPR3E7ccy4fD96ZLtroul4i1NryEYChRcPXyTJhjNi0i6uJe0_CdN77Tj0Pdce79I1OCNioH0n4dkEZfDYg7GFbatqSTgBUoDqU4OB2VkAGxdMSMqBF324t4dlEJKjMehnKvtExdnhUATy7_ZNhxt_Y68THxc2pg2sfR-410ev5p4W9nRfuNCvCBcLm9nJtu5DdQ5XZdZGsToIaYUigBBEwVe_V5Sa2xJKGxj2K9G__B1fPRK3fb6TvDLMk0-4sbKYEO-wM",
+              "widthPx": 3072
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Dilanka Madhawa",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWObwh8pJm_jTdp7tsFlDgR_GSDh0emYuTw52dZgNAN2I30RdLGXA=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/117085125563590463619"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgICCtf6p8wE&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICCtf6p8wE!2e10!4m2!3m1!1s0x3ae3de9768ab3749:0x6191b853f08ab405",
+              "heightPx": 2448,
+              "name": "places/ChIJSTeraJfe4zoRBbSK8FO4kWE/photos/Aa-ngMb7ZGxvIT8k0fr46SSbLNaAHRJeYCl9z-lSyYKo-s3L-th5g2Svs2nMYkjB3ugIUv5bxH2fh5WQDVANRj4HCkhBvCP_2Gjl5dgk8o4QnD64ai98o--cDqdchq7VFe-SnMrbRqlCBjaRO9VSaBZf2mwQjro2sEpxfmwQkd3aTb8HTU8TPrS_BhnKOORKvoZH3wLPE9MfIMXGpqNk8KbYHdOEuzrOq5RtXL9738pxAgLAosl8QtuKedsBpZ8eUpomwpfTuUpOacVrCWNmy4d9P1HNSiI3Q4MSA2ehAXGtAQ5Iiqscr2QtaRPizvCW1Zpnjam6-ubWkpTL1Blwjx-P2bGBqeUa634n6anh9qjoTrOhSvzLHs-ScJYai3UgmgcNR9VseoJi0DtAi85vcfECtWx513e4L6g",
+              "widthPx": 3264
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Hashan Athurugiriya",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUssxPHWsGQIrE3-2gBuRU8I7vIhHYVmr6bUQ9YzdkJcrAxmUn5=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/112358989418613423457"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgID489nQkAE&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgID489nQkAE!2e10!4m2!3m1!1s0x3ae3de9768ab3749:0x6191b853f08ab405",
+              "heightPx": 3179,
+              "name": "places/ChIJSTeraJfe4zoRBbSK8FO4kWE/photos/Aa-ngMYuDoc7E1rHTlqonKkJic1rWyDcAaJzPni6Sc4E41ed_4xuDGcsLMpGrHX-tMEvJ5Be9qNFi63aOrqS8PnSS5wUAjWnGBIXhNenH2IeGMEsg00txktucqjb0vA3ZX93RBWKXLfmV62a5MNSONrxBlId884ZMJIZYB2l80MAeYSihfmaRZGi5JQeMBYGSqpa1fdH4I1_U-9VZOh2Ek2Xhzfo08pu-4MFIvATmozWIQJ5y7XStGnUu8i0K670ngm4miAM2shPJvPP-yV2VGAAjGddUpzmHOX539QaTUFviSOTcurJzad3vT96g-SoC_lSTqNf-j_SWHKPIDN1K8djZ2Ych4fJTbMumRFrETs_GFY6neYVjkA729PqP0mHR3DwUYMhmcorSVAX1EVd6nlH4tTHNmsuQOQ",
+              "widthPx": 4800
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Dilan Bogoda",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVzaFS8_6yHnzr1LpNU7SFMUmK2rZVO0kX3rqpeWHVLS-YS6UWA=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/104696190072768205304"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIDN-bCb_AE&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDN-bCb_AE!2e10!4m2!3m1!1s0x3ae3de9768ab3749:0x6191b853f08ab405",
+              "heightPx": 3024,
+              "name": "places/ChIJSTeraJfe4zoRBbSK8FO4kWE/photos/Aa-ngMZ2NERbzIjnz8cKKtFqCgKnj2oidFnTdOzp5c2vHypW0V7IUsbucJmjcR52inSrIrarKME4AvEJZuRwfIOzcC5VOuK7qgERFY_7xABG4d-KR0Lc5CCJlNpS5pGNRiQrleQLWBnsIHRndoRHW4AQmEncnTJiAxU_XaUzy289qGK4GlAxGazavM_4UoPskG7_LPZ70gGTviNS42zheTOcsxYrAoFJ_y9B5nQSVqzZmQ77L_sK2hlnfFO9o--ZyasMi4P-6WYrN-noFGwQLvH6US8dpV90OR0PHBwFlsBXZR5w1FWD1emim8JnvglBGnpVtzNYRaL5oP7oq4GwlDDz4Ar4-iGB6Pr2jXj28jCARxYZ3wuO8Y0jU3_weRtWzN4_3dkwAyfgruBU_IoF1DlMxfR0138FDtQ",
+              "widthPx": 4032
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Gihan Nalinda",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXneCgVrGQPuHGifBAvKopQH-z-SrUqW895AINkP2vFsc93mKjI=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/111756959711859021898"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIDH6f6OXw&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDH6f6OXw!2e10!4m2!3m1!1s0x3ae3de9768ab3749:0x6191b853f08ab405",
+              "heightPx": 4800,
+              "name": "places/ChIJSTeraJfe4zoRBbSK8FO4kWE/photos/Aa-ngMYqnEIlyEoaR92VrSrIbQ7zC-fShuyJeAWxHb_ICAO5znZ6JN4O19EOfCa7FnBguWgW-LpG9rndx_R1b_kCw4khSPO5CqIFgAxAcJ-edB4t4fEug9Z_2wyEweuf7DOMTO9BRsPzPBSBaKEo-pCGlnETHYAddKb1xuHTmX0wfHwdkVyjEspzp7menJLl7MPyZWJp0O_oiUXzvXIIupyHiEl10kIhZpjMpGv8B8_rB4zgB8YlCnpOBVIQRp7CH4DoqrDeqNnNiAwEUqHOHItCeYFM4sx_6BXEeCJ6dEXgqDVMumpiGgdSZ0_mk-9RGltfEvaXAfcKnGyfawHIrZKpq-_aG3GnyvdEY_1CCTLnTIdbawMStv_ZJv3e3UV0o_4vNn-AotBHhsDk0GqYtOGbDsDzCA",
+              "widthPx": 2701
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Unnamed Brother",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVkK4YFzW0zIij8x13-SkD7EDyEii9rMmuT5jRVG7ta6ceUt14B=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/106339178451469008941"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIABIhAXXHxb4FXTomOnDm7S0ehn&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIABIhAXXHxb4FXTomOnDm7S0ehn!2e10!4m2!3m1!1s0x3ae3de9768ab3749:0x6191b853f08ab405",
+              "heightPx": 4032,
+              "name": "places/ChIJSTeraJfe4zoRBbSK8FO4kWE/photos/Aa-ngMZtofDOEDTuLv5OU9YzYQ3Lj6t-snuEEqMosoOn7ahx4jS5QdkTHcLwuNVpM2dDq54oyogtpTAcbBXaFDSjbLvCEaHYlxOkI56uUlVmIk5_Fm5xnGqu0JEqTNGODy-OMBrcuKDwGePkMhjwac4VV3gXBm5-tv5mcKQDykCQlplBZajI2DuYtyBKZhzWLKWl9GJOUaiFYXxWdyQN9vYE6tgjQLWtv6LGgtHI2TrR4dBvT2_nLF1VNDZjcvlJ0U2vmQG9P8TJqzXOMOP_CkMjPooSpY6pqT5L_9QRK1VR2jnBbXDBQ5mXCe1gCsol7twE5BFmveuzCM4Mrvb82S1OVBQAn1LWua7cb2QB_1PVB-Z3mlMG-KN4L3r2fhzdrD4Y4CvJis504HCKAbIRjc2IzLyRKXDZvruuMZO0LKoIoyG7",
+              "widthPx": 3024
+            }
+          ],
+          "primaryType": "tourist_attraction",
+          "rating": 4.6,
+          "regularOpeningHours": {
+            "nextCloseTime": "2026-10-17T12:30:00Z",
+            "openNow": true,
+            "periods": [
+              {
+                "close": {
+                  "day": 0,
+                  "hour": 18,
+                  "minute": 0
+                },
+                "open": {
+                  "day": 0,
+                  "hour": 8,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "day": 1,
+                  "hour": 18,
+                  "minute": 0
+                },
+                "open": {
+                  "day": 1,
+                  "hour": 8,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "day": 2,
+                  "hour": 18,
+                  "minute": 0
+                },
+                "open": {
+                  "day": 2,
+                  "hour": 8,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "day": 3,
+                  "hour": 18,
+                  "minute": 0
+                },
+                "open": {
+                  "day": 3,
+                  "hour": 8,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "day": 4,
+                  "hour": 18,
+                  "minute": 0
+                },
+                "open": {
+                  "day": 4,
+                  "hour": 8,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "day": 5,
+                  "hour": 18,
+                  "minute": 0
+                },
+                "open": {
+                  "day": 5,
+                  "hour": 8,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "day": 6,
+                  "hour": 18,
+                  "minute": 0
+                },
+                "open": {
+                  "day": 6,
+                  "hour": 8,
+                  "minute": 0
+                }
+              }
+            ],
+            "weekdayDescriptions": [
+              "Monday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+              "Tuesday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+              "Wednesday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+              "Thursday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+              "Friday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+              "Saturday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+              "Sunday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fPM"
+            ]
+          },
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ],
+          "userRatingCount": 912,
+          "websiteUri": "http://www.neluwaps.lk/"
+        },
+        "error": null,
+        "provenance": {
+          "google_place_id": "ChIJSTeraJfe4zoRBbSK8FO4kWE",
+          "source": "google_places_details"
+        }
+      },
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:24",
+      "google_candidate_kb_identity": "verified_existing_kb_place",
+      "official_source_candidate_identity": "strong_candidate_identity_evidence",
+      "query": "Doovili Ella, Sri Lanka",
+      "review_reasons": [],
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=24",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=24"
+    },
+    {
+      "attraction_name": "Jathika Namal Uyana",
+      "candidates": [
+        {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "physical_attraction",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 1.0,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.9161277000000005,
+            "longitude": 80.5707164
+          },
+          "display_name": "Jathika Namal Uyana",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "Madatugama - Pubbogama - Andiyagala Rd, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=15602909365526135819&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJ100zR7u7_DoRCwTNcmariNg",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "national_park",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.775,
+          "types": [
+            "tourist_attraction",
+            "national_park",
+            "park",
+            "point_of_interest",
+            "establishment"
+          ]
+        }
+      ],
+      "classification": "new_google_place_candidate",
+      "details": {
+        "data": {
+          "addressComponents": [
+            {
+              "languageCode": "en",
+              "longText": "Madatugama - Pubbogama - Andiyagala Road",
+              "shortText": "Madatugama - Pubbogama - Andiyagala Rd",
+              "types": [
+                "route"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Anuradhapura",
+              "shortText": "Anuradhapura",
+              "types": [
+                "administrative_area_level_2",
+                "political"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "North Central Province",
+              "shortText": "NC",
+              "types": [
+                "administrative_area_level_1",
+                "political"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Sri Lanka",
+              "shortText": "LK",
+              "types": [
+                "country",
+                "political"
+              ]
+            }
+          ],
+          "businessStatus": "OPERATIONAL",
+          "currentOpeningHours": {
+            "nextCloseTime": "2026-10-17T11:30:00Z",
+            "openNow": true,
+            "periods": [
+              {
+                "close": {
+                  "date": {
+                    "day": 18,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 0,
+                  "hour": 17,
+                  "minute": 0
+                },
+                "open": {
+                  "date": {
+                    "day": 18,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 0,
+                  "hour": 7,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "date": {
+                    "day": 19,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 1,
+                  "hour": 17,
+                  "minute": 0
+                },
+                "open": {
+                  "date": {
+                    "day": 19,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 1,
+                  "hour": 7,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "date": {
+                    "day": 20,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 2,
+                  "hour": 17,
+                  "minute": 0
+                },
+                "open": {
+                  "date": {
+                    "day": 20,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 2,
+                  "hour": 7,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "date": {
+                    "day": 21,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 3,
+                  "hour": 17,
+                  "minute": 0
+                },
+                "open": {
+                  "date": {
+                    "day": 21,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 3,
+                  "hour": 7,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "date": {
+                    "day": 22,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 4,
+                  "hour": 17,
+                  "minute": 0
+                },
+                "open": {
+                  "date": {
+                    "day": 22,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 4,
+                  "hour": 7,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "date": {
+                    "day": 23,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 5,
+                  "hour": 17,
+                  "minute": 0
+                },
+                "open": {
+                  "date": {
+                    "day": 23,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 5,
+                  "hour": 7,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "date": {
+                    "day": 17,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 6,
+                  "hour": 17,
+                  "minute": 0
+                },
+                "open": {
+                  "date": {
+                    "day": 17,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 6,
+                  "hour": 7,
+                  "minute": 0
+                }
+              }
+            ],
+            "weekdayDescriptions": [
+              "Monday: 7:00\u202fAM\u2009\u2013\u20095:00\u202fPM",
+              "Tuesday: 7:00\u202fAM\u2009\u2013\u20095:00\u202fPM",
+              "Wednesday: 7:00\u202fAM\u2009\u2013\u20095:00\u202fPM",
+              "Thursday: 7:00\u202fAM\u2009\u2013\u20095:00\u202fPM",
+              "Friday: 7:00\u202fAM\u2009\u2013\u20095:00\u202fPM",
+              "Saturday: 7:00\u202fAM\u2009\u2013\u20095:00\u202fPM",
+              "Sunday: 7:00\u202fAM\u2009\u2013\u20095:00\u202fPM"
+            ]
+          },
+          "displayName": {
+            "languageCode": "en",
+            "text": "Jathika Namal Uyana"
+          },
+          "formattedAddress": "Madatugama - Pubbogama - Andiyagala Rd, Sri Lanka",
+          "googleMapsUri": "https://maps.google.com/?cid=15602909365526135819&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+          "id": "ChIJ100zR7u7_DoRCwTNcmariNg",
+          "internationalPhoneNumber": "+94 253 253 816",
+          "location": {
+            "latitude": 7.9161277000000005,
+            "longitude": 80.5707164
+          },
+          "photos": [
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Supun Dulanga",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWK8TwcqVddiF5Y6LxosV51D9fmmbWnv4RQZg3QeJXl5G8EbBRk=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/111478255740918675469"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIDMlsvfwAE&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDMlsvfwAE!2e10!4m2!3m1!1s0x3afcbbbb47334dd7:0xd888ab6672cd040b",
+              "heightPx": 3120,
+              "name": "places/ChIJ100zR7u7_DoRCwTNcmariNg/photos/Aa-ngMbWVnXyy9TrGn9ieuTDMgu6r4iFGCOd0NFBAuDOAiflNMOIbW0zo3-T15wLeGpQ_YFfxRTCCEhRDGVtNc4_MrfgdNH7bqVjI3iCl3NsFp4Iy7UjBYxvI18dMAb9nDqcKeigjKtYc-yWKRtY7YPhRIg73i8brevzubxx_dKS-gBGINbhbXvW7udfq1soHnLTtCnoW1AcgiROgc4cw2KdsVZaKffUEbh2UIfUeDZ_K--zV6SvLojj3LcNGnCNT4mmmcRy7EiKnJEq2yPb4v_r0P2hzFcGEMYKQ5kr1nae_7DFuAnnJSNxEYRnCt2bDDv37wbCMXahZNBZuosVMHXYycOfd8K0lBiLXLjZAH8OrzCWQVnvqNaCw-tlxQZhSZIxbQHtXQVPZOg2bef3XeNH5GfDqGG4",
+              "widthPx": 4160
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Rev. Udagama Samahitha",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjW1NFkm7z2y-agWIOjUiltQf5twMFCvLSrC1M6dmZ01e89WSrQ=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/109023433527309896135"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIDO1PDwTg&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDO1PDwTg!2e10!4m2!3m1!1s0x3afcbbbb47334dd7:0xd888ab6672cd040b",
+              "heightPx": 420,
+              "name": "places/ChIJ100zR7u7_DoRCwTNcmariNg/photos/Aa-ngMYCrbOBjtg7zPavEUxOmSSjEJqw-azJcVI9B8iClymonIVflISmN6kCN0gTITH-ENarr1x9Yx71vKNxzQcBs_VdxxyT8D2cEU51Q11gsQmT8KU-xwTDjJim553Q3jE6fBlVU4mR5ar2urpP0wmatWOKGKR353CTe6k96eQ7IBCypyOetUKuC-Ax2zQl9h8ODwb89vRtWcwCj-rxPj6j7CuGiprE09u9sZ09HeEmfd-_3ZL0mnn-NT3PonGNtLz9yqnO8reTLdv4pH_aURTTVntslse3VkDBw6szlvakLTVhacy4cxLOS9b-338ZxpgLNgmcU0mYg36R7jushXCNcgb7ZZE02LPRj0KAGknyu--o6rVWdEUFYPhy3XkDJPMJS3GUK79gdZ3g3Ao65Ks0WuFJH2k",
+              "widthPx": 600
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Anuradha KeLuM",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVZ_i7wC8nJkULgECSfX4DtcVvckW8xciHAwx6E6mjWapwl-Ljg=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/111373055710429183458"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgID2rc-BGA&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgID2rc-BGA!2e10!4m2!3m1!1s0x3afcbbbb47334dd7:0xd888ab6672cd040b",
+              "heightPx": 3024,
+              "name": "places/ChIJ100zR7u7_DoRCwTNcmariNg/photos/Aa-ngManrE4JhdocqkyQ2kZRXVNdP0ETPQGQySZr5DPkSxAw-3ucQaklc-1JMUflnwxRqcNi-jltnDvNBuHmV6VrYTwDLMgfQFOG-So-ZfPSVOUhZ7P9k7zvno-pRjaIbf9lbaceZksJTDAd4QmKfYiF9DptJgTZDAmjS868aNrawOpW-OgEM99mYUYKse0mrPy3keW2pdEzCH3lBdQUXr8PDdrDmEZqPoTvbZq0QHKiGw26tnAsZ6OG_AEmuttanek8VEgoTuf8eVaWNFqNSvwwV6NnXXVIEX6ciWBKg1odGO_mwhfVLorFoCWgzRhxixubEWhyIWAwryAivAjt48ndShfuxWymIJlqYnEIE0h9ckgJz7E2Z1MmaXPcLrKOuuAytLe6opnyC76mVdHcGDxk5Wgo97w",
+              "widthPx": 4032
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Miri V.",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUMeJo95yW9hu2_sJB27FSmp-qJ1hZ1iH4LGnKQTtvbRRjQDnbz=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/110339036879473962041"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgMCYsJKGSw&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgMCYsJKGSw!2e10!4m2!3m1!1s0x3afcbbbb47334dd7:0xd888ab6672cd040b",
+              "heightPx": 4800,
+              "name": "places/ChIJ100zR7u7_DoRCwTNcmariNg/photos/Aa-ngMYZfCH9_0vzkqWKlPsUIeOEHISLay5NhB_5DOXs033Y3e2103dzIpEZcTgPCatmie5HK646IctO4j1FLlcVJn0an4UUOftSm3_LZFltDw__EsBaJWIbIXVKFeE94YBHq0UDsDtN9w2MKn2MbgSxcIPdcsjVQNre7MVczllXbgH1hspc8m409jjlOv6cN9-qdQ4WenjLwVVuZvoOMNsap0D0ZV3-HEDGSoLQtJm7WyUrfHn7RKXYqTyuu2eTGGVSblwLJz62p-YAlLrhKZMultTHwaVYKOIG_1Cd_DWCriWA6Yu9E7zdW8bMSQHLB8F3YY7mjFHIWlF66v3n9sUrD1YG1998BtaVnXazjVljIrU9v7T1Q10wz1fNLx8jbXgBdbMeGCkl2HWjfBqUc57sqSj2qAo",
+              "widthPx": 3600
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Sandaruwan Malinda Samaraweera",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWgtG6i4rzBqcvAagUjphiQznUIqOlAalT-wLfyz45C4jFglFKopQ=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/115746507666950068780"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgICE9Prq0gE&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICE9Prq0gE!2e10!4m2!3m1!1s0x3afcbbbb47334dd7:0xd888ab6672cd040b",
+              "heightPx": 3000,
+              "name": "places/ChIJ100zR7u7_DoRCwTNcmariNg/photos/Aa-ngMb8UEiVfY4zjvRs97xpqs9_QvWI7l2zEWclP1qCKI3zV5LCMZ2yLTTvm9CmEkiGCvG5x55O2I1QFMcKLTNLYqvgH94w3zxnb5EGSkbvYvVK82plvIe9_1SmAeoWsFYwtj6Z3ppl2qB69wleYf-8RAplLSDPlXmWDxFUSmusUw5Qel0mzoaBN5gJiC5VE1ZMNcVfwPokQ9ZSpWJuoxoKFHQ5aPH28YoIXWM1WFWldEh8f0pbtII6-OEsOUfi1dZQuDtEmUXaIBho2OEZWlZQ-8LQb0KZLozbiw3P8N5FG71kK1IZgpZmqW6gPO03gdIBRWC59ceCp2Qh5L4mNbMTIgXkQg0ho198c_w1NnkcboynlMnjbks3121lgMn1WIJXBSZl0uVHysH-oWEIozWJfvvIDZPisFA",
+              "widthPx": 4000
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "upul nandana",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUeQ_01I7vyL_Gut_Er_ETm6jGxnATdwV5jqB0Ba5FVXPAtaGKC=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/112239947318414512456"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgID4_d6x3gE&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgID4_d6x3gE!2e10!4m2!3m1!1s0x3afcbbbb47334dd7:0xd888ab6672cd040b",
+              "heightPx": 683,
+              "name": "places/ChIJ100zR7u7_DoRCwTNcmariNg/photos/Aa-ngMbS2yoyWVMwEbnWCfe9g3WbrqvLbHUxcKcv77bH1lVrSXUkLCPkg2AjsWUkpiKnHbZUEBF5VXyDCfQCh7tv2im9GdRfkz2IAR8klCPriEJh_TNN8lXaSbzYcxRZVNnxUJ8HiX9V6X33kIO9vFAQO3u7p2bkBWjKiSoqzIU_gLsk5rQM-o_LQBk6-UxHYXgFIowFeY6ZJp7SfBQog5FI-vMy4XV7cDAqnNeK5hkzxO6sW5EsCjYkoJ5O6wdWQW255-ZkucDu1MtyzMof4nZMf5YbcFfDZWk4FoJ2sl6nRMoCNh8aHZlzzQ7BrWnLPubPUTzcusf65RG8mV8FX2OGVgdKo_E2Hvj8X4reWvFkg5qHO1S8FuCP0XBkrY6V4NOfKrrBgQjh3evgO2x8aEUuRZCbZpqGscw",
+              "widthPx": 1024
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Janitha Wijeratne",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWbCazvRoN7h1WH1nJGia-aIbABgElw3-_bnQuZE4qkugg97tTkGg=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/101554775416679496882"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIDE2ZzH7gE&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDE2ZzH7gE!2e10!4m2!3m1!1s0x3afcbbbb47334dd7:0xd888ab6672cd040b",
+              "heightPx": 3456,
+              "name": "places/ChIJ100zR7u7_DoRCwTNcmariNg/photos/Aa-ngMb8tq2tU3c8f0Rrrwy4LpkBhBVqP8QydpFpM0bkrmfZjCrejierj2RVM_ZU6T5MiSzS9TrSHSxs_tFbNeGnc9_kQD6urOKYyPgNNcp0A1U_ZCeeKbYmSfk4LkgJI00OlzBdFMh009tQeJiTml42zQ94za1ZTCWYT8FVbImPESw3TYDjl3EaiNVDjaj00FHg9v4gR8wV_SEgWV9DqlQtKv1AtQ8ydyGNgMNUvr-4IPK73VXZZ75f94FTDt5o4ETdqhuk39dmMOLnqnnWcU8-nB-lPYHBabPYrrem11r3Ev2tL8f5-YoC5a1_8__ncP4FLtZnOrP2KW0OC5zvl7hoDyJLkWBXiegr3hsXQaKKWFnORkMCbcnf4tAR7aU67w1435cdH5_Y4uzLOE4A9lnm3WeZsz2-PO8",
+              "widthPx": 4608
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Pasan Rathnasiri",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVHJmsPZ9Kllo1Iu0YIQN8-JeDYqccQh01VMb5NCbmxLbWl3yBt=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/118116824252198711178"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgID8l_bRDQ&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgID8l_bRDQ!2e10!4m2!3m1!1s0x3afcbbbb47334dd7:0xd888ab6672cd040b",
+              "heightPx": 4032,
+              "name": "places/ChIJ100zR7u7_DoRCwTNcmariNg/photos/Aa-ngMYPXBmwbD1mZogHG8CRhCnppumHLoOc9lZgU7lEGxRNpguIc_mOyem34ofytptskncOdXUn6cP6A7JE38TxDwiS4r0hdrq7DCUikIE3U3aJeruzwxymh6gapEFZ_jHYPj3HQ_q744rb0AudyUo70nGcx4Bv1IRe98GOl7jGI5A615n66-k3ANlEebMc7CFFn6jOKhiNeVD6VcRC1WWisxLTa0chkPyndHT7Fg6zLdW8j_MsLsLTUi2_sYxIIOyU29C2L7VzUQrQom7SWk5zBHrfvOWKRe5SzLHH8JK3mtSAWrWqGOEEpqSxHRlEOqXg1f6Z8lEAv_75uxrKGTIlWyc0T4PvM5DzRUrobeIZVMQLVz0EU7AQvX2aJA5u-O2DqxvOp2NV6-fGt7QeyWbLRKubUA",
+              "widthPx": 3024
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Krystyna Uebel",
+                  "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocLbnyRC5Sn-4DwSDrmgEJ4yox_f4LvjOJ0pwpUwepsVZTDGjQ=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/116222960588665086310"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIABIhCSY6kfTVOUdKHbp7_IXmO_&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIABIhCSY6kfTVOUdKHbp7_IXmO_!2e10!4m2!3m1!1s0x3afcbbbb47334dd7:0xd888ab6672cd040b",
+              "heightPx": 3600,
+              "name": "places/ChIJ100zR7u7_DoRCwTNcmariNg/photos/Aa-ngMab2WotRq8xB4kadYwMOJgFKi0aRjiCmuZl4VEXbvvW4YR01eBlji6QgIUDpUWCX0uz7SSCPOCghdoCv5iOvuqNS1FYGBg_91TwGS8AuRgDs9iUrUIJpFm_0YoyFRv0WdCBfb56J0Ildcij7uMdIvseK-pfYeczQTgMu2xP-yCl5ceC43Ea6FxzrzFZBJXqaQbp_Xq6mJRrrioszKzNBdQmG5_-KELfzAN6Pr3eePjkzjgQ7syyFRQOuS-bzYjGrC6j8WeyB9y9QcBD6Opsf4lUahSJLcpGJPkTQfayJChQ4zLsg_2jPKxBS-HoD3Eeymu0jqOkRfZDLKifzeOK1BQbL9rk-Cakg1Ao1TjrDX2FfTZWjMksKPbJfQrhcGFP7LIGv2LX28UcpVFr86Emm1YT6Kpd1z5JIstt2DJ21fY3",
+              "widthPx": 4800
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Anuradha KeLuM",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVZ_i7wC8nJkULgECSfX4DtcVvckW8xciHAwx6E6mjWapwl-Ljg=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/111373055710429183458"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgID27bSvWQ&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgID27bSvWQ!2e10!4m2!3m1!1s0x3afcbbbb47334dd7:0xd888ab6672cd040b",
+              "heightPx": 4032,
+              "name": "places/ChIJ100zR7u7_DoRCwTNcmariNg/photos/Aa-ngMYT7NgcD9LkZ8M4SAVVfv7-PU89xEvAvhIxpPCUCjW2QxqrRW9llInECoNUqRpdK1yCkTN-iGIRannkaInpDtlAUa5gj1JtGmDFB6_p15RqONUa12RhTd6MNocXlWR9N67SU3l7ptlo6ES_2n5D7bMejko5nfJ9jTVwZl-21RMCwMMXJlv6xWbDz49hpCbDFPiL283187b3dNuj7vhHNr25ICZSKAXsWUaPuHiaWyjBUm1Htn07H8fk9Y_i1w3oaNEfOfagudMLZG84IXFAPe7GgQkPe5HcJqSFjeHKcp0IO1MYeVEh7tBmB26gYfct0U-NYj9FYjvBPNXPB6C_g6oDKFxgS0KonMq8Pui0dffkGWYGHsX6QF7b39AEsPD-A1_Up-IzgbuEmATYhrQmjTngLVY",
+              "widthPx": 3024
+            }
+          ],
+          "primaryType": "national_park",
+          "rating": 4.6,
+          "regularOpeningHours": {
+            "nextCloseTime": "2026-10-17T11:30:00Z",
+            "openNow": true,
+            "periods": [
+              {
+                "close": {
+                  "day": 0,
+                  "hour": 17,
+                  "minute": 0
+                },
+                "open": {
+                  "day": 0,
+                  "hour": 7,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "day": 1,
+                  "hour": 17,
+                  "minute": 0
+                },
+                "open": {
+                  "day": 1,
+                  "hour": 7,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "day": 2,
+                  "hour": 17,
+                  "minute": 0
+                },
+                "open": {
+                  "day": 2,
+                  "hour": 7,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "day": 3,
+                  "hour": 17,
+                  "minute": 0
+                },
+                "open": {
+                  "day": 3,
+                  "hour": 7,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "day": 4,
+                  "hour": 17,
+                  "minute": 0
+                },
+                "open": {
+                  "day": 4,
+                  "hour": 7,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "day": 5,
+                  "hour": 17,
+                  "minute": 0
+                },
+                "open": {
+                  "day": 5,
+                  "hour": 7,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "day": 6,
+                  "hour": 17,
+                  "minute": 0
+                },
+                "open": {
+                  "day": 6,
+                  "hour": 7,
+                  "minute": 0
+                }
+              }
+            ],
+            "weekdayDescriptions": [
+              "Monday: 7:00\u202fAM\u2009\u2013\u20095:00\u202fPM",
+              "Tuesday: 7:00\u202fAM\u2009\u2013\u20095:00\u202fPM",
+              "Wednesday: 7:00\u202fAM\u2009\u2013\u20095:00\u202fPM",
+              "Thursday: 7:00\u202fAM\u2009\u2013\u20095:00\u202fPM",
+              "Friday: 7:00\u202fAM\u2009\u2013\u20095:00\u202fPM",
+              "Saturday: 7:00\u202fAM\u2009\u2013\u20095:00\u202fPM",
+              "Sunday: 7:00\u202fAM\u2009\u2013\u20095:00\u202fPM"
+            ]
+          },
+          "types": [
+            "tourist_attraction",
+            "national_park",
+            "park",
+            "point_of_interest",
+            "establishment"
+          ],
+          "userRatingCount": 966
+        },
+        "error": null,
+        "provenance": {
+          "google_place_id": "ChIJ100zR7u7_DoRCwTNcmariNg",
+          "source": "google_places_details"
+        }
+      },
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:28",
+      "google_candidate_kb_identity": "no_existing_kb_place_id_match",
+      "official_source_candidate_identity": "not_evaluated",
+      "query": "Jathika Namal Uyana, Sri Lanka",
+      "review_reasons": [],
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=28",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=28"
+    },
+    {
+      "attraction_name": "Panavitiya Ambalama",
+      "candidates": [
+        {
+          "business_status": null,
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 1.0,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.4068137,
+            "longitude": 80.1732186
+          },
+          "display_name": "Panavitiya Ambalama",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "Panavitiya Ambalama, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=17559909112128444767&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJERu1CE8h4zoRX5mPFE1UsfM",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "premise",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.775,
+          "types": [
+            "premise",
+            "street_address"
+          ]
+        }
+      ],
+      "classification": "new_google_place_candidate",
+      "details": {
+        "data": {
+          "addressComponents": [
+            {
+              "languageCode": "en",
+              "longText": "Panavitiya Ambalama",
+              "shortText": "Panavitiya Ambalama",
+              "types": [
+                "premise"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Kurunegala",
+              "shortText": "Kurunegala",
+              "types": [
+                "administrative_area_level_2",
+                "political"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "North Western Province",
+              "shortText": "NW",
+              "types": [
+                "administrative_area_level_1",
+                "political"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Sri Lanka",
+              "shortText": "LK",
+              "types": [
+                "country",
+                "political"
+              ]
+            }
+          ],
+          "displayName": {
+            "languageCode": "en",
+            "text": "Panavitiya Ambalama"
+          },
+          "formattedAddress": "Panavitiya Ambalama, Sri Lanka",
+          "googleMapsUri": "https://maps.google.com/?cid=17559909112128444767&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+          "id": "ChIJERu1CE8h4zoRX5mPFE1UsfM",
+          "location": {
+            "latitude": 7.4068137,
+            "longitude": 80.1732186
+          },
+          "photos": [
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Mudith Madusanka",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUBewvcH_IguF5sseKP-Q1EG4nVQKkM0dr6NAIcJzuhV36t0IbVdw=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/115263790448792952242"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIDc_LWREQ&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDc_LWREQ!2e10!4m2!3m1!1s0x3ae3214f08b51b11:0xf3b1544d148f995f",
+              "heightPx": 590,
+              "name": "places/ChIJERu1CE8h4zoRX5mPFE1UsfM/photos/Aa-ngMb_BQCBYnuvGG8-xyur2dEY3tZw6vZ4tbaiqrxP1J0LVwEPltoyZueggXhlAQgWKPBc2g1nW2Z-hIf_XRP4TQy8UsQKM7DplySR1nPe5ULi-5LE_UGSrZVn2o7I-0Kf1TM5VZUOxwpi-0vhrut6svyj_KkUfanTY_nFUF81of-22FD-DfOsnelso0gT2twceL4Xk27NPPp6B18EX_R8eHC-_X8HNlUs0rp4EXkD9WSuD6vbAp_1DyWOE5GiXDPP5R_nsfUtlCIiy0ZxLqnhFMwQl0ELWi7-k6yHrHRrugf0Z5suqLmNOcf37iA6fbGDjGOiVAFUCenmxF3gqGn_L_TAxZhkT8TID5qf51WfSNAIQG_-24YbeSbtsb4Xu3B7o1BDwWn_ZzkwhHSM5GS4zdPIAe4",
+              "widthPx": 960
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Wikum Dissanayaka",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVDAB-rCEVbwH6FN_sRi55834F9WfJrwSwzCwdRRtwWal1T3k4=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/100565474659698804666"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIDssouv7AE&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDssouv7AE!2e10!4m2!3m1!1s0x3ae3214f08b51b11:0xf3b1544d148f995f",
+              "heightPx": 2322,
+              "name": "places/ChIJERu1CE8h4zoRX5mPFE1UsfM/photos/Aa-ngMZqKWZx8ezabbyk2sSMjpu9fUi-ARZQ48qWygr4FD2vtvOYTwNU8AyFZYg8fWUvez3nT59HViDVrKGRw3fNnhc10_Rqmm4MahEmMvBhRQZ4zIwlRo_rqYpAUMYrKSswU4iPvAqtqhSPOLhzGbljqRZJ7OxIRGPPPiAu87_SZQEqDj5KhlCxLkz0ECNRJ0BO8XKf2OIjCkEs--j6VEQ5d3qb9CkNezk0JZOj0ukOjAi4bGASmk_62OibKuymt72r0naYH2W0lOlkg3u_sNEAIlzfBn_gM8pskxlsmXR2pqdgxslnJLGrpHlO7FGd6yNKSrBgX-eBPzEau-gnvif2_TgXRb4hY37buz7-j_5_qmfzAQms9ZsY6-J_0PNmhHMa78B99Eg1LFdVT6HKlI1n5dEImy-8",
+              "widthPx": 4128
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Anoma Jayaratne",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjX5Ofh26BRQ9a0Xe9vxJz2UnjNOwxCSGmmwlhvoD7j3VrMO3dNteA=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/100015079655231933329"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgICk_oHsUg&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICk_oHsUg!2e10!4m2!3m1!1s0x3ae3214f08b51b11:0xf3b1544d148f995f",
+              "heightPx": 540,
+              "name": "places/ChIJERu1CE8h4zoRX5mPFE1UsfM/photos/Aa-ngMZq-zlz7Q0L1z3x0OwBatKbRHkebCn5934mKwvoQOfHKMgMJwkPgXJUrc6AsrAyMIknQRbF5osNWAAaqnziGOtG1DFeacT1PdMkb2YAZBOwEC57DOZKmg7-FjAC35YwQrjvbH9zoMl7o1jtaIAtKOT1dh1wpUIAX2xJRwPrnVWWnjIieCH7Evr34PxRcn6I5xUR8Diw9M8HDMtgsE_Y68-LnMgKRQN1auLAe07QrSC4srySQWdgnJyUdE5jwGrnI_oZbaBzkHr82BNRnwEqYlBPPLvhJwKPkoLEe-cUynCtpT3f5ArFlul6cq3iObHvsABo1PHvzCS2_gqR9LiZybS6AVHl0i9nBpi5Fw9xLScudArKMWDuhwyzpx8V8Lsqorsr46HpnajAZjNrHaV3BDnV7dA",
+              "widthPx": 720
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Wikum Dissanayaka",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVDAB-rCEVbwH6FN_sRi55834F9WfJrwSwzCwdRRtwWal1T3k4=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/100565474659698804666"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIDsstPVgQE&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDsstPVgQE!2e10!4m2!3m1!1s0x3ae3214f08b51b11:0xf3b1544d148f995f",
+              "heightPx": 2322,
+              "name": "places/ChIJERu1CE8h4zoRX5mPFE1UsfM/photos/Aa-ngMaVWbfFC1IrWFa3pqB7Bb3yTo45mXXMSzZxk7B9Su3tDwJsYJDSHYO5XA9ffHDeeNEQ4KtvwoXr3PQuBeVcwCft7zRowL1vw7dD9NUC9lX1yCbMmPFINkhhT70zrrxWF7gutXUOAPre4666i47prHif6V6pHbetYM4hgYiIU368-2DIfmrtiVpIYZrhGgXdLyViQ1k2lzvXOFdyb7kmeYE0Zpatl2BP-Sbj_jv2Ng1_jxUDLCsFdgSA1btWcY848GNrgeUjLuxgrUSEOWz45zyXhz9XEntDu0wfgbA9V0QcN85h0QPQi2u1QB6ZmrAt1B-BorCwdROOrpnm4ERqQ98WIOSNk0wxzbEUOatjA9mucsEimaHbMRP0X71DpxU8Dmj5_nfAtpVlVAewR5-Biru82Ubm",
+              "widthPx": 4128
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Wikum Dissanayaka",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVDAB-rCEVbwH6FN_sRi55834F9WfJrwSwzCwdRRtwWal1T3k4=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/100565474659698804666"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIDssvP2mQE&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDssvP2mQE!2e10!4m2!3m1!1s0x3ae3214f08b51b11:0xf3b1544d148f995f",
+              "heightPx": 2322,
+              "name": "places/ChIJERu1CE8h4zoRX5mPFE1UsfM/photos/Aa-ngMY3pwwiyb_vRBM52HOIkpleWT8PiygAtaIIDeZls5JaBdO-Ih53NvA-d1TXpdcgPKhYIWaLrVfEvzk93St7CSEp-X_5tiEQznNLXDMWWpfPSMBUuCk74BqMwZ2B5g6yqO1ReMBoDCoPeWjOMEYSlg9GofMkB9_std9mnMnJszEvan05zRD7MxuAejh8qt_6kgEnMsQJhjFTr6oe3fEDAaT1zY8NI0MFvCvwfn-6Yi8NKfEm4DSQxiwE4DzKCS2PErvKOLoOmHNBLbfZB92P_CSBvqTdgvBVU1xcT0lYVvoBhI_dp9miBeeyTxXx0o7X7km0YK1Witj4Y8WpzBcq7eSduEZbFMxi4MrL-fF5g63B0X20hDIEGxS0jrJDsnuWerjTujgIoHM9cjmDeu2VAI4RrRpN",
+              "widthPx": 4128
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Anoma Jayaratne",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjX5Ofh26BRQ9a0Xe9vxJz2UnjNOwxCSGmmwlhvoD7j3VrMO3dNteA=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/100015079655231933329"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgICk_s6NPg&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICk_s6NPg!2e10!4m2!3m1!1s0x3ae3214f08b51b11:0xf3b1544d148f995f",
+              "heightPx": 540,
+              "name": "places/ChIJERu1CE8h4zoRX5mPFE1UsfM/photos/Aa-ngMbjjfY1rLloQA5lEnqtRLEVcsPYJEqh3mmbU9sZ3ISCcO3nW7THFdKshtps7uzkYzoOaaACkNpMcawILq_-c2ilekfHlxdPEqOzofQSYEt65ui2wTBsx7YXGFR_2iatzlpyQpjReiXC-Rq02jkWSyUCRl90Yn1DQLyA9bjPT3hYoG-l37lNcDo4cY6KYXqLzyZ2gGzcNltRUZ0hm97GHujKTtW-eMeTXCmxCtmlU5jH6pjvSc6p_-p69YK-22PuWWy9gjUVaXEKN77cywyLYkH8303CkrshDPLv0tPp0uhdbHXSzC3OY-hLlExN83e-fgdY77_LVSyhkaB4VwXlcUnTHzTKRKqP-GM-bEEV40MeY6rM6GqPRbCvXCmDDc9lQCgtX5tdImCKn-TwtFdJe7gxCLE",
+              "widthPx": 720
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Anoma Jayaratne",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjX5Ofh26BRQ9a0Xe9vxJz2UnjNOwxCSGmmwlhvoD7j3VrMO3dNteA=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/100015079655231933329"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgICk_sGRwgE&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICk_sGRwgE!2e10!4m2!3m1!1s0x3ae3214f08b51b11:0xf3b1544d148f995f",
+              "heightPx": 960,
+              "name": "places/ChIJERu1CE8h4zoRX5mPFE1UsfM/photos/Aa-ngMZ7F7aykE3wo0QvUjUMui1gEtCReV3-VMfgvPQl3RfmItOCSfG-r0c2nfN6U7dZUekBqussShlqs9hkIiH4eSkHhhRRhONe5UL2PgFeSbXA0q5BN36OurD-LlL1KA6dDziupkVuIFM4t8CRpuyhlA8M3DrINiEVfAwwuhzqejd2GukOsakVj_nt2RJkZQMiWbDQOJBZkEA8COxvsAWzi-agos24gEWriP-5k0WRH8yjjAUDw_13DcPS_xSF-wz5bOSwo_J2GhySWrUYUeBIqAcPjzLy7ktwvHVYzQTDLvzBwkeuOTjxihwXB0Cdt7VWThvbprvhhGBG1CuKttjGaiHzb0kD1qhx4bYOwbWzqVz6c4WKa51KKo32MWjoNmrFSwOdT6HehvvVYx4zmagt7a3j9bhb",
+              "widthPx": 1280
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Indika Gamhewa",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUM6wTpBUil3swgZQWIXYFN5eC9MUMzugvmq3hE5-MkM4fQ5lw_=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/102820262622982522091"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIC487rcIQ&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIC487rcIQ!2e10!4m2!3m1!1s0x3ae3214f08b51b11:0xf3b1544d148f995f",
+              "heightPx": 720,
+              "name": "places/ChIJERu1CE8h4zoRX5mPFE1UsfM/photos/Aa-ngMYv3TCI76ca8IxvZ-0ihVEM-F_b4XY9bDDjIQAZjoZoeAhtwFgUHGs-aq4VjeqCNB5vHsUY2w-eFOneRXdwqZ2fZlYwtzBjyRffku_n9J_7mQ89N-eO44sc-57GWV45XYneLhi6K3x2iuYZjKxW6QRpuRLt7MozxxYDGkWbT8vAMM0RNMYbnkx68Ml9v3GLroiEeFrKWuUwBNebx7cjD0s8GDLVs9i6uio40f1T1K9vvl42yJM9I5LSXQ-hINnLDsYw9PK-3qbrB8Hhem9HQsWl1IbYN00CvrxF-ydmPN9NZJpc_yjQhrm6qWbvN_n-YUMg6KbACtaXKbhNW57RZzJV8se3ke3GpuTiZcFfVd0RHyv0N3wIACdCd40IG2peM1kSrB-T-wss2t3LcaoMvvBCsxw",
+              "widthPx": 1280
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Buddhika Dasun",
+                  "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocLEc8OkUbsydHFf9K3zcwlrIQOtdPCFhJjo2gBtrYN5fJmDyw=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/107218479145150415990"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgICcjYO3Ow&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICcjYO3Ow!2e10!4m2!3m1!1s0x3ae3214f08b51b11:0xf3b1544d148f995f",
+              "heightPx": 2268,
+              "name": "places/ChIJERu1CE8h4zoRX5mPFE1UsfM/photos/Aa-ngMYhuFXVvASGk2vKFvR4gj8dQyM4cnBbH5MhNhdnucYp89VV1nDkfcF6lPS7fXOjs1sIHHF62GHvy8tvssBbza9r4FsvKiTH10GGA_-r4_0K7yqd9fDHkqv4aICd7DRpC9M9-hpGTWeVoccRnH-v4Pm6K1CK7v5jVfSHdoO84hwd6xOg4D7sZZwnkOXRnxnGUTa3CxuqSBmu2eaAq5cEHQYOPSJkUxxwd72LwM_7LMN1rU0hP_dVKyopRI12l2_81gZ_2SYeoBKuJLQxmwoXuK1-HMFZRIVKHcU4i2IVXsYtnsND98dl-q5vuUjXERw_cABjMkmyQkgUiveNQrQrO0Jzh_ALogYwP2TOdDeR9q-Hb7r8TQkbaV8L6VxQocCSieCdC2G28j8Kma4fTR3rEhsErYg",
+              "widthPx": 4032
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Buddhika Dasun",
+                  "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocLEc8OkUbsydHFf9K3zcwlrIQOtdPCFhJjo2gBtrYN5fJmDyw=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/107218479145150415990"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgICcjcPo9gE&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICcjcPo9gE!2e10!4m2!3m1!1s0x3ae3214f08b51b11:0xf3b1544d148f995f",
+              "heightPx": 2592,
+              "name": "places/ChIJERu1CE8h4zoRX5mPFE1UsfM/photos/Aa-ngMYiJCTOaQHedk7xBGPSh1Hr62oog3bJObQDifRWh-xYe8pNBdI-VcGLY912Yy_maldROrFfrcSC3eDFsQ1R8Uagackr-oR7Cja4PEWpUtMHzUdc8ATIM6GZoKWWlxRWoJhboBy5aT9_bNxPRQPe0gsvhtr0ipLVuSY6K2KWU77ZeybX-uv7J2LHj5MD2FjHHDHgO-28NpWnrwb2IyMVG9NqUUeGztfpELfocFp9ATUc3lpFbpRJlX5em-tj0JjM-mK8xhF43FLs1i3E_qnpwP_zcg-w2o5kB4QVrXwk45jcQUx-uM21owa20A8Zf_xA2xylNT821GLPOsTmL_ToMuTNvfwx7GhVhFTNEJnNVhHqfgAZlqd4UMN3fPVxhBBKhm6QJkNm6zNcoKXZBOiBCWgCoVFAPYc",
+              "widthPx": 1458
+            }
+          ],
+          "primaryType": "premise",
+          "types": [
+            "premise",
+            "street_address"
+          ]
+        },
+        "error": null,
+        "provenance": {
+          "google_place_id": "ChIJERu1CE8h4zoRX5mPFE1UsfM",
+          "source": "google_places_details"
+        }
+      },
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:36",
+      "google_candidate_kb_identity": "no_existing_kb_place_id_match",
+      "official_source_candidate_identity": "not_evaluated",
+      "query": "Panavitiya Ambalama, Sri Lanka",
+      "review_reasons": [],
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=36",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=36"
+    },
+    {
+      "attraction_name": "Baron's Cap or Thoppigala",
+      "candidates": [
+        {
+          "business_status": null,
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.5714,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.835004199999999,
+            "longitude": 81.39244790000001
+          },
+          "display_name": "Thoppigala",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "Thoppigala, Perillaveli, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=13067309325606533376&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJK3FB9wQv-zoRADntGploWLU",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "mountain_peak",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.4536,
+          "types": [
+            "mountain_peak",
+            "natural_feature",
+            "establishment"
+          ]
+        }
+      ],
+      "classification": "new_google_place_candidate",
+      "details": {
+        "data": {
+          "addressComponents": [
+            {
+              "languageCode": "en",
+              "longText": "Thoppigala",
+              "shortText": "Thoppigala",
+              "types": [
+                "mountain_peak",
+                "natural_feature",
+                "establishment"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Perillaveli",
+              "shortText": "Perillaveli",
+              "types": [
+                "locality",
+                "political"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Batticaloa",
+              "shortText": "Batticaloa",
+              "types": [
+                "administrative_area_level_2",
+                "political"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Eastern Province",
+              "shortText": "EP",
+              "types": [
+                "administrative_area_level_1",
+                "political"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Sri Lanka",
+              "shortText": "LK",
+              "types": [
+                "country",
+                "political"
+              ]
+            }
+          ],
+          "displayName": {
+            "languageCode": "en",
+            "text": "Thoppigala"
+          },
+          "formattedAddress": "Thoppigala, Perillaveli, Sri Lanka",
+          "googleMapsUri": "https://maps.google.com/?cid=13067309325606533376&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+          "id": "ChIJK3FB9wQv-zoRADntGploWLU",
+          "location": {
+            "latitude": 7.835004199999999,
+            "longitude": 81.39244790000001
+          },
+          "photos": [
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Gayan Perera",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWteQR2CT4it5wv_oIxVlHF48_1n1ElhpdMTYKPhPJG8QiYvxh-0A=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/101253832655830383974"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIABIhChjpK3plLbWtxhyI7ny9Oz&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIABIhChjpK3plLbWtxhyI7ny9Oz!2e10!4m2!3m1!1s0x3afb2f04f741712b:0xb55868991aed3900",
+              "heightPx": 3072,
+              "name": "places/ChIJK3FB9wQv-zoRADntGploWLU/photos/Aa-ngMYvoCjO-jYS0tIbPSsyTjRCNGgIV-ouMTx2wdvCn_2c0yZpqeb1Ji9iEx5--s-eu91-A0ozIANYh1mO1fwBl-jr5SpnL8adLoMA9JDCVuPuWkPdeZlslDEc1uk9DzlKYCodDKKE99MCyFMMd8NA5OQOOokMnFRIk18eL8FYvTg9ht198QkR1vJI7m63M8tjl1-N1tq52tHNjdia4H_-U3yHJyHlshYOzvTtwSAA2kmcHSI1EdFbTv6p5gNemoR6sFrZozrYaMw_4qu54VuJwLBsgKKHFmdWrYrdXoVOzJWATZLeM7pnU-KdVLpZevBqMhWfxDU65rYe-FOMzIwJbf7BA8mHb03M2xZAAJKNBFk1efl_D0ZkCTvYSnsv2gvlFz3n2mDYCZkQeEpTEnHZhD3izUKHv5FDkgKIUDlYg_2gXQ",
+              "widthPx": 4096
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Dushyantha De Fonseka",
+                  "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocJA3IkX-6SldUjnonFJFUbi8d76KRYHuHrPqYs7SNzAcdngDNTu=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/105404513198214134825"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIABIhDegDbA2QKJOnaleR_Fh2om&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIABIhDegDbA2QKJOnaleR_Fh2om!2e10!4m2!3m1!1s0x3afb2f04f741712b:0xb55868991aed3900",
+              "heightPx": 960,
+              "name": "places/ChIJK3FB9wQv-zoRADntGploWLU/photos/Aa-ngMYpeQejvJYKDezCKC1VqZwfZ4QORkj08WwGpV1ATmIukafKzZwgrE1bcG-fGP8ocoN8UZM2B6kvwd5srkCaM1_PkCg6_NYVv2i2fcz0K7bVff-aDJhfFU-VfdHklQprUh7Q4JVpJ7aCc8ZctkCjTLU98y4pUq8P-EkCBQuaiCbQyliV70A7dprOTttTok9kQfBAb7ko-jVYpH5BuMIbhAJt46YHbU2sTO6CAjlJHFoK_FQ6oLy8OOgKDA0YdjC0ePQS06SlBPRqTM6IOA1PW29CNUE-07YX1ZUffKiREmzbig7kSrX11VOOfay1ztEG2Hr36C8ZGUBK8JTRD5HGm4mFmn_b-1kyDI6_G8PhweoiOUJI1NwozFWtFSMI-ZLxSynmlsTVst03__FinnnRwHlmcOQGbMwlcjL38nmO949rVQ",
+              "widthPx": 1280
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "aruna sumathipala",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjU01ObwivSnzS8Tvf_iW3pZ2CiKj_pveIx1-ytNE1m3Zddvp8m9yQ=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/100210036348756329071"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIDzuMfRwAE&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDzuMfRwAE!2e10!4m2!3m1!1s0x3afb2f04f741712b:0xb55868991aed3900",
+              "heightPx": 2477,
+              "name": "places/ChIJK3FB9wQv-zoRADntGploWLU/photos/Aa-ngMZb4CGbI5X-ZP-aCRWHXxU_9uxYIJtYQ7KYI1oHevn4umc28mJdfqXlekG3B-QbK65MXfcOUaaKuWVTy3OHDrYcy8fXKl77W42w9N72cynRM--5BB5cdlSCDKsnFZi15-iUSxqsc5FDS8RdKXb4ihmKP_O9U67PmLk19ehn9bOqatczjz77csVSllzQnplDZFn7Hj8o3HNeoNCRGVQwjaSN5PXWRratVrz-B_L1DliKwDFcrW3DLiTo4sV8yfvPlxe4GKpHRSYsb-lhPK0JSvdZjP8yJ9z--2gIh3Rz6yFVEwO3Is5g4GrKRWHBZ7NJJ6_2XmkL9_Id1eqfMOQASvbrkhTrbhTYTWm9ik_z-eBgRwjcmfIflKsoYIIi-Oc_gXclin_KSG83iVMcF4CbrBZsaq0TQ9M",
+              "widthPx": 3661
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Yohan",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUagCM7LxQoOVX857mm_oHJGRjBCjXPvZ4pKQ6U-2cQ4_8rQMw=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/113065579491288947372"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgID5gJ6QZA&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgID5gJ6QZA!2e10!4m2!3m1!1s0x3afb2f04f741712b:0xb55868991aed3900",
+              "heightPx": 4096,
+              "name": "places/ChIJK3FB9wQv-zoRADntGploWLU/photos/Aa-ngMbuD_ORXgjpnGc90jCsS9J6zeBoHj69BY638pLXQtxDrlIogF5z_I4Xn4-D69bjuV8mUdKL5C4pu5HZwyO-vH8QR60X2jyjPIxbunMJ8gOYxDWPi_2N1RBnGj8FMwHdP8T59RZMAKGgnT3y99MwOD6H-a68vmGA1O5UtXvYtwadyatJLEOtv1ziY-BDxImH0_5cIKwk-slzT7pcbmu-coG1OkijVuJkny3v-ZkEFtNvVSLON7xTeDC60BHIAl76TP_e-oJzMvCaqrc2B_2cuHp4ZwNRVeQz9wFAYaBdAZx7t-RfTWwuQA9tYPLHLRd4e0JUnlVRla5BiqK1A0mc7a6iexr9y_ZGePqvj-oMdE-TcKXQ3wnRd_EikP7lpUQfnAaGa5Kom-zY9sZ87mCxPmqLoio",
+              "widthPx": 3072
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Dushyantha De Fonseka",
+                  "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocJA3IkX-6SldUjnonFJFUbi8d76KRYHuHrPqYs7SNzAcdngDNTu=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/105404513198214134825"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIABIhCxkzO09u68Mm3gUVcLIaah&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIABIhCxkzO09u68Mm3gUVcLIaah!2e10!4m2!3m1!1s0x3afb2f04f741712b:0xb55868991aed3900",
+              "heightPx": 960,
+              "name": "places/ChIJK3FB9wQv-zoRADntGploWLU/photos/Aa-ngMaE8XB6OkgPh0_F3OGks0MMlBuRFpEcpEmjwTKJ2OW70JgDo7VXC7iaSp35xnpmiAeTtDfs-eKLSIO4xmEeqnsyxFSgeo-7n3ZZEBnU39crdqjbzOOB68eJBLB6jXtrObi7IIbuYfts7fl-3rttnDKM2AUI-m5NsFQnSoyv12RgOsPlavNM25V2ZW3KTzvAqntgXAXIJjSkxxLjjv-b1X3UHYZ5mZdFA5im2oCIoxSZjsrEC-Y69oOR5t_LFE8UeV_cRtjvEDSC6V6gYEUSvGlGQoK4a4Y_kq23bJe747IX8LFLog_vuZX3AGB8lGDhcKAy_3fcodh7eunYY64N693NRe8dzB8Ki3xQ8f4aDLQRU04ZXWBpnsGMbqZADwrJQr_6umMfgDeB8aRdeadi-qNxwNB-8HtrY7m95h0DFzhWUQ",
+              "widthPx": 1280
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Ranjan",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVBb2P-AktU3KbYXEc6XsT6wVxe9mTyuHdvMM-COTY2wN96Uik=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/108563272237196493218"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgICk7dWErAE&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICk7dWErAE!2e10!4m2!3m1!1s0x3afb2f04f741712b:0xb55868991aed3900",
+              "heightPx": 4608,
+              "name": "places/ChIJK3FB9wQv-zoRADntGploWLU/photos/Aa-ngMZn17F6k-VHyfp71aRcM2yI8SE19QOcZyYiK7Ci3MloaQxH37-xK_gC6ZBrG9pY-RYxKmA8vk5swHp-FxAeplkBl1oHe_Pto0_RvwdI14PGOyNTvoGF36eqJVdGvdoGcfeZjs9GG_FKBHSRQAKJp5KHOo1vvHmWrkD15aVPYYqAAS0cos6PdZVRh6b255o9eMN24eb-R4jEN4Xn_mPzWXnWQU2sI27m9k9FlXrZIE6Pr4I3OyupGoR-VpvCBx0xzvb7TVE6XKw3U-TKVjwDreRrCs7JrZzlieWG7WACLjWX3jIhzEH0mfgBTd3V3DpNPOymWZRHsY-b0foFOKxj_xzkDxtQbir-WWIZmX7X_upJXe7pGGlZE3Nt6fmAm81noZfqDGvNj6Let7HfmhmbKvDWZxxTzOo",
+              "widthPx": 2304
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Kasun Gajanayake",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUECaPWdassENEj-XFIfmv7KYULuiGwXnYqhmHVY8JcCdcDpTzU=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/101989821017576165812"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIDm9YWnuAE&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDm9YWnuAE!2e10!4m2!3m1!1s0x3afb2f04f741712b:0xb55868991aed3900",
+              "heightPx": 810,
+              "name": "places/ChIJK3FB9wQv-zoRADntGploWLU/photos/Aa-ngMag3DSW8TGg3xAFMXqFlTTMFxzBM_znXF1tTpiI-OVmVZch7bG-9yUGnaffLnwFGRJsFy3YaT9Kuzq0eDNRbnzb36as3F3KKU3J3i2hR2JA0IBSgLnL0PjzENE1LxatI7OGZmJm5V43hau8QsQYX87_CDBSM5FxCDFpbxW4XH-EZersBCBGfqzsRX4nXW6oi1wNaktg9wuMGhICdygP95hZYaSgUDKjlQGB3vdRou7lqyBibGfkiM2YMqBVtVcSBxlyruEspBVKoAgnvTV2dIj0PDl9cjpcCrsmC0UPlGuI9wPcz2GqRWUTmm07O_OJzTJMM0Wkpi9gojAXdEZEjv2nFQV7Z0nT9jz4mawK5t6DJ1U5dEKRJSvLut_sFgmn6l-4qKGMYTPdpydtGUJg38ypMWNyF8w",
+              "widthPx": 1080
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "aruna sumathipala",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjU01ObwivSnzS8Tvf_iW3pZ2CiKj_pveIx1-ytNE1m3Zddvp8m9yQ=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/100210036348756329071"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIDzuNPgIA&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDzuNPgIA!2e10!4m2!3m1!1s0x3afb2f04f741712b:0xb55868991aed3900",
+              "heightPx": 2497,
+              "name": "places/ChIJK3FB9wQv-zoRADntGploWLU/photos/Aa-ngMb1DL8-to8Be5W7OWJUJo_n5PUBpk-TEmqc7jA69dB_5gGEvJw90WqmmA__3ctx6qjOT3z_mgpA1vhe1EhbjxnHNrdbkzl8T8ENWFSR4Nsn-cqS3GglOxhtZiIAu-7J0yYt2_1GnGuRlPyEuAFe2qD1l_zAm9K66gNVIUPrzkli8qQuyfnAoefV6SP4FNo50WCES7VHEPn6XCyVbC0GKzhgMTNycpAE-WrPhL3ca8xvS4RloQ1TlT8ep_MFjxMTvviNBHtTo_wSNx0UzFJ2bULu4YjUVx_dYdDOo0KSSiyW_PB8qgXgv2Sky7b2qqFx8_gOh2VGBPlaNRZde3s0y9dJZ4FOSChyNBokTPNR13dAsSdD0LioF_pIY0DAx-hKvH09ar1p_Do9DhbDiLDoa_hj1Qo",
+              "widthPx": 3483
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Gayan Perera",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWteQR2CT4it5wv_oIxVlHF48_1n1ElhpdMTYKPhPJG8QiYvxh-0A=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/101253832655830383974"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIABIhDPvW5R3oVY81yTpEtASNXe&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIABIhDPvW5R3oVY81yTpEtASNXe!2e10!4m2!3m1!1s0x3afb2f04f741712b:0xb55868991aed3900",
+              "heightPx": 3072,
+              "name": "places/ChIJK3FB9wQv-zoRADntGploWLU/photos/Aa-ngMaV_2-YYKlTYbOJh-9INEbd_MYuKq1jcKZJ7e3koM1NI-uZUHPYYy4UKgUrS_pS1VxErjS0Rf1ODyf2bnY9mObwdk0aJcqaTW67Hn1yvIV0SvTs42MYKSSzRY0WDIhBGln41oNQaO8wRx97VdCn0cNXQUNGJ2F3TofoZXN66ABnN1PrnxOCMU6eHmDd-Cc-ZR3SY0jnxu4xzNHYCuSwwL1SDOzG2nxMYQA7COBQDqHR-vN7M_j1or-tK11ncsDFKj8mlw4e0lFTCkCbEij7SQIrkZuRDS1hxteWXWEcecKJ5807MO4YlrJ1C-D2sAqnJXaxE67F6P9KZa2lTIt0taYXhaxUkPcbkpNuM0RcSQ35kA_-3F1mzPVLHKHBZLgjcPsZfneyBrDeujSvVu-RBr0frfU-batDka7dwXxz-886",
+              "widthPx": 4096
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Dushyantha De Fonseka",
+                  "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocJA3IkX-6SldUjnonFJFUbi8d76KRYHuHrPqYs7SNzAcdngDNTu=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/105404513198214134825"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIABIhBojl5Ud6_Lc3Kx00Byjj8M&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIABIhBojl5Ud6_Lc3Kx00Byjj8M!2e10!4m2!3m1!1s0x3afb2f04f741712b:0xb55868991aed3900",
+              "heightPx": 960,
+              "name": "places/ChIJK3FB9wQv-zoRADntGploWLU/photos/Aa-ngMZ093pymaP9_ouNevDm754ciwEvn-X-5XRKhPoSBNlucj6RVnAIoqlU10UmBsZTRb-JwGAdejjX7laxjmnw3lAB0Aq8rTDUd69RMKg0JF97-FSiCqEm1Fp7wBG94XzyEsPRGqNKoHQuxecq_kiRX4Ds2nyC303jr4AbqXT-9JxCmqQA5kxjd2NOmU8I7njweRC45Fr9vDRgAVw-dd6Ly_yDCcxOcnJ52Thw21zSKKW_cB5tWmmy-IjWD1BBCY6gGe5a641NIFflDdlWeJsrN3yjJrHE7Irejtyw4uDftK1H3q7ROkToppbIb-_SlJKcL7sgo1ndW1iLCKJe3CciPxPJr09l0CiQrlDNx6_0on-XNXykYFmcfN66uZVs8n9H-tV-UCPD9ju3WuKFrIbotz9B9c6whRmkGFejTa51zuQDUw",
+              "widthPx": 1280
+            }
+          ],
+          "primaryType": "mountain_peak",
+          "rating": 4.5,
+          "types": [
+            "mountain_peak",
+            "natural_feature",
+            "establishment"
+          ],
+          "userRatingCount": 90
+        },
+        "error": null,
+        "provenance": {
+          "google_place_id": "ChIJK3FB9wQv-zoRADntGploWLU",
+          "source": "google_places_details"
+        }
+      },
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:5",
+      "google_candidate_kb_identity": "no_existing_kb_place_id_match",
+      "official_source_candidate_identity": "not_evaluated",
+      "query": "Baron's Cap or Thoppigala, Sri Lanka",
+      "review_reasons": [],
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=5",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=5"
+    },
+    {
+      "attraction_name": "Alankuda Beach",
+      "candidates": [
+        {
+          "business_status": null,
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.8485,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 8.0732263,
+            "longitude": 79.7142232
+          },
+          "display_name": "Alankuda Beach Road",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "Alankuda Beach Rd, Etalai, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=5150894765510169019&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJU3z7cGpr_ToRuxGnpX-ne0c",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": null,
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.6614,
+          "types": [
+            "route"
+          ]
+        }
+      ],
+      "classification": "new_google_place_candidate",
+      "details": {
+        "data": {
+          "addressComponents": [
+            {
+              "languageCode": "en",
+              "longText": "Alankuda Beach Road",
+              "shortText": "Alankuda Beach Rd",
+              "types": [
+                "route"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Etalai",
+              "shortText": "Etalai",
+              "types": [
+                "locality",
+                "political"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Puttalam",
+              "shortText": "Puttalam",
+              "types": [
+                "administrative_area_level_2",
+                "political"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "North Western Province",
+              "shortText": "NW",
+              "types": [
+                "administrative_area_level_1",
+                "political"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Sri Lanka",
+              "shortText": "LK",
+              "types": [
+                "country",
+                "political"
+              ]
+            }
+          ],
+          "displayName": {
+            "languageCode": "en",
+            "text": "Alankuda Beach Road"
+          },
+          "formattedAddress": "Alankuda Beach Rd, Etalai, Sri Lanka",
+          "googleMapsUri": "https://maps.google.com/?cid=5150894765510169019&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+          "id": "ChIJU3z7cGpr_ToRuxGnpX-ne0c",
+          "location": {
+            "latitude": 8.0732263,
+            "longitude": 79.7142232
+          },
+          "photos": [
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Nimesh SHEHAN S N",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXsoqOWIiO2PbcgavOdFg75Hqsd8hMjmmAA-Uvtqc0aXuS3kCDn=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/112443248012116827990"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIDitPGwKQ&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDitPGwKQ!2e10!4m2!3m1!1s0x3afd6b6a70fb7c53:0x477ba77fa5a711bb",
+              "heightPx": 3000,
+              "name": "places/ChIJU3z7cGpr_ToRuxGnpX-ne0c/photos/Aa-ngMYlycrCn3cnvlQOIvLzCttYk-29fq16U_WehPTnDP8x29hBqMYlkn2TPjLzHv0al4b1BHOZP3loC7-dafIKTJoEf8aYbH_mAyEdmkPxzhg56Fki7zInNb3U_ndV0V9ZzD3xmAAWw-RQftkFloIZ6ARaphTG4RJpdU1wPb2Q7iA2hjLMKagY-IkRV06goiIDqmvrE05gxle2iZNlSob-lpS3X3aatnGOLw7QWdAljCyM1gFCGjMnwCwF37lGVmmuRMU9ic2DFiznvRkRtSodD8d0rpjnJGofpo-i0e5kjtR6GKpgplcjqPJZYmwkcibtYYiQd27Iw44AkBp_U21ESvB7zNclg27Xfvt26DJZvRRQqqZipQzk6S7uSrOf8kwM4GQMpxKZq-pk0Jndo8TYNxfUI_8",
+              "widthPx": 4000
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Nimesh SHEHAN S N",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXsoqOWIiO2PbcgavOdFg75Hqsd8hMjmmAA-Uvtqc0aXuS3kCDn=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/112443248012116827990"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIDitLG3-wE&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDitLG3-wE!2e10!4m2!3m1!1s0x3afd6b6a70fb7c53:0x477ba77fa5a711bb",
+              "heightPx": 2448,
+              "name": "places/ChIJU3z7cGpr_ToRuxGnpX-ne0c/photos/Aa-ngMZgXvc_rFfPyEAZH2ateqv29R2oT-WhInWr8aowyQuyd757WbOZvXcgUEfaVJIX0OfFxHPzAVPIZqslrVHRvicHxmH3R-wO9cPCceWAOeVeOVcaTk9KBq7Sq2Y60KOe8U_75-FJSpUoMFuxc9Iwa8R4Y3etv1XV_K1bSgRdFD-ClnmLPdHbNLhiQmD1lHnrS5HC7nOonTh2so6o3hD_EMYzqPMDRyN3-WJbo8G3JVUfsAynsxx_pOUaeRcsWUDVLdXoBy74xFoa562wd34tJLQixsMZLc7VzCty7hXfRmmi5tp6TnF73jwpqQ4-_6LKWHxfYREyfE68tzZgdHNgouKKB1lGXFmn8JlYJ_IQPn2p3e1hzHAaeH8b1MSRLoJCqWjADhUdlPoRGaBdm16gvzJus4eaOtg",
+              "widthPx": 3264
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Nazir Kalidh",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVJvuoN7JPDbP5UvvBk2ABt6hwhCTx8ppwfiQOO1vePLiujdKjy=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/110960955290274120891"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIC-6J3lpgE&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIC-6J3lpgE!2e10!4m2!3m1!1s0x3afd6b6a70fb7c53:0x477ba77fa5a711bb",
+              "heightPx": 2080,
+              "name": "places/ChIJU3z7cGpr_ToRuxGnpX-ne0c/photos/Aa-ngMY8hi_fYVAN78dJTJthFAmxy72lILrqu5iswsYry4Xuz8vP9hRX2lv1Gwp13-UdX5aPP4NHwka1usqEaUsWJBPRvl60KIA7Q61NWYUUUFnPR__ruA_6i_3Kq5nyH8GuKt7WIBylioAmVZQGNpWK2aQ_B5UKEdgoTtzXg9IYoEHyMtEyOFr0ryAffNWmaRGhEUBCI5oDfg7bHQnW3a02Jw2ENiq4gj_i6iOMxWO5q67pBJYyqCi9koGsLPsFU5IYtk_QSdSGt5sTyxd4nCxWjyFRjEMJS5IzWJssyzdHmleWs65w2bDz9c358Lu0kI6GJGmk8R7K-lNg9Vq-56OeCKA2gdAxwDfTlEssn4cURNz8HhxL_yesjkKMhGfbWXufxBdacO63YfsmHnuMePgaffXezFigzxo",
+              "widthPx": 4624
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Nazir Kalidh",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVJvuoN7JPDbP5UvvBk2ABt6hwhCTx8ppwfiQOO1vePLiujdKjy=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/110960955290274120891"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIC-6O3HqAE&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIC-6O3HqAE!2e10!4m2!3m1!1s0x3afd6b6a70fb7c53:0x477ba77fa5a711bb",
+              "heightPx": 2983,
+              "name": "places/ChIJU3z7cGpr_ToRuxGnpX-ne0c/photos/Aa-ngMYp56SmG_-QE3CuPXMDEc_CEIKDjJ7uCq0XpPo9cyWOjvnbgYSjbOdtwu2lvBY9KXSayz0AY9IaylycZXxgPlYV7R1bF6Vtxbp-VSFoIb8QkuUNqmP4unw-HvahZMrYGDWVFVwWzGseYMdrM5vfiYu3vof5ASkqeTGd81QYSc_07qiyRVV2Daqgv0BQ47w7aNRProBctPJLGNDUYKWTq2E5eskVjHBb4hVagNEI2bI9vTxUjgs1t55WBmB8cea9gq6wMoUUYowL1lvCOONJCSVNdhowB65EZGKg_FIb4Z6I2ZMDKV1vUyBiJxXYGCCh4XoQJ6yJXZlSWT15nFPhXSwdykOT9aJerpWJxAWRwkqdkfhv7udi-JCyiaBHl1SwhV7mpsBn7gF6wxT6e6_OVgX7wWMM1oo",
+              "widthPx": 3299
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Nimesh SHEHAN S N",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXsoqOWIiO2PbcgavOdFg75Hqsd8hMjmmAA-Uvtqc0aXuS3kCDn=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/112443248012116827990"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIDitPHIHw&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDitPHIHw!2e10!4m2!3m1!1s0x3afd6b6a70fb7c53:0x477ba77fa5a711bb",
+              "heightPx": 3000,
+              "name": "places/ChIJU3z7cGpr_ToRuxGnpX-ne0c/photos/Aa-ngMbxvtxUukKI2oT5yDnXS73z0ql8BdrHm3NdJu3DVzWjQJZXEU2VPSQnL0KE-hgHZ17xFhL8IhhBSQyEp1dki3LdJ367Tr8xWPzQu4atU8x9PBvywSx84aNnFmbLVU6EPXVQJO7kB5pZHoFhbIndl8e-k0-SLw_QsoPXFkurxjdqmeBNJiSt3nYuklHG00b0ImbyofHMV8rIfnjPd-fCtIA9MwYzFPvUiI-h7GbYhrfTv7dv1Jo3pDgpcwn9Jj6Dox9Ic5hA1CdshhRmJNxEphZWuR2vInXA-o8p0GiOCLe9Z5BtTOfqgbSkrdzWPwhIKeCsV_05tQjpFlTkFFvw34nyVQBn0Grk3FSGuzBh_mHRyFhVPInHqAVlaVlKTBvpxpKvgM5mk33_HeWZToYECvW3nkE",
+              "widthPx": 4000
+            }
+          ],
+          "types": [
+            "route"
+          ]
+        },
+        "error": null,
+        "provenance": {
+          "google_place_id": "ChIJU3z7cGpr_ToRuxGnpX-ne0c",
+          "source": "google_places_details"
+        }
+      },
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:51",
+      "google_candidate_kb_identity": "no_existing_kb_place_id_match",
+      "official_source_candidate_identity": "not_evaluated",
+      "query": "Alankuda Beach, Sri Lanka",
+      "review_reasons": [],
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=51",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=51"
+    }
+  ]
+}

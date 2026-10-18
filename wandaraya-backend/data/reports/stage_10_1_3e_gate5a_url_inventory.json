@@ -1,0 +1,2000 @@
+{
+  "stage": "10.1.3E_gate_5a",
+  "source_pilot_hash": "c450cfed313ccbd8f19d184894f4091d68188859c93e22d7fe3dcf75f1982470",
+  "authorization": "discovered_unapproved",
+  "items": [
+    {
+      "original_url": "https://srilanka.travel/attraction?attraction_id=153",
+      "canonical_url": "https://srilanka.travel/attraction?attraction_id=153",
+      "visible_link_text": "Gall\n                                Fort",
+      "primary_category": "attraction_detail",
+      "secondary_tags": [
+        "attraction",
+        "detail"
+      ],
+      "knowledge_base_categories": [
+        "attraction",
+        "detail"
+      ],
+      "classification_evidence": [
+        "path=attraction",
+        "link_text=gall fort",
+        "attraction_id query parameter"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:153",
+      "research_relevance_score": 100,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "attraction_detail",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "insufficient_evidence"
+    },
+    {
+      "original_url": "https://srilanka.travel/attraction?attraction_id=154",
+      "canonical_url": "https://srilanka.travel/attraction?attraction_id=154",
+      "visible_link_text": "Ella",
+      "primary_category": "attraction_detail",
+      "secondary_tags": [
+        "attraction",
+        "detail"
+      ],
+      "knowledge_base_categories": [
+        "attraction",
+        "detail"
+      ],
+      "classification_evidence": [
+        "path=attraction",
+        "link_text=ella",
+        "attraction_id query parameter"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:154",
+      "research_relevance_score": 100,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "attraction_detail",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "insufficient_evidence"
+    },
+    {
+      "original_url": "https://srilanka.travel/attraction?attraction_id=156",
+      "canonical_url": "https://srilanka.travel/attraction?attraction_id=156",
+      "visible_link_text": "Hikkaduwa\n                                Beach",
+      "primary_category": "attraction_detail",
+      "secondary_tags": [
+        "attraction",
+        "detail"
+      ],
+      "knowledge_base_categories": [
+        "attraction",
+        "detail"
+      ],
+      "classification_evidence": [
+        "path=attraction",
+        "link_text=hikkaduwa beach",
+        "attraction_id query parameter"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:156",
+      "research_relevance_score": 100,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "attraction_detail",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "insufficient_evidence"
+    },
+    {
+      "original_url": "https://srilanka.travel/attraction?attraction_id=157",
+      "canonical_url": "https://srilanka.travel/attraction?attraction_id=157",
+      "visible_link_text": "Dambulla\n                                Cave Temple",
+      "primary_category": "attraction_detail",
+      "secondary_tags": [
+        "attraction",
+        "detail"
+      ],
+      "knowledge_base_categories": [
+        "attraction",
+        "detail"
+      ],
+      "classification_evidence": [
+        "path=attraction",
+        "link_text=dambulla cave temple",
+        "attraction_id query parameter"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:157",
+      "research_relevance_score": 100,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "attraction_detail",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "insufficient_evidence"
+    },
+    {
+      "original_url": "https://srilanka.travel/attraction?attraction_id=160",
+      "canonical_url": "https://srilanka.travel/attraction?attraction_id=160",
+      "visible_link_text": "Sigiriya",
+      "primary_category": "attraction_detail",
+      "secondary_tags": [
+        "attraction",
+        "detail"
+      ],
+      "knowledge_base_categories": [
+        "attraction",
+        "detail"
+      ],
+      "classification_evidence": [
+        "path=attraction",
+        "link_text=sigiriya",
+        "attraction_id query parameter"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:160",
+      "research_relevance_score": 100,
+      "proposed_acquisition_priority": 4,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "attraction_detail",
+      "inclusion_reason": "Homepage-discovered URL selected as a high-value follow-up review candidate; still not authorized for fetching.",
+      "reconciliation_status": "insufficient_evidence"
+    },
+    {
+      "original_url": "https://srilanka.travel/attraction?attraction_id=163",
+      "canonical_url": "https://srilanka.travel/attraction?attraction_id=163",
+      "visible_link_text": "Yala National Park",
+      "primary_category": "attraction_detail",
+      "secondary_tags": [
+        "attraction",
+        "detail"
+      ],
+      "knowledge_base_categories": [
+        "attraction",
+        "detail"
+      ],
+      "classification_evidence": [
+        "path=attraction",
+        "link_text=yala national park",
+        "attraction_id query parameter"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:163",
+      "research_relevance_score": 100,
+      "proposed_acquisition_priority": 3,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "attraction_detail",
+      "inclusion_reason": "Homepage-discovered URL selected as a high-value follow-up review candidate; still not authorized for fetching.",
+      "reconciliation_status": "insufficient_evidence"
+    },
+    {
+      "original_url": "https://srilanka.travel/attractions",
+      "canonical_url": "https://srilanka.travel/attractions",
+      "visible_link_text": "See\n                                  All Attractions",
+      "primary_category": "attraction_listing",
+      "secondary_tags": [
+        "attraction",
+        "listing"
+      ],
+      "knowledge_base_categories": [
+        "attraction",
+        "listing"
+      ],
+      "classification_evidence": [
+        "path=attractions",
+        "link_text=see all attractions",
+        "known attraction listing path"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 95,
+      "proposed_acquisition_priority": 1,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered URL selected as a high-value follow-up review candidate; still not authorized for fetching.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/top-attractions",
+      "canonical_url": "https://srilanka.travel/top-attractions",
+      "visible_link_text": "Top Attractions",
+      "primary_category": "attraction_listing",
+      "secondary_tags": [
+        "attraction",
+        "listing"
+      ],
+      "knowledge_base_categories": [
+        "attraction",
+        "listing"
+      ],
+      "classification_evidence": [
+        "path=top-attractions",
+        "link_text=top attractions",
+        "known attraction listing path"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 95,
+      "proposed_acquisition_priority": 2,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered URL selected as a high-value follow-up review candidate; still not authorized for fetching.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/what-to-do",
+      "canonical_url": "https://srilanka.travel/what-to-do",
+      "visible_link_text": "WHAT TO DO",
+      "primary_category": "activity_listing",
+      "secondary_tags": [
+        "activity",
+        "listing"
+      ],
+      "knowledge_base_categories": [
+        "activity",
+        "listing"
+      ],
+      "classification_evidence": [
+        "path=what-to-do",
+        "link_text=what to do",
+        "known activity listing path"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 92,
+      "proposed_acquisition_priority": 5,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered URL selected as a high-value follow-up review candidate; still not authorized for fetching.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/eco-tourism",
+      "canonical_url": "https://srilanka.travel/eco-tourism",
+      "visible_link_text": "Eco Tourism",
+      "primary_category": "nature_wildlife",
+      "secondary_tags": [
+        "outdoor",
+        "wildlife"
+      ],
+      "knowledge_base_categories": [
+        "outdoor",
+        "wildlife"
+      ],
+      "classification_evidence": [
+        "path=eco-tourism",
+        "link_text=eco tourism",
+        "wildlife keyword"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 90,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://www.srilanka.travel/pristine-beach-holidays",
+      "canonical_url": "https://srilanka.travel/pristine-beach-holidays",
+      "visible_link_text": "PRISTINE",
+      "primary_category": "beach_marine_activities",
+      "secondary_tags": [
+        "outdoor",
+        "water_activities"
+      ],
+      "knowledge_base_categories": [
+        "outdoor",
+        "water_activities"
+      ],
+      "classification_evidence": [
+        "path=pristine-beach-holidays",
+        "link_text=pristine",
+        "beach or marine keyword"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 90,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/whale-watching",
+      "canonical_url": "https://srilanka.travel/whale-watching",
+      "visible_link_text": "Mirissa Whale Watching",
+      "primary_category": "beach_marine_activities",
+      "secondary_tags": [
+        "outdoor",
+        "water_activities"
+      ],
+      "knowledge_base_categories": [
+        "outdoor",
+        "water_activities"
+      ],
+      "classification_evidence": [
+        "path=whale-watching",
+        "link_text=mirissa whale watching",
+        "beach or marine keyword"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 90,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/wild-safaris",
+      "canonical_url": "https://srilanka.travel/wild-safaris",
+      "visible_link_text": "Wild\n                                Safaris",
+      "primary_category": "nature_wildlife",
+      "secondary_tags": [
+        "outdoor",
+        "wildlife"
+      ],
+      "knowledge_base_categories": [
+        "outdoor",
+        "wildlife"
+      ],
+      "classification_evidence": [
+        "path=wild-safaris",
+        "link_text=wild safaris",
+        "wildlife keyword"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 90,
+      "proposed_acquisition_priority": 6,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered URL selected as a high-value follow-up review candidate; still not authorized for fetching.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/adventure-sports",
+      "canonical_url": "https://srilanka.travel/adventure-sports",
+      "visible_link_text": "Adventure Sports",
+      "primary_category": "adventure_outdoor_activities",
+      "secondary_tags": [
+        "outdoor",
+        "activity"
+      ],
+      "knowledge_base_categories": [
+        "outdoor",
+        "activity"
+      ],
+      "classification_evidence": [
+        "path=adventure-sports",
+        "link_text=adventure sports",
+        "adventure keyword"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 88,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://www.srilanka.travel/buddhist-places",
+      "canonical_url": "https://srilanka.travel/buddhist-places",
+      "visible_link_text": "buddhist places",
+      "primary_category": "culture_heritage_religious_tourism",
+      "secondary_tags": [
+        "cultural",
+        "heritage"
+      ],
+      "knowledge_base_categories": [
+        "cultural",
+        "heritage"
+      ],
+      "classification_evidence": [
+        "path=buddhist-places",
+        "link_text=buddhist places",
+        "heritage or religious keyword"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 88,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://www.srilanka.travel/heritage-discover-the-past",
+      "canonical_url": "https://srilanka.travel/heritage-discover-the-past",
+      "visible_link_text": "HERITAGE",
+      "primary_category": "culture_heritage_religious_tourism",
+      "secondary_tags": [
+        "cultural",
+        "heritage"
+      ],
+      "knowledge_base_categories": [
+        "cultural",
+        "heritage"
+      ],
+      "classification_evidence": [
+        "path=heritage-discover-the-past",
+        "link_text=heritage",
+        "heritage or religious keyword"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 88,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://www.srilanka.travel/ramayanaya",
+      "canonical_url": "https://srilanka.travel/ramayanaya",
+      "visible_link_text": "ramayanaya yathra",
+      "primary_category": "culture_heritage_religious_tourism",
+      "secondary_tags": [
+        "cultural",
+        "heritage"
+      ],
+      "knowledge_base_categories": [
+        "cultural",
+        "heritage"
+      ],
+      "classification_evidence": [
+        "path=ramayanaya",
+        "link_text=ramayanaya yathra",
+        "heritage or religious keyword"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 88,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://www.srilanka.travel/thrills-adventure-tours",
+      "canonical_url": "https://srilanka.travel/thrills-adventure-tours",
+      "visible_link_text": "THRILLS",
+      "primary_category": "adventure_outdoor_activities",
+      "secondary_tags": [
+        "outdoor",
+        "activity"
+      ],
+      "knowledge_base_categories": [
+        "outdoor",
+        "activity"
+      ],
+      "classification_evidence": [
+        "path=thrills-adventure-tours",
+        "link_text=thrills",
+        "adventure keyword"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 88,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/about-sri-lanka",
+      "canonical_url": "https://srilanka.travel/about-sri-lanka",
+      "visible_link_text": "About Sri Lanka",
+      "primary_category": "destination_geographic_information",
+      "secondary_tags": [
+        "geographic"
+      ],
+      "knowledge_base_categories": [
+        "geographic"
+      ],
+      "classification_evidence": [
+        "path=about-sri-lanka",
+        "link_text=about sri lanka",
+        "destination keyword"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 82,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/interactivemap",
+      "canonical_url": "https://srilanka.travel/interactivemap",
+      "visible_link_text": "Interactive Map",
+      "primary_category": "destination_geographic_information",
+      "secondary_tags": [
+        "geographic"
+      ],
+      "knowledge_base_categories": [
+        "geographic"
+      ],
+      "classification_evidence": [
+        "path=interactivemap",
+        "link_text=interactive map",
+        "destination keyword"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 82,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/interactivemap/index.php",
+      "canonical_url": "https://srilanka.travel/interactivemap/index.php",
+      "visible_link_text": "Explore Sri Lanka",
+      "primary_category": "destination_geographic_information",
+      "secondary_tags": [
+        "geographic"
+      ],
+      "knowledge_base_categories": [
+        "geographic"
+      ],
+      "classification_evidence": [
+        "path=interactivemap/index.php",
+        "link_text=explore sri lanka",
+        "destination keyword"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 82,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/provincial-tourism",
+      "canonical_url": "https://srilanka.travel/provincial-tourism",
+      "visible_link_text": "Provincial Tourism",
+      "primary_category": "destination_geographic_information",
+      "secondary_tags": [
+        "geographic"
+      ],
+      "knowledge_base_categories": [
+        "geographic"
+      ],
+      "classification_evidence": [
+        "path=provincial-tourism",
+        "link_text=provincial tourism",
+        "destination keyword"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 82,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/top-cities-and-provinces",
+      "canonical_url": "https://srilanka.travel/top-cities-and-provinces",
+      "visible_link_text": "Top Cities and Provinces",
+      "primary_category": "destination_geographic_information",
+      "secondary_tags": [
+        "geographic"
+      ],
+      "knowledge_base_categories": [
+        "geographic"
+      ],
+      "classification_evidence": [
+        "path=top-cities-and-provinces",
+        "link_text=top cities and provinces",
+        "destination keyword"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 82,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/tourist-map",
+      "canonical_url": "https://srilanka.travel/tourist-map",
+      "visible_link_text": "Tourist Map of Sri\n                                Lanka",
+      "primary_category": "destination_geographic_information",
+      "secondary_tags": [
+        "geographic"
+      ],
+      "knowledge_base_categories": [
+        "geographic"
+      ],
+      "classification_evidence": [
+        "path=tourist-map",
+        "link_text=tourist map of sri lanka",
+        "destination keyword"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 82,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/index.php?route=event/upcoming&dev=asd",
+      "canonical_url": "https://srilanka.travel/index.php?dev=asd&route=event%2Fupcoming",
+      "visible_link_text": "UPCOMING EVENTS",
+      "primary_category": "events_festivals",
+      "secondary_tags": [
+        "events"
+      ],
+      "knowledge_base_categories": [
+        "events"
+      ],
+      "classification_evidence": [
+        "path=index.php",
+        "route=event/upcoming",
+        "link_text=upcoming events",
+        "event route or identifier"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 80,
+      "proposed_acquisition_priority": 9,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered URL selected as a high-value follow-up review candidate; still not authorized for fetching.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/index.php?route=event/events&event=312&id=22",
+      "canonical_url": "https://srilanka.travel/index.php?event=312&id=22&route=event%2Fevents",
+      "visible_link_text": null,
+      "primary_category": "events_festivals",
+      "secondary_tags": [
+        "events"
+      ],
+      "knowledge_base_categories": [
+        "events"
+      ],
+      "classification_evidence": [
+        "path=index.php",
+        "route=event/events",
+        "event route or identifier"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 80,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/index.php?route=information/information&information_id=223",
+      "canonical_url": "https://srilanka.travel/index.php?information_id=223&route=information%2Finformation",
+      "visible_link_text": "Public Holidays in Sri Lanka",
+      "primary_category": "public_holidays_poya",
+      "secondary_tags": [
+        "time_context",
+        "calendar"
+      ],
+      "knowledge_base_categories": [
+        "time_context",
+        "calendar"
+      ],
+      "classification_evidence": [
+        "path=index.php",
+        "route=information/information",
+        "link_text=public holidays in sri lanka",
+        "information_id plus visible public-holiday label"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 80,
+      "proposed_acquisition_priority": 8,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered URL selected as a high-value follow-up review candidate; still not authorized for fetching.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/ArrivebyaCruise",
+      "canonical_url": "https://srilanka.travel/ArrivebyaCruise",
+      "visible_link_text": "Cruise Tourism",
+      "primary_category": "transportation_travel_information",
+      "secondary_tags": [
+        "travel_planning"
+      ],
+      "knowledge_base_categories": [
+        "travel_planning"
+      ],
+      "classification_evidence": [
+        "path=arrivebyacruise",
+        "link_text=cruise tourism",
+        "transport or travel keyword"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 72,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/airports",
+      "canonical_url": "https://srilanka.travel/airports",
+      "visible_link_text": "Airports",
+      "primary_category": "transportation_travel_information",
+      "secondary_tags": [
+        "travel_planning"
+      ],
+      "knowledge_base_categories": [
+        "travel_planning"
+      ],
+      "classification_evidence": [
+        "path=airports",
+        "link_text=airports",
+        "transport or travel keyword"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 72,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/before-you-go",
+      "canonical_url": "https://srilanka.travel/before-you-go",
+      "visible_link_text": "Before You Go",
+      "primary_category": "transportation_travel_information",
+      "secondary_tags": [
+        "travel_planning"
+      ],
+      "knowledge_base_categories": [
+        "travel_planning"
+      ],
+      "classification_evidence": [
+        "path=before-you-go",
+        "link_text=before you go",
+        "transport or travel keyword"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 72,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/flight-booking",
+      "canonical_url": "https://srilanka.travel/flight-booking",
+      "visible_link_text": "Book Your Flights",
+      "primary_category": "transportation_travel_information",
+      "secondary_tags": [
+        "travel_planning"
+      ],
+      "knowledge_base_categories": [
+        "travel_planning"
+      ],
+      "classification_evidence": [
+        "path=flight-booking",
+        "link_text=book your flights",
+        "transport or travel keyword"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 72,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/getting-around",
+      "canonical_url": "https://srilanka.travel/getting-around",
+      "visible_link_text": "Getting Around",
+      "primary_category": "transportation_travel_information",
+      "secondary_tags": [
+        "travel_planning"
+      ],
+      "knowledge_base_categories": [
+        "travel_planning"
+      ],
+      "classification_evidence": [
+        "path=getting-around",
+        "link_text=getting around",
+        "transport or travel keyword"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 72,
+      "proposed_acquisition_priority": 7,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered URL selected as a high-value follow-up review candidate; still not authorized for fetching.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/transport",
+      "canonical_url": "https://srilanka.travel/transport",
+      "visible_link_text": "Transport",
+      "primary_category": "transportation_travel_information",
+      "secondary_tags": [
+        "travel_planning"
+      ],
+      "knowledge_base_categories": [
+        "travel_planning"
+      ],
+      "classification_evidence": [
+        "path=transport",
+        "link_text=transport",
+        "transport or travel keyword"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 72,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/travel-tips",
+      "canonical_url": "https://srilanka.travel/travel-tips",
+      "visible_link_text": "General tips and tricks",
+      "primary_category": "transportation_travel_information",
+      "secondary_tags": [
+        "travel_planning"
+      ],
+      "knowledge_base_categories": [
+        "travel_planning"
+      ],
+      "classification_evidence": [
+        "path=travel-tips",
+        "link_text=general tips and tricks",
+        "transport or travel keyword"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 72,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/spa-and-wellness-centers",
+      "canonical_url": "https://srilanka.travel/spa-and-wellness-centers",
+      "visible_link_text": "Spa & Wellness Centers",
+      "primary_category": "wellness_ayurveda",
+      "secondary_tags": [
+        "wellness"
+      ],
+      "knowledge_base_categories": [
+        "wellness"
+      ],
+      "classification_evidence": [
+        "path=spa-and-wellness-centers",
+        "link_text=spa & wellness centers",
+        "wellness keyword"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 70,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/wellness-tourism",
+      "canonical_url": "https://srilanka.travel/wellness-tourism",
+      "visible_link_text": "wellness tourism",
+      "primary_category": "wellness_ayurveda",
+      "secondary_tags": [
+        "wellness"
+      ],
+      "knowledge_base_categories": [
+        "wellness"
+      ],
+      "classification_evidence": [
+        "path=wellness-tourism",
+        "link_text=wellness tourism",
+        "wellness keyword"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 70,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://www.srilanka.travel/culinary-tourism",
+      "canonical_url": "https://srilanka.travel/culinary-tourism",
+      "visible_link_text": "ESSENCE",
+      "primary_category": "food_culinary_tourism",
+      "secondary_tags": [
+        "food"
+      ],
+      "knowledge_base_categories": [
+        "food"
+      ],
+      "classification_evidence": [
+        "path=culinary-tourism",
+        "link_text=essence",
+        "culinary keyword"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 68,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/eating-places",
+      "canonical_url": "https://srilanka.travel/eating-places",
+      "visible_link_text": "Tourist Friendly Eating Places",
+      "primary_category": "food_culinary_tourism",
+      "secondary_tags": [
+        "food"
+      ],
+      "knowledge_base_categories": [
+        "food"
+      ],
+      "classification_evidence": [
+        "path=eating-places",
+        "link_text=tourist friendly eating places",
+        "culinary keyword"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 68,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/restaurants",
+      "canonical_url": "https://srilanka.travel/restaurants",
+      "visible_link_text": "Dining",
+      "primary_category": "food_culinary_tourism",
+      "secondary_tags": [
+        "food"
+      ],
+      "knowledge_base_categories": [
+        "food"
+      ],
+      "classification_evidence": [
+        "path=restaurants",
+        "link_text=dining",
+        "culinary keyword"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 68,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/spice-gardens",
+      "canonical_url": "https://srilanka.travel/spice-gardens",
+      "visible_link_text": "Spice Gardens",
+      "primary_category": "food_culinary_tourism",
+      "secondary_tags": [
+        "food"
+      ],
+      "knowledge_base_categories": [
+        "food"
+      ],
+      "classification_evidence": [
+        "path=spice-gardens",
+        "link_text=spice gardens",
+        "culinary keyword"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 68,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/accommodation",
+      "canonical_url": "https://srilanka.travel/accommodation",
+      "visible_link_text": "Book Your Accommodation",
+      "primary_category": "accommodation_tourism_services",
+      "secondary_tags": [
+        "tourism_service"
+      ],
+      "knowledge_base_categories": [
+        "tourism_service"
+      ],
+      "classification_evidence": [
+        "path=accommodation",
+        "link_text=book your accommodation",
+        "service keyword"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 60,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/authorized-tourist-drivers",
+      "canonical_url": "https://srilanka.travel/authorized-tourist-drivers",
+      "visible_link_text": "Authorized Tourist Drivers",
+      "primary_category": "accommodation_tourism_services",
+      "secondary_tags": [
+        "tourism_service"
+      ],
+      "knowledge_base_categories": [
+        "tourism_service"
+      ],
+      "classification_evidence": [
+        "path=authorized-tourist-drivers",
+        "link_text=authorized tourist drivers",
+        "service keyword"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 60,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/authorized-tuk-tuk-drivers",
+      "canonical_url": "https://srilanka.travel/authorized-tuk-tuk-drivers",
+      "visible_link_text": "Authorized Tuk Tuk Drivers",
+      "primary_category": "accommodation_tourism_services",
+      "secondary_tags": [
+        "tourism_service"
+      ],
+      "knowledge_base_categories": [
+        "tourism_service"
+      ],
+      "classification_evidence": [
+        "path=authorized-tuk-tuk-drivers",
+        "link_text=authorized tuk tuk drivers",
+        "service keyword"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 60,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/newly-registered-hotels-and-other-accommodation",
+      "canonical_url": "https://srilanka.travel/newly-registered-hotels-and-other-accommodation",
+      "visible_link_text": "Newly Registered Hotels & Other Accommodation",
+      "primary_category": "accommodation_tourism_services",
+      "secondary_tags": [
+        "tourism_service"
+      ],
+      "knowledge_base_categories": [
+        "tourism_service"
+      ],
+      "classification_evidence": [
+        "path=newly-registered-hotels-and-other-accommodation",
+        "link_text=newly registered hotels & other accommodation",
+        "service keyword"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 60,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/tourist-guides",
+      "canonical_url": "https://srilanka.travel/tourist-guides",
+      "visible_link_text": "Tour\n                                Guides",
+      "primary_category": "accommodation_tourism_services",
+      "secondary_tags": [
+        "tourism_service",
+        "guide"
+      ],
+      "knowledge_base_categories": [
+        "tourism_service",
+        "guide"
+      ],
+      "classification_evidence": [
+        "path=tourist-guides",
+        "link_text=tour guides",
+        "tourism service path"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 60,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/travel-agents",
+      "canonical_url": "https://srilanka.travel/travel-agents",
+      "visible_link_text": "Travel Agents",
+      "primary_category": "accommodation_tourism_services",
+      "secondary_tags": [
+        "tourism_service"
+      ],
+      "knowledge_base_categories": [
+        "tourism_service"
+      ],
+      "classification_evidence": [
+        "path=travel-agents",
+        "link_text=travel agents",
+        "service keyword"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 60,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/online-ticketing",
+      "canonical_url": "https://srilanka.travel/online-ticketing",
+      "visible_link_text": "Buy\n                                E-Tickets for Attractions",
+      "primary_category": "operating_information",
+      "secondary_tags": [
+        "operational"
+      ],
+      "knowledge_base_categories": [
+        "operational"
+      ],
+      "classification_evidence": [
+        "path=online-ticketing",
+        "link_text=buy e-tickets for attractions",
+        "operating-information keyword"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 50,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/",
+      "canonical_url": "https://srilanka.travel/",
+      "visible_link_text": null,
+      "primary_category": "other_unknown",
+      "secondary_tags": [],
+      "knowledge_base_categories": [],
+      "classification_evidence": [
+        "path=/",
+        "no deterministic category rule matched"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 20,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/bliss-nature-trails",
+      "canonical_url": "https://srilanka.travel/bliss-nature-trails",
+      "visible_link_text": "Ayurveda",
+      "primary_category": "other_unknown",
+      "secondary_tags": [
+        "path_link_text_conflict",
+        "manual_review_required"
+      ],
+      "knowledge_base_categories": [
+        "path_link_text_conflict",
+        "manual_review_required"
+      ],
+      "classification_evidence": [
+        "path=bliss-nature-trails",
+        "link_text=ayurveda",
+        "path/link-text conflict requires content review"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 20,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/book-your-trip",
+      "canonical_url": "https://srilanka.travel/book-your-trip",
+      "visible_link_text": "Book Your Trip",
+      "primary_category": "other_unknown",
+      "secondary_tags": [],
+      "knowledge_base_categories": [],
+      "classification_evidence": [
+        "path=book-your-trip",
+        "link_text=book your trip",
+        "no deterministic category rule matched"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 20,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/colombo-city-tour",
+      "canonical_url": "https://srilanka.travel/colombo-city-tour",
+      "visible_link_text": "Colombo City Tour",
+      "primary_category": "other_unknown",
+      "secondary_tags": [],
+      "knowledge_base_categories": [],
+      "classification_evidence": [
+        "path=colombo-city-tour",
+        "link_text=colombo city tour",
+        "no deterministic category rule matched"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 20,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/digitalnomad",
+      "canonical_url": "https://srilanka.travel/digitalnomad",
+      "visible_link_text": "Digital Nomads",
+      "primary_category": "other_unknown",
+      "secondary_tags": [],
+      "knowledge_base_categories": [],
+      "classification_evidence": [
+        "path=digitalnomad",
+        "link_text=digital nomads",
+        "no deterministic category rule matched"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 20,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/emergency-services",
+      "canonical_url": "https://srilanka.travel/emergency-services",
+      "visible_link_text": "Emergency\n                                Services",
+      "primary_category": "other_unknown",
+      "secondary_tags": [],
+      "knowledge_base_categories": [],
+      "classification_evidence": [
+        "path=emergency-services",
+        "link_text=emergency services",
+        "no deterministic category rule matched"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 20,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://www.srilanka.travel/festive",
+      "canonical_url": "https://srilanka.travel/festive",
+      "visible_link_text": "FESTIVE",
+      "primary_category": "other_unknown",
+      "secondary_tags": [],
+      "knowledge_base_categories": [],
+      "classification_evidence": [
+        "path=festive",
+        "link_text=festive",
+        "no deterministic category rule matched"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 20,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/foreign-embassies",
+      "canonical_url": "https://srilanka.travel/foreign-embassies",
+      "visible_link_text": "Foreign Embassies",
+      "primary_category": "other_unknown",
+      "secondary_tags": [],
+      "knowledge_base_categories": [],
+      "classification_evidence": [
+        "path=foreign-embassies",
+        "link_text=foreign embassies",
+        "no deterministic category rule matched"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 20,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/gemstone-srilanka",
+      "canonical_url": "https://srilanka.travel/gemstone-srilanka",
+      "visible_link_text": "Buy Gemstone",
+      "primary_category": "other_unknown",
+      "secondary_tags": [],
+      "knowledge_base_categories": [],
+      "classification_evidence": [
+        "path=gemstone-srilanka",
+        "link_text=buy gemstone",
+        "no deterministic category rule matched"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 20,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://www.srilanka.travel/index.php?route=travel/tostay&hotel_type=20&hotel_district=",
+      "canonical_url": "https://srilanka.travel/index.php?hotel_district=&hotel_type=20&route=travel%2Ftostay",
+      "visible_link_text": "Camping Sites",
+      "primary_category": "other_unknown",
+      "secondary_tags": [],
+      "knowledge_base_categories": [],
+      "classification_evidence": [
+        "path=index.php",
+        "route=travel/tostay",
+        "link_text=camping sites",
+        "no deterministic category rule matched"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 20,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/international-endorsements",
+      "canonical_url": "https://srilanka.travel/international-endorsements",
+      "visible_link_text": "International\n                                Endorsements",
+      "primary_category": "other_unknown",
+      "secondary_tags": [],
+      "knowledge_base_categories": [],
+      "classification_evidence": [
+        "path=international-endorsements",
+        "link_text=international endorsements",
+        "no deterministic category rule matched"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 20,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/marvels-of-sri-lanka",
+      "canonical_url": "https://srilanka.travel/marvels-of-sri-lanka",
+      "visible_link_text": "Marvels of Sri\n                                Lanka",
+      "primary_category": "other_unknown",
+      "secondary_tags": [],
+      "knowledge_base_categories": [],
+      "classification_evidence": [
+        "path=marvels-of-sri-lanka",
+        "link_text=marvels of sri lanka",
+        "no deterministic category rule matched"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 20,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/online-services",
+      "canonical_url": "https://srilanka.travel/online-services",
+      "visible_link_text": "Online Services",
+      "primary_category": "other_unknown",
+      "secondary_tags": [],
+      "knowledge_base_categories": [],
+      "classification_evidence": [
+        "path=online-services",
+        "link_text=online services",
+        "no deterministic category rule matched"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 20,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/research_tourism",
+      "canonical_url": "https://srilanka.travel/research_tourism",
+      "visible_link_text": "Research Tourism",
+      "primary_category": "other_unknown",
+      "secondary_tags": [],
+      "knowledge_base_categories": [],
+      "classification_evidence": [
+        "path=research_tourism",
+        "link_text=research tourism",
+        "no deterministic category rule matched"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 20,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://www.srilanka.travel/scenic-beauty",
+      "canonical_url": "https://srilanka.travel/scenic-beauty",
+      "visible_link_text": "SCENIC",
+      "primary_category": "other_unknown",
+      "secondary_tags": [],
+      "knowledge_base_categories": [],
+      "classification_evidence": [
+        "path=scenic-beauty",
+        "link_text=scenic",
+        "no deterministic category rule matched"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 20,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/srilanka-at-a-glance",
+      "canonical_url": "https://srilanka.travel/srilanka-at-a-glance",
+      "visible_link_text": "Sri Lanka At A Glance",
+      "primary_category": "other_unknown",
+      "secondary_tags": [],
+      "knowledge_base_categories": [],
+      "classification_evidence": [
+        "path=srilanka-at-a-glance",
+        "link_text=sri lanka at a glance",
+        "no deterministic category rule matched"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 20,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/things-to-do-in-colombo",
+      "canonical_url": "https://srilanka.travel/things-to-do-in-colombo",
+      "visible_link_text": "12 Things to Do in Colombo",
+      "primary_category": "other_unknown",
+      "secondary_tags": [],
+      "knowledge_base_categories": [],
+      "classification_evidence": [
+        "path=things-to-do-in-colombo",
+        "link_text=12 things to do in colombo",
+        "no deterministic category rule matched"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 20,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/tourism-updates",
+      "canonical_url": "https://srilanka.travel/tourism-updates",
+      "visible_link_text": "WHAT'S NEW",
+      "primary_category": "other_unknown",
+      "secondary_tags": [],
+      "knowledge_base_categories": [],
+      "classification_evidence": [
+        "path=tourism-updates",
+        "link_text=what's new",
+        "no deterministic category rule matched"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 20,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/tourist-shops",
+      "canonical_url": "https://srilanka.travel/tourist-shops",
+      "visible_link_text": "Tourist Shops",
+      "primary_category": "other_unknown",
+      "secondary_tags": [],
+      "knowledge_base_categories": [],
+      "classification_evidence": [
+        "path=tourist-shops",
+        "link_text=tourist shops",
+        "no deterministic category rule matched"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 20,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/travel-apps",
+      "canonical_url": "https://srilanka.travel/travel-apps",
+      "visible_link_text": "Travel Apps",
+      "primary_category": "other_unknown",
+      "secondary_tags": [],
+      "knowledge_base_categories": [],
+      "classification_evidence": [
+        "path=travel-apps",
+        "link_text=travel apps",
+        "no deterministic category rule matched"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 20,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/travel-magazines-and-directories",
+      "canonical_url": "https://srilanka.travel/travel-magazines-and-directories",
+      "visible_link_text": "Travel\n                                Magazines and Directories",
+      "primary_category": "other_unknown",
+      "secondary_tags": [],
+      "knowledge_base_categories": [],
+      "classification_evidence": [
+        "path=travel-magazines-and-directories",
+        "link_text=travel magazines and directories",
+        "no deterministic category rule matched"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 20,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/travel-news",
+      "canonical_url": "https://srilanka.travel/travel-news",
+      "visible_link_text": "Tourism News",
+      "primary_category": "other_unknown",
+      "secondary_tags": [],
+      "knowledge_base_categories": [],
+      "classification_evidence": [
+        "path=travel-news",
+        "link_text=tourism news",
+        "no deterministic category rule matched"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 20,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/travel_habits",
+      "canonical_url": "https://srilanka.travel/travel_habits",
+      "visible_link_text": "Travel Habits",
+      "primary_category": "other_unknown",
+      "secondary_tags": [],
+      "knowledge_base_categories": [],
+      "classification_evidence": [
+        "path=travel_habits",
+        "link_text=travel habits",
+        "no deterministic category rule matched"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 20,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/upcoming-events&event=316&dev=asd",
+      "canonical_url": "https://srilanka.travel/upcoming-events&event=316&dev=asd",
+      "visible_link_text": null,
+      "primary_category": "other_unknown",
+      "secondary_tags": [],
+      "knowledge_base_categories": [],
+      "classification_evidence": [
+        "path=upcoming-events&event=316&dev=asd",
+        "no deterministic category rule matched"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 20,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/volunteer_tourism",
+      "canonical_url": "https://srilanka.travel/volunteer_tourism",
+      "visible_link_text": "Volunteer Tourism",
+      "primary_category": "other_unknown",
+      "secondary_tags": [],
+      "knowledge_base_categories": [],
+      "classification_evidence": [
+        "path=volunteer_tourism",
+        "link_text=volunteer tourism",
+        "no deterministic category rule matched"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 20,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/what_world_has_to_say",
+      "canonical_url": "https://srilanka.travel/what_world_has_to_say",
+      "visible_link_text": "WHAT THE WORLD HAS TO SAY",
+      "primary_category": "other_unknown",
+      "secondary_tags": [],
+      "knowledge_base_categories": [],
+      "classification_evidence": [
+        "path=what_world_has_to_say",
+        "link_text=what the world has to say",
+        "no deterministic category rule matched"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 20,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/Important-Notices",
+      "canonical_url": "https://srilanka.travel/Important-Notices",
+      "visible_link_text": "Important Notices",
+      "primary_category": "administrative_corporate_information",
+      "secondary_tags": [
+        "administrative"
+      ],
+      "knowledge_base_categories": [
+        "administrative"
+      ],
+      "classification_evidence": [
+        "path=important-notices",
+        "link_text=important notices",
+        "administrative keyword"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 10,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/Key_Contacts",
+      "canonical_url": "https://srilanka.travel/Key_Contacts",
+      "visible_link_text": "Key Contacts",
+      "primary_category": "administrative_corporate_information",
+      "secondary_tags": [
+        "administrative"
+      ],
+      "knowledge_base_categories": [
+        "administrative"
+      ],
+      "classification_evidence": [
+        "path=key_contacts",
+        "link_text=key contacts",
+        "administrative keyword"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 10,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://www.srilanka.travel/about-us",
+      "canonical_url": "https://srilanka.travel/about-us",
+      "visible_link_text": "ABOUT US",
+      "primary_category": "administrative_corporate_information",
+      "secondary_tags": [
+        "administrative"
+      ],
+      "knowledge_base_categories": [
+        "administrative"
+      ],
+      "classification_evidence": [
+        "path=about-us",
+        "link_text=about us",
+        "administrative keyword"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 10,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/board-of-directors",
+      "canonical_url": "https://srilanka.travel/board-of-directors",
+      "visible_link_text": "Board of Directors",
+      "primary_category": "administrative_corporate_information",
+      "secondary_tags": [
+        "administrative"
+      ],
+      "knowledge_base_categories": [
+        "administrative"
+      ],
+      "classification_evidence": [
+        "path=board-of-directors",
+        "link_text=board of directors",
+        "administrative keyword"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 10,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/meet-us",
+      "canonical_url": "https://srilanka.travel/meet-us",
+      "visible_link_text": "Meet Us",
+      "primary_category": "administrative_corporate_information",
+      "secondary_tags": [
+        "administrative"
+      ],
+      "knowledge_base_categories": [
+        "administrative"
+      ],
+      "classification_evidence": [
+        "path=meet-us",
+        "link_text=meet us",
+        "administrative keyword"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 10,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/promotionalkit",
+      "canonical_url": "https://srilanka.travel/promotionalkit",
+      "visible_link_text": "SLTPB Promotional KIT",
+      "primary_category": "administrative_corporate_information",
+      "secondary_tags": [
+        "administrative"
+      ],
+      "knowledge_base_categories": [
+        "administrative"
+      ],
+      "classification_evidence": [
+        "path=promotionalkit",
+        "link_text=sltpb promotional kit",
+        "administrative keyword"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 10,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/sitemap",
+      "canonical_url": "https://srilanka.travel/sitemap",
+      "visible_link_text": "Site Map",
+      "primary_category": "navigation_discovery",
+      "secondary_tags": [
+        "discovery"
+      ],
+      "knowledge_base_categories": [
+        "discovery"
+      ],
+      "classification_evidence": [
+        "path=sitemap",
+        "link_text=site map",
+        "site navigation path"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 10,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/tender-documents",
+      "canonical_url": "https://srilanka.travel/tender-documents",
+      "visible_link_text": "Tenders",
+      "primary_category": "administrative_corporate_information",
+      "secondary_tags": [
+        "administrative"
+      ],
+      "knowledge_base_categories": [
+        "administrative"
+      ],
+      "classification_evidence": [
+        "path=tender-documents",
+        "link_text=tenders",
+        "administrative keyword"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 10,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    },
+    {
+      "original_url": "https://srilanka.travel/terms-and-conditions",
+      "canonical_url": "https://srilanka.travel/terms-and-conditions",
+      "visible_link_text": "Terms of Use",
+      "primary_category": "legal_governance",
+      "secondary_tags": [
+        "governance"
+      ],
+      "knowledge_base_categories": [
+        "governance"
+      ],
+      "classification_evidence": [
+        "path=terms-and-conditions",
+        "link_text=terms of use",
+        "legal governance path"
+      ],
+      "external_source_id": null,
+      "research_relevance_score": 5,
+      "proposed_acquisition_priority": null,
+      "authorization_status": "discovered_unapproved",
+      "human_review_status": "pending_review",
+      "proposed_extraction_adapter": "listing_or_information_review",
+      "inclusion_reason": "Homepage-discovered internal URL; requires human review before any fetch.",
+      "reconciliation_status": "non_attraction_information"
+    }
+  ]
+}

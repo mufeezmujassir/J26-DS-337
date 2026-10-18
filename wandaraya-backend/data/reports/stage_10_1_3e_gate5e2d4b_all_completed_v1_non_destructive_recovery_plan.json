@@ -1,0 +1,20 @@
+{
+  "preconditions": [
+    "Free substantial disk capacity; current production storage was observed at 99% used.",
+    "Use Docker-managed Linux/named-volume storage, not the Windows bind mount, for primary Qdrant storage.",
+    "Use Qdrant v1.19.1 or later tested patch release in staging.",
+    "Build a different staging collection name; do not delete, restore, or overwrite sri_lanka_attractions.",
+    "Regenerate semantic documents and BGE embeddings from PostgreSQL under an explicit, bounded reindex authorization.",
+    "Validate point count, stable IDs, filtered scroll, vector search, and retrieval before any cutover plan."
+  ],
+  "prohibited_in_this_gate": [
+    "production collection recreation",
+    "production snapshot restore",
+    "production Qdrant upsert",
+    "production PostgreSQL write",
+    "automatic server upgrade"
+  ],
+  "recommended_strategy": "build_and_validate_a_new_staging_collection_from_postgresql_semantic_documents",
+  "status": "REQUIRES_SEPARATE_EXPLICIT_APPROVAL",
+  "why": "The existing collection and its snapshot cannot complete a full read/restore audit."
+}
