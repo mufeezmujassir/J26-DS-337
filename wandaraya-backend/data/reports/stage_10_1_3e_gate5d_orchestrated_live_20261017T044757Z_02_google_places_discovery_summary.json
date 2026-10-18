@@ -1,0 +1,12 @@
+{
+  "classifications": {
+    "new_google_place_candidate": 1,
+    "verified_existing_kb_match": 1
+  },
+  "postgresql_writes": false,
+  "processed_records": 2,
+  "qdrant_writes": false,
+  "queue_path": "data/reports/stage_10_1_3e_gate5c_all_batches_v2_gate5c_v2_google_places_enrichment_queue.json",
+  "queue_sha256": "aa0d30c7c29d5e328cc48825b91d047c94f495a426b819902dedf197521cf78d",
+  "status": "review_only"
+}

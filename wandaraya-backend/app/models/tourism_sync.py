@@ -1,0 +1,28 @@
+"""Approval-governed tables for future tourism synchronization; no write service here."""
+from datetime import datetime, timezone
+from sqlalchemy import DateTime, ForeignKey, Integer, JSON, String, Text, UniqueConstraint
+from sqlalchemy.orm import Mapped, mapped_column
+from app.database import Base
+
+def utcnow(): return datetime.now(timezone.utc)
+
+class AttractionSourceReference(Base):
+    __tablename__="attraction_source_references"; __table_args__=(UniqueConstraint("source_provider","external_source_id",name="uq_attraction_source_provider_external_id"),)
+    id: Mapped[int]=mapped_column(primary_key=True); attraction_id: Mapped[int|None]=mapped_column(ForeignKey("attractions.id",ondelete="RESTRICT"),nullable=True,index=True)
+    source_provider: Mapped[str]=mapped_column(String(80),nullable=False); external_source_id: Mapped[str]=mapped_column(String(255),nullable=False); canonical_source_url: Mapped[str|None]=mapped_column(Text); source_title: Mapped[str|None]=mapped_column(String(500)); identity_status: Mapped[str]=mapped_column(String(80),nullable=False,default="unverified"); discovered_at: Mapped[datetime|None]=mapped_column(DateTime(timezone=True)); last_verified_at: Mapped[datetime|None]=mapped_column(DateTime(timezone=True)); import_batch_id: Mapped[str|None]=mapped_column(String(120)); created_at: Mapped[datetime]=mapped_column(DateTime(timezone=True),default=utcnow); updated_at: Mapped[datetime]=mapped_column(DateTime(timezone=True),default=utcnow,onupdate=utcnow)
+
+class AttractionFieldProvenance(Base):
+    __tablename__="attraction_field_provenance"
+    id: Mapped[int]=mapped_column(primary_key=True); attraction_id: Mapped[int|None]=mapped_column(ForeignKey("attractions.id",ondelete="RESTRICT"),nullable=True,index=True); source_reference_id: Mapped[int|None]=mapped_column(ForeignKey("attraction_source_references.id",ondelete="SET NULL")); field_name: Mapped[str]=mapped_column(String(100),nullable=False); source_provider: Mapped[str]=mapped_column(String(80),nullable=False); source_record_id: Mapped[str|None]=mapped_column(String(255)); observed_at: Mapped[datetime|None]=mapped_column(DateTime(timezone=True)); value_fingerprint: Mapped[str|None]=mapped_column(String(64)); import_batch_id: Mapped[str|None]=mapped_column(String(120)); approval_reference: Mapped[str|None]=mapped_column(String(120)); created_at: Mapped[datetime]=mapped_column(DateTime(timezone=True),default=utcnow)
+
+class TourismImportBatch(Base):
+    __tablename__="tourism_import_batches"
+    batch_id: Mapped[str]=mapped_column(String(120),primary_key=True); source_provider: Mapped[str]=mapped_column(String(80),nullable=False); input_manifest_sha256: Mapped[str]=mapped_column(String(64),nullable=False); input_checkpoint_sha256: Mapped[str]=mapped_column(String(64),nullable=False); queue_sha256: Mapped[str]=mapped_column(String(64),nullable=False); status: Mapped[str]=mapped_column(String(50),nullable=False); proposed_insert_count: Mapped[int]=mapped_column(Integer,default=0); proposed_link_count: Mapped[int]=mapped_column(Integer,default=0); approved_action_count: Mapped[int]=mapped_column(Integer,default=0); applied_action_count: Mapped[int]=mapped_column(Integer,default=0); rejected_action_count: Mapped[int]=mapped_column(Integer,default=0); failed_action_count: Mapped[int]=mapped_column(Integer,default=0); started_at: Mapped[datetime|None]=mapped_column(DateTime(timezone=True)); completed_at: Mapped[datetime|None]=mapped_column(DateTime(timezone=True)); error_summary: Mapped[str|None]=mapped_column(Text); created_at: Mapped[datetime]=mapped_column(DateTime(timezone=True),default=utcnow); updated_at: Mapped[datetime]=mapped_column(DateTime(timezone=True),default=utcnow,onupdate=utcnow)
+
+class TourismSyncReview(Base):
+    __tablename__="tourism_sync_reviews"; __table_args__=(UniqueConstraint("import_batch_id","source_attraction_id",name="uq_tourism_review_batch_source"),)
+    id: Mapped[int]=mapped_column(primary_key=True); import_batch_id: Mapped[str]=mapped_column(ForeignKey("tourism_import_batches.batch_id",ondelete="RESTRICT"),nullable=False); source_attraction_id: Mapped[str]=mapped_column(String(255),nullable=False); proposed_action: Mapped[str]=mapped_column(String(60),nullable=False); proposed_target_attraction_id: Mapped[int|None]=mapped_column(ForeignKey("attractions.id",ondelete="RESTRICT")); source_manifest_sha256: Mapped[str]=mapped_column(String(64),nullable=False); action_payload_sha256: Mapped[str]=mapped_column(String(64),nullable=False); approval_status: Mapped[str]=mapped_column(String(40),nullable=False,default="pending"); reviewer_identity: Mapped[str|None]=mapped_column(String(255)); decision_at: Mapped[datetime|None]=mapped_column(DateTime(timezone=True)); review_notes: Mapped[str|None]=mapped_column(Text); created_at: Mapped[datetime]=mapped_column(DateTime(timezone=True),default=utcnow)
+
+class TourismDuplicateCluster(Base):
+    __tablename__="tourism_duplicate_clusters"
+    id: Mapped[int]=mapped_column(primary_key=True); import_batch_id: Mapped[str]=mapped_column(ForeignKey("tourism_import_batches.batch_id",ondelete="RESTRICT"),nullable=False,index=True); cluster_key: Mapped[str]=mapped_column(String(255),nullable=False); source_ids: Mapped[dict]=mapped_column(JSON,nullable=False); google_place_ids: Mapped[dict]=mapped_column(JSON,nullable=False); candidate_attraction_ids: Mapped[dict]=mapped_column(JSON,nullable=False); conflict_evidence: Mapped[dict]=mapped_column(JSON,nullable=False); review_status: Mapped[str]=mapped_column(String(40),nullable=False,default="unresolved"); reviewer_decision: Mapped[str|None]=mapped_column(String(40)); created_at: Mapped[datetime]=mapped_column(DateTime(timezone=True),default=utcnow)

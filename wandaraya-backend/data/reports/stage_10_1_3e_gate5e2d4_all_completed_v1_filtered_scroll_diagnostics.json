@@ -1,0 +1,200 @@
+{
+  "collection_metadata": {
+    "http_status": 200,
+    "request_body": null,
+    "response_body": {
+      "result": {
+        "config": {
+          "hnsw_config": {
+            "ef_construct": 100,
+            "full_scan_threshold": 10000,
+            "m": 16,
+            "max_indexing_threads": 0,
+            "on_disk": false
+          },
+          "optimizer_config": {
+            "default_segment_number": 0,
+            "deleted_threshold": 0.2,
+            "flush_interval_sec": 5,
+            "indexing_threshold": 10000,
+            "max_optimization_threads": null,
+            "max_segment_size": null,
+            "memmap_threshold": null,
+            "prevent_unoptimized": null,
+            "vacuum_min_vector_number": 1000
+          },
+          "params": {
+            "on_disk_payload": true,
+            "replication_factor": 1,
+            "shard_number": 1,
+            "vectors": {
+              "distance": "Cosine",
+              "size": 1024
+            },
+            "write_consistency_factor": 1
+          },
+          "quantization_config": null,
+          "wal_config": {
+            "wal_capacity_mb": 32,
+            "wal_retain_closed": 1,
+            "wal_segments_ahead": 0
+          }
+        },
+        "indexed_vectors_count": 0,
+        "optimizer_status": "ok",
+        "payload_schema": {},
+        "points_count": 6098,
+        "segments_count": 8,
+        "status": "green",
+        "update_queue": {
+          "length": 0
+        }
+      },
+      "status": "ok",
+      "time": 0.000481012
+    },
+    "response_time_ms": 2.75,
+    "status": "ok"
+  },
+  "direct_point_retrieval": {
+    "point_id": 1,
+    "response_time_ms": 9.94,
+    "returned_points": 1,
+    "status": "ok"
+  },
+  "filtered_scroll_existing_value_python_client": {
+    "error": "Unexpected Response: 500 (Internal Server Error)\nRaw response content:\nb'{\"status\":{\"error\":\"Service internal error: 1 of 1 read operations failed:\\\\n  Service internal error: task 664 panicked with message \\\\\"called `Result::unwrap()` on an `Err` value: OffsetZero\\\\\"\"},\"t ...'",
+    "error_type": "UnexpectedResponse",
+    "request": {
+      "limit": 1,
+      "scroll_filter": {
+        "must": [
+          {
+            "key": "attraction_id",
+            "match": {
+              "value": 1
+            }
+          }
+        ]
+      }
+    },
+    "response_time_ms": 1017.27,
+    "status": "failed"
+  },
+  "filtered_scroll_existing_value_rest": {
+    "http_status": 500,
+    "request_body": {
+      "filter": {
+        "must": [
+          {
+            "key": "attraction_id",
+            "match": {
+              "value": 1
+            }
+          }
+        ]
+      },
+      "limit": 1,
+      "with_payload": true,
+      "with_vector": false
+    },
+    "response_body": {
+      "status": {
+        "error": "Service internal error: 1 of 1 read operations failed:\n  Service internal error: task 632 panicked with message \"called `Result::unwrap()` on an `Err` value: OffsetZero\""
+      },
+      "time": 1.014965445
+    },
+    "response_time_ms": 1017.48,
+    "status": "failed"
+  },
+  "filtered_scroll_nonexistent_value_python_client": {
+    "error": "Unexpected Response: 500 (Internal Server Error)\nRaw response content:\nb'{\"status\":{\"error\":\"Service internal error: 1 of 1 read operations failed:\\\\n  Service internal error: task 679 panicked with message \\\\\"called `Result::unwrap()` on an `Err` value: OffsetZero\\\\\"\"},\"t ...'",
+    "error_type": "UnexpectedResponse",
+    "request": {
+      "limit": 1,
+      "scroll_filter": {
+        "must": [
+          {
+            "key": "attraction_id",
+            "match": {
+              "value": -9999999
+            }
+          }
+        ]
+      }
+    },
+    "response_time_ms": 1013.13,
+    "status": "failed"
+  },
+  "filtered_scroll_nonexistent_value_rest": {
+    "http_status": 500,
+    "request_body": {
+      "filter": {
+        "must": [
+          {
+            "key": "attraction_id",
+            "match": {
+              "value": -9999999
+            }
+          }
+        ]
+      },
+      "limit": 1,
+      "with_payload": true,
+      "with_vector": false
+    },
+    "response_body": {
+      "status": {
+        "error": "Service internal error: 1 of 1 read operations failed:\n  Service internal error: task 648 panicked with message \"called `Result::unwrap()` on an `Err` value: OffsetZero\""
+      },
+      "time": 1.01155511
+    },
+    "response_time_ms": 1018.51,
+    "status": "failed"
+  },
+  "root_cause": "server_side_mmap_payload_storage_failure: valid attraction_id filters fail through both REST and Python client with Qdrant OffsetZero; the initial unfiltered page and direct retrieval succeed, but pagination later fails with the same server panic",
+  "sample_filter_field": "attraction_id",
+  "sample_filter_value": 1,
+  "unfiltered_scroll_rest": {
+    "http_status": 200,
+    "request_body": {
+      "limit": 1,
+      "with_payload": true,
+      "with_vector": false
+    },
+    "response_body": {
+      "result": {
+        "next_page_offset": 2,
+        "points": [
+          {
+            "id": 1,
+            "payload": {
+              "activities": [
+                "Heritage Exploration",
+                "Sightseeing",
+                "Historical Exploration",
+                "Photography",
+                "Cultural Experience"
+              ],
+              "attraction_id": 1,
+              "categories": [
+                "History & Archaeology",
+                "Urban & City Attractions",
+                "Culture & Heritage",
+                "Photography & Scenic Spots"
+              ],
+              "city": "Galle",
+              "district": "Galle",
+              "name": "Galle Dutch Fort",
+              "province": "Southern"
+            }
+          }
+        ]
+      },
+      "status": "ok",
+      "time": 0.000442685
+    },
+    "response_time_ms": 4.35,
+    "status": "ok"
+  }
+}

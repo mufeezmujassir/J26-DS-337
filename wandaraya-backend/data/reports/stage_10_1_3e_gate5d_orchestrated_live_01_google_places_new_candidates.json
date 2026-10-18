@@ -1,0 +1,141 @@
+{
+  "records": [
+    {
+      "attraction_name": "Pallan Hela Mountain",
+      "candidates": [
+        {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.7097,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.213815599999999,
+            "longitude": 81.54318719999999
+          },
+          "display_name": "Pallan Hela",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "6G7V+G7F, Inginiyagala, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=4074498511107709146&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJtXaJP3Qd5ToR2thu6M6Gizg",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "hiking_area",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.5573,
+          "types": [
+            "hiking_area",
+            "sports_activity_location",
+            "point_of_interest",
+            "establishment"
+          ]
+        }
+      ],
+      "classification": "new_google_place_candidate",
+      "details": {
+        "data": {
+          "addressComponents": [
+            {
+              "languageCode": "en-US",
+              "longText": "6G7V+G7F",
+              "shortText": "6G7V+G7F",
+              "types": [
+                "plus_code"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Inginiyagala",
+              "shortText": "Inginiyagala",
+              "types": [
+                "locality",
+                "political"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Ampara",
+              "shortText": "Ampara",
+              "types": [
+                "administrative_area_level_2",
+                "political"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Eastern Province",
+              "shortText": "EP",
+              "types": [
+                "administrative_area_level_1",
+                "political"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Sri Lanka",
+              "shortText": "LK",
+              "types": [
+                "country",
+                "political"
+              ]
+            }
+          ],
+          "businessStatus": "OPERATIONAL",
+          "displayName": {
+            "languageCode": "en",
+            "text": "Pallan Hela"
+          },
+          "formattedAddress": "6G7V+G7F, Inginiyagala, Sri Lanka",
+          "googleMapsUri": "https://maps.google.com/?cid=4074498511107709146&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+          "id": "ChIJtXaJP3Qd5ToR2thu6M6Gizg",
+          "location": {
+            "latitude": 7.213815599999999,
+            "longitude": 81.54318719999999
+          },
+          "primaryType": "hiking_area",
+          "types": [
+            "hiking_area",
+            "sports_activity_location",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "error": null,
+        "provenance": {
+          "google_place_id": "ChIJtXaJP3Qd5ToR2thu6M6Gizg",
+          "source": "google_places_details"
+        }
+      },
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:136",
+      "google_candidate_kb_identity": "no_existing_kb_place_id_match",
+      "official_source_candidate_identity": "not_evaluated",
+      "query": "Pallan Hela Mountain, Sri Lanka",
+      "review_reasons": [],
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=136",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=136"
+    }
+  ]
+}

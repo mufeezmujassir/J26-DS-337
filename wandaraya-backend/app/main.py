@@ -87,6 +87,8 @@ async def refresh_knowledge_base(
             "successful": result.successful,
             "skipped": result.skipped,
             "failed": result.failed,
+            "wikipedia_enrichment_failures": result.wikipedia_enrichment_failures,
+            "wikivoyage_enrichment_failures": result.wikivoyage_enrichment_failures,
             "refreshed_attraction_ids": result.refreshed_attraction_ids,
             "errors": result.errors,
             "started_at": result.started_at.isoformat(),
@@ -130,6 +132,15 @@ async def discover_knowledge_base(
             )
 
         ingestion = result.ingestion
+        ingestion_results = ingestion.results if ingestion else []
+        wikipedia_enrichment_failures = sum(
+            any(warning.startswith("Wikipedia enrichment failed:") for warning in item.warnings)
+            for item in ingestion_results
+        )
+        wikivoyage_enrichment_failures = sum(
+            any(warning.startswith("Wikivoyage enrichment failed:") for warning in item.warnings)
+            for item in ingestion_results
+        )
         return {
             "discovered": result.discovered_count,
             "already_known": len(result.existing_place_ids),
@@ -137,6 +148,8 @@ async def discover_knowledge_base(
             "ingested_successfully": ingestion.success if ingestion else 0,
             "ingested_skipped": ingestion.skipped if ingestion else 0,
             "ingested_failed": ingestion.failed if ingestion else 0,
+            "wikipedia_enrichment_failures": wikipedia_enrichment_failures,
+            "wikivoyage_enrichment_failures": wikivoyage_enrichment_failures,
             "errors": result.errors,
         }
     finally:

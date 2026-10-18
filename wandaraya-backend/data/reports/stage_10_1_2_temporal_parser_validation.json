@@ -1,0 +1,94 @@
+{
+  "stage": "10.1.2",
+  "name": "Temporal Data Contracts and Deterministic Opening-Hours Parser",
+  "status": "COMPLETE_WITH_LIMITATIONS",
+  "implementation_date": "2026-10-14",
+  "scope": {
+    "database_mutations": false,
+    "external_api_calls": false,
+    "scraping": false,
+    "migrations": false,
+    "weather_logic_modified": false,
+    "ranking_logic_implemented": false,
+    "dependencies_added": false
+  },
+  "contracts": {
+    "time_context_request": "app/time_context/schemas.py:TimeContextRequest",
+    "timing_evidence": "app/time_context/schemas.py:TimingEvidence",
+    "normalized_interval": "app/time_context/opening_hours/schemas.py:NormalizedOpeningInterval",
+    "normalized_schedule": "app/time_context/opening_hours/schemas.py:NormalizedWeeklySchedule",
+    "opening_hours_evaluation": "app/time_context/opening_hours/schemas.py:OpeningHoursEvaluation",
+    "parser_version": "google-weekly-v1",
+    "timezone_default": "Asia/Colombo",
+    "naive_datetime_policy": "rejected",
+    "unknown_score_policy": "not applicable; no suitability score is implemented"
+  },
+  "parser_policy": {
+    "google_weekday_numbering": "Sunday=0 through Saturday=6",
+    "open_now_usage": "ignored for future-date evaluation",
+    "regular_24_hour_policy": "only a single Sunday 00:00 period without close is accepted",
+    "other_missing_close_policy": "ambiguous",
+    "same_day_reverse_period": "malformed",
+    "multi_day_period": "unsupported/malformed",
+    "overlap_policy": "conflicting",
+    "date_specific_exceptions": "not evaluated"
+  },
+  "pilot_validation": {
+    "verified": true,
+    "read_only": true,
+    "snapshot_utc": "2026-10-14T11:49:10.393650+00:00",
+    "active_attractions": 222,
+    "structured_schedule_count": 121,
+    "successfully_normalized": 120,
+    "rejected_schedule_count": 1,
+    "not_normalized_count": 102,
+    "json_null_schedule_count": 101,
+    "missing_close_representation_count": 79,
+    "overnight_interval_count": 0,
+    "validation_status_counts": {
+      "valid": 120,
+      "missing": 101,
+      "malformed": 0,
+      "ambiguous": 0,
+      "unsupported": 1,
+      "conflicting": 0
+    },
+    "warning_distribution": {
+      "open_now ignored": 121,
+      "opening_hours absent or JSON null": 101,
+      "multi_day period unsupported": 1
+    },
+    "district_coverage": {
+      "82": {"active": 36, "structured": 14, "valid": 13},
+      "80": {"active": 45, "structured": 26, "valid": 26},
+      "78": {"active": 25, "structured": 13, "valid": 13},
+      "89": {"active": 38, "structured": 27, "valid": 27}
+    },
+    "interpretation": "Normalization success is structural; it does not verify actual operating-hour correctness or freshness."
+  },
+  "tests": {
+    "environment": "wandaraya-api Docker container",
+    "command": "python -m pytest tests/time_context/test_google_period_parser.py tests/test_knowledge_base_api.py tests/weather_model/test_weather_context_service.py tests/weather_model/test_attraction_suitability.py tests/recommendation/test_weather_adapter.py tests/recommendation/test_semantic_weather_context_enrichment.py -q",
+    "passed": 49,
+    "failed": 0,
+    "skipped": 0,
+    "warnings": 1
+  },
+  "research_limitations": [
+    "Pilot dataset is not nationally representative.",
+    "No activity duration values are currently populated.",
+    "No date-specific exceptions, temporary closures, last-entry rules or holiday rules are evaluated.",
+    "Opening-hours provenance and retrieval timestamps are not independently persisted.",
+    "A regular weekly schedule result is not a real-time access or safety determination."
+  ],
+  "next_stage": {
+    "stage": "10.1.3",
+    "readiness": "REQUIRES_POLICY_DECISIONS",
+    "required_decisions": [
+      "Google billing, retention and attribution compliance.",
+      "Source precedence and conflict resolution policy.",
+      "Staleness threshold and refresh cadence.",
+      "Manual verification scope and update governance."
+    ]
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "active_attraction_count": 6096,
+  "conflicts": [
+    {
+      "classification": "EXISTING_ATTRACTION_REQUIRES_LINK_REVIEW",
+      "existing_source_reference": null,
+      "google_place_matches": [
+        {
+          "district_id": 90,
+          "google_place_id": "ChIJ0xLAizJv5DoRrRAT1_G7sf8",
+          "id": 3041,
+          "latitude": 6.8071364999999995,
+          "longitude": 81.0729593,
+          "name": "Rakkiththa Kanda Rajamaha Viharaya"
+        }
+      ],
+      "normalized_name_matches": [],
+      "payload": {
+        "category_id": 40,
+        "district_id": 90,
+        "field_provenance": [
+          "name",
+          "google_place_id",
+          "latitude",
+          "longitude",
+          "district_id",
+          "category_id",
+          "official_source_url"
+        ],
+        "google_place_id": "ChIJ0xLAizJv5DoRrRAT1_G7sf8",
+        "import_batch_id": "all_completed_v1",
+        "latitude": 6.8071364999999995,
+        "location": {
+          "latitude": 6.8071364999999995,
+          "longitude": 81.0729593,
+          "source": "saved_google_places_evidence"
+        },
+        "longitude": 81.0729593,
+        "name": "Ratmullukanda Viharaya",
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=89",
+        "slug": "ratmullukanda-viharaya-919e700096",
+        "source_attraction_id": "srilanka_tourism_attraction:89",
+        "source_provider": "srilanka_tourism",
+        "source_title": "Ratmullukanda Viharaya"
+      },
+      "reasons": [],
+      "source_attraction_id": "srilanka_tourism_attraction:89"
+    }
+  ],
+  "invalid_approved_actions": [],
+  "ready_actions": 24,
+  "valid_approved_actions": 25,
+  "writes_executed": false
+}

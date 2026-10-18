@@ -1,0 +1,39 @@
+{
+  "blockers": [
+    "qdrant_filtered_payload_scroll_unhealthy",
+    "bounded_identity_audit_incomplete",
+    "snapshot_restore_failed_in_isolated_environment",
+    "production_storage_disk_99_percent_used"
+  ],
+  "pending_vector_scope": [
+    6604,
+    6605,
+    6606,
+    6607,
+    6608,
+    6609,
+    6610,
+    6611,
+    6612,
+    6613,
+    6614,
+    6615,
+    6616,
+    6617,
+    6618,
+    6619,
+    6620,
+    6621,
+    6622,
+    6623,
+    6624,
+    6625,
+    6626,
+    6627
+  ],
+  "postgresql_active_attractions": 6120,
+  "postgresql_writes_executed": false,
+  "qdrant_points": 6098,
+  "qdrant_writes_executed": false,
+  "status": "NOT_READY_FOR_QDRANT_EXECUTION"
+}

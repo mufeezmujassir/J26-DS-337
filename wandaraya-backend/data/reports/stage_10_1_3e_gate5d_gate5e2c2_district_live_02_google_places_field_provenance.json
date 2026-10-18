@@ -1,0 +1,132 @@
+{
+  "records": [
+    {
+      "candidate_provenance": [
+        {
+          "field_mask": [
+            "id",
+            "displayName",
+            "formattedAddress",
+            "location",
+            "primaryType",
+            "types",
+            "businessStatus",
+            "googleMapsUri"
+          ],
+          "source": "google_places_search"
+        }
+      ],
+      "details_provenance": {
+        "google_place_id": "ChIJEboDq8fD5DoRACqxKCKqvBg",
+        "source": "google_places_details"
+      },
+      "external_source_id": "srilanka_tourism_attraction:143",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=143"
+    },
+    {
+      "candidate_provenance": [
+        {
+          "field_mask": [
+            "id",
+            "displayName",
+            "formattedAddress",
+            "location",
+            "primaryType",
+            "types",
+            "businessStatus",
+            "googleMapsUri"
+          ],
+          "source": "google_places_search"
+        }
+      ],
+      "details_provenance": {
+        "google_place_id": "ChIJcSrn8tVZ4joR-0J_mBD9vMU",
+        "source": "google_places_details"
+      },
+      "external_source_id": "srilanka_tourism_attraction:144",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=144"
+    },
+    {
+      "candidate_provenance": [
+        {
+          "field_mask": [
+            "id",
+            "displayName",
+            "formattedAddress",
+            "location",
+            "primaryType",
+            "types",
+            "businessStatus",
+            "googleMapsUri"
+          ],
+          "source": "google_places_search"
+        }
+      ],
+      "details_provenance": {
+        "google_place_id": "ChIJV-_dCaK8-zoR3yIZhmhLni4",
+        "source": "google_places_details"
+      },
+      "external_source_id": "srilanka_tourism_attraction:167",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=167"
+    },
+    {
+      "candidate_provenance": [
+        {
+          "field_mask": [
+            "id",
+            "displayName",
+            "formattedAddress",
+            "location",
+            "primaryType",
+            "types",
+            "businessStatus",
+            "googleMapsUri"
+          ],
+          "source": "google_places_search"
+        },
+        {
+          "field_mask": [
+            "id",
+            "displayName",
+            "formattedAddress",
+            "location",
+            "primaryType",
+            "types",
+            "businessStatus",
+            "googleMapsUri"
+          ],
+          "source": "google_places_search"
+        }
+      ],
+      "details_provenance": {
+        "google_place_id": "ChIJVeihOAM5_joRDTLKyO3RiE0",
+        "source": "google_places_details"
+      },
+      "external_source_id": "srilanka_tourism_attraction:171",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=171"
+    },
+    {
+      "candidate_provenance": [
+        {
+          "field_mask": [
+            "id",
+            "displayName",
+            "formattedAddress",
+            "location",
+            "primaryType",
+            "types",
+            "businessStatus",
+            "googleMapsUri"
+          ],
+          "source": "google_places_search"
+        }
+      ],
+      "details_provenance": {
+        "google_place_id": "ChIJs-C0QBZZ4joRve2DPoCs_BQ",
+        "source": "google_places_details"
+      },
+      "external_source_id": "srilanka_tourism_attraction:172",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=172"
+    }
+  ]
+}

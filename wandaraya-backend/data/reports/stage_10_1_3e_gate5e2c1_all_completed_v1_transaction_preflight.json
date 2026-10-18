@@ -1,0 +1,9 @@
+{
+  "dry_run": true,
+  "postgresql_writes": false,
+  "qdrant_writes": false,
+  "reasons": [
+    "quarantined actions require renewed evidence or cluster resolution"
+  ],
+  "status": "NOT_READY_FOR_WRITE"
+}

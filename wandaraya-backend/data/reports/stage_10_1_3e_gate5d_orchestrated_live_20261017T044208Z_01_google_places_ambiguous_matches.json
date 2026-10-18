@@ -1,0 +1,596 @@
+{
+  "records": [
+    {
+      "attraction_name": "The Steaming Hot Water Wells of Mahaoya",
+      "candidates": [
+        {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.4688,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.552223400000001,
+            "longitude": 81.3530279
+          },
+          "display_name": "Maha Oya Hot Water Spring",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "H923+V6J, Maha Oya, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=4158765496918591697&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJQdafhjzQ5DoR0cj7cy_ntjk",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "tourist_attraction",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.3766,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "business_status": null,
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.4615,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.5521811,
+            "longitude": 81.3530409
+          },
+          "display_name": "Maha Oya Hot Water Springs",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "Maha Oya Hot Water Springs, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=566251318573525541&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJVcAvhTzQ5DoRJeor-ZK62wc",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "river",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.3712,
+          "types": [
+            "river",
+            "natural_feature",
+            "establishment"
+          ]
+        }
+      ],
+      "classification": "ambiguous_multiple_candidates",
+      "details": {
+        "data": {
+          "addressComponents": [
+            {
+              "languageCode": "en-US",
+              "longText": "H923+V6J",
+              "shortText": "H923+V6J",
+              "types": [
+                "plus_code"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Maha Oya",
+              "shortText": "Maha Oya",
+              "types": [
+                "locality",
+                "political"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Ampara",
+              "shortText": "Ampara",
+              "types": [
+                "administrative_area_level_2",
+                "political"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Eastern Province",
+              "shortText": "EP",
+              "types": [
+                "administrative_area_level_1",
+                "political"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Sri Lanka",
+              "shortText": "LK",
+              "types": [
+                "country",
+                "political"
+              ]
+            }
+          ],
+          "businessStatus": "OPERATIONAL",
+          "currentOpeningHours": {
+            "nextCloseTime": "2026-10-17T14:30:00Z",
+            "openNow": true,
+            "periods": [
+              {
+                "close": {
+                  "date": {
+                    "day": 18,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 0,
+                  "hour": 20,
+                  "minute": 0
+                },
+                "open": {
+                  "date": {
+                    "day": 18,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 0,
+                  "hour": 8,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "date": {
+                    "day": 19,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 1,
+                  "hour": 20,
+                  "minute": 0
+                },
+                "open": {
+                  "date": {
+                    "day": 19,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 1,
+                  "hour": 8,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "date": {
+                    "day": 20,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 2,
+                  "hour": 20,
+                  "minute": 0
+                },
+                "open": {
+                  "date": {
+                    "day": 20,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 2,
+                  "hour": 8,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "date": {
+                    "day": 21,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 3,
+                  "hour": 20,
+                  "minute": 0
+                },
+                "open": {
+                  "date": {
+                    "day": 21,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 3,
+                  "hour": 8,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "date": {
+                    "day": 22,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 4,
+                  "hour": 20,
+                  "minute": 0
+                },
+                "open": {
+                  "date": {
+                    "day": 22,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 4,
+                  "hour": 8,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "date": {
+                    "day": 23,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 5,
+                  "hour": 20,
+                  "minute": 0
+                },
+                "open": {
+                  "date": {
+                    "day": 23,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 5,
+                  "hour": 8,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "date": {
+                    "day": 17,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 6,
+                  "hour": 20,
+                  "minute": 0
+                },
+                "open": {
+                  "date": {
+                    "day": 17,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 6,
+                  "hour": 8,
+                  "minute": 0
+                }
+              }
+            ],
+            "weekdayDescriptions": [
+              "Monday: 8:00\u202fAM\u2009\u2013\u20098:00\u202fPM",
+              "Tuesday: 8:00\u202fAM\u2009\u2013\u20098:00\u202fPM",
+              "Wednesday: 8:00\u202fAM\u2009\u2013\u20098:00\u202fPM",
+              "Thursday: 8:00\u202fAM\u2009\u2013\u20098:00\u202fPM",
+              "Friday: 8:00\u202fAM\u2009\u2013\u20098:00\u202fPM",
+              "Saturday: 8:00\u202fAM\u2009\u2013\u20098:00\u202fPM",
+              "Sunday: 8:00\u202fAM\u2009\u2013\u20098:00\u202fPM"
+            ]
+          },
+          "displayName": {
+            "languageCode": "en",
+            "text": "Maha Oya Hot Water Spring"
+          },
+          "formattedAddress": "H923+V6J, Maha Oya, Sri Lanka",
+          "googleMapsUri": "https://maps.google.com/?cid=4158765496918591697&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+          "id": "ChIJQdafhjzQ5DoR0cj7cy_ntjk",
+          "location": {
+            "latitude": 7.552223400000001,
+            "longitude": 81.3530279
+          },
+          "photos": [
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Tewaraja Krisnaraaja",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXPc5VnIglisGTS5YkXGduyXL63AuSH71GfHyAjD5WlosnrcXLl=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/114466919030462477928"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIABIhCnbhApYm-J2KQgO000Xpub&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIABIhCnbhApYm-J2KQgO000Xpub!2e10!4m2!3m1!1s0x3ae4d03c869fd641:0x39b6e72f73fbc8d1",
+              "heightPx": 2352,
+              "name": "places/ChIJQdafhjzQ5DoR0cj7cy_ntjk/photos/Aa-ngMaF5r3YggPgzhUzyBRfmGo9ZdWKfkbgI8KbNfquRMgM3yzObPOhms2rtaU8fPW_4-EHR7EmTISUiwmI0Q-ti-m6DEa7zRueDikNl_wRCLNCRL5jNwuR_xYgZo6vOE2xd6DxiSVECS5s2OZnJbAd8uC4F28EXBclT2lp3BNbG_Pr6jMHJdZy5II2zqmqkmTpKqOAApMHFkeP7QfCwpeq0VFpsYeqbEgjPay9kz23J2boCZwUxsB8K-P2u_sffaFOTgpYOfIy_AGQiGlDW6s3VTSCFrYpekG0fAMnbhVVWwoFXe_LEY_kmvaNm1cWgQcpixzaS_gmri7d7ftmSVtCQf5mHQyb-piDHPMhRVPhX87RxCo6jc9E7veU2qt5U6iY8mFHmz7_WsF_0dLJ-cprI7ZL64PSSCXrffiV6CzTvkTxIg",
+              "widthPx": 4160
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "P. S. K. Kumara De Silva",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVjY_2MsyG85EDv5-qTiWo1K51L5dgtEqKapfdtiCJ5bhWIrFWf=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/116623098298843621956"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgICyh6u9pQE&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICyh6u9pQE!2e10!4m2!3m1!1s0x3ae4d03c869fd641:0x39b6e72f73fbc8d1",
+              "heightPx": 3599,
+              "name": "places/ChIJQdafhjzQ5DoR0cj7cy_ntjk/photos/Aa-ngMYms5n7ClmDDZS7kV5r0_zESXMkBJB0X-d5bQ7IstpRhBB85k8KW2dp2Y1n9646W9X3u80uUjkfN807-1d_9bjRzSJn99elLtuaFda5--qdaoZV5lnQiSxgh1817NA64cKJcXSH-cgeyom-PdesQeX8hzONNqkPsB02FQ60pTVPR6THjnqFKKKefs52SB3GDi68GefUVqWC6JttiqU0d7mYVmq6-XEHMgtCrMv9_z42sOCTfPzDXd3QN9ZY1rLfxSZR-n6QM9NRvv5_7HW_VY0CET_XKglRbOiJVF9ssSoEXFBJ9p77RtbU9s3DMLyZKWu_apFMFP395_7RcivFRzznU8Q2OqxX6HNeMoc27QZEitKjbtGu1nOwMtzLxYdpXjoSDzSGYz1jh_i_JxxW71O1_y99iYk",
+              "widthPx": 4800
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "SAFNI mj",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjV7eCrYfVtIlvzF175BX9gUXeuYTpFmvBn5B7TMqiZfX37SdJmtfQ=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/105989600704845181541"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgICnt-LNzgE&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICnt-LNzgE!2e10!4m2!3m1!1s0x3ae4d03c869fd641:0x39b6e72f73fbc8d1",
+              "heightPx": 3120,
+              "name": "places/ChIJQdafhjzQ5DoR0cj7cy_ntjk/photos/Aa-ngMbyf1_5xDLZ6hZ_bJ63cUvMrHpO2g0KPMWniQ1famKXZ-cWEAJNJjbGY_de2s4E2_iH3EPeDqrmOCQBBpce9SuXn7EW9qiVRkPm77qjTer6LssC-VLrzaZQRqadHv9g_XZ06YQPJTKHNEYK6JZTOFDTWHEUyXXO7vXRa2mi7nCTTpX7yNkHc_Rj7azQ9we9Qxz2LYXPgiOFz7btXlu7PWPYJw9wai1xYpcgQnGDzcnrg6_g_sNlEYgvGbYKkeJ17UhABeoDdeAF6GkKSkbOJJpVdfMSN42g-eIamWPyq-wyPf5duxCNqRyB2N3QWhWydMcmbe0V8v0ZwVXw40IZCiS_59z9nodB8xxi6kZeHKz06xXLTnwJVsaiJNPb4t6GQuUYbTsKT470KnACJxs3NDGyn6OQLo4",
+              "widthPx": 4160
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Disanayake \u0daf\u0dd2\u0dc3\u0db1\u0dcf\u0dba\u0d9a",
+                  "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocJy_lnlacZyX6KUPzTwcW7ofe8sN5xa-dnvupVPPX4Lbftszg=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/110564287117823982547"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIDknpSDqAE&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDknpSDqAE!2e10!4m2!3m1!1s0x3ae4d03c869fd641:0x39b6e72f73fbc8d1",
+              "heightPx": 1080,
+              "name": "places/ChIJQdafhjzQ5DoR0cj7cy_ntjk/photos/Aa-ngMYjQ3v38rYajmmAizmXpo_ZGKWGL3WKlriVRDjKalag7XIlXb0CUDQjfPGRNqapqEduhuF3Po6xQ3vio10nUOzi78moMQTPeDfk1N84Q8NxmcL7-TR4fgfSHqgBLSQKGzAhFdZZaQRVCL3QfepuGA9sudMb6pSHnC769utiteQgZURwZfa6rvO_rgYp3gjOXh3ftnbveMr5_hShhP-8lKYvWQ8t2r7MgpbLNi4U_KIdPhzgF1_aX-2s__dmPzUnuks-Uc0SUNK36pXN7is8f72xP8A7unn8ecLX_2Rk1GCEHwAbPT-B_kVeUraxBN2Jw25dLhTLLkPeLs9JxMT4KiKRYLEkWqPCOsHl2sMF7HqbpCYjhUHshJdyz-JsK96DRnE1vlR2f3LSyLfS4Z_bBC9DiHs8",
+              "widthPx": 1920
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Lushanth Vasanthakumar",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWcUxKlo0cGZGx0SnSNStHueYQiUvWYRh4h1xCzTBjFV_ZdAsSxSg=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/103309717897871300423"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgICEg6vXcQ&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICEg6vXcQ!2e10!4m2!3m1!1s0x3ae4d03c869fd641:0x39b6e72f73fbc8d1",
+              "heightPx": 375,
+              "name": "places/ChIJQdafhjzQ5DoR0cj7cy_ntjk/photos/Aa-ngMYHJXzbnirC7VV2S9Nv2DXQIqNl5Ei8dE7wk9FP-AyXlLtZu4l4VHWCU4I__MLb3n-42jFXfSn7QLbdMajwtt42o6vTze5ViGUVYXykKMrZAOALPrQfrfW-Uk-2Abwvhn9pkqjdlu5D9bN5ATLviAfjciTSdITFCe--snTw_1G1QmVJSofko_MW3qvM1pyBjv0TQscNb-Rk7Al5R5ThN5UFJaM37U9sFxh68QNo6u5kXI2EkHjpVGeo-q0pBqReU79KXVMjOPf8XLactt_og4K9Rwsm-bM1XdRj2ARtonId2YwxXtrWiBx9_hpiAmQR4XaF_JgcPbUpZNDs3CXqaC5vH45Trevi6ATLueSCGurHa1Q2LnB4ltA6OzSQFu91durUdOTfUiKkWil9F1eVyOzgmA",
+              "widthPx": 500
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "P. S. K. Kumara De Silva",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVjY_2MsyG85EDv5-qTiWo1K51L5dgtEqKapfdtiCJ5bhWIrFWf=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/116623098298843621956"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgICyh6vXYQ&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICyh6vXYQ!2e10!4m2!3m1!1s0x3ae4d03c869fd641:0x39b6e72f73fbc8d1",
+              "heightPx": 3599,
+              "name": "places/ChIJQdafhjzQ5DoR0cj7cy_ntjk/photos/Aa-ngMYWM6WOAv6C1srKMfNUWTd8lwRVYNPt7sYNoqML24L23Ou1RteShlISz9u84oACp2D8p7zXGAjC5xofZ38sf22LT2wuIwudG_trErNcvuFFA7dfg-kVeb9DRifJx5T2LNswurpTUgIRzCLV6LU-yMFnuHXvxV0ULqRoJllkLyZ5LuGoQ-JtKKAwJawkcInSTCh4ptTHwejj5cPo-1OZETW1xSbwEm1eFsYsNCIRMhsJVlVdt53rR1cqZp78OXURpUiJL6zqI3r0FkCaxp0wDLUPi5ndeHn56NB0uhPcVAbKabWfe8dhlEqBf8zq2d5hUzFDqRTxBwVMvUEuKpVDhctGaTHZ1V-MI6GdKQsAdmrwyEJQdYaOId8wGKojsRy80TdJAnkfpAkJ35KOCuZ8Z_Beegw",
+              "widthPx": 4800
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Liyabdeen JP",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVrXZFM4NbbIqQM61dkEDwkfnCuKZ3VpZKjUHgu5sFeM6BSfVwj4A=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/101674049819105394347"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIABIhB7Teps__Vgbi_E1EfrOkdD&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIABIhB7Teps__Vgbi_E1EfrOkdD!2e10!4m2!3m1!1s0x3ae4d03c869fd641:0x39b6e72f73fbc8d1",
+              "heightPx": 3060,
+              "name": "places/ChIJQdafhjzQ5DoR0cj7cy_ntjk/photos/Aa-ngMafh0RWjybcJtMeVg4KuMD7tRPMcqipGuUG1lTz8ATCzzGGFLmc9eoGiIG_nHue-NiuBAHz_2tezWiPveB7Q9-Fj_5EiWLXB3gLIZX-gGtTznFtVxyuCa3wkFOtrbawrcnYRLSqIMoDieVdqNL_6iUbhD0f5rin3rDybKRv7j3MCvP5-l8sChQoBQTMR5Q6dNIzCdL9MM-7jI2s0Eaq0lkkbwckCNBz7scrvHb0xpbpvWDiRk6_6SZkv8HuACRPHJjbFHDoT6dqZENxw46fAq7aG9yA_ST6xA-T7m2iokAmDE0fmTXA0rAGrL1XwotJXpAgoVGM068ibUUoq7C6v2DFUodG-I4rtM31WE2i3biRU5Qev2yNMRqGhRgtrK1KuSVtq323hs41T-lV7Hy3viAPHQ_Xn-TPhFQV2oFaOr4kCg",
+              "widthPx": 4080
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Lahiru Balasooriya",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUxBIRbeLHnqz4xPlyGaV6zv1kBb88T0DeLvKXg4t7fd1UjoMjE=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/104959804482255600104"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIDcx9f9tAE&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDcx9f9tAE!2e10!4m2!3m1!1s0x3ae4d03c869fd641:0x39b6e72f73fbc8d1",
+              "heightPx": 3600,
+              "name": "places/ChIJQdafhjzQ5DoR0cj7cy_ntjk/photos/Aa-ngMbgU5jh1R3XuFrERzBMRpARYZ5UV8O4p0l1BAfd7FIYotA_Fx65tkDZW2EJeMRt5IPVmRn6e8Eu_0zCnx7TVdDaO1enkPxgGS60-Ewv1hiZWmvAto33YJlwoGcnHeJJdSv0JUCdkWhetGSGLwpgwjwACA-xaKlJlnJp1b1m6UEGXxcP7wuRowsJ4TbGq8mJ1zEvTIiId5sD_0k6S129luyWVylI_yHzVrDlUHzcOrqOi2qJWMWyOEBgx6xORH5ugJtchn0hSc--Asg15C-V_fhnM2as2hNrKKrhIOUYYjc-wt-Yi_kGX2OYo6cohcOH2neHDFUf57flnT1TdHFi80-DVRM8C3ig-opUeaC5uakWQYH7CP-E9mg1lqYTFH4OnGXuQGr3R0ijJRLDlB4R0ktb5nl6",
+              "widthPx": 4800
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "R.D.T. Apsara Wimalasena",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXoUyGkNqvXqAsJGU3bBTvaFSA44x1leIQT9Oa_Z_aKKWPxFE8=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/101647110879731026273"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIABIhC315-azGzF2dIC7yT-JHW9&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIABIhC315-azGzF2dIC7yT-JHW9!2e10!4m2!3m1!1s0x3ae4d03c869fd641:0x39b6e72f73fbc8d1",
+              "heightPx": 2992,
+              "name": "places/ChIJQdafhjzQ5DoR0cj7cy_ntjk/photos/Aa-ngMb9ESVSQwcUZV7cidiarf-2L0ZjcaS7xy6WVJvNL-A-QkR3rxj6W3EZeNut6fk6ANuke-snjmKK0zp0dvUMPQWOCv6SLyEwPhZ1cARMaSYd5qkIY1pTClhg0fZvtPS13xtWqGh8UMWZtduLLemev5JVWVExiU_ojbGnqbyiNqwEtNNWZPo4g_FlR19JXcqAM1c9PF1VIR9slDydwM2fq0HgJytNyqC5HRZ2j0qHeOaDWJEFcT20aTPW_d8tgIwQ_1GZnJat7vJrnfg-0e19V8e-LInKk_4jI5K6zp_EWu5ycKFNdmelRtrnCphrSBLO2W03h1s5vK-gOz6d3hXO4Talk-J0sJ2jvs-fuCHmWPjq3eczs_fhq0-9cne4BKrLRBkwR7za5Sz-KEyvPS4JwfdJZ7piORhYOkFOQ0DnKY7Y",
+              "widthPx": 2992
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Thilanka Piyumal",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUN-84RxqFa66WKV1BSEo-AAooAC5i2UN7QOYumM6QPdw2w5rLg=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/114623744942571063136"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIDD2bDFCA&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDD2bDFCA!2e10!4m2!3m1!1s0x3ae4d03c869fd641:0x39b6e72f73fbc8d1",
+              "heightPx": 3472,
+              "name": "places/ChIJQdafhjzQ5DoR0cj7cy_ntjk/photos/Aa-ngMbMBmg15GRTV9kM5ctIqt8fNz4JxnRTVE1vfl0_vbEVrlZnxYymMJ63NygesGRlAAoolsUL84ymmIp-QvJft9vZjSzIOe-aVqqx-FkdhBOWJ-SFshdT7KtrknOSsT7lYqf6SU-cXnSDfmbSVASYikqPAbs0_Jfd_pcxLiiJk8wtgaTdVJWzjYAfed-2MYH_pDo_Z-sFr-iVOAkXoUIQcLKDubG1-hahGZrSi9VS5kNB66EahCCjXv61B43w6tT062fI5dfYtF9_CTBrIClKyavrLUiRo0sCvUN6T_DVeasANR1hkRl9WtBM28lZVE8dvKhbjCxjxNeYa-l2cg4IKKutHqBEZQuXB8ut8fTNI5RobNO_ccolcZrnXXaTZkJ2VGTu-l2T_ynfvNxXYcUPm_5AyOU",
+              "widthPx": 4624
+            }
+          ],
+          "primaryType": "tourist_attraction",
+          "rating": 4.3,
+          "regularOpeningHours": {
+            "nextCloseTime": "2026-10-17T14:30:00Z",
+            "openNow": true,
+            "periods": [
+              {
+                "close": {
+                  "day": 0,
+                  "hour": 20,
+                  "minute": 0
+                },
+                "open": {
+                  "day": 0,
+                  "hour": 8,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "day": 1,
+                  "hour": 20,
+                  "minute": 0
+                },
+                "open": {
+                  "day": 1,
+                  "hour": 8,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "day": 2,
+                  "hour": 20,
+                  "minute": 0
+                },
+                "open": {
+                  "day": 2,
+                  "hour": 8,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "day": 3,
+                  "hour": 20,
+                  "minute": 0
+                },
+                "open": {
+                  "day": 3,
+                  "hour": 8,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "day": 4,
+                  "hour": 20,
+                  "minute": 0
+                },
+                "open": {
+                  "day": 4,
+                  "hour": 8,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "day": 5,
+                  "hour": 20,
+                  "minute": 0
+                },
+                "open": {
+                  "day": 5,
+                  "hour": 8,
+                  "minute": 0
+                }
+              },
+              {
+                "close": {
+                  "day": 6,
+                  "hour": 20,
+                  "minute": 0
+                },
+                "open": {
+                  "day": 6,
+                  "hour": 8,
+                  "minute": 0
+                }
+              }
+            ],
+            "weekdayDescriptions": [
+              "Monday: 8:00\u202fAM\u2009\u2013\u20098:00\u202fPM",
+              "Tuesday: 8:00\u202fAM\u2009\u2013\u20098:00\u202fPM",
+              "Wednesday: 8:00\u202fAM\u2009\u2013\u20098:00\u202fPM",
+              "Thursday: 8:00\u202fAM\u2009\u2013\u20098:00\u202fPM",
+              "Friday: 8:00\u202fAM\u2009\u2013\u20098:00\u202fPM",
+              "Saturday: 8:00\u202fAM\u2009\u2013\u20098:00\u202fPM",
+              "Sunday: 8:00\u202fAM\u2009\u2013\u20098:00\u202fPM"
+            ]
+          },
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ],
+          "userRatingCount": 281
+        },
+        "error": null,
+        "provenance": {
+          "google_place_id": "ChIJQdafhjzQ5DoR0cj7cy_ntjk",
+          "source": "google_places_details"
+        }
+      },
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:140",
+      "google_candidate_kb_identity": "no_existing_kb_place_id_match",
+      "official_source_candidate_identity": "not_evaluated",
+      "query": "The Steaming Hot Water Wells of Mahaoya, Sri Lanka",
+      "review_reasons": [],
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=140",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=140"
+    }
+  ]
+}

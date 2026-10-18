@@ -26,6 +26,8 @@ class KBRefreshResult:
     successful: int = 0
     skipped: int = 0
     failed: int = 0
+    wikipedia_enrichment_failures: int = 0
+    wikivoyage_enrichment_failures: int = 0
 
     refreshed_attraction_ids: list[int] = field(
         default_factory=list
@@ -127,6 +129,15 @@ class TourismKBRefreshService:
 
 
         for item in batch_result.results:
+
+            # An enrichment failure is deliberately non-fatal to attraction
+            # ingestion, but must remain visible to callers.  A false
+            # `*_enriched` value alone may simply mean no safe candidate.
+            for warning in item.warnings:
+                if warning.startswith("Wikipedia enrichment failed:"):
+                    refresh_result.wikipedia_enrichment_failures += 1
+                elif warning.startswith("Wikivoyage enrichment failed:"):
+                    refresh_result.wikivoyage_enrichment_failures += 1
 
             if item.status == PipelineStatus.SUCCESS:
 

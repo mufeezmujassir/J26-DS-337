@@ -10,7 +10,9 @@ sqlalchemy==2.0.42
 psycopg[binary]==3.2.9
 alembic==1.16.4
 redis==6.4.0
-qdrant-client==1.15.1
+# PyPI publishes the compatible 1.18.0 Python client; the Qdrant server image
+# is 1.18.2.  ``qdrant-client==1.18.2`` is not a published PyPI release.
+qdrant-client==1.18.0
 langchain==0.3.27
 langchain-core==0.3.74
 langchain-community==0.3.27
@@ -68,3 +70,4 @@ requests>=2.31.0
 pyyaml>=6.0
 python-dotenv>=1.0.0
 redis>=5.0.0
+

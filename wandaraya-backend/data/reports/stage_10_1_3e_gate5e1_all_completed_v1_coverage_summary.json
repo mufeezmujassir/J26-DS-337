@@ -1,0 +1,21 @@
+{
+  "action_counts": {
+    "INSERT_NEW_CANDIDATE": 35,
+    "LINK_SOURCE_REFERENCE_CANDIDATE": 30,
+    "MANUAL_REVIEW_REQUIRED": 17
+  },
+  "checkpoint_sha256": "c5ff4ce5e7e4ed46fabd6a4ce395b7815a05b4cbec5e0e7012e7e4aac1baf5ff",
+  "consolidated_source_records": 82,
+  "duplicate_source_ids": [],
+  "expected_source_records": 82,
+  "missing_source_records": [],
+  "network_requests": 0,
+  "postgresql_writes": false,
+  "proposed_insertions": 35,
+  "proposed_source_links": 30,
+  "proposed_updates": 0,
+  "qdrant_writes": false,
+  "queue_sha256": "aa0d30c7c29d5e328cc48825b91d047c94f495a426b819902dedf197521cf78d",
+  "review_required_records": 17,
+  "unresolved_identity_conflicts": 17
+}

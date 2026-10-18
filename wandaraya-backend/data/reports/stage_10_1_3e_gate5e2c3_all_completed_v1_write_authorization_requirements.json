@@ -1,0 +1,11 @@
+{
+  "required": [
+    "--execute",
+    "--confirm-execute",
+    "exact manifest SHA-256",
+    "exact dry-run plan SHA-256",
+    "fresh collision preflight",
+    "explicit human scope"
+  ],
+  "write_execution_enabled": false
+}

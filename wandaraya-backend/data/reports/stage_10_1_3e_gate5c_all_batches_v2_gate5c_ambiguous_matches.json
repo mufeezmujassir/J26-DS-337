@@ -1,0 +1,160 @@
+{
+  "records": [
+    {
+      "external_source_id": "srilanka_tourism_attraction:132",
+      "preferred_attraction_name": "Gal Oya National Park",
+      "canonical_source_url": "https://srilanka.travel/attraction?attraction_id=132",
+      "classification": "ambiguous_multiple_matches",
+      "match_evidence": [
+        {
+          "method": "fuzzy_name_candidate",
+          "confidence": 0.8718,
+          "matched_value": "Gal Oya National Park",
+          "kb_attraction_id": 13,
+          "kb_name": "Yala National Park",
+          "kb_district_id": 90,
+          "kb_district_name": "Moneragala"
+        },
+        {
+          "method": "fuzzy_name_candidate",
+          "confidence": 0.8571,
+          "matched_value": "Gal Oya National Park",
+          "kb_attraction_id": 4703,
+          "kb_name": "Gal Oya Valley National Park",
+          "kb_district_id": 90,
+          "kb_district_name": "Moneragala"
+        }
+      ],
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=132"
+      ],
+      "raw_source_names": [
+        "Gal Oya National Park"
+      ],
+      "source_record": {
+        "external_source_id": "srilanka_tourism_attraction:132",
+        "preferred_attraction_name": "Gal Oya National Park",
+        "attraction_name": "Gal Oya National Park",
+        "raw_source_names": [
+          "Gal Oya National Park"
+        ],
+        "canonical_source_url": "https://srilanka.travel/attraction?attraction_id=132",
+        "source_domain": "srilanka.travel",
+        "discovery_method": [
+          "listing_page"
+        ],
+        "discovered_from_urls": [
+          "https://srilanka.travel/tourist-attractions?page=10"
+        ],
+        "observed_theme_ids": [],
+        "observed_theme_names": [],
+        "observed_themes": [],
+        "observed_destinations": [],
+        "description": "A national park in the south-east of Sri Lanka.",
+        "extraction_status": "partial_source_supported",
+        "provenance": [
+          ".attraction-card-body > p: explicit card field",
+          ".attractions-grid > article.attraction-card: source card container",
+          "card detail link href=http://www.srilanka.travel/attraction&attraction_id=132"
+        ],
+        "retrieved_at": [
+          "2026-10-16T18:18:41.448599+00:00"
+        ],
+        "google_place_id": null,
+        "google_place_match_status": null,
+        "google_place_candidate_ids": [],
+        "enrichment_required_fields": [
+          "google_place_id",
+          "coordinates",
+          "description"
+        ],
+        "enrichment_sources": [
+          "Google Places"
+        ],
+        "existing_kb_attraction_id": null,
+        "reconciliation_status": "pending_gate_5c_read_only_reconciliation"
+      }
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:169",
+      "preferred_attraction_name": "Kataragama",
+      "canonical_source_url": "https://srilanka.travel/attraction?attraction_id=169",
+      "classification": "ambiguous_multiple_matches",
+      "match_evidence": [
+        {
+          "method": "exact_alias",
+          "confidence": 0.9,
+          "matched_value": "Kataragama",
+          "kb_attraction_id": 1642,
+          "kb_name": "Mahoora",
+          "kb_district_id": 90,
+          "kb_district_name": "Moneragala"
+        },
+        {
+          "method": "exact_alias",
+          "confidence": 0.9,
+          "matched_value": "Kataragama",
+          "kb_attraction_id": 1900,
+          "kb_name": "Katharagama",
+          "kb_district_id": 90,
+          "kb_district_name": "Moneragala"
+        }
+      ],
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=169"
+      ],
+      "raw_source_names": [
+        "Kataragama"
+      ],
+      "source_record": {
+        "external_source_id": "srilanka_tourism_attraction:169",
+        "preferred_attraction_name": "Kataragama",
+        "attraction_name": "Kataragama",
+        "raw_source_names": [
+          "Kataragama"
+        ],
+        "canonical_source_url": "https://srilanka.travel/attraction?attraction_id=169",
+        "source_domain": "srilanka.travel",
+        "discovery_method": [
+          "listing_page"
+        ],
+        "discovered_from_urls": [
+          "https://srilanka.travel/tourist-attractions?page=2",
+          "https://srilanka.travel/tourist-attractions?page=5"
+        ],
+        "observed_theme_ids": [],
+        "observed_theme_names": [],
+        "observed_themes": [],
+        "observed_destinations": [],
+        "description": "Kataragama is a pilgrimage town sacred to Buddhist, Hindu, Muslim and indigenous Vedda people of Sri Lanka. People from South India also come there to worship. Kataragama is in the",
+        "extraction_status": "partial_source_supported",
+        "provenance": [
+          ".attraction-card-body > p: explicit card field",
+          ".attractions-grid > article.attraction-card: source card container",
+          "card detail link href=http://www.srilanka.travel/attraction&attraction_id=169"
+        ],
+        "retrieved_at": [
+          "2026-10-16T13:36:35.544262+00:00",
+          "2026-10-16T18:19:06.509172+00:00"
+        ],
+        "google_place_id": null,
+        "google_place_match_status": null,
+        "google_place_candidate_ids": [],
+        "enrichment_required_fields": [
+          "google_place_id",
+          "coordinates",
+          "description"
+        ],
+        "enrichment_sources": [
+          "Google Places"
+        ],
+        "existing_kb_attraction_id": null,
+        "reconciliation_status": "pending_gate_5c_read_only_reconciliation"
+      }
+    }
+  ]
+}

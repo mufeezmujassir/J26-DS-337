@@ -1,0 +1,591 @@
+{
+  "records": [
+    {
+      "external_source_id": "srilanka_tourism_attraction:103",
+      "preferred_attraction_name": "Rajagala",
+      "canonical_source_url": "https://srilanka.travel/attraction?attraction_id=103",
+      "classification": "probable_match_review_required",
+      "match_evidence": [
+        {
+          "method": "fuzzy_name_candidate",
+          "confidence": 0.875,
+          "matched_value": "Rajagala",
+          "kb_attraction_id": 2575,
+          "kb_name": "Rasagala",
+          "kb_district_id": 95,
+          "kb_district_name": "Ratnapura"
+        }
+      ],
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=103"
+      ],
+      "raw_source_names": [
+        "Rajagala"
+      ],
+      "source_record": {
+        "external_source_id": "srilanka_tourism_attraction:103",
+        "preferred_attraction_name": "Rajagala",
+        "attraction_name": "Rajagala",
+        "raw_source_names": [
+          "Rajagala"
+        ],
+        "canonical_source_url": "https://srilanka.travel/attraction?attraction_id=103",
+        "source_domain": "srilanka.travel",
+        "discovery_method": [
+          "listing_page",
+          "theme_search"
+        ],
+        "discovered_from_urls": [
+          "https://srilanka.travel/index.php?route=attractions%2Fattractions-search&theme=2",
+          "https://srilanka.travel/tourist-attractions?page=1",
+          "https://srilanka.travel/tourist-attractions?page=3&theme=2"
+        ],
+        "observed_theme_ids": [
+          "2"
+        ],
+        "observed_theme_names": [],
+        "observed_themes": [
+          "2"
+        ],
+        "observed_destinations": [],
+        "description": "A monastery in perfect form amidst the jungle",
+        "extraction_status": "partial_source_supported",
+        "provenance": [
+          ".attraction-card-body > p: explicit card field",
+          ".attractions-grid > article.attraction-card: source card container",
+          "card detail link href=http://www.srilanka.travel/attraction&attraction_id=103"
+        ],
+        "retrieved_at": [
+          "2026-10-16T13:36:38.740593+00:00",
+          "2026-10-16T18:18:38.299520+00:00",
+          "2026-10-16T18:18:57.117322+00:00"
+        ],
+        "google_place_id": null,
+        "google_place_match_status": null,
+        "google_place_candidate_ids": [],
+        "enrichment_required_fields": [
+          "google_place_id",
+          "coordinates",
+          "description"
+        ],
+        "enrichment_sources": [
+          "Google Places"
+        ],
+        "existing_kb_attraction_id": null,
+        "reconciliation_status": "pending_gate_5c_read_only_reconciliation"
+      }
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:157",
+      "preferred_attraction_name": "Dambulla CaveTemple",
+      "canonical_source_url": "https://srilanka.travel/attraction?attraction_id=157",
+      "classification": "probable_match_review_required",
+      "match_evidence": [
+        {
+          "method": "fuzzy_name_candidate",
+          "confidence": 0.9744,
+          "matched_value": "Dambulla CaveTemple",
+          "kb_attraction_id": 18,
+          "kb_name": "Dambulla Cave Temple",
+          "kb_district_id": 88,
+          "kb_district_name": "Matale"
+        }
+      ],
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=157"
+      ],
+      "raw_source_names": [
+        "Dambulla CaveTemple"
+      ],
+      "source_record": {
+        "external_source_id": "srilanka_tourism_attraction:157",
+        "preferred_attraction_name": "Dambulla CaveTemple",
+        "attraction_name": "Dambulla CaveTemple",
+        "raw_source_names": [
+          "Dambulla CaveTemple"
+        ],
+        "canonical_source_url": "https://srilanka.travel/attraction?attraction_id=157",
+        "source_domain": "srilanka.travel",
+        "discovery_method": [
+          "listing_page",
+          "theme_search"
+        ],
+        "discovered_from_urls": [
+          "https://srilanka.travel/tourist-attractions?page=10",
+          "https://srilanka.travel/tourist-attractions?page=2",
+          "https://srilanka.travel/tourist-attractions?page=2&theme=2",
+          "https://srilanka.travel/tourist-attractions?page=3"
+        ],
+        "observed_theme_ids": [
+          "2"
+        ],
+        "observed_theme_names": [],
+        "observed_themes": [
+          "2"
+        ],
+        "observed_destinations": [],
+        "description": "Dambulla cave temple and, also known as Golden Temple of Dambulla is a world heritage site, situated in central part of the Sri Lanka. This dambulla cave temple situated in 148km e",
+        "extraction_status": "partial_source_supported",
+        "provenance": [
+          ".attraction-card-body > p: explicit card field",
+          ".attractions-grid > article.attraction-card: source card container",
+          "card detail link href=http://www.srilanka.travel/attraction&attraction_id=157"
+        ],
+        "retrieved_at": [
+          "2026-10-16T13:36:35.544262+00:00",
+          "2026-10-16T18:18:41.448599+00:00",
+          "2026-10-16T18:18:50.864853+00:00",
+          "2026-10-16T18:18:53.993097+00:00"
+        ],
+        "google_place_id": null,
+        "google_place_match_status": null,
+        "google_place_candidate_ids": [],
+        "enrichment_required_fields": [
+          "google_place_id",
+          "coordinates",
+          "description"
+        ],
+        "enrichment_sources": [
+          "Google Places"
+        ],
+        "existing_kb_attraction_id": null,
+        "reconciliation_status": "pending_gate_5c_read_only_reconciliation"
+      }
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:16",
+      "preferred_attraction_name": "Nagadeepa Purana Raja Maha Viharaya",
+      "canonical_source_url": "https://srilanka.travel/attraction?attraction_id=16",
+      "classification": "probable_match_review_required",
+      "match_evidence": [
+        {
+          "method": "fuzzy_name_candidate",
+          "confidence": 0.9855,
+          "matched_value": "Nagadeepa Purana Raja Maha Viharaya",
+          "kb_attraction_id": 4764,
+          "kb_name": "Nagadeepa Purana Rajamaha Viharaya",
+          "kb_district_id": 75,
+          "kb_district_name": "Badulla"
+        }
+      ],
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=16"
+      ],
+      "raw_source_names": [
+        "Nagadeepa Purana Raja Maha Viharaya"
+      ],
+      "source_record": {
+        "external_source_id": "srilanka_tourism_attraction:16",
+        "preferred_attraction_name": "Nagadeepa Purana Raja Maha Viharaya",
+        "attraction_name": "Nagadeepa Purana Raja Maha Viharaya",
+        "raw_source_names": [
+          "Nagadeepa Purana Raja Maha Viharaya"
+        ],
+        "canonical_source_url": "https://srilanka.travel/attraction?attraction_id=16",
+        "source_domain": "srilanka.travel",
+        "discovery_method": [
+          "listing_page",
+          "theme_search"
+        ],
+        "discovered_from_urls": [
+          "https://srilanka.travel/index.php?route=attractions%2Fattractions-search&theme=2",
+          "https://srilanka.travel/tourist-attractions?page=3",
+          "https://srilanka.travel/tourist-attractions?page=4"
+        ],
+        "observed_theme_ids": [
+          "2"
+        ],
+        "observed_theme_names": [],
+        "observed_themes": [
+          "2"
+        ],
+        "observed_destinations": [],
+        "description": "A site graced by Lord Buddha",
+        "extraction_status": "partial_source_supported",
+        "provenance": [
+          ".attraction-card-body > p: explicit card field",
+          ".attractions-grid > article.attraction-card: source card container",
+          "card detail link href=http://www.srilanka.travel/attraction&attraction_id=16"
+        ],
+        "retrieved_at": [
+          "2026-10-16T13:36:38.740593+00:00",
+          "2026-10-16T18:18:53.993097+00:00",
+          "2026-10-16T18:19:00.262583+00:00"
+        ],
+        "google_place_id": null,
+        "google_place_match_status": null,
+        "google_place_candidate_ids": [],
+        "enrichment_required_fields": [
+          "google_place_id",
+          "coordinates",
+          "description"
+        ],
+        "enrichment_sources": [
+          "Google Places"
+        ],
+        "existing_kb_attraction_id": null,
+        "reconciliation_status": "pending_gate_5c_read_only_reconciliation"
+      }
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:181",
+      "preferred_attraction_name": "Kaluthara Bodhiya",
+      "canonical_source_url": "https://srilanka.travel/attraction?attraction_id=181",
+      "classification": "probable_match_review_required",
+      "match_evidence": [
+        {
+          "method": "fuzzy_name_candidate",
+          "confidence": 0.9697,
+          "matched_value": "Kaluthara Bodhiya",
+          "kb_attraction_id": 187,
+          "kb_name": "Kalutara Bodhiya",
+          "kb_district_id": 82,
+          "kb_district_name": "Kalutara"
+        }
+      ],
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=181"
+      ],
+      "raw_source_names": [
+        "Kaluthara Bodhiya"
+      ],
+      "source_record": {
+        "external_source_id": "srilanka_tourism_attraction:181",
+        "preferred_attraction_name": "Kaluthara Bodhiya",
+        "attraction_name": "Kaluthara Bodhiya",
+        "raw_source_names": [
+          "Kaluthara Bodhiya"
+        ],
+        "canonical_source_url": "https://srilanka.travel/attraction?attraction_id=181",
+        "source_domain": "srilanka.travel",
+        "discovery_method": [
+          "listing_page"
+        ],
+        "discovered_from_urls": [
+          "https://srilanka.travel/tourist-attractions?page=3"
+        ],
+        "observed_theme_ids": [],
+        "observed_theme_names": [],
+        "observed_themes": [],
+        "observed_destinations": [],
+        "description": "Kaluthara Bodhiya is believed to be one of the 32 saplings of the Jaya Sri Maha Bodhi in Anuradhapura, Sri Lanka.",
+        "extraction_status": "partial_source_supported",
+        "provenance": [
+          ".attraction-card-body > p: explicit card field",
+          ".attractions-grid > article.attraction-card: source card container",
+          "card detail link href=http://www.srilanka.travel/attraction&attraction_id=181"
+        ],
+        "retrieved_at": [
+          "2026-10-16T18:18:53.993097+00:00"
+        ],
+        "google_place_id": null,
+        "google_place_match_status": null,
+        "google_place_candidate_ids": [],
+        "enrichment_required_fields": [
+          "google_place_id",
+          "coordinates",
+          "description"
+        ],
+        "enrichment_sources": [
+          "Google Places"
+        ],
+        "existing_kb_attraction_id": null,
+        "reconciliation_status": "pending_gate_5c_read_only_reconciliation"
+      }
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:201",
+      "preferred_attraction_name": "Diyatha Uyana",
+      "canonical_source_url": "https://srilanka.travel/attraction?attraction_id=201",
+      "classification": "probable_match_review_required",
+      "match_evidence": [
+        {
+          "method": "fuzzy_name_candidate",
+          "confidence": 0.8571,
+          "matched_value": "Diyatha Uyana",
+          "kb_attraction_id": 1980,
+          "kb_name": "Diyathuru Uyana",
+          "kb_district_id": 82,
+          "kb_district_name": "Kalutara"
+        }
+      ],
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=201"
+      ],
+      "raw_source_names": [
+        "Diyatha Uyana"
+      ],
+      "source_record": {
+        "external_source_id": "srilanka_tourism_attraction:201",
+        "preferred_attraction_name": "Diyatha Uyana",
+        "attraction_name": "Diyatha Uyana",
+        "raw_source_names": [
+          "Diyatha Uyana"
+        ],
+        "canonical_source_url": "https://srilanka.travel/attraction?attraction_id=201",
+        "source_domain": "srilanka.travel",
+        "discovery_method": [
+          "listing_page"
+        ],
+        "discovered_from_urls": [
+          "https://srilanka.travel/tourist-attractions?page=10"
+        ],
+        "observed_theme_ids": [],
+        "observed_theme_names": [],
+        "observed_themes": [],
+        "observed_destinations": [],
+        "description": "Another gorgeous place in the city of Battaramulla.",
+        "extraction_status": "partial_source_supported",
+        "provenance": [
+          ".attraction-card-body > p: explicit card field",
+          ".attractions-grid > article.attraction-card: source card container",
+          "card detail link href=http://www.srilanka.travel/attraction&attraction_id=201"
+        ],
+        "retrieved_at": [
+          "2026-10-16T18:18:41.448599+00:00"
+        ],
+        "google_place_id": null,
+        "google_place_match_status": null,
+        "google_place_candidate_ids": [],
+        "enrichment_required_fields": [
+          "google_place_id",
+          "coordinates",
+          "description"
+        ],
+        "enrichment_sources": [
+          "Google Places"
+        ],
+        "existing_kb_attraction_id": null,
+        "reconciliation_status": "pending_gate_5c_read_only_reconciliation"
+      }
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:59",
+      "preferred_attraction_name": "Attanagalla Raja Maha Viharava",
+      "canonical_source_url": "https://srilanka.travel/attraction?attraction_id=59",
+      "classification": "probable_match_review_required",
+      "match_evidence": [
+        {
+          "method": "fuzzy_name_candidate",
+          "confidence": 0.9667,
+          "matched_value": "Attanagalla Raja Maha Viharava",
+          "kb_attraction_id": 4924,
+          "kb_name": "Attanagalla Raja Maha Viharaya",
+          "kb_district_id": 79,
+          "kb_district_name": "Gampaha"
+        }
+      ],
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=59"
+      ],
+      "raw_source_names": [
+        "Attanagalla Raja Maha Viharava"
+      ],
+      "source_record": {
+        "external_source_id": "srilanka_tourism_attraction:59",
+        "preferred_attraction_name": "Attanagalla Raja Maha Viharava",
+        "attraction_name": "Attanagalla Raja Maha Viharava",
+        "raw_source_names": [
+          "Attanagalla Raja Maha Viharava"
+        ],
+        "canonical_source_url": "https://srilanka.travel/attraction?attraction_id=59",
+        "source_domain": "srilanka.travel",
+        "discovery_method": [
+          "listing_page"
+        ],
+        "discovered_from_urls": [
+          "https://srilanka.travel/tourist-attractions?page=10"
+        ],
+        "observed_theme_ids": [],
+        "observed_theme_names": [],
+        "observed_themes": [],
+        "observed_destinations": [],
+        "description": "Immortalizing the pious King of Lanka.",
+        "extraction_status": "partial_source_supported",
+        "provenance": [
+          ".attraction-card-body > p: explicit card field",
+          ".attractions-grid > article.attraction-card: source card container",
+          "card detail link href=http://www.srilanka.travel/attraction&attraction_id=59"
+        ],
+        "retrieved_at": [
+          "2026-10-16T18:18:41.448599+00:00"
+        ],
+        "google_place_id": null,
+        "google_place_match_status": null,
+        "google_place_candidate_ids": [],
+        "enrichment_required_fields": [
+          "google_place_id",
+          "coordinates",
+          "description"
+        ],
+        "enrichment_sources": [
+          "Google Places"
+        ],
+        "existing_kb_attraction_id": null,
+        "reconciliation_status": "pending_gate_5c_read_only_reconciliation"
+      }
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:69",
+      "preferred_attraction_name": "Maligathenna Raja Maha Viharaya",
+      "canonical_source_url": "https://srilanka.travel/attraction?attraction_id=69",
+      "classification": "probable_match_review_required",
+      "match_evidence": [
+        {
+          "method": "fuzzy_name_candidate",
+          "confidence": 0.9677,
+          "matched_value": "Maligathenna Raja Maha Viharaya",
+          "kb_attraction_id": 3521,
+          "kb_name": "Maligathanna Raja Maha Viharaya",
+          "kb_district_id": 79,
+          "kb_district_name": "Gampaha"
+        }
+      ],
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=69"
+      ],
+      "raw_source_names": [
+        "Maligathenna Raja Maha Viharaya"
+      ],
+      "source_record": {
+        "external_source_id": "srilanka_tourism_attraction:69",
+        "preferred_attraction_name": "Maligathenna Raja Maha Viharaya",
+        "attraction_name": "Maligathenna Raja Maha Viharaya",
+        "raw_source_names": [
+          "Maligathenna Raja Maha Viharaya"
+        ],
+        "canonical_source_url": "https://srilanka.travel/attraction?attraction_id=69",
+        "source_domain": "srilanka.travel",
+        "discovery_method": [
+          "listing_page",
+          "theme_search"
+        ],
+        "discovered_from_urls": [
+          "https://srilanka.travel/tourist-attractions?page=11",
+          "https://srilanka.travel/tourist-attractions?page=4&theme=2"
+        ],
+        "observed_theme_ids": [
+          "2"
+        ],
+        "observed_theme_names": [],
+        "observed_themes": [
+          "2"
+        ],
+        "observed_destinations": [],
+        "description": "A refuge of sacred relics and Kings",
+        "extraction_status": "partial_source_supported",
+        "provenance": [
+          ".attraction-card-body > p: explicit card field",
+          ".attractions-grid > article.attraction-card: source card container",
+          "card detail link href=http://www.srilanka.travel/attraction&attraction_id=69"
+        ],
+        "retrieved_at": [
+          "2026-10-16T18:18:44.596592+00:00",
+          "2026-10-16T18:19:03.386173+00:00"
+        ],
+        "google_place_id": null,
+        "google_place_match_status": null,
+        "google_place_candidate_ids": [],
+        "enrichment_required_fields": [
+          "google_place_id",
+          "coordinates",
+          "description"
+        ],
+        "enrichment_sources": [
+          "Google Places"
+        ],
+        "existing_kb_attraction_id": null,
+        "reconciliation_status": "pending_gate_5c_read_only_reconciliation"
+      }
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:97",
+      "preferred_attraction_name": "Pannathgoda Purana Raja Maha Viharaya",
+      "canonical_source_url": "https://srilanka.travel/attraction?attraction_id=97",
+      "classification": "probable_match_review_required",
+      "match_evidence": [
+        {
+          "method": "fuzzy_name_candidate",
+          "confidence": 0.8451,
+          "matched_value": "Pannathgoda Purana Raja Maha Viharaya",
+          "kb_attraction_id": 4764,
+          "kb_name": "Nagadeepa Purana Rajamaha Viharaya",
+          "kb_district_id": 75,
+          "kb_district_name": "Badulla"
+        }
+      ],
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=97"
+      ],
+      "raw_source_names": [
+        "Pannathgoda Purana Raja Maha Viharaya"
+      ],
+      "source_record": {
+        "external_source_id": "srilanka_tourism_attraction:97",
+        "preferred_attraction_name": "Pannathgoda Purana Raja Maha Viharaya",
+        "attraction_name": "Pannathgoda Purana Raja Maha Viharaya",
+        "raw_source_names": [
+          "Pannathgoda Purana Raja Maha Viharaya"
+        ],
+        "canonical_source_url": "https://srilanka.travel/attraction?attraction_id=97",
+        "source_domain": "srilanka.travel",
+        "discovery_method": [
+          "listing_page",
+          "theme_search"
+        ],
+        "discovered_from_urls": [
+          "https://srilanka.travel/attractions",
+          "https://srilanka.travel/tourist-attractions?page=3&theme=2"
+        ],
+        "observed_theme_ids": [
+          "2"
+        ],
+        "observed_theme_names": [],
+        "observed_themes": [
+          "2"
+        ],
+        "observed_destinations": [],
+        "description": "A first Century BC temple which hosts an ancient map of Sri Lanka.",
+        "extraction_status": "partial_source_supported",
+        "provenance": [
+          ".attraction-card-body > p: explicit card field",
+          ".attractions-grid > article.attraction-card: source card container",
+          "card detail link href=http://www.srilanka.travel/attraction&attraction_id=97"
+        ],
+        "retrieved_at": [
+          "2026-10-16T13:36:32.325910+00:00",
+          "2026-10-16T18:18:57.117322+00:00"
+        ],
+        "google_place_id": null,
+        "google_place_match_status": null,
+        "google_place_candidate_ids": [],
+        "enrichment_required_fields": [
+          "google_place_id",
+          "coordinates",
+          "description"
+        ],
+        "enrichment_sources": [
+          "Google Places"
+        ],
+        "existing_kb_attraction_id": null,
+        "reconciliation_status": "pending_gate_5c_read_only_reconciliation"
+      }
+    }
+  ]
+}

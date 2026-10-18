@@ -1,0 +1,34 @@
+{
+  "clusters": [
+    {
+      "allowed_reviewer_resolutions": [
+        "SAME_PHYSICAL_ATTRACTION",
+        "DISTINCT_ATTRACTIONS",
+        "INCORRECT_SHARED_GOOGLE_MATCH",
+        "INSUFFICIENT_EVIDENCE"
+      ],
+      "cluster_id": "A",
+      "name": "Panavitiya Ambalama",
+      "resolution": "PENDING_REVIEW",
+      "source_attraction_ids": [
+        "srilanka_tourism_attraction:36",
+        "srilanka_tourism_attraction:94"
+      ]
+    },
+    {
+      "allowed_reviewer_resolutions": [
+        "SAME_PHYSICAL_ATTRACTION",
+        "DISTINCT_ATTRACTIONS",
+        "INCORRECT_SHARED_GOOGLE_MATCH",
+        "INSUFFICIENT_EVIDENCE"
+      ],
+      "cluster_id": "B",
+      "name": "possible shared Google identity",
+      "resolution": "PENDING_REVIEW",
+      "source_attraction_ids": [
+        "srilanka_tourism_attraction:107",
+        "srilanka_tourism_attraction:124"
+      ]
+    }
+  ]
+}

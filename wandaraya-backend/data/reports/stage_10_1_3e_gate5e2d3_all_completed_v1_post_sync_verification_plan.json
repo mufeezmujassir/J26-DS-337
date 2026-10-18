@@ -1,0 +1,13 @@
+{
+  "checks": [
+    "24 stable point IDs exist",
+    "payload attraction IDs and document hashes match",
+    "vectors have 1024 finite dimensions",
+    "embedding model matches",
+    "point count is reported",
+    "semantic exact-name retrieval is attempted",
+    "PostgreSQL scope is read-only"
+  ],
+  "command": "docker exec -it wandaraya-api python -m scripts.verify_srilanka_tourism_gate5e2d3 --batch-id all_completed_v1",
+  "writes_executed": false
+}
