@@ -1,0 +1,76 @@
+{
+  "num_samples_evaluated": 100,
+  "spearman_rho": 0.3994,
+  "p_value": 3.8432e-05,
+  "bootstrap_95_ci": [
+    0.2023,
+    0.5663
+  ],
+  "ablation_study": {
+    "model_only": {
+      "weights": {
+        "model": 1.0,
+        "lexical": 0.0,
+        "punctuation": 0.0
+      },
+      "spearman_rho": 0.3417,
+      "p_value": 0.0005032,
+      "bootstrap_95_ci": [
+        0.1303,
+        0.5347
+      ]
+    },
+    "lexical_only": {
+      "weights": {
+        "model": 0.0,
+        "lexical": 1.0,
+        "punctuation": 0.0
+      },
+      "spearman_rho": 0.4756,
+      "p_value": 5.7286e-07,
+      "bootstrap_95_ci": [
+        0.2959,
+        0.6312
+      ]
+    },
+    "punctuation_only": {
+      "weights": {
+        "model": 0.0,
+        "lexical": 0.0,
+        "punctuation": 1.0
+      },
+      "spearman_rho": 0.0234,
+      "p_value": 0.81709,
+      "bootstrap_95_ci": [
+        -0.1806,
+        0.2167
+      ]
+    },
+    "model_plus_lexical": {
+      "weights": {
+        "model": 0.625,
+        "lexical": 0.375,
+        "punctuation": 0.0
+      },
+      "spearman_rho": 0.4321,
+      "p_value": 7.1447e-06,
+      "bootstrap_95_ci": [
+        0.2337,
+        0.6095
+      ]
+    },
+    "full_estimator": {
+      "weights": {
+        "model": 0.5,
+        "lexical": 0.3,
+        "punctuation": 0.2
+      },
+      "spearman_rho": 0.3994,
+      "p_value": 3.8432e-05,
+      "bootstrap_95_ci": [
+        0.2023,
+        0.5663
+      ]
+    }
+  }
+}

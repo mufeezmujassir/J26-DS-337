@@ -1,0 +1,113 @@
+{
+  "primary_dataset": {
+    "source_file": "D:\\Year 4\\Research\\New folder\\J26-DS-337\\wandaraya-backend\\data\\group_decision\\processed\\conflict_test_cases.json",
+    "results": {
+      "total_cases": 40,
+      "confusion_matrix": {
+        "classes": [
+          "Destination",
+          "Budget",
+          "Schedule",
+          "Activity",
+          "None"
+        ],
+        "matrix": [
+          [
+            5,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            5,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            5,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            5,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            20
+          ]
+        ]
+      },
+      "per_conflict_type": {
+        "Destination": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "support": 5,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "Budget": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "support": 5,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "Schedule": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "support": 5,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "Activity": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "support": 5,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "None": {
+          "tp": 20,
+          "fp": 0,
+          "fn": 0,
+          "support": 20,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "macro_metrics_conflict_types": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "false_positives": [],
+      "false_negatives": []
+    }
+  },
+  "custom_gold_dataset": {
+    "evaluated": false,
+    "source_file": null,
+    "results": null
+  }
+}

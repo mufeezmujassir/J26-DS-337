@@ -1,0 +1,95 @@
+
+categories:
+  conflict_producing:
+    - "Destination"
+    - "Activity"
+    - "Budget"
+    - "Schedule"
+  ignored:
+    - "Food"
+    - "Accommodation"
+    - "Transport"
+    - "Travel Style"
+
+budget:
+  min_overlap_fraction: 0.3
+  hard_gap_ratio: 0.25
+
+schedule:
+  min_overlap_days: 2
+
+synonyms:
+  destination:
+    nuwara eliya:
+      - "nuwaraeliya"
+      - "nuwara eliya"
+      - "nuwara-eliya"
+    ella:
+      - "ella"
+      - "ella rock"
+      - "ella gap"
+    kandy:
+      - "kandy"
+      - "kandy city"
+      - "maha nuwara"
+    galle:
+      - "galle"
+      - "galle fort"
+      - "galle city"
+    colombo:
+      - "colombo"
+      - "colombo city"
+    sigiriya:
+      - "sigiriya"
+      - "lion rock"
+      - "sigiriya rock"
+    mirissa:
+      - "mirissa"
+      - "mirissa beach"
+    beach:
+      - "beach"
+      - "seaside"
+      - "coast"
+    historical site:
+      - "historical site"
+      - "historical sites"
+      - "heritage site"
+      - "ancient ruins"
+      - "cultural site"
+      - "cultural heritage"
+  activity:
+    hiking:
+      - "hiking"
+      - "trekking"
+      - "hike"
+      - "trek"
+    beach:
+      - "beach"
+      - "seaside"
+      - "beach relaxation"
+      - "coastal"
+    surfing:
+      - "surfing"
+      - "surf"
+    snorkeling:
+      - "snorkeling"
+      - "snorkel"
+      - "scuba diving"
+      - "diving"
+    sightseeing:
+      - "sightseeing"
+      - "touring"
+      - "city tour"
+    historical site:
+      - "historical site"
+      - "historical sites"
+      - "heritage site"
+      - "ancient ruins"
+      - "cultural heritage"
+    safari:
+      - "safari"
+      - "wildlife safari"
+      - "game drive"
+    camping:
+      - "camping"
+      - "camp"
