@@ -1,0 +1,38 @@
+{
+  "eligible_attraction_ids": [
+    6604,
+    6605,
+    6606,
+    6607,
+    6608,
+    6609,
+    6610,
+    6611,
+    6612,
+    6613,
+    6614,
+    6615,
+    6616,
+    6617,
+    6618,
+    6619,
+    6620,
+    6621,
+    6622,
+    6623,
+    6624,
+    6625,
+    6626,
+    6627
+  ],
+  "future_operation": "authorized_incremental_qdrant_upsert",
+  "steps": [
+    "re-read committed PostgreSQL scope",
+    "rebuild deterministic semantic documents",
+    "generate normalized BGE embeddings",
+    "validate 1024-dimensional finite vectors",
+    "upsert only missing or stale stable point IDs",
+    "verify persistence and retrieval"
+  ],
+  "writes_executed": false
+}

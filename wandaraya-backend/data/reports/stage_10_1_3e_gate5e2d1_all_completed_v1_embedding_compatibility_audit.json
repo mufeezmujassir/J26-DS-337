@@ -1,0 +1,14 @@
+{
+  "collection_vector_configuration": {
+    "compatible": true,
+    "distance_metric": "cosine",
+    "named_vectors": false,
+    "vector_dimension": 1024
+  },
+  "document_prefix": null,
+  "embedding_generation_performed": false,
+  "embedding_model": "BAAI/bge-large-en-v1.5",
+  "expected_dimension": 1024,
+  "normalizes_embeddings": true,
+  "query_prefix": null
+}

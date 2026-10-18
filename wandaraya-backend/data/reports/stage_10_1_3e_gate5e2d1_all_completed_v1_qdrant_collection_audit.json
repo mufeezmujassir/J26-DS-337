@@ -1,0 +1,19 @@
+{
+  "collection_exists": true,
+  "collection_name": "sri_lanka_attractions",
+  "indexed_vectors_count": 0,
+  "payload_duplicate_scan": "not_run: server filtered-scroll endpoint is unhealthy",
+  "payload_schema": {},
+  "point_count": 6098,
+  "point_id_convention": "integer PostgreSQL attraction.id",
+  "point_identity_audit_complete": true,
+  "point_identity_audit_method": "direct_stable_point_id_retrieve",
+  "qdrant_url": "http://qdrant:6333",
+  "status": "green",
+  "vector_configuration": {
+    "compatible": true,
+    "distance_metric": "cosine",
+    "named_vectors": false,
+    "vector_dimension": 1024
+  }
+}
