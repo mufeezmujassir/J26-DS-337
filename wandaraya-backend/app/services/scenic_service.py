@@ -126,6 +126,10 @@ class ScenicService:
                     progress = round(best_idx / max(1, len(dense_points) - 1), 2)
                     matched_places.append({
                         "name": sp["name"],
+                        "lat": float(sp_lat),
+                        "lon": float(sp_lon),
+                        "latitude": float(sp_lat),
+                        "longitude": float(sp_lon),
                         "category": sp["category"],
                         "district": sp["district"],
                         "distance_km": round(min_dist, 2),
