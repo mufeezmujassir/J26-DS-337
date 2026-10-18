@@ -10,6 +10,10 @@ intent_classifier:
   random_state: 42
   decision_threshold: 0.5
   label_noise_rate: 0.05
+  # Hybrid fusion thresholds (hard rules + Random Forest cross-check).
+  hybrid:
+    confirm_threshold: 0.7
+    no_preserve_threshold: 0.4
   # Rule thresholds mirrored from the dataset labeler.
   rules:
     budget_overrun_threshold: 0.10

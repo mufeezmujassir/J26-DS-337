@@ -26,6 +26,17 @@ DEFAULT_CONFIG: Dict[str, Any] = {
         "strict_budget": True,
         "strict_bookings": True,
     },
+    "intent_classifier": {
+        "enabled": False,
+        "model_filename": "intent_classifier_rf.pkl",
+        "random_state": 42,
+        "decision_threshold": 0.5,
+        "label_noise_rate": 0.05,
+        "hybrid": {
+            "confirm_threshold": 0.7,
+            "no_preserve_threshold": 0.4,
+        },
+    },
     "replanning": {
         "step_level": {"replace_scope": "single_activity"},
         "day_level": {"replace_scope": "full_day"},
