@@ -1,0 +1,194 @@
+{
+  "queries": [
+    {
+      "query_id": "q01_galle_heritage",
+      "query": "heritage attractions and walking in Galle",
+      "categories": [
+        "Heritage"
+      ],
+      "activities": [
+        "Walking"
+      ],
+      "districts": [
+        78
+      ],
+      "intent": "Heritage walk with Galle preference."
+    },
+    {
+      "query_id": "q02_southern_beaches",
+      "query": "beaches in Southern Province",
+      "categories": [
+        "Beach"
+      ],
+      "activities": [],
+      "districts": [],
+      "intent": "Coastal leisure in Southern Province."
+    },
+    {
+      "query_id": "q03_wildlife_safari",
+      "query": "wildlife safaris in Sri Lanka",
+      "categories": [
+        "Wildlife"
+      ],
+      "activities": [
+        "Safari"
+      ],
+      "districts": [],
+      "intent": "Wildlife viewing and safari."
+    },
+    {
+      "query_id": "q04_cultural_religious",
+      "query": "cultural and religious attractions",
+      "categories": [
+        "Culture",
+        "Religion"
+      ],
+      "activities": [],
+      "districts": [],
+      "intent": "Cultural and religious tourism."
+    },
+    {
+      "query_id": "q05_hiking_adventure",
+      "query": "hiking and adventure activities",
+      "categories": [],
+      "activities": [
+        "Hiking",
+        "Adventure"
+      ],
+      "districts": [],
+      "intent": "Outdoor adventure."
+    },
+    {
+      "query_id": "q06_family",
+      "query": "family friendly attractions",
+      "categories": [],
+      "activities": [],
+      "districts": [],
+      "intent": "Mixed-age family outing."
+    },
+    {
+      "query_id": "q07_hill_country",
+      "query": "hill-country nature attractions",
+      "categories": [
+        "Nature"
+      ],
+      "activities": [],
+      "districts": [],
+      "intent": "Scenic hill-country nature."
+    },
+    {
+      "query_id": "q08_archaeology",
+      "query": "historical and archaeological sites",
+      "categories": [
+        "History",
+        "Archaeology"
+      ],
+      "activities": [],
+      "districts": [],
+      "intent": "Historical and archaeological tourism."
+    },
+    {
+      "query_id": "q09_culinary",
+      "query": "food and culinary tourism",
+      "categories": [],
+      "activities": [
+        "Food",
+        "Culinary"
+      ],
+      "districts": [],
+      "intent": "Food-oriented tourism."
+    },
+    {
+      "query_id": "q10_photography",
+      "query": "photography and scenic attractions",
+      "categories": [
+        "Photography"
+      ],
+      "activities": [],
+      "districts": [],
+      "intent": "Scenic photography."
+    }
+  ],
+  "coverage": [
+    {
+      "query_id": "q01_galle_heritage",
+      "query": "heritage attractions and walking in Galle",
+      "candidate_pool_requested": 30,
+      "candidate_universe_count": 30,
+      "same_universe_across_semantic_baseline_experimental": true,
+      "excluded_due_to_pool_limit": "unknown_without_unbounded_scan"
+    },
+    {
+      "query_id": "q02_southern_beaches",
+      "query": "beaches in Southern Province",
+      "candidate_pool_requested": 30,
+      "candidate_universe_count": 30,
+      "same_universe_across_semantic_baseline_experimental": true,
+      "excluded_due_to_pool_limit": "unknown_without_unbounded_scan"
+    },
+    {
+      "query_id": "q03_wildlife_safari",
+      "query": "wildlife safaris in Sri Lanka",
+      "candidate_pool_requested": 30,
+      "candidate_universe_count": 30,
+      "same_universe_across_semantic_baseline_experimental": true,
+      "excluded_due_to_pool_limit": "unknown_without_unbounded_scan"
+    },
+    {
+      "query_id": "q04_cultural_religious",
+      "query": "cultural and religious attractions",
+      "candidate_pool_requested": 30,
+      "candidate_universe_count": 30,
+      "same_universe_across_semantic_baseline_experimental": true,
+      "excluded_due_to_pool_limit": "unknown_without_unbounded_scan"
+    },
+    {
+      "query_id": "q05_hiking_adventure",
+      "query": "hiking and adventure activities",
+      "candidate_pool_requested": 30,
+      "candidate_universe_count": 30,
+      "same_universe_across_semantic_baseline_experimental": true,
+      "excluded_due_to_pool_limit": "unknown_without_unbounded_scan"
+    },
+    {
+      "query_id": "q06_family",
+      "query": "family friendly attractions",
+      "candidate_pool_requested": 30,
+      "candidate_universe_count": 30,
+      "same_universe_across_semantic_baseline_experimental": true,
+      "excluded_due_to_pool_limit": "unknown_without_unbounded_scan"
+    },
+    {
+      "query_id": "q07_hill_country",
+      "query": "hill-country nature attractions",
+      "candidate_pool_requested": 30,
+      "candidate_universe_count": 30,
+      "same_universe_across_semantic_baseline_experimental": true,
+      "excluded_due_to_pool_limit": "unknown_without_unbounded_scan"
+    },
+    {
+      "query_id": "q08_archaeology",
+      "query": "historical and archaeological sites",
+      "candidate_pool_requested": 30,
+      "candidate_universe_count": 30,
+      "same_universe_across_semantic_baseline_experimental": true,
+      "excluded_due_to_pool_limit": "unknown_without_unbounded_scan"
+    },
+    {
+      "query_id": "q09_culinary",
+      "query": "food and culinary tourism",
+      "candidate_pool_requested": 30,
+      "candidate_universe_count": 30,
+      "same_universe_across_semantic_baseline_experimental": true,
+      "excluded_due_to_pool_limit": "unknown_without_unbounded_scan"
+    },
+    {
+      "query_id": "q10_photography",
+      "query": "photography and scenic attractions",
+      "candidate_pool_requested": 30,
+      "candidate_universe_count": 30,
+      "same_universe_across_semantic_baseline_experimental": true,
+      "excluded_due_to_pool_limit": "unknown_without_unbounded_scan"
+    }
+  ]
+}

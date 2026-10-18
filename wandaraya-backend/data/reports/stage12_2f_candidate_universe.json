@@ -1,0 +1,5364 @@
+{
+  "generated_at_utc": "2026-10-18T16:47:45.643014+00:00",
+  "candidate_pool_limit": 30,
+  "policy_versions": [
+    "semantic_only",
+    "content_baseline_v1",
+    "content_evidence_review_experiment_v1"
+  ],
+  "records": [
+    {
+      "query_id": "q01_galle_heritage",
+      "query": "heritage attractions and walking in Galle",
+      "attraction_id": 872,
+      "attraction_name": "\u0dc0\u0dd2\u0dc1\u0dcf\u0dbb\u0daf \u0d9c\u0dd4\u0dab\u0daf\u0dcf\u0dc3 \u0d9a\u0db4\u0dd4\u0d9c\u0dda \u0dc3\u0dca\u0db8\u0dcf\u0dbb\u0d9a\u0dba - Gunadasa Kapuge Monument",
+      "district_id": 78,
+      "categories": [
+        "Educational & Learning",
+        "History & Archaeology"
+      ],
+      "activities": [
+        "Museum Visit",
+        "Sightseeing"
+      ],
+      "semantic_rank": 1,
+      "baseline_rank": 23,
+      "experimental_rank": 19,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "c305928ac420fdecda6eca3b18de8a277c921015d7950df2435ac9679926e26f"
+    },
+    {
+      "query_id": "q01_galle_heritage",
+      "query": "heritage attractions and walking in Galle",
+      "attraction_id": 121,
+      "attraction_name": "Thawalama Batahena Ambalama",
+      "district_id": 78,
+      "categories": [
+        "Culture & Heritage",
+        "History & Archaeology",
+        "Photography & Scenic Spots"
+      ],
+      "activities": [
+        "Historical Exploration",
+        "Sightseeing"
+      ],
+      "semantic_rank": 2,
+      "baseline_rank": 3,
+      "experimental_rank": 2,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "2a55d19e0394c4cc65a2f218639ea6769cc8b9a8c9b62211bc7775107d90dec1"
+    },
+    {
+      "query_id": "q01_galle_heritage",
+      "query": "heritage attractions and walking in Galle",
+      "attraction_id": 2281,
+      "attraction_name": "Travel Sri Lanka offers",
+      "district_id": 78,
+      "categories": [],
+      "activities": [],
+      "semantic_rank": 3,
+      "baseline_rank": 1,
+      "experimental_rank": 27,
+      "experimental_eligibility_bucket": 2,
+      "blinded_order": "10b98dbd723be01fad88175207f1d672067f536c7040c9cdce83809db2991687"
+    },
+    {
+      "query_id": "q01_galle_heritage",
+      "query": "heritage attractions and walking in Galle",
+      "attraction_id": 80,
+      "attraction_name": "Jayanthi Junction",
+      "district_id": 78,
+      "categories": [
+        "Culture & Heritage",
+        "History & Archaeology",
+        "Photography & Scenic Spots"
+      ],
+      "activities": [
+        "Historical Exploration",
+        "Sightseeing"
+      ],
+      "semantic_rank": 4,
+      "baseline_rank": 4,
+      "experimental_rank": 28,
+      "experimental_eligibility_bucket": 2,
+      "blinded_order": "5acf883d36026f7229dbf5c8b46b09a082e089d80bb03119bbc9ab205c815261"
+    },
+    {
+      "query_id": "q01_galle_heritage",
+      "query": "heritage attractions and walking in Galle",
+      "attraction_id": 78,
+      "attraction_name": "Kottawa Junction",
+      "district_id": 78,
+      "categories": [
+        "Culture & Heritage",
+        "History & Archaeology",
+        "Photography & Scenic Spots"
+      ],
+      "activities": [
+        "Historical Exploration",
+        "Sightseeing"
+      ],
+      "semantic_rank": 5,
+      "baseline_rank": 5,
+      "experimental_rank": 29,
+      "experimental_eligibility_bucket": 2,
+      "blinded_order": "733e1efb1bf2c501fbae61ab84286b84c56fc0b26dd739d7f2357708bd0044c6"
+    },
+    {
+      "query_id": "q01_galle_heritage",
+      "query": "heritage attractions and walking in Galle",
+      "attraction_id": 3493,
+      "attraction_name": "Galle Face Park & Beach",
+      "district_id": 77,
+      "categories": [
+        "Beaches & Coastal",
+        "Nature & Landscapes",
+        "Water & Marine Activities"
+      ],
+      "activities": [],
+      "semantic_rank": 6,
+      "baseline_rank": 22,
+      "experimental_rank": 18,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "315e3303d94552c1c289d3844072cc1a445b8d0f786a068ebb07e62b381a24d5"
+    },
+    {
+      "query_id": "q01_galle_heritage",
+      "query": "heritage attractions and walking in Galle",
+      "attraction_id": 1064,
+      "attraction_name": "Hero's Bridge",
+      "district_id": 78,
+      "categories": [],
+      "activities": [],
+      "semantic_rank": 7,
+      "baseline_rank": 2,
+      "experimental_rank": 1,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "d585cdd10a8440ff9e0ba6f624fc57bde8848082335d2aa5cca7780a4d0c4541"
+    },
+    {
+      "query_id": "q01_galle_heritage",
+      "query": "heritage attractions and walking in Galle",
+      "attraction_id": 73,
+      "attraction_name": "Pilana Junction - \u0db4\u0dd2\u0dbd\u0dcf\u0db1 \u0dc4\u0db1\u0dca\u0daf\u0dd2\u0dba",
+      "district_id": 78,
+      "categories": [
+        "Culture & Heritage",
+        "History & Archaeology",
+        "Photography & Scenic Spots"
+      ],
+      "activities": [
+        "Historical Exploration",
+        "Sightseeing"
+      ],
+      "semantic_rank": 8,
+      "baseline_rank": 6,
+      "experimental_rank": 30,
+      "experimental_eligibility_bucket": 2,
+      "blinded_order": "43be345e1ec94b2f0a0ee7cd6510be5bd8f24602853cec9d6f4bf8dcafc3a1d3"
+    },
+    {
+      "query_id": "q01_galle_heritage",
+      "query": "heritage attractions and walking in Galle",
+      "attraction_id": 70,
+      "attraction_name": "War Heroes Memorial Statue Padinnoruwa",
+      "district_id": 78,
+      "categories": [
+        "Culture & Heritage"
+      ],
+      "activities": [
+        "Sightseeing"
+      ],
+      "semantic_rank": 9,
+      "baseline_rank": 7,
+      "experimental_rank": 3,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "ada727a0f89de51c6ac66731bd5ff521ccbcdb8aa199d4e4a88e1c9576d24aaa"
+    },
+    {
+      "query_id": "q01_galle_heritage",
+      "query": "heritage attractions and walking in Galle",
+      "attraction_id": 108,
+      "attraction_name": "Buddha statue",
+      "district_id": 78,
+      "categories": [
+        "Culture & Heritage"
+      ],
+      "activities": [
+        "Sightseeing"
+      ],
+      "semantic_rank": 10,
+      "baseline_rank": 8,
+      "experimental_rank": 4,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "418965a8f38467a130021d54153c2bdf7772d5ce68986348349e234062f91405"
+    },
+    {
+      "query_id": "q01_galle_heritage",
+      "query": "heritage attractions and walking in Galle",
+      "attraction_id": 57,
+      "attraction_name": "Martin Wickramasinghe Folk Museum",
+      "district_id": 78,
+      "categories": [
+        "Educational & Learning",
+        "History & Archaeology",
+        "Urban & City Attractions"
+      ],
+      "activities": [
+        "Museum Visit"
+      ],
+      "semantic_rank": 11,
+      "baseline_rank": 24,
+      "experimental_rank": 20,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "eeb96c293bf9b4d8d50c844127e81dce429a40d4691f34f0e594d754bcad4978"
+    },
+    {
+      "query_id": "q01_galle_heritage",
+      "query": "heritage attractions and walking in Galle",
+      "attraction_id": 3436,
+      "attraction_name": "Archaeology National Museum Kotte",
+      "district_id": 77,
+      "categories": [
+        "Educational & Learning",
+        "History & Archaeology",
+        "Urban & City Attractions"
+      ],
+      "activities": [
+        "Museum Visit"
+      ],
+      "semantic_rank": 12,
+      "baseline_rank": 29,
+      "experimental_rank": 25,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "645df59b9900ac0469840fcf46335d73406ef0bceee6ecf5bdc269bdf621e7cc"
+    },
+    {
+      "query_id": "q01_galle_heritage",
+      "query": "heritage attractions and walking in Galle",
+      "attraction_id": 2064,
+      "attraction_name": "Uragasmanhandiya",
+      "district_id": 78,
+      "categories": [
+        "Religious & Spiritual"
+      ],
+      "activities": [],
+      "semantic_rank": 13,
+      "baseline_rank": 15,
+      "experimental_rank": 11,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "a991cf34bd6ff75011bd9924f483643d3a67bcbd860dc9f85e10927d41d1c832"
+    },
+    {
+      "query_id": "q01_galle_heritage",
+      "query": "heritage attractions and walking in Galle",
+      "attraction_id": 1,
+      "attraction_name": "Galle Dutch Fort",
+      "district_id": 78,
+      "categories": [
+        "Culture & Heritage",
+        "History & Archaeology",
+        "Photography & Scenic Spots",
+        "Urban & City Attractions"
+      ],
+      "activities": [
+        "Cultural Experience",
+        "Heritage Exploration",
+        "Historical Exploration",
+        "Photography",
+        "Sightseeing"
+      ],
+      "semantic_rank": 14,
+      "baseline_rank": 9,
+      "experimental_rank": 5,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "6448c826d25f0c49d6d137cb2aedfa1abe81d1d364214b5e1f27b56ee34ebaf6"
+    },
+    {
+      "query_id": "q01_galle_heritage",
+      "query": "heritage attractions and walking in Galle",
+      "attraction_id": 3435,
+      "attraction_name": "Sri Lanka Cricket Museum",
+      "district_id": 77,
+      "categories": [
+        "Educational & Learning",
+        "History & Archaeology"
+      ],
+      "activities": [
+        "Museum Visit"
+      ],
+      "semantic_rank": 15,
+      "baseline_rank": 30,
+      "experimental_rank": 26,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "9d1123ef967f55d2d107dbbab98b566f24c5e49641d11ba7aa42b37f1979a484"
+    },
+    {
+      "query_id": "q01_galle_heritage",
+      "query": "heritage attractions and walking in Galle",
+      "attraction_id": 67,
+      "attraction_name": "Lord buddha Statue -eppala",
+      "district_id": 78,
+      "categories": [
+        "Culture & Heritage"
+      ],
+      "activities": [
+        "Sightseeing"
+      ],
+      "semantic_rank": 16,
+      "baseline_rank": 10,
+      "experimental_rank": 6,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "7a55003dcd06ed8110efc1831891deb19f60e206f1583a2f138067fff7b9cdcc"
+    },
+    {
+      "query_id": "q01_galle_heritage",
+      "query": "heritage attractions and walking in Galle",
+      "attraction_id": 1049,
+      "attraction_name": "Wathurawila Camping Site \u0dc0\u0dad\u0dd4\u0dbb\u0dc0\u0dd2\u0dbd \u0d9a\u0dd1\u0db8\u0dca\u0db4\u0dd2\u0d82 \u0dc3\u0dba\u0dd2\u0da7\u0dca",
+      "district_id": 78,
+      "categories": [],
+      "activities": [
+        "Camping"
+      ],
+      "semantic_rank": 17,
+      "baseline_rank": 13,
+      "experimental_rank": 9,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "5bb6a56946f4eaeb376d1c7003b4222f26821482034c1193032fb0b6058df4e5"
+    },
+    {
+      "query_id": "q01_galle_heritage",
+      "query": "heritage attractions and walking in Galle",
+      "attraction_id": 276,
+      "attraction_name": "Martin Wickramasinghe Folk Museum Traditional Transport Gallery",
+      "district_id": 78,
+      "categories": [
+        "Educational & Learning",
+        "History & Archaeology"
+      ],
+      "activities": [
+        "Cultural Experience",
+        "Museum Visit"
+      ],
+      "semantic_rank": 18,
+      "baseline_rank": 25,
+      "experimental_rank": 21,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "01ebe26180d63f399db4f1876c566d2ec97a7109b2b054d60baddf012cddebd1"
+    },
+    {
+      "query_id": "q01_galle_heritage",
+      "query": "heritage attractions and walking in Galle",
+      "attraction_id": 541,
+      "attraction_name": "Miyanawathura Adventure",
+      "district_id": 78,
+      "categories": [
+        "Adventure & Outdoor"
+      ],
+      "activities": [],
+      "semantic_rank": 19,
+      "baseline_rank": 16,
+      "experimental_rank": 12,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "a75d6b44456d7757ae744112dcfb84dee231030ffa0f7227ea82284debb9a7e5"
+    },
+    {
+      "query_id": "q01_galle_heritage",
+      "query": "heritage attractions and walking in Galle",
+      "attraction_id": 4082,
+      "attraction_name": "Vinayagapuram",
+      "district_id": 73,
+      "categories": [
+        "Culture & Heritage",
+        "History & Archaeology",
+        "Photography & Scenic Spots"
+      ],
+      "activities": [
+        "Historical Exploration",
+        "Sightseeing"
+      ],
+      "semantic_rank": 20,
+      "baseline_rank": 12,
+      "experimental_rank": 8,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "f5d4500986edfe88213ed425a60e6bd7b9cb5c7da96761aab8f6e1db0ac296ef"
+    },
+    {
+      "query_id": "q01_galle_heritage",
+      "query": "heritage attractions and walking in Galle",
+      "attraction_id": 1952,
+      "attraction_name": "Buddha",
+      "district_id": 78,
+      "categories": [
+        "Educational & Learning",
+        "History & Archaeology"
+      ],
+      "activities": [
+        "Museum Visit"
+      ],
+      "semantic_rank": 21,
+      "baseline_rank": 26,
+      "experimental_rank": 22,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "a0734885550cf1601a7c881750434e0c72f247b6618009ea56932a92f487237b"
+    },
+    {
+      "query_id": "q01_galle_heritage",
+      "query": "heritage attractions and walking in Galle",
+      "attraction_id": 28,
+      "attraction_name": "Hikkaduwa Beach",
+      "district_id": 78,
+      "categories": [
+        "Beaches & Coastal",
+        "Nature & Landscapes",
+        "Water & Marine Activities"
+      ],
+      "activities": [],
+      "semantic_rank": 22,
+      "baseline_rank": 17,
+      "experimental_rank": 13,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "6523d03234550c87cbe0c70a8c43273dec6875281e53ccd644e0a1cd4dec6fce"
+    },
+    {
+      "query_id": "q01_galle_heritage",
+      "query": "heritage attractions and walking in Galle",
+      "attraction_id": 703,
+      "attraction_name": "Halvitigala Tea Factory",
+      "district_id": 78,
+      "categories": [],
+      "activities": [
+        "Tea Factory Visit"
+      ],
+      "semantic_rank": 23,
+      "baseline_rank": 14,
+      "experimental_rank": 10,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "269629b7694dea9331ffdeb5116ee364faeb9c22721601b383c16b218a476d71"
+    },
+    {
+      "query_id": "q01_galle_heritage",
+      "query": "heritage attractions and walking in Galle",
+      "attraction_id": 117,
+      "attraction_name": "Takaran maduwa",
+      "district_id": 78,
+      "categories": [
+        "Culture & Heritage",
+        "History & Archaeology",
+        "Photography & Scenic Spots"
+      ],
+      "activities": [
+        "Historical Exploration",
+        "Sightseeing"
+      ],
+      "semantic_rank": 24,
+      "baseline_rank": 11,
+      "experimental_rank": 7,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "6e12d68fbf9fb5ee4bd978419676febeb732b2d42b903e583f2e1c4c1ce85658"
+    },
+    {
+      "query_id": "q01_galle_heritage",
+      "query": "heritage attractions and walking in Galle",
+      "attraction_id": 27,
+      "attraction_name": "Unawatuna Beach",
+      "district_id": 78,
+      "categories": [
+        "Beaches & Coastal",
+        "Nature & Landscapes",
+        "Water & Marine Activities"
+      ],
+      "activities": [],
+      "semantic_rank": 25,
+      "baseline_rank": 18,
+      "experimental_rank": 14,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "f16415267605780154d6f03c28938d83fe363875ccbeea7dcf890d6853c2ce1e"
+    },
+    {
+      "query_id": "q01_galle_heritage",
+      "query": "heritage attractions and walking in Galle",
+      "attraction_id": 645,
+      "attraction_name": "Photography Museum A",
+      "district_id": 78,
+      "categories": [
+        "Educational & Learning",
+        "History & Archaeology"
+      ],
+      "activities": [
+        "Museum Visit",
+        "Photography"
+      ],
+      "semantic_rank": 26,
+      "baseline_rank": 27,
+      "experimental_rank": 23,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "13210183113f9daf389c592f677fb1fd078420c55b8706600636368333ad903a"
+    },
+    {
+      "query_id": "q01_galle_heritage",
+      "query": "heritage attractions and walking in Galle",
+      "attraction_id": 2015,
+      "attraction_name": "Ventura Beach",
+      "district_id": 78,
+      "categories": [
+        "Beaches & Coastal",
+        "Nature & Landscapes",
+        "Water & Marine Activities"
+      ],
+      "activities": [],
+      "semantic_rank": 27,
+      "baseline_rank": 19,
+      "experimental_rank": 15,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "71b9e528c92773a8228846272d7958f426b41b00fd7f763e1137adee040da4dc"
+    },
+    {
+      "query_id": "q01_galle_heritage",
+      "query": "heritage attractions and walking in Galle",
+      "attraction_id": 615,
+      "attraction_name": "Galpothukatiya Park",
+      "district_id": 78,
+      "categories": [
+        "Family & Recreation",
+        "Wildlife & Safari"
+      ],
+      "activities": [],
+      "semantic_rank": 28,
+      "baseline_rank": 20,
+      "experimental_rank": 16,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "5f0986dc089bcb922afdd8a5f624c4e2bb3853802a0e3c33f5a382d9fcf7f07e"
+    },
+    {
+      "query_id": "q01_galle_heritage",
+      "query": "heritage attractions and walking in Galle",
+      "attraction_id": 857,
+      "attraction_name": "The Cinnamon Trail",
+      "district_id": 78,
+      "categories": [
+        "Entertainment & Nightlife",
+        "Festivals & Events",
+        "Food & Culinary"
+      ],
+      "activities": [],
+      "semantic_rank": 29,
+      "baseline_rank": 21,
+      "experimental_rank": 17,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "d69455cccb8286d1f037690c8ae6c6e44e9eb0ebd176f799ad071b6ed988c6b8"
+    },
+    {
+      "query_id": "q01_galle_heritage",
+      "query": "heritage attractions and walking in Galle",
+      "attraction_id": 877,
+      "attraction_name": "SLKaraoke",
+      "district_id": 78,
+      "categories": [
+        "Educational & Learning",
+        "History & Archaeology"
+      ],
+      "activities": [
+        "Museum Visit"
+      ],
+      "semantic_rank": 30,
+      "baseline_rank": 28,
+      "experimental_rank": 24,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "fcec1eb143faff8c7fb6e749cdfde02cb55f2b6455d8ece1b1fee0ebd9ec71c9"
+    },
+    {
+      "query_id": "q02_southern_beaches",
+      "query": "beaches in Southern Province",
+      "attraction_id": 485,
+      "attraction_name": "Southern Province",
+      "district_id": 89,
+      "categories": [
+        "Nature & Landscapes"
+      ],
+      "activities": [],
+      "semantic_rank": 1,
+      "baseline_rank": 2,
+      "experimental_rank": 1,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "ae68dce7324b0d26b215ff9ddab9831de67dfc10158f5ef1c7d9f6e7bd0ebc60"
+    },
+    {
+      "query_id": "q02_southern_beaches",
+      "query": "beaches in Southern Province",
+      "attraction_id": 2015,
+      "attraction_name": "Ventura Beach",
+      "district_id": 78,
+      "categories": [
+        "Beaches & Coastal",
+        "Nature & Landscapes",
+        "Water & Marine Activities"
+      ],
+      "activities": [],
+      "semantic_rank": 2,
+      "baseline_rank": 3,
+      "experimental_rank": 2,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "5c527f291839e99efdb3c86d4e842745a3ceda95c58d7bfe587aba06d976c7f5"
+    },
+    {
+      "query_id": "q02_southern_beaches",
+      "query": "beaches in Southern Province",
+      "attraction_id": 27,
+      "attraction_name": "Unawatuna Beach",
+      "district_id": 78,
+      "categories": [
+        "Beaches & Coastal",
+        "Nature & Landscapes",
+        "Water & Marine Activities"
+      ],
+      "activities": [],
+      "semantic_rank": 3,
+      "baseline_rank": 4,
+      "experimental_rank": 3,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "642162457345d149f4c33db64c7783cd666dd010bdcbd4a709a53e78056b0138"
+    },
+    {
+      "query_id": "q02_southern_beaches",
+      "query": "beaches in Southern Province",
+      "attraction_id": 6615,
+      "attraction_name": "Koggala Beach",
+      "district_id": 78,
+      "categories": [
+        "Beaches & Coastal"
+      ],
+      "activities": [],
+      "semantic_rank": 4,
+      "baseline_rank": 5,
+      "experimental_rank": 4,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "bc8325373f15e11fb8db054c667c0ed934f8e0271fb9c7e93bba6133cd309127"
+    },
+    {
+      "query_id": "q02_southern_beaches",
+      "query": "beaches in Southern Province",
+      "attraction_id": 351,
+      "attraction_name": "Lakshawaththa Beach",
+      "district_id": 89,
+      "categories": [
+        "Beaches & Coastal",
+        "Nature & Landscapes",
+        "Water & Marine Activities"
+      ],
+      "activities": [],
+      "semantic_rank": 5,
+      "baseline_rank": 6,
+      "experimental_rank": 5,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "3dcd4791b365ceb1b30297605017652123bc0b79c43ab640de6187fcbc71ac4b"
+    },
+    {
+      "query_id": "q02_southern_beaches",
+      "query": "beaches in Southern Province",
+      "attraction_id": 463,
+      "attraction_name": "Matara Beach Park | \u0db8\u0dcf\u0dad\u0dbb \u0dc0\u0dd9\u0dbb\u0dc5 \u0d8b\u0daf\u0dca\u200d\u0dba\u0dcf\u0db1\u0dba",
+      "district_id": 89,
+      "categories": [
+        "Family & Recreation",
+        "Nature & Landscapes"
+      ],
+      "activities": [],
+      "semantic_rank": 6,
+      "baseline_rank": 7,
+      "experimental_rank": 6,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "b7654df16f664f35e87f985b4854ba5bdd14144cd6675f388ac4fd812676a138"
+    },
+    {
+      "query_id": "q02_southern_beaches",
+      "query": "beaches in Southern Province",
+      "attraction_id": 195,
+      "attraction_name": "Bentota Beach",
+      "district_id": 78,
+      "categories": [
+        "Urban & City Attractions"
+      ],
+      "activities": [],
+      "semantic_rank": 7,
+      "baseline_rank": 8,
+      "experimental_rank": 7,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "ee4e663ececd46c3a87d40125f3a2290c1c9067e4fb331f209f5a4db9722501c"
+    },
+    {
+      "query_id": "q02_southern_beaches",
+      "query": "beaches in Southern Province",
+      "attraction_id": 352,
+      "attraction_name": "Sk Town Beach",
+      "district_id": 89,
+      "categories": [
+        "Beaches & Coastal",
+        "Nature & Landscapes",
+        "Water & Marine Activities"
+      ],
+      "activities": [],
+      "semantic_rank": 8,
+      "baseline_rank": 9,
+      "experimental_rank": 8,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "fdb2a97089c20391d8622d8632eb9b240cba84877f924c9d8baba71db0b4e7a0"
+    },
+    {
+      "query_id": "q02_southern_beaches",
+      "query": "beaches in Southern Province",
+      "attraction_id": 28,
+      "attraction_name": "Hikkaduwa Beach",
+      "district_id": 78,
+      "categories": [
+        "Beaches & Coastal",
+        "Nature & Landscapes",
+        "Water & Marine Activities"
+      ],
+      "activities": [],
+      "semantic_rank": 9,
+      "baseline_rank": 10,
+      "experimental_rank": 9,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "f82f0a0d08452531029f9dee94c1e0bf3d85f066861667d1ab40d6015c658bb5"
+    },
+    {
+      "query_id": "q02_southern_beaches",
+      "query": "beaches in Southern Province",
+      "attraction_id": 355,
+      "attraction_name": "Surf Beach",
+      "district_id": 89,
+      "categories": [
+        "Beaches & Coastal",
+        "Nature & Landscapes",
+        "Water & Marine Activities"
+      ],
+      "activities": [
+        "Surfing"
+      ],
+      "semantic_rank": 10,
+      "baseline_rank": 11,
+      "experimental_rank": 10,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "494532a8d6e463bf748989eaf25c79df53e8667fa892b5feb4ebdccce53619e9"
+    },
+    {
+      "query_id": "q02_southern_beaches",
+      "query": "beaches in Southern Province",
+      "attraction_id": 43,
+      "attraction_name": "Weligama Beach",
+      "district_id": 89,
+      "categories": [
+        "Urban & City Attractions"
+      ],
+      "activities": [],
+      "semantic_rank": 11,
+      "baseline_rank": 12,
+      "experimental_rank": 11,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "1c00d8b4fbc853f42854c8c212864ad01dce95e52d940b1981df7aaa471f1492"
+    },
+    {
+      "query_id": "q02_southern_beaches",
+      "query": "beaches in Southern Province",
+      "attraction_id": 2112,
+      "attraction_name": "Bentota Beach Park",
+      "district_id": 78,
+      "categories": [
+        "Family & Recreation",
+        "Nature & Landscapes"
+      ],
+      "activities": [],
+      "semantic_rank": 12,
+      "baseline_rank": 13,
+      "experimental_rank": 12,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "04ae91d50f422876e78703c0a2de7d1460c8dd5f60a14d80008a4b6484bf4d4a"
+    },
+    {
+      "query_id": "q02_southern_beaches",
+      "query": "beaches in Southern Province",
+      "attraction_id": 163,
+      "attraction_name": "Palatupana Beach",
+      "district_id": 80,
+      "categories": [
+        "Urban & City Attractions"
+      ],
+      "activities": [],
+      "semantic_rank": 13,
+      "baseline_rank": 14,
+      "experimental_rank": 13,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "cfc69edfc2ae04843b58fbb26a6a23ff1f847516cf72077b7ea4937bc13c9a4d"
+    },
+    {
+      "query_id": "q02_southern_beaches",
+      "query": "beaches in Southern Province",
+      "attraction_id": 354,
+      "attraction_name": "Abimanagama Beach",
+      "district_id": 89,
+      "categories": [
+        "Beaches & Coastal",
+        "Nature & Landscapes",
+        "Water & Marine Activities"
+      ],
+      "activities": [],
+      "semantic_rank": 14,
+      "baseline_rank": 15,
+      "experimental_rank": 14,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "029e03fb162777bf218cd0ab06aabe50a1980c1c4f33d83054a23c8016142bea"
+    },
+    {
+      "query_id": "q02_southern_beaches",
+      "query": "beaches in Southern Province",
+      "attraction_id": 2017,
+      "attraction_name": "Sabaidee Beach",
+      "district_id": 78,
+      "categories": [
+        "Beaches & Coastal",
+        "Nature & Landscapes",
+        "Water & Marine Activities"
+      ],
+      "activities": [],
+      "semantic_rank": 15,
+      "baseline_rank": 16,
+      "experimental_rank": 15,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "b189adaf81e1b177570b385d72a53167e2dfff7752e1a5fcff3b3c244e344514"
+    },
+    {
+      "query_id": "q02_southern_beaches",
+      "query": "beaches in Southern Province",
+      "attraction_id": 348,
+      "attraction_name": "Weligama City Beginner's Surf beach",
+      "district_id": 89,
+      "categories": [
+        "Beaches & Coastal",
+        "Nature & Landscapes",
+        "Water & Marine Activities"
+      ],
+      "activities": [
+        "Surfing"
+      ],
+      "semantic_rank": 16,
+      "baseline_rank": 17,
+      "experimental_rank": 16,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "ebb92c18fd50eb3cc570e29abaa7d3fc108122c49aafc0b7ec66554c32ed89ab"
+    },
+    {
+      "query_id": "q02_southern_beaches",
+      "query": "beaches in Southern Province",
+      "attraction_id": 2014,
+      "attraction_name": "AL.C Beach",
+      "district_id": 82,
+      "categories": [
+        "Beaches & Coastal",
+        "Nature & Landscapes",
+        "Water & Marine Activities"
+      ],
+      "activities": [],
+      "semantic_rank": 17,
+      "baseline_rank": 18,
+      "experimental_rank": 17,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "26fc806e15d458846ca44d6caed8e6ca246732f6c7f4242518c740adcf5db85b"
+    },
+    {
+      "query_id": "q02_southern_beaches",
+      "query": "beaches in Southern Province",
+      "attraction_id": 2281,
+      "attraction_name": "Travel Sri Lanka offers",
+      "district_id": 78,
+      "categories": [],
+      "activities": [],
+      "semantic_rank": 18,
+      "baseline_rank": 1,
+      "experimental_rank": 30,
+      "experimental_eligibility_bucket": 2,
+      "blinded_order": "939d017e8ff2c43a3e55429c6fed642d74a79969fc4d2fc6822c4b438183e464"
+    },
+    {
+      "query_id": "q02_southern_beaches",
+      "query": "beaches in Southern Province",
+      "attraction_id": 1058,
+      "attraction_name": "southern aquarium",
+      "district_id": 78,
+      "categories": [
+        "Family & Recreation"
+      ],
+      "activities": [],
+      "semantic_rank": 19,
+      "baseline_rank": 19,
+      "experimental_rank": 18,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "815280f879970228e2304f3f24a0f8930e9fb3daa5928627805e745d43bfd9a6"
+    },
+    {
+      "query_id": "q02_southern_beaches",
+      "query": "beaches in Southern Province",
+      "attraction_id": 362,
+      "attraction_name": "Naomi Beach",
+      "district_id": 89,
+      "categories": [
+        "Adventure & Outdoor"
+      ],
+      "activities": [
+        "Hiking"
+      ],
+      "semantic_rank": 20,
+      "baseline_rank": 20,
+      "experimental_rank": 19,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "c5f2f1625637d3a6d2e5ea782cf0a0ce4136932d73eff635964b55a23cc457e1"
+    },
+    {
+      "query_id": "q02_southern_beaches",
+      "query": "beaches in Southern Province",
+      "attraction_id": 349,
+      "attraction_name": "Polhena Beach",
+      "district_id": 89,
+      "categories": [
+        "Beaches & Coastal",
+        "Nature & Landscapes",
+        "Water & Marine Activities"
+      ],
+      "activities": [],
+      "semantic_rank": 21,
+      "baseline_rank": 21,
+      "experimental_rank": 20,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "1eaa6950b2bb71305e66127bf98afd09b1301cb1b0e09e28784cea189ba40469"
+    },
+    {
+      "query_id": "q02_southern_beaches",
+      "query": "beaches in Southern Province",
+      "attraction_id": 162,
+      "attraction_name": "Yala Beach",
+      "district_id": 80,
+      "categories": [
+        "Urban & City Attractions"
+      ],
+      "activities": [],
+      "semantic_rank": 22,
+      "baseline_rank": 22,
+      "experimental_rank": 21,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "abedda448131715ade7caeecb101044ebd80a2b1d68baaebaf6b835530ab5d8a"
+    },
+    {
+      "query_id": "q02_southern_beaches",
+      "query": "beaches in Southern Province",
+      "attraction_id": 509,
+      "attraction_name": "Kandewattagoda",
+      "district_id": 78,
+      "categories": [
+        "Nature & Landscapes"
+      ],
+      "activities": [],
+      "semantic_rank": 23,
+      "baseline_rank": 23,
+      "experimental_rank": 22,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "8aaf15abba43a8b2852011af129c78e452024520f44a48bf223b4b33c4668c96"
+    },
+    {
+      "query_id": "q02_southern_beaches",
+      "query": "beaches in Southern Province",
+      "attraction_id": 6484,
+      "attraction_name": "Sainthamaruthu Beach",
+      "district_id": 73,
+      "categories": [
+        "Beaches & Coastal",
+        "Nature & Landscapes",
+        "Water & Marine Activities"
+      ],
+      "activities": [],
+      "semantic_rank": 24,
+      "baseline_rank": 24,
+      "experimental_rank": 23,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "623089c06dff640d6553b1895f0d9582b73a69f8d1b8ab733b0cbb2317f665c4"
+    },
+    {
+      "query_id": "q02_southern_beaches",
+      "query": "beaches in Southern Province",
+      "attraction_id": 353,
+      "attraction_name": "Secret Jungle Beach",
+      "district_id": 89,
+      "categories": [
+        "Beaches & Coastal",
+        "Nature & Landscapes",
+        "Water & Marine Activities"
+      ],
+      "activities": [],
+      "semantic_rank": 25,
+      "baseline_rank": 25,
+      "experimental_rank": 24,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "516f18553e24a385093a1f15379f1e453296bfaed710296aef137d69017d12b5"
+    },
+    {
+      "query_id": "q02_southern_beaches",
+      "query": "beaches in Southern Province",
+      "attraction_id": 56,
+      "attraction_name": "The Long Beach Resort",
+      "district_id": 78,
+      "categories": [
+        "Entertainment & Nightlife",
+        "Food & Culinary",
+        "Urban & City Attractions",
+        "Wellness & Ayurveda"
+      ],
+      "activities": [
+        "Spa and Wellness"
+      ],
+      "semantic_rank": 26,
+      "baseline_rank": 26,
+      "experimental_rank": 25,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "8b86f450f10b984965771774675dcad5d495e15af45f42da768ecd297d52468f"
+    },
+    {
+      "query_id": "q02_southern_beaches",
+      "query": "beaches in Southern Province",
+      "attraction_id": 2700,
+      "attraction_name": "Central Province",
+      "district_id": 92,
+      "categories": [
+        "Nature & Landscapes"
+      ],
+      "activities": [],
+      "semantic_rank": 27,
+      "baseline_rank": 27,
+      "experimental_rank": 26,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "c8a2a8a1515826d6a86526f2fad490c2dc2dac79fa51791390124beaf14c2b38"
+    },
+    {
+      "query_id": "q02_southern_beaches",
+      "query": "beaches in Southern Province",
+      "attraction_id": 151,
+      "attraction_name": "Kirinda Beach",
+      "district_id": 80,
+      "categories": [
+        "Urban & City Attractions"
+      ],
+      "activities": [],
+      "semantic_rank": 28,
+      "baseline_rank": 28,
+      "experimental_rank": 27,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "cabdcd01988fb5712eedf468d15db4a8cb635e4d4bd235f14e18e4c0f314c518"
+    },
+    {
+      "query_id": "q02_southern_beaches",
+      "query": "beaches in Southern Province",
+      "attraction_id": 50,
+      "attraction_name": "Stilt Fisherman sri lanka",
+      "district_id": 78,
+      "categories": [
+        "Urban & City Attractions"
+      ],
+      "activities": [],
+      "semantic_rank": 29,
+      "baseline_rank": 29,
+      "experimental_rank": 28,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "f3eab8358116d6fd2080c093467ae067a472c42efdc8fb5037434e39e55f1c79"
+    },
+    {
+      "query_id": "q02_southern_beaches",
+      "query": "beaches in Southern Province",
+      "attraction_id": 356,
+      "attraction_name": "Midigama Beach",
+      "district_id": 89,
+      "categories": [
+        "Beaches & Coastal",
+        "Nature & Landscapes",
+        "Water & Marine Activities"
+      ],
+      "activities": [],
+      "semantic_rank": 30,
+      "baseline_rank": 30,
+      "experimental_rank": 29,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "77f6863291f6c71600db244cf7506cb6f5344ee11dd7897220d15fedd8f44fb4"
+    },
+    {
+      "query_id": "q03_wildlife_safari",
+      "query": "wildlife safaris in Sri Lanka",
+      "attraction_id": 1496,
+      "attraction_name": "Ceylon Trail Safari Tours",
+      "district_id": 80,
+      "categories": [],
+      "activities": [
+        "Wildlife Safari"
+      ],
+      "semantic_rank": 1,
+      "baseline_rank": 8,
+      "experimental_rank": 13,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "b191e34572af3842b5497fc4a72923ce8699fbbb79a2c4fc663923974930b1a2"
+    },
+    {
+      "query_id": "q03_wildlife_safari",
+      "query": "wildlife safaris in Sri Lanka",
+      "attraction_id": 1696,
+      "attraction_name": "Ceylon Leopard Safari",
+      "district_id": 80,
+      "categories": [
+        "Family & Recreation",
+        "Nature & Landscapes",
+        "Wildlife & Safari"
+      ],
+      "activities": [
+        "Wildlife Safari"
+      ],
+      "semantic_rank": 2,
+      "baseline_rank": 1,
+      "experimental_rank": 1,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "a0cda6670520324dd81ae45addefc09f0ad541191f1c2c85de348407412ab2b2"
+    },
+    {
+      "query_id": "q03_wildlife_safari",
+      "query": "wildlife safaris in Sri Lanka",
+      "attraction_id": 5326,
+      "attraction_name": "Safari to Lanka Holidays",
+      "district_id": 84,
+      "categories": [],
+      "activities": [
+        "Wildlife Safari"
+      ],
+      "semantic_rank": 3,
+      "baseline_rank": 14,
+      "experimental_rank": 14,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "350cba4d5c1d6d25b2a82c0c9c9c8ae5ce644f83c9ffd9ec1eb939d1ac5621ae"
+    },
+    {
+      "query_id": "q03_wildlife_safari",
+      "query": "wildlife safaris in Sri Lanka",
+      "attraction_id": 307,
+      "attraction_name": "Kottawa National Park\ud83c\udf33",
+      "district_id": 78,
+      "categories": [
+        "Family & Recreation",
+        "Nature & Landscapes"
+      ],
+      "activities": [
+        "Wildlife Safari"
+      ],
+      "semantic_rank": 4,
+      "baseline_rank": 21,
+      "experimental_rank": 21,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "0dd4c91d41e254581fc018de2a0915253c8156d62f942ca5c2213c190c024ad9"
+    },
+    {
+      "query_id": "q03_wildlife_safari",
+      "query": "wildlife safaris in Sri Lanka",
+      "attraction_id": 1834,
+      "attraction_name": "Yala Safari Holidays",
+      "district_id": 80,
+      "categories": [],
+      "activities": [
+        "Wildlife Safari"
+      ],
+      "semantic_rank": 5,
+      "baseline_rank": 15,
+      "experimental_rank": 15,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "36573ebaaa66477da294014d8cb0e5cee07783d4753159323204288843c1b12a"
+    },
+    {
+      "query_id": "q03_wildlife_safari",
+      "query": "wildlife safaris in Sri Lanka",
+      "attraction_id": 1700,
+      "attraction_name": "Punya Safari",
+      "district_id": 80,
+      "categories": [
+        "Family & Recreation",
+        "Nature & Landscapes",
+        "Wildlife & Safari"
+      ],
+      "activities": [
+        "Wildlife Safari"
+      ],
+      "semantic_rank": 6,
+      "baseline_rank": 2,
+      "experimental_rank": 2,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "6eadaadfe6c05c5d6447b504aa31a28cf4df3c42c72f2b2abfb5b16540f903c3"
+    },
+    {
+      "query_id": "q03_wildlife_safari",
+      "query": "wildlife safaris in Sri Lanka",
+      "attraction_id": 1301,
+      "attraction_name": "Yala Eco Wild Safari",
+      "district_id": 80,
+      "categories": [
+        "Family & Recreation",
+        "Nature & Landscapes",
+        "Wildlife & Safari"
+      ],
+      "activities": [
+        "Wildlife Safari"
+      ],
+      "semantic_rank": 7,
+      "baseline_rank": 3,
+      "experimental_rank": 3,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "d5d1733c2282ecd34fa28795e02a788d2bbb89fab78b6ef3bfda6681c2528749"
+    },
+    {
+      "query_id": "q03_wildlife_safari",
+      "query": "wildlife safaris in Sri Lanka",
+      "attraction_id": 1833,
+      "attraction_name": "Yala Eco Safari",
+      "district_id": 80,
+      "categories": [],
+      "activities": [
+        "Wildlife Safari"
+      ],
+      "semantic_rank": 8,
+      "baseline_rank": 16,
+      "experimental_rank": 16,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "2f81f1f9b785f8566265918375a6d5853a47b91e4059e97599bfa34785ad0a59"
+    },
+    {
+      "query_id": "q03_wildlife_safari",
+      "query": "wildlife safaris in Sri Lanka",
+      "attraction_id": 1650,
+      "attraction_name": "Ceylon Yala Safari Tours- Tissamaharama",
+      "district_id": 80,
+      "categories": [
+        "Family & Recreation",
+        "Nature & Landscapes"
+      ],
+      "activities": [
+        "Wildlife Safari"
+      ],
+      "semantic_rank": 9,
+      "baseline_rank": 22,
+      "experimental_rank": 22,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "a7968876df13c09d54a7806cf70f3cdce484851e1a57cae3d960473dea4d51c1"
+    },
+    {
+      "query_id": "q03_wildlife_safari",
+      "query": "wildlife safaris in Sri Lanka",
+      "attraction_id": 1690,
+      "attraction_name": "Yala Safari - Mk Wild",
+      "district_id": 80,
+      "categories": [
+        "Family & Recreation",
+        "Food & Culinary",
+        "Nature & Landscapes",
+        "Wildlife & Safari"
+      ],
+      "activities": [
+        "Wildlife Safari"
+      ],
+      "semantic_rank": 10,
+      "baseline_rank": 4,
+      "experimental_rank": 4,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "b9e995185a1c8736a5eadc3f122dedef8055b8be473434e9e71847bd5792fab8"
+    },
+    {
+      "query_id": "q03_wildlife_safari",
+      "query": "wildlife safaris in Sri Lanka",
+      "attraction_id": 1221,
+      "attraction_name": "Yala National Park Safari",
+      "district_id": 80,
+      "categories": [
+        "Family & Recreation",
+        "Nature & Landscapes"
+      ],
+      "activities": [
+        "Wildlife Safari"
+      ],
+      "semantic_rank": 11,
+      "baseline_rank": 23,
+      "experimental_rank": 23,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "b8a019c68c9bb3b2979d9ba7d86f8e5f4ca8cdeb265511c323b1b199c9885c29"
+    },
+    {
+      "query_id": "q03_wildlife_safari",
+      "query": "wildlife safaris in Sri Lanka",
+      "attraction_id": 1486,
+      "attraction_name": "Makulu Safari Camp.",
+      "district_id": 90,
+      "categories": [],
+      "activities": [
+        "Wildlife Safari"
+      ],
+      "semantic_rank": 12,
+      "baseline_rank": 17,
+      "experimental_rank": 17,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "37cc403d601c08341eaf040e0f9c77e6e305efa8587e16a6d4c94716cda02347"
+    },
+    {
+      "query_id": "q03_wildlife_safari",
+      "query": "wildlife safaris in Sri Lanka",
+      "attraction_id": 4283,
+      "attraction_name": "Safari House Panama (SPS Nature Tours)",
+      "district_id": 73,
+      "categories": [],
+      "activities": [
+        "Wildlife Safari"
+      ],
+      "semantic_rank": 13,
+      "baseline_rank": 18,
+      "experimental_rank": 18,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "6eb5626859473f3e7bc6d5ce1cc0b0791184527f1d346736f515deafc202fd58"
+    },
+    {
+      "query_id": "q03_wildlife_safari",
+      "query": "wildlife safaris in Sri Lanka",
+      "attraction_id": 1653,
+      "attraction_name": "Kiththa Yala Safari",
+      "district_id": 80,
+      "categories": [
+        "Family & Recreation",
+        "Nature & Landscapes"
+      ],
+      "activities": [
+        "Wildlife Safari"
+      ],
+      "semantic_rank": 14,
+      "baseline_rank": 24,
+      "experimental_rank": 24,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "4c496efe212fcd9028baa753a82ff764fa8aa12aee4906f2e7686bbfbaca5ad0"
+    },
+    {
+      "query_id": "q03_wildlife_safari",
+      "query": "wildlife safaris in Sri Lanka",
+      "attraction_id": 651,
+      "attraction_name": "Crocodile Watching And River Safari Matara",
+      "district_id": 89,
+      "categories": [
+        "Urban & City Attractions"
+      ],
+      "activities": [
+        "Wildlife Safari"
+      ],
+      "semantic_rank": 15,
+      "baseline_rank": 25,
+      "experimental_rank": 25,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "da1f76a32819a0ee5632b150f255eedad237b90a2720bd43ab4ca000b94c8626"
+    },
+    {
+      "query_id": "q03_wildlife_safari",
+      "query": "wildlife safaris in Sri Lanka",
+      "attraction_id": 1652,
+      "attraction_name": "Yala Safari Block 1 & 5,6 from kataragama",
+      "district_id": 90,
+      "categories": [
+        "Family & Recreation",
+        "Nature & Landscapes",
+        "Urban & City Attractions",
+        "Wildlife & Safari"
+      ],
+      "activities": [
+        "Wildlife Safari"
+      ],
+      "semantic_rank": 16,
+      "baseline_rank": 5,
+      "experimental_rank": 5,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "c7ffb13e6cb0d40fb764f056e8bb4e0a1be9a9e07169b24f7b6aae0af364530d"
+    },
+    {
+      "query_id": "q03_wildlife_safari",
+      "query": "wildlife safaris in Sri Lanka",
+      "attraction_id": 1843,
+      "attraction_name": "Kotiya Safari",
+      "district_id": 80,
+      "categories": [],
+      "activities": [
+        "Wildlife Safari"
+      ],
+      "semantic_rank": 17,
+      "baseline_rank": 19,
+      "experimental_rank": 19,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "31145bb2b16a4fc3cc2010c6c58a1a123f0cecdf87ca7e1b1086ece0ad871d47"
+    },
+    {
+      "query_id": "q03_wildlife_safari",
+      "query": "wildlife safaris in Sri Lanka",
+      "attraction_id": 1840,
+      "attraction_name": "Ruwan yala safari",
+      "district_id": 80,
+      "categories": [],
+      "activities": [
+        "Wildlife Safari"
+      ],
+      "semantic_rank": 18,
+      "baseline_rank": 20,
+      "experimental_rank": 20,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "b1dc8d463e1a744c5fac3789ae15ee9fcbab74cfd480ce4300b844ae1cf76bb5"
+    },
+    {
+      "query_id": "q03_wildlife_safari",
+      "query": "wildlife safaris in Sri Lanka",
+      "attraction_id": 4134,
+      "attraction_name": "Arugam Bay Travels & Safari",
+      "district_id": 73,
+      "categories": [
+        "Family & Recreation",
+        "Nature & Landscapes",
+        "Wildlife & Safari"
+      ],
+      "activities": [
+        "Wildlife Safari"
+      ],
+      "semantic_rank": 19,
+      "baseline_rank": 6,
+      "experimental_rank": 6,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "902e06622e365c802a058eead199cfa5d682494ceb64888f6418390005c56922"
+    },
+    {
+      "query_id": "q03_wildlife_safari",
+      "query": "wildlife safaris in Sri Lanka",
+      "attraction_id": 1645,
+      "attraction_name": "Yala safaris srilanka with tharusha",
+      "district_id": 80,
+      "categories": [
+        "Family & Recreation",
+        "Nature & Landscapes"
+      ],
+      "activities": [
+        "Wildlife Safari"
+      ],
+      "semantic_rank": 20,
+      "baseline_rank": 26,
+      "experimental_rank": 26,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "1d1efe106de13b9da977c5094711507dcba59b6a2700f8aff1644d4db0b19916"
+    },
+    {
+      "query_id": "q03_wildlife_safari",
+      "query": "wildlife safaris in Sri Lanka",
+      "attraction_id": 1643,
+      "attraction_name": "Yala Tiger Safari ( Yala , Lunugamvehera National Park , Udawalawe , Yala Block VI , Lunugamvehera Safari )",
+      "district_id": 80,
+      "categories": [
+        "Family & Recreation",
+        "Nature & Landscapes",
+        "Wildlife & Safari"
+      ],
+      "activities": [
+        "Wildlife Safari"
+      ],
+      "semantic_rank": 21,
+      "baseline_rank": 7,
+      "experimental_rank": 7,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "221f64bf9c6ae623cf040daa2aadfca5bad10115ae42c5bbfec4e075afe5ce08"
+    },
+    {
+      "query_id": "q03_wildlife_safari",
+      "query": "wildlife safaris in Sri Lanka",
+      "attraction_id": 1298,
+      "attraction_name": "Ceylon Elephant Safari",
+      "district_id": 95,
+      "categories": [
+        "Family & Recreation",
+        "Nature & Landscapes",
+        "Wildlife & Safari"
+      ],
+      "activities": [
+        "Wildlife Safari"
+      ],
+      "semantic_rank": 22,
+      "baseline_rank": 9,
+      "experimental_rank": 8,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "5a1d555026d9b526465eb11b8fd1d9e2e71bb33899a46ec15507fb34bb24cda8"
+    },
+    {
+      "query_id": "q03_wildlife_safari",
+      "query": "wildlife safaris in Sri Lanka",
+      "attraction_id": 1226,
+      "attraction_name": "Untamed Yala Safari",
+      "district_id": 80,
+      "categories": [
+        "Family & Recreation",
+        "Nature & Landscapes"
+      ],
+      "activities": [
+        "Wildlife Safari"
+      ],
+      "semantic_rank": 23,
+      "baseline_rank": 27,
+      "experimental_rank": 27,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "934d14f815276df106d546a54f0707523ac75fc6170f711237c38a5df657b0f6"
+    },
+    {
+      "query_id": "q03_wildlife_safari",
+      "query": "wildlife safaris in Sri Lanka",
+      "attraction_id": 1841,
+      "attraction_name": "Yala Safari Team / Jeep Safari in Yala National park",
+      "district_id": 90,
+      "categories": [
+        "Nature & Landscapes"
+      ],
+      "activities": [
+        "Wildlife Safari"
+      ],
+      "semantic_rank": 24,
+      "baseline_rank": 28,
+      "experimental_rank": 28,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "899572bb70b1a1b650cd790563dc060745c37cee411c2b3e11e1f18818d728ea"
+    },
+    {
+      "query_id": "q03_wildlife_safari",
+      "query": "wildlife safaris in Sri Lanka",
+      "attraction_id": 379,
+      "attraction_name": "Kavi Lanka Tours & Safari",
+      "district_id": 89,
+      "categories": [
+        "Family & Recreation",
+        "Nature & Landscapes",
+        "Wildlife & Safari"
+      ],
+      "activities": [
+        "Wildlife Safari"
+      ],
+      "semantic_rank": 25,
+      "baseline_rank": 10,
+      "experimental_rank": 9,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "f8b7c18399100c28b54c08e9cf3681a6a474e9606b0daf556f712aadb63b7f7d"
+    },
+    {
+      "query_id": "q03_wildlife_safari",
+      "query": "wildlife safaris in Sri Lanka",
+      "attraction_id": 1756,
+      "attraction_name": "Yala Block 1 Safaris",
+      "district_id": 80,
+      "categories": [
+        "Family & Recreation",
+        "Nature & Landscapes"
+      ],
+      "activities": [
+        "Wildlife Safari"
+      ],
+      "semantic_rank": 26,
+      "baseline_rank": 29,
+      "experimental_rank": 29,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "1bf1178a5511ef829efcfec9ab0c0950df1194965cb8e7c8470e95d22ceef18f"
+    },
+    {
+      "query_id": "q03_wildlife_safari",
+      "query": "wildlife safaris in Sri Lanka",
+      "attraction_id": 1655,
+      "attraction_name": "Leopard Safaris Yala",
+      "district_id": 90,
+      "categories": [
+        "Family & Recreation",
+        "Nature & Landscapes"
+      ],
+      "activities": [
+        "Wildlife Safari"
+      ],
+      "semantic_rank": 27,
+      "baseline_rank": 30,
+      "experimental_rank": 30,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "6fd13fed8615dc3adb79ac1876a185b1d4ebc9c3d781119e9dbe964ba575f01a"
+    },
+    {
+      "query_id": "q03_wildlife_safari",
+      "query": "wildlife safaris in Sri Lanka",
+      "attraction_id": 1295,
+      "attraction_name": "true wild udawalawe safari tours",
+      "district_id": 90,
+      "categories": [
+        "Family & Recreation",
+        "Nature & Landscapes",
+        "Wildlife & Safari"
+      ],
+      "activities": [
+        "Wildlife Safari"
+      ],
+      "semantic_rank": 28,
+      "baseline_rank": 11,
+      "experimental_rank": 10,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "63e15201f1c8ff64e3e6df8456f6f35c5f565ceec999ab06b6a180d4d8d7945b"
+    },
+    {
+      "query_id": "q03_wildlife_safari",
+      "query": "wildlife safaris in Sri Lanka",
+      "attraction_id": 1296,
+      "attraction_name": "Udawalawe Safari Adventure",
+      "district_id": 90,
+      "categories": [
+        "Family & Recreation",
+        "Nature & Landscapes",
+        "Wildlife & Safari"
+      ],
+      "activities": [
+        "Wildlife Safari"
+      ],
+      "semantic_rank": 29,
+      "baseline_rank": 12,
+      "experimental_rank": 11,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "24da645d5b01c4a4500dbcf70d874fb9c911d8fdeab608f4be5fe973a6e8c353"
+    },
+    {
+      "query_id": "q03_wildlife_safari",
+      "query": "wildlife safaris in Sri Lanka",
+      "attraction_id": 1288,
+      "attraction_name": "Bundala Safari with Roshan",
+      "district_id": 80,
+      "categories": [
+        "Family & Recreation",
+        "Nature & Landscapes",
+        "Wildlife & Safari"
+      ],
+      "activities": [
+        "Wildlife Safari"
+      ],
+      "semantic_rank": 30,
+      "baseline_rank": 13,
+      "experimental_rank": 12,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "c19cc0352f728ee9137b174c6fd956989c5d7ed9135a09c802947f160668105a"
+    },
+    {
+      "query_id": "q04_cultural_religious",
+      "query": "cultural and religious attractions",
+      "attraction_id": 4178,
+      "attraction_name": "Arugambay Church",
+      "district_id": 73,
+      "categories": [
+        "Religious & Spiritual"
+      ],
+      "activities": [],
+      "semantic_rank": 1,
+      "baseline_rank": 1,
+      "experimental_rank": 1,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "90d0e4c5739683361cb56bd2e9f32d8fd75f8933303792741bebc415a8a0ea51"
+    },
+    {
+      "query_id": "q04_cultural_religious",
+      "query": "cultural and religious attractions",
+      "attraction_id": 2634,
+      "attraction_name": "St.Peter's and Paul's Church",
+      "district_id": 95,
+      "categories": [
+        "Religious & Spiritual"
+      ],
+      "activities": [],
+      "semantic_rank": 2,
+      "baseline_rank": 2,
+      "experimental_rank": 2,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "f82be4ccdc00da12ce897c713eb9c646636c9656c1f4f43ea6effb238c3605f0"
+    },
+    {
+      "query_id": "q04_cultural_religious",
+      "query": "cultural and religious attractions",
+      "attraction_id": 3091,
+      "attraction_name": "St. Joseph Church",
+      "district_id": 75,
+      "categories": [
+        "Religious & Spiritual"
+      ],
+      "activities": [],
+      "semantic_rank": 3,
+      "baseline_rank": 3,
+      "experimental_rank": 3,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "fc7630f38e20b01f466e05bba7f2e45ac73c5cf23e44c440505987c8c70d9fe4"
+    },
+    {
+      "query_id": "q04_cultural_religious",
+      "query": "cultural and religious attractions",
+      "attraction_id": 6541,
+      "attraction_name": "St. Ignatius Church, Ampara",
+      "district_id": 73,
+      "categories": [
+        "Religious & Spiritual"
+      ],
+      "activities": [],
+      "semantic_rank": 4,
+      "baseline_rank": 4,
+      "experimental_rank": 4,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "921ee60912fffe285af53ddf9ad1af4d6279a2b8c0922aa49a1b8630a499647e"
+    },
+    {
+      "query_id": "q04_cultural_religious",
+      "query": "cultural and religious attractions",
+      "attraction_id": 4180,
+      "attraction_name": "St Anthony Church",
+      "district_id": 73,
+      "categories": [
+        "Religious & Spiritual"
+      ],
+      "activities": [],
+      "semantic_rank": 5,
+      "baseline_rank": 5,
+      "experimental_rank": 5,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "010b8bc6c50e39e70775cf0ea2689f70ff505f4bda66087de2d59a6bd16f6d11"
+    },
+    {
+      "query_id": "q04_cultural_religious",
+      "query": "cultural and religious attractions",
+      "attraction_id": 4535,
+      "attraction_name": "Assembly of God Church, Badulla.",
+      "district_id": 75,
+      "categories": [
+        "Religious & Spiritual"
+      ],
+      "activities": [],
+      "semantic_rank": 6,
+      "baseline_rank": 6,
+      "experimental_rank": 6,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "594b3c666b3502c89d340bc0371526f5cdc1665b0cb1c39965593e8013b26f10"
+    },
+    {
+      "query_id": "q04_cultural_religious",
+      "query": "cultural and religious attractions",
+      "attraction_id": 845,
+      "attraction_name": "Culture Resort",
+      "district_id": 89,
+      "categories": [
+        "Festivals & Events",
+        "Food & Culinary"
+      ],
+      "activities": [],
+      "semantic_rank": 7,
+      "baseline_rank": 7,
+      "experimental_rank": 7,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "a1ad18b2bd1d716a29c7be0dd6d7f9e067be6e81bd43887dfd65883f7ae21a0a"
+    },
+    {
+      "query_id": "q04_cultural_religious",
+      "query": "cultural and religious attractions",
+      "attraction_id": 4181,
+      "attraction_name": "People\u2019s Church Assembly of God Komari",
+      "district_id": 73,
+      "categories": [
+        "Religious & Spiritual"
+      ],
+      "activities": [],
+      "semantic_rank": 8,
+      "baseline_rank": 8,
+      "experimental_rank": 8,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "82dbe06cccc68dfdb68eb9eacd6e656149d86f3630ccdd476d5ee4a5d3e4c85e"
+    },
+    {
+      "query_id": "q04_cultural_religious",
+      "query": "cultural and religious attractions",
+      "attraction_id": 3083,
+      "attraction_name": "St.Barnabas Church",
+      "district_id": 75,
+      "categories": [
+        "Religious & Spiritual"
+      ],
+      "activities": [],
+      "semantic_rank": 9,
+      "baseline_rank": 9,
+      "experimental_rank": 9,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "6ded3520dcdf3607889be226a4431b854261a712727f278c2d5303c1aa26ba6d"
+    },
+    {
+      "query_id": "q04_cultural_religious",
+      "query": "cultural and religious attractions",
+      "attraction_id": 4186,
+      "attraction_name": "People\u2019s Church Assembly of God",
+      "district_id": 73,
+      "categories": [
+        "Religious & Spiritual"
+      ],
+      "activities": [],
+      "semantic_rank": 10,
+      "baseline_rank": 10,
+      "experimental_rank": 10,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "6fedecf75592d4b8b1e9c4e11e6daf8f9f1c777c944fb2494976b5c81d8745eb"
+    },
+    {
+      "query_id": "q04_cultural_religious",
+      "query": "cultural and religious attractions",
+      "attraction_id": 5132,
+      "attraction_name": "St. Joseph's Church",
+      "district_id": 83,
+      "categories": [
+        "Religious & Spiritual"
+      ],
+      "activities": [],
+      "semantic_rank": 11,
+      "baseline_rank": 11,
+      "experimental_rank": 11,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "d97ba282ceae0360bc3616990dfb36307561781cd6a08969cee70b9f80e5b1b9"
+    },
+    {
+      "query_id": "q04_cultural_religious",
+      "query": "cultural and religious attractions",
+      "attraction_id": 4780,
+      "attraction_name": "Believers Eastern Church",
+      "district_id": 90,
+      "categories": [
+        "Religious & Spiritual"
+      ],
+      "activities": [],
+      "semantic_rank": 12,
+      "baseline_rank": 12,
+      "experimental_rank": 12,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "db561de250062a53389fecb1ef4eac72ff6a59dd68ca5326d3f8be4358261e50"
+    },
+    {
+      "query_id": "q04_cultural_religious",
+      "query": "cultural and religious attractions",
+      "attraction_id": 6575,
+      "attraction_name": "Kondavettuvan Mosque",
+      "district_id": 73,
+      "categories": [
+        "Religious & Spiritual"
+      ],
+      "activities": [],
+      "semantic_rank": 13,
+      "baseline_rank": 13,
+      "experimental_rank": 13,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "d50cb471ce6b1250fb06c7d958fd62ae0070346469653852c5562e7da40cfefa"
+    },
+    {
+      "query_id": "q04_cultural_religious",
+      "query": "cultural and religious attractions",
+      "attraction_id": 6549,
+      "attraction_name": "Infant Jesus Church, Karaitivu",
+      "district_id": 73,
+      "categories": [
+        "Religious & Spiritual"
+      ],
+      "activities": [],
+      "semantic_rank": 14,
+      "baseline_rank": 14,
+      "experimental_rank": 14,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "4299ab2a35a0b317346bbba0d0f3db1850cf5705f1556c7b652ca3d924d91e40"
+    },
+    {
+      "query_id": "q04_cultural_religious",
+      "query": "cultural and religious attractions",
+      "attraction_id": 6558,
+      "attraction_name": "\u0db8\u0dd4\u0dc3\u0dca\u0dbd\u0dd2\u0db8\u0dca \u0db4\u0dbd\u0dca\u0dbd\u0dd2\u0dba Jummah Mosque \u0b9c\u0bc2\u0bae\u0bcd\u0bae\u0bbe \u0bae\u0b9a\u0bc1\u0ba4\u0bbf",
+      "district_id": 73,
+      "categories": [
+        "Religious & Spiritual"
+      ],
+      "activities": [],
+      "semantic_rank": 15,
+      "baseline_rank": 15,
+      "experimental_rank": 15,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "13d90e99efdf61a8da16bc3720b0a15e95dea107702be1c3766d17ffa1c2fc09"
+    },
+    {
+      "query_id": "q04_cultural_religious",
+      "query": "cultural and religious attractions",
+      "attraction_id": 2960,
+      "attraction_name": "New testament church of God",
+      "district_id": 75,
+      "categories": [
+        "Educational & Learning",
+        "History & Archaeology"
+      ],
+      "activities": [
+        "Museum Visit"
+      ],
+      "semantic_rank": 16,
+      "baseline_rank": 16,
+      "experimental_rank": 16,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "b6df81e808ea5398ac0005c9c7c20ed4d43eb1f17abf966fca9d82d85bab8035"
+    },
+    {
+      "query_id": "q04_cultural_religious",
+      "query": "cultural and religious attractions",
+      "attraction_id": 6542,
+      "attraction_name": "Judah Thaddaeus Church",
+      "district_id": 76,
+      "categories": [
+        "Religious & Spiritual"
+      ],
+      "activities": [],
+      "semantic_rank": 17,
+      "baseline_rank": 17,
+      "experimental_rank": 17,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "dff3cf580e2929593a87fd2bf8391cf533d2adfb5bb4592392adccd3d97d1321"
+    },
+    {
+      "query_id": "q04_cultural_religious",
+      "query": "cultural and religious attractions",
+      "attraction_id": 5986,
+      "attraction_name": "St. Paul the Hermit Church",
+      "district_id": 92,
+      "categories": [
+        "Religious & Spiritual"
+      ],
+      "activities": [],
+      "semantic_rank": 18,
+      "baseline_rank": 18,
+      "experimental_rank": 18,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "25a39abcf31eda4d13c423e1a554ccc22e5fa3cb65af164631e3a5b376b9c346"
+    },
+    {
+      "query_id": "q04_cultural_religious",
+      "query": "cultural and religious attractions",
+      "attraction_id": 982,
+      "attraction_name": "Assembly of God Church",
+      "district_id": 89,
+      "categories": [
+        "Religious & Spiritual"
+      ],
+      "activities": [],
+      "semantic_rank": 19,
+      "baseline_rank": 19,
+      "experimental_rank": 19,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "9516ac9e97466492808b5bdd4255a1382d1e0c064fabfe64629b8fab803262fc"
+    },
+    {
+      "query_id": "q04_cultural_religious",
+      "query": "cultural and religious attractions",
+      "attraction_id": 430,
+      "attraction_name": "Our Lady Madhu Church",
+      "district_id": 89,
+      "categories": [
+        "Religious & Spiritual"
+      ],
+      "activities": [],
+      "semantic_rank": 20,
+      "baseline_rank": 20,
+      "experimental_rank": 20,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "23273d547ec4fd398a8380e3d5ed03ad249f247ecb29442edaddb60111d7c1ac"
+    },
+    {
+      "query_id": "q04_cultural_religious",
+      "query": "cultural and religious attractions",
+      "attraction_id": 6546,
+      "attraction_name": "Sacred Heart of Jesus Church Kalmunai",
+      "district_id": 73,
+      "categories": [
+        "Religious & Spiritual"
+      ],
+      "activities": [],
+      "semantic_rank": 21,
+      "baseline_rank": 21,
+      "experimental_rank": 21,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "9a19c3d9198ed17c0ce74c314e1f45d92882c9ac251072ee4439cdc87cc840a9"
+    },
+    {
+      "query_id": "q04_cultural_religious",
+      "query": "cultural and religious attractions",
+      "attraction_id": 6572,
+      "attraction_name": "Malkampiddy Mosque",
+      "district_id": 73,
+      "categories": [
+        "Religious & Spiritual"
+      ],
+      "activities": [],
+      "semantic_rank": 22,
+      "baseline_rank": 22,
+      "experimental_rank": 22,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "7c1a22fa17e25c330621adf3fbb1e1af74b6d1121a1caa874a9919354eff838a"
+    },
+    {
+      "query_id": "q04_cultural_religious",
+      "query": "cultural and religious attractions",
+      "attraction_id": 4548,
+      "attraction_name": "Mosque",
+      "district_id": 75,
+      "categories": [
+        "Religious & Spiritual"
+      ],
+      "activities": [],
+      "semantic_rank": 23,
+      "baseline_rank": 23,
+      "experimental_rank": 23,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "f12476770ad8d874f45e58bc15b7cda6eea99845c4668cbe81b92be537f76356"
+    },
+    {
+      "query_id": "q04_cultural_religious",
+      "query": "cultural and religious attractions",
+      "attraction_id": 6551,
+      "attraction_name": "Methodist Church Ampara",
+      "district_id": 73,
+      "categories": [
+        "Religious & Spiritual"
+      ],
+      "activities": [],
+      "semantic_rank": 24,
+      "baseline_rank": 24,
+      "experimental_rank": 24,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "d50d27bde439ce21188969f72e1344274e6ca159d45ac6a40665d177db3e7291"
+    },
+    {
+      "query_id": "q04_cultural_religious",
+      "query": "cultural and religious attractions",
+      "attraction_id": 4175,
+      "attraction_name": "Komari Methodist Church",
+      "district_id": 73,
+      "categories": [
+        "Religious & Spiritual"
+      ],
+      "activities": [],
+      "semantic_rank": 25,
+      "baseline_rank": 25,
+      "experimental_rank": 25,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "81f4cee7a53e68aa24957113348d45bbc84e34335d895b3c932df8abce43f753"
+    },
+    {
+      "query_id": "q04_cultural_religious",
+      "query": "cultural and religious attractions",
+      "attraction_id": 2073,
+      "attraction_name": "Holy Cross Church",
+      "district_id": 82,
+      "categories": [
+        "Religious & Spiritual"
+      ],
+      "activities": [],
+      "semantic_rank": 26,
+      "baseline_rank": 26,
+      "experimental_rank": 26,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "4ec4d5eeaeb46255527ea060b1621788331fde93c94b30bef02d69d356108180"
+    },
+    {
+      "query_id": "q04_cultural_religious",
+      "query": "cultural and religious attractions",
+      "attraction_id": 2645,
+      "attraction_name": "Church of Holy Rosary, Bogawantalawa",
+      "district_id": 92,
+      "categories": [
+        "Religious & Spiritual"
+      ],
+      "activities": [],
+      "semantic_rank": 27,
+      "baseline_rank": 27,
+      "experimental_rank": 27,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "13ba9038a57f6da60a543eb02b1bfe900919417e40ab0b4fe2366998612cf62f"
+    },
+    {
+      "query_id": "q04_cultural_religious",
+      "query": "cultural and religious attractions",
+      "attraction_id": 4156,
+      "attraction_name": "Komari",
+      "district_id": 73,
+      "categories": [
+        "Religious & Spiritual"
+      ],
+      "activities": [],
+      "semantic_rank": 28,
+      "baseline_rank": 28,
+      "experimental_rank": 28,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "2571b9cff0fed96a30391195252e77462d9d75c989899edba5dc41cea9127bba"
+    },
+    {
+      "query_id": "q04_cultural_religious",
+      "query": "cultural and religious attractions",
+      "attraction_id": 6554,
+      "attraction_name": "St. Mary Magdalen's Church",
+      "district_id": 73,
+      "categories": [
+        "Religious & Spiritual"
+      ],
+      "activities": [],
+      "semantic_rank": 29,
+      "baseline_rank": 29,
+      "experimental_rank": 29,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "059feac729a956ac5ede621975bd59fabebe412c1c89dff063b7fe452d9d72e3"
+    },
+    {
+      "query_id": "q04_cultural_religious",
+      "query": "cultural and religious attractions",
+      "attraction_id": 3080,
+      "attraction_name": "Church of Jesus Christ the Liberator",
+      "district_id": 90,
+      "categories": [
+        "Religious & Spiritual"
+      ],
+      "activities": [],
+      "semantic_rank": 30,
+      "baseline_rank": 30,
+      "experimental_rank": 30,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "cbacf9005e8b4f3ce2f0ebc19d5c3dc8c2ab15230a60b2f48be83e673f8c0fab"
+    },
+    {
+      "query_id": "q05_hiking_adventure",
+      "query": "hiking and adventure activities",
+      "attraction_id": 4757,
+      "attraction_name": "Andeniya/\u0d85\u0db1\u0dca\u0daf\u0dd9\u0db1\u0dd2\u0dba",
+      "district_id": 75,
+      "categories": [
+        "Adventure & Outdoor"
+      ],
+      "activities": [
+        "Hiking"
+      ],
+      "semantic_rank": 1,
+      "baseline_rank": 6,
+      "experimental_rank": 1,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "04e5b258bb69e066e52a00d8362123cd82d7e8313a7526ee29370372d2e70a96"
+    },
+    {
+      "query_id": "q05_hiking_adventure",
+      "query": "hiking and adventure activities",
+      "attraction_id": 4752,
+      "attraction_name": "Nilgala Mountain / \u0db1\u0dd2\u0dbd\u0dca\u0d9c\u0dbd \u0d9a\u0db1\u0dca\u0daf",
+      "district_id": 90,
+      "categories": [
+        "Adventure & Outdoor"
+      ],
+      "activities": [
+        "Hiking"
+      ],
+      "semantic_rank": 2,
+      "baseline_rank": 7,
+      "experimental_rank": 2,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "7b8e23aa7ec93a6163949bfb621ede27809bca91f274cbca4e771f58a4a48999"
+    },
+    {
+      "query_id": "q05_hiking_adventure",
+      "query": "hiking and adventure activities",
+      "attraction_id": 5576,
+      "attraction_name": "The Monkey Rock",
+      "district_id": 79,
+      "categories": [
+        "Adventure & Outdoor"
+      ],
+      "activities": [
+        "Hiking"
+      ],
+      "semantic_rank": 3,
+      "baseline_rank": 8,
+      "experimental_rank": 3,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "7e1258bd750ac14250342d2e3158652f2c5b0c66c39235608b12ad3cb639208c"
+    },
+    {
+      "query_id": "q05_hiking_adventure",
+      "query": "hiking and adventure activities",
+      "attraction_id": 368,
+      "attraction_name": "Kurulugala Mountain (\u0d9a\u0dd4\u0dbb\u0dd4\u0dc5\u0dd4\u0d9c\u0dbd) \u0dc3\u0dd2\u0d82\u0dc4\u0dbb\u0dcf\u0da2",
+      "district_id": 89,
+      "categories": [
+        "Adventure & Outdoor"
+      ],
+      "activities": [
+        "Hiking"
+      ],
+      "semantic_rank": 4,
+      "baseline_rank": 9,
+      "experimental_rank": 4,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "a82bb71451565835be6667eebdb1dc4815dab421c1e0e6f159f65e46d2330f66"
+    },
+    {
+      "query_id": "q05_hiking_adventure",
+      "query": "hiking and adventure activities",
+      "attraction_id": 5208,
+      "attraction_name": "Ceylon Adventure Sports",
+      "district_id": 84,
+      "categories": [
+        "Adventure & Outdoor",
+        "Food & Culinary",
+        "Water & Marine Activities"
+      ],
+      "activities": [],
+      "semantic_rank": 5,
+      "baseline_rank": 1,
+      "experimental_rank": 25,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "1a42831515f9ff668abedce79f947d7e35b7a574e988d6ebe558efd945036e63"
+    },
+    {
+      "query_id": "q05_hiking_adventure",
+      "query": "hiking and adventure activities",
+      "attraction_id": 2923,
+      "attraction_name": "Ella Rock Trailhead",
+      "district_id": 75,
+      "categories": [
+        "Adventure & Outdoor",
+        "Urban & City Attractions"
+      ],
+      "activities": [
+        "Hiking"
+      ],
+      "semantic_rank": 6,
+      "baseline_rank": 10,
+      "experimental_rank": 5,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "3bd17778180b8ed4a10c9f68d4466b0cc2b9558852af024054a476c5214edad8"
+    },
+    {
+      "query_id": "q05_hiking_adventure",
+      "query": "hiking and adventure activities",
+      "attraction_id": 1274,
+      "attraction_name": "Gonadeniya forest",
+      "district_id": 80,
+      "categories": [
+        "Adventure & Outdoor"
+      ],
+      "activities": [
+        "Hiking"
+      ],
+      "semantic_rank": 7,
+      "baseline_rank": 11,
+      "experimental_rank": 6,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "bb332b46d58e0fba0a85df1f1d0ef1b641e83efb31d67b573c68c3f42577c88a"
+    },
+    {
+      "query_id": "q05_hiking_adventure",
+      "query": "hiking and adventure activities",
+      "attraction_id": 5066,
+      "attraction_name": "Alagalla Mountain",
+      "district_id": 84,
+      "categories": [
+        "Adventure & Outdoor"
+      ],
+      "activities": [
+        "Hiking"
+      ],
+      "semantic_rank": 8,
+      "baseline_rank": 12,
+      "experimental_rank": 7,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "06bdc9d83950eddfe5f6638eef4e861916acafefcabce0da4339ea41722e23bf"
+    },
+    {
+      "query_id": "q05_hiking_adventure",
+      "query": "hiking and adventure activities",
+      "attraction_id": 3026,
+      "attraction_name": "Ella Sri Lanka",
+      "district_id": 75,
+      "categories": [
+        "Adventure & Outdoor"
+      ],
+      "activities": [
+        "Hiking"
+      ],
+      "semantic_rank": 9,
+      "baseline_rank": 13,
+      "experimental_rank": 8,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "881b048a0f7287c21afaa37dc464233c363b445754e49a2af625dda70d2c4e36"
+    },
+    {
+      "query_id": "q05_hiking_adventure",
+      "query": "hiking and adventure activities",
+      "attraction_id": 1277,
+      "attraction_name": "Y \u0db6\u0da7\u0dd4 \u0dc4\u0d82\u0daf\u0dd2\u0dba",
+      "district_id": 90,
+      "categories": [
+        "Adventure & Outdoor"
+      ],
+      "activities": [
+        "Hiking"
+      ],
+      "semantic_rank": 10,
+      "baseline_rank": 14,
+      "experimental_rank": 9,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "0a6eadf68a53a964914bce148f6d8d565ec7f7995828951f8372c20f21f74637"
+    },
+    {
+      "query_id": "q05_hiking_adventure",
+      "query": "hiking and adventure activities",
+      "attraction_id": 1276,
+      "attraction_name": "Golden Natural Area",
+      "district_id": 90,
+      "categories": [
+        "Adventure & Outdoor"
+      ],
+      "activities": [
+        "Hiking"
+      ],
+      "semantic_rank": 11,
+      "baseline_rank": 15,
+      "experimental_rank": 10,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "de06729829f83a81e2ba0ee96f3f8901f11fde2b33d5fdf99b2ff993992c1bb5"
+    },
+    {
+      "query_id": "q05_hiking_adventure",
+      "query": "hiking and adventure activities",
+      "attraction_id": 359,
+      "attraction_name": "Explore Sinharaja Rainforest tours",
+      "district_id": 89,
+      "categories": [
+        "Adventure & Outdoor"
+      ],
+      "activities": [
+        "Hiking"
+      ],
+      "semantic_rank": 12,
+      "baseline_rank": 16,
+      "experimental_rank": 11,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "8701a52075e6b6600aea7185ccf3023aeb763af5f64df403acdf49424bac0df4"
+    },
+    {
+      "query_id": "q05_hiking_adventure",
+      "query": "hiking and adventure activities",
+      "attraction_id": 6492,
+      "attraction_name": "Helagampura Rock",
+      "district_id": 73,
+      "categories": [
+        "Adventure & Outdoor"
+      ],
+      "activities": [
+        "Hiking"
+      ],
+      "semantic_rank": 13,
+      "baseline_rank": 17,
+      "experimental_rank": 12,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "5cb51eb0c61d6321db0e892d868b222395199c46f089dd04ba4c71aabead4d92"
+    },
+    {
+      "query_id": "q05_hiking_adventure",
+      "query": "hiking and adventure activities",
+      "attraction_id": 6493,
+      "attraction_name": "Varalla rock",
+      "district_id": 73,
+      "categories": [
+        "Adventure & Outdoor"
+      ],
+      "activities": [
+        "Hiking"
+      ],
+      "semantic_rank": 14,
+      "baseline_rank": 18,
+      "experimental_rank": 13,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "814082791a60a6577763fca243e4ce67070137409e187ba2cd62ab2c38725d81"
+    },
+    {
+      "query_id": "q05_hiking_adventure",
+      "query": "hiking and adventure activities",
+      "attraction_id": 6496,
+      "attraction_name": "Iginiyagala temple's rock",
+      "district_id": 90,
+      "categories": [
+        "Adventure & Outdoor"
+      ],
+      "activities": [
+        "Hiking"
+      ],
+      "semantic_rank": 15,
+      "baseline_rank": 19,
+      "experimental_rank": 14,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "3d8529fec85ef429043bc2419a87c11a1952119d3c22bd7e3339ea334be639a1"
+    },
+    {
+      "query_id": "q05_hiking_adventure",
+      "query": "hiking and adventure activities",
+      "attraction_id": 5223,
+      "attraction_name": "Kitulgala Adventures",
+      "district_id": 84,
+      "categories": [
+        "Adventure & Outdoor"
+      ],
+      "activities": [],
+      "semantic_rank": 16,
+      "baseline_rank": 2,
+      "experimental_rank": 26,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "c8fccd0c9b7bcdc75b8dd49aa3afdef7eb6e4309cb3d23f49a0554910f670d07"
+    },
+    {
+      "query_id": "q05_hiking_adventure",
+      "query": "hiking and adventure activities",
+      "attraction_id": 362,
+      "attraction_name": "Naomi Beach",
+      "district_id": 89,
+      "categories": [
+        "Adventure & Outdoor"
+      ],
+      "activities": [
+        "Hiking"
+      ],
+      "semantic_rank": 17,
+      "baseline_rank": 20,
+      "experimental_rank": 15,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "1a6bab9c47ff3a5e16899c66efb380b7d6bbd5a45b1cc148b244a9e940f7eccf"
+    },
+    {
+      "query_id": "q05_hiking_adventure",
+      "query": "hiking and adventure activities",
+      "attraction_id": 4754,
+      "attraction_name": "Monkey Mountain",
+      "district_id": 90,
+      "categories": [
+        "Adventure & Outdoor"
+      ],
+      "activities": [
+        "Hiking"
+      ],
+      "semantic_rank": 18,
+      "baseline_rank": 21,
+      "experimental_rank": 16,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "c17bcf8bf18c5bc544f484a8565c51a62dc04214696e2b1c3adb174d6e8af8d7"
+    },
+    {
+      "query_id": "q05_hiking_adventure",
+      "query": "hiking and adventure activities",
+      "attraction_id": 6115,
+      "attraction_name": "Kandy Adventures",
+      "district_id": 83,
+      "categories": [
+        "Adventure & Outdoor"
+      ],
+      "activities": [],
+      "semantic_rank": 19,
+      "baseline_rank": 3,
+      "experimental_rank": 27,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "e86c82f58660a23ed13036f4cb1cfbed48c3f3d974bd2794b70e8fd086f19772"
+    },
+    {
+      "query_id": "q05_hiking_adventure",
+      "query": "hiking and adventure activities",
+      "attraction_id": 936,
+      "attraction_name": "Erabadu ella",
+      "district_id": 82,
+      "categories": [
+        "Adventure & Outdoor"
+      ],
+      "activities": [
+        "Hiking"
+      ],
+      "semantic_rank": 20,
+      "baseline_rank": 22,
+      "experimental_rank": 17,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "0a7394a19b7459ea7b4debc1ef0cacf2186f1a07c14124748fdbcbc62c34e3d2"
+    },
+    {
+      "query_id": "q05_hiking_adventure",
+      "query": "hiking and adventure activities",
+      "attraction_id": 5211,
+      "attraction_name": "Adventure Base Camp",
+      "district_id": 92,
+      "categories": [
+        "Adventure & Outdoor",
+        "Wellness & Ayurveda"
+      ],
+      "activities": [
+        "Spa and Wellness"
+      ],
+      "semantic_rank": 21,
+      "baseline_rank": 30,
+      "experimental_rank": 30,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "0b782fca674b3f874010d4db9500c09ec8ebb5e7bcdc726b92d0847275952933"
+    },
+    {
+      "query_id": "q05_hiking_adventure",
+      "query": "hiking and adventure activities",
+      "attraction_id": 5064,
+      "attraction_name": "Kohobagala Mountain",
+      "district_id": 79,
+      "categories": [
+        "Adventure & Outdoor"
+      ],
+      "activities": [
+        "Hiking"
+      ],
+      "semantic_rank": 22,
+      "baseline_rank": 23,
+      "experimental_rank": 18,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "82d4905a0e8a17599ef8b04e28670012636f34835d5485fab7662d01a765cf90"
+    },
+    {
+      "query_id": "q05_hiking_adventure",
+      "query": "hiking and adventure activities",
+      "attraction_id": 2029,
+      "attraction_name": "Kondagala Hiking Trail Start",
+      "district_id": 82,
+      "categories": [
+        "Adventure & Outdoor"
+      ],
+      "activities": [
+        "Hiking"
+      ],
+      "semantic_rank": 23,
+      "baseline_rank": 24,
+      "experimental_rank": 19,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "b064b3a4d7d9f05ccd28c810b640c68e873667ea1735c359f98c66763bdb0b9d"
+    },
+    {
+      "query_id": "q05_hiking_adventure",
+      "query": "hiking and adventure activities",
+      "attraction_id": 6490,
+      "attraction_name": "mulli Malai",
+      "district_id": 73,
+      "categories": [
+        "Adventure & Outdoor"
+      ],
+      "activities": [
+        "Hiking"
+      ],
+      "semantic_rank": 24,
+      "baseline_rank": 25,
+      "experimental_rank": 20,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "a637b971f1ccae6097fef890ebeb2ae396dc55c26d3c610defbb2375fc1365a9"
+    },
+    {
+      "query_id": "q05_hiking_adventure",
+      "query": "hiking and adventure activities",
+      "attraction_id": 4221,
+      "attraction_name": "Rock to climb, Panama Beach",
+      "district_id": 73,
+      "categories": [
+        "Family & Recreation",
+        "Nature & Landscapes"
+      ],
+      "activities": [],
+      "semantic_rank": 25,
+      "baseline_rank": 4,
+      "experimental_rank": 28,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "d34f96b3dce10fb4f91732931c2d71e6dbc838de8ffccc47e39d38e6d879ca44"
+    },
+    {
+      "query_id": "q05_hiking_adventure",
+      "query": "hiking and adventure activities",
+      "attraction_id": 541,
+      "attraction_name": "Miyanawathura Adventure",
+      "district_id": 78,
+      "categories": [
+        "Adventure & Outdoor"
+      ],
+      "activities": [],
+      "semantic_rank": 26,
+      "baseline_rank": 5,
+      "experimental_rank": 29,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "df6b4905e63afc7097edc925223af7a4917d7b5faf0fed9c865e1db914c8ad1d"
+    },
+    {
+      "query_id": "q05_hiking_adventure",
+      "query": "hiking and adventure activities",
+      "attraction_id": 6495,
+      "attraction_name": "Kahatagasyaya mountain",
+      "district_id": 73,
+      "categories": [
+        "Adventure & Outdoor"
+      ],
+      "activities": [
+        "Hiking"
+      ],
+      "semantic_rank": 27,
+      "baseline_rank": 26,
+      "experimental_rank": 21,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "72966bbbc085dc1477cedfa6d14da0c7ffc9624152ea8447991973032dd7d60f"
+    },
+    {
+      "query_id": "q05_hiking_adventure",
+      "query": "hiking and adventure activities",
+      "attraction_id": 363,
+      "attraction_name": "Rainforest View",
+      "district_id": 89,
+      "categories": [
+        "Adventure & Outdoor",
+        "Food & Culinary",
+        "Urban & City Attractions"
+      ],
+      "activities": [
+        "Hiking"
+      ],
+      "semantic_rank": 28,
+      "baseline_rank": 27,
+      "experimental_rank": 22,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "79080cd4b83898f85835537dccc345366ccfafff200073f97830a94f574b5c71"
+    },
+    {
+      "query_id": "q05_hiking_adventure",
+      "query": "hiking and adventure activities",
+      "attraction_id": 2031,
+      "attraction_name": "Endry Rock",
+      "district_id": 78,
+      "categories": [
+        "Adventure & Outdoor"
+      ],
+      "activities": [
+        "Hiking"
+      ],
+      "semantic_rank": 29,
+      "baseline_rank": 28,
+      "experimental_rank": 23,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "312d543f1f33d8cd1d5802bec144153bf2922b43aad7a25c481311d49d5e6c1c"
+    },
+    {
+      "query_id": "q05_hiking_adventure",
+      "query": "hiking and adventure activities",
+      "attraction_id": 2024,
+      "attraction_name": "Inimangala - \u0d89\u0db1\u0dd2\u0db8\u0d82\u0d9c\u0dbd",
+      "district_id": 82,
+      "categories": [
+        "Adventure & Outdoor"
+      ],
+      "activities": [
+        "Hiking"
+      ],
+      "semantic_rank": 30,
+      "baseline_rank": 29,
+      "experimental_rank": 24,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "63e454ed08d7ae293548d6ea8f8c8747c05e5ce6d656f9bed32d6db934a5cf12"
+    },
+    {
+      "query_id": "q06_family",
+      "query": "family friendly attractions",
+      "attraction_id": 4556,
+      "attraction_name": "Senanayaka Children's Park",
+      "district_id": 75,
+      "categories": [
+        "Family & Recreation",
+        "Nature & Landscapes"
+      ],
+      "activities": [],
+      "semantic_rank": 1,
+      "baseline_rank": 1,
+      "experimental_rank": 1,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "3c38911bd1afc06ba182d5ce6e7032731fbadf96cf6fcb21e0aa1aede1bbfc03"
+    },
+    {
+      "query_id": "q06_family",
+      "query": "family friendly attractions",
+      "attraction_id": 539,
+      "attraction_name": "kidz fun factory",
+      "district_id": 89,
+      "categories": [
+        "Adventure & Outdoor"
+      ],
+      "activities": [],
+      "semantic_rank": 2,
+      "baseline_rank": 2,
+      "experimental_rank": 2,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "22593022c46b22074fd6ef4f207ee7716d999c77ed99867f1cd4a4ca00283a98"
+    },
+    {
+      "query_id": "q06_family",
+      "query": "family friendly attractions",
+      "attraction_id": 4219,
+      "attraction_name": "Children Park - Kalapukattu",
+      "district_id": 73,
+      "categories": [
+        "Family & Recreation",
+        "Nature & Landscapes"
+      ],
+      "activities": [],
+      "semantic_rank": 3,
+      "baseline_rank": 3,
+      "experimental_rank": 3,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "be1c03eca679ce752425cddbf05c68b8af61f8697152475e4454f0c09d0a7446"
+    },
+    {
+      "query_id": "q06_family",
+      "query": "family friendly attractions",
+      "attraction_id": 2116,
+      "attraction_name": "Children Park",
+      "district_id": 82,
+      "categories": [
+        "Family & Recreation",
+        "Nature & Landscapes"
+      ],
+      "activities": [],
+      "semantic_rank": 4,
+      "baseline_rank": 4,
+      "experimental_rank": 4,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "97eac5d2513e0aef5b1c91aae7401cdabc167afe1b129a993eb03b0a1e3c6c66"
+    },
+    {
+      "query_id": "q06_family",
+      "query": "family friendly attractions",
+      "attraction_id": 3113,
+      "attraction_name": "Children\u2019s Park Ella",
+      "district_id": 75,
+      "categories": [
+        "Family & Recreation",
+        "Nature & Landscapes"
+      ],
+      "activities": [],
+      "semantic_rank": 5,
+      "baseline_rank": 5,
+      "experimental_rank": 5,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "f55d7b12a6be7014cf8b39155e919dba892a124a098c43af09807a668af918b5"
+    },
+    {
+      "query_id": "q06_family",
+      "query": "family friendly attractions",
+      "attraction_id": 4609,
+      "attraction_name": "Nirmani Aquarium",
+      "district_id": 75,
+      "categories": [
+        "Family & Recreation"
+      ],
+      "activities": [],
+      "semantic_rank": 6,
+      "baseline_rank": 6,
+      "experimental_rank": 6,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "484b016a08be3b1436fcae0ac8367c1e8fe1aad5ac3f1a7a54385fccaacf185b"
+    },
+    {
+      "query_id": "q06_family",
+      "query": "family friendly attractions",
+      "attraction_id": 6042,
+      "attraction_name": "E.L Senanayake Children's Park",
+      "district_id": 83,
+      "categories": [
+        "Family & Recreation",
+        "Nature & Landscapes"
+      ],
+      "activities": [],
+      "semantic_rank": 7,
+      "baseline_rank": 7,
+      "experimental_rank": 7,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "436e5baa4e5f76e96f56b142fb6a221ef135abf0f5710bbd76c840d6125daecb"
+    },
+    {
+      "query_id": "q06_family",
+      "query": "family friendly attractions",
+      "attraction_id": 5769,
+      "attraction_name": "Wattura Kids Water Park",
+      "district_id": 94,
+      "categories": [
+        "Family & Recreation"
+      ],
+      "activities": [],
+      "semantic_rank": 8,
+      "baseline_rank": 8,
+      "experimental_rank": 8,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "aee95c5a85eebcae5b842948340326b39c9983e9ebe372156c2e1308209abe45"
+    },
+    {
+      "query_id": "q06_family",
+      "query": "family friendly attractions",
+      "attraction_id": 2226,
+      "attraction_name": "Thanu Aquarium",
+      "district_id": 82,
+      "categories": [
+        "Family & Recreation"
+      ],
+      "activities": [],
+      "semantic_rank": 9,
+      "baseline_rank": 9,
+      "experimental_rank": 9,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "6bdd84537cdcf6c29a6719145cc6bcd23337f08a9bbc56a81803aada3247d285"
+    },
+    {
+      "query_id": "q06_family",
+      "query": "family friendly attractions",
+      "attraction_id": 4216,
+      "attraction_name": "Public beach and children Park",
+      "district_id": 73,
+      "categories": [
+        "Family & Recreation",
+        "Nature & Landscapes"
+      ],
+      "activities": [],
+      "semantic_rank": 10,
+      "baseline_rank": 10,
+      "experimental_rank": 10,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "a8b357d3896b34aa239c57424d8b6f06b209ae2084765e85359825dbfe8cf551"
+    },
+    {
+      "query_id": "q06_family",
+      "query": "family friendly attractions",
+      "attraction_id": 2422,
+      "attraction_name": "Kinro Childrens Park",
+      "district_id": 82,
+      "categories": [
+        "Family & Recreation"
+      ],
+      "activities": [],
+      "semantic_rank": 11,
+      "baseline_rank": 11,
+      "experimental_rank": 11,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "c92aaa0b75e908eba9e8a33d57e0ef4bbb33e8b47e09c955c674d6ad84d480ae"
+    },
+    {
+      "query_id": "q06_family",
+      "query": "family friendly attractions",
+      "attraction_id": 828,
+      "attraction_name": "Bariniwala Water Park",
+      "district_id": 78,
+      "categories": [
+        "Family & Recreation"
+      ],
+      "activities": [],
+      "semantic_rank": 12,
+      "baseline_rank": 12,
+      "experimental_rank": 12,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "917e42074289dc7c283eea151638bcf1ac7c766eaf0795f014619f76a91f8e72"
+    },
+    {
+      "query_id": "q06_family",
+      "query": "family friendly attractions",
+      "attraction_id": 6150,
+      "attraction_name": "Jayantha Aquarium",
+      "district_id": 83,
+      "categories": [
+        "Family & Recreation"
+      ],
+      "activities": [],
+      "semantic_rank": 13,
+      "baseline_rank": 13,
+      "experimental_rank": 13,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "9c0fa72ff1a20fb85e31bafce450d4b8a9787a966c15175558263e23e43965b8"
+    },
+    {
+      "query_id": "q06_family",
+      "query": "family friendly attractions",
+      "attraction_id": 4610,
+      "attraction_name": "M & S Aquarium",
+      "district_id": 75,
+      "categories": [
+        "Family & Recreation"
+      ],
+      "activities": [],
+      "semantic_rank": 14,
+      "baseline_rank": 14,
+      "experimental_rank": 14,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "caf05b2e54298fde63bda216c843641fd5af3c4bf21f248776ec123fd751185a"
+    },
+    {
+      "query_id": "q06_family",
+      "query": "family friendly attractions",
+      "attraction_id": 4798,
+      "attraction_name": "Children's Park Bibile",
+      "district_id": 90,
+      "categories": [
+        "Family & Recreation",
+        "Nature & Landscapes"
+      ],
+      "activities": [],
+      "semantic_rank": 15,
+      "baseline_rank": 15,
+      "experimental_rank": 15,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "b12c93411323c29c495e36a19a20c7dee33e1dc97c0850cb0c15f6699cf0a0fa"
+    },
+    {
+      "query_id": "q06_family",
+      "query": "family friendly attractions",
+      "attraction_id": 6356,
+      "attraction_name": "Kids Mania",
+      "district_id": 83,
+      "categories": [
+        "Shopping & Local Markets"
+      ],
+      "activities": [],
+      "semantic_rank": 16,
+      "baseline_rank": 16,
+      "experimental_rank": 16,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "ccd87a5b128f5f3d7a33c14d191787719090ed12ac1ffcaa0a1c69943168d99a"
+    },
+    {
+      "query_id": "q06_family",
+      "query": "family friendly attractions",
+      "attraction_id": 2220,
+      "attraction_name": "S&S Aquarium",
+      "district_id": 82,
+      "categories": [
+        "Family & Recreation"
+      ],
+      "activities": [],
+      "semantic_rank": 17,
+      "baseline_rank": 17,
+      "experimental_rank": 17,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "5bda5c992910d655cfe7bf59d1247c4221c1b9bac14a2ae6cdd14972f0b874b7"
+    },
+    {
+      "query_id": "q06_family",
+      "query": "family friendly attractions",
+      "attraction_id": 818,
+      "attraction_name": "Omulla Water Park",
+      "district_id": 78,
+      "categories": [
+        "Family & Recreation"
+      ],
+      "activities": [],
+      "semantic_rank": 18,
+      "baseline_rank": 18,
+      "experimental_rank": 18,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "067d23229b64a19c99be06bfa82a1db9537be6d6adc7e5e9cf377aa07fb574f8"
+    },
+    {
+      "query_id": "q06_family",
+      "query": "family friendly attractions",
+      "attraction_id": 290,
+      "attraction_name": "Friendly Farm",
+      "district_id": 89,
+      "categories": [
+        "Educational & Learning",
+        "History & Archaeology"
+      ],
+      "activities": [
+        "Museum Visit"
+      ],
+      "semantic_rank": 19,
+      "baseline_rank": 19,
+      "experimental_rank": 19,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "862f0fa996b7355e67d194b047ca024512e9fa71c5e487bd528fcd6e39883bfc"
+    },
+    {
+      "query_id": "q06_family",
+      "query": "family friendly attractions",
+      "attraction_id": 5278,
+      "attraction_name": "Mayans Aquarium \u0db8\u0dcf\u0dba\u0db1\u0dca\u0dc3\u0dca \u0d87\u0d9a\u0dca\u0dc0\u0dda\u0dbb\u0dd2\u0dba\u0db8\u0dca",
+      "district_id": 84,
+      "categories": [
+        "Family & Recreation"
+      ],
+      "activities": [],
+      "semantic_rank": 20,
+      "baseline_rank": 20,
+      "experimental_rank": 20,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "ad4ad03abcf7163073adea4145c5662bd8e9fe2c918f52c013f6fb0eb616c3bc"
+    },
+    {
+      "query_id": "q06_family",
+      "query": "family friendly attractions",
+      "attraction_id": 590,
+      "attraction_name": "shantha Aquarium",
+      "district_id": 89,
+      "categories": [
+        "Family & Recreation"
+      ],
+      "activities": [],
+      "semantic_rank": 21,
+      "baseline_rank": 21,
+      "experimental_rank": 21,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "3d5dcf409f2e5289e9d297e7d953ddcbb66d8cdbc9fcb142531f1f746d4bc0d9"
+    },
+    {
+      "query_id": "q06_family",
+      "query": "family friendly attractions",
+      "attraction_id": 1470,
+      "attraction_name": "Kavee Aquarium",
+      "district_id": 80,
+      "categories": [
+        "Family & Recreation"
+      ],
+      "activities": [],
+      "semantic_rank": 22,
+      "baseline_rank": 22,
+      "experimental_rank": 22,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "2d65e709705a89ba179c5eb9014d7083f35589ea34161feaac469d3d15e13909"
+    },
+    {
+      "query_id": "q06_family",
+      "query": "family friendly attractions",
+      "attraction_id": 825,
+      "attraction_name": "Happitiya Water Park",
+      "district_id": 78,
+      "categories": [
+        "Family & Recreation"
+      ],
+      "activities": [],
+      "semantic_rank": 23,
+      "baseline_rank": 23,
+      "experimental_rank": 23,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "1547ec0657442ee744b13b259bf61ca0109c7ad571a160235e018df0804d06c2"
+    },
+    {
+      "query_id": "q06_family",
+      "query": "family friendly attractions",
+      "attraction_id": 5273,
+      "attraction_name": "AQUA PLUS Aquarium",
+      "district_id": 83,
+      "categories": [
+        "Family & Recreation"
+      ],
+      "activities": [],
+      "semantic_rank": 24,
+      "baseline_rank": 24,
+      "experimental_rank": 24,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "bd1e0aaf1b27f3d58518b2285c30c4767cd41d1e32b73890596e4e700d1744b2"
+    },
+    {
+      "query_id": "q06_family",
+      "query": "family friendly attractions",
+      "attraction_id": 601,
+      "attraction_name": "Weerapana Aquarium",
+      "district_id": 78,
+      "categories": [
+        "Family & Recreation"
+      ],
+      "activities": [],
+      "semantic_rank": 25,
+      "baseline_rank": 25,
+      "experimental_rank": 25,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "c9c7f88e70e1576dd0ec40d5f8351513926c2c205b3d59d2eb45935eecbc5461"
+    },
+    {
+      "query_id": "q06_family",
+      "query": "family friendly attractions",
+      "attraction_id": 594,
+      "attraction_name": "CKL Aquarium-Matara",
+      "district_id": 89,
+      "categories": [
+        "Family & Recreation"
+      ],
+      "activities": [],
+      "semantic_rank": 26,
+      "baseline_rank": 26,
+      "experimental_rank": 26,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "26bf2ab2efd86afccbffbfdc5e4a20a25996cd82d58fb8c65e28630c40321ad9"
+    },
+    {
+      "query_id": "q06_family",
+      "query": "family friendly attractions",
+      "attraction_id": 1176,
+      "attraction_name": "Neluwa Water Park",
+      "district_id": 78,
+      "categories": [
+        "Family & Recreation"
+      ],
+      "activities": [],
+      "semantic_rank": 27,
+      "baseline_rank": 27,
+      "experimental_rank": 27,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "25e1511897a686983da074fda311411b16a66e3785d98cdb0d1657850dcd3e3f"
+    },
+    {
+      "query_id": "q06_family",
+      "query": "family friendly attractions",
+      "attraction_id": 1060,
+      "attraction_name": "BlueWave Aquarium",
+      "district_id": 78,
+      "categories": [
+        "Family & Recreation"
+      ],
+      "activities": [],
+      "semantic_rank": 28,
+      "baseline_rank": 28,
+      "experimental_rank": 28,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "b7f685890fff463ea9fe9cf163ff842b106c4fa47beb98f58328ff5f2764a0e7"
+    },
+    {
+      "query_id": "q06_family",
+      "query": "family friendly attractions",
+      "attraction_id": 2216,
+      "attraction_name": "Lazer aquarium",
+      "district_id": 82,
+      "categories": [
+        "Family & Recreation"
+      ],
+      "activities": [],
+      "semantic_rank": 29,
+      "baseline_rank": 29,
+      "experimental_rank": 29,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "9b67d34616291650558df34faa317797480dce3419b1f750d59d9ea9f2b74d6a"
+    },
+    {
+      "query_id": "q06_family",
+      "query": "family friendly attractions",
+      "attraction_id": 605,
+      "attraction_name": "Oscar Aquarium",
+      "district_id": 89,
+      "categories": [
+        "Family & Recreation"
+      ],
+      "activities": [],
+      "semantic_rank": 30,
+      "baseline_rank": 30,
+      "experimental_rank": 30,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "9fa3da2f46b4035a74225e59bbb0515b1e8d9452c2a6ad3eff41ecc667549f33"
+    },
+    {
+      "query_id": "q07_hill_country",
+      "query": "hill-country nature attractions",
+      "attraction_id": 3454,
+      "attraction_name": "Nature's Agro",
+      "district_id": 77,
+      "categories": [
+        "Family & Recreation",
+        "Nature & Landscapes"
+      ],
+      "activities": [],
+      "semantic_rank": 1,
+      "baseline_rank": 1,
+      "experimental_rank": 1,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "c38a559d84e0bcfebaa78fece17cdc98c833bbc9d892a4b946007d2c330a85d9"
+    },
+    {
+      "query_id": "q07_hill_country",
+      "query": "hill-country nature attractions",
+      "attraction_id": 1409,
+      "attraction_name": "Sri Lanka",
+      "district_id": 80,
+      "categories": [
+        "Nature & Landscapes"
+      ],
+      "activities": [],
+      "semantic_rank": 2,
+      "baseline_rank": 2,
+      "experimental_rank": 2,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "54978723c80418af87f01e398d2eda7224940b7243051e494d2941d9c6c3de83"
+    },
+    {
+      "query_id": "q07_hill_country",
+      "query": "hill-country nature attractions",
+      "attraction_id": 5549,
+      "attraction_name": "Round Hill",
+      "district_id": 79,
+      "categories": [
+        "Nature & Landscapes"
+      ],
+      "activities": [],
+      "semantic_rank": 3,
+      "baseline_rank": 3,
+      "experimental_rank": 3,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "94518dd5dd573d5e6e466409c85ad105944bf67c8286aa6e1a1a51b59ddd9349"
+    },
+    {
+      "query_id": "q07_hill_country",
+      "query": "hill-country nature attractions",
+      "attraction_id": 4501,
+      "attraction_name": "Rock Hill",
+      "district_id": 75,
+      "categories": [
+        "Nature & Landscapes"
+      ],
+      "activities": [],
+      "semantic_rank": 4,
+      "baseline_rank": 4,
+      "experimental_rank": 4,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "1230d49aa4d43e2c44f635076878c0587d7594b1e840017f852fbe6f38f2e4ee"
+    },
+    {
+      "query_id": "q07_hill_country",
+      "query": "hill-country nature attractions",
+      "attraction_id": 2139,
+      "attraction_name": "Kalutara",
+      "district_id": 82,
+      "categories": [
+        "Nature & Landscapes"
+      ],
+      "activities": [],
+      "semantic_rank": 5,
+      "baseline_rank": 5,
+      "experimental_rank": 5,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "bfcdfbe9feee196c8b9d0c3193a42a29b6ea7bdceb69afa93c81623617386826"
+    },
+    {
+      "query_id": "q07_hill_country",
+      "query": "hill-country nature attractions",
+      "attraction_id": 4462,
+      "attraction_name": "Judges' Hill Forest Reservation",
+      "district_id": 75,
+      "categories": [
+        "Family & Recreation",
+        "Nature & Landscapes"
+      ],
+      "activities": [],
+      "semantic_rank": 6,
+      "baseline_rank": 6,
+      "experimental_rank": 6,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "9f270cd92ddcb6f9ffd13ec09600b038245a4484deee0a0ed6f801ad537b5c0a"
+    },
+    {
+      "query_id": "q07_hill_country",
+      "query": "hill-country nature attractions",
+      "attraction_id": 3480,
+      "attraction_name": "Korathota hill",
+      "district_id": 77,
+      "categories": [
+        "Nature & Landscapes"
+      ],
+      "activities": [],
+      "semantic_rank": 7,
+      "baseline_rank": 7,
+      "experimental_rank": 7,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "d16bbd4742415be5b58a72bd58a10f716dedeba1968b42ae3a44532e7d3aaadd"
+    },
+    {
+      "query_id": "q07_hill_country",
+      "query": "hill-country nature attractions",
+      "attraction_id": 5946,
+      "attraction_name": "Surrey Bird Sanctuary & Holiday Resort",
+      "district_id": 75,
+      "categories": [
+        "Family & Recreation",
+        "Festivals & Events",
+        "Nature & Landscapes",
+        "Wildlife & Safari"
+      ],
+      "activities": [],
+      "semantic_rank": 8,
+      "baseline_rank": 8,
+      "experimental_rank": 8,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "60786555ef174eb31f25567b28136c0f9441fbba82d2bbb9bf18db31b7754bfa"
+    },
+    {
+      "query_id": "q07_hill_country",
+      "query": "hill-country nature attractions",
+      "attraction_id": 3474,
+      "attraction_name": "Neelawarangala Hill",
+      "district_id": 77,
+      "categories": [
+        "Nature & Landscapes"
+      ],
+      "activities": [],
+      "semantic_rank": 9,
+      "baseline_rank": 9,
+      "experimental_rank": 9,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "6596a9ed0d2f8ffb72fe8211338c36d251dbc84554499719c86048271f2b0249"
+    },
+    {
+      "query_id": "q07_hill_country",
+      "query": "hill-country nature attractions",
+      "attraction_id": 3445,
+      "attraction_name": "Life with Nature",
+      "district_id": 77,
+      "categories": [
+        "Family & Recreation",
+        "Nature & Landscapes"
+      ],
+      "activities": [],
+      "semantic_rank": 10,
+      "baseline_rank": 10,
+      "experimental_rank": 10,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "da7545ef6985c4dddc51c066e9a6f5711f868f6bb717f5ef167029806fa7b123"
+    },
+    {
+      "query_id": "q07_hill_country",
+      "query": "hill-country nature attractions",
+      "attraction_id": 3479,
+      "attraction_name": "Koratota Hill",
+      "district_id": 77,
+      "categories": [
+        "Nature & Landscapes"
+      ],
+      "activities": [],
+      "semantic_rank": 11,
+      "baseline_rank": 11,
+      "experimental_rank": 11,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "c8eb9abfb2abbf10ffee1b2120d18f255df14c8740994e77ce23f0d7c89f37b2"
+    },
+    {
+      "query_id": "q07_hill_country",
+      "query": "hill-country nature attractions",
+      "attraction_id": 1669,
+      "attraction_name": "Pattanangala",
+      "district_id": 80,
+      "categories": [
+        "Nature & Landscapes"
+      ],
+      "activities": [],
+      "semantic_rank": 12,
+      "baseline_rank": 12,
+      "experimental_rank": 12,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "c8e4da1e42b38f9699e071aba1f0fb5e7b291ad1270758e8dd488442fe74123a"
+    },
+    {
+      "query_id": "q07_hill_country",
+      "query": "hill-country nature attractions",
+      "attraction_id": 1797,
+      "attraction_name": "Heenwewa",
+      "district_id": 80,
+      "categories": [
+        "Nature & Landscapes"
+      ],
+      "activities": [],
+      "semantic_rank": 13,
+      "baseline_rank": 13,
+      "experimental_rank": 13,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "5813f3726ff1a8fb3b325ee257da4014f5a2db5976c46f58297ac8dbc1092e63"
+    },
+    {
+      "query_id": "q07_hill_country",
+      "query": "hill-country nature attractions",
+      "attraction_id": 2204,
+      "attraction_name": "Nature Dek-\u0d9a\u0dc5\u0dd4\u0db4\u0dc4\u0db1.",
+      "district_id": 82,
+      "categories": [],
+      "activities": [],
+      "semantic_rank": 14,
+      "baseline_rank": 27,
+      "experimental_rank": 27,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "80bf75107d9adc6e185e63066e606b180240c738ce4b7546ef967c39d7b65c35"
+    },
+    {
+      "query_id": "q07_hill_country",
+      "query": "hill-country nature attractions",
+      "attraction_id": 2126,
+      "attraction_name": "Nature Photo Location and Homestay",
+      "district_id": 82,
+      "categories": [
+        "Festivals & Events"
+      ],
+      "activities": [],
+      "semantic_rank": 15,
+      "baseline_rank": 28,
+      "experimental_rank": 28,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "1b60d3bb99de81561f14f6faacee3229a6d0ea750aaebef3bcc90fefcc107d02"
+    },
+    {
+      "query_id": "q07_hill_country",
+      "query": "hill-country nature attractions",
+      "attraction_id": 5623,
+      "attraction_name": "Gampaha",
+      "district_id": 79,
+      "categories": [
+        "Nature & Landscapes"
+      ],
+      "activities": [],
+      "semantic_rank": 16,
+      "baseline_rank": 14,
+      "experimental_rank": 14,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "dd644bcef74cb8a7a0836514fe47fd93701e88be82b5a99e606121faf45c3c62"
+    },
+    {
+      "query_id": "q07_hill_country",
+      "query": "hill-country nature attractions",
+      "attraction_id": 1303,
+      "attraction_name": "Wildlife Range office \ud83d\udc0a",
+      "district_id": 80,
+      "categories": [
+        "Family & Recreation",
+        "Nature & Landscapes"
+      ],
+      "activities": [],
+      "semantic_rank": 17,
+      "baseline_rank": 15,
+      "experimental_rank": 15,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "0a844692db3149f4ec02b03755e88d67e7048e613f8f3e83813a959474f5b1f1"
+    },
+    {
+      "query_id": "q07_hill_country",
+      "query": "hill-country nature attractions",
+      "attraction_id": 2790,
+      "attraction_name": "Seven Hill Farm",
+      "district_id": 92,
+      "categories": [
+        "Tea, Agriculture & Plantation"
+      ],
+      "activities": [],
+      "semantic_rank": 18,
+      "baseline_rank": 29,
+      "experimental_rank": 29,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "6f47b8a1ef6f1a9e449f332a0a142730159f6fa0c80de227a98f7963d8c37e48"
+    },
+    {
+      "query_id": "q07_hill_country",
+      "query": "hill-country nature attractions",
+      "attraction_id": 5918,
+      "attraction_name": "Kehelgollahinna",
+      "district_id": 92,
+      "categories": [
+        "Nature & Landscapes"
+      ],
+      "activities": [],
+      "semantic_rank": 19,
+      "baseline_rank": 16,
+      "experimental_rank": 16,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "d6b94594199812d4b24012eaa0af8f6147766e91f435d3eacbeeac0300f4b953"
+    },
+    {
+      "query_id": "q07_hill_country",
+      "query": "hill-country nature attractions",
+      "attraction_id": 1376,
+      "attraction_name": "High way",
+      "district_id": 80,
+      "categories": [
+        "Family & Recreation",
+        "Nature & Landscapes"
+      ],
+      "activities": [],
+      "semantic_rank": 20,
+      "baseline_rank": 17,
+      "experimental_rank": 17,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "7b3af0c0de9f89f4e572b787e307c3e283635a7c189241ae48411789f37fe87a"
+    },
+    {
+      "query_id": "q07_hill_country",
+      "query": "hill-country nature attractions",
+      "attraction_id": 2700,
+      "attraction_name": "Central Province",
+      "district_id": 92,
+      "categories": [
+        "Nature & Landscapes"
+      ],
+      "activities": [],
+      "semantic_rank": 21,
+      "baseline_rank": 18,
+      "experimental_rank": 18,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "6eb3cb6f99b6a4f3542d226091c2452e6aa1b0cdbb5e2f6a974940f4315c403e"
+    },
+    {
+      "query_id": "q07_hill_country",
+      "query": "hill-country nature attractions",
+      "attraction_id": 1658,
+      "attraction_name": "Wilmanna Sanctuary.",
+      "district_id": 80,
+      "categories": [
+        "Family & Recreation",
+        "Nature & Landscapes"
+      ],
+      "activities": [],
+      "semantic_rank": 22,
+      "baseline_rank": 19,
+      "experimental_rank": 19,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "b0c7913b7d14c99317f57e3313f1e55382c0c3badb39c89139040bf83a803c49"
+    },
+    {
+      "query_id": "q07_hill_country",
+      "query": "hill-country nature attractions",
+      "attraction_id": 3625,
+      "attraction_name": "Colombo",
+      "district_id": 77,
+      "categories": [
+        "Nature & Landscapes"
+      ],
+      "activities": [],
+      "semantic_rank": 23,
+      "baseline_rank": 20,
+      "experimental_rank": 20,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "a181ccd1d53daf95b9229813186e4ddfe0de4fb0e8e1598a763eca51f799f0e1"
+    },
+    {
+      "query_id": "q07_hill_country",
+      "query": "hill-country nature attractions",
+      "attraction_id": 5206,
+      "attraction_name": "Hennekkanda",
+      "district_id": 92,
+      "categories": [
+        "Nature & Landscapes"
+      ],
+      "activities": [],
+      "semantic_rank": 24,
+      "baseline_rank": 21,
+      "experimental_rank": 21,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "fa1e3735eeb79c6725dc7e30bc3d915475da1a8534cf8b12518c549a4bc8d035"
+    },
+    {
+      "query_id": "q07_hill_country",
+      "query": "hill-country nature attractions",
+      "attraction_id": 3473,
+      "attraction_name": "Kebbaiye Hill",
+      "district_id": 77,
+      "categories": [
+        "Nature & Landscapes"
+      ],
+      "activities": [],
+      "semantic_rank": 25,
+      "baseline_rank": 22,
+      "experimental_rank": 22,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "6939f704c1667ee5381216a66b305a78bcb60607ef05cecf809e6728e0c10f1b"
+    },
+    {
+      "query_id": "q07_hill_country",
+      "query": "hill-country nature attractions",
+      "attraction_id": 3154,
+      "attraction_name": "Meeminnahela",
+      "district_id": 90,
+      "categories": [
+        "Nature & Landscapes"
+      ],
+      "activities": [],
+      "semantic_rank": 26,
+      "baseline_rank": 23,
+      "experimental_rank": 23,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "43a52ffdbf64754a61f87289adb7cb343f30d26616a302ed694afe14057ac46b"
+    },
+    {
+      "query_id": "q07_hill_country",
+      "query": "hill-country nature attractions",
+      "attraction_id": 6231,
+      "attraction_name": "Hillwood Resort & Restaurant",
+      "district_id": 92,
+      "categories": [
+        "Tea, Agriculture & Plantation"
+      ],
+      "activities": [],
+      "semantic_rank": 27,
+      "baseline_rank": 30,
+      "experimental_rank": 30,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "e901555a8bd686d98b6984b67205347baab513bb64dafd9152ee2ba2f780489f"
+    },
+    {
+      "query_id": "q07_hill_country",
+      "query": "hill-country nature attractions",
+      "attraction_id": 4586,
+      "attraction_name": "Gongolla",
+      "district_id": 75,
+      "categories": [
+        "Nature & Landscapes"
+      ],
+      "activities": [],
+      "semantic_rank": 28,
+      "baseline_rank": 24,
+      "experimental_rank": 24,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "1a0d090e09f9ebfa86f7f5b91685b96c3a7e0c88d3b5fe62bf5eb1dec9526ae7"
+    },
+    {
+      "query_id": "q07_hill_country",
+      "query": "hill-country nature attractions",
+      "attraction_id": 4580,
+      "attraction_name": "Badulla",
+      "district_id": 75,
+      "categories": [
+        "Nature & Landscapes"
+      ],
+      "activities": [],
+      "semantic_rank": 29,
+      "baseline_rank": 25,
+      "experimental_rank": 25,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "7d612fc767ab05c28ec3d5cf3df2a09e0a3a3e8035ca134dcdb2188189c84e14"
+    },
+    {
+      "query_id": "q07_hill_country",
+      "query": "hill-country nature attractions",
+      "attraction_id": 6046,
+      "attraction_name": "Nuwaraeliya",
+      "district_id": 92,
+      "categories": [
+        "Family & Recreation",
+        "Nature & Landscapes"
+      ],
+      "activities": [],
+      "semantic_rank": 30,
+      "baseline_rank": 26,
+      "experimental_rank": 26,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "2c3a884dcd147b8eea569ba798b95defa09ab1daffc733f8007bc95ff983331f"
+    },
+    {
+      "query_id": "q08_archaeology",
+      "query": "historical and archaeological sites",
+      "attraction_id": 4727,
+      "attraction_name": "A Historic Place",
+      "district_id": 75,
+      "categories": [
+        "Culture & Heritage",
+        "History & Archaeology",
+        "Photography & Scenic Spots"
+      ],
+      "activities": [
+        "Historical Exploration",
+        "Sightseeing"
+      ],
+      "semantic_rank": 1,
+      "baseline_rank": 1,
+      "experimental_rank": 1,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "532d0ca205cfc38dbc2cd1852070d3eb952e27d865b0648b25667dd4811081de"
+    },
+    {
+      "query_id": "q08_archaeology",
+      "query": "historical and archaeological sites",
+      "attraction_id": 4051,
+      "attraction_name": "Muhudu Maha Viharaya - Archaeological Site",
+      "district_id": 73,
+      "categories": [
+        "Religious & Spiritual",
+        "Urban & City Attractions"
+      ],
+      "activities": [
+        "Historical Exploration"
+      ],
+      "semantic_rank": 2,
+      "baseline_rank": 28,
+      "experimental_rank": 28,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "a9a2254958ba610677d0bebb9c003a77560b3bee2a0108990e455b5ae8f6957c"
+    },
+    {
+      "query_id": "q08_archaeology",
+      "query": "historical and archaeological sites",
+      "attraction_id": 1211,
+      "attraction_name": "Bellanbendi Pelessa Archaeological Site",
+      "district_id": 95,
+      "categories": [
+        "Educational & Learning",
+        "History & Archaeology"
+      ],
+      "activities": [
+        "Historical Exploration",
+        "Museum Visit"
+      ],
+      "semantic_rank": 3,
+      "baseline_rank": 2,
+      "experimental_rank": 2,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "a4158583db0e2af8451072f6ac055afee291d379d30629662e21a5beefbee6ee"
+    },
+    {
+      "query_id": "q08_archaeology",
+      "query": "historical and archaeological sites",
+      "attraction_id": 6448,
+      "attraction_name": "Samangala Archeological site",
+      "district_id": 73,
+      "categories": [
+        "Educational & Learning",
+        "History & Archaeology"
+      ],
+      "activities": [
+        "Museum Visit"
+      ],
+      "semantic_rank": 4,
+      "baseline_rank": 3,
+      "experimental_rank": 3,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "85767631e85d0f804f682de6d831e1760c78ff5e7eac828b2c7b4ea9e21e8da2"
+    },
+    {
+      "query_id": "q08_archaeology",
+      "query": "historical and archaeological sites",
+      "attraction_id": 173,
+      "attraction_name": "\u0dad\u0dd9\u0dbd\u0dd4\u0dbd\u0dca\u0dbd \u0db4\u0dd4\u0dbb\u0dcf\u0dab \u0dc0\u0dd2\u0dc4\u0dcf\u0dbb\u0dba \u0dc3\u0dc4 \u0db1\u0da7\u0db9\u0dd4\u0db1\u0dca | Telulla Archaeological Site",
+      "district_id": 80,
+      "categories": [
+        "Culture & Heritage",
+        "History & Archaeology",
+        "Photography & Scenic Spots",
+        "Urban & City Attractions"
+      ],
+      "activities": [
+        "Historical Exploration",
+        "Sightseeing"
+      ],
+      "semantic_rank": 5,
+      "baseline_rank": 4,
+      "experimental_rank": 4,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "144e8485f2d5605063e5b29e808483e8f8eb1a2b11c834c3590a9b5fa44cd7a0"
+    },
+    {
+      "query_id": "q08_archaeology",
+      "query": "historical and archaeological sites",
+      "attraction_id": 4139,
+      "attraction_name": "Elephant Rock Ancient Vihara Archaeological Site",
+      "district_id": 73,
+      "categories": [
+        "Religious & Spiritual"
+      ],
+      "activities": [
+        "Historical Exploration"
+      ],
+      "semantic_rank": 6,
+      "baseline_rank": 29,
+      "experimental_rank": 29,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "211a819eedd767568a4c71b35e016f99d78f4e904f4d0a31cbc78075cb6fc7e9"
+    },
+    {
+      "query_id": "q08_archaeology",
+      "query": "historical and archaeological sites",
+      "attraction_id": 2520,
+      "attraction_name": "Handagiriya archiological site",
+      "district_id": 95,
+      "categories": [
+        "Educational & Learning",
+        "History & Archaeology"
+      ],
+      "activities": [
+        "Museum Visit"
+      ],
+      "semantic_rank": 7,
+      "baseline_rank": 5,
+      "experimental_rank": 5,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "3fd0fa256a6afd3d175caf8520d5dbe935806b57b0713653a791733299f5f4ba"
+    },
+    {
+      "query_id": "q08_archaeology",
+      "query": "historical and archaeological sites",
+      "attraction_id": 243,
+      "attraction_name": "Uda Ranchamadama Prehistoric House Site",
+      "district_id": 95,
+      "categories": [
+        "Culture & Heritage",
+        "History & Archaeology",
+        "Photography & Scenic Spots"
+      ],
+      "activities": [
+        "Historical Exploration",
+        "Sightseeing"
+      ],
+      "semantic_rank": 8,
+      "baseline_rank": 6,
+      "experimental_rank": 6,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "ff85ba5888f8fd9918462e220f4cb1fc4ad58c3434d04d2256f915efd7dccab3"
+    },
+    {
+      "query_id": "q08_archaeology",
+      "query": "historical and archaeological sites",
+      "attraction_id": 3436,
+      "attraction_name": "Archaeology National Museum Kotte",
+      "district_id": 77,
+      "categories": [
+        "Educational & Learning",
+        "History & Archaeology",
+        "Urban & City Attractions"
+      ],
+      "activities": [
+        "Museum Visit"
+      ],
+      "semantic_rank": 9,
+      "baseline_rank": 7,
+      "experimental_rank": 7,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "2d8fa0df2429ce99d11ca137b54c44914e5b195a90a59e0bc0338f5d6260c292"
+    },
+    {
+      "query_id": "q08_archaeology",
+      "query": "historical and archaeological sites",
+      "attraction_id": 6412,
+      "attraction_name": "Rajagalathanna Archeological Ruins \u0dbb\u0da2\u0d9c\u0dbd\u0dad\u0dd0\u0db1\u0dca\u0db1 \u0dc0\u0dd2\u0dc4\u0dcf\u0dbb \u0db1\u0da7\u0db9\u0dd4\u0db1\u0dca",
+      "district_id": 73,
+      "categories": [
+        "Urban & City Attractions"
+      ],
+      "activities": [],
+      "semantic_rank": 10,
+      "baseline_rank": 30,
+      "experimental_rank": 30,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "b0ccb6cc72dc142d89619083c5acd790618a0b0f939c3e0c9a92ac4e6537c9f4"
+    },
+    {
+      "query_id": "q08_archaeology",
+      "query": "historical and archaeological sites",
+      "attraction_id": 4982,
+      "attraction_name": "Dedigama Archaeological Museum",
+      "district_id": 84,
+      "categories": [
+        "Educational & Learning",
+        "History & Archaeology"
+      ],
+      "activities": [
+        "Historical Exploration",
+        "Museum Visit"
+      ],
+      "semantic_rank": 11,
+      "baseline_rank": 8,
+      "experimental_rank": 8,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "e755fa4663cfb390f0ad96481750725514e14ac10075dffff7c4a60c75c33344"
+    },
+    {
+      "query_id": "q08_archaeology",
+      "query": "historical and archaeological sites",
+      "attraction_id": 176,
+      "attraction_name": "\u0daf\u0dd9\u0db8\u0da7\u0d9c\u0dbd \u0db4\u0dd4\u0dbb\u0dcf\u0dab \u0dc0\u0dd2\u0dc4\u0dcf\u0dbb\u0dba | Dematagala Archaeological Ruins",
+      "district_id": 80,
+      "categories": [
+        "Culture & Heritage",
+        "History & Archaeology",
+        "Photography & Scenic Spots"
+      ],
+      "activities": [
+        "Historical Exploration",
+        "Sightseeing"
+      ],
+      "semantic_rank": 12,
+      "baseline_rank": 9,
+      "experimental_rank": 9,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "03e910ee2b6a2f40fef6284f51430f4dedb511cfa3fdfbfcf86a8445c5dd7a4a"
+    },
+    {
+      "query_id": "q08_archaeology",
+      "query": "historical and archaeological sites",
+      "attraction_id": 5824,
+      "attraction_name": "Old Temple of the Tooth",
+      "district_id": 83,
+      "categories": [
+        "Culture & Heritage",
+        "History & Archaeology",
+        "Photography & Scenic Spots"
+      ],
+      "activities": [
+        "Historical Exploration",
+        "Sightseeing"
+      ],
+      "semantic_rank": 13,
+      "baseline_rank": 10,
+      "experimental_rank": 10,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "e6aeda4386c2d539f6caa1b5e2e18b6066f4dc1943c5fd2d59e7311cca99fa72"
+    },
+    {
+      "query_id": "q08_archaeology",
+      "query": "historical and archaeological sites",
+      "attraction_id": 2955,
+      "attraction_name": "Buduruwagala Archaeological Museum",
+      "district_id": 90,
+      "categories": [
+        "Educational & Learning",
+        "History & Archaeology",
+        "Urban & City Attractions"
+      ],
+      "activities": [
+        "Historical Exploration",
+        "Museum Visit"
+      ],
+      "semantic_rank": 14,
+      "baseline_rank": 11,
+      "experimental_rank": 11,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "f2c6b3df91370767d0c5e8a111585913365617ac0a5e1a4df791e0c006a596bf"
+    },
+    {
+      "query_id": "q08_archaeology",
+      "query": "historical and archaeological sites",
+      "attraction_id": 4443,
+      "attraction_name": "Badulla Fort",
+      "district_id": 75,
+      "categories": [
+        "Culture & Heritage",
+        "History & Archaeology",
+        "Photography & Scenic Spots"
+      ],
+      "activities": [
+        "Historical Exploration",
+        "Sightseeing"
+      ],
+      "semantic_rank": 15,
+      "baseline_rank": 12,
+      "experimental_rank": 12,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "eab4343e5af134d78b03ef53b2c9a6eee47a26d800bc4cae7c7c80eccba44d26"
+    },
+    {
+      "query_id": "q08_archaeology",
+      "query": "historical and archaeological sites",
+      "attraction_id": 6447,
+      "attraction_name": "Ampara",
+      "district_id": 73,
+      "categories": [
+        "Educational & Learning",
+        "History & Archaeology"
+      ],
+      "activities": [
+        "Museum Visit"
+      ],
+      "semantic_rank": 16,
+      "baseline_rank": 13,
+      "experimental_rank": 13,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "9847c65e8628d9b77df603b5eaff1c79072cadf935eb33e18c44f85b1512b1d2"
+    },
+    {
+      "query_id": "q08_archaeology",
+      "query": "historical and archaeological sites",
+      "attraction_id": 180,
+      "attraction_name": "\u0d9a\u0ddc\u0da7\u0dcf\u0daf\u0dd0\u0db8\u0dd4\u0dab\u0dd4\u0dc4\u0dd9\u0dbd \u0db4\u0dd4\u0dbb\u0dcf\u0dab \u0dc0\u0dd2\u0dc4\u0dcf\u0dbb\u0dba | Kottadamuhela Archaeological Ruins",
+      "district_id": 80,
+      "categories": [
+        "Culture & Heritage",
+        "History & Archaeology",
+        "Photography & Scenic Spots"
+      ],
+      "activities": [
+        "Historical Exploration",
+        "Sightseeing"
+      ],
+      "semantic_rank": 17,
+      "baseline_rank": 14,
+      "experimental_rank": 14,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "213d89e3e879eae47ce87e206463a5c035176650523382fe388018de9a7db1e8"
+    },
+    {
+      "query_id": "q08_archaeology",
+      "query": "historical and archaeological sites",
+      "attraction_id": 2942,
+      "attraction_name": "Kurullangala Prehistoric Cave Art Site",
+      "district_id": 75,
+      "categories": [
+        "Culture & Heritage",
+        "History & Archaeology",
+        "Photography & Scenic Spots"
+      ],
+      "activities": [
+        "Historical Exploration",
+        "Sightseeing"
+      ],
+      "semantic_rank": 18,
+      "baseline_rank": 15,
+      "experimental_rank": 15,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "23476fdd75a58d08d5d4a64e46b48aa797b5b1f8d852e2caaca57e72622c17ef"
+    },
+    {
+      "query_id": "q08_archaeology",
+      "query": "historical and archaeological sites",
+      "attraction_id": 2954,
+      "attraction_name": "Sri Pana Archaeological Site",
+      "district_id": 90,
+      "categories": [
+        "Culture & Heritage",
+        "History & Archaeology",
+        "Photography & Scenic Spots"
+      ],
+      "activities": [
+        "Historical Exploration",
+        "Sightseeing"
+      ],
+      "semantic_rank": 19,
+      "baseline_rank": 16,
+      "experimental_rank": 16,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "805c5432e38595e3b5b066d25776cb70027abf0a60b8ba81a40c347ab798cc61"
+    },
+    {
+      "query_id": "q08_archaeology",
+      "query": "historical and archaeological sites",
+      "attraction_id": 179,
+      "attraction_name": "\u0dbd\u0dd4\u0dab\u0dd4\u0d85\u0da7\u0dd4\u0d9c\u0dbd\u0dca\u0d9c\u0dda \u0db4\u0dd4\u0dbb\u0dcf\u0dab \u0dc0\u0dd2\u0dc4\u0dcf\u0dbb\u0dba | Lunuatu Galge Archaeological Ruins",
+      "district_id": 90,
+      "categories": [
+        "Culture & Heritage",
+        "History & Archaeology",
+        "Photography & Scenic Spots"
+      ],
+      "activities": [
+        "Historical Exploration",
+        "Sightseeing"
+      ],
+      "semantic_rank": 20,
+      "baseline_rank": 17,
+      "experimental_rank": 17,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "37b70169f11d3c692c985d6e70c907ea92a27b12609be0baace0975d2c0824d4"
+    },
+    {
+      "query_id": "q08_archaeology",
+      "query": "historical and archaeological sites",
+      "attraction_id": 4723,
+      "attraction_name": "Henewala Cave (\u0dc4\u0dda\u0db1\u0dda\u0dc0\u0dbd \u0d9c\u0dbd\u0dca\u0d9c\u0dda)",
+      "district_id": 90,
+      "categories": [
+        "Culture & Heritage",
+        "History & Archaeology",
+        "Photography & Scenic Spots"
+      ],
+      "activities": [
+        "Historical Exploration",
+        "Sightseeing"
+      ],
+      "semantic_rank": 21,
+      "baseline_rank": 18,
+      "experimental_rank": 18,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "86b6a9b60306f033597e2278cd586319501abce0efedb616a3e43bcd15d1bce4"
+    },
+    {
+      "query_id": "q08_archaeology",
+      "query": "historical and archaeological sites",
+      "attraction_id": 5850,
+      "attraction_name": "Victoria Museum",
+      "district_id": 92,
+      "categories": [
+        "Educational & Learning",
+        "History & Archaeology"
+      ],
+      "activities": [
+        "Historical Exploration",
+        "Museum Visit"
+      ],
+      "semantic_rank": 22,
+      "baseline_rank": 19,
+      "experimental_rank": 19,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "b3ed2c0700abe94ec250cb3fe641fd999fca04bd5d804a7feda79b1dafc662bb"
+    },
+    {
+      "query_id": "q08_archaeology",
+      "query": "historical and archaeological sites",
+      "attraction_id": 72,
+      "attraction_name": "Matara Fort",
+      "district_id": 89,
+      "categories": [
+        "Culture & Heritage",
+        "History & Archaeology",
+        "Photography & Scenic Spots",
+        "Urban & City Attractions"
+      ],
+      "activities": [
+        "Historical Exploration",
+        "Sightseeing"
+      ],
+      "semantic_rank": 23,
+      "baseline_rank": 20,
+      "experimental_rank": 20,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "848d5f3b8505bedc18fc840233860b817297d2698e65cb4c103da80789e8b99a"
+    },
+    {
+      "query_id": "q08_archaeology",
+      "query": "historical and archaeological sites",
+      "attraction_id": 112,
+      "attraction_name": "Alpitiya Walauwa",
+      "district_id": 95,
+      "categories": [
+        "History & Archaeology"
+      ],
+      "activities": [
+        "Historical Exploration"
+      ],
+      "semantic_rank": 24,
+      "baseline_rank": 21,
+      "experimental_rank": 21,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "44f4893e2c587f9b37253ba0db5f373e072b3a173e9efeec2311ef197322b250"
+    },
+    {
+      "query_id": "q08_archaeology",
+      "query": "historical and archaeological sites",
+      "attraction_id": 2947,
+      "attraction_name": "Yudaganawa Wewa",
+      "district_id": 90,
+      "categories": [
+        "History & Archaeology"
+      ],
+      "activities": [
+        "Historical Exploration"
+      ],
+      "semantic_rank": 25,
+      "baseline_rank": 22,
+      "experimental_rank": 22,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "10b5140d563c8b0cdc7f0b3465805a57e047f1f936d8f05a513226aba17df5fb"
+    },
+    {
+      "query_id": "q08_archaeology",
+      "query": "historical and archaeological sites",
+      "attraction_id": 2504,
+      "attraction_name": "Sunken Town of Maskeliya (Old Maskeliya Town)",
+      "district_id": 92,
+      "categories": [
+        "Culture & Heritage",
+        "History & Archaeology",
+        "Photography & Scenic Spots"
+      ],
+      "activities": [
+        "Historical Exploration",
+        "Sightseeing"
+      ],
+      "semantic_rank": 26,
+      "baseline_rank": 23,
+      "experimental_rank": 23,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "305ed90e6880e35e8e94003da34b09483d301fca8256dceed349c36d3727fb04"
+    },
+    {
+      "query_id": "q08_archaeology",
+      "query": "historical and archaeological sites",
+      "attraction_id": 4444,
+      "attraction_name": "Old Welekade Market",
+      "district_id": 75,
+      "categories": [
+        "Culture & Heritage",
+        "History & Archaeology",
+        "Photography & Scenic Spots"
+      ],
+      "activities": [
+        "Historical Exploration",
+        "Sightseeing"
+      ],
+      "semantic_rank": 27,
+      "baseline_rank": 24,
+      "experimental_rank": 24,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "3ee8aa44bceaebb39690a2cb346e1b779503a2d2fdaf6582ec5c62656d8a5698"
+    },
+    {
+      "query_id": "q08_archaeology",
+      "query": "historical and archaeological sites",
+      "attraction_id": 4083,
+      "attraction_name": "P.Partheepan point",
+      "district_id": 73,
+      "categories": [
+        "Culture & Heritage",
+        "History & Archaeology",
+        "Photography & Scenic Spots"
+      ],
+      "activities": [
+        "Historical Exploration",
+        "Sightseeing"
+      ],
+      "semantic_rank": 28,
+      "baseline_rank": 25,
+      "experimental_rank": 25,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "d029735cf79194499acd17668b027fcfc77e2e6fca0d85307278f076ff964909"
+    },
+    {
+      "query_id": "q08_archaeology",
+      "query": "historical and archaeological sites",
+      "attraction_id": 870,
+      "attraction_name": "Athwelthota Temple",
+      "district_id": 82,
+      "categories": [
+        "Educational & Learning",
+        "History & Archaeology"
+      ],
+      "activities": [
+        "Museum Visit"
+      ],
+      "semantic_rank": 29,
+      "baseline_rank": 26,
+      "experimental_rank": 26,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "36af56779d43dc794600a92f0d24b24f5b5b2d2c778b55f23a3bb44465c4330c"
+    },
+    {
+      "query_id": "q08_archaeology",
+      "query": "historical and archaeological sites",
+      "attraction_id": 3431,
+      "attraction_name": "Old Town Hall Building and Museum",
+      "district_id": 77,
+      "categories": [
+        "Educational & Learning",
+        "History & Archaeology"
+      ],
+      "activities": [
+        "Museum Visit"
+      ],
+      "semantic_rank": 30,
+      "baseline_rank": 27,
+      "experimental_rank": 27,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "0d082b28a78b0f338d34f0785bea72c39b6341549843da806310670537884809"
+    },
+    {
+      "query_id": "q09_culinary",
+      "query": "food and culinary tourism",
+      "attraction_id": 1213,
+      "attraction_name": "Vegietabal And Food Shop",
+      "district_id": 90,
+      "categories": [
+        "Educational & Learning",
+        "History & Archaeology"
+      ],
+      "activities": [
+        "Museum Visit"
+      ],
+      "semantic_rank": 1,
+      "baseline_rank": 14,
+      "experimental_rank": 14,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "f4284361d67be11c28ebd73afd1936da2a881855303b395cd50218dc0027c995"
+    },
+    {
+      "query_id": "q09_culinary",
+      "query": "food and culinary tourism",
+      "attraction_id": 6241,
+      "attraction_name": "MOUNTAIN LEISURE HOLIDAY RESORT",
+      "district_id": 92,
+      "categories": [
+        "Food & Culinary"
+      ],
+      "activities": [],
+      "semantic_rank": 2,
+      "baseline_rank": 1,
+      "experimental_rank": 1,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "c95fffa6e5e1962e89c68ea8352f3b76b89e11170d6e4219bbd58f6b9a3ba098"
+    },
+    {
+      "query_id": "q09_culinary",
+      "query": "food and culinary tourism",
+      "attraction_id": 845,
+      "attraction_name": "Culture Resort",
+      "district_id": 89,
+      "categories": [
+        "Festivals & Events",
+        "Food & Culinary"
+      ],
+      "activities": [],
+      "semantic_rank": 3,
+      "baseline_rank": 2,
+      "experimental_rank": 2,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "649c64a6a4c47d6d30371b25e150b81dad6772f2be2e233a916a28cd17006389"
+    },
+    {
+      "query_id": "q09_culinary",
+      "query": "food and culinary tourism",
+      "attraction_id": 857,
+      "attraction_name": "The Cinnamon Trail",
+      "district_id": 78,
+      "categories": [
+        "Entertainment & Nightlife",
+        "Festivals & Events",
+        "Food & Culinary"
+      ],
+      "activities": [],
+      "semantic_rank": 4,
+      "baseline_rank": 3,
+      "experimental_rank": 3,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "9cc1cf126bc4b2df3ba88a695fb3a1e73fd52f3a2cdd2d9c38af8d8b4f69d669"
+    },
+    {
+      "query_id": "q09_culinary",
+      "query": "food and culinary tourism",
+      "attraction_id": 2266,
+      "attraction_name": "Red Lobster Tours and Restaurant Kalutara",
+      "district_id": 82,
+      "categories": [
+        "Food & Culinary",
+        "Wellness & Ayurveda"
+      ],
+      "activities": [
+        "Spa and Wellness"
+      ],
+      "semantic_rank": 5,
+      "baseline_rank": 15,
+      "experimental_rank": 15,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "cd1ec8e1a1e18d692f711d80f82382d85c2e4296cc9cf233c1366fbf7d211a4f"
+    },
+    {
+      "query_id": "q09_culinary",
+      "query": "food and culinary tourism",
+      "attraction_id": 6201,
+      "attraction_name": "Kulture32",
+      "district_id": 83,
+      "categories": [
+        "Food & Culinary"
+      ],
+      "activities": [],
+      "semantic_rank": 6,
+      "baseline_rank": 4,
+      "experimental_rank": 4,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "d1aac5f8c5676088913b8216600c4e674ec1eea64c12c0b2c59abb8fb13a3c2c"
+    },
+    {
+      "query_id": "q09_culinary",
+      "query": "food and culinary tourism",
+      "attraction_id": 3117,
+      "attraction_name": "Ella Nine Arch Spice Garden & Cooking Classes",
+      "district_id": 75,
+      "categories": [
+        "Shopping & Local Markets"
+      ],
+      "activities": [
+        "Cooking Class"
+      ],
+      "semantic_rank": 7,
+      "baseline_rank": 16,
+      "experimental_rank": 16,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "15342a887bc6c77424f2897ea9dd04b5258a36fd8d20ee196d94ba4206214d4d"
+    },
+    {
+      "query_id": "q09_culinary",
+      "query": "food and culinary tourism",
+      "attraction_id": 4026,
+      "attraction_name": "Via Torino",
+      "district_id": 77,
+      "categories": [
+        "Entertainment & Nightlife",
+        "Festivals & Events",
+        "Food & Culinary",
+        "Shopping & Local Markets"
+      ],
+      "activities": [],
+      "semantic_rank": 8,
+      "baseline_rank": 5,
+      "experimental_rank": 5,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "09230ace866735c4024da1ee9654a5c21a89c3857e23492c0e43403286d76eb1"
+    },
+    {
+      "query_id": "q09_culinary",
+      "query": "food and culinary tourism",
+      "attraction_id": 4293,
+      "attraction_name": "Palu",
+      "district_id": 73,
+      "categories": [
+        "Food & Culinary"
+      ],
+      "activities": [],
+      "semantic_rank": 9,
+      "baseline_rank": 6,
+      "experimental_rank": 6,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "54d28a7df9034c5eef0c1794aa23ae878c88eaec8d625a18b53c5b2e5cfd7f0d"
+    },
+    {
+      "query_id": "q09_culinary",
+      "query": "food and culinary tourism",
+      "attraction_id": 729,
+      "attraction_name": "Terra Resort",
+      "district_id": 78,
+      "categories": [
+        "Food & Culinary",
+        "Wellness & Ayurveda"
+      ],
+      "activities": [
+        "Spa and Wellness",
+        "Yoga"
+      ],
+      "semantic_rank": 10,
+      "baseline_rank": 17,
+      "experimental_rank": 17,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "1ebd23f06c5819d8f423ed50a85c01b8d8bf747f563148fd8a3b84619d5c3756"
+    },
+    {
+      "query_id": "q09_culinary",
+      "query": "food and culinary tourism",
+      "attraction_id": 6112,
+      "attraction_name": "Tea Planters Lodge, Cooking Classes, Tours and Cloud Kitchen",
+      "district_id": 92,
+      "categories": [
+        "Adventure & Outdoor",
+        "Food & Culinary"
+      ],
+      "activities": [
+        "Cooking Class"
+      ],
+      "semantic_rank": 11,
+      "baseline_rank": 18,
+      "experimental_rank": 18,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "df7ffb907038920ef168258ae8a51900555b96b6b2b865f7a69d8bee53e5818e"
+    },
+    {
+      "query_id": "q09_culinary",
+      "query": "food and culinary tourism",
+      "attraction_id": 843,
+      "attraction_name": "Mantara Villa / Hotel",
+      "district_id": 89,
+      "categories": [
+        "Festivals & Events",
+        "Food & Culinary"
+      ],
+      "activities": [
+        "Swimming"
+      ],
+      "semantic_rank": 12,
+      "baseline_rank": 19,
+      "experimental_rank": 19,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "200e76406776e11a8b8148f6b3fa8ae72f3877618c3b02d6b6a7eda8e993f073"
+    },
+    {
+      "query_id": "q09_culinary",
+      "query": "food and culinary tourism",
+      "attraction_id": 723,
+      "attraction_name": "Tea Avenue",
+      "district_id": 78,
+      "categories": [
+        "Food & Culinary",
+        "Shopping & Local Markets"
+      ],
+      "activities": [],
+      "semantic_rank": 13,
+      "baseline_rank": 7,
+      "experimental_rank": 7,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "8fd35d1e50b1ffa4c152259ff16689e88e907b4d5c204d5f82fa50bde6ca0cdd"
+    },
+    {
+      "query_id": "q09_culinary",
+      "query": "food and culinary tourism",
+      "attraction_id": 2868,
+      "attraction_name": "Macho Recipes (Regal Crafts)",
+      "district_id": 95,
+      "categories": [
+        "Shopping & Local Markets"
+      ],
+      "activities": [],
+      "semantic_rank": 14,
+      "baseline_rank": 8,
+      "experimental_rank": 8,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "7cd55b4165e35f03776f2f0d107792205bf4d24fb42af18285b4d0542537ff07"
+    },
+    {
+      "query_id": "q09_culinary",
+      "query": "food and culinary tourism",
+      "attraction_id": 5738,
+      "attraction_name": "Jasmin Villa Ayurveda Resort",
+      "district_id": 79,
+      "categories": [
+        "Food & Culinary",
+        "Wellness & Ayurveda"
+      ],
+      "activities": [
+        "Ayurvedic Treatment",
+        "Spa and Wellness"
+      ],
+      "semantic_rank": 15,
+      "baseline_rank": 20,
+      "experimental_rank": 20,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "22d5a8aa316e6b9f09a426be1fdbae298c4fed9b3efb073c066d10231b29498c"
+    },
+    {
+      "query_id": "q09_culinary",
+      "query": "food and culinary tourism",
+      "attraction_id": 647,
+      "attraction_name": "Cinnamon Museum and Visitors' Center",
+      "district_id": 89,
+      "categories": [],
+      "activities": [
+        "Museum Visit"
+      ],
+      "semantic_rank": 16,
+      "baseline_rank": 21,
+      "experimental_rank": 21,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "3fa684405850267075378db1ff453d43ab9007668f7a734940d703d61f15a55c"
+    },
+    {
+      "query_id": "q09_culinary",
+      "query": "food and culinary tourism",
+      "attraction_id": 2371,
+      "attraction_name": "Barberyn Sands Ayurveda Resort",
+      "district_id": 78,
+      "categories": [
+        "Food & Culinary",
+        "Wellness & Ayurveda"
+      ],
+      "activities": [
+        "Ayurvedic Treatment",
+        "Spa and Wellness"
+      ],
+      "semantic_rank": 17,
+      "baseline_rank": 22,
+      "experimental_rank": 22,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "8e3b8b6538fe1d37b5b63ac7d616b17673e5c0ca77a71cddabb78d3271d21835"
+    },
+    {
+      "query_id": "q09_culinary",
+      "query": "food and culinary tourism",
+      "attraction_id": 863,
+      "attraction_name": "Sea Monkey Restaurant",
+      "district_id": 78,
+      "categories": [
+        "Festivals & Events",
+        "Food & Culinary"
+      ],
+      "activities": [],
+      "semantic_rank": 18,
+      "baseline_rank": 9,
+      "experimental_rank": 9,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "0d9c2bcffcd3c371083d38b6402c7819b8d76842ad688ce7385943167906fe6d"
+    },
+    {
+      "query_id": "q09_culinary",
+      "query": "food and culinary tourism",
+      "attraction_id": 1624,
+      "attraction_name": "Ceylonta Rice + - Hambantota",
+      "district_id": 80,
+      "categories": [
+        "Entertainment & Nightlife",
+        "Festivals & Events",
+        "Food & Culinary"
+      ],
+      "activities": [],
+      "semantic_rank": 19,
+      "baseline_rank": 10,
+      "experimental_rank": 10,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "378c01f7783f1ff751b199f7568def8978bec78dfbbc951fd032dcce87eb9f0a"
+    },
+    {
+      "query_id": "q09_culinary",
+      "query": "food and culinary tourism",
+      "attraction_id": 527,
+      "attraction_name": "Nirbana Retreat",
+      "district_id": 78,
+      "categories": [
+        "Adventure & Outdoor",
+        "Festivals & Events",
+        "Food & Culinary"
+      ],
+      "activities": [
+        "Spa and Wellness",
+        "Yoga"
+      ],
+      "semantic_rank": 20,
+      "baseline_rank": 23,
+      "experimental_rank": 23,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "3c1c42878cc673d90a5a8939348760f404d997f96d9e27e213244d1b11e9cd9f"
+    },
+    {
+      "query_id": "q09_culinary",
+      "query": "food and culinary tourism",
+      "attraction_id": 3880,
+      "attraction_name": "Colombo Court Hotel & Spa",
+      "district_id": 77,
+      "categories": [
+        "Entertainment & Nightlife",
+        "Festivals & Events",
+        "Food & Culinary",
+        "Wellness & Ayurveda"
+      ],
+      "activities": [
+        "Spa and Wellness",
+        "Swimming"
+      ],
+      "semantic_rank": 21,
+      "baseline_rank": 24,
+      "experimental_rank": 24,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "e8d8944492a02b44f96e354425a5e3b94047fd067c842e3699b4bcea8a8c86f1"
+    },
+    {
+      "query_id": "q09_culinary",
+      "query": "food and culinary tourism",
+      "attraction_id": 5221,
+      "attraction_name": "Mansala (\u0db8\u0d82\u0dc3\u0dbd)",
+      "district_id": 84,
+      "categories": [
+        "Adventure & Outdoor",
+        "Food & Culinary"
+      ],
+      "activities": [],
+      "semantic_rank": 22,
+      "baseline_rank": 11,
+      "experimental_rank": 11,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "f9c8308af676247701c3dde854bd4e613cb4880ce3e543255853f8a8228c5933"
+    },
+    {
+      "query_id": "q09_culinary",
+      "query": "food and culinary tourism",
+      "attraction_id": 792,
+      "attraction_name": "Traditional market",
+      "district_id": 89,
+      "categories": [
+        "Shopping & Local Markets"
+      ],
+      "activities": [
+        "Cultural Experience",
+        "Local Market Visit"
+      ],
+      "semantic_rank": 23,
+      "baseline_rank": 25,
+      "experimental_rank": 25,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "6631e452aa5635e0b5f5629799687a2f647a25b880dec8711e55d99dc8eabf2d"
+    },
+    {
+      "query_id": "q09_culinary",
+      "query": "food and culinary tourism",
+      "attraction_id": 3989,
+      "attraction_name": "Sri Lanka Foundation Institute",
+      "district_id": 77,
+      "categories": [
+        "Festivals & Events",
+        "Food & Culinary"
+      ],
+      "activities": [
+        "Educational Visit"
+      ],
+      "semantic_rank": 24,
+      "baseline_rank": 26,
+      "experimental_rank": 26,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "1d30cfcc6918d9ab237c82d566feb73d26080aded86874d89721bba449744142"
+    },
+    {
+      "query_id": "q09_culinary",
+      "query": "food and culinary tourism",
+      "attraction_id": 2122,
+      "attraction_name": "Red Coconut Villa Sri Lanka",
+      "district_id": 78,
+      "categories": [
+        "Food & Culinary"
+      ],
+      "activities": [],
+      "semantic_rank": 25,
+      "baseline_rank": 12,
+      "experimental_rank": 12,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "da6e8ac93aa9f125c1333692ffe7e9fb6f8e87ff97c6370f10d68f5da63dd75f"
+    },
+    {
+      "query_id": "q09_culinary",
+      "query": "food and culinary tourism",
+      "attraction_id": 56,
+      "attraction_name": "The Long Beach Resort",
+      "district_id": 78,
+      "categories": [
+        "Entertainment & Nightlife",
+        "Food & Culinary",
+        "Urban & City Attractions",
+        "Wellness & Ayurveda"
+      ],
+      "activities": [
+        "Spa and Wellness"
+      ],
+      "semantic_rank": 26,
+      "baseline_rank": 27,
+      "experimental_rank": 27,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "05ef339c727f5e189d5b06f054c9674bfbedb700fb6f58d1cdf099647c01d2f5"
+    },
+    {
+      "query_id": "q09_culinary",
+      "query": "food and culinary tourism",
+      "attraction_id": 4369,
+      "attraction_name": "Deep Sea Yoga and Caf\u00e9",
+      "district_id": 73,
+      "categories": [
+        "Food & Culinary",
+        "Shopping & Local Markets"
+      ],
+      "activities": [
+        "Yoga"
+      ],
+      "semantic_rank": 27,
+      "baseline_rank": 28,
+      "experimental_rank": 28,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "cdcf11dc90fa12e17a981bd5e266c6a056b8eaadf22499f6f1ccce127057124e"
+    },
+    {
+      "query_id": "q09_culinary",
+      "query": "food and culinary tourism",
+      "attraction_id": 2433,
+      "attraction_name": "The Villa Bentota by KK Collection",
+      "district_id": 78,
+      "categories": [
+        "Festivals & Events",
+        "Food & Culinary"
+      ],
+      "activities": [],
+      "semantic_rank": 28,
+      "baseline_rank": 13,
+      "experimental_rank": 13,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "013d76e25556b8a1de019d0c4f875735805e9a8719f75bba1c4022b84295237f"
+    },
+    {
+      "query_id": "q09_culinary",
+      "query": "food and culinary tourism",
+      "attraction_id": 136,
+      "attraction_name": "River paradise safari house udawalawe -cooking class available",
+      "district_id": 90,
+      "categories": [
+        "Food & Culinary",
+        "Urban & City Attractions"
+      ],
+      "activities": [
+        "Cooking Class",
+        "Wildlife Safari"
+      ],
+      "semantic_rank": 29,
+      "baseline_rank": 29,
+      "experimental_rank": 29,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "e99f7aae50aa089966f27055fac8a9c2942b166e101174c1b73b9863892b8d95"
+    },
+    {
+      "query_id": "q09_culinary",
+      "query": "food and culinary tourism",
+      "attraction_id": 749,
+      "attraction_name": "Kurumba Bay",
+      "district_id": 89,
+      "categories": [
+        "Entertainment & Nightlife",
+        "Food & Culinary",
+        "Shopping & Local Markets",
+        "Wellness & Ayurveda"
+      ],
+      "activities": [
+        "Shopping",
+        "Spa and Wellness",
+        "Swimming"
+      ],
+      "semantic_rank": 30,
+      "baseline_rank": 30,
+      "experimental_rank": 30,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "aa5fbfcddb1f0be5bf0bab8d751c4fe022ceadc25db71e3be288dea210a9183b"
+    },
+    {
+      "query_id": "q10_photography",
+      "query": "photography and scenic attractions",
+      "attraction_id": 4466,
+      "attraction_name": "Scenic Forest",
+      "district_id": 75,
+      "categories": [
+        "Family & Recreation",
+        "Nature & Landscapes"
+      ],
+      "activities": [
+        "Photography"
+      ],
+      "semantic_rank": 1,
+      "baseline_rank": 23,
+      "experimental_rank": 23,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "1c9f972dee83922062d832b72cc2322cba855e963aff7eb54fb1783494f8c4a4"
+    },
+    {
+      "query_id": "q10_photography",
+      "query": "photography and scenic attractions",
+      "attraction_id": 2999,
+      "attraction_name": "Viewpoint",
+      "district_id": 75,
+      "categories": [
+        "Photography & Scenic Spots"
+      ],
+      "activities": [
+        "Photography",
+        "Scenic Viewpoint"
+      ],
+      "semantic_rank": 2,
+      "baseline_rank": 1,
+      "experimental_rank": 1,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "e9247440f1dd9b52d0d6d99a0ad20b95237e2c5cc549462755f3e1db9a59f284"
+    },
+    {
+      "query_id": "q10_photography",
+      "query": "photography and scenic attractions",
+      "attraction_id": 645,
+      "attraction_name": "Photography Museum A",
+      "district_id": 78,
+      "categories": [
+        "Educational & Learning",
+        "History & Archaeology"
+      ],
+      "activities": [
+        "Museum Visit",
+        "Photography"
+      ],
+      "semantic_rank": 3,
+      "baseline_rank": 24,
+      "experimental_rank": 24,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "3bb529cd025e880c10dce7121804d909fbe46c867b2f34da578dea6a8aa9e7d6"
+    },
+    {
+      "query_id": "q10_photography",
+      "query": "photography and scenic attractions",
+      "attraction_id": 911,
+      "attraction_name": "Scenic Point II",
+      "district_id": 95,
+      "categories": [
+        "Photography & Scenic Spots"
+      ],
+      "activities": [
+        "Photography"
+      ],
+      "semantic_rank": 4,
+      "baseline_rank": 2,
+      "experimental_rank": 2,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "0594992b686b7d4886c2cd503e5fea1003982fc680b37be58250cf1ac45008d7"
+    },
+    {
+      "query_id": "q10_photography",
+      "query": "photography and scenic attractions",
+      "attraction_id": 5608,
+      "attraction_name": "Cecilia Gardens Paradise of Photography",
+      "district_id": 79,
+      "categories": [],
+      "activities": [
+        "Photography"
+      ],
+      "semantic_rank": 5,
+      "baseline_rank": 22,
+      "experimental_rank": 22,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "aceb3737a183864e8f2207bd32ae89ad5d697e0300ff6a42620522bfe04cd68c"
+    },
+    {
+      "query_id": "q10_photography",
+      "query": "photography and scenic attractions",
+      "attraction_id": 2126,
+      "attraction_name": "Nature Photo Location and Homestay",
+      "district_id": 82,
+      "categories": [
+        "Festivals & Events"
+      ],
+      "activities": [],
+      "semantic_rank": 6,
+      "baseline_rank": 25,
+      "experimental_rank": 25,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "969bfa368fefd0625ff8d4b4e18c0d02d5932e1fb8b9713ed1434699b86b8fb8"
+    },
+    {
+      "query_id": "q10_photography",
+      "query": "photography and scenic attractions",
+      "attraction_id": 1662,
+      "attraction_name": "Lake Sunrise viewpoint",
+      "district_id": 80,
+      "categories": [
+        "Photography & Scenic Spots"
+      ],
+      "activities": [
+        "Photography",
+        "Scenic Viewpoint",
+        "Sunrise Viewing"
+      ],
+      "semantic_rank": 7,
+      "baseline_rank": 3,
+      "experimental_rank": 3,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "73f7c6b37cc19dd06d8b33980a50feec5f29d4ef5fc231a40804bfdef4efd95c"
+    },
+    {
+      "query_id": "q10_photography",
+      "query": "photography and scenic attractions",
+      "attraction_id": 901,
+      "attraction_name": "\u0d87\u0db1\u0dca\u0daf\u0dcf\u0db1 \u0d9c\u0dbd. Andana Rock",
+      "district_id": 95,
+      "categories": [
+        "Photography & Scenic Spots"
+      ],
+      "activities": [
+        "Photography"
+      ],
+      "semantic_rank": 8,
+      "baseline_rank": 4,
+      "experimental_rank": 4,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "11cab6aafe7a2e87b0a5344b8bda918b64ebbfe194867cdfe9a0a289f7785383"
+    },
+    {
+      "query_id": "q10_photography",
+      "query": "photography and scenic attractions",
+      "attraction_id": 4727,
+      "attraction_name": "A Historic Place",
+      "district_id": 75,
+      "categories": [
+        "Culture & Heritage",
+        "History & Archaeology",
+        "Photography & Scenic Spots"
+      ],
+      "activities": [
+        "Historical Exploration",
+        "Sightseeing"
+      ],
+      "semantic_rank": 9,
+      "baseline_rank": 5,
+      "experimental_rank": 5,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "8718b03f214be3c319f09b871d05fccc135c52bd3fdbbe8b4342ee757fb8797e"
+    },
+    {
+      "query_id": "q10_photography",
+      "query": "photography and scenic attractions",
+      "attraction_id": 4479,
+      "attraction_name": "Badulla city view point",
+      "district_id": 75,
+      "categories": [
+        "Photography & Scenic Spots"
+      ],
+      "activities": [
+        "Photography"
+      ],
+      "semantic_rank": 10,
+      "baseline_rank": 6,
+      "experimental_rank": 6,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "fb9f67684f4838bcca1d70d076a5695709a0f501c1080dafdfbdfd57b39af31b"
+    },
+    {
+      "query_id": "q10_photography",
+      "query": "photography and scenic attractions",
+      "attraction_id": 3001,
+      "attraction_name": "East viewpoint",
+      "district_id": 75,
+      "categories": [
+        "Photography & Scenic Spots"
+      ],
+      "activities": [
+        "Photography",
+        "Scenic Viewpoint"
+      ],
+      "semantic_rank": 11,
+      "baseline_rank": 7,
+      "experimental_rank": 7,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "10b176ee3d530b1eb32e0fd8500fab92fec3666c11b0ab1fce994e5910dbcf3a"
+    },
+    {
+      "query_id": "q10_photography",
+      "query": "photography and scenic attractions",
+      "attraction_id": 3021,
+      "attraction_name": "Ella Rock Viewpoint - 02",
+      "district_id": 75,
+      "categories": [
+        "Adventure & Outdoor"
+      ],
+      "activities": [
+        "Hiking",
+        "Photography",
+        "Scenic Viewpoint"
+      ],
+      "semantic_rank": 12,
+      "baseline_rank": 26,
+      "experimental_rank": 26,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "71fff64df9cb281a2cb16eb1480757fa3d4471fce6e33528ea6dafe1b7291dee"
+    },
+    {
+      "query_id": "q10_photography",
+      "query": "photography and scenic attractions",
+      "attraction_id": 1991,
+      "attraction_name": "Panadura River Viewpoint",
+      "district_id": 82,
+      "categories": [
+        "Photography & Scenic Spots"
+      ],
+      "activities": [
+        "Photography",
+        "Scenic Viewpoint"
+      ],
+      "semantic_rank": 13,
+      "baseline_rank": 8,
+      "experimental_rank": 8,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "141d122a9296c235620cca5dfe978c40e3381a767ca8ab7fd69b8383e8379d7e"
+    },
+    {
+      "query_id": "q10_photography",
+      "query": "photography and scenic attractions",
+      "attraction_id": 5539,
+      "attraction_name": "Old bridge Viewpoint",
+      "district_id": 79,
+      "categories": [
+        "Photography & Scenic Spots"
+      ],
+      "activities": [
+        "Photography",
+        "Scenic Viewpoint"
+      ],
+      "semantic_rank": 14,
+      "baseline_rank": 9,
+      "experimental_rank": 9,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "cbfc7d618419ff3d248099b92ba5d0861be6c96964b00880d9371630fb8d4c35"
+    },
+    {
+      "query_id": "q10_photography",
+      "query": "photography and scenic attractions",
+      "attraction_id": 4478,
+      "attraction_name": "Mediriya Bunt",
+      "district_id": 75,
+      "categories": [
+        "Photography & Scenic Spots"
+      ],
+      "activities": [
+        "Photography"
+      ],
+      "semantic_rank": 15,
+      "baseline_rank": 10,
+      "experimental_rank": 10,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "76338b587e807391dc2d9f31769f6258785e7affb4a6fedb51238cda7e2788ea"
+    },
+    {
+      "query_id": "q10_photography",
+      "query": "photography and scenic attractions",
+      "attraction_id": 4103,
+      "attraction_name": "Sunset Point",
+      "district_id": 73,
+      "categories": [
+        "Photography & Scenic Spots"
+      ],
+      "activities": [
+        "Photography",
+        "Sunset Viewing"
+      ],
+      "semantic_rank": 16,
+      "baseline_rank": 11,
+      "experimental_rank": 11,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "595eb2856a4f1e1cdb3d5045360e1762f9141adeba6271dfc8563f6c8c1d62aa"
+    },
+    {
+      "query_id": "q10_photography",
+      "query": "photography and scenic attractions",
+      "attraction_id": 5540,
+      "attraction_name": "Estate Bungalow",
+      "district_id": 84,
+      "categories": [
+        "Photography & Scenic Spots"
+      ],
+      "activities": [
+        "Photography"
+      ],
+      "semantic_rank": 17,
+      "baseline_rank": 12,
+      "experimental_rank": 12,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "9fed9331287ed891990a1428b1af867b4f3c381c488bb0bd43c547f8f2ba404f"
+    },
+    {
+      "query_id": "q10_photography",
+      "query": "photography and scenic attractions",
+      "attraction_id": 4105,
+      "attraction_name": "Arugam Lake view",
+      "district_id": 73,
+      "categories": [
+        "Photography & Scenic Spots"
+      ],
+      "activities": [
+        "Photography"
+      ],
+      "semantic_rank": 18,
+      "baseline_rank": 13,
+      "experimental_rank": 13,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "fa9659b0dec56f345146d9d985eb83ff0752e6bcd3de1434d0b6395ad761b90d"
+    },
+    {
+      "query_id": "q10_photography",
+      "query": "photography and scenic attractions",
+      "attraction_id": 1409,
+      "attraction_name": "Sri Lanka",
+      "district_id": 80,
+      "categories": [
+        "Nature & Landscapes"
+      ],
+      "activities": [],
+      "semantic_rank": 19,
+      "baseline_rank": 27,
+      "experimental_rank": 27,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "cf27ca71cdb03cd6bf98d0fb576ac7c8213d0eae2993b8325a64940645b5e8c9"
+    },
+    {
+      "query_id": "q10_photography",
+      "query": "photography and scenic attractions",
+      "attraction_id": 2935,
+      "attraction_name": "Diyanagala Viewpoint",
+      "district_id": 75,
+      "categories": [
+        "Urban & City Attractions"
+      ],
+      "activities": [
+        "Photography",
+        "Scenic Viewpoint"
+      ],
+      "semantic_rank": 20,
+      "baseline_rank": 28,
+      "experimental_rank": 28,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "4bc58bd2a279ad009e3e9f721a2ff77992ca9dd56da8b77dce3da73327efc104"
+    },
+    {
+      "query_id": "q10_photography",
+      "query": "photography and scenic attractions",
+      "attraction_id": 5036,
+      "attraction_name": "\u0db8\u0dcf\u0dbd\u0dd2\u0d9c\u0dcf\u0dad\u0dd0\u0db1\u0dca\u0db1(maligathenna view point)",
+      "district_id": 84,
+      "categories": [
+        "Photography & Scenic Spots"
+      ],
+      "activities": [
+        "Photography"
+      ],
+      "semantic_rank": 21,
+      "baseline_rank": 14,
+      "experimental_rank": 14,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "fe24d643c632164d19b719563fbf3e5f57da57e453ef6c1f052124f7756600d1"
+    },
+    {
+      "query_id": "q10_photography",
+      "query": "photography and scenic attractions",
+      "attraction_id": 4580,
+      "attraction_name": "Badulla",
+      "district_id": 75,
+      "categories": [
+        "Nature & Landscapes"
+      ],
+      "activities": [],
+      "semantic_rank": 22,
+      "baseline_rank": 29,
+      "experimental_rank": 29,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "03aef2dac504335605c168892a6ade6621cacdb0bd926880768363a4a108cc61"
+    },
+    {
+      "query_id": "q10_photography",
+      "query": "photography and scenic attractions",
+      "attraction_id": 2545,
+      "attraction_name": "Balangoda Viewpoint",
+      "district_id": 95,
+      "categories": [
+        "Photography & Scenic Spots"
+      ],
+      "activities": [
+        "Photography",
+        "Scenic Viewpoint"
+      ],
+      "semantic_rank": 23,
+      "baseline_rank": 15,
+      "experimental_rank": 15,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "a6473d6e07e8f0bd822d5eeffe0c9cad301b42c851c1ccd22a0070b32a0b1daa"
+    },
+    {
+      "query_id": "q10_photography",
+      "query": "photography and scenic attractions",
+      "attraction_id": 37,
+      "attraction_name": "Kandy Viewpoint",
+      "district_id": 83,
+      "categories": [
+        "Urban & City Attractions"
+      ],
+      "activities": [
+        "Photography",
+        "Scenic Viewpoint"
+      ],
+      "semantic_rank": 24,
+      "baseline_rank": 30,
+      "experimental_rank": 30,
+      "experimental_eligibility_bucket": 1,
+      "blinded_order": "915644f75bfabc0b6c2dfc7e8f5a6de8674046fecf917e5e3ecdaceda970eeaa"
+    },
+    {
+      "query_id": "q10_photography",
+      "query": "photography and scenic attractions",
+      "attraction_id": 4972,
+      "attraction_name": "Nakkawita Bridge",
+      "district_id": 84,
+      "categories": [
+        "Culture & Heritage",
+        "History & Archaeology",
+        "Photography & Scenic Spots"
+      ],
+      "activities": [
+        "Historical Exploration",
+        "Sightseeing"
+      ],
+      "semantic_rank": 25,
+      "baseline_rank": 16,
+      "experimental_rank": 16,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "24d7c659e34af89b8c32c3d80d4270ec944e2f5b5e05fa9db0bfca1d7a142b83"
+    },
+    {
+      "query_id": "q10_photography",
+      "query": "photography and scenic attractions",
+      "attraction_id": 4443,
+      "attraction_name": "Badulla Fort",
+      "district_id": 75,
+      "categories": [
+        "Culture & Heritage",
+        "History & Archaeology",
+        "Photography & Scenic Spots"
+      ],
+      "activities": [
+        "Historical Exploration",
+        "Sightseeing"
+      ],
+      "semantic_rank": 26,
+      "baseline_rank": 17,
+      "experimental_rank": 17,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "f4f6e27cd0adc65fbefbe6e9a1f3ff7c155ade3435b6bafacf7ce62c6ccd5655"
+    },
+    {
+      "query_id": "q10_photography",
+      "query": "photography and scenic attractions",
+      "attraction_id": 6069,
+      "attraction_name": "Sun Rise Viewpoint",
+      "district_id": 75,
+      "categories": [
+        "Photography & Scenic Spots"
+      ],
+      "activities": [
+        "Photography",
+        "Scenic Viewpoint"
+      ],
+      "semantic_rank": 27,
+      "baseline_rank": 18,
+      "experimental_rank": 18,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "700109afa38a2b7456645c9aa58dbfdfe9599abc5e17e798415ba78d108df5a3"
+    },
+    {
+      "query_id": "q10_photography",
+      "query": "photography and scenic attractions",
+      "attraction_id": 4483,
+      "attraction_name": "Dayaraba Viewpoint 2",
+      "district_id": 75,
+      "categories": [
+        "Photography & Scenic Spots"
+      ],
+      "activities": [
+        "Photography",
+        "Scenic Viewpoint"
+      ],
+      "semantic_rank": 28,
+      "baseline_rank": 19,
+      "experimental_rank": 19,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "c8530ecce335141fcfc56d7382c288f0d3b5d695f09bb328daaae3de486bca6f"
+    },
+    {
+      "query_id": "q10_photography",
+      "query": "photography and scenic attractions",
+      "attraction_id": 3469,
+      "attraction_name": "Summer Hut",
+      "district_id": 77,
+      "categories": [
+        "Photography & Scenic Spots"
+      ],
+      "activities": [
+        "Photography"
+      ],
+      "semantic_rank": 29,
+      "baseline_rank": 20,
+      "experimental_rank": 20,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "65de153d9c51c6804f484cd27e958569c65029be3a85fc8c50478892732624a1"
+    },
+    {
+      "query_id": "q10_photography",
+      "query": "photography and scenic attractions",
+      "attraction_id": 5544,
+      "attraction_name": "Bridge view point",
+      "district_id": 79,
+      "categories": [
+        "Photography & Scenic Spots"
+      ],
+      "activities": [
+        "Photography"
+      ],
+      "semantic_rank": 30,
+      "baseline_rank": 21,
+      "experimental_rank": 21,
+      "experimental_eligibility_bucket": 0,
+      "blinded_order": "b7d6d464d1bf3eeb67aa5bd786e40fea8bc629aee5dd08eea51808df32c1712c"
+    }
+  ],
+  "postgresql_writes": false,
+  "qdrant_writes": false
+}

@@ -20,6 +20,13 @@ def test_disagreement_is_reported_without_automatic_adjudication():
     assert report[0]["requires_adjudication"] is True
 
 
+def test_identical_scores_are_not_listed_as_disagreements():
+    assert disagreement_report([
+        {"reviewer_id": "R1", "query_id": "q", "attraction_id": "1", "relevance_0_to_3": 2},
+        {"reviewer_id": "R2", "query_id": "q", "attraction_id": "1", "relevance_0_to_3": 2},
+    ]) == []
+
+
 def test_precision_recall_and_ndcg_use_judged_pool_denominator():
     values = ranking_metrics(["1", "2", "3"], {"1": 3, "2": 0, "3": 2}, 2)
     assert values["precision_at_2"] == 0.5

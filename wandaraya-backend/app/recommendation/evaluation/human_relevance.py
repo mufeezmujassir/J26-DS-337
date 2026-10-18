@@ -19,7 +19,7 @@ def validate_annotations(rows: Iterable[dict]) -> dict:
             duplicates.append({"row": index, "key": key})
             continue
         seen.add(key)
-        raw = str(row.get("relevance_0_to_3", "")).strip()
+        raw = str(row.get("relevance_0_to_3", row.get("reviewer_relevance_0_to_3", ""))).strip()
         if not raw:
             missing.append({"row": index, "key": key})
             continue
@@ -39,10 +39,12 @@ def disagreement_report(valid_rows: Iterable[dict]) -> list[dict]:
     grouped: dict[tuple[str, str], list[dict]] = defaultdict(list)
     for row in valid_rows:
         grouped[(str(row["query_id"]), str(row["attraction_id"]))].append(row)
-    return [
-        {"query_id": query_id, "attraction_id": attraction_id, "reviewer_scores": {str(row["reviewer_id"]): row["relevance_0_to_3"] for row in rows}, "requires_adjudication": len({row["relevance_0_to_3"] for row in rows}) > 1}
-        for (query_id, attraction_id), rows in sorted(grouped.items()) if len(rows) >= 2
-    ]
+    findings = []
+    for (query_id, attraction_id), rows in sorted(grouped.items()):
+        if len(rows) < 2 or len({row["relevance_0_to_3"] for row in rows}) <= 1:
+            continue
+        findings.append({"query_id": query_id, "attraction_id": attraction_id, "reviewer_scores": {str(row["reviewer_id"]): row["relevance_0_to_3"] for row in rows}, "requires_adjudication": True})
+    return findings
 
 
 def _dcg(grades: list[int], k: int) -> float:
