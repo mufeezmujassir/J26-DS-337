@@ -1,0 +1,42 @@
+{
+  "artifact_version": "2106ff7ad65bebc5",
+  "district_id": 92,
+  "target": "rainfall_mm",
+  "model_name": "monthly_climatology",
+  "artifact_path": "data/weather/artifacts/candidates/district_92/rainfall_mm/monthly_climatology/2106ff7ad65bebc5/climatology.json",
+  "artifact_sha256": "91d6a5749a7c305d5b36b83568871f858b467dceec14472c95febe701fb80c4f",
+  "configuration": {
+    "monthly_means": {
+      "1": 136.50000114440903,
+      "2": 57.960000379383644,
+      "3": 69.9600009784103,
+      "4": 162.339999523759,
+      "5": 251.7999999925494,
+      "6": 99.22000057995308,
+      "7": 189.0200012609364,
+      "8": 137.83999953567977,
+      "9": 138.8799999266863,
+      "10": 305.5999991387128,
+      "11": 323.02499890886253,
+      "12": 177.2500020023435
+    }
+  },
+  "provenance": {
+    "training_start": "2021-01-01",
+    "training_cutoff": "2025-10-01",
+    "calendar_months": 58,
+    "observed_months": 58,
+    "missing_source_months": 0,
+    "imputed_training_months": 0,
+    "training_policy": {
+      "name": "strict_complete_case",
+      "min_coverage": null,
+      "imputed_months": [],
+      "imputation_methods": {}
+    },
+    "data_fingerprint": "a514a3d945523cd902a2313f13c0bb6382b5b06d39d3e5ec1642105d7a119857"
+  },
+  "registry_evidence_fingerprint": "0972b91a7c223a618f5da8bdd5631e47083c9671b8bab4569a32ad45135ba5f1",
+  "created_at_utc": "2026-10-12T01:23:05.290171+00:00",
+  "production_approved": false
+}

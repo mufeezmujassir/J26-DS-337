@@ -1,0 +1,668 @@
+{
+  "district_id": 74,
+  "target": "temperature_max_c",
+  "cutoff": null,
+  "observation_count": 57,
+  "first_observation_month": "2021-01-01",
+  "last_observation_month": "2025-10-01",
+  "horizon_months": 3,
+  "min_train_months": 36,
+  "step_months": 3,
+  "training_policy": {
+    "name": "missing_aware_training_only",
+    "min_coverage": 0.95,
+    "test_actuals_imputed": false
+  },
+  "results": {
+    "monthly_climatology": {
+      "model_name": "monthly_climatology",
+      "target": "temperature_max_c",
+      "observation_count": 57,
+      "fold_count": 4,
+      "prediction_count": 12,
+      "metrics": {
+        "mae": 0.6226,
+        "rmse": 0.7294,
+        "bias": -0.1212,
+        "improvement_over_best_baseline_percent": 0.0
+      },
+      "predictions": [
+        {
+          "origin": "2024-06-01",
+          "target_month": "2024-07-01",
+          "horizon": 1,
+          "actual": 33.9,
+          "predicted": 33.333333333333336,
+          "model_name": "monthly_climatology"
+        },
+        {
+          "origin": "2024-06-01",
+          "target_month": "2024-08-01",
+          "horizon": 2,
+          "actual": 33.2,
+          "predicted": 33.766666666666666,
+          "model_name": "monthly_climatology"
+        },
+        {
+          "origin": "2024-06-01",
+          "target_month": "2024-09-01",
+          "horizon": 3,
+          "actual": 34.5,
+          "predicted": 33.06666666666667,
+          "model_name": "monthly_climatology"
+        },
+        {
+          "origin": "2024-09-01",
+          "target_month": "2024-10-01",
+          "horizon": 1,
+          "actual": 32.7,
+          "predicted": 32.1,
+          "model_name": "monthly_climatology"
+        },
+        {
+          "origin": "2024-09-01",
+          "target_month": "2024-11-01",
+          "horizon": 2,
+          "actual": 30.1,
+          "predicted": 30.766666666666666,
+          "model_name": "monthly_climatology"
+        },
+        {
+          "origin": "2024-09-01",
+          "target_month": "2024-12-01",
+          "horizon": 3,
+          "actual": 31.1,
+          "predicted": 29.900000000000002,
+          "model_name": "monthly_climatology"
+        },
+        {
+          "origin": "2024-12-01",
+          "target_month": "2025-01-01",
+          "horizon": 1,
+          "actual": 29.1,
+          "predicted": 29.975,
+          "model_name": "monthly_climatology"
+        },
+        {
+          "origin": "2024-12-01",
+          "target_month": "2025-02-01",
+          "horizon": 2,
+          "actual": 32.0,
+          "predicted": 31.475,
+          "model_name": "monthly_climatology"
+        },
+        {
+          "origin": "2024-12-01",
+          "target_month": "2025-03-01",
+          "horizon": 3,
+          "actual": 33.1,
+          "predicted": 33.65,
+          "model_name": "monthly_climatology"
+        },
+        {
+          "origin": "2025-03-01",
+          "target_month": "2025-04-01",
+          "horizon": 1,
+          "actual": 34.2,
+          "predicted": 34.475,
+          "model_name": "monthly_climatology"
+        },
+        {
+          "origin": "2025-03-01",
+          "target_month": "2025-05-01",
+          "horizon": 2,
+          "actual": 33.3,
+          "predicted": 33.1625,
+          "model_name": "monthly_climatology"
+        },
+        {
+          "origin": "2025-03-01",
+          "target_month": "2025-06-01",
+          "horizon": 3,
+          "actual": 33.1,
+          "predicted": 33.175,
+          "model_name": "monthly_climatology"
+        }
+      ],
+      "skipped_folds": [
+        {
+          "origin": "2023-12-01",
+          "reason": "insufficient_coverage",
+          "training_coverage_ratio": 0.9444444444444444,
+          "imputed_months": [],
+          "imputation_methods": {}
+        },
+        {
+          "origin": "2024-03-01",
+          "reason": "insufficient_coverage",
+          "training_coverage_ratio": 0.9487179487179487,
+          "imputed_months": [],
+          "imputation_methods": {}
+        },
+        {
+          "origin": "2025-06-01",
+          "reason": "missing_test_actual",
+          "missing_test_months": [
+            "2025-09-01"
+          ]
+        }
+      ],
+      "fold_metadata": [
+        {
+          "origin": "2024-06-01",
+          "training_coverage_ratio": 0.9523809523809523,
+          "imputed_months": [
+            "2021-12-01",
+            "2022-05-01"
+          ],
+          "imputation_methods": {
+            "2021-12-01": "training_only_adjacent_linear_interpolation",
+            "2022-05-01": "training_only_adjacent_linear_interpolation"
+          },
+          "imputation_policy": "training_only_missing_aware"
+        },
+        {
+          "origin": "2024-09-01",
+          "training_coverage_ratio": 0.9555555555555556,
+          "imputed_months": [
+            "2021-12-01",
+            "2022-05-01"
+          ],
+          "imputation_methods": {
+            "2021-12-01": "training_only_adjacent_linear_interpolation",
+            "2022-05-01": "training_only_adjacent_linear_interpolation"
+          },
+          "imputation_policy": "training_only_missing_aware"
+        },
+        {
+          "origin": "2024-12-01",
+          "training_coverage_ratio": 0.9583333333333334,
+          "imputed_months": [
+            "2021-12-01",
+            "2022-05-01"
+          ],
+          "imputation_methods": {
+            "2021-12-01": "training_only_adjacent_linear_interpolation",
+            "2022-05-01": "training_only_adjacent_linear_interpolation"
+          },
+          "imputation_policy": "training_only_missing_aware"
+        },
+        {
+          "origin": "2025-03-01",
+          "training_coverage_ratio": 0.9607843137254902,
+          "imputed_months": [
+            "2021-12-01",
+            "2022-05-01"
+          ],
+          "imputation_methods": {
+            "2021-12-01": "training_only_adjacent_linear_interpolation",
+            "2022-05-01": "training_only_adjacent_linear_interpolation"
+          },
+          "imputation_policy": "training_only_missing_aware"
+        }
+      ]
+    },
+    "seasonal_naive": {
+      "model_name": "seasonal_naive",
+      "target": "temperature_max_c",
+      "observation_count": 57,
+      "fold_count": 4,
+      "prediction_count": 12,
+      "metrics": {
+        "mae": 1.0333,
+        "rmse": 1.2761,
+        "bias": 0.5833,
+        "improvement_over_best_baseline_percent": -65.97
+      },
+      "predictions": [
+        {
+          "origin": "2024-06-01",
+          "target_month": "2024-07-01",
+          "horizon": 1,
+          "actual": 33.9,
+          "predicted": 33.9,
+          "model_name": "seasonal_naive"
+        },
+        {
+          "origin": "2024-06-01",
+          "target_month": "2024-08-01",
+          "horizon": 2,
+          "actual": 33.2,
+          "predicted": 35.8,
+          "model_name": "seasonal_naive"
+        },
+        {
+          "origin": "2024-06-01",
+          "target_month": "2024-09-01",
+          "horizon": 3,
+          "actual": 34.5,
+          "predicted": 33.3,
+          "model_name": "seasonal_naive"
+        },
+        {
+          "origin": "2024-09-01",
+          "target_month": "2024-10-01",
+          "horizon": 1,
+          "actual": 32.7,
+          "predicted": 32.4,
+          "model_name": "seasonal_naive"
+        },
+        {
+          "origin": "2024-09-01",
+          "target_month": "2024-11-01",
+          "horizon": 2,
+          "actual": 30.1,
+          "predicted": 31.3,
+          "model_name": "seasonal_naive"
+        },
+        {
+          "origin": "2024-09-01",
+          "target_month": "2024-12-01",
+          "horizon": 3,
+          "actual": 31.1,
+          "predicted": 30.1,
+          "model_name": "seasonal_naive"
+        },
+        {
+          "origin": "2024-12-01",
+          "target_month": "2025-01-01",
+          "horizon": 1,
+          "actual": 29.1,
+          "predicted": 30.4,
+          "model_name": "seasonal_naive"
+        },
+        {
+          "origin": "2024-12-01",
+          "target_month": "2025-02-01",
+          "horizon": 2,
+          "actual": 32.0,
+          "predicted": 32.7,
+          "model_name": "seasonal_naive"
+        },
+        {
+          "origin": "2024-12-01",
+          "target_month": "2025-03-01",
+          "horizon": 3,
+          "actual": 33.1,
+          "predicted": 35.0,
+          "model_name": "seasonal_naive"
+        },
+        {
+          "origin": "2025-03-01",
+          "target_month": "2025-04-01",
+          "horizon": 1,
+          "actual": 34.2,
+          "predicted": 35.9,
+          "model_name": "seasonal_naive"
+        },
+        {
+          "origin": "2025-03-01",
+          "target_month": "2025-05-01",
+          "horizon": 2,
+          "actual": 33.3,
+          "predicted": 33.6,
+          "model_name": "seasonal_naive"
+        },
+        {
+          "origin": "2025-03-01",
+          "target_month": "2025-06-01",
+          "horizon": 3,
+          "actual": 33.1,
+          "predicted": 32.9,
+          "model_name": "seasonal_naive"
+        }
+      ],
+      "skipped_folds": [
+        {
+          "origin": "2023-12-01",
+          "reason": "insufficient_coverage",
+          "training_coverage_ratio": 0.9444444444444444,
+          "imputed_months": [],
+          "imputation_methods": {}
+        },
+        {
+          "origin": "2024-03-01",
+          "reason": "insufficient_coverage",
+          "training_coverage_ratio": 0.9487179487179487,
+          "imputed_months": [],
+          "imputation_methods": {}
+        },
+        {
+          "origin": "2025-06-01",
+          "reason": "missing_test_actual",
+          "missing_test_months": [
+            "2025-09-01"
+          ]
+        }
+      ],
+      "fold_metadata": [
+        {
+          "origin": "2024-06-01",
+          "training_coverage_ratio": 0.9523809523809523,
+          "imputed_months": [
+            "2021-12-01",
+            "2022-05-01"
+          ],
+          "imputation_methods": {
+            "2021-12-01": "training_only_adjacent_linear_interpolation",
+            "2022-05-01": "training_only_adjacent_linear_interpolation"
+          },
+          "imputation_policy": "training_only_missing_aware"
+        },
+        {
+          "origin": "2024-09-01",
+          "training_coverage_ratio": 0.9555555555555556,
+          "imputed_months": [
+            "2021-12-01",
+            "2022-05-01"
+          ],
+          "imputation_methods": {
+            "2021-12-01": "training_only_adjacent_linear_interpolation",
+            "2022-05-01": "training_only_adjacent_linear_interpolation"
+          },
+          "imputation_policy": "training_only_missing_aware"
+        },
+        {
+          "origin": "2024-12-01",
+          "training_coverage_ratio": 0.9583333333333334,
+          "imputed_months": [
+            "2021-12-01",
+            "2022-05-01"
+          ],
+          "imputation_methods": {
+            "2021-12-01": "training_only_adjacent_linear_interpolation",
+            "2022-05-01": "training_only_adjacent_linear_interpolation"
+          },
+          "imputation_policy": "training_only_missing_aware"
+        },
+        {
+          "origin": "2025-03-01",
+          "training_coverage_ratio": 0.9607843137254902,
+          "imputed_months": [
+            "2021-12-01",
+            "2022-05-01"
+          ],
+          "imputation_methods": {
+            "2021-12-01": "training_only_adjacent_linear_interpolation",
+            "2022-05-01": "training_only_adjacent_linear_interpolation"
+          },
+          "imputation_policy": "training_only_missing_aware"
+        }
+      ]
+    },
+    "prophet": {
+      "model_name": "prophet",
+      "target": "temperature_max_c",
+      "observation_count": 57,
+      "fold_count": 4,
+      "prediction_count": 12,
+      "metrics": {
+        "mae": 0.7488,
+        "rmse": 0.9891,
+        "bias": 0.6372,
+        "improvement_over_best_baseline_percent": -20.27
+      },
+      "predictions": [
+        {
+          "origin": "2024-06-01",
+          "target_month": "2024-07-01",
+          "horizon": 1,
+          "actual": 33.9,
+          "predicted": 34.51748473174838,
+          "model_name": "prophet"
+        },
+        {
+          "origin": "2024-06-01",
+          "target_month": "2024-08-01",
+          "horizon": 2,
+          "actual": 33.2,
+          "predicted": 34.95417192674488,
+          "model_name": "prophet"
+        },
+        {
+          "origin": "2024-06-01",
+          "target_month": "2024-09-01",
+          "horizon": 3,
+          "actual": 34.5,
+          "predicted": 34.27050229956128,
+          "model_name": "prophet"
+        },
+        {
+          "origin": "2024-09-01",
+          "target_month": "2024-10-01",
+          "horizon": 1,
+          "actual": 32.7,
+          "predicted": 33.00192261925429,
+          "model_name": "prophet"
+        },
+        {
+          "origin": "2024-09-01",
+          "target_month": "2024-11-01",
+          "horizon": 2,
+          "actual": 30.1,
+          "predicted": 31.82985469801644,
+          "model_name": "prophet"
+        },
+        {
+          "origin": "2024-09-01",
+          "target_month": "2024-12-01",
+          "horizon": 3,
+          "actual": 31.1,
+          "predicted": 30.82933385776909,
+          "model_name": "prophet"
+        },
+        {
+          "origin": "2024-12-01",
+          "target_month": "2025-01-01",
+          "horizon": 1,
+          "actual": 29.1,
+          "predicted": 30.786747092000272,
+          "model_name": "prophet"
+        },
+        {
+          "origin": "2024-12-01",
+          "target_month": "2025-02-01",
+          "horizon": 2,
+          "actual": 32.0,
+          "predicted": 32.560720960770205,
+          "model_name": "prophet"
+        },
+        {
+          "origin": "2024-12-01",
+          "target_month": "2025-03-01",
+          "horizon": 3,
+          "actual": 33.1,
+          "predicted": 34.453312081013536,
+          "model_name": "prophet"
+        },
+        {
+          "origin": "2025-03-01",
+          "target_month": "2025-04-01",
+          "horizon": 1,
+          "actual": 34.2,
+          "predicted": 34.30727782708956,
+          "model_name": "prophet"
+        },
+        {
+          "origin": "2025-03-01",
+          "target_month": "2025-05-01",
+          "horizon": 2,
+          "actual": 33.3,
+          "predicted": 33.50459375873028,
+          "model_name": "prophet"
+        },
+        {
+          "origin": "2025-03-01",
+          "target_month": "2025-06-01",
+          "horizon": 3,
+          "actual": 33.1,
+          "predicted": 32.930506098488124,
+          "model_name": "prophet"
+        }
+      ],
+      "skipped_folds": [
+        {
+          "origin": "2023-12-01",
+          "reason": "insufficient_coverage",
+          "training_coverage_ratio": 0.9444444444444444,
+          "imputed_months": [],
+          "imputation_methods": {}
+        },
+        {
+          "origin": "2024-03-01",
+          "reason": "insufficient_coverage",
+          "training_coverage_ratio": 0.9487179487179487,
+          "imputed_months": [],
+          "imputation_methods": {}
+        },
+        {
+          "origin": "2025-06-01",
+          "reason": "missing_test_actual",
+          "missing_test_months": [
+            "2025-09-01"
+          ]
+        }
+      ],
+      "fold_metadata": [
+        {
+          "origin": "2024-06-01",
+          "training_coverage_ratio": 0.9523809523809523,
+          "imputed_months": [
+            "2021-12-01",
+            "2022-05-01"
+          ],
+          "imputation_methods": {
+            "2021-12-01": "training_only_adjacent_linear_interpolation",
+            "2022-05-01": "training_only_adjacent_linear_interpolation"
+          },
+          "imputation_policy": "training_only_missing_aware"
+        },
+        {
+          "origin": "2024-09-01",
+          "training_coverage_ratio": 0.9555555555555556,
+          "imputed_months": [
+            "2021-12-01",
+            "2022-05-01"
+          ],
+          "imputation_methods": {
+            "2021-12-01": "training_only_adjacent_linear_interpolation",
+            "2022-05-01": "training_only_adjacent_linear_interpolation"
+          },
+          "imputation_policy": "training_only_missing_aware"
+        },
+        {
+          "origin": "2024-12-01",
+          "training_coverage_ratio": 0.9583333333333334,
+          "imputed_months": [
+            "2021-12-01",
+            "2022-05-01"
+          ],
+          "imputation_methods": {
+            "2021-12-01": "training_only_adjacent_linear_interpolation",
+            "2022-05-01": "training_only_adjacent_linear_interpolation"
+          },
+          "imputation_policy": "training_only_missing_aware"
+        },
+        {
+          "origin": "2025-03-01",
+          "training_coverage_ratio": 0.9607843137254902,
+          "imputed_months": [
+            "2021-12-01",
+            "2022-05-01"
+          ],
+          "imputation_methods": {
+            "2021-12-01": "training_only_adjacent_linear_interpolation",
+            "2022-05-01": "training_only_adjacent_linear_interpolation"
+          },
+          "imputation_policy": "training_only_missing_aware"
+        }
+      ]
+    }
+  },
+  "fair_comparison": {
+    "status": "completed",
+    "common_prediction_count": 12,
+    "comparison": {
+      "monthly_climatology": {
+        "mae": 0.6226,
+        "rmse": 0.7294,
+        "bias": -0.1212,
+        "prediction_count": 12,
+        "metrics_by_horizon": {
+          "1": {
+            "mae": 0.5792,
+            "rmse": 0.6169,
+            "bias": -0.0042
+          },
+          "2": {
+            "mae": 0.474,
+            "rmse": 0.5148,
+            "bias": 0.1427
+          },
+          "3": {
+            "mae": 0.8146,
+            "rmse": 0.975,
+            "bias": -0.5021
+          }
+        },
+        "improvement_over_monthly_climatology_percent": 0.0,
+        "improvement_over_seasonal_naive_percent": 39.75
+      },
+      "seasonal_naive": {
+        "mae": 1.0333,
+        "rmse": 1.2761,
+        "bias": 0.5833,
+        "prediction_count": 12,
+        "metrics_by_horizon": {
+          "1": {
+            "mae": 0.825,
+            "rmse": 1.0805,
+            "bias": 0.675
+          },
+          "2": {
+            "mae": 1.2,
+            "rmse": 1.4816,
+            "bias": 1.2
+          },
+          "3": {
+            "mae": 1.075,
+            "rmse": 1.2339,
+            "bias": -0.125
+          }
+        },
+        "improvement_over_monthly_climatology_percent": -65.97,
+        "improvement_over_seasonal_naive_percent": 0.0
+      },
+      "prophet": {
+        "mae": 0.7488,
+        "rmse": 0.9891,
+        "bias": 0.6372,
+        "prediction_count": 12,
+        "metrics_by_horizon": {
+          "1": {
+            "mae": 0.6784,
+            "rmse": 0.9123,
+            "bias": 0.6784
+          },
+          "2": {
+            "mae": 1.0623,
+            "rmse": 1.2675,
+            "bias": 1.0623
+          },
+          "3": {
+            "mae": 0.5057,
+            "rmse": 0.7046,
+            "bias": 0.1709
+          }
+        },
+        "improvement_over_monthly_climatology_percent": -20.27,
+        "improvement_over_seasonal_naive_percent": 27.53
+      }
+    }
+  },
+  "batch_prediction_consistency": {
+    "status": "no_prior_prophet_report"
+  },
+  "selected_model": "pending_evaluation",
+  "production_approved": false
+}

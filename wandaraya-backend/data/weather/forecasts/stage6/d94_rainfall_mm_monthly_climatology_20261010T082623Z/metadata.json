@@ -1,0 +1,31 @@
+{
+  "run_id": "d94_rainfall_mm_monthly_climatology_20261010T082623Z",
+  "district_id": 94,
+  "target": "rainfall_mm",
+  "selected_model": "monthly_climatology",
+  "training_start": "2021-01-01",
+  "training_cutoff": "2025-09-01",
+  "latest_calendar_month": "2025-10-01",
+  "latest_observed_month": "2025-09-01",
+  "latest_month_missing": true,
+  "training_observations": 55,
+  "forecast_horizon_months": 3,
+  "production_approved": false,
+  "parameters": {
+    "monthly_means": {
+      "1": 100.02000007629402,
+      "2": 44.139999967813495,
+      "3": 51.750000414252284,
+      "4": 123.9499994136393,
+      "5": 162.88750048819924,
+      "6": 40.82999995872381,
+      "7": 4.2874998897314045,
+      "8": 65.0600013457238,
+      "9": 35.38000026121726,
+      "10": 251.30000017862776,
+      "11": 511.1500007947906,
+      "12": 153.76249891798943
+    }
+  },
+  "created_at_utc": "2026-10-10T08:26:23.447396+00:00"
+}

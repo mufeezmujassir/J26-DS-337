@@ -1,0 +1,4 @@
+district_id,target,model,ds,yhat,yhat_lower,yhat_upper,raw_yhat,training_cutoff,production_approved,run_id
+74,rainfall_mm,seasonal_naive,2025-11-01,467.499999172986,,,467.499999172986,2025-10-01,False,d74_rainfall_mm_seasonal_naive_20261010T082615Z
+74,rainfall_mm,seasonal_naive,2025-12-01,295.400001347065,,,295.400001347065,2025-10-01,False,d74_rainfall_mm_seasonal_naive_20261010T082615Z
+74,rainfall_mm,seasonal_naive,2026-01-01,260.599999561906,,,260.599999561906,2025-10-01,False,d74_rainfall_mm_seasonal_naive_20261010T082615Z

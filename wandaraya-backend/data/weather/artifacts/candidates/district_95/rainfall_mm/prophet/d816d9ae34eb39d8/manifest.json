@@ -1,0 +1,41 @@
+{
+  "artifact_version": "d816d9ae34eb39d8",
+  "district_id": 95,
+  "target": "rainfall_mm",
+  "model_name": "prophet",
+  "artifact_path": "data/weather/artifacts/candidates/district_95/rainfall_mm/prophet/d816d9ae34eb39d8/model.json",
+  "artifact_sha256": "9e043bd5047b85974310dfd05de29217ec796215f4625e187a716a27a0ab260f",
+  "configuration": {
+    "growth": "linear",
+    "yearly_seasonality": false,
+    "weekly_seasonality": false,
+    "daily_seasonality": false,
+    "changepoint_prior_scale": 0.05,
+    "seasonality_prior_scale": 1.0,
+    "interval_width": 0.8,
+    "extra_seasonality": {
+      "name": "yearly_monthly",
+      "period": 365.25,
+      "fourier_order": 3,
+      "prior_scale": 1.0
+    }
+  },
+  "provenance": {
+    "training_start": "2021-01-01",
+    "training_cutoff": "2025-10-01",
+    "calendar_months": 58,
+    "observed_months": 58,
+    "missing_source_months": 0,
+    "imputed_training_months": 0,
+    "training_policy": {
+      "name": "strict_complete_case",
+      "min_coverage": null,
+      "imputed_months": [],
+      "imputation_methods": {}
+    },
+    "data_fingerprint": "f68dcda358d439502e247cdac76d2dec2e71f42c56b081bd475a093bde876143"
+  },
+  "registry_evidence_fingerprint": "aeef123d149470f8cd663a59f6b1c3d6d7fa826949b326dd7e8dba0f75418c79",
+  "created_at_utc": "2026-10-12T01:23:09.713692+00:00",
+  "production_approved": false
+}

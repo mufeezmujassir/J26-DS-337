@@ -1,0 +1,20 @@
+{
+  "run_id": "d80_temperature_min_c_prophet_20261010T082619Z",
+  "district_id": 80,
+  "target": "temperature_min_c",
+  "selected_model": "prophet",
+  "training_start": "2021-01-01",
+  "training_cutoff": "2025-10-01",
+  "latest_calendar_month": "2025-10-01",
+  "latest_observed_month": "2025-10-01",
+  "latest_month_missing": false,
+  "training_observations": 57,
+  "forecast_horizon_months": 3,
+  "production_approved": false,
+  "parameters": {
+    "fourier_order": 3,
+    "seasonality_prior_scale": 1.0,
+    "changepoint_prior_scale": 0.05
+  },
+  "created_at_utc": "2026-10-10T08:26:19.579861+00:00"
+}

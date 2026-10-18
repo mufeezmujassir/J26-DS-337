@@ -1,0 +1,178 @@
+{
+  "district_id": 73,
+  "target": "rainfall_mm",
+  "cutoff": null,
+  "observation_count": 45,
+  "first_observation_month": "2021-01-01",
+  "last_observation_month": "2025-06-01",
+  "horizon_months": 3,
+  "min_train_months": 36,
+  "step_months": 3,
+  "training_policy": {
+    "name": "strict_complete_case",
+    "min_coverage": null,
+    "test_actuals_imputed": false
+  },
+  "results": {
+    "monthly_climatology": {
+      "model_name": "monthly_climatology",
+      "target": "rainfall_mm",
+      "observation_count": 45,
+      "fold_count": 0,
+      "prediction_count": 0,
+      "metrics": {},
+      "predictions": [],
+      "skipped_folds": [
+        {
+          "origin": "2023-12-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2024-03-01",
+          "reason": "missing_test_actual",
+          "missing_test_months": [
+            "2024-05-01",
+            "2024-06-01"
+          ]
+        },
+        {
+          "origin": "2024-06-01",
+          "reason": "missing_test_actual",
+          "missing_test_months": [
+            "2024-07-01",
+            "2024-08-01",
+            "2024-09-01"
+          ]
+        },
+        {
+          "origin": "2024-09-01",
+          "reason": "missing_test_actual",
+          "missing_test_months": [
+            "2024-10-01",
+            "2024-11-01",
+            "2024-12-01"
+          ]
+        },
+        {
+          "origin": "2024-12-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-03-01",
+          "reason": "incomplete_training_history"
+        }
+      ],
+      "fold_metadata": []
+    },
+    "seasonal_naive": {
+      "model_name": "seasonal_naive",
+      "target": "rainfall_mm",
+      "observation_count": 45,
+      "fold_count": 0,
+      "prediction_count": 0,
+      "metrics": {},
+      "predictions": [],
+      "skipped_folds": [
+        {
+          "origin": "2023-12-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2024-03-01",
+          "reason": "missing_test_actual",
+          "missing_test_months": [
+            "2024-05-01",
+            "2024-06-01"
+          ]
+        },
+        {
+          "origin": "2024-06-01",
+          "reason": "missing_test_actual",
+          "missing_test_months": [
+            "2024-07-01",
+            "2024-08-01",
+            "2024-09-01"
+          ]
+        },
+        {
+          "origin": "2024-09-01",
+          "reason": "missing_test_actual",
+          "missing_test_months": [
+            "2024-10-01",
+            "2024-11-01",
+            "2024-12-01"
+          ]
+        },
+        {
+          "origin": "2024-12-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-03-01",
+          "reason": "incomplete_training_history"
+        }
+      ],
+      "fold_metadata": []
+    },
+    "prophet": {
+      "model_name": "prophet",
+      "target": "rainfall_mm",
+      "observation_count": 45,
+      "fold_count": 0,
+      "prediction_count": 0,
+      "metrics": {},
+      "predictions": [],
+      "skipped_folds": [
+        {
+          "origin": "2023-12-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2024-03-01",
+          "reason": "missing_test_actual",
+          "missing_test_months": [
+            "2024-05-01",
+            "2024-06-01"
+          ]
+        },
+        {
+          "origin": "2024-06-01",
+          "reason": "missing_test_actual",
+          "missing_test_months": [
+            "2024-07-01",
+            "2024-08-01",
+            "2024-09-01"
+          ]
+        },
+        {
+          "origin": "2024-09-01",
+          "reason": "missing_test_actual",
+          "missing_test_months": [
+            "2024-10-01",
+            "2024-11-01",
+            "2024-12-01"
+          ]
+        },
+        {
+          "origin": "2024-12-01",
+          "reason": "incomplete_training_history"
+        },
+        {
+          "origin": "2025-03-01",
+          "reason": "incomplete_training_history"
+        }
+      ],
+      "fold_metadata": []
+    }
+  },
+  "fair_comparison": {
+    "status": "insufficient_common_predictions",
+    "common_prediction_count": 0,
+    "comparison": {}
+  },
+  "batch_prediction_consistency": {
+    "status": "no_prior_prophet_report"
+  },
+  "selected_model": "pending_evaluation",
+  "production_approved": false
+}

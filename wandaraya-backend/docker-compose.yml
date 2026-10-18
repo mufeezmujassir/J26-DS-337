@@ -108,8 +108,15 @@ services:
 
     environment:
       DATABASE_URL: postgresql+psycopg://postgres:root@postgres:5432/wandaraya
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg://airflow:airflow@airflow-metadata:5432/airflow
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: "true"
+      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+      PYTHONPATH: /opt/airflow/project
+      WANDARAYA_PROJECT_ROOT: /opt/airflow/project
 
     volumes:
+      - .:/opt/airflow/project
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
       - ./plugins:/opt/airflow/plugins
@@ -121,8 +128,26 @@ services:
         condition: service_started
       fastapi:
         condition: service_started
+      airflow-metadata:
+        condition: service_healthy
 
     command: standalone
+
+  airflow-metadata:
+    image: postgres:16
+    container_name: wandaraya-airflow-metadata
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: airflow
+    volumes:
+      - airflow_metadata_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U airflow -d airflow"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
   minio:
 
@@ -154,3 +179,5 @@ volumes:
   qdrant_data:
 
   minio_data:
+
+  airflow_metadata_data:

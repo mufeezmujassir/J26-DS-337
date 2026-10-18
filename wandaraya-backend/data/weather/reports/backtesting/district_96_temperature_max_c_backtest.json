@@ -1,0 +1,211 @@
+{
+  "district_id": 96,
+  "target": "temperature_max_c",
+  "cutoff": null,
+  "observation_count": 57,
+  "first_observation_month": "2021-01-01",
+  "last_observation_month": "2025-10-01",
+  "horizon_months": 3,
+  "min_train_months": 36,
+  "step_months": 3,
+  "training_policy": {
+    "name": "missing_aware_training_only",
+    "min_coverage": 0.95,
+    "test_actuals_imputed": false
+  },
+  "results": {
+    "monthly_climatology": {
+      "model_name": "monthly_climatology",
+      "target": "temperature_max_c",
+      "observation_count": 57,
+      "fold_count": 0,
+      "prediction_count": 0,
+      "metrics": {},
+      "predictions": [],
+      "skipped_folds": [
+        {
+          "origin": "2023-12-01",
+          "reason": "insufficient_coverage",
+          "training_coverage_ratio": 0.9444444444444444,
+          "imputed_months": [],
+          "imputation_methods": {}
+        },
+        {
+          "origin": "2024-03-01",
+          "reason": "insufficient_coverage",
+          "training_coverage_ratio": 0.9487179487179487,
+          "imputed_months": [],
+          "imputation_methods": {}
+        },
+        {
+          "origin": "2024-06-01",
+          "reason": "missing_test_actual",
+          "missing_test_months": [
+            "2024-09-01"
+          ]
+        },
+        {
+          "origin": "2024-09-01",
+          "reason": "insufficient_coverage",
+          "training_coverage_ratio": 0.9333333333333333,
+          "imputed_months": [],
+          "imputation_methods": {}
+        },
+        {
+          "origin": "2024-12-01",
+          "reason": "insufficient_coverage",
+          "training_coverage_ratio": 0.9375,
+          "imputed_months": [],
+          "imputation_methods": {}
+        },
+        {
+          "origin": "2025-03-01",
+          "reason": "insufficient_coverage",
+          "training_coverage_ratio": 0.9411764705882353,
+          "imputed_months": [],
+          "imputation_methods": {}
+        },
+        {
+          "origin": "2025-06-01",
+          "reason": "insufficient_coverage",
+          "training_coverage_ratio": 0.9444444444444444,
+          "imputed_months": [],
+          "imputation_methods": {}
+        }
+      ],
+      "fold_metadata": []
+    },
+    "seasonal_naive": {
+      "model_name": "seasonal_naive",
+      "target": "temperature_max_c",
+      "observation_count": 57,
+      "fold_count": 0,
+      "prediction_count": 0,
+      "metrics": {},
+      "predictions": [],
+      "skipped_folds": [
+        {
+          "origin": "2023-12-01",
+          "reason": "insufficient_coverage",
+          "training_coverage_ratio": 0.9444444444444444,
+          "imputed_months": [],
+          "imputation_methods": {}
+        },
+        {
+          "origin": "2024-03-01",
+          "reason": "insufficient_coverage",
+          "training_coverage_ratio": 0.9487179487179487,
+          "imputed_months": [],
+          "imputation_methods": {}
+        },
+        {
+          "origin": "2024-06-01",
+          "reason": "missing_test_actual",
+          "missing_test_months": [
+            "2024-09-01"
+          ]
+        },
+        {
+          "origin": "2024-09-01",
+          "reason": "insufficient_coverage",
+          "training_coverage_ratio": 0.9333333333333333,
+          "imputed_months": [],
+          "imputation_methods": {}
+        },
+        {
+          "origin": "2024-12-01",
+          "reason": "insufficient_coverage",
+          "training_coverage_ratio": 0.9375,
+          "imputed_months": [],
+          "imputation_methods": {}
+        },
+        {
+          "origin": "2025-03-01",
+          "reason": "insufficient_coverage",
+          "training_coverage_ratio": 0.9411764705882353,
+          "imputed_months": [],
+          "imputation_methods": {}
+        },
+        {
+          "origin": "2025-06-01",
+          "reason": "insufficient_coverage",
+          "training_coverage_ratio": 0.9444444444444444,
+          "imputed_months": [],
+          "imputation_methods": {}
+        }
+      ],
+      "fold_metadata": []
+    },
+    "prophet": {
+      "model_name": "prophet",
+      "target": "temperature_max_c",
+      "observation_count": 57,
+      "fold_count": 0,
+      "prediction_count": 0,
+      "metrics": {},
+      "predictions": [],
+      "skipped_folds": [
+        {
+          "origin": "2023-12-01",
+          "reason": "insufficient_coverage",
+          "training_coverage_ratio": 0.9444444444444444,
+          "imputed_months": [],
+          "imputation_methods": {}
+        },
+        {
+          "origin": "2024-03-01",
+          "reason": "insufficient_coverage",
+          "training_coverage_ratio": 0.9487179487179487,
+          "imputed_months": [],
+          "imputation_methods": {}
+        },
+        {
+          "origin": "2024-06-01",
+          "reason": "missing_test_actual",
+          "missing_test_months": [
+            "2024-09-01"
+          ]
+        },
+        {
+          "origin": "2024-09-01",
+          "reason": "insufficient_coverage",
+          "training_coverage_ratio": 0.9333333333333333,
+          "imputed_months": [],
+          "imputation_methods": {}
+        },
+        {
+          "origin": "2024-12-01",
+          "reason": "insufficient_coverage",
+          "training_coverage_ratio": 0.9375,
+          "imputed_months": [],
+          "imputation_methods": {}
+        },
+        {
+          "origin": "2025-03-01",
+          "reason": "insufficient_coverage",
+          "training_coverage_ratio": 0.9411764705882353,
+          "imputed_months": [],
+          "imputation_methods": {}
+        },
+        {
+          "origin": "2025-06-01",
+          "reason": "insufficient_coverage",
+          "training_coverage_ratio": 0.9444444444444444,
+          "imputed_months": [],
+          "imputation_methods": {}
+        }
+      ],
+      "fold_metadata": []
+    }
+  },
+  "fair_comparison": {
+    "status": "insufficient_common_predictions",
+    "common_prediction_count": 0,
+    "comparison": {}
+  },
+  "batch_prediction_consistency": {
+    "status": "no_prior_prophet_report"
+  },
+  "selected_model": "pending_evaluation",
+  "production_approved": false
+}

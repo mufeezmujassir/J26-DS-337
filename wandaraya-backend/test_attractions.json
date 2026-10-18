@@ -1,0 +1,29 @@
+{
+  "travel_date": "2026-10-13",
+  "attractions": [
+    {
+      "attraction_id": 101,
+      "name": "Galle Outdoor Heritage Walk",
+      "district_id": 78,
+      "latitude": 6.0535,
+      "longitude": 80.2210,
+      "activity_types": ["cultural_outdoor"]
+    },
+    {
+      "attraction_id": 102,
+      "name": "Galle Indoor Museum Visit",
+      "district_id": 78,
+      "latitude": 6.0535,
+      "longitude": 80.2210,
+      "activity_types": ["indoor_museum"]
+    },
+    {
+      "attraction_id": 103,
+      "name": "Galle Coastal Activity",
+      "district_id": 78,
+      "latitude": 6.0535,
+      "longitude": 80.2210,
+      "activity_types": ["beach", "water_activities"]
+    }
+  ]
+}

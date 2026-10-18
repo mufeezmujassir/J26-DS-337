@@ -1,0 +1,69 @@
+{
+  "stage": "10.0.1",
+  "status": "READY_WITH_GAPS",
+  "audit_date": "2026-10-13",
+  "scope": "read_only_repository_audit",
+  "entry_points": {
+    "fastapi": {"path": "app/main.py", "symbol": "app", "lines": "26-29"},
+    "knowledge_base": {"path": "app/routers/knowledge_base.py", "symbol": "router", "lines": "37-242"},
+    "candidate_retrieval": {"path": "app/knowledge_base/retrieval/semantic_retriever.py", "symbol": "SemanticAttractionRetriever.search", "lines": "48-150"},
+    "weather_context": {"path": "app/weather_model/context/weather_context_service.py", "symbol": "WeatherContextService.get_context", "lines": "41-313"},
+    "weather_dimension_contract": {"path": "app/recommendation/context_dimensions/weather_context_contract.py", "symbol": "to_weather_context_dimension", "lines": "17-46"}
+  },
+  "knowledge_base": {
+    "attraction_primary_key": {"field": "Attraction.id", "path": "app/models/attraction.py", "line": 9},
+    "external_identifiers": ["Attraction.slug (unique)", "Attraction.google_place_id (unique, nullable)"],
+    "district": {"foreign_key": "Attraction.district_id", "district_boundary": "District.boundary MULTIPOLYGON SRID 4326", "paths": ["app/models/attraction.py:14", "app/models/district.py:9-15"]},
+    "coordinates": {"fields": ["latitude", "longitude"], "nullable": true, "path": "app/models/attraction.py:16-18"},
+    "categories": {"association": "AttractionCategory", "unique_pair": true, "path": "app/models/attraction_categories.py:6-8"},
+    "activities": {"association": "AttractionActivity", "duration_minutes_available": true, "storage_is_weather_canonical": false, "path": "app/models/attraction_activities.py:6-16"},
+    "provenance": {"model": "AttractionDescription", "fields": ["source_id", "source_url", "language", "content_hash", "retrieved_at"], "path": "app/models/attraction_descriptions.py:7-20"},
+    "opening_hours": {"stored": true, "path": "app/models/attraction.py:25", "public_detail_schema_exposes": false},
+    "semantic_retrieval": {"top_k": true, "default_limit": 10, "preserves_score": true, "hydrates_active_postgres_attractions": true, "collection": "sri_lanka_attractions", "embedding_model": "BAAI/bge-large-en-v1.5", "vector_size": 1024}
+  },
+  "weather": {
+    "forecast_service": {"path": "app/weather_model/forecasting/forecast_service.py", "interface": "get_forecast(district_id, target, forecast_date, reference_date, latitude=None, longitude=None)", "targets": ["rainfall_mm", "temperature_min_c", "temperature_max_c"]},
+    "horizons": {"live_days": 5, "monthly_model_days": 90, "planning_mode": "historical monthly climatology, not daily forecast"},
+    "approval_enforcement": {"path": "app/weather_model/forecasting/reliability.py:32-67", "candidate_models_allowed_as_production": false},
+    "context_statuses": ["available", "unavailable", "unknown suitability"],
+    "weather_context_dimension": {"path": "app/recommendation/context_dimensions/weather_context_contract.py:17-46", "score_range": "0..1 or null", "does_ranking": false},
+    "activity_rules": ["hiking", "beach", "wildlife_safari", "heritage_site", "water_activities", "indoor_attraction"]
+  },
+  "field_mapping": [
+    {"knowledge_base_field": "attraction_id", "weather_field": "attraction_id", "compatible": true, "transform": "direct"},
+    {"knowledge_base_field": "district_id", "weather_field": "district_id", "compatible": "conditional", "transform": "missing district must be explicit"},
+    {"knowledge_base_field": "latitude/longitude", "weather_field": "latitude/longitude", "compatible": "conditional", "transform": "supply both or neither; district fallback is separately marked"},
+    {"knowledge_base_field": "activities", "weather_field": "activity_types", "compatible": "conditional", "transform": "map_activity_to_weather_profile; report unsupported values"},
+    {"knowledge_base_field": "semantic_score", "weather_field": null, "compatible": false, "transform": "new candidate envelope must preserve independently"},
+    {"knowledge_base_field": "travel date/timezone", "weather_field": "travel_date", "compatible": "partial", "transform": "define Sri Lanka-local timezone/time policy"},
+    {"knowledge_base_field": "opening_hours/duration_minutes", "weather_field": null, "compatible": false, "transform": "not exposed in current candidate API"}
+  ],
+  "endpoints": {
+    "knowledge_base": ["GET /api/v1/knowledge-base/status", "GET /api/v1/knowledge-base/attractions", "GET /api/v1/knowledge-base/attractions/nearby", "GET /api/v1/knowledge-base/attractions/{attraction_id}", "GET /api/v1/knowledge-base/categories", "GET /api/v1/knowledge-base/districts", "GET /api/v1/knowledge-base/sources", "GET /api/v1/knowledge-base/quality", "GET /api/v1/knowledge-base/semantic-search"],
+    "weather": ["GET /api/v1/weather/forecasts/{district_id}", "GET /api/v1/weather/forecasts/{district_id}/status", "GET /api/v1/weather/context/{district_id}", "GET /api/v1/weather/suitability/{district_id}", "GET /api/v1/weather/attractions", "POST /api/v1/weather/suitability/batch"],
+    "internal_mutating": ["POST /internal/knowledge-base/refresh", "POST /internal/knowledge-base/discovery"],
+    "recommendation": {"public_recommendation_router_registered": false, "registered_route_validation": "POST /api/route/validate"}
+  },
+  "safe_validation": {
+    "source_inspection": "completed",
+    "docker_test_attempt": "not_run",
+    "docker_blocker": "Docker engine unavailable: pipe endpoint reported system cannot find the file specified",
+    "mutating_scripts_executed": false
+  },
+  "blockers_and_gaps": [
+    "No combined semantic candidate plus weather candidate envelope",
+    "No public recommendation/re-ranking endpoint",
+    "Semantic relevance score is not carried by weather request/response",
+    "No explicit visit timezone/time field",
+    "Opening hours and duration are stored but absent from current candidate response schemas",
+    "Combined integration cache policy is not implemented"
+  ],
+  "recommended_stage_10_0_2": [
+    "Define read-only semantic candidate envelope and request/response schemas",
+    "Retrieve Top-K semantic candidates and retain score/provenance",
+    "Deduplicate by attraction ID while retaining best relevance evidence",
+    "Adapt activities with the existing mapper and batch through existing weather service",
+    "Return weather dimension separately with null/unknown preserved",
+    "Add tests for missing district/location, aliases, unsupported activities, duplicates, unavailable weather and planning mode"
+  ]
+}

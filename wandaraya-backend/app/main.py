@@ -1,4 +1,4 @@
-﻿import asyncio
+import asyncio
 import secrets
 
 from fastapi import FastAPI, Header, HTTPException
@@ -11,7 +11,19 @@ from app.knowledge_base.refresh.refresh_service import TourismKBRefreshService
 from app.knowledge_base.discovery.discovery_service import (
     NationwideAttractionDiscoveryService,
 )
-
+from app.routers.weather_forecasts import router as weather_forecast_router
+from app.routers.weather_context import (
+    router as weather_context_router,
+)
+from app.routers.weather_suitability import (
+    router as weather_suitability_router,
+)
+from app.routers.weather_attractions import (
+    router as weather_attractions_router,
+)
+from app.routers.weather_kb import router as weather_kb_router
+from app.routers.knowledge_base import router as knowledge_base_router
+from app.routers.context_enrichment import router as context_enrichment_router
 app = FastAPI(
     title=settings.APP_NAME,
     version="1.0.0",
@@ -24,6 +36,8 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+app.include_router(weather_forecast_router)
 
 @app.get("/health")
 async def health_check():
@@ -129,6 +143,16 @@ async def discover_knowledge_base(
         _kb_discovery_lock.release()
 
 
+
+from app.routers import route_validation
+app.include_router(route_validation.router, prefix="/api")
+app.include_router(weather_context_router)
+# The fixed batch route must be registered before the dynamic district route.
+app.include_router(weather_attractions_router)
+app.include_router(weather_suitability_router)
+app.include_router(weather_kb_router)
+app.include_router(knowledge_base_router)
+app.include_router(context_enrichment_router)
 # You can include your routers here later:
 # from app.routers import recommend
 # app.include_router(recommend.router, prefix="/api")

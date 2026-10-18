@@ -1,0 +1,39 @@
+intent_preservation:
+  strict_vibe: true
+  strict_budget: true
+  strict_bookings: true
+
+replanning:
+  step_level:
+    replace_scope: "single_activity"
+  day_level:
+    replace_scope: "full_day"
+  plan_level:
+    replace_scope: "from_disruption_point"
+    call_component2: true
+
+component1:
+  api_url_env: COMPONENT1_API_URL
+  timeout_seconds: 10
+
+component2:
+  api_url_env: COMPONENT2_API_URL
+  timeout_seconds: 10
+
+consistency:
+  enforce_vibe: true
+  enforce_budget: true
+  enforce_bookings: true
+  enforce_must_see: true
+
+confirmation:
+  require_user_confirmation: true
+  default_next_action: "find_alternative"
+
+state:
+  backend: "redis"
+  ttl_hours: 24
+
+logging:
+  level: INFO
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
