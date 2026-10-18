@@ -1,0 +1,36 @@
+           _                 _    
+  __ _  __| |_ __ __ _ _ __ | |_  
+ / _` |/ _` | '__/ _` | '_ \| __| 
+| (_| | (_| | | | (_| | | | | |_  
+ \__, |\__,_|_|  \__,_|_| |_|\__| 
+    |_|                           
+
+Version: 1.19.1, build: 6ab21cac
+Access web UI at http://localhost:6333/dashboard
+Agentic Skills: https://skills.qdrant.tech/
+
+2026-10-18T07:59:21.368332Z  INFO storage::content_manager::consensus::persistent: Initializing new raft state at ./storage/raft_state.json
+2026-10-18T07:59:21.372990Z  INFO qdrant::snapshots: Recovering snapshot sri_lanka_attractions from /qdrant/snapshots/sri_lanka_attractions-1336472673414113-2026-10-18-07-30-23.snapshot
+2026-10-18T07:59:21.373023Z  INFO qdrant::snapshots: Collection path: ./storage/collections/sri_lanka_attractions
+2026-10-18T07:59:54.755643Z  INFO collection::shards::local_shard::snapshot: Restoring shard snapshot ./storage/collections/sri_lanka_attractions.tmp/0
+2026-10-18T07:59:55.259345Z  INFO storage::content_manager::toc: Loading collection: sri_lanka_attractions
+2026-10-18T07:59:55.275699Z ERROR qdrant::startup: Panic backtrace: 
+   0: qdrant::startup::setup_panic_hook::{closure#0}
+   1: std::panicking::panic_with_hook
+   2: std::panicking::panic_handler::{closure#0}
+   3: std::sys::backtrace::__rust_end_short_backtrace::<std::panicking::panic_handler::{closure#0}, !>
+   4: __rustc::rust_begin_unwind
+   5: core::panicking::panic_fmt
+   6: <futures_util::stream::futures_unordered::FuturesUnordered<<collection::shards::shard_holder::ShardHolder>::load_shards::{closure#0}::{closure#0}::{closure#0}> as futures_core::stream::Stream>::poll_next
+   7: <collection::collection::Collection>::load::{closure#0}
+   8: <storage::content_manager::toc::TableOfContent>::new::{closure#7}
+   9: <tokio::runtime::runtime::Runtime>::block_on::<<storage::content_manager::toc::TableOfContent>::new::{closure#7}>
+  10: <storage::content_manager::toc::TableOfContent>::new
+  11: qdrant::main
+  12: std::sys::backtrace::__rust_begin_short_backtrace::<fn() -> core::result::Result<(), anyhow::Error>, core::result::Result<(), anyhow::Error>>
+  13: main
+  14: <unknown>
+  15: __libc_start_main
+  16: _start
+
+2026-10-18T07:59:55.275742Z ERROR qdrant::startup: Panic occurred in file lib/collection/src/shards/replica_set/mod.rs at line 317: Failed to load local shard "./storage/collections/sri_lanka_attractions/0": Service internal error: Wal error: Can't init WAL: failed to read first-index file: Failed to deserialize ./storage/collections/sri_lanka_attractions/0/wal/first-index: expected value at line 1 column 1

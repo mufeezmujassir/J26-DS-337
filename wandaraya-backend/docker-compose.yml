@@ -37,7 +37,23 @@ services:
       - "6333:6333"
       - "6334:6334"
     volumes:
-      - ./qdrant-data:/qdrant/storage
+      - qdrant_data:/qdrant/storage
+      - ./qdrant-snapshots:/qdrant/snapshots
+    environment:
+      QDRANT__STORAGE__PATH: /qdrant/storage
+
+  # Isolated recovery/rebuild target.  This service never shares a volume,
+  # collection, or host port with production Qdrant.  Start it explicitly:
+  # docker compose --profile staging up -d qdrant-staging
+  qdrant-staging:
+    image: qdrant/qdrant:v1.19.1
+    container_name: wandaraya-qdrant-staging
+    profiles: ["staging"]
+    restart: "no"
+    ports:
+      - "127.0.0.1:6335:6333"
+    volumes:
+      - qdrant_staging_data:/qdrant/storage
     environment:
       QDRANT__STORAGE__PATH: /qdrant/storage
 
@@ -90,6 +106,67 @@ services:
         condition: service_started
 
       qdrant:
+        condition: service_started
+
+  # One-off worker for the isolated vector rebuild.  It has no dependency on
+  # the production `qdrant` service, so `docker compose run` cannot revive the
+  # damaged production collection as a side effect.
+  qdrant-staging-worker:
+    build:
+      context: .
+      dockerfile: docker/fastapi/Dockerfile
+    profiles: ["staging"]
+    env_file:
+      - .env
+    environment:
+      DATABASE_URL: postgresql+psycopg://postgres:root@postgres:5432/wandaraya
+      QDRANT_URL: http://qdrant-staging:6333
+      QDRANT_COLLECTION_NAME: sri_lanka_attractions_staging
+    volumes:
+      - .:/app
+    depends_on:
+      postgres:
+        condition: service_healthy
+      qdrant-staging:
+        condition: service_started
+
+  # Future cutover target.  It deliberately reuses only the validated staging
+  # volume and is profile-gated.  Never run it alongside qdrant-staging.
+  qdrant-production-replacement:
+    image: qdrant/qdrant:v1.19.1
+    container_name: wandaraya-qdrant-replacement
+    profiles: ["cutover"]
+    restart: unless-stopped
+    volumes:
+      - qdrant_staging_data:/qdrant/storage
+    environment:
+      QDRANT__STORAGE__PATH: /qdrant/storage
+
+  # Future API replacement.  It keeps port 8000, so the legacy fastapi
+  # service must be stopped before an explicitly approved cutover starts.
+  fastapi-cutover:
+    build:
+      context: .
+      dockerfile: docker/fastapi/Dockerfile
+    container_name: wandaraya-api-cutover
+    profiles: ["cutover"]
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      DATABASE_URL: postgresql+psycopg://postgres:root@postgres:5432/wandaraya
+      QDRANT_URL: http://qdrant-production-replacement:6333
+      QDRANT_COLLECTION_NAME: sri_lanka_attractions_staging
+    volumes:
+      - .:/app
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_started
+      qdrant-production-replacement:
         condition: service_started
 
   airflow:
@@ -183,3 +260,6 @@ volumes:
   minio_data:
 
   airflow_metadata_data:
+
+  # Must remain distinct from qdrant_data.  Never mount qdrant-data here.
+  qdrant_staging_data:

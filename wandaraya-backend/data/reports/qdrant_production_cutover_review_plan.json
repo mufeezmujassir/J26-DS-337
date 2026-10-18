@@ -1,0 +1,47 @@
+{
+  "blockers": [],
+  "generated_at_utc": "2026-10-18T10:28:42.453498+00:00",
+  "mode": "review_only_cutover_plan",
+  "post_cutover_acceptance_criteria": [
+    "Collection count equals approved scope: 6120.",
+    "Full unfiltered scroll completes.",
+    "Existing and absent filtered payload scrolls succeed.",
+    "Direct retrieval, vector search, payload identity, and 1024-dimensional vectors succeed.",
+    "Semantic API smoke test succeeds with the new collection configuration."
+  ],
+  "production_protection": {
+    "broken_production_collection_must_remain_stopped": true,
+    "postgresql_writes_executed": false,
+    "production_qdrant_writes_executed": false,
+    "quarantine_directory_must_be_retained": "qdrant-data-quarantine-2026-10-18",
+    "snapshot_file_must_be_retained": "qdrant-snapshots/sri_lanka_attractions-1336472673414113-2026-10-18-07-30-23.snapshot"
+  },
+  "required_execution_steps_not_performed": [
+    "Stop staging only after its snapshot is confirmed available.",
+    "Create a new production service or named volume from the reviewed staging state; do not overwrite qdrant_data.",
+    "Switch the application collection configuration only after the replacement passes health checks.",
+    "Keep the previous production and quarantine volumes until rollback sign-off is complete."
+  ],
+  "required_human_authorizations_before_execution": [
+    "Approve the immutable report hashes and staging snapshot checksum.",
+    "Approve a new production collection configuration pointing to a new named volume, never the quarantined volume.",
+    "Approve application configuration change to the reviewed replacement collection name.",
+    "Approve post-cutover retrieval smoke tests and a rollback window."
+  ],
+  "status": "READY_FOR_HUMAN_CUTOVER_REVIEW",
+  "validated_staging": {
+    "collection": "sri_lanka_attractions_staging",
+    "embedding_model": "BAAI/bge-large-en-v1.5",
+    "point_count": 6120,
+    "rebuild_report": "data/reports/qdrant_staging_rebuild_execution.json",
+    "rebuild_report_sha256": "23881c30ee53e771d2d77a79a3dc77c1e371af0ba9bd8988eede752b77b0abe4",
+    "scope_sha256": "c67bbe9f958049587c6b8a200b2d13a1738e38be218ed37d404362379d538568",
+    "staging_snapshot": {
+      "checksum": "a9bd120d7036c4c960494fd41a6bfdd326a4657ee418b70b1020f0c531a05e9f",
+      "name": "sri_lanka_attractions_staging-7337061971474120-2026-10-18-10-27-16.snapshot"
+    },
+    "validation_report": "data/reports/qdrant_staging_validation.json",
+    "validation_report_sha256": "41c8b904916623ff1990bd946abfd035e8888e34ea294b79163b95e95ec24df1",
+    "vector_dimension": 1024
+  }
+}

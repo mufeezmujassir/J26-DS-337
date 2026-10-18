@@ -1,0 +1,31 @@
+{
+  "filtered_scroll_failure": "Qdrant server OffsetZero in Gridstore/MmapPayloadStorage",
+  "finding": "The snapshot archive has matching metadata checksum but contains a malformed WAL first-index file; the failure reproduces in isolated storage on both server versions.",
+  "isolated_restore_evidence": {
+    "v1_18_2": {
+      "log_present": true,
+      "malformed_wal_first_index": true,
+      "result": "restore_failed_malformed_wal",
+      "snapshot_restore_completed": false,
+      "snapshot_restore_started": true,
+      "wal_deserialization_error": true
+    },
+    "v1_19_1": {
+      "log_present": true,
+      "malformed_wal_first_index": true,
+      "result": "restore_failed_malformed_wal",
+      "snapshot_restore_completed": false,
+      "snapshot_restore_started": true,
+      "wal_deserialization_error": true
+    }
+  },
+  "not_supported_by_evidence": [
+    "application_filter_syntax_defect",
+    "client_server_version_mismatch",
+    "missing_payload_field",
+    "a simple server patch upgrade as snapshot recovery repair"
+  ],
+  "production_python_client_version": "1.18.0",
+  "production_server_version": "1.18.2",
+  "tested_patch_version": "1.19.1"
+}

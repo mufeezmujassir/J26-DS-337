@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import asyncio
 from dataclasses import dataclass
 import os
 
@@ -57,13 +58,18 @@ class SemanticAttractionRetriever:
         if not clean_query:
             raise ValueError("Query cannot be empty.")
 
-        query_embedding = (
-            AttractionEmbeddingService.encode_query(clean_query)
+        # SentenceTransformer inference and the synchronous Qdrant client can
+        # take seconds on first use.  Keep them off FastAPI's event loop so a
+        # semantic-model warm-up cannot stall health or unrelated API routes.
+        query_embedding = await asyncio.to_thread(
+            AttractionEmbeddingService.encode_query,
+            clean_query,
         )
 
 
         try:
-            response = self.client.query_points(
+            response = await asyncio.to_thread(
+                self.client.query_points,
                 collection_name=self.collection_name,
                 query=query_embedding.vector,
                 limit=limit,

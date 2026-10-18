@@ -1,0 +1,38 @@
+{
+  "generated_at": "2026-10-18T16:15:13+05:30",
+  "status": "CUTOVER_ACTIVE_WITH_SEMANTIC_WARMUP_PENDING",
+  "authorization": "User explicitly authorized execution of the reviewed Qdrant production cutover.",
+  "replacement": {
+    "service": "qdrant-production-replacement",
+    "qdrant_version": "v1.19.1",
+    "collection": "sri_lanka_attractions_staging",
+    "embedding_model": "BAAI/bge-large-en-v1.5",
+    "vector_dimension": 1024,
+    "validated_point_count": 6120,
+    "validation_report": "data/reports/qdrant_production_replacement_validation.json",
+    "validation_status": "STAGING_VALIDATED"
+  },
+  "application": {
+    "service": "fastapi-cutover",
+    "public_port": 8000,
+    "knowledge_base_status_verified": true,
+    "reported_collection": "sri_lanka_attractions_staging",
+    "reported_points": 6120,
+    "semantic_smoke_test": "pending_bge_model_warmup"
+  },
+  "integrity": {
+    "scope_sha256": "c67bbe9f958049587c6b8a200b2d13a1738e38be218ed37d404362379d538568",
+    "cutover_plan_sha256": "1835be7009d6238bbccaf68da5f65e14c102e7aaf9a65c85442bc3eea761b4d4",
+    "staging_snapshot_name": "sri_lanka_attractions_staging-7337061971474120-2026-10-18-10-27-16.snapshot",
+    "staging_snapshot_sha256": "a9bd120d7036c4c960494fd41a6bfdd326a4657ee418b70b1020f0c531a05e9f"
+  },
+  "safety": {
+    "postgresql_writes_executed_by_cutover": false,
+    "qdrant_upserts_executed_by_cutover": false,
+    "legacy_corrupt_qdrant_service": "stopped",
+    "legacy_api_service": "stopped",
+    "quarantine_directory_retained": "qdrant-data-quarantine-2026-10-18",
+    "legacy_snapshot_retained": "qdrant-snapshots/sri_lanka_attractions-1336472673414113-2026-10-18-07-30-23.snapshot"
+  },
+  "next_verification": "Run the semantic-search smoke test after the BGE model has completed its first load."
+}

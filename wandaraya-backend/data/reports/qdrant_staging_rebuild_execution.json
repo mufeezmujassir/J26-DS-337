@@ -1,0 +1,18 @@
+{
+  "collection": "sri_lanka_attractions_staging",
+  "embedding_model": "BAAI/bge-large-en-v1.5",
+  "failures": [],
+  "generated_at_utc": "2026-10-18T09:49:38.735892+00:00",
+  "mode": "execute",
+  "postgresql_active_attractions": 6120,
+  "postgresql_writes_executed": false,
+  "processed": 6120,
+  "production_qdrant_writes_executed": false,
+  "qdrant_url": "http://qdrant-staging:6333",
+  "reused_current": 0,
+  "scope_sha256": "c67bbe9f958049587c6b8a200b2d13a1738e38be218ed37d404362379d538568",
+  "staging_qdrant_writes_executed": true,
+  "status": "STAGING_REBUILD_COMPLETED",
+  "upserted": 6120,
+  "vector_dimension": 1024
+}
