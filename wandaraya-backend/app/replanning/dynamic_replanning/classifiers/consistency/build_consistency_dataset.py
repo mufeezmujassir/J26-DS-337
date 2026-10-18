@@ -61,7 +61,7 @@ GENERATED_README = """# Cross-Turn Consistency Dataset (Frozen)
 - **Labels**: `drift=1`, `consistent=0` from hard rules + 5% label noise (seed 42).
 - **Frozen**: The dataset is frozen with seed 42 and committed for reproducibility.
 - **Regenerate**: `python -m app.replanning.dynamic_replanning.classifiers.consistency.build_consistency_dataset`
-- **Production model**: A single Random Forest classifier (no scaler, no Logistic Regression). No Jupyter notebooks — evaluation is via the standalone scripts `evaluate_consistency_rules_only.py`, `evaluate_consistency_ml_only.py`, `evaluate_consistency_hybrid.py`, `run_ablation_study.py` and `measure_latency.py`.
+- **Production model**: A single Random Forest classifier (no scaler, no Logistic Regression). No Jupyter notebooks — evaluation is via the standalone scripts `evaluate_rules_only.py`, `evaluate_ml_only.py`, `evaluate_hybrid.py`, `run_ablation_study.py` and `measure_latency.py` (all in `app/replanning/dynamic_replanning/classifiers/consistency/`).
 """
 
 REQUIRED_FIELDS = (
