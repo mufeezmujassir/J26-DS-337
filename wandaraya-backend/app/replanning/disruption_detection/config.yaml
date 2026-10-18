@@ -42,6 +42,12 @@ fusion:
     gps: 0.15
   confirmation_threshold: 0.75
 
+hybrid:
+  # rules + ML agreement => confirmed; either alone => needs confirmation
+  confirm_threshold: 0.7
+  # ML probability below this (with no firing rule) => no disruption
+  no_disruption_threshold: 0.4
+
 logging:
   level: INFO
   format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"

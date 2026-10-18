@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from datetime import datetime
-from typing import List
+from typing import List, Optional
 
 from pydantic import BaseModel, Field
 
@@ -34,6 +34,14 @@ class DisruptionReason(BaseModel):
     details: str
 
 
+class DetectedBy(BaseModel):
+    """Provenance of a hybrid (rules + ML) disruption decision."""
+
+    rules: List[str] = Field(default_factory=list)
+    ml_classifier: bool = False
+    ml_severity: str = "none"
+
+
 class Disruption(BaseModel):
     """Structured disruption object consumed by the replanning pipeline."""
 
@@ -46,6 +54,7 @@ class Disruption(BaseModel):
     confidence: float = Field(ge=0.0, le=1.0)
     requires_confirmation: bool
     detected_at: datetime
+    detected_by: Optional[DetectedBy] = None
 
 
 class DisruptionBatch(BaseModel):
@@ -61,6 +70,7 @@ __all__ = [
     "SEVERITIES",
     "AffectedElement",
     "DisruptionReason",
+    "DetectedBy",
     "Disruption",
     "DisruptionBatch",
 ]
