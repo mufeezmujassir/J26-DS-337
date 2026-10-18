@@ -1,0 +1,16 @@
+{
+  "command": "$env:PYTEST_DISABLE_PLUGIN_AUTOLOAD='1'; .\\venv\\Scripts\\python.exe -m pytest tests/recommendation/test_experimental_ranking_policy.py tests/recommendation/test_recommendation_diagnostics.py tests/recommendation/test_time_advisory_policy.py -q",
+  "passed": 11,
+  "failed": 0,
+  "skipped": 0,
+  "scope": [
+    "experimental eligibility ordering",
+    "no baseline score mutation",
+    "unknown metadata handling",
+    "low-quality review flags",
+    "advisory evidence validation"
+  ],
+  "postgresql_writes": false,
+  "qdrant_writes": false,
+  "groq_requests": 0
+}

@@ -1,0 +1,9 @@
+{
+  "status": "EXPERIMENTAL_RANKING_TESTED",
+  "policy_version": "content_evidence_review_experiment_v1",
+  "postgresql_writes": false,
+  "qdrant_writes": false,
+  "groq_requests": 0,
+  "production_ranking_policy_changed": false,
+  "human_review_required_before_proposal": true
+}
