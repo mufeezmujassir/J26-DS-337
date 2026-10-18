@@ -50,7 +50,8 @@ async def commit_scope(*, records:list[dict[str,Any]], batch_id:str, manifest_ha
             await s.execute(text("SELECT pg_advisory_xact_lock(hashtext(:key))"),{"key":"srilanka-tourism-gate5e2c5"})
             existing=(await s.execute(select(AttractionSourceReference.external_source_id).where(AttractionSourceReference.source_provider=="srilanka_tourism",AttractionSourceReference.external_source_id.in_([r["source_attraction_id"] for r in records])))).scalars().all()
             if existing: raise RuntimeError("idempotency_or_concurrent_source_reference_conflict")
-            s.add(TourismImportBatch(batch_id=batch_id,source_provider="srilanka_tourism",input_manifest_sha256=manifest_hash,input_checkpoint_sha256="verified_c4_scope",queue_sha256=digest(records),status="running",approved_action_count=len(records),proposed_insert_count=len(records)))
+            batch=TourismImportBatch(batch_id=batch_id,source_provider="srilanka_tourism",input_manifest_sha256=manifest_hash,input_checkpoint_sha256="verified_c4_scope",queue_sha256=digest(records),status="running",approved_action_count=len(records),proposed_insert_count=len(records))
+            s.add(batch)
             inserted=[]
             for row in records:
                 a=Attraction(name=row["name"],slug=row["slug"],google_place_id=row["google_place_id"],district_id=row["district_id"],latitude=row["latitude"],longitude=row["longitude"],location=row["location"],is_active=True)
@@ -60,6 +61,7 @@ async def commit_scope(*, records:list[dict[str,Any]], batch_id:str, manifest_ha
                 s.add(ref); await s.flush()
                 for field in row["field_provenance"]: s.add(AttractionFieldProvenance(attraction_id=a.id,source_reference_id=ref.id,field_name=field,source_provider="srilanka_tourism",source_record_id=row["source_attraction_id"],value_fingerprint=digest(row.get(field)),import_batch_id=batch_id,approval_reference="gate5e2c5"))
                 s.add(TourismSyncReview(import_batch_id=batch_id,source_attraction_id=row["source_attraction_id"],proposed_action="INSERT_NEW_CANDIDATE",source_manifest_sha256=manifest_hash,action_payload_sha256=digest(row),approval_status="committed",reviewer_identity="approved_c4_scope"))
+            batch.status="completed"; batch.applied_action_count=len(inserted)
             return inserted
 
 def main():
@@ -68,7 +70,10 @@ def main():
  if a.execute:
   expected=[("--manifest-sha256",a.manifest_sha256,integrity["source_manifest_sha256"]),("--write-scope-sha256",a.write_scope_sha256,scope["write_scope_sha256"]),("--plan-sha256",a.plan_sha256,plan["execution_plan_sha256"])]
   if not a.confirm_execute or a.approved_count!=24 or any(got!=want for _,got,want in expected) or reasons: p.error("execution authorization validation failed")
-  p.error("live transaction is implemented but deliberately disabled for this task; obtain separate authorization and enable it in the next execution stage")
+  count,audit=asyncio.run(collisions(scope["records"]))
+  if audit: p.error("fresh database collision check failed; run a new preflight and obtain renewed authorization")
+  inserted=asyncio.run(commit_scope(records=scope["records"],batch_id=a.batch_id,manifest_hash=integrity["source_manifest_sha256"]))
+  print(json.dumps({"mode":"executed","inserted_attraction_ids":inserted,"postgresql_writes_executed":True,"qdrant_writes_executed":False},indent=2)); return
  count,audit=asyncio.run(collisions(scope["records"])); ready=not reasons and not audit
  out={"authorization_validation":{"valid":not reasons,"reasons":reasons},"pretransaction_collision_audit":{"records":audit,"collision_free":not audit},"transaction_plan":{"planned_records":len(scope["records"]),"atomic":True,"rollback_on_error":True,"writes_executed":False},"dry_run_summary":{"ready":ready,"existing_attraction_count":count,"expected_attraction_count":count+len(scope["records"]),"postgresql_writes_executed":False,"qdrant_writes_executed":False,"external_api_requests":0},"idempotency_validation":{"key":"srilanka_tourism + external_source_id","status":"not_previously_imported" if not audit else "requires_review"},"transaction_safety_tests":{"write_mode_not_invoked":True,"qdrant_writes":False},"reconciliation_plan":{"verify_records":len(scope["records"]),"excluded_source_id":"srilanka_tourism_attraction:89"},"execution_authorization_requirements":{"manifest_sha256":integrity["source_manifest_sha256"],"write_scope_sha256":scope["write_scope_sha256"],"plan_sha256":plan["execution_plan_sha256"],"approved_count":24},"summary":{"ready_insertions":len(scope["records"]),"collision_free":not audit,"postgresql_writes_executed":False,"qdrant_writes_executed":False,"external_api_requests":0}}
  prefix=Path(a.reports_dir)/f"stage_10_1_3e_gate5e2c5_{a.batch_id}_"; paths={}
