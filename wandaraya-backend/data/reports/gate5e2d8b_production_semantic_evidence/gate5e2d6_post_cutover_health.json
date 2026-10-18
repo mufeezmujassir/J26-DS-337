@@ -1,0 +1,44 @@
+{
+  "api_health": {
+    "body": {
+      "db": "ok",
+      "qdrant": "ok",
+      "redis": "ok",
+      "status": "ok"
+    },
+    "http_status": 200,
+    "latency_ms": 1.67,
+    "ok": true
+  },
+  "configuration_checks": {
+    "api_reports_6120_points": true,
+    "api_reports_expected_collection": true,
+    "api_reports_expected_dimension": true,
+    "api_reports_expected_model": true,
+    "api_status_http_200": true,
+    "postgresql_has_6120_active_attractions": true,
+    "qdrant_has_6120_points": true,
+    "qdrant_has_expected_dimension": true
+  },
+  "generated_at_utc": "2026-10-18T12:10:16.418156+00:00",
+  "legacy_qdrant_not_used_by_active_api": true,
+  "mode": "read_only",
+  "postgresql_writes_executed": false,
+  "qdrant_collection": {
+    "points_count": 6120,
+    "status": "passed",
+    "vector_dimension": 1024
+  },
+  "qdrant_writes_executed": false,
+  "recovery_snapshot_note": "A collection snapshot is visible to the active replacement service.",
+  "recovery_snapshot_visible_to_replacement": true,
+  "runtime_resources": {
+    "api_container_memory_current_bytes": 2023366656,
+    "api_container_memory_limit_bytes": null,
+    "filesystem_free_bytes": 960556531712,
+    "filesystem_total_bytes": 1081101176832
+  },
+  "snapshot_names": [
+    "sri_lanka_attractions_staging-7337061971474120-2026-10-18-12-07-13.snapshot"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "checks": {
+    "active_collection_selection": true,
+    "embedding_dimension": true,
+    "empty_query_validation": true,
+    "invalid_limit_validation": true,
+    "new_attraction_identities_6604_to_6627": true,
+    "qdrant_to_postgresql_hydration": true,
+    "repeat_query_stability": true,
+    "semantic_response_validation": true
+  },
+  "generated_at_utc": "2026-10-18T12:10:16.418473+00:00",
+  "mode": "runtime_read_only_regression_checks",
+  "postgresql_writes_executed": false,
+  "qdrant_writes_executed": false
+}

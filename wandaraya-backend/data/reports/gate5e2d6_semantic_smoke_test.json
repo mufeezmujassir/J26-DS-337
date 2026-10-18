@@ -1,6 +1,6 @@
 {
   "api_url": "http://localhost:8000",
-  "generated_at_utc": "2026-10-18T11:54:21.735981+00:00",
+  "generated_at_utc": "2026-10-18T12:06:28.141077+00:00",
   "mode": "read_only_api_smoke_test",
   "postgresql_writes_executed": false,
   "qdrant_writes_executed": false,
@@ -36,7 +36,7 @@
       ],
       "error": null,
       "http_status": 200,
-      "latency_ms": 6751.16,
+      "latency_ms": 12207.19,
       "query": "historical attractions in Galle",
       "status": "passed"
     },
@@ -71,7 +71,7 @@
       ],
       "error": null,
       "http_status": 200,
-      "latency_ms": 156.54,
+      "latency_ms": 210.29,
       "query": "beaches suitable for relaxing",
       "status": "passed"
     },
@@ -106,7 +106,7 @@
       ],
       "error": null,
       "http_status": 200,
-      "latency_ms": 194.97,
+      "latency_ms": 246.29,
       "query": "wildlife safari attractions",
       "status": "passed"
     },
@@ -141,7 +141,7 @@
       ],
       "error": null,
       "http_status": 200,
-      "latency_ms": 232.43,
+      "latency_ms": 367.03,
       "query": "cultural and religious attractions in Kandy",
       "status": "passed"
     },
@@ -176,7 +176,7 @@
       ],
       "error": null,
       "http_status": 200,
-      "latency_ms": 163.93,
+      "latency_ms": 798.31,
       "query": "waterfalls and nature experiences",
       "status": "passed"
     },
@@ -211,7 +211,7 @@
       ],
       "error": null,
       "http_status": 200,
-      "latency_ms": 144.62,
+      "latency_ms": 450.18,
       "query": "family-friendly attractions",
       "status": "passed"
     },
@@ -246,7 +246,7 @@
       ],
       "error": null,
       "http_status": 200,
-      "latency_ms": 156.72,
+      "latency_ms": 269.04,
       "query": "photography and scenic locations",
       "status": "passed"
     }

@@ -1,0 +1,45 @@
+{
+  "blockers": [],
+  "checks": {
+    "collection": {
+      "points_count": 6120,
+      "status": "ok"
+    },
+    "direct_retrieve": {
+      "payload_attraction_id": 1,
+      "sample_id": 1,
+      "status": "ok",
+      "vector_dimension": 1024
+    },
+    "filtered_scroll_absent": {
+      "returned": 0,
+      "status": "ok"
+    },
+    "filtered_scroll_existing": {
+      "returned": 1,
+      "status": "ok"
+    },
+    "full_unfiltered_scroll": {
+      "error": null,
+      "status": "ok",
+      "unique_point_ids": 6120
+    },
+    "vector_dimension": {
+      "actual": 1024,
+      "expected": 1024,
+      "status": "ok"
+    },
+    "vector_search": {
+      "status": "ok",
+      "top_id": 1
+    }
+  },
+  "collection": "sri_lanka_attractions_staging",
+  "expected_postgresql_active_attractions": 6120,
+  "generated_at_utc": "2026-10-18T12:07:04.497764+00:00",
+  "mode": "read_only_validation",
+  "postgresql_writes_executed": false,
+  "qdrant_url": "http://qdrant-production-replacement:6333",
+  "qdrant_writes_executed": false,
+  "status": "STAGING_VALIDATED"
+}

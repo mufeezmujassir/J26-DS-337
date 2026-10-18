@@ -1,0 +1,17 @@
+{
+  "mode": "offline_unit_tests_required",
+  "postgresql_writes_executed": false,
+  "qdrant_writes_executed": false,
+  "runtime_safety_checks": {
+    "d6_semantic_status_verified": true,
+    "dedicated_snapshot_host_directory_safe": true,
+    "host_storage_sufficient_for_planned_snapshot_and_recovery": true,
+    "legacy_snapshot_preserved": true,
+    "proposed_recovery_target_isolated": true,
+    "replacement_container_running": true,
+    "replacement_data_volume_present": true,
+    "replacement_snapshot_mount_absent": true,
+    "replacement_uses_expected_image": true
+  },
+  "test_module": "tests/time_context/test_gate5e2d7_snapshot_recovery.py"
+}

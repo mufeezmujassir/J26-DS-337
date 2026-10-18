@@ -1,0 +1,59 @@
+{
+  "active_data_mount": {
+    "Destination": "/qdrant/storage",
+    "Name": "wandaraya-backend_qdrant_staging_data",
+    "RW": true,
+    "Source": "/var/lib/docker/volumes/wandaraya-backend_qdrant_staging_data/_data",
+    "Type": "volume"
+  },
+  "active_snapshot_mount": null,
+  "checks": {
+    "d6_semantic_status_verified": true,
+    "dedicated_snapshot_host_directory_safe": true,
+    "host_storage_sufficient_for_planned_snapshot_and_recovery": true,
+    "legacy_snapshot_preserved": true,
+    "proposed_recovery_target_isolated": true,
+    "replacement_container_running": true,
+    "replacement_data_volume_present": true,
+    "replacement_snapshot_mount_absent": true,
+    "replacement_uses_expected_image": true
+  },
+  "container": {
+    "image": "qdrant/qdrant:v1.19.1",
+    "mounts": [
+      {
+        "Destination": "/qdrant/storage",
+        "Name": "wandaraya-backend_qdrant_staging_data",
+        "RW": true,
+        "Source": "/var/lib/docker/volumes/wandaraya-backend_qdrant_staging_data/_data",
+        "Type": "volume"
+      }
+    ],
+    "name": "wandaraya-qdrant-replacement",
+    "state": "running",
+    "status": "ok"
+  },
+  "gate5e2d6_summary_status": "SEMANTIC_SEARCH_VERIFIED",
+  "generated_at_utc": "2026-10-18T11:58:32.907512+00:00",
+  "legacy_snapshot": {
+    "exists": true,
+    "path": "qdrant-snapshots/sri_lanka_attractions-1336472673414113-2026-10-18-07-30-23.snapshot",
+    "size_bytes": 621225984
+  },
+  "mode": "read_only_infrastructure_assessment",
+  "postgresql_writes_executed": false,
+  "prior_staging_snapshot": {
+    "checksum": "a9bd120d7036c4c960494fd41a6bfdd326a4657ee418b70b1020f0c531a05e9f",
+    "name": "sri_lanka_attractions_staging-7337061971474120-2026-10-18-10-27-16.snapshot",
+    "reason": "The active replacement has no /qdrant/snapshots mount.",
+    "visible_to_active_replacement": false
+  },
+  "qdrant_writes_executed": false,
+  "snapshot_mount_persistence": "not_configured",
+  "storage": {
+    "free_bytes": 3171004416,
+    "largest_known_snapshot_bytes": 621225984,
+    "required_bytes": 1779322880,
+    "status": "sufficient"
+  }
+}

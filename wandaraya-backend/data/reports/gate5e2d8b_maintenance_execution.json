@@ -1,0 +1,19 @@
+{
+  "authorized_operation": "Gate 5E.2D.8B snapshot persistence and isolated recovery verification",
+  "collection": "sri_lanka_attractions_staging",
+  "configuration_change": "Added only ./qdrant-replacement-snapshots:/qdrant/snapshots to qdrant-production-replacement.",
+  "existing_data_volume_preserved": "wandaraya-backend_qdrant_staging_data",
+  "isolated_recovery_attempted": true,
+  "postgresql_writes_executed": false,
+  "qdrant_point_upserts_or_deletes_executed": false,
+  "recreated_services": [
+    "qdrant-production-replacement"
+  ],
+  "services_not_recreated": [
+    "fastapi-cutover",
+    "postgres",
+    "redis",
+    "airflow"
+  ],
+  "snapshot_created": true
+}

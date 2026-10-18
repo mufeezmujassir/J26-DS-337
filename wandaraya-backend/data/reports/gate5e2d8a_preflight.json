@@ -1,0 +1,31 @@
+{
+  "active_container_running": true,
+  "active_image_expected": true,
+  "blockers": [],
+  "compose_files": [
+    "docker-compose.yml"
+  ],
+  "existing_data_mount": {
+    "Destination": "/qdrant/storage",
+    "Name": "wandaraya-backend_qdrant_staging_data",
+    "RW": true,
+    "Source": "/var/lib/docker/volumes/wandaraya-backend_qdrant_staging_data/_data",
+    "Type": "volume"
+  },
+  "existing_data_volume_unchanged": true,
+  "free_bytes": 6039887872,
+  "gate5e2d7_status": "READY_FOR_SEPARATE_SNAPSHOT_AUTHORIZATION",
+  "generated_at_utc": "2026-10-18T12:05:23.805381+00:00",
+  "legacy_snapshot_exists": true,
+  "postgresql_writes_executed": false,
+  "qdrant_writes_executed": false,
+  "quarantine_directory_exists": true,
+  "required_bytes": 1779322880,
+  "snapshot_host_directory": "C:\\Users\\MUFEEZ\\OneDrive - Sri Lanka Institute of Information Technology\\Desktop\\RP\\Research_2027\\wandaraya-backend\\qdrant-replacement-snapshots",
+  "snapshot_host_directory_exists": false,
+  "snapshot_mount_currently_absent": true,
+  "snapshot_parent_writable": true,
+  "snapshot_path_safe": true,
+  "status": "READY_FOR_EXPLICIT_MAINTENANCE_AUTHORIZATION",
+  "storage_sufficient": true
+}

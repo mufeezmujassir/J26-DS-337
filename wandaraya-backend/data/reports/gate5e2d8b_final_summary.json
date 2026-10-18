@@ -1,0 +1,22 @@
+{
+  "collection": "sri_lanka_attractions_staging",
+  "generated_at_utc": "2026-10-18T12:10:41.468002+00:00",
+  "isolated_recovery_passed": true,
+  "post_maintenance_health_passed": true,
+  "postgresql_writes_executed": false,
+  "qdrant_point_writes_executed": false,
+  "snapshot": {
+    "checksum_matches": true,
+    "collection": "sri_lanka_attractions_staging",
+    "exists": true,
+    "host_path": "C:\\Users\\MUFEEZ\\OneDrive - Sri Lanka Institute of Information Technology\\Desktop\\RP\\Research_2027\\wandaraya-backend\\qdrant-replacement-snapshots\\sri_lanka_attractions_staging\\sri_lanka_attractions_staging-7337061971474120-2026-10-18-12-07-13.snapshot",
+    "host_sha256": "99a2b8a537d153ca020dcfabc5aac73a744d52640f9811a7cf36e068512b605b",
+    "host_timestamp_utc": "2026-10-18T12:07:15.531247+00:00",
+    "postgresql_writes_executed": false,
+    "qdrant_point_writes_executed": false,
+    "qdrant_reported_checksum": "99a2b8a537d153ca020dcfabc5aac73a744d52640f9811a7cf36e068512b605b",
+    "size_bytes": 61681664,
+    "snapshot_name": "sri_lanka_attractions_staging-7337061971474120-2026-10-18-12-07-13.snapshot"
+  },
+  "status": "RECOVERY_VERIFIED"
+}

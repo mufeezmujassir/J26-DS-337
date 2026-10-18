@@ -1,0 +1,21 @@
+{
+  "collection": "sri_lanka_attractions_staging",
+  "configuration_checks_passed": true,
+  "generated_at_utc": "2026-10-18T12:10:16.418501+00:00",
+  "new_attraction_verification_passed": true,
+  "postgresql_active_attractions": 6120,
+  "postgresql_writes_executed": false,
+  "qdrant_points": 6120,
+  "qdrant_url": "http://qdrant-production-replacement:6333",
+  "qdrant_writes_executed": false,
+  "recovery_snapshot_visible_to_replacement": true,
+  "reports": {
+    "embedding_warmup": "gate5e2d6_embedding_warmup.json",
+    "new_attraction_verification": "gate5e2d6_new_attraction_verification.json",
+    "post_cutover_health": "gate5e2d6_post_cutover_health.json",
+    "regression_tests": "gate5e2d6_regression_tests.json",
+    "semantic_smoke_test": "gate5e2d6_semantic_smoke_test.json"
+  },
+  "semantic_smoke_tests_passed": true,
+  "status": "READY_FOR_RECOMMENDATION_BASELINE"
+}

@@ -7,7 +7,7 @@
       "status": "ok"
     },
     "http_status": 200,
-    "latency_ms": 2.69,
+    "latency_ms": 2.46,
     "ok": true
   },
   "configuration_checks": {
@@ -20,7 +20,7 @@
     "qdrant_has_6120_points": true,
     "qdrant_has_expected_dimension": true
   },
-  "generated_at_utc": "2026-10-18T11:54:21.736225+00:00",
+  "generated_at_utc": "2026-10-18T12:06:28.141290+00:00",
   "legacy_qdrant_not_used_by_active_api": true,
   "mode": "read_only",
   "postgresql_writes_executed": false,
@@ -33,9 +33,9 @@
   "recovery_snapshot_note": "No snapshot is visible to the active replacement service. Semantic search can operate, but create and persist a replacement snapshot before declaring recovery readiness.",
   "recovery_snapshot_visible_to_replacement": false,
   "runtime_resources": {
-    "api_container_memory_current_bytes": 2044882944,
+    "api_container_memory_current_bytes": 2046705664,
     "api_container_memory_limit_bytes": null,
-    "filesystem_free_bytes": 960619724800,
+    "filesystem_free_bytes": 960619298816,
     "filesystem_total_bytes": 1081101176832
   },
   "snapshot_names": []

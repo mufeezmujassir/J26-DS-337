@@ -1,0 +1,17 @@
+{
+  "blockers": [],
+  "collection": "sri_lanka_attractions_staging",
+  "generated_at_utc": "2026-10-18T11:58:32.907512+00:00",
+  "postgresql_writes_executed": false,
+  "proposed_snapshot_directory": "qdrant-replacement-snapshots",
+  "qdrant_writes_executed": false,
+  "replacement_container": "wandaraya-qdrant-replacement",
+  "snapshot_mount_currently_present": false,
+  "status": "READY_FOR_SEPARATE_SNAPSHOT_AUTHORIZATION",
+  "storage": {
+    "free_bytes": 3171004416,
+    "largest_known_snapshot_bytes": 621225984,
+    "required_bytes": 1779322880,
+    "status": "sufficient"
+  }
+}

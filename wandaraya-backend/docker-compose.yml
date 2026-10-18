@@ -139,6 +139,7 @@ services:
     restart: unless-stopped
     volumes:
       - qdrant_staging_data:/qdrant/storage
+      - ./qdrant-replacement-snapshots:/qdrant/snapshots
     environment:
       QDRANT__STORAGE__PATH: /qdrant/storage
 
