@@ -1,16 +1,4 @@
-"""Intent preservation for the Dynamic Replanning module.
-
-The preserver supports two modes:
-
-* **rules-only** (default): the original hard-constraint checks on vibe,
-  budget and bookings.
-* **hybrid**: the hard-constraint checks are fused with the trained
-  intent-preservation Random Forest. Hard rules stay authoritative for
-  the ``is_preserved`` verdict (they encode non-negotiable user
-  constraints); the ML arm is a learned cross-check that can flag an
-  otherwise-clean revision as ``uncertain`` when it looks like intent
-  drifted.
-"""
+"""Intent preservation for the Dynamic Replanning module."""
 
 from __future__ import annotations
 
@@ -38,6 +26,63 @@ DEFAULT_NO_PRESERVE_THRESHOLD = 0.4
 
 MODEL_USED_RF = "random_forest"
 MODEL_USED_NONE = "rules_only"
+
+
+def fuse_intent_decision(
+    rule_preserved: bool,
+    ml_block: Optional[Dict[str, Any]],
+    confirm_threshold: float = DEFAULT_CONFIRM_THRESHOLD,
+    no_preserve_threshold: float = DEFAULT_NO_PRESERVE_THRESHOLD,
+) -> Dict[str, Any]:
+    """Fuse a hard-rule verdict with an ML prediction into one decision."""
+
+    if ml_block is None:
+        decision = DECISION_PRESERVED if rule_preserved else DECISION_BROKEN
+        return {
+            "decision": decision,
+            "requires_confirmation": not rule_preserved,
+            "model_used": MODEL_USED_NONE,
+            "ml_probability": None,
+            "ml_preserved": None,
+            "detected_by": {
+                "rules": not rule_preserved,
+                "ml_classifier": False,
+            },
+        }
+
+    probability = float(ml_block["probability"])
+    ml_preserved = bool(ml_block["preserved"])
+    ml_strong = probability >= confirm_threshold
+    ml_weak = probability < no_preserve_threshold
+
+    if rule_preserved and ml_preserved:
+        decision = DECISION_PRESERVED
+        requires_confirmation = False
+    elif not rule_preserved:
+        # Hard rules are non-negotiable: any rule break wins.
+        decision = DECISION_BROKEN
+        requires_confirmation = True
+    elif ml_weak:
+        decision = DECISION_BROKEN
+        requires_confirmation = True
+    elif ml_strong:
+        decision = DECISION_PRESERVED
+        requires_confirmation = False
+    else:
+        decision = DECISION_UNCERTAIN
+        requires_confirmation = True
+
+    return {
+        "decision": decision,
+        "requires_confirmation": requires_confirmation,
+        "model_used": MODEL_USED_RF,
+        "ml_probability": round(probability, 4),
+        "ml_preserved": ml_preserved,
+        "detected_by": {
+            "rules": not rule_preserved,
+            "ml_classifier": ml_preserved or ml_weak,
+        },
+    }
 
 
 def _to_float(value: Any, default: Optional[float] = None) -> Optional[float]:
@@ -136,12 +181,7 @@ class IntentPreserver:
         anchor: IntentAnchor,
         features: Dict[str, Any] | None = None,
     ) -> Dict[str, Any]:
-        """Return a full preservation report for the proposed revision.
-
-        When ML is enabled the report also carries ``ml`` and ``hybrid``
-        blocks. The ``is_preserved`` field remains the authoritative
-        hard-rule verdict.
-        """
+        """Return a full preservation report for the proposed revision."""
 
         preserved: List[str] = []
         broken: List[str] = []
@@ -270,55 +310,12 @@ class IntentPreserver:
     ) -> Dict[str, Any]:
         """Combine the hard-rule verdict with the ML probability."""
 
-        if ml_block is None:
-            decision = (
-                DECISION_PRESERVED if rule_preserved else DECISION_BROKEN
-            )
-            return {
-                "decision": decision,
-                "requires_confirmation": not rule_preserved,
-                "model_used": MODEL_USED_NONE,
-                "ml_probability": None,
-                "ml_preserved": None,
-                "detected_by": {
-                    "rules": not rule_preserved,
-                    "ml_classifier": False,
-                },
-            }
-
-        probability = float(ml_block["probability"])
-        ml_preserved = bool(ml_block["preserved"])
-        ml_strong = probability >= self._confirm_threshold
-        ml_weak = probability < self._no_preserve_threshold
-
-        if rule_preserved and ml_preserved:
-            decision = DECISION_PRESERVED
-            requires_confirmation = False
-        elif not rule_preserved:
-            # Hard rules are non-negotiable: any rule break wins.
-            decision = DECISION_BROKEN
-            requires_confirmation = True
-        elif ml_weak:
-            decision = DECISION_BROKEN
-            requires_confirmation = True
-        elif ml_strong:
-            decision = DECISION_PRESERVED
-            requires_confirmation = False
-        else:
-            decision = DECISION_UNCERTAIN
-            requires_confirmation = True
-
-        return {
-            "decision": decision,
-            "requires_confirmation": requires_confirmation,
-            "model_used": MODEL_USED_RF,
-            "ml_probability": round(probability, 4),
-            "ml_preserved": ml_preserved,
-            "detected_by": {
-                "rules": not rule_preserved,
-                "ml_classifier": ml_preserved or ml_weak,
-            },
-        }
+        return fuse_intent_decision(
+            rule_preserved,
+            ml_block,
+            confirm_threshold=self._confirm_threshold,
+            no_preserve_threshold=self._no_preserve_threshold,
+        )
 
     def _get_classifier(self) -> Any:
         """Lazily load and cache the ML classifier, or return ``None``."""
@@ -353,12 +350,7 @@ class IntentPreserver:
         revised_plan: RevisedPlan,
         anchor: IntentAnchor,
     ) -> Dict[str, Any]:
-        """Build the 14 model features from runtime replanning objects.
-
-        The runtime ``RevisedPlan`` does not carry the rich activity
-        coordinates used by the offline dataset, so unavailable signals
-        default to their intent-safe values (no shift, no change).
-        """
+        """Build the 14 model features from runtime replanning objects."""
 
         original = original_itinerary or {}
         context = original.get("context", {}) or {}
@@ -574,6 +566,7 @@ class IntentPreserver:
 
 __all__ = [
     "IntentPreserver",
+    "fuse_intent_decision",
     "DECISION_PRESERVED",
     "DECISION_BROKEN",
     "DECISION_UNCERTAIN",
