@@ -56,7 +56,7 @@ class RouteValidationService:
         if api_result.geometry:
             logger.info("Geometry Validation: Geometry successfully retrieved and parsed from API.")
             
-        # Fallback Handling
+        final_res = api_result
         if api_result.source in ["route_api_timeout", "route_api_error", "route_api_http_error", "route_api_invalid_response", "route_api_unavailable"]:
             logger.warning(f"Route API failed with source: {api_result.source}. Checking local data fallback.")
             if local_distance_km is not None:

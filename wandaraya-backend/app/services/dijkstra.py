@@ -224,6 +224,25 @@ class TimeCostModel:
         total_edge_time = motion_time + add_transfer + add_waiting
         return round(total_edge_time, 4)
 
+class EnvironmentalRiskCostModel:
+    """
+    Environmental risk-aware cost model for Dijkstra routing.
+    Weights edges by distance with a penalty factor for edges passing through
+    documented landslide proximity hazard zones or active severe weather areas.
+    Maintains travel distance, travel time, and fare as strictly separate metrics.
+    """
+    @staticmethod
+    def get_weight(edge: Edge) -> Optional[float]:
+        val_d = DistanceCostModel.get_weight(edge)
+        if val_d is None:
+            return None
+        attrs = getattr(edge, "attributes", {}) or {}
+        # Penalty if edge is tagged with environmental hazard (e.g., landslide proximity or severe weather alert)
+        risk_penalty = 1.0
+        if attrs.get("hazard_detected") or attrs.get("landslide_proximity"):
+            risk_penalty = 3.0  # Steers path towards safer alternative corridors
+        return max(0.01, round(val_d * risk_penalty, 4))
+
 class DijkstraPathResult:
     """
     Result of a Dijkstra route calculation.
@@ -288,6 +307,11 @@ class DijkstraPathResult:
             self.optimized_weight = self.total_distance_km
             self.warnings.append(
                 "Scenic-route objective optimized for picturesque landscapes, coastal/hill corridors, and scenic vistas."
+            )
+        elif self.objective in ("environmental_risk", "safe", "risk_aware"):
+            self.optimized_weight = self.total_distance_km
+            self.warnings.append(
+                "Environmental-risk objective optimized to steer route away from documented landslide zones and severe weather alerts."
             )
         else:
             self.optimized_weight = optimized_weight
@@ -375,23 +399,34 @@ class DijkstraRouter:
         "leisurely": "slower",
         "scenic": "scenic",
         "picturesque": "scenic",
+        "environmental_risk": "environmental_risk",
+        "safe": "environmental_risk",
+        "risk_aware": "environmental_risk",
     }
 
     def __init__(
         self,
         graph: MultimodalGraph,
         cost_model: Optional[Any] = None,
-        objective: str = "shortest"
+        objective: str = "shortest",
+        allowed_modes: Optional[Any] = None
     ):
         self.graph = graph
         raw_obj = (objective or "shortest").lower().strip()
         if raw_obj not in self.SUPPORTED_OBJECTIVES:
             raise ValueError(
                 f"Unsupported routing objective '{objective}'. "
-                "Supported objectives are: 'shortest' (distance), 'fastest' (time), 'cheapest' (cost), 'slower' (leisurely pace), 'scenic' (picturesque landscape)."
+                "Supported objectives are: 'shortest' (distance), 'fastest' (time), 'cheapest' (cost), 'slower' (leisurely pace), 'scenic' (picturesque landscape), 'environmental_risk' (hazard avoidance)."
             )
         self.canonical_objective = self.SUPPORTED_OBJECTIVES[raw_obj]
         self.objective = raw_obj
+        if allowed_modes is not None:
+            if isinstance(allowed_modes, str):
+                self.allowed_modes = {m.strip().lower() for m in allowed_modes.split(",") if m.strip()}
+            else:
+                self.allowed_modes = {str(m).strip().lower() for m in allowed_modes if str(m).strip()}
+        else:
+            self.allowed_modes = None
 
         if cost_model is not None:
             self.cost_model = cost_model
@@ -405,6 +440,24 @@ class DijkstraRouter:
             self.cost_model = SlowerCostModel()
         elif self.canonical_objective == "scenic":
             self.cost_model = ScenicCostModel()
+        elif self.canonical_objective == "environmental_risk":
+            self.cost_model = EnvironmentalRiskCostModel()
+
+    def _is_mode_allowed(self, mode_str: str) -> bool:
+        if self.allowed_modes is None:
+            return True
+        norm = mode_str.lower().strip()
+        if norm in self.allowed_modes:
+            return True
+        if norm == "rail" and ("train" in self.allowed_modes or "rail" in self.allowed_modes):
+            return True
+        if norm in ("road", "car") and ("car" in self.allowed_modes or "road" in self.allowed_modes or "driving" in self.allowed_modes):
+            return True
+        if norm in ("walking", "transfer") and ("walking" in self.allowed_modes or "walk" in self.allowed_modes or "transfer" in self.allowed_modes):
+            return True
+        if norm == "bike" and ("bike" in self.allowed_modes or "cycling" in self.allowed_modes):
+            return True
+        return False
 
     def route(self, from_node: str, to_node: str) -> DijkstraPathResult:
         """
@@ -454,6 +507,10 @@ class DijkstraRouter:
                     min_edge_dist = math.inf
                     
                     for e in edge_list:
+                        if self.allowed_modes is not None:
+                            mode_str = e.mode.value if hasattr(e.mode, "value") else str(e.mode)
+                            if not self._is_mode_allowed(mode_str):
+                                continue
                         w = self.cost_model.get_weight(e)
                         if w is not None and w < min_edge_dist:
                             min_edge_dist = w

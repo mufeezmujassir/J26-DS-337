@@ -31,7 +31,7 @@ class RouteAPIClient:
         }
 
         try:
-            async with httpx.AsyncClient(timeout=10.0) as client:
+            async with httpx.AsyncClient(timeout=3.0) as client:
                 logger.info(f"Route API Request Started for ({request.origin.latitude}, {request.origin.longitude}) to ({request.destination.latitude}, {request.destination.longitude})")
                 response = await client.post(self.endpoint, headers=headers, json=body)
                 response.raise_for_status()

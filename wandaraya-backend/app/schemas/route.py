@@ -22,6 +22,7 @@ class DijkstraRouteRequest(BaseModel):
     destination_node_id: Optional[str] = None
     max_snap_distance_km: float = Field(default=25.0, ge=0.1, le=100.0)
     objective: str = Field(default="shortest", description="Routing objective: 'shortest'/'distance', 'fastest'/'time', 'cheapest'/'cost', 'slower'/'leisurely', 'scenic'/'picturesque'")
+    allowed_modes: Optional[List[str]] = Field(default=None, description="Optional allowed transport modes: train, bus, car, bike, walking")
 
 class RouteEdgeResponse(BaseModel):
     from_node: str
@@ -63,6 +64,7 @@ class DijkstraRouteResponse(BaseModel):
     is_cost_estimated: bool = False
     objective: str = "distance"
     optimized_weight: Optional[float] = None
-    warnings: List[str]
+    warnings: List[str] = Field(default_factory=list)
     edges: List[RouteEdgeResponse]
+    environmental_assessment: Optional[dict] = None
     source: str = "local_dijkstra"

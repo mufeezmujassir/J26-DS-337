@@ -116,7 +116,7 @@ async def calculate_dijkstra_route(
 
     # 5. Run Dijkstra routing
     try:
-        router = DijkstraRouter(graph, objective=payload.objective)
+        router = DijkstraRouter(graph, objective=payload.objective, allowed_modes=payload.allowed_modes)
         result = router.route(origin_node, dest_node)
     except ValueError as e:
         err_msg = str(e)
@@ -136,7 +136,22 @@ async def calculate_dijkstra_route(
             detail="An error occurred while calculating the route."
         )
 
-    # 6. Format and return response
+    # 6. Environmental risk assessment along route coordinates
+    env_assessment = None
+    route_coords = [
+        (graph.get_node(n).lat, graph.get_node(n).lon)
+        for n in result.nodes
+        if graph.get_node(n) and graph.get_node(n).lat is not None and graph.get_node(n).lon is not None
+    ]
+    if route_coords:
+        try:
+            from app.services.environmental_risk_service import environmental_risk_service
+            assessment = environmental_risk_service.assess_route(route_coords, route_id=f"{origin_node}->{dest_node}")
+            env_assessment = assessment.to_dict()
+        except Exception as e:
+            logger.warning(f"Environmental risk assessment failed: {e}")
+
+    # 7. Format and return response
     return DijkstraRouteResponse(
         origin_node=origin_node,
         destination_node=dest_node,
@@ -181,5 +196,6 @@ async def calculate_dijkstra_route(
             )
             for e in result.edges
         ],
+        environmental_assessment=env_assessment,
         source="local_dijkstra"
     )

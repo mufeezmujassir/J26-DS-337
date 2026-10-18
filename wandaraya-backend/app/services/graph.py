@@ -7,6 +7,8 @@ class GraphMode(str, Enum):
     RAIL = 'rail'
     WALKING = 'walking'
     TRANSFER = 'transfer'
+    BIKE = 'bike'
+    CAR = 'car'
 
 class Node:
     def __init__(self, node_id: str, lat: Optional[float] = None, lon: Optional[float] = None, properties: Optional[Dict[str, Any]] = None):
