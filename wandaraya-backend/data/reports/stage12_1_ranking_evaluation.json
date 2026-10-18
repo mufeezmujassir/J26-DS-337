@@ -1,0 +1,29 @@
+{
+  "status": "FIXTURE_EVALUATION_COMPLETED",
+  "label_source": "controlled_test_fixture_not_real_world_quality_claim",
+  "fixture": {
+    "relevant_attraction_ids": [
+      101,
+      102,
+      104
+    ]
+  },
+  "semantic_only": {
+    "precision_at_5": 0.6,
+    "recall_at_5": 1.0,
+    "ndcg_at_5": 0.9674679834891693
+  },
+  "content_baseline": {
+    "precision_at_5": 0.6,
+    "recall_at_5": 1.0,
+    "ndcg_at_5": 1.0,
+    "coverage": 1.0,
+    "ranking_stability": true,
+    "fixture_latency_ms": 0
+  },
+  "limitations": [
+    "Metrics use controlled labels only.",
+    "No production or real-user relevance claim is made.",
+    "Latency excludes embedding, Qdrant, and PostgreSQL network work."
+  ]
+}
