@@ -1,0 +1,11 @@
+{
+  "status": "AWAITING_DATABASE_MIGRATION_APPROVAL",
+  "pilot_records": 2196,
+  "sample_identity_count": 6,
+  "historical_sampling_count": 25,
+  "estimated_historical_records": 146100,
+  "postgresql_live_writes": false,
+  "qdrant_writes": false,
+  "ranking_changes": false,
+  "pending": "Resolve the PostgreSQL collation mismatch and rerun isolated migration test; then separately authorize active-database migration and ingestion."
+}

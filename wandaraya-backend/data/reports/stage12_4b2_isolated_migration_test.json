@@ -1,0 +1,5 @@
+{
+  "status": "BLOCKED",
+  "test_database": "wandaraya_climate_test",
+  "reason": "PostgreSQL refused CREATE DATABASE ... TEMPLATE wandaraya because the source database has a collation version mismatch (created 2.41, operating system provides 2.31). No test database was created; upgrade/downgrade were not executed."
+}
