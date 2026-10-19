@@ -1,0 +1,120 @@
+[
+  {
+    "group_id": "GROUP_01_PROPOSAL_EXAMPLE",
+    "name": "Proposal Example (3 members: beach vs historical site with rejection)",
+    "category": "Destination",
+    "records": [
+      {"member": "Alice", "category": "Destination", "stance": "positive", "value": {"name": "beach"}},
+      {"member": "Bob", "category": "Destination", "stance": "positive", "value": {"name": "beach"}},
+      {"member": "Charlie", "category": "Destination", "stance": "negative", "value": {"name": "beach"}},
+      {"member": "Charlie", "category": "Destination", "stance": "positive", "value": {"name": "historical site"}}
+    ]
+  },
+  {
+    "group_id": "GROUP_02_MINORITY_EXAMPLE",
+    "name": "Minority Example (5 members: 4 beach, 1 historical site minority)",
+    "category": "Destination",
+    "records": [
+      {"member": "Alice", "category": "Destination", "stance": "positive", "value": {"name": "beach"}},
+      {"member": "Bob", "category": "Destination", "stance": "positive", "value": {"name": "beach"}},
+      {"member": "Charlie", "category": "Destination", "stance": "positive", "value": {"name": "beach"}},
+      {"member": "David", "category": "Destination", "stance": "positive", "value": {"name": "beach"}},
+      {"member": "Eve", "category": "Destination", "stance": "negative", "value": {"name": "beach"}},
+      {"member": "Eve", "category": "Destination", "stance": "positive", "value": {"name": "historical site"}}
+    ]
+  },
+  {
+    "group_id": "GROUP_03_STRONG_CONSENSUS",
+    "name": "Strong Consensus on Ella (3 members unanimous)",
+    "category": "Destination",
+    "records": [
+      {"member": "Alice", "category": "Destination", "stance": "positive", "value": {"name": "ella"}},
+      {"member": "Bob", "category": "Destination", "stance": "positive", "value": {"name": "ella"}},
+      {"member": "Charlie", "category": "Destination", "stance": "positive", "value": {"name": "ella"}}
+    ]
+  },
+  {
+    "group_id": "GROUP_04_PERFECT_TIE",
+    "name": "Tied Group (4 members: 2 Kandy, 2 Galle)",
+    "category": "Destination",
+    "records": [
+      {"member": "Alice", "category": "Destination", "stance": "positive", "value": {"name": "kandy"}},
+      {"member": "Bob", "category": "Destination", "stance": "positive", "value": {"name": "kandy"}},
+      {"member": "Charlie", "category": "Destination", "stance": "positive", "value": {"name": "galle"}},
+      {"member": "David", "category": "Destination", "stance": "positive", "value": {"name": "galle"}}
+    ]
+  },
+  {
+    "group_id": "GROUP_05_POLARIZED_REJECTION",
+    "name": "Divergent Preferences (Majority picks Sigiriya, Preference-only picks Galle)",
+    "category": "Destination",
+    "records": [
+      {"member": "Alice", "category": "Destination", "stance": "positive", "value": {"name": "sigiriya"}},
+      {"member": "Bob", "category": "Destination", "stance": "positive", "value": {"name": "sigiriya"}},
+      {"member": "Charlie", "category": "Destination", "stance": "positive", "value": {"name": "sigiriya"}},
+      {"member": "David", "category": "Destination", "stance": "negative", "value": {"name": "sigiriya"}},
+      {"member": "Eve", "category": "Destination", "stance": "negative", "value": {"name": "sigiriya"}},
+      {"member": "David", "category": "Destination", "stance": "positive", "value": {"name": "galle"}},
+      {"member": "Eve", "category": "Destination", "stance": "positive", "value": {"name": "galle"}}
+    ]
+  },
+  {
+    "group_id": "GROUP_06_SPLIT_MULTI_PREFERENCES",
+    "name": "Multi-preference Split Votes (Hiking vs Surfing vs Safari)",
+    "category": "Activity",
+    "records": [
+      {"member": "Alice", "category": "Activity", "stance": "positive", "value": {"name": "hiking"}},
+      {"member": "Alice", "category": "Activity", "stance": "positive", "value": {"name": "surfing"}},
+      {"member": "Bob", "category": "Activity", "stance": "positive", "value": {"name": "surfing"}},
+      {"member": "Bob", "category": "Activity", "stance": "positive", "value": {"name": "safari"}},
+      {"member": "Charlie", "category": "Activity", "stance": "positive", "value": {"name": "safari"}}
+    ]
+  },
+  {
+    "group_id": "GROUP_07_SINGLE_MEMBER",
+    "name": "Single Member Group (Sole preference for Nuwara Eliya)",
+    "category": "Destination",
+    "records": [
+      {"member": "SoloTraveler", "category": "Destination", "stance": "positive", "value": {"name": "nuwara eliya"}}
+    ]
+  },
+  {
+    "group_id": "GROUP_08_COMPROMISE_UNANIMOUS",
+    "name": "Polarized Extremes with Common Compromise",
+    "category": "Destination",
+    "records": [
+      {"member": "Alice", "category": "Destination", "stance": "positive", "value": {"name": "mirissa"}},
+      {"member": "Bob", "category": "Destination", "stance": "positive", "value": {"name": "mirissa"}},
+      {"member": "Charlie", "category": "Destination", "stance": "negative", "value": {"name": "mirissa"}},
+      {"member": "David", "category": "Destination", "stance": "negative", "value": {"name": "mirissa"}},
+      {"member": "Charlie", "category": "Destination", "stance": "positive", "value": {"name": "colombo"}},
+      {"member": "David", "category": "Destination", "stance": "positive", "value": {"name": "colombo"}},
+      {"member": "Alice", "category": "Destination", "stance": "negative", "value": {"name": "colombo"}},
+      {"member": "Bob", "category": "Destination", "stance": "negative", "value": {"name": "colombo"}},
+      {"member": "Alice", "category": "Destination", "stance": "positive", "value": {"name": "kandy"}},
+      {"member": "Bob", "category": "Destination", "stance": "positive", "value": {"name": "kandy"}},
+      {"member": "Charlie", "category": "Destination", "stance": "positive", "value": {"name": "kandy"}},
+      {"member": "David", "category": "Destination", "stance": "positive", "value": {"name": "kandy"}}
+    ]
+  },
+  {
+    "group_id": "GROUP_09_ACTIVITY_SURF_VS_HIKE",
+    "name": "Activity Group with Opposing Stances on Surfing",
+    "category": "Activity",
+    "records": [
+      {"member": "Alice", "category": "Activity", "stance": "positive", "value": {"name": "surfing"}},
+      {"member": "Bob", "category": "Activity", "stance": "positive", "value": {"name": "hiking"}},
+      {"member": "Charlie", "category": "Activity", "stance": "negative", "value": {"name": "surfing"}},
+      {"member": "Charlie", "category": "Activity", "stance": "positive", "value": {"name": "hiking"}}
+    ]
+  },
+  {
+    "group_id": "GROUP_10_NO_POSITIVES",
+    "name": "Group with Only Negative Stances",
+    "category": "Destination",
+    "records": [
+      {"member": "Alice", "category": "Destination", "stance": "negative", "value": {"name": "colombo"}},
+      {"member": "Bob", "category": "Destination", "stance": "negative", "value": {"name": "colombo"}}
+    ]
+  }
+]
