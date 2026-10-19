@@ -1,0 +1,80 @@
+{
+  "mode": "offline_preview",
+  "original_order": [
+    1,
+    1633
+  ],
+  "preview_order": [
+    1,
+    1633
+  ],
+  "scores": [
+    {
+      "attraction_id": 1,
+      "holiday_score": null,
+      "poya_score": 0.6,
+      "event_score": null,
+      "interest_compatibility_score": 1.0,
+      "context_suitability_score": 0.745455,
+      "context_confidence": "MEDIUM",
+      "evidence_coverage": 0.5,
+      "eligible_features": [
+        "interests",
+        "poya"
+      ],
+      "excluded_features": [
+        "holiday:dependent_on_poya_evidence"
+      ],
+      "missing_features": [
+        "verified_event_attraction_evidence"
+      ],
+      "matched_interests": [
+        "culture",
+        "heritage"
+      ],
+      "unmatched_interests": [],
+      "evidence_sources": [
+        "https://calendarsrilanka.com/"
+      ],
+      "uncertainty_flags": [
+        "holiday_public_bank_classification_page_level_uncertain"
+      ],
+      "explanation": "Experimental weighted average of eligible evidence only."
+    },
+    {
+      "attraction_id": 1633,
+      "holiday_score": null,
+      "poya_score": 0.3,
+      "event_score": null,
+      "interest_compatibility_score": 0.0,
+      "context_suitability_score": 0.190909,
+      "context_confidence": "MEDIUM",
+      "evidence_coverage": 0.5,
+      "eligible_features": [
+        "interests",
+        "poya"
+      ],
+      "excluded_features": [
+        "holiday:dependent_on_poya_evidence"
+      ],
+      "missing_features": [
+        "verified_event_attraction_evidence"
+      ],
+      "matched_interests": [],
+      "unmatched_interests": [
+        "culture",
+        "heritage"
+      ],
+      "evidence_sources": [
+        "https://calendarsrilanka.com/"
+      ],
+      "uncertainty_flags": [
+        "holiday_public_bank_classification_page_level_uncertain"
+      ],
+      "explanation": "Experimental weighted average of eligible evidence only."
+    }
+  ],
+  "production_ranking_changed": false,
+  "postgresql_writes": false,
+  "qdrant_writes": false
+}

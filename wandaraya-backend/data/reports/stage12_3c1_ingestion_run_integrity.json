@@ -1,0 +1,78 @@
+{
+  "calendar_ingestion_runs": [
+    {
+      "id": 1,
+      "status": "SUCCEEDED",
+      "started_at": "2026-10-19T05:45:44.264937+00:00",
+      "finished_at": "2026-10-19T05:45:45.211610+00:00",
+      "records_fetched": 1,
+      "records_inserted": 45,
+      "records_updated": 0,
+      "records_unchanged": 0,
+      "records_rejected": 0,
+      "error_summary": null
+    },
+    {
+      "id": 3,
+      "status": "FAILED",
+      "started_at": "2026-10-19T05:46:57.884913+00:00",
+      "finished_at": "2026-10-19T05:46:57.886396+00:00",
+      "records_fetched": 1,
+      "records_inserted": 0,
+      "records_updated": 1,
+      "records_unchanged": 0,
+      "records_rejected": 1,
+      "error_summary": "Object of type datetime is not JSON serializable"
+    },
+    {
+      "id": 4,
+      "status": "ACCESS_BLOCKED",
+      "started_at": "2026-10-19T05:50:41.640941+00:00",
+      "finished_at": "2026-10-19T05:50:41.650517+00:00",
+      "records_fetched": 0,
+      "records_inserted": 0,
+      "records_updated": 0,
+      "records_unchanged": 0,
+      "records_rejected": 0,
+      "error_summary": "ACCESS_BLOCKED:terms_evidence_incomplete"
+    },
+    {
+      "id": 6,
+      "status": "FAILED",
+      "started_at": "2026-10-19T05:52:24.555779+00:00",
+      "finished_at": "2026-10-19T05:52:24.558969+00:00",
+      "records_fetched": 1,
+      "records_inserted": 0,
+      "records_updated": 1,
+      "records_unchanged": 0,
+      "records_rejected": 1,
+      "error_summary": "Object of type datetime is not JSON serializable"
+    },
+    {
+      "id": 7,
+      "status": "SUCCEEDED",
+      "started_at": "2026-10-19T06:10:32.258636+00:00",
+      "finished_at": "2026-10-19T06:10:33.377405+00:00",
+      "records_fetched": 1,
+      "records_inserted": 0,
+      "records_updated": 0,
+      "records_unchanged": 45,
+      "records_rejected": 0,
+      "error_summary": null
+    },
+    {
+      "id": 8,
+      "status": "SUCCEEDED",
+      "started_at": "2026-10-19T06:13:11.438437+00:00",
+      "finished_at": "2026-10-19T06:13:12.000956+00:00",
+      "records_fetched": 1,
+      "records_inserted": 0,
+      "records_updated": 0,
+      "records_unchanged": 45,
+      "records_rejected": 0,
+      "error_summary": null
+    }
+  ],
+  "revision_count": 0,
+  "orphan_running_runs": []
+}

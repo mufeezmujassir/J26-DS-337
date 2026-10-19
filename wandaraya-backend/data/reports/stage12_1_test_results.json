@@ -1,0 +1,45 @@
+{
+  "runner": "bounded_stdlib_verifier",
+  "passed": 9,
+  "failed": 0,
+  "skipped": 0,
+  "checks": [
+    {
+      "name": "stable_attraction_id_tie_break",
+      "status": "passed"
+    },
+    {
+      "name": "category_activity_district_matching",
+      "status": "passed"
+    },
+    {
+      "name": "missing_soft_metadata_is_unknown",
+      "status": "passed"
+    },
+    {
+      "name": "hard_budget_missing_metadata_excluded",
+      "status": "passed"
+    },
+    {
+      "name": "duplicate_candidate_retains_best_semantic_score",
+      "status": "passed"
+    },
+    {
+      "name": "missing_hydrated_candidate_excluded",
+      "status": "passed"
+    },
+    {
+      "name": "invalid_candidate_limit_rejected",
+      "status": "passed"
+    },
+    {
+      "name": "baseline_scope_excludes_context_layers",
+      "status": "passed"
+    },
+    {
+      "name": "verified_region_preference_matching",
+      "status": "passed"
+    }
+  ],
+  "pytest_note": "pytest is not installed in the active backend container; pytest test files are included but were not executed."
+}

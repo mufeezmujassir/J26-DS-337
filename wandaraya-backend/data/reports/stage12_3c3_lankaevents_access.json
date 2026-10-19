@@ -1,0 +1,20 @@
+{
+  "policy_configured": {
+    "terms_reviewed": true,
+    "automated_collection_permitted": true,
+    "terms_evidence_reference": "REPLACE_WITH_REVIEWED_PUBLIC_TERMS_URL_OR_RECORDED_PERMISSION",
+    "allowed_detail_path_prefixes": []
+  },
+  "latest_access_check": {
+    "source_name": "lanka_events",
+    "url": "https://lankaevents.lk/",
+    "permitted": false,
+    "reason": "ACCESS_BLOCKED:terms_evidence_incomplete",
+    "robots_url": "https://lankaevents.lk/robots.txt",
+    "robots_status": 404,
+    "target_url": "https://lankaevents.lk/",
+    "transport": "requests"
+  },
+  "live_collection_permitted": false,
+  "decision": "No live event discovery was run because terms evidence/detail URL permissions are incomplete."
+}

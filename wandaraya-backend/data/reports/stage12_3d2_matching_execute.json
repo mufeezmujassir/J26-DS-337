@@ -1,0 +1,150 @@
+{
+  "generated_at_utc": "2026-10-19T09:10:56.636901+00:00",
+  "mode": "execute",
+  "events_examined": 1,
+  "candidate_retrieval_count": 5,
+  "verified_link_count": 0,
+  "candidate_link_count": 5,
+  "unresolved_event_count": 0,
+  "llm_requests": 0,
+  "candidate_links_inserted": 5,
+  "candidate_links_updated": 0,
+  "postgresql_writes_executed": true,
+  "qdrant_writes_executed": false,
+  "results": [
+    {
+      "event_id": 1,
+      "query": "title: WNPS Field Trip-Yala\ndescription: Reminder: WNPS Field Trip-Yala is starting soon!\nvenue: Yala",
+      "location": {
+        "latitude": null,
+        "longitude": null,
+        "district_id": null,
+        "venue_name": "Yala",
+        "location_source_url": "https://lankaevents.lk/iCalendar/?ID=7856",
+        "location_evidence_type": "source_venue_or_region_mention",
+        "location_confidence": "CANDIDATE",
+        "verification_status": "CANDIDATE",
+        "verification_method": "stored_source_text",
+        "uncertainty_flags": [
+          "venue_or_region_requires_independent_geographic_verification"
+        ]
+      },
+      "proposed_category": null,
+      "llm_status": "LLM_NOT_NEEDED_OR_NOT_REQUESTED",
+      "llm_requests": 0,
+      "candidates": [
+        {
+          "event_id": 1,
+          "attraction_id": 1633,
+          "attraction_name": "Yala National Park Museum| \u0dba\u0dcf\u0dbd \u0d8b\u0daf\u0dca\u200d\u0dba\u0dcf\u0db1\u0dba\u0dda \u0d9a\u0dde\u0dad\u0dd4\u0d9a\u0dcf\u0d9c\u0dcf\u0dbb\u0dba",
+          "match_status": "CANDIDATE",
+          "semantic_similarity": 0.6793306,
+          "semantic_candidate_rank": 1,
+          "semantic_evidence_fields": [
+            "title",
+            "description",
+            "venue"
+          ],
+          "category_compatibility": "unknown",
+          "geographic_distance_km": null,
+          "matching_confidence": 0.6793306,
+          "evidence_source_url": "https://lankaevents.lk/iCalendar/?ID=7856",
+          "explanation": "Semantic retrieval candidate only; it has not been verified as an event venue, location, or attraction identity.",
+          "uncertainty_flags": [
+            "semantic_similarity_is_not_geographic_or_identity_proof",
+            "venue_or_region_requires_independent_geographic_verification"
+          ]
+        },
+        {
+          "event_id": 1,
+          "attraction_id": 4093,
+          "attraction_name": "Museum of Yala-East(Kumana) National Park",
+          "match_status": "CANDIDATE",
+          "semantic_similarity": 0.67656183,
+          "semantic_candidate_rank": 2,
+          "semantic_evidence_fields": [
+            "title",
+            "description",
+            "venue"
+          ],
+          "category_compatibility": "unknown",
+          "geographic_distance_km": null,
+          "matching_confidence": 0.67656183,
+          "evidence_source_url": "https://lankaevents.lk/iCalendar/?ID=7856",
+          "explanation": "Semantic retrieval candidate only; it has not been verified as an event venue, location, or attraction identity.",
+          "uncertainty_flags": [
+            "semantic_similarity_is_not_geographic_or_identity_proof",
+            "venue_or_region_requires_independent_geographic_verification"
+          ]
+        },
+        {
+          "event_id": 1,
+          "attraction_id": 1223,
+          "attraction_name": "Yala National Park - Block VI",
+          "match_status": "CANDIDATE",
+          "semantic_similarity": 0.669367,
+          "semantic_candidate_rank": 3,
+          "semantic_evidence_fields": [
+            "title",
+            "description",
+            "venue"
+          ],
+          "category_compatibility": "unknown",
+          "geographic_distance_km": null,
+          "matching_confidence": 0.669367,
+          "evidence_source_url": "https://lankaevents.lk/iCalendar/?ID=7856",
+          "explanation": "Semantic retrieval candidate only; it has not been verified as an event venue, location, or attraction identity.",
+          "uncertainty_flags": [
+            "semantic_similarity_is_not_geographic_or_identity_proof",
+            "venue_or_region_requires_independent_geographic_verification"
+          ]
+        },
+        {
+          "event_id": 1,
+          "attraction_id": 1841,
+          "attraction_name": "Yala Safari Team / Jeep Safari in Yala National park",
+          "match_status": "CANDIDATE",
+          "semantic_similarity": 0.65854645,
+          "semantic_candidate_rank": 4,
+          "semantic_evidence_fields": [
+            "title",
+            "description",
+            "venue"
+          ],
+          "category_compatibility": "unknown",
+          "geographic_distance_km": null,
+          "matching_confidence": 0.65854645,
+          "evidence_source_url": "https://lankaevents.lk/iCalendar/?ID=7856",
+          "explanation": "Semantic retrieval candidate only; it has not been verified as an event venue, location, or attraction identity.",
+          "uncertainty_flags": [
+            "semantic_similarity_is_not_geographic_or_identity_proof",
+            "venue_or_region_requires_independent_geographic_verification"
+          ]
+        },
+        {
+          "event_id": 1,
+          "attraction_id": 161,
+          "attraction_name": "Yala National Park Block V (\u0dc0\u0dd9\u0dc4\u0dd9\u0dbb\u0d9c\u0dbd) Safari",
+          "match_status": "CANDIDATE",
+          "semantic_similarity": 0.65738297,
+          "semantic_candidate_rank": 5,
+          "semantic_evidence_fields": [
+            "title",
+            "description",
+            "venue"
+          ],
+          "category_compatibility": "unknown",
+          "geographic_distance_km": null,
+          "matching_confidence": 0.65738297,
+          "evidence_source_url": "https://lankaevents.lk/iCalendar/?ID=7856",
+          "explanation": "Semantic retrieval candidate only; it has not been verified as an event venue, location, or attraction identity.",
+          "uncertainty_flags": [
+            "semantic_similarity_is_not_geographic_or_identity_proof",
+            "venue_or_region_requires_independent_geographic_verification"
+          ]
+        }
+      ],
+      "errors": []
+    }
+  ]
+}

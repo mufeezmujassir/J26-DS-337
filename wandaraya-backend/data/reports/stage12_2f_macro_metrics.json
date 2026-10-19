@@ -1,0 +1,21 @@
+{
+  "status": "MULTI_QUERY_EVALUATION_COMPLETED",
+  "macro_averages": {
+    "semantic_only": {
+      "precision_at_5": 0.7799999999999999,
+      "judged_pool_recall_at_5": 0.15126949040742144,
+      "ndcg_at_5": 0.607061967422905
+    },
+    "content_baseline_v1": {
+      "precision_at_5": 0.82,
+      "judged_pool_recall_at_5": 0.15611181283595074,
+      "ndcg_at_5": 0.604059666682552
+    },
+    "content_evidence_review_experiment_v1": {
+      "precision_at_5": 0.8800000000000001,
+      "judged_pool_recall_at_5": 0.1773378664757975,
+      "ndcg_at_5": 0.7021026562657887
+    }
+  },
+  "bootstrap_confidence_intervals": "not computed automatically; require review of query independence and sample size"
+}

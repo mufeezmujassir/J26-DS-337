@@ -1,0 +1,10 @@
+{
+  "routes": [
+    "GET /api/v1/events",
+    "GET /api/v1/events/upcoming",
+    "GET /api/v1/events/{event_id}",
+    "GET /api/v1/context/holiday-events"
+  ],
+  "event_records_available": 0,
+  "status": "NO_LIVE_EVENT_READBACK_AVAILABLE"
+}

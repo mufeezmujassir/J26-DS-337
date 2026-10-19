@@ -1,0 +1,12 @@
+{
+  "status": "CONTEXT_WEIGHT_CALIBRATION_VERIFIED",
+  "limitations": [
+    "manually authored research queries",
+    "judged-pool recall only",
+    "no verified event links",
+    "calibration uses a coarse development-only grid"
+  ],
+  "postgresql_writes": false,
+  "qdrant_writes": false,
+  "production_ranking_changed": false
+}

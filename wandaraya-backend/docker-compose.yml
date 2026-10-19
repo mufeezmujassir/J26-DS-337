@@ -193,6 +193,10 @@ services:
       AIRFLOW__CORE__LOAD_EXAMPLES: "false"
       PYTHONPATH: /opt/airflow/project
       WANDARAYA_PROJECT_ROOT: /opt/airflow/project
+      # Calendar Sri Lanka only: the DAG still performs a runtime robots and
+      # source-authorization check before every scheduled execution.
+      HOLIDAY_EVENT_SCHEDULED_INGESTION_ENABLED: "true"
+      HOLIDAY_EVENT_SOURCE_POLICY_PATH: /opt/airflow/project/config/holiday_event_source_policy.local.json
 
     volumes:
       - .:/opt/airflow/project

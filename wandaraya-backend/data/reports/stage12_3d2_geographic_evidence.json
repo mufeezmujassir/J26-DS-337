@@ -1,0 +1,20 @@
+{
+  "fixture_only_results": false,
+  "real_event_id": 1,
+  "location_evidence": {
+    "latitude": null,
+    "longitude": null,
+    "district_id": null,
+    "venue_name": "Yala",
+    "location_source_url": "https://lankaevents.lk/iCalendar/?ID=7856",
+    "location_evidence_type": "source_venue_or_region_mention",
+    "location_confidence": "CANDIDATE",
+    "verification_status": "CANDIDATE",
+    "verification_method": "stored_source_text",
+    "uncertainty_flags": [
+      "venue_or_region_requires_independent_geographic_verification"
+    ]
+  },
+  "verified_geographic_matches": 0,
+  "limitation": "The stored source text names Yala but contains no verified coordinates, district, or explicit attraction identity."
+}

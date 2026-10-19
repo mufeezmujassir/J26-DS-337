@@ -1,0 +1,1273 @@
+{
+  "generated_at_utc": "2026-10-18T15:24:31.137406+00:00",
+  "scope": "bounded 200-candidate diagnostic pool",
+  "suspicious_records_requiring_human_review": [
+    {
+      "attraction_id": 2281,
+      "name": "Travel Sri Lanka offers",
+      "semantic_score": 0.72269845,
+      "flags": [
+        "name_requires_tourism_eligibility_review",
+        "missing_category_metadata",
+        "missing_activity_metadata"
+      ],
+      "categories": [],
+      "activities": []
+    },
+    {
+      "attraction_id": 80,
+      "name": "Jayanthi Junction",
+      "semantic_score": 0.7226291,
+      "flags": [
+        "name_requires_tourism_eligibility_review"
+      ],
+      "categories": [
+        "Culture & Heritage",
+        "History & Archaeology",
+        "Photography & Scenic Spots"
+      ],
+      "activities": [
+        "Historical Exploration",
+        "Sightseeing"
+      ]
+    },
+    {
+      "attraction_id": 78,
+      "name": "Kottawa Junction",
+      "semantic_score": 0.71848047,
+      "flags": [
+        "name_requires_tourism_eligibility_review"
+      ],
+      "categories": [
+        "Culture & Heritage",
+        "History & Archaeology",
+        "Photography & Scenic Spots"
+      ],
+      "activities": [
+        "Historical Exploration",
+        "Sightseeing"
+      ]
+    },
+    {
+      "attraction_id": 3493,
+      "name": "Galle Face Park & Beach",
+      "semantic_score": 0.71486473,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Beaches & Coastal",
+        "Nature & Landscapes",
+        "Water & Marine Activities"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 1064,
+      "name": "Hero's Bridge",
+      "semantic_score": 0.7133038,
+      "flags": [
+        "missing_category_metadata",
+        "missing_activity_metadata"
+      ],
+      "categories": [],
+      "activities": []
+    },
+    {
+      "attraction_id": 73,
+      "name": "Pilana Junction - \u0db4\u0dd2\u0dbd\u0dcf\u0db1 \u0dc4\u0db1\u0dca\u0daf\u0dd2\u0dba",
+      "semantic_score": 0.711909,
+      "flags": [
+        "name_requires_tourism_eligibility_review"
+      ],
+      "categories": [
+        "Culture & Heritage",
+        "History & Archaeology",
+        "Photography & Scenic Spots"
+      ],
+      "activities": [
+        "Historical Exploration",
+        "Sightseeing"
+      ]
+    },
+    {
+      "attraction_id": 2064,
+      "name": "Uragasmanhandiya",
+      "semantic_score": 0.69973665,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Religious & Spiritual"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 1049,
+      "name": "Wathurawila Camping Site \u0dc0\u0dad\u0dd4\u0dbb\u0dc0\u0dd2\u0dbd \u0d9a\u0dd1\u0db8\u0dca\u0db4\u0dd2\u0d82 \u0dc3\u0dba\u0dd2\u0da7\u0dca",
+      "semantic_score": 0.69748425,
+      "flags": [
+        "missing_category_metadata"
+      ],
+      "categories": [],
+      "activities": [
+        "Camping"
+      ]
+    },
+    {
+      "attraction_id": 541,
+      "name": "Miyanawathura Adventure",
+      "semantic_score": 0.6959077,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Adventure & Outdoor"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 28,
+      "name": "Hikkaduwa Beach",
+      "semantic_score": 0.69457704,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Beaches & Coastal",
+        "Nature & Landscapes",
+        "Water & Marine Activities"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 703,
+      "name": "Halvitigala Tea Factory",
+      "semantic_score": 0.6943722,
+      "flags": [
+        "missing_category_metadata"
+      ],
+      "categories": [],
+      "activities": [
+        "Tea Factory Visit"
+      ]
+    },
+    {
+      "attraction_id": 27,
+      "name": "Unawatuna Beach",
+      "semantic_score": 0.69322526,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Beaches & Coastal",
+        "Nature & Landscapes",
+        "Water & Marine Activities"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 2015,
+      "name": "Ventura Beach",
+      "semantic_score": 0.6922618,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Beaches & Coastal",
+        "Nature & Landscapes",
+        "Water & Marine Activities"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 615,
+      "name": "Galpothukatiya Park",
+      "semantic_score": 0.69184417,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Family & Recreation",
+        "Wildlife & Safari"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 857,
+      "name": "The Cinnamon Trail",
+      "semantic_score": 0.68970245,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Entertainment & Nightlife",
+        "Festivals & Events",
+        "Food & Culinary"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 408,
+      "name": "Sri Siththi Vinayagar Temple Galle Thalangaha",
+      "semantic_score": 0.68832356,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Religious & Spiritual"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 610,
+      "name": "Thiyabarahena Park",
+      "semantic_score": 0.68558985,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Family & Recreation",
+        "Wildlife & Safari"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 723,
+      "name": "Tea Avenue",
+      "semantic_score": 0.6813924,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Food & Culinary",
+        "Shopping & Local Markets"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 916,
+      "name": "Dotulugala",
+      "semantic_score": 0.6813619,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Nature & Landscapes"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 701,
+      "name": "Liyota Tea Factory",
+      "semantic_score": 0.68074346,
+      "flags": [
+        "missing_category_metadata"
+      ],
+      "categories": [],
+      "activities": [
+        "Tea Factory Visit"
+      ]
+    },
+    {
+      "attraction_id": 1102,
+      "name": "Rotti Shop ( \u0dbb\u0ddc\u0da7\u0dd2 \u0d9a\u0db8\u0dd4)",
+      "semantic_score": 0.6806229,
+      "flags": [
+        "missing_category_metadata",
+        "missing_activity_metadata"
+      ],
+      "categories": [],
+      "activities": []
+    },
+    {
+      "attraction_id": 1024,
+      "name": "Higurahena ella",
+      "semantic_score": 0.6793537,
+      "flags": [
+        "missing_category_metadata",
+        "missing_activity_metadata"
+      ],
+      "categories": [],
+      "activities": []
+    },
+    {
+      "attraction_id": 343,
+      "name": "Galbendidolakanda",
+      "semantic_score": 0.6791058,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Nature & Landscapes"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 6615,
+      "name": "Koggala Beach",
+      "semantic_score": 0.6790158,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Beaches & Coastal"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 2315,
+      "name": "Excellent Tea Trade Center",
+      "semantic_score": 0.6782086,
+      "flags": [
+        "missing_category_metadata",
+        "missing_activity_metadata"
+      ],
+      "categories": [],
+      "activities": []
+    },
+    {
+      "attraction_id": 468,
+      "name": "Cinnamon Tour",
+      "semantic_score": 0.67767864,
+      "flags": [
+        "missing_category_metadata",
+        "missing_activity_metadata"
+      ],
+      "categories": [],
+      "activities": []
+    },
+    {
+      "attraction_id": 195,
+      "name": "Bentota Beach",
+      "semantic_score": 0.67749655,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Urban & City Attractions"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 1002,
+      "name": "Masjid Ali a.s",
+      "semantic_score": 0.6774748,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Religious & Spiritual"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 613,
+      "name": "Jayavikrama Park",
+      "semantic_score": 0.6762846,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Family & Recreation",
+        "Wildlife & Safari"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 929,
+      "name": "Kohilarambe",
+      "semantic_score": 0.6761514,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Nature & Landscapes"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 6412,
+      "name": "Rajagalathanna Archeological Ruins \u0dbb\u0da2\u0d9c\u0dbd\u0dad\u0dd0\u0db1\u0dca\u0db1 \u0dc0\u0dd2\u0dc4\u0dcf\u0dbb \u0db1\u0da7\u0db9\u0dd4\u0db1\u0dca",
+      "semantic_score": 0.6752388,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Urban & City Attractions"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 3381,
+      "name": "Galle Face Green",
+      "semantic_score": 0.6746222,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Family & Recreation",
+        "Nature & Landscapes",
+        "Urban & City Attractions"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 2272,
+      "name": "Information Centre",
+      "semantic_score": 0.67455184,
+      "flags": [
+        "missing_category_metadata",
+        "missing_activity_metadata"
+      ],
+      "categories": [],
+      "activities": []
+    },
+    {
+      "attraction_id": 2018,
+      "name": "Ayubowan Tuk Tuk Park",
+      "semantic_score": 0.6744051,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Beaches & Coastal",
+        "Nature & Landscapes",
+        "Water & Marine Activities"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 2112,
+      "name": "Bentota Beach Park",
+      "semantic_score": 0.6737728,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Family & Recreation",
+        "Nature & Landscapes"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 2047,
+      "name": "Galapatha Raja Maha Viharaya - Bentota | \u0d9c\u0dbd\u0db4\u0dcf\u0dad \u0dbb\u0da2 \u0db8\u0dc4\u0dcf \u0dc0\u0dd2\u0dc4\u0dcf\u0dbb\u0dba - \u0db6\u0dd9\u0db1\u0dca\u0dad\u0ddc\u0da7",
+      "semantic_score": 0.67287564,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Religious & Spiritual"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 925,
+      "name": "Malgallakanda",
+      "semantic_score": 0.6726679,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Nature & Landscapes"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 821,
+      "name": "Nuga Deka Ella Lankagama.!!",
+      "semantic_score": 0.6707992,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Family & Recreation"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 344,
+      "name": "Udahakanda",
+      "semantic_score": 0.6707232,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Nature & Landscapes"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 705,
+      "name": "Captain Garden Tea Factory",
+      "semantic_score": 0.6698692,
+      "flags": [
+        "missing_category_metadata"
+      ],
+      "categories": [],
+      "activities": [
+        "Tea Factory Visit"
+      ]
+    },
+    {
+      "attraction_id": 1070,
+      "name": "Sarath Gallage \u0dad\u0ddc\u0dbb\u0dab\u0dca",
+      "semantic_score": 0.6689894,
+      "flags": [
+        "missing_category_metadata",
+        "missing_activity_metadata"
+      ],
+      "categories": [],
+      "activities": []
+    },
+    {
+      "attraction_id": 586,
+      "name": "Abaha Hena Park",
+      "semantic_score": 0.66801333,
+      "flags": [
+        "missing_category_metadata",
+        "missing_activity_metadata"
+      ],
+      "categories": [],
+      "activities": []
+    },
+    {
+      "attraction_id": 2099,
+      "name": "Thunduwa Jumma Mosque",
+      "semantic_score": 0.6677846,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Religious & Spiritual"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 1148,
+      "name": "MIG shop kade",
+      "semantic_score": 0.66746086,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Shopping & Local Markets"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 1032,
+      "name": "Kalu Dola Ella",
+      "semantic_score": 0.6674397,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Nature & Landscapes"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 300,
+      "name": "Sinharaja Entrance Wathugala",
+      "semantic_score": 0.66721594,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Family & Recreation",
+        "Nature & Landscapes"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 418,
+      "name": "Sri muththumari amman kovila",
+      "semantic_score": 0.66672397,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Religious & Spiritual"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 970,
+      "name": "Omathta Mullekkanda Hindu Kovila",
+      "semantic_score": 0.66670215,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Religious & Spiritual"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 548,
+      "name": "9 Mail Post",
+      "semantic_score": 0.6666,
+      "flags": [
+        "missing_category_metadata",
+        "missing_activity_metadata"
+      ],
+      "categories": [],
+      "activities": []
+    },
+    {
+      "attraction_id": 469,
+      "name": "The Cinnamon Experience",
+      "semantic_score": 0.6658721,
+      "flags": [
+        "missing_category_metadata",
+        "missing_activity_metadata"
+      ],
+      "categories": [],
+      "activities": []
+    },
+    {
+      "attraction_id": 611,
+      "name": "Kadihingala Park",
+      "semantic_score": 0.66574967,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Family & Recreation",
+        "Wildlife & Safari"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 2378,
+      "name": "Samadhi Yoga Ashramaya",
+      "semantic_score": 0.66437733,
+      "flags": [
+        "missing_category_metadata"
+      ],
+      "categories": [],
+      "activities": [
+        "Yoga"
+      ]
+    },
+    {
+      "attraction_id": 704,
+      "name": "New Jasmine Valley Tea Factory",
+      "semantic_score": 0.664273,
+      "flags": [
+        "missing_category_metadata"
+      ],
+      "categories": [],
+      "activities": [
+        "Tea Factory Visit"
+      ]
+    },
+    {
+      "attraction_id": 983,
+      "name": "St. Paul's Church, Elpitiya",
+      "semantic_score": 0.66390944,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Religious & Spiritual"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 346,
+      "name": "Kondagala",
+      "semantic_score": 0.6631576,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Nature & Landscapes"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 77,
+      "name": "Makumbura Junction",
+      "semantic_score": 0.6628151,
+      "flags": [
+        "name_requires_tourism_eligibility_review"
+      ],
+      "categories": [
+        "Culture & Heritage",
+        "History & Archaeology",
+        "Photography & Scenic Spots"
+      ],
+      "activities": [
+        "Historical Exploration",
+        "Sightseeing"
+      ]
+    },
+    {
+      "attraction_id": 1038,
+      "name": "Kurupelpola",
+      "semantic_score": 0.6623839,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Nature & Landscapes"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 3784,
+      "name": "Classic Travel",
+      "semantic_score": 0.6622151,
+      "flags": [
+        "missing_category_metadata",
+        "missing_activity_metadata"
+      ],
+      "categories": [],
+      "activities": []
+    },
+    {
+      "attraction_id": 850,
+      "name": "Sirimavo Bandaranayake Memorial Theatre",
+      "semantic_score": 0.6619216,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Festivals & Events"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 304,
+      "name": "Kottawa Forest Enterence",
+      "semantic_score": 0.66172606,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Family & Recreation",
+        "Nature & Landscapes"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 398,
+      "name": "Pilana Puraana Sri Maha Viharaya \u0db4\u0dd2\u0dbd\u0dcf\u0db1 \u0db4\u0dd4\u0dbb\u0dcf\u0dab \u0dc1\u0dca\u200d\u0dbb\u0dd3 \u0db8\u0dc4\u0dcf \u0dc0\u0dd2\u0dc4\u0dcf\u0dbb\u0dba",
+      "semantic_score": 0.66163576,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Religious & Spiritual"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 952,
+      "name": "\u0dc1\u0dca\u200d\u0dbb\u0dd3 \u0dbb\u0dcf\u0dc4\u0dd4\u0dbd \u0db8\u0dc4\u0dcf \u0dc3\u0dd1\u0dba - Sri Rahula Maha Seya",
+      "semantic_score": 0.6616222,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Religious & Spiritual"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 303,
+      "name": "Kottawa Arboretum",
+      "semantic_score": 0.66131616,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Family & Recreation",
+        "Nature & Landscapes"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 411,
+      "name": "Batakatiya muthumariamman",
+      "semantic_score": 0.660769,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Religious & Spiritual"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 768,
+      "name": "ULU House of Pilates Ahangama",
+      "semantic_score": 0.66019356,
+      "flags": [
+        "missing_category_metadata"
+      ],
+      "categories": [],
+      "activities": [
+        "Yoga"
+      ]
+    },
+    {
+      "attraction_id": 510,
+      "name": "Marakanda",
+      "semantic_score": 0.659809,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Nature & Landscapes"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 4955,
+      "name": "Millathe Junction \u0db8\u0dd2\u0dbd\u0dca\u0dbd\u0dad\u0dda \u0dc4\u0d82\u0daf\u0dd2\u0dba",
+      "semantic_score": 0.6597104,
+      "flags": [
+        "name_requires_tourism_eligibility_review"
+      ],
+      "categories": [
+        "Culture & Heritage",
+        "History & Archaeology",
+        "Photography & Scenic Spots"
+      ],
+      "activities": [
+        "Historical Exploration",
+        "Sightseeing"
+      ]
+    },
+    {
+      "attraction_id": 473,
+      "name": "The Cinnamon Tapping Experience",
+      "semantic_score": 0.6589371,
+      "flags": [
+        "missing_category_metadata",
+        "missing_activity_metadata"
+      ],
+      "categories": [],
+      "activities": []
+    },
+    {
+      "attraction_id": 1034,
+      "name": "Thalgaswala Wewa",
+      "semantic_score": 0.6586449,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Nature & Landscapes"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 4966,
+      "name": "Panawala Junction \u0db4\u0db1\u0dcf\u0dc0\u0dbd \u0dc4\u0d82\u0daf\u0dd2\u0dba",
+      "semantic_score": 0.6584245,
+      "flags": [
+        "name_requires_tourism_eligibility_review"
+      ],
+      "categories": [
+        "Culture & Heritage",
+        "History & Archaeology",
+        "Photography & Scenic Spots"
+      ],
+      "activities": [
+        "Historical Exploration",
+        "Sightseeing"
+      ]
+    },
+    {
+      "attraction_id": 917,
+      "name": "Tibotuwakota",
+      "semantic_score": 0.6582644,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Nature & Landscapes"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 585,
+      "name": "Kadihingala Ground",
+      "semantic_score": 0.6581381,
+      "flags": [
+        "missing_category_metadata",
+        "missing_activity_metadata"
+      ],
+      "categories": [],
+      "activities": []
+    },
+    {
+      "attraction_id": 2433,
+      "name": "The Villa Bentota by KK Collection",
+      "semantic_score": 0.6576576,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Festivals & Events",
+        "Food & Culinary"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 1146,
+      "name": "Vithanage Stores",
+      "semantic_score": 0.6574536,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Shopping & Local Markets"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 2123,
+      "name": "Spice and Herbal Garden",
+      "semantic_score": 0.6571574,
+      "flags": [
+        "missing_category_metadata",
+        "missing_activity_metadata"
+      ],
+      "categories": [],
+      "activities": []
+    },
+    {
+      "attraction_id": 3537,
+      "name": "Old Katir\u0113san Vajira Pillayar Kovil",
+      "semantic_score": 0.65710235,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Religious & Spiritual"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 707,
+      "name": "New Kottawa Valley Tea Factory",
+      "semantic_score": 0.65623695,
+      "flags": [
+        "missing_category_metadata"
+      ],
+      "categories": [],
+      "activities": [
+        "Tea Factory Visit"
+      ]
+    },
+    {
+      "attraction_id": 3550,
+      "name": "St. Lucia\u2019s Cathedral - Kotahena",
+      "semantic_score": 0.6560955,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Religious & Spiritual",
+        "Urban & City Attractions"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 609,
+      "name": "Karankatiya Park",
+      "semantic_score": 0.65603405,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Family & Recreation",
+        "Wildlife & Safari"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 3789,
+      "name": "Things To Do in Sri Lanka",
+      "semantic_score": 0.65578777,
+      "flags": [
+        "missing_category_metadata",
+        "missing_activity_metadata"
+      ],
+      "categories": [],
+      "activities": []
+    },
+    {
+      "attraction_id": 378,
+      "name": "MAHAWATHTHA Sanctuary",
+      "semantic_score": 0.6554564,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Family & Recreation",
+        "Nature & Landscapes",
+        "Wildlife & Safari"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 3652,
+      "name": "Port of Colombo \u0d9a\u0ddc\u0dc5\u0db9 \u0dc0\u0dbb\u0dcf\u0dba",
+      "semantic_score": 0.65543914,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Water & Marine Activities"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 1010,
+      "name": "Yatalamatta",
+      "semantic_score": 0.65486026,
+      "flags": [
+        "missing_category_metadata",
+        "missing_activity_metadata"
+      ],
+      "categories": [],
+      "activities": []
+    },
+    {
+      "attraction_id": 647,
+      "name": "Cinnamon Museum and Visitors' Center",
+      "semantic_score": 0.65484315,
+      "flags": [
+        "missing_category_metadata"
+      ],
+      "categories": [],
+      "activities": [
+        "Museum Visit"
+      ]
+    },
+    {
+      "attraction_id": 826,
+      "name": "Kadihingala Water Park",
+      "semantic_score": 0.65443015,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Family & Recreation"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 642,
+      "name": "Art Gallery",
+      "semantic_score": 0.6544285,
+      "flags": [
+        "missing_category_metadata",
+        "missing_activity_metadata"
+      ],
+      "categories": [],
+      "activities": []
+    },
+    {
+      "attraction_id": 339,
+      "name": "Hindelnattu",
+      "semantic_score": 0.6542332,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Nature & Landscapes"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 114,
+      "name": "HANGARANGALA junction",
+      "semantic_score": 0.6541625,
+      "flags": [
+        "name_requires_tourism_eligibility_review"
+      ],
+      "categories": [
+        "Culture & Heritage",
+        "History & Archaeology",
+        "Photography & Scenic Spots"
+      ],
+      "activities": [
+        "Historical Exploration",
+        "Sightseeing"
+      ]
+    },
+    {
+      "attraction_id": 2274,
+      "name": "Chamara Tours Bentota",
+      "semantic_score": 0.6539913,
+      "flags": [
+        "missing_category_metadata",
+        "missing_activity_metadata"
+      ],
+      "categories": [],
+      "activities": []
+    },
+    {
+      "attraction_id": 708,
+      "name": "Naindawa Tea Factory",
+      "semantic_score": 0.6531184,
+      "flags": [
+        "missing_category_metadata"
+      ],
+      "categories": [],
+      "activities": [
+        "Tea Factory Visit"
+      ]
+    },
+    {
+      "attraction_id": 706,
+      "name": "Kunduppakanda Tea Factory",
+      "semantic_score": 0.6529979,
+      "flags": [
+        "missing_category_metadata"
+      ],
+      "categories": [],
+      "activities": [
+        "Tea Factory Visit"
+      ]
+    },
+    {
+      "attraction_id": 921,
+      "name": "Dettegala",
+      "semantic_score": 0.652634,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Nature & Landscapes"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 1202,
+      "name": "Thalawa Gamini Sanasa Hall",
+      "semantic_score": 0.6524391,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Festivals & Events"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 435,
+      "name": "St. Sebastian's Church - Udugama | \u0dc3\u0dcf\u0db1\u0dca\u0dad \u0dc3\u0dd9\u0db6\u0dc3\u0dca\u0dad\u0dd2\u0dba\u0db1\u0dca \u0daf\u0dda\u0dc0\u0dc3\u0dca\u0dae\u0dcf\u0db1\u0dba - \u0d8b\u0da9\u0dd4\u0d9c\u0db8",
+      "semantic_score": 0.6523813,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Religious & Spiritual"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 305,
+      "name": "Malamure Forest Reserve",
+      "semantic_score": 0.65220016,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Family & Recreation",
+        "Nature & Landscapes"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 918,
+      "name": "Galboda Kanda",
+      "semantic_score": 0.6521715,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Nature & Landscapes"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 3392,
+      "name": "Homagama Junction",
+      "semantic_score": 0.6517872,
+      "flags": [
+        "name_requires_tourism_eligibility_review"
+      ],
+      "categories": [
+        "Culture & Heritage"
+      ],
+      "activities": [
+        "Sightseeing"
+      ]
+    },
+    {
+      "attraction_id": 6433,
+      "name": "Galmaduwa Junction",
+      "semantic_score": 0.65162516,
+      "flags": [
+        "name_requires_tourism_eligibility_review"
+      ],
+      "categories": [
+        "Culture & Heritage",
+        "History & Archaeology",
+        "Photography & Scenic Spots"
+      ],
+      "activities": [
+        "Historical Exploration",
+        "Sightseeing"
+      ]
+    },
+    {
+      "attraction_id": 94,
+      "name": "Neluwa Dooli Ella",
+      "semantic_score": 0.6512891,
+      "flags": [
+        "missing_activity_metadata"
+      ],
+      "categories": [
+        "Urban & City Attractions"
+      ],
+      "activities": []
+    },
+    {
+      "attraction_id": 3415,
+      "name": "Gamini Hall Junction",
+      "semantic_score": 0.65119326,
+      "flags": [
+        "name_requires_tourism_eligibility_review"
+      ],
+      "categories": [
+        "Culture & Heritage",
+        "History & Archaeology",
+        "Photography & Scenic Spots"
+      ],
+      "activities": [
+        "Historical Exploration",
+        "Sightseeing"
+      ]
+    }
+  ],
+  "proposed_policy": {
+    "automatic_exclusion": false,
+    "review_flags": [
+      "name_requires_tourism_eligibility_review",
+      "missing_category_metadata",
+      "missing_activity_metadata",
+      "missing_district_metadata"
+    ]
+  }
+}

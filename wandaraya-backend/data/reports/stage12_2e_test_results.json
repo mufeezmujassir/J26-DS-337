@@ -1,0 +1,17 @@
+{
+  "command": "$env:PYTEST_DISABLE_PLUGIN_AUTOLOAD='1'; .\\venv\\Scripts\\python.exe -m pytest tests/recommendation/test_human_relevance_evaluation.py tests/recommendation/test_experimental_ranking_policy.py -q",
+  "passed": 6,
+  "failed": 0,
+  "skipped": 0,
+  "coverage": [
+    "relevance rubric validation",
+    "missing-label detection",
+    "duplicate-label detection",
+    "inter-reviewer disagreement reporting",
+    "judged-pool precision/recall/NDCG calculation",
+    "experimental ranking tie behavior"
+  ],
+  "postgresql_writes": false,
+  "qdrant_writes": false,
+  "groq_requests": 0
+}

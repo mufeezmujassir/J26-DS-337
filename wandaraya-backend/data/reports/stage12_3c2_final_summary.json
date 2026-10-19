@@ -1,0 +1,13 @@
+{
+  "generated_at_utc": "2026-10-19T07:00:57.994507+00:00",
+  "status": "CALENDAR_INGESTION_VERIFIED",
+  "verification_basis": {
+    "authorized_robots_check": "AUTHORIZED_PUBLIC_CALENDAR_INGESTION",
+    "holiday_count": 45,
+    "two_repeat_runs_verified": true,
+    "duplicate_identity_groups": 0,
+    "orphan_running_runs": []
+  },
+  "postgresql_writes_executed_by_verifier": false,
+  "qdrant_writes_executed": false
+}

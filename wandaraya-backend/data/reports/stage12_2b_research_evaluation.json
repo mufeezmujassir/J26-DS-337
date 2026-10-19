@@ -1,0 +1,13 @@
+{
+  "comparison": [
+    "content_baseline",
+    "time_aware_without_advisory",
+    "time_aware_with_advisory"
+  ],
+  "ranking_expected_stable_when_only_advisory_changes": true,
+  "real_world_accuracy_claimed": false,
+  "known_limitations": [
+    "No labeled human usefulness study was supplied.",
+    "Historic advisory reports do not retain full source excerpts for independent entailment checks."
+  ]
+}

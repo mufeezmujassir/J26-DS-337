@@ -1,0 +1,57 @@
+{
+  "generated_at_utc": "2026-10-18T15:11:06.188438+00:00",
+  "audits": [
+    {
+      "attraction_id": 1,
+      "report": "data/reports/stage12_2_llm_best_time_advisory_1.json",
+      "json_valid": true,
+      "status": "SOURCE_SUPPORTED_ADVISORY_AVAILABLE",
+      "normalised_advisory": {
+        "text": "Morning and evening are ideal for walking around the ramparts of Galle Fort.",
+        "evidence_tier": "source_supported_advisory",
+        "model_reported_confidence": 0.9,
+        "evidence_confidence": "low",
+        "source_verification_status": "cited_sources_associated_with_stored_descriptions_claim_not_independently_verified",
+        "cited_sources": [
+          "https://en.wikivoyage.org/wiki/Galle"
+        ],
+        "limitations": [
+          "Not opening-hours evidence.",
+          "Must not determine OPEN/CLOSED.",
+          "Best-time advice is not a guarantee of accessibility, safety, or weather.",
+          "The excerpt only suggests that mornings and evenings are generally pleasant for walking around the ramparts; it does not provide specific times, seasonal considerations, weather conditions, crowd levels, or other factors that might affect the best time to visit."
+        ],
+        "generated_at": "2026-10-18T14:58:54.173655+00:00"
+      },
+      "cited_sources_exist_in_active_description_records": true,
+      "stored_source_url_count": 2,
+      "claim_entailment_independently_verified": false,
+      "claim_entailment_note": "The historic report retains URL provenance but not captured source text; wording is not promoted to factual operating evidence."
+    },
+    {
+      "attraction_id": 27,
+      "report": "data/reports/stage12_2_llm_best_time_advisory_27.json",
+      "json_valid": true,
+      "status": "LLM_GENERATED_ADVISORY_AVAILABLE",
+      "normalised_advisory": {
+        "text": "Morning hours (around 8-10\u202fAM) are often quieter and cooler, but this is a model\u2011generated suggestion.",
+        "evidence_tier": "llm_generated_advisory",
+        "model_reported_confidence": 0.4,
+        "evidence_confidence": "low",
+        "source_verification_status": "model_generated_without_source_evidence",
+        "cited_sources": [],
+        "limitations": [
+          "Not opening-hours evidence.",
+          "Must not determine OPEN/CLOSED.",
+          "Best-time advice is not a guarantee of accessibility, safety, or weather.",
+          "model-generated low-confidence guidance"
+        ],
+        "generated_at": "2026-10-18T14:59:54.249421+00:00"
+      },
+      "cited_sources_exist_in_active_description_records": true,
+      "stored_source_url_count": 0,
+      "claim_entailment_independently_verified": false,
+      "claim_entailment_note": "The historic report retains URL provenance but not captured source text; wording is not promoted to factual operating evidence."
+    }
+  ]
+}

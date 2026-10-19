@@ -58,3 +58,77 @@ roberta_emotion:
     results_json: "reports/roberta_emotion_results.json"
     baseline_results_json: "reports/baseline_emotion_results.json"
     figures_dir: "reports/figures"
+
+#  Emotion Expression Intensity Estimator
+intensity_estimator:
+  weights:
+    model: 0.5
+    lexical: 0.3
+    punctuation: 0.2
+  lexicon_path: "configs/intensity_lexicon.yaml"
+  neutral_max_intensity: 0.1
+  valence_map:
+    positive:
+      - admiration
+      - amusement
+      - approval
+      - caring
+      - desire
+      - excitement
+      - gratitude
+      - joy
+      - love
+      - optimism
+      - pride
+      - relief
+    negative:
+      - anger
+      - annoyance
+      - disappointment
+      - disapproval
+      - disgust
+      - embarrassment
+      - fear
+      - grief
+      - nervousness
+      - remorse
+      - sadness
+    ambiguous:
+      - confusion
+      - curiosity
+      - realization
+      - surprise
+    neutral:
+      - neutral
+  caps:
+    exclamation_cap: 3
+    exclamation_weight: 0.40
+    caps_weight: 0.30
+    elongation_weight: 0.20
+    question_weight: 0.10
+  lexical_scoring:
+    intensifier_boost: 0.25
+    strong_word_boost: 0.35
+    downtoner_penalty: 0.20
+    negation_window: 3
+  paths:
+    validation_results_json: "reports/intensity_validation.json"
+    scatter_plot_figure: "reports/figures/intensity_scatter.png"
+    rating_sheet_csv: "data/processed/intensity_rating_sheet.csv"
+
+#  Decision Engine Baselines (Majority Voting & Preference-Only)
+decision:
+  categories:
+    - "Destination"
+    - "Activity"
+  majority_policy: "split"        
+  tie_break: "alphabetical"      
+  negative_veto: false           
+  stance_weights:
+    positive: 1.0
+    neutral: 0.0
+    negative: -1.0
+  paths:
+    demo_groups_json: "data/processed/decision_demo_groups.json"
+    results_json: "reports/decision_baselines_results.json"
+    comparison_figure: "reports/figures/decision_baselines_comparison.png"

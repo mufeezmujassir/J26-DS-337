@@ -1,0 +1,8 @@
+{
+  "dag_id": "sri_lanka_events_daily_ingestion",
+  "schedule": "30 0 * * *",
+  "timezone": "Asia/Colombo",
+  "enabled": true,
+  "verification_status": "LANKAEVENTS_LIVE_INGESTION_VERIFIED",
+  "policy_path": "/opt/airflow/project/config/holiday_event_source_policy.local.json"
+}

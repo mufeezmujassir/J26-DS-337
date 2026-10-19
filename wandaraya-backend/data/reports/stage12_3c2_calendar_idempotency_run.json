@@ -1,0 +1,37 @@
+{
+  "status": "SUCCEEDED",
+  "source": "calendar_sri_lanka",
+  "access": {
+    "source_name": "calendar_sri_lanka",
+    "url": "https://calendarsrilanka.com/",
+    "permitted": true,
+    "reason": "AUTHORIZED_PUBLIC_CALENDAR_INGESTION",
+    "robots_url": "https://calendarsrilanka.com/robots.txt",
+    "robots_status": 200,
+    "authorization_type": "verbal_permission",
+    "authorization_status": "user_attested",
+    "authorization_evidence": "Project owner reports verbal authorization from the website operator during a phone call.",
+    "authorization_scope": "Public Sri Lankan calendar, holidays and Poya-day information for WANDARAYA ingestion.",
+    "standing_authorization": true,
+    "request_interval_seconds": 3.0,
+    "target_url": "https://calendarsrilanka.com/",
+    "transport": "requests"
+  },
+  "counts": {
+    "records_discovered": 45,
+    "records_parsed": 45,
+    "records_validated": 45,
+    "records_fetched": 1,
+    "records_inserted": 0,
+    "records_updated": 0,
+    "records_unchanged": 45,
+    "records_rejected": 0
+  },
+  "database_readback": {
+    "holidays": 45,
+    "events": 0
+  },
+  "postgresql_domain_records_written": true,
+  "ingestion_audit_written": true,
+  "qdrant_writes": false
+}
