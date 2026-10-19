@@ -1,0 +1,12 @@
+{
+  "generated_at_utc": "2026-10-19T16:13:47.791328+00:00",
+  "status": "SOURCE_REVIEW_BLOCKED",
+  "reason": "Historical Open-Meteo access is documented as Professional-plan-only and no paid access is authorized.",
+  "pilot_locations": 6,
+  "actual_records_downloaded": 0,
+  "postgresql_live_writes": false,
+  "qdrant_writes": false,
+  "production_ranking_changed": false,
+  "migration_applied": false,
+  "next_authorization": "Approve a provider and its usage terms (and, if Open-Meteo is chosen, a paid Professional plan) before acquisition; separately approve migration before persistence."
+}

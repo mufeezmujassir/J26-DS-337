@@ -1,0 +1,16 @@
+{
+  "generated_at_utc": "2026-10-19T16:35:46.533080+00:00",
+  "provider": "NASA POWER",
+  "endpoint": "https://power.larc.nasa.gov/api/temporal/daily/point",
+  "official_docs": "https://power.larc.nasa.gov/docs/services/api/temporal/daily/",
+  "access_verification": "Official documentation describes an analysis-ready public Daily API; no authentication parameter is used by the point request.",
+  "terms_status": "DOCUMENTED_FREE_ACCESS; retain NASA POWER attribution and review exact redistribution terms before public dataset redistribution.",
+  "not_era5_land": true,
+  "daily_coverage_documented": "1981-01-01 to near-real-time for UTC/LST daily data",
+  "grid_policy": "NASA warns against repeated requests to the same 0.5\u00b0 x 0.5\u00b0 grid cell; bounded six-location pilot only.",
+  "request_limits": {
+    "max_parameters_per_point": 20,
+    "this_request": 7
+  },
+  "raw_data_downloaded": false
+}

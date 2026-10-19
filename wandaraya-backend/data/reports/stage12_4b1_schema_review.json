@@ -1,0 +1,17 @@
+{
+  "models": "app/models/climate.py",
+  "migration": "migrations/versions/e67f8a9b0c1d_add_versioned_climate_tables.py",
+  "migration_applied": false,
+  "multi_provider_support": {
+    "provider_name": true,
+    "product_name": true,
+    "product_version": true,
+    "source_units_json": true,
+    "normalized_units_json": true,
+    "source_url": true,
+    "checksum": true,
+    "grid_resolution": true,
+    "mapping_method": true
+  },
+  "live_db_writes": false
+}
