@@ -1,0 +1,111 @@
+{
+  "generated_at_utc": "2026-10-19T07:01:07.385941+00:00",
+  "status": "CALENDAR_INGESTION_VERIFIED",
+  "completion_blockers": [],
+  "database": {
+    "holiday_calendar": 45,
+    "tourism_events": 0,
+    "recent_ingestion_runs": [
+      {
+        "id": 9,
+        "source_id": 1,
+        "dag_id": "sri_lanka_annual_calendar_ingestion",
+        "status": "SUCCEEDED",
+        "records_fetched": 1,
+        "records_inserted": 0,
+        "records_updated": 0,
+        "records_unchanged": 45,
+        "records_rejected": 0,
+        "error_summary": null
+      },
+      {
+        "id": 8,
+        "source_id": 1,
+        "dag_id": "manual_calendar_sri_lanka_ingestion",
+        "status": "SUCCEEDED",
+        "records_fetched": 1,
+        "records_inserted": 0,
+        "records_updated": 0,
+        "records_unchanged": 45,
+        "records_rejected": 0,
+        "error_summary": null
+      },
+      {
+        "id": 7,
+        "source_id": 1,
+        "dag_id": "manual_calendar_sri_lanka_ingestion",
+        "status": "SUCCEEDED",
+        "records_fetched": 1,
+        "records_inserted": 0,
+        "records_updated": 0,
+        "records_unchanged": 45,
+        "records_rejected": 0,
+        "error_summary": null
+      },
+      {
+        "id": 6,
+        "source_id": 1,
+        "dag_id": "manual_calendar_sri_lanka_ingestion",
+        "status": "FAILED",
+        "records_fetched": 1,
+        "records_inserted": 0,
+        "records_updated": 1,
+        "records_unchanged": 0,
+        "records_rejected": 1,
+        "error_summary": "Object of type datetime is not JSON serializable"
+      },
+      {
+        "id": 4,
+        "source_id": 1,
+        "dag_id": "manual_calendar_sri_lanka_ingestion",
+        "status": "ACCESS_BLOCKED",
+        "records_fetched": 0,
+        "records_inserted": 0,
+        "records_updated": 0,
+        "records_unchanged": 0,
+        "records_rejected": 0,
+        "error_summary": "ACCESS_BLOCKED:terms_evidence_incomplete"
+      },
+      {
+        "id": 3,
+        "source_id": 1,
+        "dag_id": "manual_calendar_sri_lanka_ingestion",
+        "status": "FAILED",
+        "records_fetched": 1,
+        "records_inserted": 0,
+        "records_updated": 1,
+        "records_unchanged": 0,
+        "records_rejected": 1,
+        "error_summary": "Object of type datetime is not JSON serializable"
+      },
+      {
+        "id": 1,
+        "source_id": 1,
+        "dag_id": "manual_calendar_sri_lanka_ingestion",
+        "status": "SUCCEEDED",
+        "records_fetched": 1,
+        "records_inserted": 45,
+        "records_updated": 0,
+        "records_unchanged": 0,
+        "records_rejected": 0,
+        "error_summary": null
+      }
+    ],
+    "postgresql_writes_executed_by_report": false,
+    "qdrant_writes_executed": false
+  },
+  "qdrant_writes_executed": false,
+  "stage12_3c2_verification": {
+    "generated_at_utc": "2026-10-19T07:00:57.994507+00:00",
+    "status": "CALENDAR_INGESTION_VERIFIED",
+    "verification_basis": {
+      "authorized_robots_check": "AUTHORIZED_PUBLIC_CALENDAR_INGESTION",
+      "holiday_count": 45,
+      "two_repeat_runs_verified": true,
+      "duplicate_identity_groups": 0,
+      "orphan_running_runs": []
+    },
+    "postgresql_writes_executed_by_verifier": false,
+    "qdrant_writes_executed": false
+  }
+}

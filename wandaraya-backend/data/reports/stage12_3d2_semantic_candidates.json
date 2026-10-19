@@ -1,0 +1,76 @@
+{
+  "fixture_only_results": false,
+  "real_event_id": 1,
+  "candidates": [
+    {
+      "event_id": 1,
+      "attraction_id": 1633,
+      "relationship_type": "event_relevance",
+      "match_status": "candidate",
+      "evidence_type": "semantic_candidate",
+      "evidence_source_url": "https://lankaevents.lk/iCalendar/?ID=7856",
+      "semantic_similarity": 0.6793306,
+      "geographic_distance_km": null,
+      "matching_confidence": 0.6793306,
+      "explanation": "Semantic retrieval candidate only; it has not been verified as an event venue, location, or attraction identity.",
+      "verification_timestamp": null
+    },
+    {
+      "event_id": 1,
+      "attraction_id": 4093,
+      "relationship_type": "event_relevance",
+      "match_status": "candidate",
+      "evidence_type": "semantic_candidate",
+      "evidence_source_url": "https://lankaevents.lk/iCalendar/?ID=7856",
+      "semantic_similarity": 0.67656183,
+      "geographic_distance_km": null,
+      "matching_confidence": 0.67656183,
+      "explanation": "Semantic retrieval candidate only; it has not been verified as an event venue, location, or attraction identity.",
+      "verification_timestamp": null
+    },
+    {
+      "event_id": 1,
+      "attraction_id": 1223,
+      "relationship_type": "event_relevance",
+      "match_status": "candidate",
+      "evidence_type": "semantic_candidate",
+      "evidence_source_url": "https://lankaevents.lk/iCalendar/?ID=7856",
+      "semantic_similarity": 0.669367,
+      "geographic_distance_km": null,
+      "matching_confidence": 0.669367,
+      "explanation": "Semantic retrieval candidate only; it has not been verified as an event venue, location, or attraction identity.",
+      "verification_timestamp": null
+    },
+    {
+      "event_id": 1,
+      "attraction_id": 1841,
+      "relationship_type": "event_relevance",
+      "match_status": "candidate",
+      "evidence_type": "semantic_candidate",
+      "evidence_source_url": "https://lankaevents.lk/iCalendar/?ID=7856",
+      "semantic_similarity": 0.65854645,
+      "geographic_distance_km": null,
+      "matching_confidence": 0.65854645,
+      "explanation": "Semantic retrieval candidate only; it has not been verified as an event venue, location, or attraction identity.",
+      "verification_timestamp": null
+    },
+    {
+      "event_id": 1,
+      "attraction_id": 161,
+      "relationship_type": "event_relevance",
+      "match_status": "candidate",
+      "evidence_type": "semantic_candidate",
+      "evidence_source_url": "https://lankaevents.lk/iCalendar/?ID=7856",
+      "semantic_similarity": 0.65738297,
+      "geographic_distance_km": null,
+      "matching_confidence": 0.65738297,
+      "explanation": "Semantic retrieval candidate only; it has not been verified as an event venue, location, or attraction identity.",
+      "verification_timestamp": null
+    }
+  ],
+  "parameter": {
+    "max_candidates": 5,
+    "threshold": "none; bounded retrieval ranking only"
+  },
+  "limitation": "Similarity is candidate generation and not identity proof."
+}

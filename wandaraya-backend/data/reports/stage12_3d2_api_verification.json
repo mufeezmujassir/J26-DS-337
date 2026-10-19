@@ -1,0 +1,6 @@
+{
+  "candidate_endpoint": "GET /api/v1/events/1/attraction-matches?match_status=candidate&limit=5",
+  "context_endpoint": "POST /api/v1/context/holiday-events/evaluate",
+  "status": "HTTP_READBACK_VERIFIED",
+  "semantic_candidates_remain_unverified": true
+}

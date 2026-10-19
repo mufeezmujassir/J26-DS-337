@@ -1,0 +1,25 @@
+{
+  "first_run": {
+    "records_discovered": 1,
+    "records_parsed": 1,
+    "records_validated": 1,
+    "records_fetched": 2,
+    "records_inserted": 1,
+    "records_updated": 0,
+    "records_unchanged": 0,
+    "records_rejected": 0
+  },
+  "second_run": {
+    "records_discovered": 1,
+    "records_parsed": 1,
+    "records_validated": 1,
+    "records_fetched": 2,
+    "records_inserted": 0,
+    "records_updated": 0,
+    "records_unchanged": 1,
+    "records_rejected": 0
+  },
+  "repeat_verified": true,
+  "duplicates": 0,
+  "unnecessary_revisions": 0
+}

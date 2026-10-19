@@ -1,0 +1,9 @@
+{
+  "status": "FIX_IMPLEMENTED",
+  "strategy": "explicit typed JSON serializer for date, datetime, Decimal, UUID, Enum, nested dictionaries and lists",
+  "observation_metadata_excluded_from_revisions": [
+    "last_seen_at",
+    "updated_at"
+  ],
+  "regression_test_command": "python -m pytest tests/holiday_event/test_parsers.py -q"
+}

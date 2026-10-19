@@ -1,0 +1,32 @@
+{
+  "latest_two_successful_calendar_runs": [
+    {
+      "id": 8,
+      "status": "SUCCEEDED",
+      "started_at": "2026-10-19T06:13:11.438437+00:00",
+      "finished_at": "2026-10-19T06:13:12.000956+00:00",
+      "records_fetched": 1,
+      "records_inserted": 0,
+      "records_updated": 0,
+      "records_unchanged": 45,
+      "records_rejected": 0,
+      "error_summary": null
+    },
+    {
+      "id": 9,
+      "status": "SUCCEEDED",
+      "started_at": "2026-10-19T06:17:23.305366+00:00",
+      "finished_at": "2026-10-19T06:17:23.809665+00:00",
+      "records_fetched": 1,
+      "records_inserted": 0,
+      "records_updated": 0,
+      "records_unchanged": 45,
+      "records_rejected": 0,
+      "error_summary": null
+    }
+  ],
+  "repeat_verified": true,
+  "duplicates_created": 0,
+  "revisions_created_by_repeat": 0,
+  "interpretation": "Observation timestamps may change; source-content changes, duplicate inserts, and revisions must not occur when the source content is unchanged."
+}

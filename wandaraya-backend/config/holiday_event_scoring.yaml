@@ -1,0 +1,12 @@
+scoring_version: holiday_event_research_baseline_v1
+experimental: true
+feature_weights:
+  holiday: 0.20
+  poya: 0.35
+  verified_event: 0.25
+  interests: 0.20
+enabled_features: [holiday, poya, verified_event, interests]
+missing_feature_policy: exclude_from_weighted_average
+normalization_policy: weighted_average_of_eligible_features_bounded_0_1
+confidence_policy: evidence_coverage_and_quality_not_calibrated_probability
+notes: Initial heuristic research weights; not statistically optimized and not used by production ranking.

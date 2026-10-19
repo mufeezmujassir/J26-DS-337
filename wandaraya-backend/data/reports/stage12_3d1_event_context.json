@@ -1,0 +1,39 @@
+{
+  "real_event": {
+    "id": 1,
+    "source_event_id": "7856",
+    "title": "WNPS Field Trip-Yala",
+    "start_datetime": "2026-11-13 02:30:00+00:00",
+    "end_datetime": "2026-11-15 17:30:00+00:00",
+    "district_id": null,
+    "location_confidence": "unresolved",
+    "source_url": "https://lankaevents.lk/iCalendar/?ID=7856"
+  },
+  "overlap_preview": {
+    "attraction_id": 1,
+    "is_public_holiday": false,
+    "is_bank_holiday": false,
+    "is_poya_day": false,
+    "poya_name": null,
+    "nearby_event_count": null,
+    "matched_event_ids": [],
+    "overlapping_event_ids": [
+      1
+    ],
+    "event_proximity_km": null,
+    "cultural_relevance_score": null,
+    "holiday_context_score": null,
+    "event_context_score": null,
+    "context_confidence": "low",
+    "evidence_sources": [
+      "https://lankaevents.lk/iCalendar/?ID=7856"
+    ],
+    "uncertainty_flags": [
+      "event_location_unresolved_or_unmatched",
+      "overlapping_events_have_no_verified_attraction_link"
+    ],
+    "explanation": "No holiday or Poya record is stored for the selected date. An event overlaps the selected date, but its location has not been verified for this attraction; geographic relevance was not applied."
+  },
+  "verified_event_attraction_links": 0,
+  "result": "Event location is unresolved; proximity remains unknown until verified location evidence exists."
+}

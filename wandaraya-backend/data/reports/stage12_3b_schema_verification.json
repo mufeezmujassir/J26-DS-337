@@ -1,0 +1,13 @@
+{
+  "status": "SCHEMA_VERIFIED",
+  "tables": {
+    "holiday_calendar": 0,
+    "ingestion_sources": 2,
+    "ingestion_runs": 0,
+    "tourism_events": 0,
+    "event_attraction_links": 0,
+    "holiday_event_revisions": 0
+  },
+  "postgresql_writes": false,
+  "qdrant_writes": false
+}

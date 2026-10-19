@@ -1,0 +1,9 @@
+{
+  "annual_calendar_dag": "ENABLED_AFTER_C2_VERIFICATION",
+  "daily_events_dag": "IMPLEMENTED_PAUSED",
+  "scheduled_enablement_requires": [
+    "HOLIDAY_EVENT_SCHEDULED_INGESTION_ENABLED=true",
+    "reviewed local source policy"
+  ],
+  "runtime_policy_path": "/opt/airflow/project/config/holiday_event_source_policy.local.json"
+}

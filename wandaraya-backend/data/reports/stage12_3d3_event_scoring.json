@@ -1,0 +1,40 @@
+{
+  "evidence": "REAL_DATABASE",
+  "result": {
+    "travel_date": "2026-11-14",
+    "scoring_version": "holiday_event_research_baseline_v1",
+    "experimental": true,
+    "scores": [
+      {
+        "attraction_id": 1633,
+        "holiday_score": null,
+        "poya_score": null,
+        "event_score": null,
+        "interest_compatibility_score": null,
+        "context_suitability_score": null,
+        "context_confidence": "INSUFFICIENT_EVIDENCE",
+        "evidence_coverage": 0.0,
+        "eligible_features": [],
+        "excluded_features": [
+          "poya:not_applicable",
+          "verified_event:semantic_candidate_not_verified",
+          "interests:not_requested"
+        ],
+        "missing_features": [
+          "verified_row_level_holiday_classification"
+        ],
+        "matched_interests": [],
+        "unmatched_interests": [],
+        "evidence_sources": [
+          "https://lankaevents.lk/iCalendar/?ID=7856"
+        ],
+        "uncertainty_flags": [
+          "semantic_event_candidate_not_verified"
+        ],
+        "explanation": "No eligible context features; no neutral score was fabricated."
+      }
+    ],
+    "ranking_changed": false
+  },
+  "assertion": "Candidate-only event does not contribute event_score."
+}

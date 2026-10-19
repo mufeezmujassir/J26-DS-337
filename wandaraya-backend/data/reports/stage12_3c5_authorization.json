@@ -1,0 +1,19 @@
+{
+  "access": {
+    "source_name": "lanka_events",
+    "url": "https://lankaevents.lk/",
+    "permitted": true,
+    "reason": "AUTHORIZED_PUBLIC_EVENT_INGESTION",
+    "robots_url": "https://lankaevents.lk/robots.txt",
+    "robots_status": 404,
+    "authorization_type": "verbal_permission",
+    "authorization_status": "user_attested",
+    "authorization_evidence": "Project owner reports verbal authorization from LankaEvents during a phone call.",
+    "authorization_scope": "Public event listings and publicly accessible event-detail information for WANDARAYA academic research.",
+    "standing_authorization": true,
+    "request_interval_seconds": 3.0,
+    "target_url": "https://lankaevents.lk/",
+    "transport": "requests"
+  },
+  "authorization_provenance": "user_attested verbal permission; no source-confirmed written evidence claimed"
+}

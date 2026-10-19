@@ -1,0 +1,16 @@
+{
+  "evidence": "EXPERIMENTAL_HEURISTIC",
+  "base_weights": {
+    "holiday": 0.2,
+    "poya": 0.35,
+    "verified_event": 0.25,
+    "interests": 0.2
+  },
+  "ablations": {
+    "holiday_disabled": "not applicable to Poya dependency example",
+    "poya_disabled": "removes Poya feature from eligible set",
+    "verified_event_disabled": "no change for current unverified event",
+    "interests_disabled": "removes deterministic category-interest feature"
+  },
+  "quality_evaluation": "pending independently labelled relevance data"
+}
