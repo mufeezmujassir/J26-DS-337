@@ -1,0 +1,11 @@
+{
+  "status": "HOLIDAY_EVENT_CONTEXT_SCORING_VERIFIED",
+  "postgresql_domain_writes": false,
+  "qdrant_writes": false,
+  "production_ranking_changed": false,
+  "limitations": [
+    "weights are research hypotheses",
+    "no verified event links",
+    "no labelled ranking-quality evaluation"
+  ]
+}

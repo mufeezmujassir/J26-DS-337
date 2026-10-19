@@ -10,6 +10,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.database import get_db
 from app.holiday_event.service import HolidayEventContextService
 from app.holiday_event.context_features import HolidayEventContextFeatureService, HolidayEventFeatureRequest, HolidayEventFeatureResponse
+from app.holiday_event.context_scoring import ContextScoreRequest, ContextScoreResponse, HolidayEventContextScoringService
 from app.models.holiday_calendar import Holiday
 from app.models.holiday_event import TourismEvent
 from app.models.holiday_event import EventAttractionLink
@@ -109,3 +110,9 @@ async def holiday_event_context(visit_datetime: datetime, attraction_id: int | N
 async def evaluate_holiday_event_context(payload: HolidayEventFeatureRequest, db: AsyncSession = Depends(get_db)):
     """Read-only feature preview; no recommendation weights are changed."""
     return await HolidayEventContextFeatureService(db).evaluate(payload)
+
+
+@router.post("/api/v1/context/holiday-events/score", response_model=ContextScoreResponse)
+async def score_holiday_event_context(payload: ContextScoreRequest, db: AsyncSession = Depends(get_db)):
+    """Experimental read-only scoring preview; production ranking is unchanged."""
+    return await HolidayEventContextScoringService(db).score(payload)
