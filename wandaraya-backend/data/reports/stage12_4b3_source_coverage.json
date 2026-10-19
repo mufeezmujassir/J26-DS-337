@@ -1,0 +1,20 @@
+{
+  "provider": "NASA POWER",
+  "api_version": "v2.10.0",
+  "time_standard": "UTC",
+  "sources": [
+    "SYN1DEG",
+    "MERRA2",
+    "POWER"
+  ],
+  "units": {
+    "T2M": "C",
+    "T2M_MAX": "C",
+    "T2M_MIN": "C",
+    "PRECTOTCORR": "mm/day",
+    "RH2M": "%",
+    "WS10M": "m/s",
+    "ALLSKY_SFC_SW_DWN": "MJ/m^2/day"
+  },
+  "date_coverage": "2010-01-01..2025-12-31"
+}

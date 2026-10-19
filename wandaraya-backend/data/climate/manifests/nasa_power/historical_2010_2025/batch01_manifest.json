@@ -1,0 +1,41 @@
+{
+  "provider": "NASA POWER",
+  "dataset_version": "nasa_power_daily_v2.10.0_historical_2010_2025_batch01",
+  "period": {
+    "start": "2010-01-01",
+    "end": "2025-12-31",
+    "expected_dates": 5844
+  },
+  "time_standard": "UTC",
+  "download_status": "DRY_RUN",
+  "samples": [
+    {
+      "sample_id": "historic_1",
+      "attraction_id": 1,
+      "name": "Galle Dutch Fort",
+      "selection_method": "coastal_geographic_distinction",
+      "request_url": "https://power.larc.nasa.gov/api/temporal/daily/point?community=AG&latitude=6.0304592&longitude=80.2150207&start=20100101&end=20251231&parameters=T2M%2CT2M_MAX%2CT2M_MIN%2CPRECTOTCORR%2CRH2M%2CWS10M%2CALLSKY_SFC_SW_DWN&format=JSON&time-standard=UTC",
+      "expected_dates": 5844,
+      "download_status": "NOT_REQUESTED"
+    },
+    {
+      "sample_id": "historic_24",
+      "attraction_id": 24,
+      "name": "Horton Plains National Park",
+      "selection_method": "highland_elevation_distinction",
+      "request_url": "https://power.larc.nasa.gov/api/temporal/daily/point?community=AG&latitude=6.809445999999999&longitude=80.8023333&start=20100101&end=20251231&parameters=T2M%2CT2M_MAX%2CT2M_MIN%2CPRECTOTCORR%2CRH2M%2CWS10M%2CALLSKY_SFC_SW_DWN&format=JSON&time-standard=UTC",
+      "expected_dates": 5844,
+      "download_status": "NOT_REQUESTED"
+    },
+    {
+      "sample_id": "historic_16",
+      "attraction_id": 16,
+      "name": "Anuradhapura",
+      "selection_method": "dry_zone_geographic_distinction",
+      "request_url": "https://power.larc.nasa.gov/api/temporal/daily/point?community=AG&latitude=8.311351799999999&longitude=80.4036508&start=20100101&end=20251231&parameters=T2M%2CT2M_MAX%2CT2M_MIN%2CPRECTOTCORR%2CRH2M%2CWS10M%2CALLSKY_SFC_SW_DWN&format=JSON&time-standard=UTC",
+      "expected_dates": 5844,
+      "download_status": "NOT_REQUESTED"
+    }
+  ],
+  "manifest_sha256": "1d7825034d0c2d43cc0e29081cc8319ba9f5728846242f582985e982ce01bc1d"
+}

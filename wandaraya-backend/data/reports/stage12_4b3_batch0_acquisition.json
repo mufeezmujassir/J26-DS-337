@@ -1,0 +1,60 @@
+[
+  {
+    "sample_id": "historic_1",
+    "attraction_id": 1,
+    "name": "Galle Dutch Fort",
+    "selection_method": "coastal_geographic_distinction",
+    "request_url": "https://power.larc.nasa.gov/api/temporal/daily/point?community=AG&latitude=6.0304592&longitude=80.2150207&start=20100101&end=20251231&parameters=T2M%2CT2M_MAX%2CT2M_MIN%2CPRECTOTCORR%2CRH2M%2CWS10M%2CALLSKY_SFC_SW_DWN&format=JSON&time-standard=UTC",
+    "raw_file": "data/climate/raw/nasa_power/historical_2010_2025/nasa_power_historical_1_20100101_20251231.json",
+    "checksum_sha256": "cbcf66bf9ba39a2d0e24ea2b927a2a29c2e94edea781b4472f0a0448d8aa4ade",
+    "expected_dates": 5844,
+    "received_dates": 5844,
+    "accepted_dates": 5844,
+    "validation": {
+      "received": 5844,
+      "accepted": 5844,
+      "rejected": 0,
+      "expected_daily_records": 5844,
+      "completeness_percent": 100.0,
+      "rejections": []
+    },
+    "metadata": {
+      "header": {
+        "title": "NASA/POWER Source Native Resolution Daily Data",
+        "api": {
+          "version": "v2.10.0",
+          "name": "POWER Daily API"
+        },
+        "sources": [
+          "SYN1DEG",
+          "MERRA2",
+          "POWER"
+        ],
+        "fill_value": -999.0,
+        "time_standard": "UTC",
+        "start": "20100101",
+        "end": "20251231"
+      },
+      "units": {
+        "T2M": "C",
+        "T2M_MAX": "C",
+        "T2M_MIN": "C",
+        "PRECTOTCORR": "mm/day",
+        "RH2M": "%",
+        "WS10M": "m/s",
+        "ALLSKY_SFC_SW_DWN": "MJ/m^2/day"
+      },
+      "source_parameters": [
+        "T2M",
+        "T2M_MAX",
+        "T2M_MIN",
+        "PRECTOTCORR",
+        "RH2M",
+        "WS10M",
+        "ALLSKY_SFC_SW_DWN"
+      ],
+      "response_checksum_sha256": "e67278afe8ff9f0a2ac2ec9f473c67daf314841a6e1f33abcfc88a77bddf2e4b"
+    },
+    "download_status": "VALIDATED"
+  }
+]
