@@ -10,6 +10,7 @@ from app.models.attraction_descriptions import AttractionDescription
 from app.models.attraction_reviews import AttractionReview
 from app.models.attraction_images import AttractionImage
 from app.models.holiday_calendar import Holiday
+from app.models.holiday_event import EventAttractionLink, HolidayEventRevision, IngestionSource, TourismEvent
 from app.models.user import User
 from app.models.group import TripGroup, GroupMember
 from app.models.weather_station import WeatherStation
@@ -40,6 +41,10 @@ __all__ = [
     "AttractionReview",
     "AttractionImage",
     "Holiday",
+    "IngestionSource",
+    "TourismEvent",
+    "EventAttractionLink",
+    "HolidayEventRevision",
     "User",
     "TripGroup",
     "GroupMember",
