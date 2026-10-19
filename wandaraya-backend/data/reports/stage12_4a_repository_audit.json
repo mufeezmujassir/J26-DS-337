@@ -1,0 +1,19 @@
+{
+  "generated_at_utc": "2026-10-19T15:44:36.882825+00:00",
+  "weather_modules": [
+    "app/weather_model/context/climatology_provider.py",
+    "app/weather_model/forecasting/prophet_trainer.py",
+    "app/weather_model/backtesting/",
+    "app/weather_model/registry/",
+    "dags/weather_historical.py",
+    "dags/weather_model_train.py"
+  ],
+  "models": [
+    "app/models/weather_reading.py",
+    "app/models/district_weather_monthly.py",
+    "app/models/weather_forecast.py",
+    "app/models/weather_model_run.py",
+    "app/models/weather_station.py"
+  ],
+  "finding": "Weather forecasting and monthly climatology prototypes exist; a data-governed tourism seasonality layer does not yet exist."
+}

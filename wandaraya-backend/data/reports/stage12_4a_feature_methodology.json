@@ -1,0 +1,13 @@
+{
+  "generated_at_utc": "2026-10-19T15:44:36.882825+00:00",
+  "reference_period_proposal": "2010-01-01 through 2025-12-31, evaluated per source variable/version and availability",
+  "variables": [
+    "monthly precipitation",
+    "temperature min/mean/max",
+    "relative humidity",
+    "wind speed",
+    "sunshine or solar radiation where available"
+  ],
+  "feature_method": "Use month-of-year anomalies/quantiles relative to a versioned historical reference, keep coverage count and uncertainty; do not rank when evidence is unavailable.",
+  "overlap_rule": "Live weather remains short-horizon operational context. Historical climate/seasonality is a separate reference feature and neither overwrites nor substitutes for the other."
+}
