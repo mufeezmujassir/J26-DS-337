@@ -1,0 +1,23 @@
+{
+  "status": "LABELS_READY_FOR_EVALUATION",
+  "reviewer_ids": [
+    "R1",
+    "R2"
+  ],
+  "valid_annotations": 1280,
+  "invalid_count": 0,
+  "invalid_sample": [],
+  "missing_count": 0,
+  "missing_sample": [],
+  "duplicate_count": 0,
+  "duplicate_sample": [],
+  "disagreement_count": 0,
+  "disagreement_sample": [],
+  "resolved_adjudications": 24,
+  "weighted_cohens_kappa": 0.975319,
+  "interpretation": "Kappa is descriptive; small or nonrepresentative samples should not be generalized.",
+  "raw_annotations_immutable": true,
+  "postgresql_writes": false,
+  "qdrant_writes": false,
+  "production_ranking_changed": false
+}

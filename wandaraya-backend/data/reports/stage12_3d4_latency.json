@@ -1,0 +1,14 @@
+{
+  "status": "CANDIDATE_GENERATION_LATENCY_RECORDED",
+  "method": "end-to-end read-only baseline retrieval plus context preview per manually authored scenario",
+  "latency": {
+    "count": 32,
+    "mean_ms": 2990.882,
+    "median_ms": 323.942,
+    "p95_ms": 2326.957
+  },
+  "sample_size": 32,
+  "postgresql_writes": false,
+  "qdrant_writes": false,
+  "production_ranking_changed": false
+}

@@ -1,0 +1,21 @@
+{
+  "status": "AWAITING_INDEPENDENT_HUMAN_LABELS",
+  "annotation_scale": {
+    "0": "irrelevant",
+    "1": "weakly relevant",
+    "2": "relevant",
+    "3": "highly relevant"
+  },
+  "candidate_rows_per_reviewer": 640,
+  "reviewers_required": 2,
+  "fixed_seed": 12345,
+  "blind_templates": [
+    "stage12_3d4_r1_blind_template.csv",
+    "stage12_3d4_r2_blind_template.csv"
+  ],
+  "private_mapping": "stage12_3d4_private_presentation_mapping.json",
+  "human_labels_available": false,
+  "postgresql_writes": false,
+  "qdrant_writes": false,
+  "production_ranking_changed": false
+}
