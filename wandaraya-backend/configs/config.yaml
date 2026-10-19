@@ -116,3 +116,19 @@ intensity_estimator:
     scatter_plot_figure: "reports/figures/intensity_scatter.png"
     rating_sheet_csv: "data/processed/intensity_rating_sheet.csv"
 
+#  Decision Engine Baselines (Majority Voting & Preference-Only)
+decision:
+  categories:
+    - "Destination"
+    - "Activity"
+  majority_policy: "split"        
+  tie_break: "alphabetical"      
+  negative_veto: false           
+  stance_weights:
+    positive: 1.0
+    neutral: 0.0
+    negative: -1.0
+  paths:
+    demo_groups_json: "data/processed/decision_demo_groups.json"
+    results_json: "reports/decision_baselines_results.json"
+    comparison_figure: "reports/figures/decision_baselines_comparison.png"
