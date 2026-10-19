@@ -1,0 +1,12 @@
+{
+  "generated_at_utc": "2026-10-19T07:09:55.170796+00:00",
+  "status": "LANKAEVENTS_IMPLEMENTED_PENDING_SOURCE_ACCESS",
+  "blockers": [
+    "documented LankaEvents terms evidence",
+    "explicit permitted public detail URL path prefixes",
+    "controlled live extraction and repeat idempotency verification"
+  ],
+  "tourism_events": 0,
+  "postgresql_writes_executed_by_report": false,
+  "qdrant_writes_executed": false
+}

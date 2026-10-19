@@ -13,6 +13,7 @@ from app.models.holiday_event import TourismEvent
 
 from .repository import HolidayEventRepository
 from .http_client import RequestsAsyncClient
+from .llm_extraction import extract_with_groq
 from .schemas import EventRecord, HolidayRecord
 from .source_access import TermsReview, runtime_access_check
 from .sources.calendar_sri_lanka import CalendarSriLankaExtractor
@@ -47,7 +48,7 @@ class HolidayEventIngestionService:
         async with RequestsAsyncClient(timeout_seconds=timeout_seconds) as client:
             return await runtime_access_check(source_name, SOURCES[source_name][1], client, terms_review=terms_review)
 
-    async def run(self, source_name: SourceName, *, dag_id: str, terms_review: TermsReview | None, execute: bool, event_horizon_months: int = 3, max_event_details: int = 50) -> dict:
+    async def run(self, source_name: SourceName, *, dag_id: str, terms_review: TermsReview | None, execute: bool, event_horizon_months: int = 3, max_event_details: int = 50, enable_llm: bool = False) -> dict:
         if not 0 <= event_horizon_months <= 3:
             raise ValueError("event_horizon_months must be between 0 and 3")
         if not 1 <= max_event_details <= 50:
@@ -76,7 +77,7 @@ class HolidayEventIngestionService:
                 records = await self._ingest_calendar(counts)
                 readback = {"holidays": await self._holiday_readback(records), "events": 0}
             else:
-                records = await self._ingest_events(source, terms_review, float(access["request_interval_seconds"]), counts, event_horizon_months, max_event_details)
+                records = await self._ingest_events(source, terms_review, float(access["request_interval_seconds"]), counts, event_horizon_months, max_event_details, enable_llm)
                 readback = {"holidays": 0, "events": await self._event_readback(source.id, records)}
             await self.repository.finish_run(run, "SUCCEEDED", counts)
             source.last_success_at, source.last_error = datetime.now(timezone.utc), None
@@ -104,7 +105,7 @@ class HolidayEventIngestionService:
             counts[f"records_{await self.repository.upsert_holiday(None, record)}"] += 1
         return records
 
-    async def _ingest_events(self, source, terms_review: TermsReview | None, request_interval_seconds: float, counts: dict[str, int], event_horizon_months: int, max_event_details: int) -> list[EventRecord]:
+    async def _ingest_events(self, source, terms_review: TermsReview | None, request_interval_seconds: float, counts: dict[str, int], event_horizon_months: int, max_event_details: int, enable_llm: bool) -> list[EventRecord]:
         # Browser-observed internal endpoints are never called. Only detail URL
         # path prefixes recorded in the source terms review can be requested.
         async with RequestsAsyncClient(timeout_seconds=30) as client:
@@ -112,17 +113,35 @@ class HolidayEventIngestionService:
             extractor = LankaEventsExtractor()
             discovered = extractor.parse(listing)
             prefixes = terms_review.allowed_detail_path_prefixes if terms_review else ()
-            candidates = [item for item in discovered if self._is_permitted_detail_url(item.source_url, prefixes)][:max_event_details]
+            unique_candidates = {item.source_event_id: item for item in discovered}
+            candidates = [item for item in unique_candidates.values() if self._is_permitted_detail_url(item.source_url, prefixes)][:max_event_details]
             records: list[EventRecord] = []
             for candidate in candidates:
                 await asyncio.sleep(request_interval_seconds)
-                detail = extractor.parse_detail(await extractor.fetch_public_detail(client, candidate.source_url))
+                fetched = await extractor.fetch_public_detail(client, candidate.source_url)
+                detail = extractor.parse_detail(fetched)
+                if detail and enable_llm and (not detail.description or detail.start_datetime is None or not detail.venue):
+                    detail = await self._apply_llm_fallback(detail, fetched.html)
                 if detail and self._within_horizon(detail, event_horizon_months):
                     records.append(detail)
-        counts.update(records_discovered=len(discovered), records_parsed=len(candidates), records_validated=len(records), records_fetched=1 + len(candidates), records_rejected=len(candidates) - len(records))
+        counts.update(records_discovered=len(unique_candidates), records_parsed=len(candidates), records_validated=len(records), records_fetched=1 + len(candidates), records_rejected=len(candidates) - len(records))
         for record in records:
             counts[f"records_{await self.repository.upsert_event(source, record)}"] += 1
         return records
+
+    @staticmethod
+    async def _apply_llm_fallback(record: EventRecord, html: str) -> EventRecord:
+        """Fill only absent non-identity fields with evidence-bound LLM output."""
+        result = await extract_with_groq(html, enabled=True)
+        if result.status != "LLM_EXTRACTION_AVAILABLE" or not result.accepted_fields:
+            return record
+        updates: dict[str, object] = {"extraction_method": "llm_assisted", "extraction_confidence": 0.6, "extraction_evidence": result.accepted_fields}
+        mapping = {"description": "description", "venue": "venue", "city": "city", "province": "province", "organizer": "organizer", "category": "original_category", "ticket_information": "price_information", "registration_url": "registration_url"}
+        current = record.model_dump()
+        for llm_field, model_field in mapping.items():
+            if not current.get(model_field) and result.accepted_fields.get(llm_field):
+                updates[model_field] = result.accepted_fields[llm_field]
+        return record.model_copy(update=updates)
 
     @staticmethod
     def _is_permitted_detail_url(url: str, prefixes: tuple[str, ...]) -> bool:

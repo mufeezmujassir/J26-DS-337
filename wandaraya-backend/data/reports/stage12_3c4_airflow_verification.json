@@ -1,0 +1,8 @@
+{
+  "dag_id": "sri_lanka_events_daily_ingestion",
+  "schedule": "30 0 * * *",
+  "timezone": "Asia/Colombo",
+  "configured_for_automatic_execution": true,
+  "acquisition_enabled": false,
+  "reason": "DAG remains paused until permitted controlled live ingestion and repeat verification pass."
+}

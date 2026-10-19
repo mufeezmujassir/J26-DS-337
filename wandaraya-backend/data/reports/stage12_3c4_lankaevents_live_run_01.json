@@ -1,0 +1,31 @@
+{
+  "status": "ACCESS_BLOCKED",
+  "source": "lanka_events",
+  "access": {
+    "source_name": "lanka_events",
+    "url": "https://lankaevents.lk/",
+    "permitted": false,
+    "reason": "ACCESS_BLOCKED:terms_evidence_incomplete",
+    "robots_url": "https://lankaevents.lk/robots.txt",
+    "robots_status": 404,
+    "target_url": "https://lankaevents.lk/",
+    "transport": "requests"
+  },
+  "counts": {
+    "records_discovered": 0,
+    "records_parsed": 0,
+    "records_validated": 0,
+    "records_fetched": 0,
+    "records_inserted": 0,
+    "records_updated": 0,
+    "records_unchanged": 0,
+    "records_rejected": 0
+  },
+  "database_readback": {
+    "holidays": 0,
+    "events": 0
+  },
+  "postgresql_domain_records_written": false,
+  "ingestion_audit_written": true,
+  "qdrant_writes": false
+}

@@ -34,6 +34,9 @@ class TermsReview:
     authorization_evidence: str | None = None
     authorization_scope: str | None = None
     standing_authorization: bool = False
+    robots_status: int | None = None
+    last_access_check: str | None = None
+    access_decision: str | None = None
 
 
 def load_terms_reviews(path: str | Path | None) -> dict[str, TermsReview]:
@@ -71,6 +74,9 @@ def load_terms_reviews(path: str | Path | None) -> dict[str, TermsReview]:
             authorization_evidence=item.get("authorization_evidence"),
             authorization_scope=item.get("authorization_scope"),
             standing_authorization=bool(item.get("standing_authorization", False)),
+            robots_status=item.get("robots_status") if isinstance(item.get("robots_status"), int) else None,
+            last_access_check=item.get("last_access_check"),
+            access_decision=item.get("access_decision"),
         )
     return reviews
 
@@ -89,17 +95,18 @@ def _terms_evidence_is_complete(review: TermsReview) -> bool:
     return timestamp.tzinfo is not None and timestamp.utcoffset() is not None
 
 
-def _verbal_calendar_authorization_is_complete(source_name: str, review: TermsReview) -> bool:
-    """Accept only the explicitly attested, in-scope verbal authorization."""
+def _verbal_source_authorization_is_complete(source_name: str, review: TermsReview) -> bool:
+    """Accept only explicitly attested, source-specific, in-scope authorization."""
     evidence = (review.authorization_evidence or "").strip()
     scope = (review.authorization_scope or "").casefold()
+    required_scope = "calendar" if source_name == "calendar_sri_lanka" else "event"
     return (
-        source_name == "calendar_sri_lanka"
+        source_name in {"calendar_sri_lanka", "lanka_events"}
         and review.authorization_type == "verbal_permission"
         and review.authorization_status == "user_attested"
         and review.standing_authorization
         and bool(evidence)
-        and "calendar" in scope
+        and required_scope in scope
         and "public" in scope
     )
 
@@ -190,11 +197,12 @@ def evaluate_robots_response(base: dict, response, robots_url: str, *, target_ur
 
     if terms_review and terms_review.authorization_status == "revoked":
         return {**base, "reason": "ACCESS_BLOCKED:authorization_revoked", "robots_url": robots_url, "robots_status": response.status_code, "target_url": target_url or base["url"], "transport": transport}
-    if terms_review and _verbal_calendar_authorization_is_complete(base["source_name"], terms_review):
+    if terms_review and _verbal_source_authorization_is_complete(base["source_name"], terms_review):
+        source_label = "CALENDAR" if base["source_name"] == "calendar_sri_lanka" else "EVENT"
         return {
             **base,
             "permitted": True,
-            "reason": "AUTHORIZED_PUBLIC_CALENDAR_INGESTION",
+            "reason": f"AUTHORIZED_PUBLIC_{source_label}_INGESTION",
             "robots_url": robots_url,
             "robots_status": response.status_code,
             "authorization_type": "verbal_permission",

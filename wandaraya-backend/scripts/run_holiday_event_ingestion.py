@@ -21,17 +21,24 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--output", type=Path)
     parser.add_argument("--execute", action="store_true")
     parser.add_argument("--confirm-execute", action="store_true")
+    parser.add_argument("--enable-llm", action="store_true", help="Opt in to Groq fallback only for incomplete permitted event-detail pages.")
+    parser.add_argument("--confirm-llm", action="store_true", help="Required together with --enable-llm before any Groq request.")
     return parser.parse_args()
 
 
 async def run(args: argparse.Namespace) -> dict:
     if args.execute and not args.confirm_execute:
         raise SystemExit("--execute requires --confirm-execute")
+    if args.enable_llm and not args.confirm_llm:
+        raise SystemExit("--enable-llm requires --confirm-llm")
+    if args.enable_llm and not args.execute:
+        raise SystemExit("--enable-llm requires --execute")
     reviews = load_terms_reviews(args.terms_policy)
     async with AsyncSessionLocal() as session:
         return await HolidayEventIngestionService(HolidayEventRepository(session)).run(
             args.source, dag_id=f"manual_{args.source}_ingestion", terms_review=reviews.get(args.source),
             execute=args.execute, event_horizon_months=args.event_horizon_months, max_event_details=args.max_event_details,
+            enable_llm=args.enable_llm,
         )
 
 

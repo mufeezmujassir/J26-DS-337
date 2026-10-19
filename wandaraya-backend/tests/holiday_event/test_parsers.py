@@ -1,4 +1,7 @@
-from app.holiday_event.parsers import parse_calendar_html, parse_lankaevents_detail_html, parse_lankaevents_html
+from app.holiday_event.event_quality import assess_event_quality
+from app.holiday_event.llm_extraction import validate_evidence
+from app.holiday_event.schemas import LLMEventExtraction
+from app.holiday_event.parsers import normalize_event_category, parse_calendar_html, parse_lankaevents_detail_html, parse_lankaevents_html, parse_lankaevents_icalendar
 from app.holiday_event.source_access import TermsReview, check_source_access, evaluate_robots_response
 from app.holiday_event.repository import holiday_source_values, json_safe
 from app.holiday_event.schemas import HolidayRecord
@@ -101,6 +104,19 @@ def test_attested_verbal_calendar_authorization_is_distinct_from_terms():
     assert result["authorization_status"] == "user_attested"
 
 
+def test_attested_verbal_lankaevents_authorization_allows_robots_404_without_claiming_terms():
+    base = check_source_access("lanka_events", "https://lankaevents.lk/")
+    authorization = TermsReview(
+        reviewed=False, automated_collection_permitted=False,
+        authorization_type="verbal_permission", authorization_status="user_attested",
+        authorization_evidence="Project owner reports verbal authorization from LankaEvents during a phone call.",
+        authorization_scope="Public event listings and publicly accessible event-detail information for WANDARAYA academic research.", standing_authorization=True,
+    )
+    result = evaluate_robots_response(base, httpx.Response(404), "https://lankaevents.lk/robots.txt", terms_review=authorization)
+    assert result["permitted"] is True
+    assert result["reason"] == "AUTHORIZED_PUBLIC_EVENT_INGESTION"
+
+
 def test_detail_parser_extracts_only_visible_labeled_fields():
     html = """<h1>Fixture Art Exhibition</h1><dl><dt>Venue</dt><dd>Example Gallery</dd><dt>Date</dt><dd>01 Oct 2026 - 21 Oct 2026</dd><dt>Time</dt><dd>08:00 AM to 05:00 PM</dd><dt>Organizer</dt><dd>Fixture Organizer</dd><dt>Notes</dt><dd>#Art #Colombo Public description.</dd></dl>"""
     record = parse_lankaevents_detail_html(html, source_url="https://lankaevents.lk/public-event?id=999")
@@ -109,3 +125,36 @@ def test_detail_parser_extracts_only_visible_labeled_fields():
     assert record.venue == "Example Gallery"
     assert record.start_datetime is not None
     assert record.hashtags == ["#Art", "#Colombo"]
+
+
+def test_lankaevents_discovery_deduplicates_visible_detail_ids():
+    html = '''<div data-category="Art Exhibition"><a href="/iCalendar/?ID=8799">SELF SEARCH</a><span>Oct 2026</span></div><div><a href="/iCalendar/?ID=8799">SELF SEARCH</a></div>'''
+    rows = parse_lankaevents_html(html, source_url="https://lankaevents.lk/")
+    assert len(rows) == 1
+    assert rows[0].source_event_id == "8799"
+    assert rows[0].category == "Exhibition"
+
+
+def test_lankaevents_detail_handles_multiday_time_and_quality_flags():
+    html = '''<h1>SELF SEARCH</h1><dl><dt>Venue</dt><dd>Paradise Road Galleries</dd><dt>Date</dt><dd>01 October 2026 - 21 October 2026</dd><dt>Time</dt><dd>08:00 AM - 05:00 PM</dd><dt>Organizer</dt><dd>Kasun Wickramasinghe</dd><dt>Category</dt><dd>Art Exhibition</dd><dt>Notes</dt><dd>#SelfSearch public exhibition</dd></dl>'''
+    record = parse_lankaevents_detail_html(html, source_url="https://lankaevents.lk/AJAXServers/dateevents.php?id=8799")
+    assert record and record.start_datetime and record.end_datetime
+    assert record.end_datetime.date().isoformat() == "2026-10-21"
+    assert record.category == "Exhibition"
+    assert "missing_title" not in assess_event_quality(record)["quality_flags"]
+    assert normalize_event_category("Music / Concert") == "Music and Concert"
+
+
+def test_llm_values_without_literal_page_evidence_are_rejected():
+    extraction = LLMEventExtraction.model_validate({"venue": {"value": "Imaginary Hotel", "evidence": "not present"}, "title": {"value": "SELF SEARCH", "evidence": "SELF SEARCH"}})
+    accepted, rejected = validate_evidence(extraction, "SELF SEARCH Date: 01 Oct 2026")
+    assert accepted == {"title": "SELF SEARCH"}
+    assert rejected == ["venue"]
+
+
+def test_public_icalendar_event_is_parsed_as_one_stable_multiday_identity():
+    ical = """BEGIN:VCALENDAR\nBEGIN:VEVENT\nSUMMARY:Fixture Exhibition\nDTSTART:20261001T080000\nDTEND:20261021T170000\nLOCATION:Fixture Gallery\nCATEGORIES:Fair/ Exhibition\nDESCRIPTION:Public fixture description\nEND:VEVENT\nEND:VCALENDAR"""
+    record = parse_lankaevents_icalendar(ical, source_url="https://lankaevents.lk/iCalendar/?ID=7856")
+    assert record and record.source_event_id == "7856"
+    assert record.end_datetime and record.end_datetime.date().isoformat() == "2026-10-21"
+    assert record.category == "Exhibition"

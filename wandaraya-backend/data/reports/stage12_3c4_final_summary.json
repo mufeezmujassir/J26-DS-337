@@ -1,0 +1,14 @@
+{
+  "generated_at_utc": "2026-10-19T07:40:28.626432+00:00",
+  "status": "LANKAEVENTS_AUTOMATION_READY_PENDING_SOURCE_ACCESS",
+  "events_discovered": 0,
+  "events_persisted": 0,
+  "groq_requests": 0,
+  "postgresql_writes_executed_by_report": false,
+  "qdrant_writes_executed": false,
+  "remaining_blockers": [
+    "replace LankaEvents placeholder terms evidence with a real reference",
+    "record only source-permitted public detail URL prefixes",
+    "run controlled live ingestion twice and verify read-back before unpausing the daily DAG"
+  ]
+}

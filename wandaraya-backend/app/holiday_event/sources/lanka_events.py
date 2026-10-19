@@ -1,7 +1,7 @@
 """LankaEvents public-page extractor. Private calendar endpoints are excluded."""
 from __future__ import annotations
 from dataclasses import dataclass
-from app.holiday_event.parsers import parse_lankaevents_detail_html, parse_lankaevents_html
+from app.holiday_event.parsers import parse_lankaevents_detail_html, parse_lankaevents_html, parse_lankaevents_icalendar
 
 @dataclass(frozen=True)
 class EventFetchResult:
@@ -22,4 +22,6 @@ class LankaEventsExtractor:
     def parse(self, result: EventFetchResult):
         return parse_lankaevents_html(result.html, source_url=result.url)
     def parse_detail(self, result: EventFetchResult):
+        if "BEGIN:VCALENDAR" in result.html.upper():
+            return parse_lankaevents_icalendar(result.html, source_url=result.url)
         return parse_lankaevents_detail_html(result.html, source_url=result.url)
