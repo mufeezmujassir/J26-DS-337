@@ -1,0 +1,24 @@
+{
+  "preview": {
+    "attraction_id": 1,
+    "is_public_holiday": null,
+    "is_bank_holiday": null,
+    "is_poya_day": true,
+    "poya_name": "Duruthu",
+    "nearby_event_count": null,
+    "matched_event_ids": [],
+    "overlapping_event_ids": [],
+    "event_proximity_km": null,
+    "cultural_relevance_score": 0.6,
+    "holiday_context_score": 0.6,
+    "event_context_score": null,
+    "context_confidence": "medium",
+    "evidence_sources": [
+      "https://calendarsrilanka.com/"
+    ],
+    "uncertainty_flags": [
+      "holiday_public_bank_classification_page_level_uncertain"
+    ],
+    "explanation": "Poya day detected for the selected date. Religious-cultural relevance may be higher, but crowd conditions and opening hours are not verified."
+  }
+}

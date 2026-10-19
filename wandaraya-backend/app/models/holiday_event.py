@@ -3,7 +3,7 @@ from __future__ import annotations
 
 from datetime import datetime, timezone
 
-from sqlalchemy import Boolean, DateTime, ForeignKey, Index, Integer, JSON, String, Text, UniqueConstraint
+from sqlalchemy import Boolean, DateTime, Float, ForeignKey, Index, Integer, JSON, String, Text, UniqueConstraint
 from sqlalchemy.orm import Mapped, mapped_column
 
 from app.database import Base
@@ -107,5 +107,12 @@ class EventAttractionLink(Base):
     relationship_type: Mapped[str] = mapped_column(String(80), nullable=False)
     evidence_source: Mapped[str] = mapped_column(Text, nullable=False)
     verification_status: Mapped[str] = mapped_column(String(40), nullable=False, default="review_required")
+    # Candidate evidence is intentionally separate from verified identity.
+    evidence_type: Mapped[str | None] = mapped_column(String(80))
+    semantic_similarity: Mapped[float | None] = mapped_column(Float)
+    geographic_distance_km: Mapped[float | None] = mapped_column(Float)
+    matching_confidence: Mapped[float | None] = mapped_column(Float)
+    explanation: Mapped[str | None] = mapped_column(Text)
+    verification_timestamp: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now, nullable=False)
     updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now, onupdate=_now, nullable=False)

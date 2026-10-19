@@ -1,0 +1,11 @@
+{
+  "endpoint": "POST /api/v1/context/holiday-events/evaluate",
+  "sample_request": {
+    "travel_date": "2026-01-03",
+    "attraction_ids": [
+      1
+    ]
+  },
+  "status": "HTTP_READBACK_VERIFIED",
+  "http_request_performed": true
+}

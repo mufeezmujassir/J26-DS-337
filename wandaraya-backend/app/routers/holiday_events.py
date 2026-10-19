@@ -9,8 +9,11 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.database import get_db
 from app.holiday_event.service import HolidayEventContextService
+from app.holiday_event.context_features import HolidayEventContextFeatureService, HolidayEventFeatureRequest, HolidayEventFeatureResponse
 from app.models.holiday_calendar import Holiday
 from app.models.holiday_event import TourismEvent
+from app.models.holiday_event import EventAttractionLink
+from app.models.attraction import Attraction
 
 router = APIRouter(tags=["Holiday and Event Intelligence"])
 
@@ -51,7 +54,58 @@ async def event_by_id(event_id: int, db: AsyncSession = Depends(get_db)):
     if not event: raise HTTPException(404, "Event not found")
     return {"id": event.id, "title": event.title, "description": event.description, "status": event.status, "source_url": event.source_url}
 
+
+@router.get("/api/v1/events/{event_id}/attraction-matches")
+async def event_attraction_matches(
+    event_id: int,
+    match_status: str | None = None,
+    limit: int = 20,
+    minimum_similarity: float | None = Query(None, ge=0, le=1),
+    include_evidence: bool = True,
+    db: AsyncSession = Depends(get_db),
+):
+    """Return persisted evidence-aware candidates; this endpoint never creates links."""
+    event = await db.get(TourismEvent, event_id)
+    if not event:
+        raise HTTPException(404, "Event not found")
+    statement = (
+        select(EventAttractionLink, Attraction)
+        .join(Attraction, Attraction.id == EventAttractionLink.attraction_id)
+        .where(EventAttractionLink.event_id == event_id)
+        .order_by(EventAttractionLink.semantic_similarity.desc().nullslast())
+        .limit(_limit(limit))
+    )
+    if match_status:
+        statement = statement.where(EventAttractionLink.verification_status == match_status.casefold())
+    if minimum_similarity is not None:
+        statement = statement.where(EventAttractionLink.semantic_similarity >= minimum_similarity)
+    rows = (await db.execute(statement)).all()
+    return {
+        "event": {"id": event.id, "title": event.title, "source_url": event.source_url, "location_confidence": event.location_confidence},
+        "items": [
+            {
+                "attraction_id": attraction.id,
+                "attraction_name": attraction.name,
+                "match_status": link.verification_status,
+                "semantic_similarity": link.semantic_similarity,
+                "geographic_distance_km": link.geographic_distance_km,
+                "matching_confidence": link.matching_confidence,
+                "evidence_type": link.evidence_type,
+                "evidence_source_url": link.evidence_source if include_evidence else None,
+                "explanation": link.explanation if include_evidence else None,
+                "verification_timestamp": link.verification_timestamp,
+            }
+            for link, attraction in rows
+        ],
+        "read_only": True,
+    }
+
 @router.get("/api/v1/context/holiday-events")
 async def holiday_event_context(visit_datetime: datetime, attraction_id: int | None = None, db: AsyncSession = Depends(get_db)):
     data = await HolidayEventContextService(db).context(visit_datetime, attraction_id)
     return {"visit_datetime": visit_datetime, "attraction_id": attraction_id, **data}
+
+@router.post("/api/v1/context/holiday-events/evaluate", response_model=HolidayEventFeatureResponse)
+async def evaluate_holiday_event_context(payload: HolidayEventFeatureRequest, db: AsyncSession = Depends(get_db)):
+    """Read-only feature preview; no recommendation weights are changed."""
+    return await HolidayEventContextFeatureService(db).evaluate(payload)

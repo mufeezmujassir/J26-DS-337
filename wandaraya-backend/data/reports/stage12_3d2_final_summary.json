@@ -1,0 +1,18 @@
+{
+  "generated_at_utc": "2026-10-19T09:16:46.989755+00:00",
+  "status": "EVENT_ATTRACTION_MATCHING_ENGINE_VERIFIED",
+  "real_events": 1,
+  "verified_links": 0,
+  "candidate_links": 5,
+  "unresolved_real_events": 1,
+  "active_attractions": 6120,
+  "qdrant": {
+    "collection": "sri_lanka_attractions_staging",
+    "point_count": 6120,
+    "status": "read_only_ok",
+    "writes_executed": false
+  },
+  "postgresql_writes_in_matching": true,
+  "qdrant_writes_executed": false,
+  "production_ranking_changed": false
+}
