@@ -59,6 +59,24 @@ class TourismEvent(Base):
     updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now, onupdate=_now, nullable=False)
 
 
+class IngestionRun(Base):
+    __tablename__ = "ingestion_runs"
+    __table_args__ = (Index("ix_ingestion_runs_source_started", "source_id", "started_at"),)
+    id: Mapped[int] = mapped_column(primary_key=True)
+    source_id: Mapped[int] = mapped_column(ForeignKey("ingestion_sources.id", ondelete="RESTRICT"), nullable=False)
+    dag_id: Mapped[str] = mapped_column(String(250), nullable=False)
+    airflow_run_id: Mapped[str | None] = mapped_column(String(250))
+    started_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now, nullable=False)
+    finished_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    status: Mapped[str] = mapped_column(String(40), nullable=False)
+    records_fetched: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
+    records_inserted: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
+    records_updated: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
+    records_unchanged: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
+    records_rejected: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
+    error_summary: Mapped[str | None] = mapped_column(Text)
+
+
 class HolidayEventRevision(Base):
     __tablename__ = "holiday_event_revisions"
     id: Mapped[int] = mapped_column(primary_key=True)
