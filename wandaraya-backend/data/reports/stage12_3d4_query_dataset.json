@@ -1,0 +1,432 @@
+{
+  "version": "stage12_3d4_v1",
+  "generated_at_utc": "2026-10-19T13:34:57.011401+00:00",
+  "scenario_count": 32,
+  "scenarios": [
+    {
+      "query_id": "d4_01_galle_heritage_poya",
+      "travel_date": "2026-01-03",
+      "interests": [
+        "heritage",
+        "culture",
+        "walking"
+      ],
+      "district_ids": [
+        78
+      ],
+      "scenario_group": "heritage",
+      "context_expectation": "poya"
+    },
+    {
+      "query_id": "d4_02_kandy_religious_poya",
+      "travel_date": "2026-02-01",
+      "interests": [
+        "religious",
+        "heritage",
+        "culture"
+      ],
+      "district_ids": [],
+      "scenario_group": "religious",
+      "context_expectation": "poya"
+    },
+    {
+      "query_id": "d4_03_anuradhapura_poya",
+      "travel_date": "2026-03-02",
+      "interests": [
+        "buddhist",
+        "heritage"
+      ],
+      "district_ids": [],
+      "scenario_group": "religious",
+      "context_expectation": "poya"
+    },
+    {
+      "query_id": "d4_04_colombo_event_date",
+      "travel_date": "2026-10-01",
+      "interests": [
+        "art",
+        "culture",
+        "exhibition"
+      ],
+      "district_ids": [],
+      "scenario_group": "event",
+      "context_expectation": "event_unverified_location"
+    },
+    {
+      "query_id": "d4_05_yala_wildlife",
+      "travel_date": "2026-10-20",
+      "interests": [
+        "wildlife",
+        "safari",
+        "nature"
+      ],
+      "district_ids": [],
+      "scenario_group": "wildlife",
+      "context_expectation": "ordinary_day"
+    },
+    {
+      "query_id": "d4_06_mirissa_beach",
+      "travel_date": "2026-10-20",
+      "interests": [
+        "beach",
+        "coastal",
+        "relaxation"
+      ],
+      "district_ids": [],
+      "scenario_group": "beach",
+      "context_expectation": "ordinary_day"
+    },
+    {
+      "query_id": "d4_07_ella_hiking",
+      "travel_date": "2026-10-20",
+      "interests": [
+        "hiking",
+        "nature",
+        "scenic"
+      ],
+      "district_ids": [],
+      "scenario_group": "nature",
+      "context_expectation": "ordinary_day"
+    },
+    {
+      "query_id": "d4_08_sigiriya_family",
+      "travel_date": "2026-10-20",
+      "interests": [
+        "heritage",
+        "family",
+        "history"
+      ],
+      "district_ids": [],
+      "scenario_group": "family",
+      "context_expectation": "ordinary_day"
+    },
+    {
+      "query_id": "d4_09_galle_family",
+      "travel_date": "2026-10-20",
+      "interests": [
+        "family",
+        "heritage",
+        "walking"
+      ],
+      "district_ids": [
+        78
+      ],
+      "scenario_group": "family",
+      "context_expectation": "ordinary_day"
+    },
+    {
+      "query_id": "d4_10_trincomalee_coast",
+      "travel_date": "2026-10-20",
+      "interests": [
+        "beach",
+        "snorkelling",
+        "coastal"
+      ],
+      "district_ids": [],
+      "scenario_group": "beach",
+      "context_expectation": "ordinary_day"
+    },
+    {
+      "query_id": "d4_11_sinharaja_nature",
+      "travel_date": "2026-10-20",
+      "interests": [
+        "nature",
+        "rainforest",
+        "wildlife"
+      ],
+      "district_ids": [],
+      "scenario_group": "nature",
+      "context_expectation": "ordinary_day"
+    },
+    {
+      "query_id": "d4_12_dambulla_culture",
+      "travel_date": "2026-10-20",
+      "interests": [
+        "culture",
+        "temple",
+        "heritage"
+      ],
+      "district_ids": [],
+      "scenario_group": "heritage",
+      "context_expectation": "ordinary_day"
+    },
+    {
+      "query_id": "d4_13_nuwara_eliya_family",
+      "travel_date": "2026-10-20",
+      "interests": [
+        "family",
+        "nature",
+        "scenic"
+      ],
+      "district_ids": [],
+      "scenario_group": "family",
+      "context_expectation": "ordinary_day"
+    },
+    {
+      "query_id": "d4_14_arugam_bay_surf",
+      "travel_date": "2026-10-20",
+      "interests": [
+        "beach",
+        "surfing",
+        "adventure"
+      ],
+      "district_ids": [],
+      "scenario_group": "beach",
+      "context_expectation": "ordinary_day"
+    },
+    {
+      "query_id": "d4_15_polonnaruwa_history",
+      "travel_date": "2026-10-20",
+      "interests": [
+        "history",
+        "archaeology",
+        "heritage"
+      ],
+      "district_ids": [],
+      "scenario_group": "heritage",
+      "context_expectation": "ordinary_day"
+    },
+    {
+      "query_id": "d4_16_horton_plains",
+      "travel_date": "2026-10-20",
+      "interests": [
+        "hiking",
+        "nature",
+        "wildlife"
+      ],
+      "district_ids": [],
+      "scenario_group": "nature",
+      "context_expectation": "ordinary_day"
+    },
+    {
+      "query_id": "d4_17_jaffna_culture",
+      "travel_date": "2026-10-20",
+      "interests": [
+        "culture",
+        "heritage",
+        "food"
+      ],
+      "district_ids": [],
+      "scenario_group": "cultural",
+      "context_expectation": "ordinary_day"
+    },
+    {
+      "query_id": "d4_18_bentota_family",
+      "travel_date": "2026-10-20",
+      "interests": [
+        "family",
+        "beach",
+        "water"
+      ],
+      "district_ids": [],
+      "scenario_group": "family",
+      "context_expectation": "ordinary_day"
+    },
+    {
+      "query_id": "d4_19_kataragama_religious",
+      "travel_date": "2026-10-20",
+      "interests": [
+        "religious",
+        "culture",
+        "pilgrimage"
+      ],
+      "district_ids": [],
+      "scenario_group": "religious",
+      "context_expectation": "ordinary_day"
+    },
+    {
+      "query_id": "d4_20_udawalawe_safari",
+      "travel_date": "2026-10-20",
+      "interests": [
+        "wildlife",
+        "safari",
+        "family"
+      ],
+      "district_ids": [],
+      "scenario_group": "wildlife",
+      "context_expectation": "ordinary_day"
+    },
+    {
+      "query_id": "d4_21_negombo_coast",
+      "travel_date": "2026-10-20",
+      "interests": [
+        "beach",
+        "food",
+        "culture"
+      ],
+      "district_ids": [],
+      "scenario_group": "beach",
+      "context_expectation": "ordinary_day"
+    },
+    {
+      "query_id": "d4_22_knuckles_hiking",
+      "travel_date": "2026-10-20",
+      "interests": [
+        "hiking",
+        "adventure",
+        "nature"
+      ],
+      "district_ids": [],
+      "scenario_group": "nature",
+      "context_expectation": "ordinary_day"
+    },
+    {
+      "query_id": "d4_23_galle_photography",
+      "travel_date": "2026-10-20",
+      "interests": [
+        "heritage",
+        "photography",
+        "walking"
+      ],
+      "district_ids": [
+        78
+      ],
+      "scenario_group": "heritage",
+      "context_expectation": "ordinary_day"
+    },
+    {
+      "query_id": "d4_24_cultural_triangle",
+      "travel_date": "2026-10-20",
+      "interests": [
+        "heritage",
+        "archaeology",
+        "culture"
+      ],
+      "district_ids": [],
+      "scenario_group": "heritage",
+      "context_expectation": "ordinary_day"
+    },
+    {
+      "query_id": "d4_25_birdwatching",
+      "travel_date": "2026-10-20",
+      "interests": [
+        "wildlife",
+        "nature",
+        "birdwatching"
+      ],
+      "district_ids": [],
+      "scenario_group": "wildlife",
+      "context_expectation": "ordinary_day"
+    },
+    {
+      "query_id": "d4_26_colombo_museum",
+      "travel_date": "2026-10-20",
+      "interests": [
+        "museum",
+        "history",
+        "culture"
+      ],
+      "district_ids": [],
+      "scenario_group": "cultural",
+      "context_expectation": "ordinary_day"
+    },
+    {
+      "query_id": "d4_27_ordinary_unknown_context",
+      "travel_date": "2027-12-31",
+      "interests": [
+        "nature",
+        "culture"
+      ],
+      "district_ids": [],
+      "scenario_group": "missing_context",
+      "context_expectation": "no_stored_calendar_evidence"
+    },
+    {
+      "query_id": "d4_28_future_holiday_unknown",
+      "travel_date": "2028-01-01",
+      "interests": [
+        "family",
+        "heritage"
+      ],
+      "district_ids": [],
+      "scenario_group": "missing_context",
+      "context_expectation": "no_stored_calendar_evidence"
+    },
+    {
+      "query_id": "d4_29_anuradhapura_ordinary",
+      "travel_date": "2026-10-20",
+      "interests": [
+        "religious",
+        "heritage",
+        "walking"
+      ],
+      "district_ids": [],
+      "scenario_group": "religious",
+      "context_expectation": "ordinary_day"
+    },
+    {
+      "query_id": "d4_30_wilpattu_wildlife",
+      "travel_date": "2026-10-20",
+      "interests": [
+        "wildlife",
+        "safari",
+        "nature"
+      ],
+      "district_ids": [],
+      "scenario_group": "wildlife",
+      "context_expectation": "ordinary_day"
+    },
+    {
+      "query_id": "d4_31_south_coast_relax",
+      "travel_date": "2026-10-20",
+      "interests": [
+        "beach",
+        "relaxation",
+        "family"
+      ],
+      "district_ids": [],
+      "scenario_group": "beach",
+      "context_expectation": "ordinary_day"
+    },
+    {
+      "query_id": "d4_32_kandy_culture",
+      "travel_date": "2026-10-20",
+      "interests": [
+        "culture",
+        "heritage",
+        "religious"
+      ],
+      "district_ids": [],
+      "scenario_group": "cultural",
+      "context_expectation": "ordinary_day"
+    }
+  ],
+  "split": {
+    "d4_01_galle_heritage_poya": "development",
+    "d4_02_kandy_religious_poya": "development",
+    "d4_03_anuradhapura_poya": "development",
+    "d4_04_colombo_event_date": "development",
+    "d4_05_yala_wildlife": "held_out",
+    "d4_06_mirissa_beach": "held_out",
+    "d4_07_ella_hiking": "held_out",
+    "d4_08_sigiriya_family": "development",
+    "d4_09_galle_family": "development",
+    "d4_10_trincomalee_coast": "held_out",
+    "d4_11_sinharaja_nature": "held_out",
+    "d4_12_dambulla_culture": "development",
+    "d4_13_nuwara_eliya_family": "development",
+    "d4_14_arugam_bay_surf": "held_out",
+    "d4_15_polonnaruwa_history": "development",
+    "d4_16_horton_plains": "held_out",
+    "d4_17_jaffna_culture": "development",
+    "d4_18_bentota_family": "development",
+    "d4_19_kataragama_religious": "development",
+    "d4_20_udawalawe_safari": "held_out",
+    "d4_21_negombo_coast": "held_out",
+    "d4_22_knuckles_hiking": "held_out",
+    "d4_23_galle_photography": "development",
+    "d4_24_cultural_triangle": "development",
+    "d4_25_birdwatching": "held_out",
+    "d4_26_colombo_museum": "development",
+    "d4_27_ordinary_unknown_context": "development",
+    "d4_28_future_holiday_unknown": "development",
+    "d4_29_anuradhapura_ordinary": "development",
+    "d4_30_wilpattu_wildlife": "held_out",
+    "d4_31_south_coast_relax": "held_out",
+    "d4_32_kandy_culture": "development"
+  },
+  "data_provenance": "manually authored research scenarios; not independently collected tourist behaviour",
+  "postgresql_writes": false,
+  "qdrant_writes": false,
+  "production_ranking_changed": false
+}
