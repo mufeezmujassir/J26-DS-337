@@ -1,0 +1,38 @@
+{
+  "generated_at_utc": "2026-10-19T05:42:06.705122+00:00",
+  "target_url": "https://calendarsrilanka.com/",
+  "robots_url": "https://calendarsrilanka.com/robots.txt",
+  "transport_comparison": [
+    {
+      "client": "requests",
+      "status": 200,
+      "final_url": "https://calendarsrilanka.com/robots.txt",
+      "redirect_statuses": [],
+      "server": "hcdn",
+      "content_type": "text/plain; charset=utf-8",
+      "body_sha256": "dca9f1426143510d708f68486e249ed95f8995d860bdae8f43d9836137c8357f"
+    },
+    {
+      "client": "httpx",
+      "status": 403,
+      "final_url": "https://calendarsrilanka.com/robots.txt",
+      "redirect_statuses": [],
+      "server": "hcdn",
+      "content_type": "text/html",
+      "body_sha256": "69eacef2f355c22ff53745adb39ff0076d2093a767a72e38070ca83c7c5569df"
+    }
+  ],
+  "policy_result": {
+    "source_name": "calendar_sri_lanka",
+    "url": "https://calendarsrilanka.com/",
+    "permitted": false,
+    "reason": "ROBOTS_RULES_RETRIEVED:terms_review_required",
+    "robots_url": "https://calendarsrilanka.com/robots.txt",
+    "robots_status": 200,
+    "target_url": "https://calendarsrilanka.com/",
+    "transport": "requests"
+  },
+  "diagnosis": "requests received the robots policy while httpx received a source HTTP 403; the governed checker now uses requests with the declared WANDARAYA user-agent and proxy inheritance disabled.",
+  "database_writes": false,
+  "qdrant_writes": false
+}

@@ -15,6 +15,7 @@ class HolidayRecord(BaseModel):
     holiday_date: date
     holiday_name: str = Field(min_length=1, max_length=255)
     holiday_type: str | None = None
+    description: str | None = None
     poya_name: str | None = None
     religious_category: str | None = None
     is_public_holiday: bool = False
