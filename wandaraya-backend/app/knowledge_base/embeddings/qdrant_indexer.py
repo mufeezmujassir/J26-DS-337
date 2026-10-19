@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+import os
 
 from qdrant_client import QdrantClient
 from qdrant_client.models import PointStruct, VectorParams,Distance
@@ -16,7 +17,13 @@ class IndexingResult:
 
 
 class AttractionQdrantIndexer:
-    COLLECTION_NAME = 'sri_lanka_attractions'
+    # The default preserves the original production collection.  A reviewed
+    # cutover can select an isolated replacement through environment config;
+    # callers must never need a source-code edit merely to change collection.
+    COLLECTION_NAME = os.getenv(
+        "QDRANT_COLLECTION_NAME",
+        os.getenv("QDRANT_COLLECTION", "sri_lanka_attractions"),
+    )
     VECTOR_SIZE = 1024
 
     def __init__(

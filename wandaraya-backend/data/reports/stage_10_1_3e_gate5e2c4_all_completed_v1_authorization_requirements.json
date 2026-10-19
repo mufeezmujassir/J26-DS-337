@@ -1,0 +1,12 @@
+{
+  "required": [
+    "--execute",
+    "--confirm-execute",
+    "--manifest-sha256 7d9638696df04d4ab10a63fd0428bfd7723405da6b9a073a4a3d052b2eb1c049",
+    "--write-scope-sha256 7d6dfb2d26e161f5e5cfe668002c8ad01d686b5191555a8a2b800940e4feea95",
+    "--execution-plan-sha256 60534dcd176ef43e1774268f3fa797bca0eb2ef7a4a0e058bb1bafbdfa0046e5",
+    "explicit 24-record human-approved scope",
+    "fresh in-transaction collision recheck"
+  ],
+  "transaction_execution_enabled": false
+}

@@ -1,0 +1,315 @@
+{
+  "records": [
+    {
+      "attraction_name": "Okanda Beach",
+      "candidates": [
+        {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 1.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.8,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 6.6501404,
+            "longitude": 81.7761872
+          },
+          "display_name": "Okanda North Beach",
+          "distance_km": null,
+          "existing_kb_matches": [
+            {
+              "id": 4067,
+              "name": "Okanda North Beach"
+            }
+          ],
+          "formatted_address": "MQ2G+3F, Okanda, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=7778553866762208460&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJl1Iob07H5ToRzESafof58ms",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "tourist_attraction",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 1.0,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 1.0,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 6.6279397,
+            "longitude": 81.77081820000001
+          },
+          "display_name": "\u0d94\u0d9a\u0db3 \u0dc0\u0dd9\u0dbb\u0dc5 | Okanda Beach",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "JQHC+58G, \u0d85\u0db8\u0dca\u0db4\u0dcf\u0dbb, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=16659441138739290654&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJxVbdqaDH5ToRHqIVP3M5Muc",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "tourist_attraction",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.775,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        }
+      ],
+      "classification": "verified_existing_kb_match",
+      "details": {
+        "data": {
+          "addressComponents": [
+            {
+              "languageCode": "en-US",
+              "longText": "MQ2G+3F",
+              "shortText": "MQ2G+3F",
+              "types": [
+                "plus_code"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Okanda",
+              "shortText": "Okanda",
+              "types": [
+                "locality",
+                "political"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Sri Lanka",
+              "shortText": "LK",
+              "types": [
+                "country",
+                "political"
+              ]
+            }
+          ],
+          "businessStatus": "OPERATIONAL",
+          "displayName": {
+            "languageCode": "en",
+            "text": "Okanda North Beach"
+          },
+          "formattedAddress": "MQ2G+3F, Okanda, Sri Lanka",
+          "googleMapsUri": "https://maps.google.com/?cid=7778553866762208460&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+          "id": "ChIJl1Iob07H5ToRzESafof58ms",
+          "location": {
+            "latitude": 6.6501404,
+            "longitude": 81.7761872
+          },
+          "photos": [
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Aj Aja",
+                  "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocLqUhrYsRHTa5FA9bKbNdiEQ1fHgQ11x8SHG3-WEJsIRtZVEeOk=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/101212149571005148332"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIABIhDRguto5j_iNwtRzgZc9KL_&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIABIhDRguto5j_iNwtRzgZc9KL_!2e10!4m2!3m1!1s0x3ae5c74e6f285297:0x6bf2f9877e9a44cc",
+              "heightPx": 3024,
+              "name": "places/ChIJl1Iob07H5ToRzESafof58ms/photos/Aa-ngMa6EZ6dWfXa3xTOG7AaW96gA1yGvkhGBClsqlYAbfGRhvj9_ZE19ismOe1kmsQHM7eVmssFQDYpoU-GG1T8Ujgd3mumagdFeYyhdWy2eWaHoZGkMDvK8LrKflmAw6Ur4ksRgLJBHYGsWSk3ko11sT6xvqX9-lu-fJVDdtIVHDiglaUVRt1sX5F_Z2XuFDG0cbNcdIDJafy0vaEndxFNeSzzUGPslnwN0pzmywAhZkEFIV515PxaY1E7hqS6dbou_Q673uuSbXlvTBtlhMY8-YIOzy_9ATqxtiTWBgZKe-i7bEM_DWGThJlmlNU6WbaRkfrP2ZczxghcpAJbrbygTISk3sr74KOR-7SRDDYy77XaKecPjI689lrOkHMAiLL1ww2v8fdIiENNkUfTclSSZPelLAypYDss2yO4T-Uiv0ztLg",
+              "widthPx": 4032
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Tigers king Thuvikaran (AB DE THUVI)",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjX_kggDzhjsMruhxxjk-vhhSzGyejmYWBUPb10SepKMvRWYX1kn=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/109547975850286234901"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgICrxdCZzwE&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICrxdCZzwE!2e10!4m2!3m1!1s0x3ae5c74e6f285297:0x6bf2f9877e9a44cc",
+              "heightPx": 3456,
+              "name": "places/ChIJl1Iob07H5ToRzESafof58ms/photos/Aa-ngMb9qI12wnsqAGLWIiOt24pYPdu31yqx1w7nWnW93kxAS8PgD0aa6HpQETJEcinN-HX6N5WaHusm3w7lbV_hhpXNMdLEX7kxg_cCUowgqoz_5viV-82QsbskYzkm-M6baqGwuufTNFgKNuXMw_AjqSHMq-ABIwGSE1PDkh21my7Fxwq8gbrE7bkB0mQGpuVATIDPAaV2GtcvdBxWV4n87fkdiLlwsKx-ur9Gw4oRzKOhfwTG8T72CszbVjCvEe4Onx466YrQ8dm7MdtUiFESey6Nqvk3B2qWe8dwnFD_MiPX2FUTEF7L8dSi73iV_s6SHb1vFVK0OQjKCvlVH-KspwBO_ZcXA5Sdmd6qCumoZca3uHd9lHki2SjoTzAi-gJBt4zOHCUfxGMeKguNsgPCc8T1DPnuIek",
+              "widthPx": 4608
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Ragu",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWUX0ifUYe-YGCUxbWuxUhFp49i0s5nFQ5_DwZb6DSLUtwyKsAb=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/107294819434939554277"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIABIhAoLA2ryyoArc257tws-cso&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIABIhAoLA2ryyoArc257tws-cso!2e10!4m2!3m1!1s0x3ae5c74e6f285297:0x6bf2f9877e9a44cc",
+              "heightPx": 3024,
+              "name": "places/ChIJl1Iob07H5ToRzESafof58ms/photos/Aa-ngMZU5o2pTfop4iw0hgUbVAYdTijg2s7FRG52YDkMmpSEuwEVd6WVJHmYs0icwp9D7u0-A50cAUtOBU8-rFFaYhv6tK76cW66qCQLfjmEepAos18FN1-WXG_O93zJOgIpNL_PxD1qB1livlq-ps47YkW7bHqjlLYvEB-7orBkF81lUU6hGBnXUUJH2cDsUuoa2zrZYNtgJL75kOfFe__5ap6ctfkWMKDLKOQDxrPUTvahULA4u6d2CNgDO71tV0UsbHdz5iNGjmQawvrEpl63Q7cTZzCA3AOY5Sr1YNXF9EZNc3mGjkGBfYk-ThkJexheJ-bitvB_lsrSe6Cr4cfqEAX8lniH2SQQZtvDhw53ZAUA6_fJj58UsiDiDtoX7OcEhriRkmnjhB36P-PDzCYQV5naauoPQ5ghq_iefD1fk8Vrjw",
+              "widthPx": 4032
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Chameera Madusanka",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVeOQNmY-b29Tk3MOXcTsoNMIa5NWKnye3VLNJVw720LTdsbmnb=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/106598052716359172071"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIABIhBnQkDwspX8gfd9cwJ3goi7&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIABIhBnQkDwspX8gfd9cwJ3goi7!2e10!4m2!3m1!1s0x3ae5c74e6f285297:0x6bf2f9877e9a44cc",
+              "heightPx": 3968,
+              "name": "places/ChIJl1Iob07H5ToRzESafof58ms/photos/Aa-ngMYj77eJp_8qTC3Eb7ZRXLYBOxevm41UBR-h9JULMrqr_mmTLrldDE0DNitG-nns8O4ncX8mWy7fqA3s4eU2RsB1wqV36sQtIHJ1ZbC1-s077ZEeQgrThMiHV2I5i--JATC6srRVbfD7LcT4v18yfoPy2Gy3PXpWyJjIlLi-58tOePbripwSTEkBBICuqAoVfzUayCdm8EP-EENTmMw0Sai7yzLd1gMrKIkEhXxeGU9AKS1b-JuD4gQwYZ2g_Q6MtwEfoHPam3hdY_G2BkUDG6gsba7cobF5RWc2OiNt06pomLPEHogo0ACG4J7mlCAlAnvuvTNkMNVXB4bIwLiUHf_eKgD1seX2sXIdR-3hsyDISlpyklCsFkZlr_u1Ro5rwSM1qRZQnEj-lQNmHYje0iOUJtb2tugniQuLfY148-CDaA",
+              "widthPx": 2976
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Chameera Madusanka",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVeOQNmY-b29Tk3MOXcTsoNMIa5NWKnye3VLNJVw720LTdsbmnb=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/106598052716359172071"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIABIhDONFA-mKqyK9dz9A2s2Se2&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIABIhDONFA-mKqyK9dz9A2s2Se2!2e10!4m2!3m1!1s0x3ae5c74e6f285297:0x6bf2f9877e9a44cc",
+              "heightPx": 2976,
+              "name": "places/ChIJl1Iob07H5ToRzESafof58ms/photos/Aa-ngMYdYQv3pO1kk6RKsKEvAhJedLJCP8Dozd63UTHPfCcf8fOn4l0JpakYEHwyJoIb7jN3ZM7ZOErme6zFBzWRqM5oRLMzfpvIq27WKTLDDQkhS3f75bInbWFmEs6D4CS34NGa5p5AqOXULTFmJqnKFa4bFso_s_57MEQKx0XacI99cRsbnK89XkbOLkPE3Lu-fpmSeQbDRg2wmXubLD3Z2WRADg_02_smJ8JJ--h2tYybgGqWWKXuJvXUMflV4hvPaXDjvNiRRLQ_zt-gNmwTbGusHRSpO6tItos2ax7sArwVvbF3plhRKwhYN-NMAOnW4FveeoPgEa5loC1tZE0AKVAJFpU7qt8365FwyTNIDdQ23LGmMbRWkfTDr-OM9UZ_VlKSuV4tvx7DXxIp28T01scq3mRGct2SirSnGTVXqvIy",
+              "widthPx": 3968
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "salinda gunasena",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjU016wuBGo6U3aoYBXWRSmE0sRHsJwI-2YC5Eh9_tQpBtNIdUDa=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/114189362888248231576"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIABIhBgxlq9Vc644nYJhZXmTqN6&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIABIhBgxlq9Vc644nYJhZXmTqN6!2e10!4m2!3m1!1s0x3ae5c74e6f285297:0x6bf2f9877e9a44cc",
+              "heightPx": 1840,
+              "name": "places/ChIJl1Iob07H5ToRzESafof58ms/photos/Aa-ngMZWeXSwMU7MqkoiRNTPC94T5HNj3a39V4DlBI8_HJFMz9-_ipYxzVN6RcUAqzyj1C7EDd-P2x6EmsSxmPcY8Y-KeNv4dLgdlX15iWwLJLzDqt8Tfjo1q-_aXgZTDLmZWFKxN0YqpCqYzg__a5AwIk4qbSJos-WNRqLWAWGyxK0iRkKK4eyPelq868qjh9m_aQFvwhlos9nEWzaDZzKh0zu1uBort1Vfc0BjXuQDqXjIwwRxcS66iJWIpE7M9EMUUxoLPmGR7lzDj1SI-SauF8fB7DSEKv2Z_xo0WF4_VNJL_0SlVd1tWQntYhnv3OCgCL3RojTUzzPJH97D_dvszMg9eIIwtGDAdcg5HGd56A-eDdflPvn5iUOPzUdMC7_mw4VhZCAUdJjvjGcdvgC0DHMViorabFF8s4IqzX9fs1bg9A",
+              "widthPx": 4096
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Jaseem Sajeeth",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUEjlMms37YE7a8_WlcCS2NgPO8PGE2Axx47Mmoo7uXwZ2RmOQ=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/108996886789638424865"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIDz6L_DYA&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDz6L_DYA!2e10!4m2!3m1!1s0x3ae5c74e6f285297:0x6bf2f9877e9a44cc",
+              "heightPx": 2448,
+              "name": "places/ChIJl1Iob07H5ToRzESafof58ms/photos/Aa-ngMby96OBiQe-aPZtZn3nNMqwcQqP6s6seSOsoKpFZGxnvupnFGOUOsCEoMLuBFMT5zZ5bQhaDq6OQSbaKrKTA5kT09ai5Zp1PZg1A4iuo6DvQF-eYriRrYmpP03IZVN9ng3Zupa6B6VkloorPnAXEz0x9gl9mJkaSY2Y1wlN457ZP4Vz_dwSDtf1bKHxAW2r95O_L7K7GXq_Wg_XJCv9Vvo_0yEyQlH5ih0I4aH15TMBhjyZmB_9-HpjMxpmMia-ieIZvgSP_Y2Pc_nWn-zUTmOR2r9DaxiyTwsHGnt3wPvXgwOiD5ZHh02PsjulwZNKGNVtzNSOL1bG2kfQ5tWknUqEVhDcj9I3joKHxRYNKJGkqW_8_-GMAVp8m0-5daKfTnBaIHqAU-2BxfGFPRuMm160WQ",
+              "widthPx": 3264
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Chameera Madusanka",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVeOQNmY-b29Tk3MOXcTsoNMIa5NWKnye3VLNJVw720LTdsbmnb=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/106598052716359172071"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIABIhBM5PSHbKgYMM_r8YllygS9&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIABIhBM5PSHbKgYMM_r8YllygS9!2e10!4m2!3m1!1s0x3ae5c74e6f285297:0x6bf2f9877e9a44cc",
+              "heightPx": 2976,
+              "name": "places/ChIJl1Iob07H5ToRzESafof58ms/photos/Aa-ngMZDT1C4L0KAsNwZrJRgfLDSezGsQ5k2RoKr9PeHBSF6KQJD1bGjQFURAl4hmxpLv2hZCgVOx2rtFCcSP45CuHLN2Yp6jNUj3Njy6xQbgUQGvNq0WaUYa1teEhHWfZQDYmjAleiVi2aXpfF1V3-wka9NK1nU7jS9J3nQDHKldVjXgOC6q2jGG3S_abqfMFCQHvRsphnGujPt5WnzUDYm_9BiBozH8fNuiTMK4C-IQGG6MbAdBq5DDUIgh3CjIFDW3hM-w93rXdT8gQ-gsNqX1pRqkO7Vo4WyQA-hiW-dcxQ3vr0jDt6EHUKTW1oVeM9KeEW5X8sKaPwaZxpOTp2tJp_1TE05KYb_s8wTSnBL_nStTeO8itQS-OeMGbl619IJ6nBXvjFy3kmO5V-K9crPLJLyMzFcX-CWM4cI_TrKNy4ucA",
+              "widthPx": 3968
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Tigers king Thuvikaran (AB DE THUVI)",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjX_kggDzhjsMruhxxjk-vhhSzGyejmYWBUPb10SepKMvRWYX1kn=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/109547975850286234901"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgICrxdCnLg&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICrxdCnLg!2e10!4m2!3m1!1s0x3ae5c74e6f285297:0x6bf2f9877e9a44cc",
+              "heightPx": 3456,
+              "name": "places/ChIJl1Iob07H5ToRzESafof58ms/photos/Aa-ngMa7micLyzd9ryumZ5og65WHgemtmIgK_tsz_PDYnBweCjKDZYFZ5IZsH5W7sqKWnt1_8rTqeEZGdOlzEvBdKn9KDfhwU3AOVnhvhviRZ69uSe9kSZQ-YEfrE2BUmzALvpjeAmw8jm8rlrw2PDT5ypryOL9jxyycH3s5wpaJ9eLp8T_LcuAZhKvHn0d8PCwUSVDxRo5BillC56qvQBYohzyq2YJyQYYANneAJbrw-sTyakN-xyDvkAFf-5isih5xlGPNRRUAxWvvhvoAf0FqfJBJTszLdFbjAns56ANod0T5IopbUM6i-Soa3Eqj9IMepuVvF8CDFWnFPvFxxZg8jusUAYS0mDAPoF2JbHNGQC4PiIrMy716IQYTp8Cm7hxVdNqWKLl56pj9GZEPWGJdwJdgxFw",
+              "widthPx": 4608
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Alcatraz",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVfYJPgL7dsL1y_GVroFRZY8QdpnfzbZRq1EJvS7XW-zBncZnc=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/106343629098753988498"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgICF69-axQE&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICF69-axQE!2e10!4m2!3m1!1s0x3ae5c74e6f285297:0x6bf2f9877e9a44cc",
+              "heightPx": 3120,
+              "name": "places/ChIJl1Iob07H5ToRzESafof58ms/photos/Aa-ngMY1bVXoJzlvWR8HY-3rLlvptY3t3sucMTZGYSYkhtbfnvxyYbm6vDfgWUwzgx9WBvvoWCx5lrS54kylOhf-qcTgeCywoub9b4tQRXNcbnLWIx3xYvvSklrAcnhhAOY9djTd46FGQ1wAoKpxSme9ByBhy5n4eJQ1-V0KIBCLg5Rz8XgiFh4AhKcptWA6UipoEkWzVGVlJZwrRGf0onXMbcVtC01Wvx13eMgbCzQ4gQzV6bJ_Vu6reE3dwsXWFqBJr6DDBCL_RIsFJ1G_cY0BPWcvPpw5ymjvKhldNs2yOuJNh5Gpki3KTr7C4IJ9h1CGKK-5VgS73xob96x0Omfa2a-x6udpzWucDZmBVWgLMuoC3otH9lcjHvf6gXhpqdIkkftnsT1RM0MF8fJM0Ji7URbgQygT40A",
+              "widthPx": 4160
+            }
+          ],
+          "primaryType": "tourist_attraction",
+          "rating": 4.4,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ],
+          "userRatingCount": 24
+        },
+        "error": null,
+        "provenance": {
+          "google_place_id": "ChIJl1Iob07H5ToRzESafof58ms",
+          "source": "google_places_details"
+        }
+      },
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:99",
+      "google_candidate_kb_identity": "verified_existing_kb_place",
+      "official_source_candidate_identity": "strong_candidate_identity_evidence",
+      "query": "Okanda Beach, Sri Lanka",
+      "review_reasons": [],
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=99",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=99"
+    }
+  ]
+}

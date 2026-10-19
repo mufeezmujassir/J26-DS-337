@@ -1,0 +1,11 @@
+{
+  "approved_action_count": 0,
+  "postgresql_writes": false,
+  "qdrant_writes": false,
+  "reasons": [
+    "no explicit validated approvals",
+    "30 unresolved identity blockers",
+    "duplicate clusters need reviewer decisions"
+  ],
+  "status": "NOT_READY_FOR_SYNC"
+}

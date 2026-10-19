@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Any, Dict, List, Optional
 
-import httpx
+from app.knowledge_base.connectors.mediawiki import MediaWikiApiClient
 
 
 class WikivoyageConnector:
@@ -13,14 +13,7 @@ class WikivoyageConnector:
 
     def __init__(self) -> None:
 
-        self.headers = {
-            "User-Agent": (
-                "WANDARAYA-Tourism-Research/1.0 "
-                "(SLIIT Research Project)"
-            )
-        }
-
-        self.timeout = 30.0
+        self.client = MediaWikiApiClient(self.BASE_URL)
 
     async def search(
         self,
@@ -37,19 +30,7 @@ class WikivoyageConnector:
             "utf8": 1,
         }
 
-        async with httpx.AsyncClient(
-            timeout=self.timeout,
-            headers=self.headers,
-        ) as client:
-
-            response = await client.get(
-                self.BASE_URL,
-                params=params,
-            )
-
-            response.raise_for_status()
-
-            data = response.json()
+        data = await self.client.get_json(params)
 
         return (
             data
@@ -73,19 +54,7 @@ class WikivoyageConnector:
             "formatversion": 2,
         }
 
-        async with httpx.AsyncClient(
-            timeout=self.timeout,
-            headers=self.headers,
-        ) as client:
-
-            response = await client.get(
-                self.BASE_URL,
-                params=params,
-            )
-
-            response.raise_for_status()
-
-            data = response.json()
+        data = await self.client.get_json(params)
 
         pages = (
             data

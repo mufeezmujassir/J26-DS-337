@@ -1,0 +1,263 @@
+{
+  "api_url": "http://localhost:8000",
+  "generated_at_utc": "2026-10-18T11:54:21.735981+00:00",
+  "mode": "read_only_api_smoke_test",
+  "postgresql_writes_executed": false,
+  "qdrant_writes_executed": false,
+  "queries": [
+    {
+      "candidate_count": 5,
+      "candidates": [
+        {
+          "attraction_id": 2281,
+          "name": "Travel Sri Lanka offers",
+          "semantic_score": 0.7724673
+        },
+        {
+          "attraction_id": 1,
+          "name": "Galle Dutch Fort",
+          "semantic_score": 0.7709956
+        },
+        {
+          "attraction_id": 872,
+          "name": "\u0dc0\u0dd2\u0dc1\u0dcf\u0dbb\u0daf \u0d9c\u0dd4\u0dab\u0daf\u0dcf\u0dc3 \u0d9a\u0db4\u0dd4\u0d9c\u0dda \u0dc3\u0dca\u0db8\u0dcf\u0dbb\u0d9a\u0dba - Gunadasa Kapuge Monument",
+          "semantic_score": 0.75686926
+        },
+        {
+          "attraction_id": 1064,
+          "name": "Hero's Bridge",
+          "semantic_score": 0.75444734
+        },
+        {
+          "attraction_id": 121,
+          "name": "Thawalama Batahena Ambalama",
+          "semantic_score": 0.7427715
+        }
+      ],
+      "error": null,
+      "http_status": 200,
+      "latency_ms": 6751.16,
+      "query": "historical attractions in Galle",
+      "status": "passed"
+    },
+    {
+      "candidate_count": 5,
+      "candidates": [
+        {
+          "attraction_id": 4218,
+          "name": "\u0b95\u0b9f\u0bb1\u0bcd\u0b95\u0bb0\u0bc8 Beach",
+          "semantic_score": 0.6062721
+        },
+        {
+          "attraction_id": 766,
+          "name": "Layback | Surf Camp in Sri Lanka \u3030 Surf Camps + Surf & Yoga Retreats in Weligama",
+          "semantic_score": 0.60608447
+        },
+        {
+          "attraction_id": 4374,
+          "name": "Zen Yoga & Surf House",
+          "semantic_score": 0.59753144
+        },
+        {
+          "attraction_id": 6486,
+          "name": "Kalmunai Beach \u0b95\u0bb2\u0bcd\u0bae\u0bc1\u0ba9\u0bc8 \u0b95\u0b9f\u0bb1\u0bcd\u0b95\u0bb0\u0bc8",
+          "semantic_score": 0.59710455
+        },
+        {
+          "attraction_id": 348,
+          "name": "Weligama City Beginner's Surf beach",
+          "semantic_score": 0.59710133
+        }
+      ],
+      "error": null,
+      "http_status": 200,
+      "latency_ms": 156.54,
+      "query": "beaches suitable for relaxing",
+      "status": "passed"
+    },
+    {
+      "candidate_count": 5,
+      "candidates": [
+        {
+          "attraction_id": 5326,
+          "name": "Safari to Lanka Holidays",
+          "semantic_score": 0.7314644
+        },
+        {
+          "attraction_id": 1231,
+          "name": "Jana wild safari",
+          "semantic_score": 0.71814084
+        },
+        {
+          "attraction_id": 1227,
+          "name": "Udawalawa AdventureTarget Safari",
+          "semantic_score": 0.7170118
+        },
+        {
+          "attraction_id": 1496,
+          "name": "Ceylon Trail Safari Tours",
+          "semantic_score": 0.7168347
+        },
+        {
+          "attraction_id": 1295,
+          "name": "true wild udawalawe safari tours",
+          "semantic_score": 0.7137666
+        }
+      ],
+      "error": null,
+      "http_status": 200,
+      "latency_ms": 194.97,
+      "query": "wildlife safari attractions",
+      "status": "passed"
+    },
+    {
+      "candidate_count": 5,
+      "candidates": [
+        {
+          "attraction_id": 5960,
+          "name": "Malwatta Temple Kandy",
+          "semantic_score": 0.8102143
+        },
+        {
+          "attraction_id": 6164,
+          "name": "Kandyan Cultural Centre",
+          "semantic_score": 0.81011355
+        },
+        {
+          "attraction_id": 5816,
+          "name": "Sacred City of Kandy",
+          "semantic_score": 0.8066749
+        },
+        {
+          "attraction_id": 5984,
+          "name": "St Paul's Church, Kandy",
+          "semantic_score": 0.8062958
+        },
+        {
+          "attraction_id": 5971,
+          "name": "Sri Muthumariamman Temple, Kandy",
+          "semantic_score": 0.79976344
+        }
+      ],
+      "error": null,
+      "http_status": 200,
+      "latency_ms": 232.43,
+      "query": "cultural and religious attractions in Kandy",
+      "status": "passed"
+    },
+    {
+      "candidate_count": 5,
+      "candidates": [
+        {
+          "attraction_id": 360,
+          "name": "\u0daf\u0ddc\u0dc5 \u0dc4\u0dcf \u0d9a\u0dd4\u0da9\u0dcf \u0daf\u0dd2\u0dba \u0d87\u0dbd\u0dca\u0dbd / Streams and small waterfalls",
+          "semantic_score": 0.6678821
+        },
+        {
+          "attraction_id": 5014,
+          "name": "Kudaoya waterfall",
+          "semantic_score": 0.6529676
+        },
+        {
+          "attraction_id": 2980,
+          "name": "Visari waterfalls",
+          "semantic_score": 0.6528087
+        },
+        {
+          "attraction_id": 2538,
+          "name": "Upcot Waterfall",
+          "semantic_score": 0.65212053
+        },
+        {
+          "attraction_id": 5019,
+          "name": "paragasthanna waterfall",
+          "semantic_score": 0.65182376
+        }
+      ],
+      "error": null,
+      "http_status": 200,
+      "latency_ms": 163.93,
+      "query": "waterfalls and nature experiences",
+      "status": "passed"
+    },
+    {
+      "candidate_count": 5,
+      "candidates": [
+        {
+          "attraction_id": 4556,
+          "name": "Senanayaka Children's Park",
+          "semantic_score": 0.6088903
+        },
+        {
+          "attraction_id": 4609,
+          "name": "Nirmani Aquarium",
+          "semantic_score": 0.6053661
+        },
+        {
+          "attraction_id": 4219,
+          "name": "Children Park - Kalapukattu",
+          "semantic_score": 0.60186017
+        },
+        {
+          "attraction_id": 3113,
+          "name": "Children\u2019s Park Ella",
+          "semantic_score": 0.5999162
+        },
+        {
+          "attraction_id": 6042,
+          "name": "E.L Senanayake Children's Park",
+          "semantic_score": 0.5993773
+        }
+      ],
+      "error": null,
+      "http_status": 200,
+      "latency_ms": 144.62,
+      "query": "family-friendly attractions",
+      "status": "passed"
+    },
+    {
+      "candidate_count": 5,
+      "candidates": [
+        {
+          "attraction_id": 5608,
+          "name": "Cecilia Gardens Paradise of Photography",
+          "semantic_score": 0.6593379
+        },
+        {
+          "attraction_id": 645,
+          "name": "Photography Museum A",
+          "semantic_score": 0.6264237
+        },
+        {
+          "attraction_id": 4466,
+          "name": "Scenic Forest",
+          "semantic_score": 0.6215298
+        },
+        {
+          "attraction_id": 911,
+          "name": "Scenic Point II",
+          "semantic_score": 0.6197392
+        },
+        {
+          "attraction_id": 2999,
+          "name": "Viewpoint",
+          "semantic_score": 0.61719555
+        }
+      ],
+      "error": null,
+      "http_status": 200,
+      "latency_ms": 156.72,
+      "query": "photography and scenic locations",
+      "status": "passed"
+    }
+  ],
+  "stability": {
+    "empty_query_http_status": 422,
+    "empty_query_safe": true,
+    "invalid_limit_http_status": 422,
+    "invalid_limit_safe": true,
+    "no_database_writes_executed": true,
+    "no_qdrant_writes_executed": true,
+    "repeat_query_status": "passed"
+  }
+}

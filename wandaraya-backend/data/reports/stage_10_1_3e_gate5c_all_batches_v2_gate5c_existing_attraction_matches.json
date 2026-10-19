@@ -1,0 +1,714 @@
+{
+  "records": [
+    {
+      "external_source_id": "srilanka_tourism_attraction:131",
+      "preferred_attraction_name": "Kebiliththa Devalaya",
+      "canonical_source_url": "https://srilanka.travel/attraction?attraction_id=131",
+      "classification": "existing_kb_match",
+      "match_evidence": [
+        {
+          "method": "exact_normalized_name",
+          "confidence": 0.95,
+          "matched_value": "Kebiliththa Devalaya",
+          "kb_attraction_id": 1708,
+          "kb_name": "Kebiliththa Devalaya /\u0d9a\u0dd0\u0db6\u0dd2\u0dbd\u0dd2\u0dad\u0dca\u0dad \u0daf\u0dd9\u0dca\u0dc0\u0dcf\u0dbd\u0dba",
+          "kb_district_id": 90,
+          "kb_district_name": "Moneragala"
+        }
+      ],
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=131"
+      ],
+      "raw_source_names": [
+        "Kebiliththa Devalaya"
+      ],
+      "source_record": {
+        "external_source_id": "srilanka_tourism_attraction:131",
+        "preferred_attraction_name": "Kebiliththa Devalaya",
+        "attraction_name": "Kebiliththa Devalaya",
+        "raw_source_names": [
+          "Kebiliththa Devalaya"
+        ],
+        "canonical_source_url": "https://srilanka.travel/attraction?attraction_id=131",
+        "source_domain": "srilanka.travel",
+        "discovery_method": [
+          "theme_search"
+        ],
+        "discovered_from_urls": [
+          "https://srilanka.travel/index.php?route=attractions%2Fattractions-search&theme=2"
+        ],
+        "observed_theme_ids": [
+          "2"
+        ],
+        "observed_theme_names": [],
+        "observed_themes": [
+          "2"
+        ],
+        "observed_destinations": [],
+        "description": "The shrine of God Kataragama in the middle of jungle.",
+        "extraction_status": "partial_source_supported",
+        "provenance": [
+          ".attraction-card-body > p: explicit card field",
+          ".attractions-grid > article.attraction-card: source card container",
+          "card detail link href=http://www.srilanka.travel/attraction&attraction_id=131"
+        ],
+        "retrieved_at": [
+          "2026-10-16T13:36:38.740593+00:00"
+        ],
+        "google_place_id": null,
+        "google_place_match_status": null,
+        "google_place_candidate_ids": [],
+        "enrichment_required_fields": [
+          "google_place_id",
+          "coordinates",
+          "description"
+        ],
+        "enrichment_sources": [
+          "Google Places"
+        ],
+        "existing_kb_attraction_id": null,
+        "reconciliation_status": "pending_gate_5c_read_only_reconciliation"
+      }
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:150",
+      "preferred_attraction_name": "Sri Pada (Adam's Peak)",
+      "canonical_source_url": "https://srilanka.travel/attraction?attraction_id=150",
+      "classification": "existing_kb_match",
+      "match_evidence": [
+        {
+          "method": "exact_normalized_name",
+          "confidence": 0.95,
+          "matched_value": "Sri Pada (Adam's Peak)",
+          "kb_attraction_id": 20,
+          "kb_name": "Sri Pada / Adam's Peak",
+          "kb_district_id": 95,
+          "kb_district_name": "Ratnapura"
+        }
+      ],
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=150"
+      ],
+      "raw_source_names": [
+        "Sri Pada (Adam's Peak)"
+      ],
+      "source_record": {
+        "external_source_id": "srilanka_tourism_attraction:150",
+        "preferred_attraction_name": "Sri Pada (Adam's Peak)",
+        "attraction_name": "Sri Pada (Adam's Peak)",
+        "raw_source_names": [
+          "Sri Pada (Adam's Peak)"
+        ],
+        "canonical_source_url": "https://srilanka.travel/attraction?attraction_id=150",
+        "source_domain": "srilanka.travel",
+        "discovery_method": [
+          "theme_search"
+        ],
+        "discovered_from_urls": [
+          "https://srilanka.travel/tourist-attractions?page=2&theme=2",
+          "https://srilanka.travel/tourist-attractions?page=3&theme=2",
+          "https://srilanka.travel/tourist-attractions?page=4&theme=2"
+        ],
+        "observed_theme_ids": [
+          "2"
+        ],
+        "observed_theme_names": [],
+        "observed_themes": [
+          "2"
+        ],
+        "observed_destinations": [],
+        "description": "Sri pada, or samanala kanda is 2243m tall conical mountain located in central in sri lanka.  This is the fourth highest mountain in sri lanka.",
+        "extraction_status": "partial_source_supported",
+        "provenance": [
+          ".attraction-card-body > p: explicit card field",
+          ".attractions-grid > article.attraction-card: source card container",
+          "card detail link href=http://www.srilanka.travel/attraction&attraction_id=150"
+        ],
+        "retrieved_at": [
+          "2026-10-16T18:18:50.864853+00:00",
+          "2026-10-16T18:18:57.117322+00:00",
+          "2026-10-16T18:19:03.386173+00:00"
+        ],
+        "google_place_id": null,
+        "google_place_match_status": null,
+        "google_place_candidate_ids": [],
+        "enrichment_required_fields": [
+          "google_place_id",
+          "coordinates",
+          "description"
+        ],
+        "enrichment_sources": [
+          "Google Places"
+        ],
+        "existing_kb_attraction_id": null,
+        "reconciliation_status": "pending_gate_5c_read_only_reconciliation"
+      }
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:153",
+      "preferred_attraction_name": "Galle Fort",
+      "canonical_source_url": "https://srilanka.travel/attraction?attraction_id=153",
+      "classification": "existing_kb_match",
+      "match_evidence": [
+        {
+          "method": "exact_alias",
+          "confidence": 0.9,
+          "matched_value": "Galle Fort",
+          "kb_attraction_id": 1,
+          "kb_name": "Galle Dutch Fort",
+          "kb_district_id": 78,
+          "kb_district_name": "Galle"
+        }
+      ],
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=153"
+      ],
+      "raw_source_names": [
+        "Galle Fort"
+      ],
+      "source_record": {
+        "external_source_id": "srilanka_tourism_attraction:153",
+        "preferred_attraction_name": "Galle Fort",
+        "attraction_name": "Galle Fort",
+        "raw_source_names": [
+          "Galle Fort"
+        ],
+        "canonical_source_url": "https://srilanka.travel/attraction?attraction_id=153",
+        "source_domain": "srilanka.travel",
+        "discovery_method": [
+          "listing_page",
+          "theme_search"
+        ],
+        "discovered_from_urls": [
+          "https://srilanka.travel/index.php?route=attractions%2Fattractions-search&theme=2",
+          "https://srilanka.travel/tourist-attractions?page=2",
+          "https://srilanka.travel/tourist-attractions?page=5"
+        ],
+        "observed_theme_ids": [
+          "2"
+        ],
+        "observed_theme_names": [],
+        "observed_themes": [
+          "2"
+        ],
+        "observed_destinations": [],
+        "description": "Galle Fort, in the Bay of Galle, World Heritage Site on the southwest coast of Sri Lanka, was built first in 1588 by the Portuguese.",
+        "extraction_status": "partial_source_supported",
+        "provenance": [
+          ".attraction-card-body > p: explicit card field",
+          ".attractions-grid > article.attraction-card: source card container",
+          "card detail link href=http://www.srilanka.travel/attraction&attraction_id=153"
+        ],
+        "retrieved_at": [
+          "2026-10-16T13:36:35.544262+00:00",
+          "2026-10-16T13:36:38.740593+00:00",
+          "2026-10-16T18:19:06.509172+00:00"
+        ],
+        "google_place_id": null,
+        "google_place_match_status": null,
+        "google_place_candidate_ids": [],
+        "enrichment_required_fields": [
+          "google_place_id",
+          "coordinates",
+          "description"
+        ],
+        "enrichment_sources": [
+          "Google Places"
+        ],
+        "existing_kb_attraction_id": null,
+        "reconciliation_status": "pending_gate_5c_read_only_reconciliation"
+      }
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:160",
+      "preferred_attraction_name": "Sigiriya",
+      "canonical_source_url": "https://srilanka.travel/attraction?attraction_id=160",
+      "classification": "existing_kb_match",
+      "match_evidence": [
+        {
+          "method": "exact_normalized_name",
+          "confidence": 0.95,
+          "matched_value": "Sigiriya",
+          "kb_attraction_id": 14,
+          "kb_name": "Sigiriya",
+          "kb_district_id": 88,
+          "kb_district_name": "Matale"
+        }
+      ],
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=160"
+      ],
+      "raw_source_names": [
+        "Sigiriya"
+      ],
+      "source_record": {
+        "external_source_id": "srilanka_tourism_attraction:160",
+        "preferred_attraction_name": "Sigiriya",
+        "attraction_name": "Sigiriya",
+        "raw_source_names": [
+          "Sigiriya"
+        ],
+        "canonical_source_url": "https://srilanka.travel/attraction?attraction_id=160",
+        "source_domain": "srilanka.travel",
+        "discovery_method": [
+          "listing_page"
+        ],
+        "discovered_from_urls": [
+          "https://srilanka.travel/tourist-attractions?page=10"
+        ],
+        "observed_theme_ids": [],
+        "observed_theme_names": [],
+        "observed_themes": [],
+        "observed_destinations": [],
+        "description": "Sigiriya is located in matale district in the central province of sri lanka. It is within the cultural triangle which includes five of the seven world heritage sites in sri lanka.",
+        "extraction_status": "partial_source_supported",
+        "provenance": [
+          ".attraction-card-body > p: explicit card field",
+          ".attractions-grid > article.attraction-card: source card container",
+          "card detail link href=http://www.srilanka.travel/attraction&attraction_id=160"
+        ],
+        "retrieved_at": [
+          "2026-10-16T18:18:41.448599+00:00"
+        ],
+        "google_place_id": null,
+        "google_place_match_status": null,
+        "google_place_candidate_ids": [],
+        "enrichment_required_fields": [
+          "google_place_id",
+          "coordinates",
+          "description"
+        ],
+        "enrichment_sources": [
+          "Google Places"
+        ],
+        "existing_kb_attraction_id": null,
+        "reconciliation_status": "pending_gate_5c_read_only_reconciliation"
+      }
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:164",
+      "preferred_attraction_name": "Udawalawe National Park",
+      "canonical_source_url": "https://srilanka.travel/attraction?attraction_id=164",
+      "classification": "existing_kb_match",
+      "match_evidence": [
+        {
+          "method": "exact_normalized_name",
+          "confidence": 0.95,
+          "matched_value": "Udawalawe National Park",
+          "kb_attraction_id": 21,
+          "kb_name": "Udawalawe National Park",
+          "kb_district_id": 90,
+          "kb_district_name": "Moneragala"
+        }
+      ],
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=164"
+      ],
+      "raw_source_names": [
+        "Udawalawe National Park"
+      ],
+      "source_record": {
+        "external_source_id": "srilanka_tourism_attraction:164",
+        "preferred_attraction_name": "Udawalawe National Park",
+        "attraction_name": "Udawalawe National Park",
+        "raw_source_names": [
+          "Udawalawe National Park"
+        ],
+        "canonical_source_url": "https://srilanka.travel/attraction?attraction_id=164",
+        "source_domain": "srilanka.travel",
+        "discovery_method": [
+          "listing_page"
+        ],
+        "discovered_from_urls": [
+          "https://srilanka.travel/attractions"
+        ],
+        "observed_theme_ids": [],
+        "observed_theme_names": [],
+        "observed_themes": [],
+        "observed_destinations": [],
+        "description": "Udawalawe National Park lies on the boundary of Sabaragamuwa and Uva Provinces, in Sri Lanka.",
+        "extraction_status": "partial_source_supported",
+        "provenance": [
+          ".attraction-card-body > p: explicit card field",
+          ".attractions-grid > article.attraction-card: source card container",
+          "card detail link href=http://www.srilanka.travel/attraction&attraction_id=164"
+        ],
+        "retrieved_at": [
+          "2026-10-16T13:36:32.325910+00:00"
+        ],
+        "google_place_id": null,
+        "google_place_match_status": null,
+        "google_place_candidate_ids": [],
+        "enrichment_required_fields": [
+          "google_place_id",
+          "coordinates",
+          "description"
+        ],
+        "enrichment_sources": [
+          "Google Places"
+        ],
+        "existing_kb_attraction_id": null,
+        "reconciliation_status": "pending_gate_5c_read_only_reconciliation"
+      }
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:166",
+      "preferred_attraction_name": "Kumana National Park",
+      "canonical_source_url": "https://srilanka.travel/attraction?attraction_id=166",
+      "classification": "existing_kb_match",
+      "match_evidence": [
+        {
+          "method": "exact_normalized_name",
+          "confidence": 0.95,
+          "matched_value": "Kumana National Park",
+          "kb_attraction_id": 4099,
+          "kb_name": "Kumana National Park",
+          "kb_district_id": 73,
+          "kb_district_name": "Ampara"
+        }
+      ],
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=166"
+      ],
+      "raw_source_names": [
+        "Kumana National Park"
+      ],
+      "source_record": {
+        "external_source_id": "srilanka_tourism_attraction:166",
+        "preferred_attraction_name": "Kumana National Park",
+        "attraction_name": "Kumana National Park",
+        "raw_source_names": [
+          "Kumana National Park"
+        ],
+        "canonical_source_url": "https://srilanka.travel/attraction?attraction_id=166",
+        "source_domain": "srilanka.travel",
+        "discovery_method": [
+          "listing_page"
+        ],
+        "discovered_from_urls": [
+          "https://srilanka.travel/tourist-attractions?page=11",
+          "https://srilanka.travel/tourist-attractions?page=4"
+        ],
+        "observed_theme_ids": [],
+        "observed_theme_names": [],
+        "observed_themes": [],
+        "observed_destinations": [],
+        "description": "Kumana National Park in Sri Lanka is renowned for its avifauna, particularly its large flocks of migratory waterfowl and wading birds. The park is 391 kilometers (243 mi) southeast",
+        "extraction_status": "partial_source_supported",
+        "provenance": [
+          ".attraction-card-body > p: explicit card field",
+          ".attractions-grid > article.attraction-card: source card container",
+          "card detail link href=http://www.srilanka.travel/attraction&attraction_id=166"
+        ],
+        "retrieved_at": [
+          "2026-10-16T18:18:44.596592+00:00",
+          "2026-10-16T18:19:00.262583+00:00"
+        ],
+        "google_place_id": null,
+        "google_place_match_status": null,
+        "google_place_candidate_ids": [],
+        "enrichment_required_fields": [
+          "google_place_id",
+          "coordinates",
+          "description"
+        ],
+        "enrichment_sources": [
+          "Google Places"
+        ],
+        "existing_kb_attraction_id": null,
+        "reconciliation_status": "pending_gate_5c_read_only_reconciliation"
+      }
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:198",
+      "preferred_attraction_name": "Richmond Castle",
+      "canonical_source_url": "https://srilanka.travel/attraction?attraction_id=198",
+      "classification": "existing_kb_match",
+      "match_evidence": [
+        {
+          "method": "exact_normalized_name",
+          "confidence": 0.95,
+          "matched_value": "Richmond Castle",
+          "kb_attraction_id": 191,
+          "kb_name": "Richmond Castle",
+          "kb_district_id": 82,
+          "kb_district_name": "Kalutara"
+        }
+      ],
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=198"
+      ],
+      "raw_source_names": [
+        "Richmond Castle"
+      ],
+      "source_record": {
+        "external_source_id": "srilanka_tourism_attraction:198",
+        "preferred_attraction_name": "Richmond Castle",
+        "attraction_name": "Richmond Castle",
+        "raw_source_names": [
+          "Richmond Castle"
+        ],
+        "canonical_source_url": "https://srilanka.travel/attraction?attraction_id=198",
+        "source_domain": "srilanka.travel",
+        "discovery_method": [
+          "listing_page",
+          "theme_search"
+        ],
+        "discovered_from_urls": [
+          "https://srilanka.travel/attractions",
+          "https://srilanka.travel/tourist-attractions?page=4&theme=2"
+        ],
+        "observed_theme_ids": [
+          "2"
+        ],
+        "observed_theme_names": [],
+        "observed_themes": [
+          "2"
+        ],
+        "observed_destinations": [],
+        "description": "Richmond Castle is like an amazing Royal Palace in Sri Lanka.",
+        "extraction_status": "partial_source_supported",
+        "provenance": [
+          ".attraction-card-body > p: explicit card field",
+          ".attractions-grid > article.attraction-card: source card container",
+          "card detail link href=http://www.srilanka.travel/attraction&attraction_id=198"
+        ],
+        "retrieved_at": [
+          "2026-10-16T13:36:32.325910+00:00",
+          "2026-10-16T18:19:03.386173+00:00"
+        ],
+        "google_place_id": null,
+        "google_place_match_status": null,
+        "google_place_candidate_ids": [],
+        "enrichment_required_fields": [
+          "google_place_id",
+          "coordinates",
+          "description"
+        ],
+        "enrichment_sources": [
+          "Google Places"
+        ],
+        "existing_kb_attraction_id": null,
+        "reconciliation_status": "pending_gate_5c_read_only_reconciliation"
+      }
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:212",
+      "preferred_attraction_name": "Pettah Market",
+      "canonical_source_url": "https://srilanka.travel/attraction?attraction_id=212",
+      "classification": "existing_kb_match",
+      "match_evidence": [
+        {
+          "method": "exact_normalized_name",
+          "confidence": 0.95,
+          "matched_value": "Pettah Market",
+          "kb_attraction_id": 3906,
+          "kb_name": "Pettah Market",
+          "kb_district_id": 77,
+          "kb_district_name": "Colombo"
+        }
+      ],
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=212"
+      ],
+      "raw_source_names": [
+        "Pettah Market"
+      ],
+      "source_record": {
+        "external_source_id": "srilanka_tourism_attraction:212",
+        "preferred_attraction_name": "Pettah Market",
+        "attraction_name": "Pettah Market",
+        "raw_source_names": [
+          "Pettah Market"
+        ],
+        "canonical_source_url": "https://srilanka.travel/attraction?attraction_id=212",
+        "source_domain": "srilanka.travel",
+        "discovery_method": [
+          "listing_page"
+        ],
+        "discovered_from_urls": [
+          "https://srilanka.travel/tourist-attractions?page=1"
+        ],
+        "observed_theme_ids": [],
+        "observed_theme_names": [],
+        "observed_themes": [],
+        "observed_destinations": [],
+        "description": "Main market in Sri Lanka that can get a new experience.",
+        "extraction_status": "partial_source_supported",
+        "provenance": [
+          ".attraction-card-body > p: explicit card field",
+          ".attractions-grid > article.attraction-card: source card container",
+          "card detail link href=http://www.srilanka.travel/attraction&attraction_id=212"
+        ],
+        "retrieved_at": [
+          "2026-10-16T18:18:38.299520+00:00"
+        ],
+        "google_place_id": null,
+        "google_place_match_status": null,
+        "google_place_candidate_ids": [],
+        "enrichment_required_fields": [
+          "google_place_id",
+          "coordinates",
+          "description"
+        ],
+        "enrichment_sources": [
+          "Google Places"
+        ],
+        "existing_kb_attraction_id": null,
+        "reconciliation_status": "pending_gate_5c_read_only_reconciliation"
+      }
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:216",
+      "preferred_attraction_name": "Viharamahadevi Park",
+      "canonical_source_url": "https://srilanka.travel/attraction?attraction_id=216",
+      "classification": "existing_kb_match",
+      "match_evidence": [
+        {
+          "method": "exact_normalized_name",
+          "confidence": 0.95,
+          "matched_value": "Viharamahadevi Park",
+          "kb_attraction_id": 3595,
+          "kb_name": "Viharamahadevi Park",
+          "kb_district_id": 77,
+          "kb_district_name": "Colombo"
+        }
+      ],
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=216"
+      ],
+      "raw_source_names": [
+        "Viharamahadevi Park"
+      ],
+      "source_record": {
+        "external_source_id": "srilanka_tourism_attraction:216",
+        "preferred_attraction_name": "Viharamahadevi Park",
+        "attraction_name": "Viharamahadevi Park",
+        "raw_source_names": [
+          "Viharamahadevi Park"
+        ],
+        "canonical_source_url": "https://srilanka.travel/attraction?attraction_id=216",
+        "source_domain": "srilanka.travel",
+        "discovery_method": [
+          "listing_page"
+        ],
+        "discovered_from_urls": [
+          "https://srilanka.travel/tourist-attractions?page=11"
+        ],
+        "observed_theme_ids": [],
+        "observed_theme_names": [],
+        "observed_themes": [],
+        "observed_destinations": [],
+        "description": "Viharamahadevi Park is the oldest and largest park in the central of Colombo.",
+        "extraction_status": "partial_source_supported",
+        "provenance": [
+          ".attraction-card-body > p: explicit card field",
+          ".attractions-grid > article.attraction-card: source card container",
+          "card detail link href=http://www.srilanka.travel/attraction&attraction_id=216"
+        ],
+        "retrieved_at": [
+          "2026-10-16T18:18:44.596592+00:00"
+        ],
+        "google_place_id": null,
+        "google_place_match_status": null,
+        "google_place_candidate_ids": [],
+        "enrichment_required_fields": [
+          "google_place_id",
+          "coordinates",
+          "description"
+        ],
+        "enrichment_sources": [
+          "Google Places"
+        ],
+        "existing_kb_attraction_id": null,
+        "reconciliation_status": "pending_gate_5c_read_only_reconciliation"
+      }
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:219",
+      "preferred_attraction_name": "Wilpattu National Park",
+      "canonical_source_url": "https://srilanka.travel/attraction?attraction_id=219",
+      "classification": "existing_kb_match",
+      "match_evidence": [
+        {
+          "method": "exact_normalized_name",
+          "confidence": 0.95,
+          "matched_value": "Wilpattu National Park",
+          "kb_attraction_id": 22,
+          "kb_name": "Wilpattu National Park",
+          "kb_district_id": 74,
+          "kb_district_name": "Anuradhapura"
+        }
+      ],
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=219"
+      ],
+      "raw_source_names": [
+        "Wilpattu National Park"
+      ],
+      "source_record": {
+        "external_source_id": "srilanka_tourism_attraction:219",
+        "preferred_attraction_name": "Wilpattu National Park",
+        "attraction_name": "Wilpattu National Park",
+        "raw_source_names": [
+          "Wilpattu National Park"
+        ],
+        "canonical_source_url": "https://srilanka.travel/attraction?attraction_id=219",
+        "source_domain": "srilanka.travel",
+        "discovery_method": [
+          "listing_page"
+        ],
+        "discovered_from_urls": [
+          "https://srilanka.travel/attractions"
+        ],
+        "observed_theme_ids": [],
+        "observed_theme_names": [],
+        "observed_themes": [],
+        "observed_destinations": [],
+        "description": "Wilpattu is the largest and one of the oldest National Parks in Sri Lanka.",
+        "extraction_status": "partial_source_supported",
+        "provenance": [
+          ".attraction-card-body > p: explicit card field",
+          ".attractions-grid > article.attraction-card: source card container",
+          "card detail link href=http://www.srilanka.travel/attraction&attraction_id=219"
+        ],
+        "retrieved_at": [
+          "2026-10-16T13:36:32.325910+00:00"
+        ],
+        "google_place_id": null,
+        "google_place_match_status": null,
+        "google_place_candidate_ids": [],
+        "enrichment_required_fields": [
+          "google_place_id",
+          "coordinates",
+          "description"
+        ],
+        "enrichment_sources": [
+          "Google Places"
+        ],
+        "existing_kb_attraction_id": null,
+        "reconciliation_status": "pending_gate_5c_read_only_reconciliation"
+      }
+    }
+  ]
+}

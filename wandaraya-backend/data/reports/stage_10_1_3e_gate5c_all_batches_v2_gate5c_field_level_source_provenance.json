@@ -1,0 +1,1142 @@
+{
+  "records": [
+    {
+      "external_source_id": "srilanka_tourism_attraction:10",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=10",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=10"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:101",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=101",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=101"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:102",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=102",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=102"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:103",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=103",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=103"
+      ],
+      "match_evidence": [
+        {
+          "method": "fuzzy_name_candidate",
+          "confidence": 0.875,
+          "matched_value": "Rajagala",
+          "kb_attraction_id": 2575,
+          "kb_name": "Rasagala",
+          "kb_district_id": 95,
+          "kb_district_name": "Ratnapura"
+        }
+      ]
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:104",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=104",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=104"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:105",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=105",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=105"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:106",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=106",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=106"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:107",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=107",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=107"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:11",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=11",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=11"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:111",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=111",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=111"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:114",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=114",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=114"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:115",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=115",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=115"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:12",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=12",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=12"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:121",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=121",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=121"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:122",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=122",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=122"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:124",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=124",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=124"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:125",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=125",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=125"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:126",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=126",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=126"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:128",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=128",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=128"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:129",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=129",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=129"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:131",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=131",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=131"
+      ],
+      "match_evidence": [
+        {
+          "method": "exact_normalized_name",
+          "confidence": 0.95,
+          "matched_value": "Kebiliththa Devalaya",
+          "kb_attraction_id": 1708,
+          "kb_name": "Kebiliththa Devalaya /\u0d9a\u0dd0\u0db6\u0dd2\u0dbd\u0dd2\u0dad\u0dca\u0dad \u0daf\u0dd9\u0dca\u0dc0\u0dcf\u0dbd\u0dba",
+          "kb_district_id": 90,
+          "kb_district_name": "Moneragala"
+        }
+      ]
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:132",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=132",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=132"
+      ],
+      "match_evidence": [
+        {
+          "method": "fuzzy_name_candidate",
+          "confidence": 0.8718,
+          "matched_value": "Gal Oya National Park",
+          "kb_attraction_id": 13,
+          "kb_name": "Yala National Park",
+          "kb_district_id": 90,
+          "kb_district_name": "Moneragala"
+        },
+        {
+          "method": "fuzzy_name_candidate",
+          "confidence": 0.8571,
+          "matched_value": "Gal Oya National Park",
+          "kb_attraction_id": 4703,
+          "kb_name": "Gal Oya Valley National Park",
+          "kb_district_id": 90,
+          "kb_district_name": "Moneragala"
+        }
+      ]
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:134",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=134",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=134"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:135",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=135",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=135"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:136",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=136",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=136"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:138",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=138",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=138"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:14",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=14",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=14"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:140",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=140",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=140"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:142",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=142",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=142"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:143",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=143",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=143"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:144",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=144",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=144"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:145",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=145",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=145"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:148",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=148",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=148"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:149",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=149",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=149"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:150",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=150",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=150"
+      ],
+      "match_evidence": [
+        {
+          "method": "exact_normalized_name",
+          "confidence": 0.95,
+          "matched_value": "Sri Pada (Adam's Peak)",
+          "kb_attraction_id": 20,
+          "kb_name": "Sri Pada / Adam's Peak",
+          "kb_district_id": 95,
+          "kb_district_name": "Ratnapura"
+        }
+      ]
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:151",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=151",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=151"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:152",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=152",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=152"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:153",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=153",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=153"
+      ],
+      "match_evidence": [
+        {
+          "method": "exact_alias",
+          "confidence": 0.9,
+          "matched_value": "Galle Fort",
+          "kb_attraction_id": 1,
+          "kb_name": "Galle Dutch Fort",
+          "kb_district_id": 78,
+          "kb_district_name": "Galle"
+        }
+      ]
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:155",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=155",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=155"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:157",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=157",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=157"
+      ],
+      "match_evidence": [
+        {
+          "method": "fuzzy_name_candidate",
+          "confidence": 0.9744,
+          "matched_value": "Dambulla CaveTemple",
+          "kb_attraction_id": 18,
+          "kb_name": "Dambulla Cave Temple",
+          "kb_district_id": 88,
+          "kb_district_name": "Matale"
+        }
+      ]
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:16",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=16",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=16"
+      ],
+      "match_evidence": [
+        {
+          "method": "fuzzy_name_candidate",
+          "confidence": 0.9855,
+          "matched_value": "Nagadeepa Purana Raja Maha Viharaya",
+          "kb_attraction_id": 4764,
+          "kb_name": "Nagadeepa Purana Rajamaha Viharaya",
+          "kb_district_id": 75,
+          "kb_district_name": "Badulla"
+        }
+      ]
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:160",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=160",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=160"
+      ],
+      "match_evidence": [
+        {
+          "method": "exact_normalized_name",
+          "confidence": 0.95,
+          "matched_value": "Sigiriya",
+          "kb_attraction_id": 14,
+          "kb_name": "Sigiriya",
+          "kb_district_id": 88,
+          "kb_district_name": "Matale"
+        }
+      ]
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:162",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=162",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=162"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:164",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=164",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=164"
+      ],
+      "match_evidence": [
+        {
+          "method": "exact_normalized_name",
+          "confidence": 0.95,
+          "matched_value": "Udawalawe National Park",
+          "kb_attraction_id": 21,
+          "kb_name": "Udawalawe National Park",
+          "kb_district_id": 90,
+          "kb_district_name": "Moneragala"
+        }
+      ]
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:166",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=166",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=166"
+      ],
+      "match_evidence": [
+        {
+          "method": "exact_normalized_name",
+          "confidence": 0.95,
+          "matched_value": "Kumana National Park",
+          "kb_attraction_id": 4099,
+          "kb_name": "Kumana National Park",
+          "kb_district_id": 73,
+          "kb_district_name": "Ampara"
+        }
+      ]
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:167",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=167",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=167"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:169",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=169",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=169"
+      ],
+      "match_evidence": [
+        {
+          "method": "exact_alias",
+          "confidence": 0.9,
+          "matched_value": "Kataragama",
+          "kb_attraction_id": 1642,
+          "kb_name": "Mahoora",
+          "kb_district_id": 90,
+          "kb_district_name": "Moneragala"
+        },
+        {
+          "method": "exact_alias",
+          "confidence": 0.9,
+          "matched_value": "Kataragama",
+          "kb_attraction_id": 1900,
+          "kb_name": "Katharagama",
+          "kb_district_id": 90,
+          "kb_district_name": "Moneragala"
+        }
+      ]
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:171",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=171",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=171"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:172",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=172",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=172"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:176",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=176",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=176"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:179",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=179",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=179"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:181",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=181",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=181"
+      ],
+      "match_evidence": [
+        {
+          "method": "fuzzy_name_candidate",
+          "confidence": 0.9697,
+          "matched_value": "Kaluthara Bodhiya",
+          "kb_attraction_id": 187,
+          "kb_name": "Kalutara Bodhiya",
+          "kb_district_id": 82,
+          "kb_district_name": "Kalutara"
+        }
+      ]
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:184",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=184",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=184"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:185",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=185",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=185"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:188",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=188",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=188"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:19",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=19",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=19"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:192",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=192",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=192"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:198",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=198",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=198"
+      ],
+      "match_evidence": [
+        {
+          "method": "exact_normalized_name",
+          "confidence": 0.95,
+          "matched_value": "Richmond Castle",
+          "kb_attraction_id": 191,
+          "kb_name": "Richmond Castle",
+          "kb_district_id": 82,
+          "kb_district_name": "Kalutara"
+        }
+      ]
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:20",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=20",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=20"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:201",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=201",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=201"
+      ],
+      "match_evidence": [
+        {
+          "method": "fuzzy_name_candidate",
+          "confidence": 0.8571,
+          "matched_value": "Diyatha Uyana",
+          "kb_attraction_id": 1980,
+          "kb_name": "Diyathuru Uyana",
+          "kb_district_id": 82,
+          "kb_district_name": "Kalutara"
+        }
+      ]
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:202",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=202",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=202"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:204",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=204",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=204"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:208",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=208",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=208"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:211",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=211",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=211"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:212",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=212",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=212"
+      ],
+      "match_evidence": [
+        {
+          "method": "exact_normalized_name",
+          "confidence": 0.95,
+          "matched_value": "Pettah Market",
+          "kb_attraction_id": 3906,
+          "kb_name": "Pettah Market",
+          "kb_district_id": 77,
+          "kb_district_name": "Colombo"
+        }
+      ]
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:214",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=214",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=214"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:216",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=216",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=216"
+      ],
+      "match_evidence": [
+        {
+          "method": "exact_normalized_name",
+          "confidence": 0.95,
+          "matched_value": "Viharamahadevi Park",
+          "kb_attraction_id": 3595,
+          "kb_name": "Viharamahadevi Park",
+          "kb_district_id": 77,
+          "kb_district_name": "Colombo"
+        }
+      ]
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:219",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=219",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=219"
+      ],
+      "match_evidence": [
+        {
+          "method": "exact_normalized_name",
+          "confidence": 0.95,
+          "matched_value": "Wilpattu National Park",
+          "kb_attraction_id": 22,
+          "kb_name": "Wilpattu National Park",
+          "kb_district_id": 74,
+          "kb_district_name": "Anuradhapura"
+        }
+      ]
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:220",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=220",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=220"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:23",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=23",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=23"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:24",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=24",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=24"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:28",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=28",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=28"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:36",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=36",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=36"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:5",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=5",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=5"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:51",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=51",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=51"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:53",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=53",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=53"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:59",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=59",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=59"
+      ],
+      "match_evidence": [
+        {
+          "method": "fuzzy_name_candidate",
+          "confidence": 0.9667,
+          "matched_value": "Attanagalla Raja Maha Viharava",
+          "kb_attraction_id": 4924,
+          "kb_name": "Attanagalla Raja Maha Viharaya",
+          "kb_district_id": 79,
+          "kb_district_name": "Gampaha"
+        }
+      ]
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:6",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=6",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=6"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:61",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=61",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=61"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:66",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=66",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=66"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:69",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=69",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=69"
+      ],
+      "match_evidence": [
+        {
+          "method": "fuzzy_name_candidate",
+          "confidence": 0.9677,
+          "matched_value": "Maligathenna Raja Maha Viharaya",
+          "kb_attraction_id": 3521,
+          "kb_name": "Maligathanna Raja Maha Viharaya",
+          "kb_district_id": 79,
+          "kb_district_name": "Gampaha"
+        }
+      ]
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:79",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=79",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=79"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:8",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=8",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=8"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:87",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=87",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=87"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:88",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=88",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=88"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:89",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=89",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=89"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:9",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=9",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=9"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:90",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=90",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=90"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:92",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=92",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=92"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:94",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=94",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=94"
+      ],
+      "match_evidence": []
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:97",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=97",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=97"
+      ],
+      "match_evidence": [
+        {
+          "method": "fuzzy_name_candidate",
+          "confidence": 0.8451,
+          "matched_value": "Pannathgoda Purana Raja Maha Viharaya",
+          "kb_attraction_id": 4764,
+          "kb_name": "Nagadeepa Purana Rajamaha Viharaya",
+          "kb_district_id": 75,
+          "kb_district_name": "Badulla"
+        }
+      ]
+    },
+    {
+      "external_source_id": "srilanka_tourism_attraction:99",
+      "source_url": "https://srilanka.travel/attraction?attraction_id=99",
+      "source_provenance": [
+        ".attraction-card-body > p: explicit card field",
+        ".attractions-grid > article.attraction-card: source card container",
+        "card detail link href=http://www.srilanka.travel/attraction&attraction_id=99"
+      ],
+      "match_evidence": []
+    }
+  ]
+}

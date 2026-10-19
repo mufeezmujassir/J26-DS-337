@@ -1,0 +1,1162 @@
+{
+  "records": [
+    {
+      "category_evidence": "stored_google_historical_place_type",
+      "category_id": 39,
+      "checkpoint_sha256": "94440f7173cdce0dbe4196f07fb9f8728284cd2c5e6f985c104e4dc9c96f56c0",
+      "conflicts": [
+        "district_derived_from_saved_gate5d_evidence_requires_reapproval"
+      ],
+      "district_evidence": {
+        "district_id": 81,
+        "district_name": "Jaffna",
+        "reason": "postgis_boundary_contains_stored_google_coordinate",
+        "status": "verified"
+      },
+      "district_id": 81,
+      "duplicate_cluster": null,
+      "enrichment_evidence_sha256": "3786e5c1aa45a6c0133bca19f1bd54f78d70384ff9d7a55ac857d64a9d27f951",
+      "existing_kb_duplicates": [],
+      "google_name": "The Growing Stone",
+      "google_place_id": "ChIJSwBgcIw4_joR6RYomXqITSE",
+      "google_types": [
+        "historical_landmark",
+        "historical_place",
+        "point_of_interest",
+        "establishment"
+      ],
+      "identity_assessment": "new_google_place_candidate",
+      "latitude": 9.5202071,
+      "longitude": 79.7212574,
+      "metadata_completeness": {
+        "category": true,
+        "coordinates": true,
+        "district": true
+      },
+      "official_name": "Delft Growing Stone",
+      "official_source_url": "https://srilanka.travel/attraction?attraction_id=11",
+      "original_approval_hash": "cb12004b8a976d6c9bff18d79f873d06ac2009196793cb3e9312ebd0a56e8184",
+      "proposed_category_name": "History & Archaeology",
+      "readiness": "QUARANTINED",
+      "reapproval_required": true,
+      "revised_proposal_sha256": "5ef8443dcb2dd26795c7113726c83f3225b8354c8167fa46493ba8a9c47fe9a0",
+      "source_attraction_id": "srilanka_tourism_attraction:11"
+    },
+    {
+      "category_evidence": "stored_google_outdoor_activity_type",
+      "category_id": 41,
+      "checkpoint_sha256": "94440f7173cdce0dbe4196f07fb9f8728284cd2c5e6f985c104e4dc9c96f56c0",
+      "conflicts": [
+        "district_derived_from_saved_gate5d_evidence_requires_reapproval"
+      ],
+      "district_evidence": {
+        "district_id": 73,
+        "district_name": "Ampara",
+        "reason": "postgis_boundary_contains_stored_google_coordinate",
+        "status": "verified"
+      },
+      "district_id": 73,
+      "duplicate_cluster": null,
+      "enrichment_evidence_sha256": "ec429f0967ed0942ffa5f651998fda13786298876b0fda2bf04dab22c53dd6fc",
+      "existing_kb_duplicates": [],
+      "google_name": "Pallan Hela",
+      "google_place_id": "ChIJtXaJP3Qd5ToR2thu6M6Gizg",
+      "google_types": [
+        "hiking_area",
+        "sports_activity_location",
+        "point_of_interest",
+        "establishment"
+      ],
+      "identity_assessment": "new_google_place_candidate",
+      "latitude": 7.213815599999999,
+      "longitude": 81.54318719999999,
+      "metadata_completeness": {
+        "category": true,
+        "coordinates": true,
+        "district": true
+      },
+      "official_name": "Pallan Hela Mountain",
+      "official_source_url": "https://srilanka.travel/attraction?attraction_id=136",
+      "original_approval_hash": "68f06e3ed9506a28dbf65c3d291afa18360568b7a7a55da58022333f1b2936b2",
+      "proposed_category_name": "Adventure & Outdoor",
+      "readiness": "QUARANTINED",
+      "reapproval_required": true,
+      "revised_proposal_sha256": "d7025c0136b694d2356293bd1b713fcdeeb7dc875133e43ea7796dcae49eb164",
+      "source_attraction_id": "srilanka_tourism_attraction:136"
+    },
+    {
+      "category_evidence": "stored_google_religious_place_type",
+      "category_id": 40,
+      "checkpoint_sha256": "94440f7173cdce0dbe4196f07fb9f8728284cd2c5e6f985c104e4dc9c96f56c0",
+      "conflicts": [
+        "district_derived_from_saved_gate5d_evidence_requires_reapproval"
+      ],
+      "district_evidence": {
+        "district_id": 81,
+        "district_name": "Jaffna",
+        "reason": "postgis_boundary_contains_stored_google_coordinate",
+        "status": "verified"
+      },
+      "district_id": 81,
+      "duplicate_cluster": null,
+      "enrichment_evidence_sha256": "15abeaa68a1d5c7c8db27b6c0a6e3743f5888a6103000400feacbcfc990b16dc",
+      "existing_kb_duplicates": [],
+      "google_name": "Kantharodai Archaeological Site - Kantharodai",
+      "google_place_id": "ChIJxSxRRVZT_joRExPrJ-jLQtM",
+      "google_types": [
+        "buddhist_temple",
+        "tourist_attraction",
+        "place_of_worship",
+        "association_or_organization",
+        "point_of_interest",
+        "establishment"
+      ],
+      "identity_assessment": "new_google_place_candidate",
+      "latitude": 9.7467898,
+      "longitude": 80.0067062,
+      "metadata_completeness": {
+        "category": true,
+        "coordinates": true,
+        "district": true
+      },
+      "official_name": "Kadurugoda Temple",
+      "official_source_url": "https://srilanka.travel/attraction?attraction_id=14",
+      "original_approval_hash": "8c028c9baa9295a3bbe391664db84bbcb54de749c8a272d1aeed8cc40421d1ff",
+      "proposed_category_name": "Religious & Spiritual",
+      "readiness": "QUARANTINED",
+      "reapproval_required": true,
+      "revised_proposal_sha256": "d6cfcadaa8d9c72c3ca58ebd65688f00aae88ddf05ece5e0efb16b61a8dbc5e2",
+      "source_attraction_id": "srilanka_tourism_attraction:14"
+    },
+    {
+      "category_evidence": "official_and_google_title_hot_spring_term",
+      "category_id": 43,
+      "checkpoint_sha256": "94440f7173cdce0dbe4196f07fb9f8728284cd2c5e6f985c104e4dc9c96f56c0",
+      "conflicts": [
+        "district_derived_from_saved_gate5d_evidence_requires_reapproval"
+      ],
+      "district_evidence": {
+        "district_id": 73,
+        "district_name": "Ampara",
+        "reason": "postgis_boundary_contains_stored_google_coordinate",
+        "status": "verified"
+      },
+      "district_id": 73,
+      "duplicate_cluster": null,
+      "enrichment_evidence_sha256": "a4869919cbb56f9fe71e276b6c1b70f9a774278dcc55bf06998897850dfc72a1",
+      "existing_kb_duplicates": [],
+      "google_name": "Wahawa Hot Water Springs",
+      "google_place_id": "ChIJEboDq8fD5DoRACqxKCKqvBg",
+      "google_types": [
+        "tourist_attraction",
+        "point_of_interest",
+        "establishment"
+      ],
+      "identity_assessment": "new_google_place_candidate",
+      "latitude": 7.361679700000001,
+      "longitude": 81.30913650000001,
+      "metadata_completeness": {
+        "category": true,
+        "coordinates": true,
+        "district": true
+      },
+      "official_name": "Hot Water Springs in Wahawa",
+      "official_source_url": "https://srilanka.travel/attraction?attraction_id=143",
+      "original_approval_hash": "81e8f208694476120349539ae6164dbc6d248f3db87e5c004a86b6197e5ebd99",
+      "proposed_category_name": "Wellness & Ayurveda",
+      "readiness": "QUARANTINED",
+      "reapproval_required": true,
+      "revised_proposal_sha256": "e1756bb011836004129250772edc941bc9521ca5b1ed5d511d9c88f930aed316",
+      "source_attraction_id": "srilanka_tourism_attraction:143"
+    },
+    {
+      "category_evidence": "stored_google_religious_place_type",
+      "category_id": 40,
+      "checkpoint_sha256": "94440f7173cdce0dbe4196f07fb9f8728284cd2c5e6f985c104e4dc9c96f56c0",
+      "conflicts": [
+        "district_derived_from_saved_gate5d_evidence_requires_reapproval"
+      ],
+      "district_evidence": {
+        "district_id": 96,
+        "district_name": "Trincomalee",
+        "reason": "postgis_boundary_contains_stored_google_coordinate",
+        "status": "verified"
+      },
+      "district_id": 96,
+      "duplicate_cluster": null,
+      "enrichment_evidence_sha256": "994dde0c4d224ca8e1bd4b5823e62b9c3cb2d19298a282962d5ac91d1ee3b29b",
+      "existing_kb_duplicates": [],
+      "google_name": "Thirukoneswaram Kovil",
+      "google_place_id": "ChIJV-_dCaK8-zoR3yIZhmhLni4",
+      "google_types": [
+        "hindu_temple",
+        "tourist_attraction",
+        "place_of_worship",
+        "association_or_organization",
+        "point_of_interest",
+        "establishment"
+      ],
+      "identity_assessment": "new_google_place_candidate",
+      "latitude": 8.5824436,
+      "longitude": 81.2453556,
+      "metadata_completeness": {
+        "category": true,
+        "coordinates": true,
+        "district": true
+      },
+      "official_name": "Koneswaram Kovil",
+      "official_source_url": "https://srilanka.travel/attraction?attraction_id=167",
+      "original_approval_hash": "6ef60eca70c1f5cea1c0bcd5756084048d76d0639a1bc698e709721008894d2a",
+      "proposed_category_name": "Religious & Spiritual",
+      "readiness": "QUARANTINED",
+      "reapproval_required": true,
+      "revised_proposal_sha256": "37db81c1a77409b88b601513772eca7f276a2c5b7012bda28aa88467d14c9494",
+      "source_attraction_id": "srilanka_tourism_attraction:167"
+    },
+    {
+      "category_evidence": "stored_google_natural_feature_type",
+      "category_id": 35,
+      "checkpoint_sha256": "94440f7173cdce0dbe4196f07fb9f8728284cd2c5e6f985c104e4dc9c96f56c0",
+      "conflicts": [
+        "district_derived_from_saved_gate5d_evidence_requires_reapproval"
+      ],
+      "district_evidence": {
+        "district_id": 81,
+        "district_name": "Jaffna",
+        "reason": "postgis_boundary_contains_stored_google_coordinate",
+        "status": "verified"
+      },
+      "district_id": 81,
+      "duplicate_cluster": null,
+      "enrichment_evidence_sha256": "032e9e77cab008f39d5cdf9a8a3dc8b2bb21ab02f5fb237fe376002b78294e7f",
+      "existing_kb_duplicates": [],
+      "google_name": "Delft Island",
+      "google_place_id": "ChIJVeihOAM5_joRDTLKyO3RiE0",
+      "google_types": [
+        "island",
+        "natural_feature",
+        "establishment"
+      ],
+      "identity_assessment": "new_google_place_candidate",
+      "latitude": 9.514149699999999,
+      "longitude": 79.6838874,
+      "metadata_completeness": {
+        "category": true,
+        "coordinates": true,
+        "district": true
+      },
+      "official_name": "Delft island",
+      "official_source_url": "https://srilanka.travel/attraction?attraction_id=171",
+      "original_approval_hash": "778bb53d7b1e2ef3c80c914947f0392e62fe735816b6988c4501626c6e754216",
+      "proposed_category_name": "Nature & Landscapes",
+      "readiness": "QUARANTINED",
+      "reapproval_required": true,
+      "revised_proposal_sha256": "e51930bac1e29dd361c9d2cf12e6e5175f46d21548b78f15300157d91328650a",
+      "source_attraction_id": "srilanka_tourism_attraction:171"
+    },
+    {
+      "category_evidence": "stored_google_natural_feature_type",
+      "category_id": 35,
+      "checkpoint_sha256": "94440f7173cdce0dbe4196f07fb9f8728284cd2c5e6f985c104e4dc9c96f56c0",
+      "conflicts": [
+        "district_derived_from_saved_gate5d_evidence_requires_reapproval"
+      ],
+      "district_evidence": {
+        "district_id": 77,
+        "district_name": "Colombo",
+        "reason": "postgis_boundary_contains_stored_google_coordinate",
+        "status": "verified"
+      },
+      "district_id": 77,
+      "duplicate_cluster": null,
+      "enrichment_evidence_sha256": "0b03afd219b4adb75762d9ec228b8e57578e83acd01572a92bea10c9072046b8",
+      "existing_kb_duplicates": [],
+      "google_name": "Beira Lake",
+      "google_place_id": "ChIJs-C0QBZZ4joRve2DPoCs_BQ",
+      "google_types": [
+        "lake",
+        "natural_feature",
+        "establishment"
+      ],
+      "identity_assessment": "new_google_place_candidate",
+      "latitude": 6.929434499999999,
+      "longitude": 79.8541822,
+      "metadata_completeness": {
+        "category": true,
+        "coordinates": true,
+        "district": true
+      },
+      "official_name": "Beira Lake",
+      "official_source_url": "https://srilanka.travel/attraction?attraction_id=172",
+      "original_approval_hash": "e18d0f21a1f5517a1b48f25f50fbc2f3fb403b331680f4fdd0621a2ee929a661",
+      "proposed_category_name": "Nature & Landscapes",
+      "readiness": "QUARANTINED",
+      "reapproval_required": true,
+      "revised_proposal_sha256": "58308224fde59577ec69d998b14a4808c7e1f7c349255025a26caa8c48b37445",
+      "source_attraction_id": "srilanka_tourism_attraction:172"
+    },
+    {
+      "category_evidence": "stored_google_religious_place_type",
+      "category_id": 40,
+      "checkpoint_sha256": "94440f7173cdce0dbe4196f07fb9f8728284cd2c5e6f985c104e4dc9c96f56c0",
+      "conflicts": [
+        "district_derived_from_saved_gate5d_evidence_requires_reapproval"
+      ],
+      "district_evidence": {
+        "district_id": 74,
+        "district_name": "Anuradhapura",
+        "reason": "postgis_boundary_contains_stored_google_coordinate",
+        "status": "verified"
+      },
+      "district_id": 74,
+      "duplicate_cluster": null,
+      "enrichment_evidence_sha256": "fea2a6eb9244bbe4e9e40ae1402f38bb2a53a821cf0c7ea371c02c8e19ba1acd",
+      "existing_kb_duplicates": [],
+      "google_name": "Avukana Buddha Statue",
+      "google_place_id": "ChIJk912-Tq-_DoRBOwsK7ti8NY",
+      "google_types": [
+        "buddhist_temple",
+        "tourist_attraction",
+        "place_of_worship",
+        "point_of_interest",
+        "association_or_organization",
+        "establishment"
+      ],
+      "identity_assessment": "new_google_place_candidate",
+      "latitude": 8.0108714,
+      "longitude": 80.5127773,
+      "metadata_completeness": {
+        "category": true,
+        "coordinates": true,
+        "district": true
+      },
+      "official_name": "Aukana",
+      "official_source_url": "https://srilanka.travel/attraction?attraction_id=176",
+      "original_approval_hash": "46900e752328a8a2b95474f7e1619c23cfecc29ffd845508ad9ff82813a0714c",
+      "proposed_category_name": "Religious & Spiritual",
+      "readiness": "QUARANTINED",
+      "reapproval_required": true,
+      "revised_proposal_sha256": "93d8b0869af48d886d6a0e7fe90a40e1bb358e0eaa46736d8fbb2eecbf09d1e6",
+      "source_attraction_id": "srilanka_tourism_attraction:176"
+    },
+    {
+      "category_evidence": "stored_google_historical_place_type",
+      "category_id": 39,
+      "checkpoint_sha256": "94440f7173cdce0dbe4196f07fb9f8728284cd2c5e6f985c104e4dc9c96f56c0",
+      "conflicts": [
+        "district_derived_from_saved_gate5d_evidence_requires_reapproval"
+      ],
+      "district_evidence": {
+        "district_id": 86,
+        "district_name": "Kurunegala",
+        "reason": "postgis_boundary_contains_stored_google_coordinate",
+        "status": "verified"
+      },
+      "district_id": 86,
+      "duplicate_cluster": null,
+      "enrichment_evidence_sha256": "fe54ef7040d860612cb0f4f250868283f0a1f1230596e149f61bc27d9499ce18",
+      "existing_kb_duplicates": [],
+      "google_name": "Yapahuwa Rock Fortress",
+      "google_place_id": "ChIJedZjT6XP_DoRCdHqesVuzvE",
+      "google_types": [
+        "historical_place",
+        "tourist_attraction",
+        "point_of_interest",
+        "establishment"
+      ],
+      "identity_assessment": "new_google_place_candidate",
+      "latitude": 7.815825299999999,
+      "longitude": 80.3114366,
+      "metadata_completeness": {
+        "category": true,
+        "coordinates": true,
+        "district": true
+      },
+      "official_name": "Yapahuwa Rock Fortress",
+      "official_source_url": "https://srilanka.travel/attraction?attraction_id=184",
+      "original_approval_hash": "f3e3bf7668dc66353f904935df1891ef667e235b084668861bc5bea875ad57b2",
+      "proposed_category_name": "History & Archaeology",
+      "readiness": "QUARANTINED",
+      "reapproval_required": true,
+      "revised_proposal_sha256": "e868e005868cd66770b84986af7ffe58fd98e61bdd817e82e11e273d41b88114",
+      "source_attraction_id": "srilanka_tourism_attraction:184"
+    },
+    {
+      "category_evidence": "official_title_natural_feature_term",
+      "category_id": 35,
+      "checkpoint_sha256": "94440f7173cdce0dbe4196f07fb9f8728284cd2c5e6f985c104e4dc9c96f56c0",
+      "conflicts": [
+        "district_derived_from_saved_gate5d_evidence_requires_reapproval"
+      ],
+      "district_evidence": {
+        "district_id": 83,
+        "district_name": "Kandy",
+        "reason": "postgis_boundary_contains_stored_google_coordinate",
+        "status": "verified"
+      },
+      "district_id": 83,
+      "duplicate_cluster": null,
+      "enrichment_evidence_sha256": "e16894965cdbf5cba48c84dbb337b70753a0aa0956254685b782323d5043dd8c",
+      "existing_kb_duplicates": [],
+      "google_name": "Asupini Ella Falls",
+      "google_place_id": "ChIJQ8kLdxtz4zoRu3VkhF2yEWs",
+      "google_types": [
+        "tourist_attraction",
+        "point_of_interest",
+        "establishment"
+      ],
+      "identity_assessment": "new_google_place_candidate",
+      "latitude": 7.1177405,
+      "longitude": 80.4856735,
+      "metadata_completeness": {
+        "category": true,
+        "coordinates": true,
+        "district": true
+      },
+      "official_name": "Asupini Ella",
+      "official_source_url": "https://srilanka.travel/attraction?attraction_id=185",
+      "original_approval_hash": "d894429e8fbe7e170ba0a8f48198d80634ce90bef438048cfb1fc9f752dc0199",
+      "proposed_category_name": "Nature & Landscapes",
+      "readiness": "QUARANTINED",
+      "reapproval_required": true,
+      "revised_proposal_sha256": "0b964c9b5ad8edeac18c34351491f764666560718ab9689ac4e87d82f2fd4342",
+      "source_attraction_id": "srilanka_tourism_attraction:185"
+    },
+    {
+      "category_evidence": "stored_google_religious_place_type",
+      "category_id": 40,
+      "checkpoint_sha256": "94440f7173cdce0dbe4196f07fb9f8728284cd2c5e6f985c104e4dc9c96f56c0",
+      "conflicts": [
+        "district_derived_from_saved_gate5d_evidence_requires_reapproval"
+      ],
+      "district_evidence": {
+        "district_id": 81,
+        "district_name": "Jaffna",
+        "reason": "postgis_boundary_contains_stored_google_coordinate",
+        "status": "verified"
+      },
+      "district_id": 81,
+      "duplicate_cluster": null,
+      "enrichment_evidence_sha256": "e8e8b77fc446c1947ee347de82b9687bda44ff9d30bf46e93067581ea4d93973",
+      "existing_kb_duplicates": [],
+      "google_name": "Nainativu Nagapooshani Amman Kovil",
+      "google_place_id": "ChIJsYm_ga1J_joRWzr1LDvwVmY",
+      "google_types": [
+        "hindu_temple",
+        "tourist_attraction",
+        "place_of_worship",
+        "association_or_organization",
+        "point_of_interest",
+        "establishment"
+      ],
+      "identity_assessment": "new_google_place_candidate",
+      "latitude": 9.6190123,
+      "longitude": 79.7748762,
+      "metadata_completeness": {
+        "category": true,
+        "coordinates": true,
+        "district": true
+      },
+      "official_name": "The Nagapooshani Amman Kovil",
+      "official_source_url": "https://srilanka.travel/attraction?attraction_id=19",
+      "original_approval_hash": "789c4bbbc6ed245cdb7e9009632338b6009fa8ed73e6ca05c0358221470255de",
+      "proposed_category_name": "Religious & Spiritual",
+      "readiness": "QUARANTINED",
+      "reapproval_required": true,
+      "revised_proposal_sha256": "aa82288e6234f6d9fd880c691a81e97880413e768e1e8e187244a44f76a1c89f",
+      "source_attraction_id": "srilanka_tourism_attraction:19"
+    },
+    {
+      "category_evidence": "stored_google_beach_type",
+      "category_id": 36,
+      "checkpoint_sha256": "94440f7173cdce0dbe4196f07fb9f8728284cd2c5e6f985c104e4dc9c96f56c0",
+      "conflicts": [
+        "district_derived_from_saved_gate5d_evidence_requires_reapproval"
+      ],
+      "district_evidence": {
+        "district_id": 78,
+        "district_name": "Galle",
+        "reason": "postgis_boundary_contains_stored_google_coordinate",
+        "status": "verified"
+      },
+      "district_id": 78,
+      "duplicate_cluster": null,
+      "enrichment_evidence_sha256": "8761f27b3aa9cbef281988af3f506a3ce6c997a36b86b57fae39b56cf4effe12",
+      "existing_kb_duplicates": [],
+      "google_name": "Koggala Beach",
+      "google_place_id": "ChIJSar8mC9t4ToRJ0uaoKvRbPM",
+      "google_types": [
+        "beach",
+        "natural_feature",
+        "establishment"
+      ],
+      "identity_assessment": "new_google_place_candidate",
+      "latitude": 5.992272,
+      "longitude": 80.3106907,
+      "metadata_completeness": {
+        "category": true,
+        "coordinates": true,
+        "district": true
+      },
+      "official_name": "Koggala Beach",
+      "official_source_url": "https://srilanka.travel/attraction?attraction_id=192",
+      "original_approval_hash": "38b09c425eacc60ce2833ece7723fcc504824b4c36a381343a3384ae9dc208f0",
+      "proposed_category_name": "Beaches & Coastal",
+      "readiness": "QUARANTINED",
+      "reapproval_required": true,
+      "revised_proposal_sha256": "fc40c072631502664db6d98f8a9e2e0f177cbe8ad7f7eea24c2cf11408f87413",
+      "source_attraction_id": "srilanka_tourism_attraction:192"
+    },
+    {
+      "category_evidence": "official_title_natural_feature_term",
+      "category_id": 35,
+      "checkpoint_sha256": "94440f7173cdce0dbe4196f07fb9f8728284cd2c5e6f985c104e4dc9c96f56c0",
+      "conflicts": [
+        "district_derived_from_saved_gate5d_evidence_requires_reapproval"
+      ],
+      "district_evidence": {
+        "district_id": 95,
+        "district_name": "Ratnapura",
+        "reason": "postgis_boundary_contains_stored_google_coordinate",
+        "status": "verified"
+      },
+      "district_id": 95,
+      "duplicate_cluster": null,
+      "enrichment_evidence_sha256": "0e7e27d7919102af44433138204a02352beea686585c458861fa6200926eb296",
+      "existing_kb_duplicates": [],
+      "google_name": "Balla Mala Waterfall",
+      "google_place_id": "ChIJya20I2XB4zoRtPaFFxkakW8",
+      "google_types": [
+        "tourist_attraction",
+        "point_of_interest",
+        "establishment"
+      ],
+      "identity_assessment": "new_google_place_candidate",
+      "latitude": 6.5837053,
+      "longitude": 80.39917969999999,
+      "metadata_completeness": {
+        "category": true,
+        "coordinates": true,
+        "district": true
+      },
+      "official_name": "Balla Mala Ella",
+      "official_source_url": "https://srilanka.travel/attraction?attraction_id=20",
+      "original_approval_hash": "3c6ddbdfbcf70fa07f83d0035ab51ffe286e1ee8ae841ab9b7a070df0600a3bc",
+      "proposed_category_name": "Nature & Landscapes",
+      "readiness": "QUARANTINED",
+      "reapproval_required": true,
+      "revised_proposal_sha256": "afacc31f3144bff629d84e49aefdba2f9549bf4b8a9210eb7b409209e8384017",
+      "source_attraction_id": "srilanka_tourism_attraction:20"
+    },
+    {
+      "category_evidence": "stored_google_historical_place_type",
+      "category_id": 39,
+      "checkpoint_sha256": "94440f7173cdce0dbe4196f07fb9f8728284cd2c5e6f985c104e4dc9c96f56c0",
+      "conflicts": [
+        "district_derived_from_saved_gate5d_evidence_requires_reapproval"
+      ],
+      "district_evidence": {
+        "district_id": 77,
+        "district_name": "Colombo",
+        "reason": "postgis_boundary_contains_stored_google_coordinate",
+        "status": "verified"
+      },
+      "district_id": 77,
+      "duplicate_cluster": null,
+      "enrichment_evidence_sha256": "896e171c865948852f99fc74acc3353e0e91a71000d10294bd840eef5c69f833",
+      "existing_kb_duplicates": [],
+      "google_name": "Colombo Lighthouse",
+      "google_place_id": "ChIJfwlVoChZ4joRUTiFogQJMtI",
+      "google_types": [
+        "historical_landmark",
+        "tourist_attraction",
+        "historical_place",
+        "point_of_interest",
+        "establishment"
+      ],
+      "identity_assessment": "new_google_place_candidate",
+      "latitude": 6.936284499999999,
+      "longitude": 79.84078099999999,
+      "metadata_completeness": {
+        "category": true,
+        "coordinates": true,
+        "district": true
+      },
+      "official_name": "Colombo Lighthouse",
+      "official_source_url": "https://srilanka.travel/attraction?attraction_id=208",
+      "original_approval_hash": "727fe73f9d6a5d2fae8301f7c46da22c0e55dd6ca860f0ce51676041b1f0f023",
+      "proposed_category_name": "History & Archaeology",
+      "readiness": "QUARANTINED",
+      "reapproval_required": true,
+      "revised_proposal_sha256": "3125f488ffbb24f79d06d736b340385786013c026e8b815f505a11048125b09f",
+      "source_attraction_id": "srilanka_tourism_attraction:208"
+    },
+    {
+      "category_evidence": "stored_google_religious_place_type",
+      "category_id": 40,
+      "checkpoint_sha256": "94440f7173cdce0dbe4196f07fb9f8728284cd2c5e6f985c104e4dc9c96f56c0",
+      "conflicts": [
+        "district_derived_from_saved_gate5d_evidence_requires_reapproval"
+      ],
+      "district_evidence": {
+        "district_id": 95,
+        "district_name": "Ratnapura",
+        "reason": "postgis_boundary_contains_stored_google_coordinate",
+        "status": "verified"
+      },
+      "district_id": 95,
+      "duplicate_cluster": null,
+      "enrichment_evidence_sha256": "e7064982e6061ad0cfc793c67543e6ea9576ad948d754b6c634d39ffaac42f7d",
+      "existing_kb_duplicates": [],
+      "google_name": "\u0daf\u0dd2\u0dc0\u0dcf \u0d9c\u0dd4\u0dc4\u0dcf\u0dc0 (\u0db6\u0da7\u0dad\u0ddc\u0da7 \u0dbd\u0dd9\u0db1) | Diva Guhawa (Batathotalena)",
+      "google_place_id": "ChIJtypjglGj4zoRlSdc47PFORY",
+      "google_types": [
+        "buddhist_temple",
+        "tourist_attraction",
+        "place_of_worship",
+        "association_or_organization",
+        "point_of_interest",
+        "establishment"
+      ],
+      "identity_assessment": "new_google_place_candidate",
+      "latitude": 6.8301799999999995,
+      "longitude": 80.37425979999999,
+      "metadata_completeness": {
+        "category": true,
+        "coordinates": true,
+        "district": true
+      },
+      "official_name": "Diva Guhawa - Batatota Lena",
+      "official_source_url": "https://srilanka.travel/attraction?attraction_id=23",
+      "original_approval_hash": "647e9ed3f69d21411c3c7912770074978617a133af0e1ffc844af55d08efad4a",
+      "proposed_category_name": "Religious & Spiritual",
+      "readiness": "QUARANTINED",
+      "reapproval_required": true,
+      "revised_proposal_sha256": "ab312ce8a372d87ea1adf75c8d2affeedf36e727c058efabccc3d7fe8320e342",
+      "source_attraction_id": "srilanka_tourism_attraction:23"
+    },
+    {
+      "category_evidence": "stored_google_wildlife_or_park_type",
+      "category_id": 37,
+      "checkpoint_sha256": "94440f7173cdce0dbe4196f07fb9f8728284cd2c5e6f985c104e4dc9c96f56c0",
+      "conflicts": [
+        "district_derived_from_saved_gate5d_evidence_requires_reapproval"
+      ],
+      "district_evidence": {
+        "district_id": 74,
+        "district_name": "Anuradhapura",
+        "reason": "postgis_boundary_contains_stored_google_coordinate",
+        "status": "verified"
+      },
+      "district_id": 74,
+      "duplicate_cluster": null,
+      "enrichment_evidence_sha256": "db1af680386c13cc0588cfd2b7fe3f6f470590133c0007bb4131a4f8a0fa0c41",
+      "existing_kb_duplicates": [],
+      "google_name": "Jathika Namal Uyana",
+      "google_place_id": "ChIJ100zR7u7_DoRCwTNcmariNg",
+      "google_types": [
+        "tourist_attraction",
+        "national_park",
+        "park",
+        "point_of_interest",
+        "establishment"
+      ],
+      "identity_assessment": "new_google_place_candidate",
+      "latitude": 7.9161277000000005,
+      "longitude": 80.5707164,
+      "metadata_completeness": {
+        "category": true,
+        "coordinates": true,
+        "district": true
+      },
+      "official_name": "Jathika Namal Uyana",
+      "official_source_url": "https://srilanka.travel/attraction?attraction_id=28",
+      "original_approval_hash": "9525b112de2a7a0511577e7e5aa10fa3415f808c51095ba6264def7cf3c90760",
+      "proposed_category_name": "Wildlife & Safari",
+      "readiness": "QUARANTINED",
+      "reapproval_required": true,
+      "revised_proposal_sha256": "d7a1efdd7f180acb215c45b3f70cd942b10665836b914909cd9ad2ce82e46b8b",
+      "source_attraction_id": "srilanka_tourism_attraction:28"
+    },
+    {
+      "category_evidence": "official_title_heritage_term",
+      "category_id": 38,
+      "checkpoint_sha256": "94440f7173cdce0dbe4196f07fb9f8728284cd2c5e6f985c104e4dc9c96f56c0",
+      "conflicts": [
+        "no_stored_physical_attraction_google_evidence_for_this_source_record",
+        "missing_verified_district",
+        "unresolved_duplicate_cluster"
+      ],
+      "district_evidence": {
+        "district_id": null,
+        "district_name": null,
+        "reason": "no_stored_coordinate",
+        "status": "unavailable"
+      },
+      "district_id": null,
+      "duplicate_cluster": {
+        "cluster_id": "A",
+        "resolution": "PENDING_REVIEW"
+      },
+      "enrichment_evidence_sha256": "0301f98f10342bddcc2c899156867e4594204138864b1ed51d5c76f43ba69dc6",
+      "existing_kb_duplicates": [],
+      "google_name": "Panavitiya Ambalama",
+      "google_place_id": "ChIJERu1CE8h4zoRX5mPFE1UsfM",
+      "google_types": [
+        "premise",
+        "street_address"
+      ],
+      "identity_assessment": "new_google_place_candidate",
+      "latitude": null,
+      "longitude": null,
+      "metadata_completeness": {
+        "category": true,
+        "coordinates": false,
+        "district": false
+      },
+      "official_name": "Panavitiya Ambalama",
+      "official_source_url": "https://srilanka.travel/attraction?attraction_id=36",
+      "original_approval_hash": "00f4083a2a6681000d477c6f79d73e4e24c26d0e03784b1064f67026511def2c",
+      "proposed_category_name": "Culture & Heritage",
+      "readiness": "QUARANTINED",
+      "reapproval_required": true,
+      "revised_proposal_sha256": "d0f83be5d5aec2277b4c53e6e8d261fac1ff73b2af90c7b06f2567d3706898e2",
+      "source_attraction_id": "srilanka_tourism_attraction:36"
+    },
+    {
+      "category_evidence": "stored_google_natural_feature_type",
+      "category_id": 35,
+      "checkpoint_sha256": "94440f7173cdce0dbe4196f07fb9f8728284cd2c5e6f985c104e4dc9c96f56c0",
+      "conflicts": [
+        "district_derived_from_saved_gate5d_evidence_requires_reapproval"
+      ],
+      "district_evidence": {
+        "district_id": 76,
+        "district_name": "Batticaloa",
+        "reason": "postgis_boundary_contains_stored_google_coordinate",
+        "status": "verified"
+      },
+      "district_id": 76,
+      "duplicate_cluster": null,
+      "enrichment_evidence_sha256": "8827c8b409e1ad4911ac3670b28d567b1b985fe4bd8eba7b813c2cd0aaa37b88",
+      "existing_kb_duplicates": [],
+      "google_name": "Thoppigala",
+      "google_place_id": "ChIJK3FB9wQv-zoRADntGploWLU",
+      "google_types": [
+        "mountain_peak",
+        "natural_feature",
+        "establishment"
+      ],
+      "identity_assessment": "new_google_place_candidate",
+      "latitude": 7.835004199999999,
+      "longitude": 81.39244790000001,
+      "metadata_completeness": {
+        "category": true,
+        "coordinates": true,
+        "district": true
+      },
+      "official_name": "Baron's Cap or Thoppigala",
+      "official_source_url": "https://srilanka.travel/attraction?attraction_id=5",
+      "original_approval_hash": "6a7ef4c5f711ee7a9dcce47e78a9114fa1be9b01a86f248c97b4d38522ff6b47",
+      "proposed_category_name": "Nature & Landscapes",
+      "readiness": "QUARANTINED",
+      "reapproval_required": true,
+      "revised_proposal_sha256": "efd4059ae53739fb79a3132a33a9213edfc0e7ea38894201514bca29772285f7",
+      "source_attraction_id": "srilanka_tourism_attraction:5"
+    },
+    {
+      "category_evidence": "official_title_natural_feature_term",
+      "category_id": 35,
+      "checkpoint_sha256": "94440f7173cdce0dbe4196f07fb9f8728284cd2c5e6f985c104e4dc9c96f56c0",
+      "conflicts": [
+        "district_derived_from_saved_gate5d_evidence_requires_reapproval"
+      ],
+      "district_evidence": {
+        "district_id": 79,
+        "district_name": "Gampaha",
+        "reason": "postgis_boundary_contains_stored_google_coordinate",
+        "status": "verified"
+      },
+      "district_id": 79,
+      "duplicate_cluster": null,
+      "enrichment_evidence_sha256": "66bae581819afd75308f6f10adfad8d37549429b4f491768d8a1f5d398f5cdd7",
+      "existing_kb_duplicates": [],
+      "google_name": "Bopagama Ella",
+      "google_place_id": "ChIJAUSW8mAB4zoR0euaSRuHIEc",
+      "google_types": [
+        "tourist_attraction",
+        "point_of_interest",
+        "establishment"
+      ],
+      "identity_assessment": "new_google_place_candidate",
+      "latitude": 7.0713069,
+      "longitude": 80.163696,
+      "metadata_completeness": {
+        "category": true,
+        "coordinates": true,
+        "district": true
+      },
+      "official_name": "Bopagama Water Fall",
+      "official_source_url": "https://srilanka.travel/attraction?attraction_id=79",
+      "original_approval_hash": "7bdcc7497989b5f2609afd846e029545e415786d844f79195509d02abff41670",
+      "proposed_category_name": "Nature & Landscapes",
+      "readiness": "QUARANTINED",
+      "reapproval_required": true,
+      "revised_proposal_sha256": "4b31b8b083eac8b9e90d7f3695ecc114cfc35d8496e1cf2d9083d791786773fa",
+      "source_attraction_id": "srilanka_tourism_attraction:79"
+    },
+    {
+      "category_evidence": "stored_google_religious_place_type",
+      "category_id": 40,
+      "checkpoint_sha256": "94440f7173cdce0dbe4196f07fb9f8728284cd2c5e6f985c104e4dc9c96f56c0",
+      "conflicts": [
+        "district_derived_from_saved_gate5d_evidence_requires_reapproval"
+      ],
+      "district_evidence": {
+        "district_id": 81,
+        "district_name": "Jaffna",
+        "reason": "postgis_boundary_contains_stored_google_coordinate",
+        "status": "verified"
+      },
+      "district_id": 81,
+      "duplicate_cluster": null,
+      "enrichment_evidence_sha256": "e30442e115dda0e8db282c51a0736bd0ac0384bdfdddc9925d4e786436c99dab",
+      "existing_kb_duplicates": [],
+      "google_name": "Dambakola patuna",
+      "google_place_id": "ChIJ-QODMACt_zoROpBX9s7e9c0",
+      "google_types": [
+        "buddhist_temple",
+        "place_of_worship",
+        "association_or_organization",
+        "point_of_interest",
+        "establishment"
+      ],
+      "identity_assessment": "new_google_place_candidate",
+      "latitude": 9.7872519,
+      "longitude": 79.9435981,
+      "metadata_completeness": {
+        "category": true,
+        "coordinates": true,
+        "district": true
+      },
+      "official_name": "DambakolaPatuna Viharaya",
+      "official_source_url": "https://srilanka.travel/attraction?attraction_id=8",
+      "original_approval_hash": "133f66895fba8b9d395cbd9c3ec638202bf0b56ab2ae9765bbfa6007b69ddd21",
+      "proposed_category_name": "Religious & Spiritual",
+      "readiness": "QUARANTINED",
+      "reapproval_required": true,
+      "revised_proposal_sha256": "f0d18fc882208c10f1560b4f2df30d1ffd0cbf143c2d9e007c506b7f88e08739",
+      "source_attraction_id": "srilanka_tourism_attraction:8"
+    },
+    {
+      "category_evidence": "stored_google_religious_place_type",
+      "category_id": 40,
+      "checkpoint_sha256": "94440f7173cdce0dbe4196f07fb9f8728284cd2c5e6f985c104e4dc9c96f56c0",
+      "conflicts": [
+        "district_derived_from_saved_gate5d_evidence_requires_reapproval"
+      ],
+      "district_evidence": {
+        "district_id": 83,
+        "district_name": "Kandy",
+        "reason": "postgis_boundary_contains_stored_google_coordinate",
+        "status": "verified"
+      },
+      "district_id": 83,
+      "duplicate_cluster": null,
+      "enrichment_evidence_sha256": "f9a85d7aba977d957e46fbb202ebed32b6402c995a043defd3240f78cf19642d",
+      "existing_kb_duplicates": [],
+      "google_name": "Nikathanna Temple",
+      "google_place_id": "ChIJN2nX4_1u4zoRew-qQSGc5h0",
+      "google_types": [
+        "buddhist_temple",
+        "place_of_worship",
+        "association_or_organization",
+        "point_of_interest",
+        "establishment"
+      ],
+      "identity_assessment": "new_google_place_candidate",
+      "latitude": 7.2166299,
+      "longitude": 80.58725419999999,
+      "metadata_completeness": {
+        "category": true,
+        "coordinates": true,
+        "district": true
+      },
+      "official_name": "Nikayalannuwara Historical Temple",
+      "official_source_url": "https://srilanka.travel/attraction?attraction_id=88",
+      "original_approval_hash": "e91238b5a8b7fc8e7fff5b690792a0e52acffca17698c7ea1a62c187187be12c",
+      "proposed_category_name": "Religious & Spiritual",
+      "readiness": "QUARANTINED",
+      "reapproval_required": true,
+      "revised_proposal_sha256": "582c91c5a091be354adbb1483b246dcdf31a12038d261b0a3e510291bb88328b",
+      "source_attraction_id": "srilanka_tourism_attraction:88"
+    },
+    {
+      "category_evidence": "stored_google_religious_place_type",
+      "category_id": 40,
+      "checkpoint_sha256": "94440f7173cdce0dbe4196f07fb9f8728284cd2c5e6f985c104e4dc9c96f56c0",
+      "conflicts": [
+        "district_derived_from_saved_gate5d_evidence_requires_reapproval"
+      ],
+      "district_evidence": {
+        "district_id": 90,
+        "district_name": "Moneragala",
+        "reason": "postgis_boundary_contains_stored_google_coordinate",
+        "status": "verified"
+      },
+      "district_id": 90,
+      "duplicate_cluster": null,
+      "enrichment_evidence_sha256": "85f89dd747fe3b03745d66b78696a295215fba1ad1a94cc047a44276cb21f6b1",
+      "existing_kb_duplicates": [
+        {
+          "attraction_id": 3041,
+          "district_id": 90,
+          "latitude": 6.8071364999999995,
+          "longitude": 81.0729593,
+          "name": "Rakkiththa Kanda Rajamaha Viharaya"
+        }
+      ],
+      "google_name": "Rakkiththa Kanda Rajamaha Viharaya",
+      "google_place_id": "ChIJ0xLAizJv5DoRrRAT1_G7sf8",
+      "google_types": [
+        "buddhist_temple",
+        "place_of_worship",
+        "association_or_organization",
+        "point_of_interest",
+        "establishment"
+      ],
+      "identity_assessment": "verified_existing_kb_match",
+      "latitude": 6.8071364999999995,
+      "longitude": 81.0729593,
+      "metadata_completeness": {
+        "category": true,
+        "coordinates": true,
+        "district": true
+      },
+      "official_name": "Ratmullukanda Viharaya",
+      "official_source_url": "https://srilanka.travel/attraction?attraction_id=89",
+      "original_approval_hash": "125587ba4d3205fe3c15f4d272e7122fc1ac9b744d532eece666ceeb288a7b18",
+      "proposed_category_name": "Religious & Spiritual",
+      "readiness": "QUARANTINED",
+      "reapproval_required": true,
+      "revised_proposal_sha256": "162f67536cf525750c131d95d6be47a07f7f27ec06fee67db29d2122adb13406",
+      "source_attraction_id": "srilanka_tourism_attraction:89"
+    },
+    {
+      "category_evidence": "official_title_natural_feature_term",
+      "category_id": 35,
+      "checkpoint_sha256": "94440f7173cdce0dbe4196f07fb9f8728284cd2c5e6f985c104e4dc9c96f56c0",
+      "conflicts": [
+        "district_derived_from_saved_gate5d_evidence_requires_reapproval"
+      ],
+      "district_evidence": {
+        "district_id": 81,
+        "district_name": "Jaffna",
+        "reason": "postgis_boundary_contains_stored_google_coordinate",
+        "status": "verified"
+      },
+      "district_id": 81,
+      "duplicate_cluster": null,
+      "enrichment_evidence_sha256": "c0ed88c4398432965d623c873729f0215d5224f983b64f97a9dba36bf2cf0098",
+      "existing_kb_duplicates": [],
+      "google_name": "The Baobab Tree - Delft",
+      "google_place_id": "ChIJLxEFA-04_joRxpNVKDSIJ8o",
+      "google_types": [
+        "tourist_attraction",
+        "point_of_interest",
+        "establishment"
+      ],
+      "identity_assessment": "new_google_place_candidate",
+      "latitude": 9.512545,
+      "longitude": 79.7153096,
+      "metadata_completeness": {
+        "category": true,
+        "coordinates": true,
+        "district": true
+      },
+      "official_name": "Delft Biobab Tree",
+      "official_source_url": "https://srilanka.travel/attraction?attraction_id=9",
+      "original_approval_hash": "b04af031a7a5387aaaea95227f55c68e2f272521b374d53b9488c687cb1f395a",
+      "proposed_category_name": "Nature & Landscapes",
+      "readiness": "QUARANTINED",
+      "reapproval_required": true,
+      "revised_proposal_sha256": "1ddc71b4426b02b35fc1361e6842785aad461c2cb90875fd893ee1507178fa9e",
+      "source_attraction_id": "srilanka_tourism_attraction:9"
+    },
+    {
+      "category_evidence": "stored_google_religious_place_type",
+      "category_id": 40,
+      "checkpoint_sha256": "94440f7173cdce0dbe4196f07fb9f8728284cd2c5e6f985c104e4dc9c96f56c0",
+      "conflicts": [
+        "district_derived_from_saved_gate5d_evidence_requires_reapproval"
+      ],
+      "district_evidence": {
+        "district_id": 86,
+        "district_name": "Kurunegala",
+        "reason": "postgis_boundary_contains_stored_google_coordinate",
+        "status": "verified"
+      },
+      "district_id": 86,
+      "duplicate_cluster": null,
+      "enrichment_evidence_sha256": "9f4e7d29fef4636f2e75ebafbdf19bc8ace5755ae9099d14425321371dd93bd1",
+      "existing_kb_duplicates": [],
+      "google_name": "Rideeviharaya",
+      "google_place_id": "ChIJRX5gl1pI4zoR35ZAq-4g6HM",
+      "google_types": [
+        "buddhist_temple",
+        "tourist_attraction",
+        "place_of_worship",
+        "association_or_organization",
+        "point_of_interest",
+        "establishment"
+      ],
+      "identity_assessment": "new_google_place_candidate",
+      "latitude": 7.536573199999999,
+      "longitude": 80.49142189999999,
+      "metadata_completeness": {
+        "category": true,
+        "coordinates": true,
+        "district": true
+      },
+      "official_name": "Ridee Viharaya",
+      "official_source_url": "https://srilanka.travel/attraction?attraction_id=90",
+      "original_approval_hash": "c2f33a6edebc2066345bbc7fdf8d162a0393d3dad93bf446f13ef9deec2e41f1",
+      "proposed_category_name": "Religious & Spiritual",
+      "readiness": "QUARANTINED",
+      "reapproval_required": true,
+      "revised_proposal_sha256": "35604b38766696812e13a2f9a65d32b2e8aeaf7c6fe8f7b31bd8b6159bd2b5d8",
+      "source_attraction_id": "srilanka_tourism_attraction:90"
+    },
+    {
+      "category_evidence": "stored_google_religious_place_type",
+      "category_id": 40,
+      "checkpoint_sha256": "94440f7173cdce0dbe4196f07fb9f8728284cd2c5e6f985c104e4dc9c96f56c0",
+      "conflicts": [
+        "district_derived_from_saved_gate5d_evidence_requires_reapproval"
+      ],
+      "district_evidence": {
+        "district_id": 86,
+        "district_name": "Kurunegala",
+        "reason": "postgis_boundary_contains_stored_google_coordinate",
+        "status": "verified"
+      },
+      "district_id": 86,
+      "duplicate_cluster": null,
+      "enrichment_evidence_sha256": "8b278bee171119b17aa8cba6dd7fa375550f34517818ec30537e98e8161ba853",
+      "existing_kb_duplicates": [],
+      "google_name": "Rambodagalla Stone Statue",
+      "google_place_id": "ChIJfWN8x4ZI4zoRDhtEebVd1Z8",
+      "google_types": [
+        "buddhist_temple",
+        "place_of_worship",
+        "association_or_organization",
+        "point_of_interest",
+        "establishment"
+      ],
+      "identity_assessment": "new_google_place_candidate",
+      "latitude": 7.514524599999999,
+      "longitude": 80.5035367,
+      "metadata_completeness": {
+        "category": true,
+        "coordinates": true,
+        "district": true
+      },
+      "official_name": "Rambodagalla Buddha Statue",
+      "official_source_url": "https://srilanka.travel/attraction?attraction_id=92",
+      "original_approval_hash": "ea81589aecaae0591ac7b0617cb6f986979a8ddaae29db73084209fafcc115c6",
+      "proposed_category_name": "Religious & Spiritual",
+      "readiness": "QUARANTINED",
+      "reapproval_required": true,
+      "revised_proposal_sha256": "8450c10cb6dcb7a3405406cb6ea4175d2d6f7edd6ebc5e4dee9ef586a6ab97e0",
+      "source_attraction_id": "srilanka_tourism_attraction:92"
+    },
+    {
+      "category_evidence": "official_title_heritage_term",
+      "category_id": 38,
+      "checkpoint_sha256": "94440f7173cdce0dbe4196f07fb9f8728284cd2c5e6f985c104e4dc9c96f56c0",
+      "conflicts": [
+        "no_stored_physical_attraction_google_evidence_for_this_source_record",
+        "missing_verified_district",
+        "unresolved_duplicate_cluster"
+      ],
+      "district_evidence": {
+        "district_id": null,
+        "district_name": null,
+        "reason": "no_stored_coordinate",
+        "status": "unavailable"
+      },
+      "district_id": null,
+      "duplicate_cluster": {
+        "cluster_id": "A",
+        "resolution": "PENDING_REVIEW"
+      },
+      "enrichment_evidence_sha256": "6005378ed41addeb5bcbeb7985a5765d5a2ad70dc59ddc889310c43a126adb52",
+      "existing_kb_duplicates": [],
+      "google_name": "Panavitiya Ambalama",
+      "google_place_id": "ChIJERu1CE8h4zoRX5mPFE1UsfM",
+      "google_types": [
+        "premise",
+        "street_address"
+      ],
+      "identity_assessment": "new_google_place_candidate",
+      "latitude": null,
+      "longitude": null,
+      "metadata_completeness": {
+        "category": true,
+        "coordinates": false,
+        "district": false
+      },
+      "official_name": "Panavitiya Ambalama",
+      "official_source_url": "https://srilanka.travel/attraction?attraction_id=94",
+      "original_approval_hash": "f3b87f643de0fded7ad197f465cdb8cf02ef7fa6dcf9624807d5c53c8507d0d8",
+      "proposed_category_name": "Culture & Heritage",
+      "readiness": "QUARANTINED",
+      "reapproval_required": true,
+      "revised_proposal_sha256": "088607131da72be647497b084e702cf2d7e79bf20543cc8db7cf911d0c87661e",
+      "source_attraction_id": "srilanka_tourism_attraction:94"
+    },
+    {
+      "category_evidence": "stored_google_religious_place_type",
+      "category_id": 40,
+      "checkpoint_sha256": "94440f7173cdce0dbe4196f07fb9f8728284cd2c5e6f985c104e4dc9c96f56c0",
+      "conflicts": [
+        "district_derived_from_saved_gate5d_evidence_requires_reapproval"
+      ],
+      "district_evidence": {
+        "district_id": 86,
+        "district_name": "Kurunegala",
+        "reason": "postgis_boundary_contains_stored_google_coordinate",
+        "status": "verified"
+      },
+      "district_id": 86,
+      "duplicate_cluster": null,
+      "enrichment_evidence_sha256": "4869418f5ad96518761b3615e73a306b57f4001ac3b453a4745d3a93d61673cf",
+      "existing_kb_duplicates": [],
+      "google_name": "Malagoda Purana Raja Maha Viharaya",
+      "google_place_id": "ChIJVQoODm0i4zoRKP0F8ecwknI",
+      "google_types": [
+        "buddhist_temple",
+        "place_of_worship",
+        "association_or_organization",
+        "point_of_interest",
+        "establishment"
+      ],
+      "identity_assessment": "ambiguous_multiple_candidates",
+      "latitude": 7.343541800000001,
+      "longitude": 80.21173929999999,
+      "metadata_completeness": {
+        "category": true,
+        "coordinates": true,
+        "district": true
+      },
+      "official_name": "Pannathgoda Purana Raja Maha Viharaya",
+      "official_source_url": "https://srilanka.travel/attraction?attraction_id=97",
+      "original_approval_hash": "ab881adcc657ff938a314694e4fbe29d579f1e194964c009ebafbd16805863d7",
+      "proposed_category_name": "Religious & Spiritual",
+      "readiness": "QUARANTINED",
+      "reapproval_required": true,
+      "revised_proposal_sha256": "bac62be8f659a4b64c441bdacaefb59a6b85faef53ff820ea6c948811d1484bb",
+      "source_attraction_id": "srilanka_tourism_attraction:97"
+    }
+  ]
+}

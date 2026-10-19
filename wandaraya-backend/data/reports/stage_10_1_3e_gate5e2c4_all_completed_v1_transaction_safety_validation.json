@@ -1,0 +1,7 @@
+{
+  "atomic_scope": true,
+  "fresh_collision_recheck_required": true,
+  "idempotency_key": "source_provider + external_source_id",
+  "qdrant_writes_executed": false,
+  "rollback_required_on_any_error": true
+}

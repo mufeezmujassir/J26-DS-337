@@ -1,0 +1,167 @@
+{
+  "records": [
+    {
+      "attraction_name": "Neelagiri Stupa",
+      "candidates": [
+        {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 1.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.5778,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 6.842794,
+            "longitude": 81.7016423
+          },
+          "display_name": "\u0ba8\u0bc0\u0bb2\u0b95\u0bbf\u0bb0\u0bbf \u0b95\u0bc1\u0b95\u0bc8\u0b95\u0bcd \u0b95\u0bcb\u0baf\u0bbf\u0bb2\u0bcd | \u0db1\u0dd3\u0dbd\u0d9c\u0dd2\u0dbb\u0dd2 \u0dbd\u0dd9\u0db1\u0dca \u0dc0\u0dd2\u0dc4\u0dcf\u0dbb\u0dba | Neelagirihela Natabun Viharaya",
+          "distance_km": null,
+          "existing_kb_matches": [
+            {
+              "id": 4150,
+              "name": "\u0ba8\u0bc0\u0bb2\u0b95\u0bbf\u0bb0\u0bbf \u0b95\u0bc1\u0b95\u0bc8\u0b95\u0bcd \u0b95\u0bcb\u0baf\u0bbf\u0bb2\u0bcd | \u0db1\u0dd3\u0dbd\u0d9c\u0dd2\u0dbb\u0dd2 \u0dbd\u0dd9\u0db1\u0dca \u0dc0\u0dd2\u0dc4\u0dcf\u0dbb\u0dba | Neelagirihela Natabun Viharaya"
+            }
+          ],
+          "formatted_address": "RPV2+4M6, Lahugala, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=17723155206546886699&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJC_aBwfK75ToRK5BXUcJL9fU",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "buddhist_temple",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 1.0,
+          "types": [
+            "buddhist_temple",
+            "place_of_worship",
+            "association_or_organization",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.6,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.873053999999999,
+            "longitude": 80.77179699999999
+          },
+          "display_name": "Stupa Neelagiri Monastery",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "VQFC+6PF, Dambulla, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=6657095942949674313&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJb9hnBQCn_DoRSZ01Q33BYlw",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "place_of_worship",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.475,
+          "types": [
+            "place_of_worship",
+            "association_or_organization",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.0,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 6.8514152,
+            "longitude": 81.7017533
+          },
+          "display_name": "\u0db1\u0dd3\u0dbd\u0d9c\u0dd2\u0dbb\u0dd2 \u0db8\u0dc4\u0dcf \u0dc0\u0dd2\u0dc4\u0dcf\u0dbb\u0dba, \u0dbd\u0dcf\u0dc4\u0dd4\u0d9c\u0dbd",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "VP22+HP6, Lahugala, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=10692091464861337060&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJeWJMk5uj5ToR5MULxYnwYZQ",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "buddhist_temple",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.025,
+          "types": [
+            "buddhist_temple",
+            "place_of_worship",
+            "association_or_organization",
+            "point_of_interest",
+            "establishment"
+          ]
+        }
+      ],
+      "classification": "verified_existing_kb_match",
+      "details": null,
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:104",
+      "google_candidate_kb_identity": "verified_existing_kb_place",
+      "official_source_candidate_identity": "strong_candidate_identity_evidence",
+      "query": "Neelagiri Stupa, Sri Lanka",
+      "review_reasons": [],
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=104",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=104"
+    }
+  ]
+}

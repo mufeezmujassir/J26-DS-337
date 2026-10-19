@@ -1,0 +1,55 @@
+{
+  "permission": {
+    "organization": "Sri Lanka Tourism",
+    "domain": "srilanka.travel",
+    "permission_type": "researcher_confirmed_verbal_permission",
+    "evidence_status": "undocumented",
+    "academic_research_purpose": true,
+    "written_scope_confirmation": null,
+    "granted_by": null,
+    "verbal_discussion_date": null,
+    "reported_scope": "Researcher reports verbal permission for automated collection, storage, processing and embeddings for WANDARAYA academic research.",
+    "follow_up_contact": null,
+    "automated_fetch_allowed": true,
+    "persistent_storage_allowed": true,
+    "embeddings_allowed": true,
+    "redistribution_allowed": false,
+    "commercial_reuse_approved": false,
+    "attribution_requirements": null,
+    "technical_execution_approved": true,
+    "bulk_automated_collection_reported": false,
+    "research_processing_allowed": true
+  },
+  "approved_domains": [
+    "www.srilanka.travel",
+    "srilanka.travel"
+  ],
+  "exact_urls": [
+    "https://srilanka.travel/tourist-attractions?page=1&theme=2",
+    "https://srilanka.travel/tourist-attractions?page=12",
+    "https://srilanka.travel/tourist-attractions?page=13",
+    "https://srilanka.travel/tourist-attractions?page=14",
+    "https://srilanka.travel/tourist-attractions?page=5&theme=2",
+    "https://srilanka.travel/tourist-attractions?page=6",
+    "https://srilanka.travel/tourist-attractions?page=6&theme=2",
+    "https://srilanka.travel/tourist-attractions?page=7",
+    "https://srilanka.travel/tourist-attractions?page=8",
+    "https://srilanka.travel/tourist-attractions?page=9"
+  ],
+  "permitted_content_categories": [
+    "destination",
+    "public_holiday",
+    "event",
+    "activity",
+    "attraction",
+    "operating_information",
+    "travel_information"
+  ],
+  "retention_conditions": "Sri Lanka Tourism confirmed the configured limited academic retention with provenance for this pilot; written evidence remains unavailable.",
+  "attribution_conditions": "Sri Lanka Tourism confirmed attribution to Sri Lanka Tourism, including the original URL and retrieval date for this pilot.",
+  "request_rate_restrictions": "Sri Lanka Tourism confirmed the configured pilot limits: maximum 10 pages, concurrency 1, at least 3 seconds between requests, and at most 1 retry.",
+  "retention_conditions_status": "source_confirmed",
+  "attribution_conditions_status": "source_confirmed",
+  "request_rate_restrictions_status": "source_confirmed",
+  "researcher_execution_approved_at": "2026-10-14T12:30:00+05:30"
+}

@@ -1,0 +1,39 @@
+{
+  "accessible_via_qdrant_api": true,
+  "checksum_matches_reported_value": true,
+  "created_before_new_vector_upsert": true,
+  "d2_snapshot_report_is_stale_relative_to_current_snapshot": true,
+  "d3_current_list_result_differs_from_d2_static_report": true,
+  "name_matches": true,
+  "new_vector_upserts_executed": false,
+  "nonzero_size": true,
+  "persistence_reason": "The FastAPI container can list snapshots but cannot verify Qdrant container mount persistence.",
+  "persistent_storage_verified": false,
+  "ready_for_write": false,
+  "ready_for_write_reason": "Snapshot exists and metadata matches, but persistence must be verified outside the FastAPI container.",
+  "required_snapshot_name": "sri_lanka_attractions-1336472673414113-2026-10-18-07-30-23.snapshot",
+  "snapshot_list_request": {
+    "http_status": 200,
+    "request_body": null,
+    "response_body": {
+      "result": [
+        {
+          "checksum": "04aa6ca28416dfa5060089ac67321a6da3958582b1134476cfa7b68f4ff24d42",
+          "creation_time": "2026-10-18T07:31:40",
+          "name": "sri_lanka_attractions-1336472673414113-2026-10-18-07-30-23.snapshot",
+          "size": 621225984
+        }
+      ],
+      "status": "ok",
+      "time": 0.001306961
+    },
+    "response_time_ms": 3.64,
+    "status": "ok"
+  },
+  "snapshot_metadata": {
+    "checksum": "04aa6ca28416dfa5060089ac67321a6da3958582b1134476cfa7b68f4ff24d42",
+    "creation_time": "2026-10-18T07:31:40",
+    "name": "sri_lanka_attractions-1336472673414113-2026-10-18-07-30-23.snapshot",
+    "size": 621225984
+  }
+}

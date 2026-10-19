@@ -1,0 +1,36 @@
+{
+  "stage": "10.1.3A",
+  "generated_on": "2026-10-14",
+  "scope": "offline governance and synthetic validation",
+  "network_requests": 0,
+  "database_writes": 0,
+  "migrations": 0,
+  "test_outcome": {
+    "command": "docker exec -i wandaraya-api python -m pytest tests/time_context/test_google_period_parser.py tests/time_context/test_source_governance.py -q",
+    "passed": 51,
+    "failed": 0,
+    "skipped": 0
+  },
+  "broader_regression": {
+    "passed": 73,
+    "failed": 0,
+    "skipped": 0,
+    "warnings": 1
+  },
+  "pilot_baseline": {
+    "active_attractions": 222,
+    "structured_schedules": 121,
+    "valid_schedules": 120,
+    "missing_schedules": 101,
+    "unsupported_schedules": 1,
+    "strict_google_always_open_representations": 79
+  },
+  "governance_outcomes": ["consistent", "conflicting", "insufficient_evidence", "review_required", "policy_unresolved"],
+  "production_readiness": "blocked_pending_source_policy_approvals",
+  "limitations": [
+    "No external source was fetched or evaluated.",
+    "No policy is approved by this implementation.",
+    "No timing evidence was persisted.",
+    "No schedule is inferred from missing data."
+  ]
+}

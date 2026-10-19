@@ -1,0 +1,8 @@
+{
+  "application_code_changed": false,
+  "application_filter_matches_payload_schema": true,
+  "proposed_server_repair_requires_explicit_approval": "Move Qdrant primary storage to a supported Docker/Linux volume; preserve snapshot; then validate in an isolated recovery environment before any production restore.",
+  "root_cause": "server_side_mmap_payload_storage_failure: valid attraction_id filters fail through both REST and Python client with Qdrant OffsetZero; the initial unfiltered page and direct retrieval succeed, but pagination later fails with the same server panic",
+  "safe_application_fix_available": false,
+  "silent_fallback_used": false
+}

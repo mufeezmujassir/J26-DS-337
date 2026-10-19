@@ -1,0 +1,25 @@
+{
+  "embedding_dimension": 1024,
+  "errors_or_warnings": [],
+  "generated_at_utc": "2026-10-18T11:54:21.736021+00:00",
+  "inference_latency_ms": {
+    "beaches suitable for relaxing": 156.54,
+    "cultural and religious attractions in Kandy": 232.43,
+    "family-friendly attractions": 144.62,
+    "historical attractions in Galle": 6751.16,
+    "photography and scenic locations": 156.72,
+    "waterfalls and nature experiences": 163.93,
+    "wildlife safari attractions": 194.97
+  },
+  "initial_load_duration_ms": null,
+  "initial_load_duration_note": "Not re-measured because this verification must not restart the active API or instantiate a second model process.",
+  "mode": "observation_only",
+  "model_identifier": "BAAI/bge-large-en-v1.5",
+  "model_loading_status": "verified_via_successful_active_fastapi_semantic_inference",
+  "runtime_resources": {
+    "api_container_memory_current_bytes": 2044882944,
+    "api_container_memory_limit_bytes": null,
+    "filesystem_free_bytes": 960619724800,
+    "filesystem_total_bytes": 1081101176832
+  }
+}

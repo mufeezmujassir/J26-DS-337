@@ -1,0 +1,401 @@
+{
+  "records": [
+    {
+      "attraction_name": "Muhudu Maha Viharaya",
+      "candidates": [
+        {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 1.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.8372,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 6.8666857,
+            "longitude": 81.84099700000002
+          },
+          "display_name": "\u0db8\u0dd4\u0dc4\u0dd4\u0daf\u0dd4 \u0db8\u0dc4\u0dcf \u0dc0\u0dd2\u0dc4\u0dcf\u0dbb \u0dc0\u0dd9\u0dbb\u0dc5 | Muhudu Mahavihara Beach",
+          "distance_km": null,
+          "existing_kb_matches": [
+            {
+              "id": 4066,
+              "name": "\u0db8\u0dd4\u0dc4\u0dd4\u0daf\u0dd4 \u0db8\u0dc4\u0dcf \u0dc0\u0dd2\u0dc4\u0dcf\u0dbb \u0dc0\u0dd9\u0dbb\u0dc5 | Muhudu Mahavihara Beach"
+            }
+          ],
+          "formatted_address": "VR8R+M9H, Muhudu Maha Vihara Mawatha, Pottuvil, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=11440874782530487635&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJF_Lf-kqj5ToRU0V0lP8mxp4",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "tourist_attraction",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 1.0,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 1.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.7727,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 6.868536799999999,
+            "longitude": 81.8404572
+          },
+          "display_name": "Muhudu Mahavih\u0101ra Pagoda",
+          "distance_km": null,
+          "existing_kb_matches": [
+            {
+              "id": 4143,
+              "name": "Muhudu Mahavih\u0101ra Pagoda"
+            }
+          ],
+          "formatted_address": "Muhudu Maha Vihara Mawatha, VR9R+C58, Market Rd, Pottuvil, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=13464230252200388375&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJdf6sPsGi5ToRF-d47BOO2ro",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "buddhist_temple",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 1.0,
+          "types": [
+            "buddhist_temple",
+            "place_of_worship",
+            "association_or_organization",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 1.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.6667,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 6.8678909,
+            "longitude": 81.8390076
+          },
+          "display_name": "Muhudu Maha Viharaya - Archaeological Site",
+          "distance_km": null,
+          "existing_kb_matches": [
+            {
+              "id": 4051,
+              "name": "Muhudu Maha Viharaya - Archaeological Site"
+            }
+          ],
+          "formatted_address": "Pottuvil, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=13796091891429095649&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJsb33VsGi5ToR4ThH_XqQdb8",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "buddhist_temple",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 1.0,
+          "types": [
+            "buddhist_temple",
+            "tourist_attraction",
+            "place_of_worship",
+            "association_or_organization",
+            "point_of_interest",
+            "establishment"
+          ]
+        }
+      ],
+      "classification": "verified_existing_kb_match",
+      "details": {
+        "data": {
+          "addressComponents": [
+            {
+              "languageCode": "en-US",
+              "longText": "VR8R+M9H",
+              "shortText": "VR8R+M9H",
+              "types": [
+                "plus_code"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Muhudu Maha Vihara Mawatha",
+              "shortText": "Muhudu Maha Vihara Mawatha",
+              "types": [
+                "route"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Pottuvil",
+              "shortText": "Pottuvil",
+              "types": [
+                "locality",
+                "political"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Ampara",
+              "shortText": "Ampara",
+              "types": [
+                "administrative_area_level_2",
+                "political"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Eastern Province",
+              "shortText": "EP",
+              "types": [
+                "administrative_area_level_1",
+                "political"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Sri Lanka",
+              "shortText": "LK",
+              "types": [
+                "country",
+                "political"
+              ]
+            }
+          ],
+          "businessStatus": "OPERATIONAL",
+          "displayName": {
+            "languageCode": "en",
+            "text": "\u0db8\u0dd4\u0dc4\u0dd4\u0daf\u0dd4 \u0db8\u0dc4\u0dcf \u0dc0\u0dd2\u0dc4\u0dcf\u0dbb \u0dc0\u0dd9\u0dbb\u0dc5 | Muhudu Mahavihara Beach"
+          },
+          "formattedAddress": "VR8R+M9H, Muhudu Maha Vihara Mawatha, Pottuvil, Sri Lanka",
+          "googleMapsUri": "https://maps.google.com/?cid=11440874782530487635&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+          "id": "ChIJF_Lf-kqj5ToRU0V0lP8mxp4",
+          "location": {
+            "latitude": 6.8666857,
+            "longitude": 81.84099700000002
+          },
+          "photos": [
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "chandana bandu",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVBfcRLZB9krLGCI_l3_kNIlhBAZK4cIPCE0_87_qcu0WIrjme-=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/102295397046422926104"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIDhnquIugE&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDhnquIugE!2e10!4m2!3m1!1s0x3ae5a34afadff217:0x9ec626ff94744553",
+              "heightPx": 3456,
+              "name": "places/ChIJF_Lf-kqj5ToRU0V0lP8mxp4/photos/Aa-ngMbwprrczIGyNkMpj0XMAXA4TnAY2cWBjV1w_N1FCfJXcNg2ABjdaJd4AMAHhsEBv_JUfSV-Gm0UMpWukzpG7vVXqnjgevw38uLpju0mGp5qix4ceqN1SVGBXf4p2RbqK8OmTFdso9Qm_q70BarftQ28n_VK8HOfy65gQUJPGrOgMn54iqlE9vAjBxzDoj8vDKvIQXfhVjKXOOPZxebDGWA4FUce_qfeutjKyldZiFjqxI-FELHBwCy1SniEHhA4HmLeAsNiwgd-7sBUpYsXXPiKKTPiCGOHHb7WyFNSMLq1WBLX3J5Agq2Y87NbZsiJfEgR8e4VPfq-jkQ0cKpBZXIPxYB3e7crnJLOYcA7E9V56FUpI6SOS9SU29calUVEM3hnx2L4dNiLmy4If1rJ0SzC-Uht",
+              "widthPx": 4608
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Sumithrapala Walakadawaththa",
+                  "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocKG_ig6LhrhaouTn9iKhLlRKISZ2Q6AgtR3lfdBYWnQcqxr_Q=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/101650822339230912217"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIC1hMzj7AE&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIC1hMzj7AE!2e10!4m2!3m1!1s0x3ae5a34afadff217:0x9ec626ff94744553",
+              "heightPx": 4800,
+              "name": "places/ChIJF_Lf-kqj5ToRU0V0lP8mxp4/photos/Aa-ngMamSMIbK1qylSDF314Pxb-4o-8N12wbDuD8SjWvB7EJr-A0sHjm-ZYwlqbUgD_dxwzBvyyUCx4yq1q-4-q0QjUn7GJTEyMsdjdnFeMXWzGtw638W8ds37KHknJI4FpYsF_jaTiXBgG5gGloTsA2pfG489gHZGHyB6Nt4w_xVdtCVOhVOAR239HGQK6PmOM8wpuZp7Flna4tLMEOX77ThkGItct2W5bd1LXMw-WrMtdr4nYqNqxa9JFsp0-yuahS0Ju4ka4FyAlZ7qzpEYHLeg10wK2qfm-MySeqahJjtDNlO8ur8WeqfzvU-JnDMMu_PlIMDdHR_IqRZz33rVcvVsVyxKdlXSnxSDi3tXFOMKxv72rW8pZxtzVODOHVdQehdGxUiX8c_0m8pG20dAq7zcbOsdGTg3Y",
+              "widthPx": 3599
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Shanaka Dilshan Rajapaksha",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVUTjktAp0Fw4Tk_J0uc-ky6voj3Qp7pX76eN1a64GbF9nL1hHtUw=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/110828435487156639743"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIABIhAA3jU3PB_Qp2esIkYADUZv&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIABIhAA3jU3PB_Qp2esIkYADUZv!2e10!4m2!3m1!1s0x3ae5a34afadff217:0x9ec626ff94744553",
+              "heightPx": 3468,
+              "name": "places/ChIJF_Lf-kqj5ToRU0V0lP8mxp4/photos/Aa-ngMbCIbC8ViYyd6WM2YT4D1IvonpGL78I6iU7uID_wsPDqkECpXxSCP85BzyaAdRLI2fAQFz6vtjusbz3YnosKJ2eOOvWCxsbu9RfYFpVdbBh6UmAlA3819iRT3YWRRgOhE4CaSVY5hu1zugQYZ2QkZsU8beUOweTfjRigEm-PlcaHc9J5un_ljdDv1MjSj2WkoWd1CaVby86bmvCBJXvNIo0NnNkIUKk0cRhJ_CxZdVgPhgwwsFz0RJHhEfoJvcQ9MYjB7ieLYhTx86Q4JxEj_QE3H3exfPLzAR7ggxWus0TSdfrM_OnoV2_Z1F62nJwEU7COsrRtYQgX7YJHGx7paoBtEc3ZN7otnPx_OGpfX2IT7W5pdn62lM6Mm84VV6ZAtgmGJBs0fXPLKZQwNFyCiXPqUqcehBP5WvdeXs9eNPSbQ",
+              "widthPx": 4624
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Thisal Karunathilake",
+                  "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocJ5FMwa1qA4cP2Pc7oH8sGAbscC-T2GUbIfWv2eed1iHAdWKqQ=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/112981738681908090878"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgICLkZ4e&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICLkZ4e!2e10!4m2!3m1!1s0x3ae5a34afadff217:0x9ec626ff94744553",
+              "heightPx": 4032,
+              "name": "places/ChIJF_Lf-kqj5ToRU0V0lP8mxp4/photos/Aa-ngMZoVb-qg8bd_honoC8wGeo2zUsZEHCz2rG6aQoBW6HaB4-yj18M_3YVBvOHSwqvzZgUo95t-nl6FMRyyYKzXF0CXq8lQEAOPmGBHXD4DhHjXHTu2pY8Us-YwXeya2Ia1ec49k_M1zVu83YUTCh2RFvOaATz8N25lfSPCn0rEuYNIyVAgPZrr0gAVvbPePB4_CMvCHFwer-jWHdJBHoISIvo4z_z6L7tF1Jo4SgPFV8AozL5Jca1xaph0osuwtY-Utr5RF4U1mIohqFj2t_ErPUTBpirkdrDVCDC-4oF1LGmQWZud-_ITMfrBGyxYSK9bO1gMT2rSlGpU8Lx4ysJY0sXH4FWsPA3bHN7kr2rzMtGBlAEVKOu4ZSMGJJ5paI710B1UIzr--gwJD7tT0jSxw",
+              "widthPx": 2268
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Deepthi Mahanama",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjU67gCQuy5k-5vHEJcPuhrX0fwdOzktv_PI0GRVCSsfb-5LTJ-5=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/115115164377688802153"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgICG0t6fUA&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICG0t6fUA!2e10!4m2!3m1!1s0x3ae5a34afadff217:0x9ec626ff94744553",
+              "heightPx": 3200,
+              "name": "places/ChIJF_Lf-kqj5ToRU0V0lP8mxp4/photos/Aa-ngMYNKmgdUEQ7kg6FNpWrbWYq38oWTdPC4nqb2W_LgUgz_7wz3IGJA8a6htdbq0BQPIMyHi2TMU8F4OLBI-NtUMJcffs-DlDGwW24O031C1JUL3qKtw3ZIL-oFYbh0KekXi3gqEh8wcxiDh4MPykKfMczNK4myF7ZqQEeToblwELLkyYtycYSlFTFIVj0daNnC8RfQQkdGZLBt6NYcjja4kiVQeFZ6Mn-nQ6Hw2DJVLX-oNNXnKNc5rxZb3Y7zLwgSOy3Nv1colqxmkjDreKSIqV77g4aiAx6u2KRDeD4nLR6JRCwpVUBpuM81oNo7W7bgPZNYaSGx-TC4MztTicd-qo_ff0fDwex1p8QGj1Nf5QWFQzoAhL_ilBm1EIY5M_JzzrFaZMwpumm2s9x5oASSFUtpr0",
+              "widthPx": 4800
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Shanaka Dilshan Rajapaksha",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVUTjktAp0Fw4Tk_J0uc-ky6voj3Qp7pX76eN1a64GbF9nL1hHtUw=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/110828435487156639743"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIABIhAA3jU3PB_Qp2esIrgABTkT&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIABIhAA3jU3PB_Qp2esIrgABTkT!2e10!4m2!3m1!1s0x3ae5a34afadff217:0x9ec626ff94744553",
+              "heightPx": 4624,
+              "name": "places/ChIJF_Lf-kqj5ToRU0V0lP8mxp4/photos/Aa-ngMbOp4HaDXzSQxxNqdB8rNmBt34VSgCs2ZTdVp2LUWU-2jWxPzpJ3r_WBvHadofGdviMwwdFV9ZHwxXsXQsbygSVG7s966bISkc8PFIhUqB5FwRe3rnE1MWK-dLkV3EpVhGqa5dTUw-YiqMgckCFUp9CtBa9PK9iz7BWQUBzol235Lk_nSFD0hNIgw0Y5h6BSHFk-4FW1nKhx_ccexUyuvU1DppUrAGb8iHCLADlsDed30aKQa2bEY8NkjLSh28lzsFz4fMZK6hkfdzwttq5-6kBLkHdj8iZNbWPZ3_Ww817QZZA2em6myMH8LaoEvGakAJBA_5HuDn7sSeth-ttQ1oLlm9gcZXssxm_0GEPhcswdHsqFEWwfmOg6xNM-hB_m60KUN2MYWvy97IgPbdf-gb_MZKK7XkR3Y0TkQTjSotkXA",
+              "widthPx": 3468
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Randima Balasooriya",
+                  "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocJd_S5RXmbU8H4UkQbc_5WwFYA1kDFb30GPfQItU-q__pSRtVO6=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/100475621186461705731"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEJGm_Yf3hseDBA&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEJGm_Yf3hseDBA!2e10!4m2!3m1!1s0x3ae5a34afadff217:0x9ec626ff94744553",
+              "heightPx": 4032,
+              "name": "places/ChIJF_Lf-kqj5ToRU0V0lP8mxp4/photos/Aa-ngMZud0rB_Vo8C2KFyrZJ2vR8EBMJmbXz2eN47xXyGsguFJ2Eaaq8lgvddJKKv-UM2O2vzl18nwR-vrwmQnHkjxBLufGA0YUMR6_r6KRPfitQbDU4htmjdVVOxdoYWmwsKZ67zfzbBN_xrZ2Ut9Q8Keh7U-r8SPgUlsbgB-vQgYqRzzNK_bF7JLK_Frx8RTcOGvyr1Ll_hxUFq7a7vuIemfPAHVRhuX--fgAoBvdCb7ou1sHP6k4YwMKU1wBYRKNJUxC2pLSGeSy501-0gVMpEVo4uqF0JMBeHrFg7aobhJl5wxD-_B9hIHm8SD2Bn6TQd5dqMWj07scGp2fumtSNMiju2sUL1DWnCwjsAGaLTNi9dO2uuI3GDNMTp2Yctdfvq_RBr9VqmgGmxlHoVFYOE7avRxk",
+              "widthPx": 3024
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "chandana bandu",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVBfcRLZB9krLGCI_l3_kNIlhBAZK4cIPCE0_87_qcu0WIrjme-=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/102295397046422926104"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIDhnquMyQE&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDhnquMyQE!2e10!4m2!3m1!1s0x3ae5a34afadff217:0x9ec626ff94744553",
+              "heightPx": 3456,
+              "name": "places/ChIJF_Lf-kqj5ToRU0V0lP8mxp4/photos/Aa-ngMat6Kwi4tHkdNr2gJznSMYKz6xD-KgzMqP_E2zcEEun1cfLzdrZIDgLx-IqKsDTF1EiAaDATAEmrSl1HeAA_2klvlCIDwnfG3w1n4GCx01GkR14Ra634NKp47T2bfKDd7z3gm2XC_v2238Ei4Yjb0xBr8loCC1XsfrSAo6HSx51xVUapprr6zBBK31LuNW6mTWhH0pOGIKbQ5ZdFtXRZTRhvyX5cN4TWyM9aXZTMbwvyu5ghgAvkXmWGNAR2zUNCb9Qesb8AJ3T8RJSQYeXJcCdKHGeV5aJfazX1IvTvjEayQcz5HScIi5wSAC_BiqaK736CGeVQgsJTBzMl5IlM7JpG71ytiqsu6LWx8HlpF5xD0H1JD8NlvZxTnMhLY7N2yASHKphktzIB_AAuZhG1KKviYx8tXg",
+              "widthPx": 4608
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Randima Balasooriya",
+                  "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocJd_S5RXmbU8H4UkQbc_5WwFYA1kDFb30GPfQItU-q__pSRtVO6=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/100475621186461705731"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEPfV5JKYndi5qgE&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEPfV5JKYndi5qgE!2e10!4m2!3m1!1s0x3ae5a34afadff217:0x9ec626ff94744553",
+              "heightPx": 4032,
+              "name": "places/ChIJF_Lf-kqj5ToRU0V0lP8mxp4/photos/Aa-ngMY1bO-7oHYtLppuVY7PIlN1hHed17NhhJUuSUaUu7q9yVNwTGlaJEwDWNEnlIjh7V_ZzXcdYTT75ghLqXZMHy3I1qHJ3O8mEkT5-rR-XZ0BzYBSCS4_Q-iRN63jQoNY5SCl1c1M6g9fJK7XY5NCCqxKsU0cHqUbD-gQibIwQ5jM974zC9uFyktH1_nPg30AvKig4UHffMVEvOtaHf1AR-qC3FkbHRMjJ3hKofD1MfI1w80i_CTTanr5aclJ4rhaBG3nKYomkgkojGQxnQAqYTMShFUt_aL-LslllfG_BYDtSFJ-6SxZfCnwvF5A5DaVSy147h2XX84yGcVbsCFHeVJiDxGaM5L2-QuXUk3KCKl1pBUxEarHitwaUh9hGAXXhy1bH_hAYygl7UTNkBXhKhbRyAhrJ70",
+              "widthPx": 3024
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "lam kavindu",
+                  "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocIJgEzVKRO2NBFjPTvFAmVG0lnRpPvRxSax6gv4VEI4PqV_22I=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/118112254082017410539"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIDm9u7TRA&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDm9u7TRA!2e10!4m2!3m1!1s0x3ae5a34afadff217:0x9ec626ff94744553",
+              "heightPx": 3024,
+              "name": "places/ChIJF_Lf-kqj5ToRU0V0lP8mxp4/photos/Aa-ngMZCFTJMH3vtcSISbIUPEPK8Vq4ZWdCtjzueeX2RLaXJd3BsA8OKrA7pr2dWNYrqf6GHtvq6UsIf-eiNStmcKdqcZgOIPLwWzx6yIl7QliWp0jZcQozLdEeKzxMbLHbTD2g96_4XzbgrBS3zkkAHPA2IGpxwfuO0Fhlx5__ll4yAlsI48dFgXGMQqm4m4pUUDz3z5V4GdywaoMA_U1lC9-fKT5pQAUHy-p8mDCvFJ8ZIph6DNQT6qiWiX57T52HuEzDGHqsmQEdcTm52ZS2Wp7yoPnDqT4aJNwZQrwpym5g3v1J5TgiZHPRJA71Vlr7LUOEI5wPn0Cmx6AZtBimhlEFn_giRXlc676W_j01DXavwbmZY0mMbm1_txURPGIStRciXPoLL9eD_uyV56APrRlhP17A",
+              "widthPx": 4032
+            }
+          ],
+          "primaryType": "tourist_attraction",
+          "rating": 4.6,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ],
+          "userRatingCount": 32
+        },
+        "error": null,
+        "provenance": {
+          "google_place_id": "ChIJF_Lf-kqj5ToRU0V0lP8mxp4",
+          "source": "google_places_details"
+        }
+      },
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:142",
+      "google_candidate_kb_identity": "verified_existing_kb_place",
+      "official_source_candidate_identity": "strong_candidate_identity_evidence",
+      "query": "Muhudu Maha Viharaya, Sri Lanka",
+      "review_reasons": [],
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=142",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=142"
+    }
+  ]
+}

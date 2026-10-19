@@ -1,0 +1,26 @@
+{
+  "status": "read_only_preparation",
+  "records": [
+    {
+      "source_url": "https://srilanka.travel/attraction?attraction_id=163",
+      "external_source_id": "srilanka_tourism_attraction:163",
+      "attraction_name": "Yala National Park",
+      "reconciliation_status": "insufficient_evidence",
+      "note": "No PostgreSQL write was performed."
+    },
+    {
+      "source_url": "https://srilanka.travel/attraction?attraction_id=160",
+      "external_source_id": "srilanka_tourism_attraction:160",
+      "attraction_name": "Sigiriya",
+      "reconciliation_status": "insufficient_evidence",
+      "note": "No PostgreSQL write was performed."
+    },
+    {
+      "source_url": "https://srilanka.travel/attraction?attraction_id=153",
+      "external_source_id": "srilanka_tourism_attraction:153",
+      "attraction_name": "Galle Fort",
+      "reconciliation_status": "insufficient_evidence",
+      "note": "No PostgreSQL write was performed."
+    }
+  ]
+}

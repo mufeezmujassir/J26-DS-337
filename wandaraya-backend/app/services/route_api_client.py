@@ -8,7 +8,7 @@ logger = logging.getLogger(__name__)
 class RouteAPIClient:
     def __init__(self):
         self.base_url = settings.ROUTE_API_BASE_URL.rstrip("/")
-        self.api_key = settings.ROUTE_API_KEY
+        self.api_key = settings.effective_route_api_key if hasattr(settings, "effective_route_api_key") else settings.ROUTE_API_KEY
         # OpenRouteService driving-car endpoint format
         self.endpoint = f"{self.base_url}/v2/directions/driving-car"
 
@@ -31,7 +31,7 @@ class RouteAPIClient:
         }
 
         try:
-            async with httpx.AsyncClient(timeout=10.0) as client:
+            async with httpx.AsyncClient(timeout=3.0) as client:
                 logger.info(f"Route API Request Started for ({request.origin.latitude}, {request.origin.longitude}) to ({request.destination.latitude}, {request.destination.longitude})")
                 response = await client.post(self.endpoint, headers=headers, json=body)
                 response.raise_for_status()

@@ -1,0 +1,53 @@
+{
+  "confirmed_identity_fields": {
+    "attraction_id": true,
+    "category_ids": false,
+    "district_id": false,
+    "google_place_id": false,
+    "name": true
+  },
+  "examples": {
+    "activities": [
+      "Heritage Exploration",
+      "Sightseeing",
+      "Historical Exploration",
+      "Photography",
+      "Cultural Experience"
+    ],
+    "attraction_id": 1,
+    "categories": [
+      "History & Archaeology",
+      "Urban & City Attractions",
+      "Culture & Heritage",
+      "Photography & Scenic Spots"
+    ],
+    "city": "Galle",
+    "district": "Galle",
+    "name": "Galle Dutch Fort",
+    "province": "Southern"
+  },
+  "fields": {
+    "activities": [
+      "list"
+    ],
+    "attraction_id": [
+      "int"
+    ],
+    "categories": [
+      "list"
+    ],
+    "city": [
+      "NoneType",
+      "str"
+    ],
+    "district": [
+      "str"
+    ],
+    "name": [
+      "str"
+    ],
+    "province": [
+      "str"
+    ]
+  }
+}

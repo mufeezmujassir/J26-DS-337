@@ -1,0 +1,13 @@
+{
+  "stage": "10.1.3B_gate_1",
+  "status": "complete_with_limitations",
+  "network_requests": 0,
+  "paid_provider_requests": 0,
+  "database_writes": 0,
+  "qdrant_writes": 0,
+  "migrations": 0,
+  "fixture_tests": {"passed": 60, "failed": 0, "skipped": 0},
+  "broader_regression": {"passed": 82, "failed": 0, "skipped": 0, "warnings": 1},
+  "validated_controls": ["minimal Google timing field mask", "missing ID and provider identity rejection", "current-hours non-applicability", "field-scope and retention fail-closed gates", "official allowlist and permission gate", "structured JSON-LD only", "OSM identity and attribution preservation", "unsupported OSM grammar", "offline persistence denial", "parser and governance compatibility"],
+  "known_limitations": ["No live source, terms, billing, robots, permission, availability, rate-limit, or cost behavior was verified.", "OSM opening_hours grammar is intentionally not parsed.", "Manifest is a proposed pilot snapshot, not a national coverage claim.", "No policy is approved by this implementation."]
+}

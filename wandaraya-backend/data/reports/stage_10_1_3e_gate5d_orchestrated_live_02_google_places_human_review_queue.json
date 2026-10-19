@@ -1,0 +1,659 @@
+{
+  "records": [
+    {
+      "attraction_name": "Shasthrawela",
+      "candidates": [
+        {
+          "business_status": null,
+          "candidate_kind": "locality_or_administrative_area",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.35,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 1.0,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 6.7846867,
+            "longitude": 81.814238
+          },
+          "display_name": "Shasthrawela",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "Shasthrawela, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=1189215410539625617&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJmwia3Tm85ToRkXyieh3xgBA",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": null,
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.425,
+          "types": [
+            "administrative_area_level_4",
+            "political"
+          ]
+        }
+      ],
+      "classification": "related_locality_not_attraction",
+      "details": {
+        "data": {
+          "addressComponents": [
+            {
+              "languageCode": "en",
+              "longText": "Shasthrawela",
+              "shortText": "Shasthrawela",
+              "types": [
+                "administrative_area_level_4",
+                "political"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Ampara",
+              "shortText": "Ampara",
+              "types": [
+                "administrative_area_level_2",
+                "political"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Eastern Province",
+              "shortText": "EP",
+              "types": [
+                "administrative_area_level_1",
+                "political"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Sri Lanka",
+              "shortText": "LK",
+              "types": [
+                "country",
+                "political"
+              ]
+            }
+          ],
+          "displayName": {
+            "languageCode": "en",
+            "text": "Shasthrawela"
+          },
+          "formattedAddress": "Shasthrawela, Sri Lanka",
+          "googleMapsUri": "https://maps.google.com/?cid=1189215410539625617&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+          "id": "ChIJmwia3Tm85ToRkXyieh3xgBA",
+          "location": {
+            "latitude": 6.7846867,
+            "longitude": 81.814238
+          },
+          "types": [
+            "administrative_area_level_4",
+            "political"
+          ]
+        },
+        "error": null,
+        "provenance": {
+          "google_place_id": "ChIJmwia3Tm85ToRkXyieh3xgBA",
+          "source": "google_places_details"
+        }
+      },
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:125",
+      "google_candidate_kb_identity": "no_existing_kb_place_id_match",
+      "official_source_candidate_identity": "locality_only_result_not_identity_proof",
+      "query": "Shasthrawela, Sri Lanka",
+      "review_reasons": [
+        "top Google result is a locality or administrative area, not a physical attraction"
+      ],
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=125",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=125"
+    },
+    {
+      "attraction_name": "Kudagala Forest Reserve & Monastery",
+      "candidates": [
+        {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "physical_attraction",
+          "component_scores": {
+            "existing_google_place_id": 1.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.6849,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 6.730736299999999,
+            "longitude": 80.1557136
+          },
+          "display_name": "Bodhinagala Forest Reserve (Dombagaskanda)",
+          "distance_km": null,
+          "existing_kb_matches": [
+            {
+              "id": 1974,
+              "name": "Bodhinagala Forest Reserve (Dombagaskanda)"
+            }
+          ],
+          "formatted_address": "Bodhinagala Rd, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=17713482224075807167&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJe_xaN3e04zoRvxk8lTvu0vU",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "nature_preserve",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 1.0,
+          "types": [
+            "nature_preserve",
+            "tourist_attraction",
+            "park",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 1.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.6667,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.0720117,
+            "longitude": 80.10279779999999
+          },
+          "display_name": "Pettagankanda Forest Monastery",
+          "distance_km": null,
+          "existing_kb_matches": [
+            {
+              "id": 5091,
+              "name": "Pettagankanda Forest Monastery"
+            }
+          ],
+          "formatted_address": "Galboda, Wathurugama., B434, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=8308500464653584103&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJiTFuKP8B4zoR50bY-ya5TXM",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "buddhist_temple",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 1.0,
+          "types": [
+            "buddhist_temple",
+            "place_of_worship",
+            "association_or_organization",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.6667,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.5347744,
+            "longitude": 80.5602435
+          },
+          "display_name": "Rideekanda Forest Monastery",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "Udasgiriya 21051, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=14550634045677522168&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJ5eRfpfpP4zoR-ExQbZI87sk",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "place_of_worship",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.525,
+          "types": [
+            "place_of_worship",
+            "association_or_organization",
+            "health",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "physical_attraction",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.4815,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 6.6479674,
+            "longitude": 81.7239979
+          },
+          "display_name": "Kudumbigala Sanctuary",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "JPXF+5HQ, Okanda, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=10969474958362907181&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJm2eIr6XH5ToRLZLDGVtnO5g",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "park",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.3861,
+          "types": [
+            "park",
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.3038,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 6.9909196,
+            "longitude": 80.40536829999999
+          },
+          "display_name": "Makandawa Conservation Center (Makandawa Forest)",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "XCR4+949, Kitulgala, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=7221253103774211788&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJVyqk506h4zoRzB6mI3ALN2Q",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "tourist_attraction",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.2528,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        }
+      ],
+      "classification": "high_confidence_candidate_review",
+      "details": {
+        "data": {
+          "addressComponents": [
+            {
+              "languageCode": "en",
+              "longText": "Bodhinagala Road",
+              "shortText": "Bodhinagala Rd",
+              "types": [
+                "route"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Kalutara",
+              "shortText": "Kalutara",
+              "types": [
+                "administrative_area_level_2",
+                "political"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Western Province",
+              "shortText": "WP",
+              "types": [
+                "administrative_area_level_1",
+                "political"
+              ]
+            },
+            {
+              "languageCode": "en",
+              "longText": "Sri Lanka",
+              "shortText": "LK",
+              "types": [
+                "country",
+                "political"
+              ]
+            }
+          ],
+          "businessStatus": "OPERATIONAL",
+          "currentOpeningHours": {
+            "openNow": true,
+            "periods": [
+              {
+                "close": {
+                  "date": {
+                    "day": 23,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 5,
+                  "hour": 23,
+                  "minute": 59,
+                  "truncated": true
+                },
+                "open": {
+                  "date": {
+                    "day": 17,
+                    "month": 10,
+                    "year": 2026
+                  },
+                  "day": 6,
+                  "hour": 0,
+                  "minute": 0,
+                  "truncated": true
+                }
+              }
+            ],
+            "weekdayDescriptions": [
+              "Monday: Open 24 hours",
+              "Tuesday: Open 24 hours",
+              "Wednesday: Open 24 hours",
+              "Thursday: Open 24 hours",
+              "Friday: Open 24 hours",
+              "Saturday: Open 24 hours",
+              "Sunday: Open 24 hours"
+            ]
+          },
+          "displayName": {
+            "languageCode": "en",
+            "text": "Bodhinagala Forest Reserve (Dombagaskanda)"
+          },
+          "formattedAddress": "Bodhinagala Rd, Sri Lanka",
+          "googleMapsUri": "https://maps.google.com/?cid=17713482224075807167&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+          "id": "ChIJe_xaN3e04zoRvxk8lTvu0vU",
+          "location": {
+            "latitude": 6.730736299999999,
+            "longitude": 80.1557136
+          },
+          "photos": [
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "dilshan Shalika",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWEorDL1bDwRRPeqvd3omF2WCYUpZc-912xam3llunp-U4C26M=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/112071207640024254641"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIDcoOHniAE&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDcoOHniAE!2e10!4m2!3m1!1s0x3ae3b477375afc7b:0xf5d2ee3b953c19bf",
+              "heightPx": 525,
+              "name": "places/ChIJe_xaN3e04zoRvxk8lTvu0vU/photos/Aa-ngMYu-GcmmnP2ILs9hvGVJnXv8tZeR8Nys2LlONIDjEtqChwdg7ZGl0HAvViEZ9-ukR-oVwX9U_aK4GXEa1JVUKo_BafubxaOZxl95S7KMKXUPwfq3fY_Oe0eguAYBIw-PckOLTRsv8iT3zvQylgvVsBRrJqrvSNXSYpRUwTqx2t4lkL13Tw5Bk-Gu6yK_5MeZRK5FRGTjOJznO7s7KTvZQgEeGQX8Sg5KGSFZzcM02gAwjY0RV43TjSBMuaSHl6hu0dPtYU2ImuYplaZOe-cJaWZ_gFPgqrzOgaeO46bJHhMlesjnatj7jhTZxm1i7yI90mlSWNt60ZQV0GxMs_TXADu8_PoxHwN_MFxViOPE6G04RtaKY7RrjOHdL9rFxm-oxYM5Nsn9if1JsdYShkJBBjSHJJH1Ds",
+              "widthPx": 700
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Chathubhanu Adikari",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWeR0QDkzhN6pFAB8_Pd92U0-9m3V6q2G-Q7j3mKRhOUiYRaTvw=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/115747070752588761847"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgID024OnGA&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgID024OnGA!2e10!4m2!3m1!1s0x3ae3b477375afc7b:0xf5d2ee3b953c19bf",
+              "heightPx": 960,
+              "name": "places/ChIJe_xaN3e04zoRvxk8lTvu0vU/photos/Aa-ngMZ4byiQ4rxg25W77TTrTOjnRT5TcnPfuCkMGi2pfu9HknolNYDw4_HnTMPupe_rGS_n2JcukAaZkTKZD-glEKfDpp_1CCUrCUtMRbR81z1mPzNJooQHgPNV_nylP2wsHtwKSqJHlrdPS9fa2s_-N5DNDsVMbWihdOJ0jI4Nbp4P7Dv2bMzkWg8m0LtjWiubWX2XWfR2Hqtp0pv97xmTC8yUHYa63vYVt9PjfjvR8-NEXyevvogWvKx59SSg-Ej69Lk82VPzd7VheVTdNBjjbuVTKjdICmZGobUwRUTpcRJ0qUnFxTs5kG4uufnjHakfaUFhoIgvEPJ_l3M2437Eu8kt7L3rODKDMub1h3rqUowZQnA80tA4tMfiEbX5_mmKT_SbraXfjreyZUuxyO_B3wMpsQ",
+              "widthPx": 720
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Tashan Welgama",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWrk_jhA_R_W5WeD57nyrprn2ff1EEO3WCpxoa0VE-XyLDEg6R3=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/111568302315010721837"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIC-utf1cQ&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIC-utf1cQ!2e10!4m2!3m1!1s0x3ae3b477375afc7b:0xf5d2ee3b953c19bf",
+              "heightPx": 3006,
+              "name": "places/ChIJe_xaN3e04zoRvxk8lTvu0vU/photos/Aa-ngMa5uCXiCoWF5SlFKV254rauKzfTncrPpoS-EdcwDnxqOqR7sQZ2gvZRzy_F3UFENwJTxfOVSzj8vLC4Pm2DoU2Y4QAsahzpezMNu-37ywW8aZS7OsNCYgFLtJ-pKyDqWycxSQlTVZ9TlrRCAWy-zqP1AvRTZ7SgjJHkJz-Nlku-9P-49RFqqjw_32BmW-2L7A3PnDgRXSdFCdZjKZrLziuk5N-lO0nmGNPm6CGlBoU6JI0n2kL1T9rfmuQUq6r0O5uWuxltXA8rdtVY3aq__r46J9NvMsyMn-1H07u_-GVpvRXzZwIOYb2rtQxrmutWokUaBpvjjii88dwmyCt7jwuQyqt7R0nBXeLc7EyC-wcfeGtIOlrKArZ74P5GN8vCYlq8a_WX4e7_sOBp7hejspZBIjk",
+              "widthPx": 4096
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "dilshan Shalika",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWEorDL1bDwRRPeqvd3omF2WCYUpZc-912xam3llunp-U4C26M=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/112071207640024254641"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIDcoOHn0AE&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDcoOHn0AE!2e10!4m2!3m1!1s0x3ae3b477375afc7b:0xf5d2ee3b953c19bf",
+              "heightPx": 480,
+              "name": "places/ChIJe_xaN3e04zoRvxk8lTvu0vU/photos/Aa-ngMYs17PfNjOWelsk3W5Ni0DhmnzS-FZwLxwrSbzK2k_4YSpUJYIq15aKcV_m6-nN4F80PDVIDCpc3TgxdTd2liDaJqklUFH7CTEja4bS6nCd3xJrFficRB1IXXnnU4ywPVoNLwVFaay0L2Ldj2Iyq6RHEuR7bBDZ-kD4oTpSUZACrCflI2z4IcgHnPL6z7wBWsaQo-rwvlF2vOnbjwtdWU5XHNZSaOmZy-xjrkP2ynHh1oHR_Kx_WvKxuFz3RsGHy6ESTO2YvgtKBwDj8ZAvOrugAbGDPZKZALEAIpAUu8l6uvTacF15eM9qiIv9guQAInPjGibbXfPn70WLmQyXC9_eFRY6tUDNCzOywUXprUeJOSxc-OHvK26o5zXUXouP7XxYk85Uz1OIrge5UjT5tZAdRfB8Lek",
+              "widthPx": 640
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Kasun Siriwardena",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWMoTkZ9fr0RTsr0dJkallcBDvMzBJWa7102UFpg1rK6_GgUCs2=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/115536930851203557341"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIDck8HTVw&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDck8HTVw!2e10!4m2!3m1!1s0x3ae3b477375afc7b:0xf5d2ee3b953c19bf",
+              "heightPx": 4128,
+              "name": "places/ChIJe_xaN3e04zoRvxk8lTvu0vU/photos/Aa-ngMZAqYTggfbTw4w1d6ECBF1CkX2nFtoLKXsPDGDj8NMjFzjs-qUvTs7zVBAYAELEMNeoRjStf5xJv255llMUPubDIQWXYqY4f74N2ci63KNKTQYtnV2e4PfjzQ9uuUeEJwPIwCK0r3NfuvcvNzOCuMhDAnN91_ZPVttt_G-llYg5Oga6Cuoj2S1l7SRt8ysGyC7evk5WYkAAJuXDcMvMM7iRxubzJS2Z3FPb-2XRHj1zaKIaCcN7ht5YcHF2BDzB4x7ZJWeQi3WSMN6Yuibqssvc2DCi9uS2rWL-JuQP47sbcmnSaj4Eg2cHV9M5isDvoNP8y-g8zSSUd69MELULhuDiBs_j8Fbo5qW6g2e6dOW448m_pZdokJT7DmXPPamgEP75oxWyEKg80k7n78-vlHM9Dw",
+              "widthPx": 3096
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Deepika Bandaranayaka",
+                  "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocJMLQYTpeuHyF8ZrL_kQFxGu1W1KriipV68L3_4tREbprHF_OQx=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/115506535394189267540"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIC30YStKg&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIC30YStKg!2e10!4m2!3m1!1s0x3ae3b477375afc7b:0xf5d2ee3b953c19bf",
+              "heightPx": 1600,
+              "name": "places/ChIJe_xaN3e04zoRvxk8lTvu0vU/photos/Aa-ngMan35ZXN3XZvxJ-ZdHqTm6K2UmSwwpaFvwF65BTDFjAGPBm_zJGCAmGl3zI3JL5afryi0Bqb8cR2FWYdow6oMxRAFMw1mA6ySaZtEauMXrOoNVbDlalamAYUYhLP8nlta03ZzgCU16Cv7XzCr7wCyq1bsTHRGDYR6eyipADgFbsPuJgNbx-TLpD_yaYzQgaFI9pEPFCREuaX-hdbleD2d6--5jO6cVfy5etYhB4EEgy0aZCbGWghFBSOgwt7ugHUgweF3Is_E6nR7gUloQl3d5aRkwQqA9XgySlwrCBgvHebvj16ZLEr73XwtyDCdeNqJOImVGeGfhV9BEeoTOVXLqEekLkPBjIYgiOsKYe-ss2VJeRNngNSFxzf6v324aZrfF3eR_2aPR0HP-XJdCoT7x6Ttk",
+              "widthPx": 1200
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "dilshan Shalika",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWEorDL1bDwRRPeqvd3omF2WCYUpZc-912xam3llunp-U4C26M=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/112071207640024254641"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIDcoOHncA&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDcoOHncA!2e10!4m2!3m1!1s0x3ae3b477375afc7b:0xf5d2ee3b953c19bf",
+              "heightPx": 413,
+              "name": "places/ChIJe_xaN3e04zoRvxk8lTvu0vU/photos/Aa-ngMZbWWF4npt5V0xQEESjpXgaVIp9MkKPbtFTMcVSRZbyEdb1Yoky8oYZboDu-_cLb-0xTfI41vwoOIDAv6qa17sSfs0oI9K_8NbAjmnjiJGfG_4B52SiZk1HpPSjY2kWiKZwfgpmSEdJD3oroF0B_1Ef3aUv_FheFo7Hxg8tjQ98uiyxEjMsFX5AN57YfPbasxoJFHpPNnqJmpbN50zuojEa2VIvZ1pM_rmtWftccn9BmB0cUqiCsc0-Nvb-J51K5-_juzWgWo50Id8H6lFsVgFqPdipo5cFrOVlhqEpAn0lojsAm3rjjmNbg03y97VWnRQtYFL_LsvKZZdbArAZyJhnFmnsG7qRGUhBqlQZ7I2H9L3539KHUJnkXOhcs3tbBYixfKBmgnWGGAf1Pv8wTN80Y9g",
+              "widthPx": 550
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Layan Gunasekara",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVcnPy1eEjrK6gxswc8r134E0LuFBShClrkcRMvq6JZmUVQBsGz=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/108222116151300667626"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgID4hrCoWg&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgID4hrCoWg!2e10!4m2!3m1!1s0x3ae3b477375afc7b:0xf5d2ee3b953c19bf",
+              "heightPx": 3024,
+              "name": "places/ChIJe_xaN3e04zoRvxk8lTvu0vU/photos/Aa-ngMbexg_tVjNf-Dj3yrnrb4h_z73cX71-MZJgo_IQKdpk7-O4TaOnAG1pqxaIFhoUHfc_gT8RcbDB4eHQuePJF94U7hqkGx2F00-T4HKiNlrx7oEnRzc3YVDv3kMNqkNmoR6WAgQgC0-CSeKaTEsykSDmwx0HXdZsEhtc1NX5aO9ZC_DQPULiRGtTqi3MHaCl6nq0QhLQ5CIHVujRXt9Gl5mZOSHf9SGbEkqWWoqxlTWFqy2ZlYS4gQ85-gi-nLGqeiuUQzTuJhF-FpXeEK-dqvsiSh7ETnLmqJxUp5HizGjZ0JAtiFkr5Jjpp2MCK3SY1ylGAqmtOhhUXJVipSd467lW_h_PIRUnCAJC9ahae-m8BqDykWVNO0l9rYx7D3t4apWvVELLRklpsdLeP2n-P8GJXWE",
+              "widthPx": 4032
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Ash",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWTeeo4tviizHHs2Jwygo6GZte0C4c2hB0bq91LMwBJigerLb8=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/110280227257864298154"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIDUw7z1WQ&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDUw7z1WQ!2e10!4m2!3m1!1s0x3ae3b477375afc7b:0xf5d2ee3b953c19bf",
+              "heightPx": 3456,
+              "name": "places/ChIJe_xaN3e04zoRvxk8lTvu0vU/photos/Aa-ngMbjP5A6OFKezdmB7zFTqHerADSrB86WaPyNIKaPGY82qeBTjP7LBdoCkuCYGmguE39-e8t5ufhSGhfHr69whKMX6jm3Acdo1Ra7CGwHEhkcJLKQMvsVK2TYl585jeoWOELGn5vg8_r9qiQZY-UZi5OMEdmdF9Y5MgmClqgor3esjCnDQBB4cqULSH246mc00FtpaCNFIgN31SvPuCi_CvjxUNmL4ZrSA0u4VVsyPCtJOo2ei3wAHLWy0n0f_5LWpwQHbAY4ZqErkn3YcPB3ZuGke_dBc5FVDbhhKneEYzw5Fs10ZyZ9TPENG3gbJO_TM_NjbIihfV2NcIDxSm5sC7Uvh9XuZCTbY9SWTX7HpwnqRJujsBU8NPUbR8CtJ8qrb4UqDJj8EM4EsSr8fGv969CW_g",
+              "widthPx": 4608
+            },
+            {
+              "authorAttributions": [
+                {
+                  "displayName": "Saman Ajanthe",
+                  "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjX0Daib2JvqdDKDwxw3NU4YAu3VtwZr4hElKLnwEggZFnu8-HXB=s100-p-k-no-mo",
+                  "uri": "https://maps.google.com/maps/contrib/113320355469567381012"
+                }
+              ],
+              "flagContentUri": "https://www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIC4s6GYeg&t=27&cb_client=maps_api_places.places_api&hl=en-US",
+              "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIC4s6GYeg!2e10!4m2!3m1!1s0x3ae3b477375afc7b:0xf5d2ee3b953c19bf",
+              "heightPx": 2560,
+              "name": "places/ChIJe_xaN3e04zoRvxk8lTvu0vU/photos/Aa-ngMYFoHSABQmD4_S7wPVCFgNT42LQMhm2k-KqtXGNH_Nri_gOWNmjKYFXrsKLjDx7uvg3n_pcsUo8GBVR-68ManpbJoIG9MbszYqRDAtiJtynoTQ4PkKwxMrfbdbYYonh4vq13WFWsEE7U1bQYZe5QzvLKeuJVD1P0T9AmdQY9w2OicisbcNwOs-bGHZvoRdOKBU2G_a_GvyGYOIm9pOA2iQAt47sp7oD0Nzb5nyqdg52G8g4FThJ-vJHVC3hSTibT8v4yK1kjImsnp1WfyrJpej3z_oVD7b7kLIvE8xDUJYophCN4CoXj3EWaCMBmAxXyow06s115M-St_kGkwfEijuUBshZKBAeaF3GvmT_a2BlsHyxOS0OLHKYTS9nWEGvgCxWvkOBNrZVyYR1O89N7-G81NY",
+              "widthPx": 1536
+            }
+          ],
+          "primaryType": "nature_preserve",
+          "rating": 4.5,
+          "regularOpeningHours": {
+            "openNow": true,
+            "periods": [
+              {
+                "open": {
+                  "day": 0,
+                  "hour": 0,
+                  "minute": 0
+                }
+              }
+            ],
+            "weekdayDescriptions": [
+              "Monday: Open 24 hours",
+              "Tuesday: Open 24 hours",
+              "Wednesday: Open 24 hours",
+              "Thursday: Open 24 hours",
+              "Friday: Open 24 hours",
+              "Saturday: Open 24 hours",
+              "Sunday: Open 24 hours"
+            ]
+          },
+          "types": [
+            "nature_preserve",
+            "tourist_attraction",
+            "park",
+            "point_of_interest",
+            "establishment"
+          ],
+          "userRatingCount": 38
+        },
+        "error": null,
+        "provenance": {
+          "google_place_id": "ChIJe_xaN3e04zoRvxk8lTvu0vU",
+          "source": "google_places_details"
+        }
+      },
+      "error": null,
+      "external_source_id": "srilanka_tourism_attraction:129",
+      "google_candidate_kb_identity": "verified_existing_kb_place",
+      "official_source_candidate_identity": "compound_source_record_review_required",
+      "query": "Kudagala Forest Reserve & Monastery, Sri Lanka",
+      "review_reasons": [
+        "official source title may describe multiple distinct destinations"
+      ],
+      "source_provenance": {
+        "official_source_url": "https://srilanka.travel/attraction?attraction_id=129",
+        "queue_reason": "new_attraction_candidate"
+      },
+      "source_url": "https://srilanka.travel/attraction?attraction_id=129"
+    }
+  ]
+}

@@ -1,0 +1,474 @@
+{
+  "allowed_decisions": [
+    "DEFER",
+    "REJECT_INVALID_MATCH",
+    "APPROVE_INSERT_AFTER_CATEGORY_EVIDENCE"
+  ],
+  "automatic_approval_performed": false,
+  "mode": "human_review_template",
+  "records": [
+    {
+      "blockers": [
+        "district_derived_from_saved_gate5d_evidence_requires_reapproval"
+      ],
+      "category_id": 39,
+      "category_name": "History & Archaeology",
+      "decision": "APPROVE_INSERT_AFTER_CATEGORY_EVIDENCE",
+      "district_id": 81,
+      "district_name": "Jaffna",
+      "official_name": "Delft Growing Stone",
+      "original_approval_hash": "cb12004b8a976d6c9bff18d79f873d06ac2009196793cb3e9312ebd0a56e8184",
+      "review_notes": "Reviewed official source, saved Google evidence, PostGIS district assignment, and category mapping.",
+      "review_timestamp": "2026-10-17T14:45:00+05:30",
+      "reviewer_identity": "MUFEEZ",
+      "revised_proposal_sha256": "5ef8443dcb2dd26795c7113726c83f3225b8354c8167fa46493ba8a9c47fe9a0",
+      "source_attraction_id": "srilanka_tourism_attraction:11"
+    },
+    {
+      "blockers": [
+        "district_derived_from_saved_gate5d_evidence_requires_reapproval"
+      ],
+      "category_id": 41,
+      "category_name": "Adventure & Outdoor",
+      "decision": "APPROVE_INSERT_AFTER_CATEGORY_EVIDENCE",
+      "district_id": 73,
+      "district_name": "Ampara",
+      "official_name": "Pallan Hela Mountain",
+      "original_approval_hash": "68f06e3ed9506a28dbf65c3d291afa18360568b7a7a55da58022333f1b2936b2",
+      "review_notes": "Reviewed official source, saved Google evidence, PostGIS district assignment, and category mapping.",
+      "review_timestamp": "2026-10-17T14:45:00+05:30",
+      "reviewer_identity": "MUFEEZ",
+      "revised_proposal_sha256": "d7025c0136b694d2356293bd1b713fcdeeb7dc875133e43ea7796dcae49eb164",
+      "source_attraction_id": "srilanka_tourism_attraction:136"
+    },
+    {
+      "blockers": [
+        "district_derived_from_saved_gate5d_evidence_requires_reapproval"
+      ],
+      "category_id": 40,
+      "category_name": "Religious & Spiritual",
+      "decision": "APPROVE_INSERT_AFTER_CATEGORY_EVIDENCE",
+      "district_id": 81,
+      "district_name": "Jaffna",
+      "official_name": "Kadurugoda Temple",
+      "original_approval_hash": "8c028c9baa9295a3bbe391664db84bbcb54de749c8a272d1aeed8cc40421d1ff",
+      "review_notes": "Reviewed official source, saved Google evidence, PostGIS district assignment, and category mapping.",
+      "review_timestamp": "2026-10-17T14:45:00+05:30",
+      "reviewer_identity": "MUFEEZ",
+      "revised_proposal_sha256": "d6cfcadaa8d9c72c3ca58ebd65688f00aae88ddf05ece5e0efb16b61a8dbc5e2",
+      "source_attraction_id": "srilanka_tourism_attraction:14"
+    },
+    {
+      "blockers": [
+        "district_derived_from_saved_gate5d_evidence_requires_reapproval"
+      ],
+      "category_id": 43,
+      "category_name": "Wellness & Ayurveda",
+      "decision": "APPROVE_INSERT_AFTER_CATEGORY_EVIDENCE",
+      "district_id": 73,
+      "district_name": "Ampara",
+      "official_name": "Hot Water Springs in Wahawa",
+      "original_approval_hash": "81e8f208694476120349539ae6164dbc6d248f3db87e5c004a86b6197e5ebd99",
+      "review_notes": "Reviewed official source, saved Google evidence, PostGIS district assignment, and category mapping.",
+      "review_timestamp": "2026-10-17T14:45:00+05:30",
+      "reviewer_identity": "MUFEEZ",
+      "revised_proposal_sha256": "e1756bb011836004129250772edc941bc9521ca5b1ed5d511d9c88f930aed316",
+      "source_attraction_id": "srilanka_tourism_attraction:143"
+    },
+    {
+      "blockers": [
+        "district_derived_from_saved_gate5d_evidence_requires_reapproval"
+      ],
+      "category_id": 40,
+      "category_name": "Religious & Spiritual",
+      "decision": "APPROVE_INSERT_AFTER_CATEGORY_EVIDENCE",
+      "district_id": 96,
+      "district_name": "Trincomalee",
+      "official_name": "Koneswaram Kovil",
+      "original_approval_hash": "6ef60eca70c1f5cea1c0bcd5756084048d76d0639a1bc698e709721008894d2a",
+      "review_notes": "Reviewed official source, saved Google evidence, PostGIS district assignment, and category mapping.",
+      "review_timestamp": "2026-10-17T14:45:00+05:30",
+      "reviewer_identity": "MUFEEZ",
+      "revised_proposal_sha256": "37db81c1a77409b88b601513772eca7f276a2c5b7012bda28aa88467d14c9494",
+      "source_attraction_id": "srilanka_tourism_attraction:167"
+    },
+    {
+      "blockers": [
+        "district_derived_from_saved_gate5d_evidence_requires_reapproval"
+      ],
+      "category_id": 35,
+      "category_name": "Nature & Landscapes",
+      "decision": "APPROVE_INSERT_AFTER_CATEGORY_EVIDENCE",
+      "district_id": 81,
+      "district_name": "Jaffna",
+      "official_name": "Delft island",
+      "original_approval_hash": "778bb53d7b1e2ef3c80c914947f0392e62fe735816b6988c4501626c6e754216",
+      "review_notes": "Reviewed official source, saved Google evidence, PostGIS district assignment, and category mapping.",
+      "review_timestamp": "2026-10-17T14:45:00+05:30",
+      "reviewer_identity": "MUFEEZ",
+      "revised_proposal_sha256": "e51930bac1e29dd361c9d2cf12e6e5175f46d21548b78f15300157d91328650a",
+      "source_attraction_id": "srilanka_tourism_attraction:171"
+    },
+    {
+      "blockers": [
+        "district_derived_from_saved_gate5d_evidence_requires_reapproval"
+      ],
+      "category_id": 35,
+      "category_name": "Nature & Landscapes",
+      "decision": "APPROVE_INSERT_AFTER_CATEGORY_EVIDENCE",
+      "district_id": 77,
+      "district_name": "Colombo",
+      "official_name": "Beira Lake",
+      "original_approval_hash": "e18d0f21a1f5517a1b48f25f50fbc2f3fb403b331680f4fdd0621a2ee929a661",
+      "review_notes": "Reviewed official source, saved Google evidence, PostGIS district assignment, and category mapping.",
+      "review_timestamp": "2026-10-17T14:45:00+05:30",
+      "reviewer_identity": "MUFEEZ",
+      "revised_proposal_sha256": "58308224fde59577ec69d998b14a4808c7e1f7c349255025a26caa8c48b37445",
+      "source_attraction_id": "srilanka_tourism_attraction:172"
+    },
+    {
+      "blockers": [
+        "district_derived_from_saved_gate5d_evidence_requires_reapproval"
+      ],
+      "category_id": 40,
+      "category_name": "Religious & Spiritual",
+      "decision": "APPROVE_INSERT_AFTER_CATEGORY_EVIDENCE",
+      "district_id": 74,
+      "district_name": "Anuradhapura",
+      "official_name": "Aukana",
+      "original_approval_hash": "46900e752328a8a2b95474f7e1619c23cfecc29ffd845508ad9ff82813a0714c",
+      "review_notes": "Reviewed official source, saved Google evidence, PostGIS district assignment, and category mapping.",
+      "review_timestamp": "2026-10-17T14:45:00+05:30",
+      "reviewer_identity": "MUFEEZ",
+      "revised_proposal_sha256": "93d8b0869af48d886d6a0e7fe90a40e1bb358e0eaa46736d8fbb2eecbf09d1e6",
+      "source_attraction_id": "srilanka_tourism_attraction:176"
+    },
+    {
+      "blockers": [
+        "district_derived_from_saved_gate5d_evidence_requires_reapproval"
+      ],
+      "category_id": 39,
+      "category_name": "History & Archaeology",
+      "decision": "APPROVE_INSERT_AFTER_CATEGORY_EVIDENCE",
+      "district_id": 86,
+      "district_name": "Kurunegala",
+      "official_name": "Yapahuwa Rock Fortress",
+      "original_approval_hash": "f3e3bf7668dc66353f904935df1891ef667e235b084668861bc5bea875ad57b2",
+      "review_notes": "Reviewed official source, saved Google evidence, PostGIS district assignment, and category mapping.",
+      "review_timestamp": "2026-10-17T14:45:00+05:30",
+      "reviewer_identity": "MUFEEZ",
+      "revised_proposal_sha256": "e868e005868cd66770b84986af7ffe58fd98e61bdd817e82e11e273d41b88114",
+      "source_attraction_id": "srilanka_tourism_attraction:184"
+    },
+    {
+      "blockers": [
+        "district_derived_from_saved_gate5d_evidence_requires_reapproval"
+      ],
+      "category_id": 35,
+      "category_name": "Nature & Landscapes",
+      "decision": "APPROVE_INSERT_AFTER_CATEGORY_EVIDENCE",
+      "district_id": 83,
+      "district_name": "Kandy",
+      "official_name": "Asupini Ella",
+      "original_approval_hash": "d894429e8fbe7e170ba0a8f48198d80634ce90bef438048cfb1fc9f752dc0199",
+      "review_notes": "Reviewed official source, saved Google evidence, PostGIS district assignment, and category mapping.",
+      "review_timestamp": "2026-10-17T14:45:00+05:30",
+      "reviewer_identity": "MUFEEZ",
+      "revised_proposal_sha256": "0b964c9b5ad8edeac18c34351491f764666560718ab9689ac4e87d82f2fd4342",
+      "source_attraction_id": "srilanka_tourism_attraction:185"
+    },
+    {
+      "blockers": [
+        "district_derived_from_saved_gate5d_evidence_requires_reapproval"
+      ],
+      "category_id": 40,
+      "category_name": "Religious & Spiritual",
+      "decision": "APPROVE_INSERT_AFTER_CATEGORY_EVIDENCE",
+      "district_id": 81,
+      "district_name": "Jaffna",
+      "official_name": "The Nagapooshani Amman Kovil",
+      "original_approval_hash": "789c4bbbc6ed245cdb7e9009632338b6009fa8ed73e6ca05c0358221470255de",
+      "review_notes": "Reviewed official source, saved Google evidence, PostGIS district assignment, and category mapping.",
+      "review_timestamp": "2026-10-17T14:45:00+05:30",
+      "reviewer_identity": "MUFEEZ",
+      "revised_proposal_sha256": "aa82288e6234f6d9fd880c691a81e97880413e768e1e8e187244a44f76a1c89f",
+      "source_attraction_id": "srilanka_tourism_attraction:19"
+    },
+    {
+      "blockers": [
+        "district_derived_from_saved_gate5d_evidence_requires_reapproval"
+      ],
+      "category_id": 36,
+      "category_name": "Beaches & Coastal",
+      "decision": "APPROVE_INSERT_AFTER_CATEGORY_EVIDENCE",
+      "district_id": 78,
+      "district_name": "Galle",
+      "official_name": "Koggala Beach",
+      "original_approval_hash": "38b09c425eacc60ce2833ece7723fcc504824b4c36a381343a3384ae9dc208f0",
+      "review_notes": "Reviewed official source, saved Google evidence, PostGIS district assignment, and category mapping.",
+      "review_timestamp": "2026-10-17T14:45:00+05:30",
+      "reviewer_identity": "MUFEEZ",
+      "revised_proposal_sha256": "fc40c072631502664db6d98f8a9e2e0f177cbe8ad7f7eea24c2cf11408f87413",
+      "source_attraction_id": "srilanka_tourism_attraction:192"
+    },
+    {
+      "blockers": [
+        "district_derived_from_saved_gate5d_evidence_requires_reapproval"
+      ],
+      "category_id": 35,
+      "category_name": "Nature & Landscapes",
+      "decision": "APPROVE_INSERT_AFTER_CATEGORY_EVIDENCE",
+      "district_id": 95,
+      "district_name": "Ratnapura",
+      "official_name": "Balla Mala Ella",
+      "original_approval_hash": "3c6ddbdfbcf70fa07f83d0035ab51ffe286e1ee8ae841ab9b7a070df0600a3bc",
+      "review_notes": "Reviewed official source, saved Google evidence, PostGIS district assignment, and category mapping.",
+      "review_timestamp": "2026-10-17T14:45:00+05:30",
+      "reviewer_identity": "MUFEEZ",
+      "revised_proposal_sha256": "afacc31f3144bff629d84e49aefdba2f9549bf4b8a9210eb7b409209e8384017",
+      "source_attraction_id": "srilanka_tourism_attraction:20"
+    },
+    {
+      "blockers": [
+        "district_derived_from_saved_gate5d_evidence_requires_reapproval"
+      ],
+      "category_id": 39,
+      "category_name": "History & Archaeology",
+      "decision": "APPROVE_INSERT_AFTER_CATEGORY_EVIDENCE",
+      "district_id": 77,
+      "district_name": "Colombo",
+      "official_name": "Colombo Lighthouse",
+      "original_approval_hash": "727fe73f9d6a5d2fae8301f7c46da22c0e55dd6ca860f0ce51676041b1f0f023",
+      "review_notes": "Reviewed official source, saved Google evidence, PostGIS district assignment, and category mapping.",
+      "review_timestamp": "2026-10-17T14:45:00+05:30",
+      "reviewer_identity": "MUFEEZ",
+      "revised_proposal_sha256": "3125f488ffbb24f79d06d736b340385786013c026e8b815f505a11048125b09f",
+      "source_attraction_id": "srilanka_tourism_attraction:208"
+    },
+    {
+      "blockers": [
+        "district_derived_from_saved_gate5d_evidence_requires_reapproval"
+      ],
+      "category_id": 40,
+      "category_name": "Religious & Spiritual",
+      "decision": "APPROVE_INSERT_AFTER_CATEGORY_EVIDENCE",
+      "district_id": 95,
+      "district_name": "Ratnapura",
+      "official_name": "Diva Guhawa - Batatota Lena",
+      "original_approval_hash": "647e9ed3f69d21411c3c7912770074978617a133af0e1ffc844af55d08efad4a",
+      "review_notes": "Reviewed official source, saved Google evidence, PostGIS district assignment, and category mapping.",
+      "review_timestamp": "2026-10-17T14:45:00+05:30",
+      "reviewer_identity": "MUFEEZ",
+      "revised_proposal_sha256": "ab312ce8a372d87ea1adf75c8d2affeedf36e727c058efabccc3d7fe8320e342",
+      "source_attraction_id": "srilanka_tourism_attraction:23"
+    },
+    {
+      "blockers": [
+        "district_derived_from_saved_gate5d_evidence_requires_reapproval"
+      ],
+      "category_id": 37,
+      "category_name": "Wildlife & Safari",
+      "decision": "APPROVE_INSERT_AFTER_CATEGORY_EVIDENCE",
+      "district_id": 74,
+      "district_name": "Anuradhapura",
+      "official_name": "Jathika Namal Uyana",
+      "original_approval_hash": "9525b112de2a7a0511577e7e5aa10fa3415f808c51095ba6264def7cf3c90760",
+      "review_notes": "Reviewed official source, saved Google evidence, PostGIS district assignment, and category mapping.",
+      "review_timestamp": "2026-10-17T14:45:00+05:30",
+      "reviewer_identity": "MUFEEZ",
+      "revised_proposal_sha256": "d7a1efdd7f180acb215c45b3f70cd942b10665836b914909cd9ad2ce82e46b8b",
+      "source_attraction_id": "srilanka_tourism_attraction:28"
+    },
+    {
+      "blockers": [
+        "no_stored_physical_attraction_google_evidence_for_this_source_record",
+        "missing_verified_district",
+        "unresolved_duplicate_cluster"
+      ],
+      "category_id": 38,
+      "category_name": "Culture & Heritage",
+      "decision": "DEFER",
+      "district_id": null,
+      "district_name": null,
+      "official_name": "Panavitiya Ambalama",
+      "original_approval_hash": "00f4083a2a6681000d477c6f79d73e4e24c26d0e03784b1064f67026511def2c",
+      "review_notes": "Reviewed official source, saved Google evidence, PostGIS district assignment, and category mapping.",
+      "review_timestamp": "2026-10-17T14:45:00+05:30",
+      "reviewer_identity": "MUFEEZ",
+      "revised_proposal_sha256": "d0f83be5d5aec2277b4c53e6e8d261fac1ff73b2af90c7b06f2567d3706898e2",
+      "source_attraction_id": "srilanka_tourism_attraction:36"
+    },
+    {
+      "blockers": [
+        "district_derived_from_saved_gate5d_evidence_requires_reapproval"
+      ],
+      "category_id": 35,
+      "category_name": "Nature & Landscapes",
+      "decision": "APPROVE_INSERT_AFTER_CATEGORY_EVIDENCE",
+      "district_id": 76,
+      "district_name": "Batticaloa",
+      "official_name": "Baron's Cap or Thoppigala",
+      "original_approval_hash": "6a7ef4c5f711ee7a9dcce47e78a9114fa1be9b01a86f248c97b4d38522ff6b47",
+      "review_notes": "Reviewed official source, saved Google evidence, PostGIS district assignment, and category mapping.",
+      "review_timestamp": "2026-10-17T14:45:00+05:30",
+      "reviewer_identity": "MUFEEZ",
+      "revised_proposal_sha256": "efd4059ae53739fb79a3132a33a9213edfc0e7ea38894201514bca29772285f7",
+      "source_attraction_id": "srilanka_tourism_attraction:5"
+    },
+    {
+      "blockers": [
+        "district_derived_from_saved_gate5d_evidence_requires_reapproval"
+      ],
+      "category_id": 35,
+      "category_name": "Nature & Landscapes",
+      "decision": "APPROVE_INSERT_AFTER_CATEGORY_EVIDENCE",
+      "district_id": 79,
+      "district_name": "Gampaha",
+      "official_name": "Bopagama Water Fall",
+      "original_approval_hash": "7bdcc7497989b5f2609afd846e029545e415786d844f79195509d02abff41670",
+      "review_notes": "Reviewed official source, saved Google evidence, PostGIS district assignment, and category mapping.",
+      "review_timestamp": "2026-10-17T14:45:00+05:30",
+      "reviewer_identity": "MUFEEZ",
+      "revised_proposal_sha256": "4b31b8b083eac8b9e90d7f3695ecc114cfc35d8496e1cf2d9083d791786773fa",
+      "source_attraction_id": "srilanka_tourism_attraction:79"
+    },
+    {
+      "blockers": [
+        "district_derived_from_saved_gate5d_evidence_requires_reapproval"
+      ],
+      "category_id": 40,
+      "category_name": "Religious & Spiritual",
+      "decision": "APPROVE_INSERT_AFTER_CATEGORY_EVIDENCE",
+      "district_id": 81,
+      "district_name": "Jaffna",
+      "official_name": "DambakolaPatuna Viharaya",
+      "original_approval_hash": "133f66895fba8b9d395cbd9c3ec638202bf0b56ab2ae9765bbfa6007b69ddd21",
+      "review_notes": "Reviewed official source, saved Google evidence, PostGIS district assignment, and category mapping.",
+      "review_timestamp": "2026-10-17T14:45:00+05:30",
+      "reviewer_identity": "MUFEEZ",
+      "revised_proposal_sha256": "f0d18fc882208c10f1560b4f2df30d1ffd0cbf143c2d9e007c506b7f88e08739",
+      "source_attraction_id": "srilanka_tourism_attraction:8"
+    },
+    {
+      "blockers": [
+        "district_derived_from_saved_gate5d_evidence_requires_reapproval"
+      ],
+      "category_id": 40,
+      "category_name": "Religious & Spiritual",
+      "decision": "APPROVE_INSERT_AFTER_CATEGORY_EVIDENCE",
+      "district_id": 83,
+      "district_name": "Kandy",
+      "official_name": "Nikayalannuwara Historical Temple",
+      "original_approval_hash": "e91238b5a8b7fc8e7fff5b690792a0e52acffca17698c7ea1a62c187187be12c",
+      "review_notes": "Reviewed official source, saved Google evidence, PostGIS district assignment, and category mapping.",
+      "review_timestamp": "2026-10-17T14:45:00+05:30",
+      "reviewer_identity": "MUFEEZ",
+      "revised_proposal_sha256": "582c91c5a091be354adbb1483b246dcdf31a12038d261b0a3e510291bb88328b",
+      "source_attraction_id": "srilanka_tourism_attraction:88"
+    },
+    {
+      "blockers": [
+        "district_derived_from_saved_gate5d_evidence_requires_reapproval"
+      ],
+      "category_id": 40,
+      "category_name": "Religious & Spiritual",
+      "decision": "APPROVE_INSERT_AFTER_CATEGORY_EVIDENCE",
+      "district_id": 90,
+      "district_name": "Moneragala",
+      "official_name": "Ratmullukanda Viharaya",
+      "original_approval_hash": "125587ba4d3205fe3c15f4d272e7122fc1ac9b744d532eece666ceeb288a7b18",
+      "review_notes": "Reviewed official source, saved Google evidence, PostGIS district assignment, and category mapping.",
+      "review_timestamp": "2026-10-17T14:45:00+05:30",
+      "reviewer_identity": "MUFEEZ",
+      "revised_proposal_sha256": "162f67536cf525750c131d95d6be47a07f7f27ec06fee67db29d2122adb13406",
+      "source_attraction_id": "srilanka_tourism_attraction:89"
+    },
+    {
+      "blockers": [
+        "district_derived_from_saved_gate5d_evidence_requires_reapproval"
+      ],
+      "category_id": 35,
+      "category_name": "Nature & Landscapes",
+      "decision": "APPROVE_INSERT_AFTER_CATEGORY_EVIDENCE",
+      "district_id": 81,
+      "district_name": "Jaffna",
+      "official_name": "Delft Biobab Tree",
+      "original_approval_hash": "b04af031a7a5387aaaea95227f55c68e2f272521b374d53b9488c687cb1f395a",
+      "review_notes": "Reviewed official source, saved Google evidence, PostGIS district assignment, and category mapping.",
+      "review_timestamp": "2026-10-17T14:45:00+05:30",
+      "reviewer_identity": "MUFEEZ",
+      "revised_proposal_sha256": "1ddc71b4426b02b35fc1361e6842785aad461c2cb90875fd893ee1507178fa9e",
+      "source_attraction_id": "srilanka_tourism_attraction:9"
+    },
+    {
+      "blockers": [
+        "district_derived_from_saved_gate5d_evidence_requires_reapproval"
+      ],
+      "category_id": 40,
+      "category_name": "Religious & Spiritual",
+      "decision": "APPROVE_INSERT_AFTER_CATEGORY_EVIDENCE",
+      "district_id": 86,
+      "district_name": "Kurunegala",
+      "official_name": "Ridee Viharaya",
+      "original_approval_hash": "c2f33a6edebc2066345bbc7fdf8d162a0393d3dad93bf446f13ef9deec2e41f1",
+      "review_notes": "Reviewed official source, saved Google evidence, PostGIS district assignment, and category mapping.",
+      "review_timestamp": "2026-10-17T14:45:00+05:30",
+      "reviewer_identity": "MUFEEZ",
+      "revised_proposal_sha256": "35604b38766696812e13a2f9a65d32b2e8aeaf7c6fe8f7b31bd8b6159bd2b5d8",
+      "source_attraction_id": "srilanka_tourism_attraction:90"
+    },
+    {
+      "blockers": [
+        "district_derived_from_saved_gate5d_evidence_requires_reapproval"
+      ],
+      "category_id": 40,
+      "category_name": "Religious & Spiritual",
+      "decision": "APPROVE_INSERT_AFTER_CATEGORY_EVIDENCE",
+      "district_id": 86,
+      "district_name": "Kurunegala",
+      "official_name": "Rambodagalla Buddha Statue",
+      "original_approval_hash": "ea81589aecaae0591ac7b0617cb6f986979a8ddaae29db73084209fafcc115c6",
+      "review_notes": "Reviewed official source, saved Google evidence, PostGIS district assignment, and category mapping.",
+      "review_timestamp": "2026-10-17T14:45:00+05:30",
+      "reviewer_identity": "MUFEEZ",
+      "revised_proposal_sha256": "8450c10cb6dcb7a3405406cb6ea4175d2d6f7edd6ebc5e4dee9ef586a6ab97e0",
+      "source_attraction_id": "srilanka_tourism_attraction:92"
+    },
+    {
+      "blockers": [
+        "no_stored_physical_attraction_google_evidence_for_this_source_record",
+        "missing_verified_district",
+        "unresolved_duplicate_cluster"
+      ],
+      "category_id": 38,
+      "category_name": "Culture & Heritage",
+      "decision": "DEFER",
+      "district_id": null,
+      "district_name": null,
+      "official_name": "Panavitiya Ambalama",
+      "original_approval_hash": "f3b87f643de0fded7ad197f465cdb8cf02ef7fa6dcf9624807d5c53c8507d0d8",
+      "review_notes": "Reviewed official source, saved Google evidence, PostGIS district assignment, and category mapping.",
+      "review_timestamp": "2026-10-17T14:45:00+05:30",
+      "reviewer_identity": "MUFEEZ",
+      "revised_proposal_sha256": "088607131da72be647497b084e702cf2d7e79bf20543cc8db7cf911d0c87661e",
+      "source_attraction_id": "srilanka_tourism_attraction:94"
+    },
+    {
+      "blockers": [
+        "district_derived_from_saved_gate5d_evidence_requires_reapproval"
+      ],
+      "category_id": 40,
+      "category_name": "Religious & Spiritual",
+      "decision": "APPROVE_INSERT_AFTER_CATEGORY_EVIDENCE",
+      "district_id": 86,
+      "district_name": "Kurunegala",
+      "official_name": "Pannathgoda Purana Raja Maha Viharaya",
+      "original_approval_hash": "ab881adcc657ff938a314694e4fbe29d579f1e194964c009ebafbd16805863d7",
+      "review_notes": "Reviewed official source, saved Google evidence, PostGIS district assignment, and category mapping.",
+      "review_timestamp": "2026-10-17T14:45:00+05:30",
+      "reviewer_identity": "MUFEEZ",
+      "revised_proposal_sha256": "bac62be8f659a4b64c441bdacaefb59a6b85faef53ff820ea6c948811d1484bb",
+      "source_attraction_id": "srilanka_tourism_attraction:97"
+    }
+  ]
+}

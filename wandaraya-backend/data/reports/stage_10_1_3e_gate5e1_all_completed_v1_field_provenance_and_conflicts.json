@@ -1,0 +1,5498 @@
+{
+  "records": [
+    {
+      "conflicts": [
+        "ambiguous_multiple_candidates"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:10",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "name_similarity": 0.625,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 9.5276911,
+            "longitude": 79.6998574
+          },
+          "display_name": "Dutch Fort - Delft",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "Delft Island, GMHX+3WH, Delft Centre, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=3791058705613443253&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJS009z1U4_joRtdC9js6LnDQ",
+          "primary_type": "historical_landmark",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.4938,
+          "types": [
+            "historical_landmark",
+            "tourist_attraction",
+            "historical_place",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Delft Dutch Fort",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:10",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=10"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "insufficient identity evidence"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:101",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "component_scores": {
+            "existing_google_place_id": 1.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "name_similarity": 0.7368,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 6.8901011,
+            "longitude": 81.8429276
+          },
+          "display_name": "Pottuvil point",
+          "distance_km": null,
+          "existing_kb_matches": [
+            {
+              "id": 4112,
+              "name": "Pottuvil point"
+            }
+          ],
+          "formatted_address": "Pottuvil point, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=7866945577999252087&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJfdWB7_Si5ToRd7r5g1IBLW0",
+          "primary_type": "beach",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 1.0,
+          "types": [
+            "beach",
+            "natural_feature",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Arugambay & Pottuvil Point",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:101",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=101"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google candidate is unapproved; insertion requires review"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:102",
+      "field_provenance": {
+        "google": {
+          "business_status": null,
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "name_similarity": 0.5,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.213815599999999,
+            "longitude": 81.54318719999999
+          },
+          "display_name": "Inginiyagala",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "Inginiyagala, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=2648336123562074180&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJ96JOdhEd5ToRRKDAQqzHwCQ",
+          "primary_type": null,
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.4,
+          "types": [
+            "locality",
+            "political"
+          ]
+        },
+        "official": {
+          "attraction_name": "Senanayaka Samudraya of Inginiyagala",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:102",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=102"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google candidate is unapproved; insertion requires review"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:103",
+      "field_provenance": {
+        "google": {
+          "business_status": null,
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "name_similarity": 1.0,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.2793315000000005,
+            "longitude": 80.8273985
+          },
+          "display_name": "Rajagala",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "Rajagala, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=12589866343449392129&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJYfM0-BWe5DoRAXTyQrwwuK4",
+          "primary_type": null,
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.775,
+          "types": [
+            "locality",
+            "political"
+          ]
+        },
+        "official": {
+          "attraction_name": "Rajagala",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:103",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "probable_match_review_required",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=103"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "insufficient identity evidence"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:104",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "component_scores": {
+            "existing_google_place_id": 1.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "name_similarity": 0.5778,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 6.842794,
+            "longitude": 81.7016423
+          },
+          "display_name": "\u0ba8\u0bc0\u0bb2\u0b95\u0bbf\u0bb0\u0bbf \u0b95\u0bc1\u0b95\u0bc8\u0b95\u0bcd \u0b95\u0bcb\u0baf\u0bbf\u0bb2\u0bcd | \u0db1\u0dd3\u0dbd\u0d9c\u0dd2\u0dbb\u0dd2 \u0dbd\u0dd9\u0db1\u0dca \u0dc0\u0dd2\u0dc4\u0dcf\u0dbb\u0dba | Neelagirihela Natabun Viharaya",
+          "distance_km": null,
+          "existing_kb_matches": [
+            {
+              "id": 4150,
+              "name": "\u0ba8\u0bc0\u0bb2\u0b95\u0bbf\u0bb0\u0bbf \u0b95\u0bc1\u0b95\u0bc8\u0b95\u0bcd \u0b95\u0bcb\u0baf\u0bbf\u0bb2\u0bcd | \u0db1\u0dd3\u0dbd\u0d9c\u0dd2\u0dbb\u0dd2 \u0dbd\u0dd9\u0db1\u0dca \u0dc0\u0dd2\u0dc4\u0dcf\u0dbb\u0dba | Neelagirihela Natabun Viharaya"
+            }
+          ],
+          "formatted_address": "RPV2+4M6, Lahugala, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=17723155206546886699&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJC_aBwfK75ToRK5BXUcJL9fU",
+          "primary_type": "buddhist_temple",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 1.0,
+          "types": [
+            "buddhist_temple",
+            "place_of_worship",
+            "association_or_organization",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Neelagiri Stupa",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:104",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=104"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google Place equals existing KB identity; source link still needs approval"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:105",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 1.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.5769,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 6.879679299999999,
+            "longitude": 81.0278919
+          },
+          "display_name": "Mahamevnawa Buddhist Monastery",
+          "distance_km": null,
+          "existing_kb_matches": [
+            {
+              "id": 4508,
+              "name": "Mahamevnawa Buddhist Monastery"
+            }
+          ],
+          "formatted_address": "Kumbalwela, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=2159821069232201929&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJ83V0If5k5DoRyWD9udE5-R0",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "buddhist_temple",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 1.0,
+          "types": [
+            "buddhist_temple",
+            "place_of_worship",
+            "association_or_organization",
+            "health",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Nagapabbatha Monastery",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:105",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=105"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google candidate is unapproved; insertion requires review"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:106",
+      "field_provenance": {
+        "google": {
+          "business_status": null,
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.8444,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.495774000000001,
+            "longitude": 81.63159270000001
+          },
+          "display_name": "Piyangala Hermitage",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "FJWJ+8JQ Piyangala Hermitage, Ampara-Uhana-Maha Oya Hwy, sandasirigama, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=16880516526844793548&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJmXhxO7El5ToRzNKxJ1ikQ-o",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": null,
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.6583,
+          "types": [
+            "premise",
+            "street_address"
+          ]
+        },
+        "official": {
+          "attraction_name": "Piyangala Forest Hermitage",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:106",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=106"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google Place equals existing KB identity; source link still needs approval"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:107",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 1.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.7463,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.2405347,
+            "longitude": 80.6011393
+          },
+          "display_name": "Hindagala Rajamaha Viharaya",
+          "distance_km": null,
+          "existing_kb_matches": [
+            {
+              "id": 5963,
+              "name": "Hindagala Rajamaha Viharaya"
+            }
+          ],
+          "formatted_address": "6JR2+6F6, B364, Hindagala, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=15254298504564173506&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJ99EIHDtv4zoRwupRTqsnstM",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "buddhist_temple",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 1.0,
+          "types": [
+            "buddhist_temple",
+            "tourist_attraction",
+            "place_of_worship",
+            "association_or_organization",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Henanigala Panchawasa Raja Maha Viharaya",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:107",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=107"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google candidate is unapproved; insertion requires review"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:11",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.8333,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 9.5202071,
+            "longitude": 79.7212574
+          },
+          "display_name": "The Growing Stone",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "GPCC+3GJ, Delft Centre, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=2399724236595271401&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJSwBgcIw4_joR6RYomXqITSE",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "historical_landmark",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.65,
+          "types": [
+            "historical_landmark",
+            "historical_place",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Delft Growing Stone",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:11",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=11"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google Place equals existing KB identity; source link still needs approval"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:111",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 1.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.6,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 6.6721243999999995,
+            "longitude": 81.743149
+          },
+          "display_name": "Kudumbigala Monastery Complex",
+          "distance_km": null,
+          "existing_kb_matches": [
+            {
+              "id": 4137,
+              "name": "Kudumbigala Monastery Complex"
+            }
+          ],
+          "formatted_address": "MPCV+R7R, Okanda, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=6032502634634244739&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJAQAAAHvH5ToRg3L7Qy_Bt1M",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "buddhist_temple",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 1.0,
+          "types": [
+            "buddhist_temple",
+            "place_of_worship",
+            "association_or_organization",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Bowattegala Monastery",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:111",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=111"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google candidate is unapproved; insertion requires review"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:114",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.5306,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.724879999999999,
+            "longitude": 80.42682769999999
+          },
+          "display_name": "Veheragala Temple",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "PCFG+XP4, Rambe, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=4826195020226676984&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJAQDANVnK_DoR-Mhe9cwW-kI",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "buddhist_temple",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.423,
+          "types": [
+            "buddhist_temple",
+            "place_of_worship",
+            "association_or_organization",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Ancient Veheragala of Pulukunawa",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:114",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=114"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google Place equals existing KB identity; source link still needs approval"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:115",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 1.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.5283,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.4108168999999995,
+            "longitude": 81.5810585
+          },
+          "display_name": "Samangala Aranya Senasanaya",
+          "distance_km": null,
+          "existing_kb_matches": [
+            {
+              "id": 6505,
+              "name": "Samangala Aranya Senasanaya"
+            }
+          ],
+          "formatted_address": "CH6J+8CF Samangala Senasanaya, Road, Weranketagoda, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=13151516675144901928&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJW_UfNw0h5ToRKGWjf7ySg7Y",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "buddhist_temple",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 1.0,
+          "types": [
+            "buddhist_temple",
+            "place_of_worship",
+            "association_or_organization",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Samangala Forest Hermitage",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:115",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=115"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "ambiguous_multiple_candidates"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:12",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.6316,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.587995,
+            "longitude": 81.78041499999999
+          },
+          "display_name": "Delft Koththiyaladi temple",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "HQQJ+55V Delft west, Kurukkalmadam, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=4218923468369490265&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJhzGGZwA35ToRWfG4qoqgjDo",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "hindu_temple",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.4987,
+          "types": [
+            "hindu_temple",
+            "place_of_worship",
+            "association_or_organization",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Delft Temple",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:12",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=12"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google Place equals existing KB identity; source link still needs approval"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:121",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 1.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.6667,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 6.9001288,
+            "longitude": 81.344758
+          },
+          "display_name": "Mayuragiriya Ancient Temple",
+          "distance_km": null,
+          "existing_kb_matches": [
+            {
+              "id": 3053,
+              "name": "Mayuragiriya Ancient Temple"
+            }
+          ],
+          "formatted_address": "W82V+3W2, Monaragala, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=4019579650199022152&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJKUSWDZxQ5DoRSGqALGVqyDc",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "buddhist_temple",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 1.0,
+          "types": [
+            "buddhist_temple",
+            "place_of_worship",
+            "association_or_organization",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Owagiriya Ancient Monastery",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:121",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=121"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google Place equals existing KB identity; source link still needs approval"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:122",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 1.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.4043,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 6.928471699999999,
+            "longitude": 81.6546714
+          },
+          "display_name": "Tharulengala Aranya Senasanaya /Karadahela Viharaya-\u0d9a\u0dbb\u0daf\u0dc4\u0dd9\u0dc5 \u0dc0\u0dd2\u0dc4\u0dcf\u0dbb\u0dba",
+          "distance_km": null,
+          "existing_kb_matches": [
+            {
+              "id": 4141,
+              "name": "Tharulengala Aranya Senasanaya /Karadahela Viharaya-\u0d9a\u0dbb\u0daf\u0dc4\u0dd9\u0dc5 \u0dc0\u0dd2\u0dc4\u0dcf\u0dbb\u0dba"
+            }
+          ],
+          "formatted_address": "WMH3+9VM, Hulanuge, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=1837571746486265131&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJHTJIJCyv5ToRK6WbfsRdgBk",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "buddhist_temple",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 1.0,
+          "types": [
+            "buddhist_temple",
+            "place_of_worship",
+            "association_or_organization",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Habuthala Viharaya or Tharulengala Monastery",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:122",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=122"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google Place equals existing KB identity; source link still needs approval"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:124",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 1.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.68,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.2405347,
+            "longitude": 80.6011393
+          },
+          "display_name": "Hindagala Rajamaha Viharaya",
+          "distance_km": null,
+          "existing_kb_matches": [
+            {
+              "id": 5963,
+              "name": "Hindagala Rajamaha Viharaya"
+            }
+          ],
+          "formatted_address": "6JR2+6F6, B364, Hindagala, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=15254298504564173506&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJ99EIHDtv4zoRwupRTqsnstM",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "buddhist_temple",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 1.0,
+          "types": [
+            "buddhist_temple",
+            "tourist_attraction",
+            "place_of_worship",
+            "association_or_organization",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Henanegala Len Viharaya",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:124",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=124"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "top Google result is a locality or administrative area, not a physical attraction"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:125",
+      "field_provenance": {
+        "google": {
+          "business_status": null,
+          "candidate_kind": "locality_or_administrative_area",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.35,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 1.0,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 6.7846867,
+            "longitude": 81.814238
+          },
+          "display_name": "Shasthrawela",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "Shasthrawela, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=1189215410539625617&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJmwia3Tm85ToRkXyieh3xgBA",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": null,
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.425,
+          "types": [
+            "administrative_area_level_4",
+            "political"
+          ]
+        },
+        "official": {
+          "attraction_name": "Shasthrawela",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:125",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=125"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google Place equals existing KB identity; source link still needs approval"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:126",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 1.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.6977,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.017197299999999,
+            "longitude": 81.8742767
+          },
+          "display_name": "Sangamankanda Lighthouse",
+          "distance_km": null,
+          "existing_kb_matches": [
+            {
+              "id": 4053,
+              "name": "Sangamankanda Lighthouse"
+            }
+          ],
+          "formatted_address": "9th Road, Sammanthurai, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=12368809256218598801&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJA42FxVl15ToRkR15W3zWpqs",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "tourist_attraction",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 1.0,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Sangamankanda Point",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:126",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=126"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google Place equals existing KB identity; source link still needs approval"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:128",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 1.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.3673,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.331836099999999,
+            "longitude": 81.7036489
+          },
+          "display_name": "Buddhangala Raja Maha Viharaya \u0db6\u0dd4\u0daf\u0dca\u0db0\u0d82\u0d9c\u0dbd \u0dbb\u0da2 \u0db8\u0dc4\u0dcf \u0dc0\u0dd2\u0dc4\u0dcf\u0dbb\u0dba",
+          "distance_km": null,
+          "existing_kb_matches": [
+            {
+              "id": 6408,
+              "name": "Buddhangala Raja Maha Viharaya \u0db6\u0dd4\u0daf\u0dca\u0db0\u0d82\u0d9c\u0dbd \u0dbb\u0da2 \u0db8\u0dc4\u0dcf \u0dc0\u0dd2\u0dc4\u0dcf\u0dbb\u0dba"
+            }
+          ],
+          "formatted_address": "Ampara, 8PJ3+PFJ, Buddangala, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=1814269947190531115&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJUVcdtZEX5ToRK1T1kOeULRk",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "buddhist_temple",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 1.0,
+          "types": [
+            "buddhist_temple",
+            "tourist_attraction",
+            "historical_place",
+            "place_of_worship",
+            "association_or_organization",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Gonagolla Monastery",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:128",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=128"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "official source title may describe multiple distinct destinations"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:129",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "physical_attraction",
+          "component_scores": {
+            "existing_google_place_id": 1.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.6849,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 6.730736299999999,
+            "longitude": 80.1557136
+          },
+          "display_name": "Bodhinagala Forest Reserve (Dombagaskanda)",
+          "distance_km": null,
+          "existing_kb_matches": [
+            {
+              "id": 1974,
+              "name": "Bodhinagala Forest Reserve (Dombagaskanda)"
+            }
+          ],
+          "formatted_address": "Bodhinagala Rd, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=17713482224075807167&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJe_xaN3e04zoRvxk8lTvu0vU",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "nature_preserve",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 1.0,
+          "types": [
+            "nature_preserve",
+            "tourist_attraction",
+            "park",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Kudagala Forest Reserve & Monastery",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:129",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=129"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google Place equals existing KB identity; source link still needs approval"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:132",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "physical_attraction",
+          "component_scores": {
+            "existing_google_place_id": 1.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.8571,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.2285076,
+            "longitude": 81.47183869999999
+          },
+          "display_name": "Gal Oya Valley National Park",
+          "distance_km": null,
+          "existing_kb_matches": [
+            {
+              "id": 4703,
+              "name": "Gal Oya Valley National Park"
+            }
+          ],
+          "formatted_address": "6FHC+CP4, Henebadda, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=2851399214399257492&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJMSepDaDi5DoRlHsYZ3o0kic",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "national_park",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 1.0,
+          "types": [
+            "national_park",
+            "tourist_attraction",
+            "park",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Gal Oya National Park",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:132",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "ambiguous_multiple_matches",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=132"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google Place equals existing KB identity; source link still needs approval"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:134",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 1.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.5641,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 6.8780816,
+            "longitude": 81.7529476
+          },
+          "display_name": "Kotawehera Ancient Temple | \u0d9a\u0ddc\u0da7\u0dc0\u0dd9\u0dc4\u0dd9\u0dbb \u0dbb\u0da2\u0db8\u0dc4 \u0dc0\u0dd2\u0dc4\u0dcf\u0dbb\u0dba",
+          "distance_km": null,
+          "existing_kb_matches": [
+            {
+              "id": 4142,
+              "name": "Kotawehera Ancient Temple | \u0d9a\u0ddc\u0da7\u0dc0\u0dd9\u0dc4\u0dd9\u0dbb \u0dbb\u0da2\u0db8\u0dc4 \u0dc0\u0dd2\u0dc4\u0dcf\u0dbb\u0dba"
+            }
+          ],
+          "formatted_address": "Colombo - Batticaloa Hwy, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=9885417206406676482&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJ-QCnQeyk5ToRAoBn9JIOMIk",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "buddhist_temple",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 1.0,
+          "types": [
+            "buddhist_temple",
+            "place_of_worship",
+            "association_or_organization",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Kotaveheragala",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:134",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=134"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google Place equals existing KB identity; source link still needs approval"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:135",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 1.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.3636,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.1613479,
+            "longitude": 80.5473203
+          },
+          "display_name": "Ambuluwawa Biodiversity Complex",
+          "distance_km": null,
+          "existing_kb_matches": [
+            {
+              "id": 4923,
+              "name": "Ambuluwawa Biodiversity Complex"
+            }
+          ],
+          "formatted_address": "Ambuluwawa Trigonometrical Station, Ambuluwaawa ICC Road, Gampola 20500, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=11782520744534945526&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJXVuXLvlx4zoR9i6t0DDsg6M",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "tourist_attraction",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 1.0,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Alioluwa Lake",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:135",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=135"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google candidate is unapproved; insertion requires review"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:136",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.7097,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.213815599999999,
+            "longitude": 81.54318719999999
+          },
+          "display_name": "Pallan Hela",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "6G7V+G7F, Inginiyagala, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=4074498511107709146&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJtXaJP3Qd5ToR2thu6M6Gizg",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "hiking_area",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.5573,
+          "types": [
+            "hiking_area",
+            "sports_activity_location",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Pallan Hela Mountain",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:136",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=136"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "top Google result is a locality or administrative area, not a physical attraction"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:138",
+      "field_provenance": {
+        "google": {
+          "business_status": null,
+          "candidate_kind": "locality_or_administrative_area",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.35,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.8889,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 6.464584599999999,
+            "longitude": 80.4320286
+          },
+          "display_name": "Weddagala",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "Weddagala, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=1214300174554473147&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJNUaEKBXd4zoRu6IDO5MP2hA",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": null,
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.3417,
+          "types": [
+            "locality",
+            "political"
+          ]
+        },
+        "official": {
+          "attraction_name": "Veddagala",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:138",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=138"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google candidate is unapproved; insertion requires review"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:14",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.3,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 9.7467898,
+            "longitude": 80.0067062
+          },
+          "display_name": "Kantharodai Archaeological Site - Kantharodai",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "Puttur-Kantarodai Rd, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=15222953888428266259&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJxSxRRVZT_joRExPrJ-jLQtM",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "buddhist_temple",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.25,
+          "types": [
+            "buddhist_temple",
+            "tourist_attraction",
+            "place_of_worship",
+            "association_or_organization",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Kadurugoda Temple",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:14",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=14"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "ambiguous_multiple_candidates"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:140",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.4688,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.552223400000001,
+            "longitude": 81.3530279
+          },
+          "display_name": "Maha Oya Hot Water Spring",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "H923+V6J, Maha Oya, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=4158765496918591697&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJQdafhjzQ5DoR0cj7cy_ntjk",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "tourist_attraction",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.3766,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "The Steaming Hot Water Wells of Mahaoya",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:140",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=140"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google Place equals existing KB identity; source link still needs approval"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:142",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 1.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.8372,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 6.8666857,
+            "longitude": 81.84099700000002
+          },
+          "display_name": "\u0db8\u0dd4\u0dc4\u0dd4\u0daf\u0dd4 \u0db8\u0dc4\u0dcf \u0dc0\u0dd2\u0dc4\u0dcf\u0dbb \u0dc0\u0dd9\u0dbb\u0dc5 | Muhudu Mahavihara Beach",
+          "distance_km": null,
+          "existing_kb_matches": [
+            {
+              "id": 4066,
+              "name": "\u0db8\u0dd4\u0dc4\u0dd4\u0daf\u0dd4 \u0db8\u0dc4\u0dcf \u0dc0\u0dd2\u0dc4\u0dcf\u0dbb \u0dc0\u0dd9\u0dbb\u0dc5 | Muhudu Mahavihara Beach"
+            }
+          ],
+          "formatted_address": "VR8R+M9H, Muhudu Maha Vihara Mawatha, Pottuvil, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=11440874782530487635&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJF_Lf-kqj5ToRU0V0lP8mxp4",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "tourist_attraction",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 1.0,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Muhudu Maha Viharaya",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:142",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=142"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google candidate is unapproved; insertion requires review"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:143",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.6667,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.361679700000001,
+            "longitude": 81.30913650000001
+          },
+          "display_name": "Wahawa Hot Water Springs",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "9865+MMC, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=1782486616220183040&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJEboDq8fD5DoRACqxKCKqvBg",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "tourist_attraction",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.525,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Hot Water Springs in Wahawa",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:143",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=143"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google candidate is unapproved; insertion requires review"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:144",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.7143,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 6.9691959,
+            "longitude": 79.87886999999999
+          },
+          "display_name": "Duncco dome house",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "50 Jubilee Mawatha, Colombo 01500, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=14248541568813187835&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJcSrn8tVZ4joR-0J_mBD9vMU",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "corporate_office",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.5607,
+          "types": [
+            "corporate_office",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Dome Houses",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:144",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=144"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "top Google result is a locality or administrative area, not a physical attraction"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:145",
+      "field_provenance": {
+        "google": {
+          "business_status": null,
+          "candidate_kind": "locality_or_administrative_area",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.35,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 1.0,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.4281749999999995,
+            "longitude": 81.56512699999999
+          },
+          "display_name": "Bandaraduwa",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "Bandaraduwa, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=17539716908274008522&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJH_oJiyUh5ToRysGVQpmXafM",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": null,
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.425,
+          "types": [
+            "locality",
+            "political"
+          ]
+        },
+        "official": {
+          "attraction_name": "Bandaraduwa",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:145",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=145"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google Place equals existing KB identity; source link still needs approval"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:148",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 1.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.3636,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 6.1224678,
+            "longitude": 80.7382176
+          },
+          "display_name": "Mulgirigala Raja Maha Viharaya",
+          "distance_km": null,
+          "existing_kb_matches": [
+            {
+              "id": 45,
+              "name": "Mulgirigala Raja Maha Viharaya"
+            }
+          ],
+          "formatted_address": "4PCQ+X7P, Mulgirigala, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=3688011153839970483&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJy51Z285N4ToRs1hPwJpyLjM",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "buddhist_temple",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 1.0,
+          "types": [
+            "buddhist_temple",
+            "tourist_attraction",
+            "place_of_worship",
+            "association_or_organization",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Mullikulamalai",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:148",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=148"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google Place equals existing KB identity; source link still needs approval"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:149",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 1.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.25,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.2859435999999995,
+            "longitude": 80.6767655
+          },
+          "display_name": "Galmaduwa Rajamaha Viharaya | \u0d9c\u0dbd\u0dca\u0db8\u0da9\u0dd4\u0dc0 \u0dbb\u0da2\u0db8\u0dc4\u0dcf \u0dc0\u0dd2\u0dc4\u0dcf\u0dbb\u0dba",
+          "distance_km": null,
+          "existing_kb_matches": [
+            {
+              "id": 5959,
+              "name": "Galmaduwa Rajamaha Viharaya | \u0d9c\u0dbd\u0dca\u0db8\u0da9\u0dd4\u0dc0 \u0dbb\u0da2\u0db8\u0dc4\u0dcf \u0dc0\u0dd2\u0dc4\u0dcf\u0dbb\u0dba"
+            }
+          ],
+          "formatted_address": "7MPG+9PC, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=1922933639618535348&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJb_YAcVhm4zoRtJ8cBPWhrxo",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "buddhist_temple",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 1.0,
+          "types": [
+            "buddhist_temple",
+            "place_of_worship",
+            "association_or_organization",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Okanda Devalaya ( A Destination of Mass Pilgrim)",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:149",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=149"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google Place equals existing KB identity; source link still needs approval"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:151",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "physical_attraction",
+          "component_scores": {
+            "existing_google_place_id": 1.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.5455,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 6.4069908,
+            "longitude": 80.46002659999999
+          },
+          "display_name": "Sinharaja Forest Reserve",
+          "distance_km": null,
+          "existing_kb_matches": [
+            {
+              "id": 25,
+              "name": "Sinharaja Forest Reserve"
+            }
+          ],
+          "formatted_address": "Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=10092268801686597659&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJX9QJ0Wvn4zoRG3BJBgHxDow",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "national_park",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 1.0,
+          "types": [
+            "tourist_attraction",
+            "national_park",
+            "park",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Sinharaja",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:151",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=151"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "top Google result is a locality or administrative area, not a physical attraction"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:152",
+      "field_provenance": {
+        "google": {
+          "business_status": null,
+          "candidate_kind": "locality_or_administrative_area",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.35,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 1.0,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.4326453,
+            "longitude": 80.8460822
+          },
+          "display_name": "Meemure",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "Meemure, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=225324138569187558&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJ0UwsDS2n5DoR5sC8NhyDIAM",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": null,
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.425,
+          "types": [
+            "locality",
+            "political"
+          ]
+        },
+        "official": {
+          "attraction_name": "Meemure",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:152",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=152"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google Place equals existing KB identity; source link still needs approval"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:155",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "physical_attraction",
+          "component_scores": {
+            "existing_google_place_id": 1.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.6552,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.293609,
+            "longitude": 80.641325
+          },
+          "display_name": "Sri Dalada Maligawa",
+          "distance_km": null,
+          "existing_kb_matches": [
+            {
+              "id": 2,
+              "name": "Sri Dalada Maligawa"
+            }
+          ],
+          "formatted_address": "Kandy, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=9324095044729563271&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJ9ftJsS1m4zoRh-gVwQrXZYE",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "buddhist_temple",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 1.0,
+          "types": [
+            "buddhist_temple",
+            "history_museum",
+            "historical_landmark",
+            "tourist_attraction",
+            "museum",
+            "historical_place",
+            "place_of_worship",
+            "association_or_organization",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Sri Dalada Maligawa (Temple of the Tooth)",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:155",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=155"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google Place equals existing KB identity; source link still needs approval"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:157",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 1.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.9744,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.854914099999999,
+            "longitude": 80.6505699
+          },
+          "display_name": "Dambulla Cave Temple",
+          "distance_km": null,
+          "existing_kb_matches": [
+            {
+              "id": 18,
+              "name": "Dambulla Cave Temple"
+            }
+          ],
+          "formatted_address": "Kandy - Jaffna Hwy, Dambulla, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=15121580945375458892&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJaTa9xVil_DoRTHZrk8Cl2tE",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "buddhist_temple",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 1.0,
+          "types": [
+            "buddhist_temple",
+            "tourist_attraction",
+            "place_of_worship",
+            "association_or_organization",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Dambulla CaveTemple",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:157",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "probable_match_review_required",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=157"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google Place equals existing KB identity; source link still needs approval"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:16",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 1.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.9855,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.264096500000001,
+            "longitude": 81.1064351
+          },
+          "display_name": "Nagadeepa Purana Rajamaha Viharaya",
+          "distance_km": null,
+          "existing_kb_matches": [
+            {
+              "id": 4764,
+              "name": "Nagadeepa Purana Rajamaha Viharaya"
+            }
+          ],
+          "formatted_address": "7474+JHM, Nagadeepa Rd, Mahiyanganaya, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=17425856690472478035&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJobnSToWT5DoRU-V5dlUU1fE",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "buddhist_temple",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 1.0,
+          "types": [
+            "buddhist_temple",
+            "place_of_worship",
+            "association_or_organization",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Nagadeepa Purana Raja Maha Viharaya",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:16",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "probable_match_review_required",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=16"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "top Google result is a locality or administrative area, not a physical attraction"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:162",
+      "field_provenance": {
+        "google": {
+          "business_status": null,
+          "candidate_kind": "locality_or_administrative_area",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.35,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 1.0,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 6.0174468999999995,
+            "longitude": 80.2488596
+          },
+          "display_name": "Unawatuna",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "Unawatuna, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=13854282322514756716&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJbZK_YvFy4ToRbER3g15MRMA",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": null,
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.425,
+          "types": [
+            "locality",
+            "political"
+          ]
+        },
+        "official": {
+          "attraction_name": "Unawatuna",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:162",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=162"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google candidate is unapproved; insertion requires review"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:167",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.8649,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 8.5824436,
+            "longitude": 81.2453556
+          },
+          "display_name": "Thirukoneswaram Kovil",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "H6JW+X4H, Trincomalee, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=3359205284363444959&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJV-_dCaK8-zoR3yIZhmhLni4",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "hindu_temple",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.6736,
+          "types": [
+            "hindu_temple",
+            "tourist_attraction",
+            "place_of_worship",
+            "association_or_organization",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Koneswaram Kovil",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:167",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=167"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "top Google result is a locality or administrative area, not a physical attraction"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:169",
+      "field_provenance": {
+        "google": {
+          "business_status": null,
+          "candidate_kind": "locality_or_administrative_area",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.35,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 1.0,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 6.4135463,
+            "longitude": 81.33256790000002
+          },
+          "display_name": "Kataragama",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "Kataragama, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=8227350787202493130&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJoZ7BJgQm5DoRyiq8WfNrLXI",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": null,
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.425,
+          "types": [
+            "locality",
+            "political"
+          ]
+        },
+        "official": {
+          "attraction_name": "Kataragama",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:169",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "ambiguous_multiple_matches",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=169"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google candidate is unapproved; insertion requires review"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:171",
+      "field_provenance": {
+        "google": {
+          "business_status": null,
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 1.0,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 9.514149699999999,
+            "longitude": 79.6838874
+          },
+          "display_name": "Delft Island",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "Delft Island, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=5586946156959248909&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJVeihOAM5_joRDTLKyO3RiE0",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "island",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.775,
+          "types": [
+            "island",
+            "natural_feature",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Delft island",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:171",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=171"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google candidate is unapproved; insertion requires review"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:172",
+      "field_provenance": {
+        "google": {
+          "business_status": null,
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 1.0,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 6.929434499999999,
+            "longitude": 79.8541822
+          },
+          "display_name": "Beira Lake",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "Beira Lake, Colombo, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=1512273241694268861&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJs-C0QBZZ4joRve2DPoCs_BQ",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "lake",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.775,
+          "types": [
+            "lake",
+            "natural_feature",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Beira Lake",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:172",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=172"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google candidate is unapproved; insertion requires review"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:176",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.4444,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 8.0108714,
+            "longitude": 80.5127773
+          },
+          "display_name": "Avukana Buddha Statue",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "2G67+84R, Kalawewa-Avukana Rd, Avukana, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=15487987674549906436&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJk912-Tq-_DoRBOwsK7ti8NY",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "buddhist_temple",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.3583,
+          "types": [
+            "buddhist_temple",
+            "tourist_attraction",
+            "place_of_worship",
+            "association_or_organization",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Aukana",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:176",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=176"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "top Google result is a locality or administrative area, not a physical attraction"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:179",
+      "field_provenance": {
+        "google": {
+          "business_status": null,
+          "candidate_kind": "locality_or_administrative_area",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.35,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 1.0,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 6.2270484999999995,
+            "longitude": 81.3341361
+          },
+          "display_name": "Kirinda",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "Kirinda, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=8435193977150190719&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJW98AADeb5joRfzSNCzvUD3U",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": null,
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.425,
+          "types": [
+            "locality",
+            "political"
+          ]
+        },
+        "official": {
+          "attraction_name": "Kirinda",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:179",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=179"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google Place equals existing KB identity; source link still needs approval"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:181",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 1.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.9697,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 6.5872125,
+            "longitude": 79.95954689999999
+          },
+          "display_name": "Kalutara Bodhiya",
+          "distance_km": null,
+          "existing_kb_matches": [
+            {
+              "id": 187,
+              "name": "Kalutara Bodhiya"
+            }
+          ],
+          "formatted_address": "HXP5+VRM, Galle Rd, Kalutara KT1, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=2642316097436374170&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJT29R4R434joRmtT9s31kqyQ",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "buddhist_temple",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 1.0,
+          "types": [
+            "buddhist_temple",
+            "tourist_attraction",
+            "place_of_worship",
+            "association_or_organization",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Kaluthara Bodhiya",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:181",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "probable_match_review_required",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=181"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google candidate is unapproved; insertion requires review"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:184",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 1.0,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.815825299999999,
+            "longitude": 80.3114366
+          },
+          "display_name": "Yapahuwa Rock Fortress",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "R886+8HM, Maho, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=17423985802792849673&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJedZjT6XP_DoRCdHqesVuzvE",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "historical_place",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.775,
+          "types": [
+            "historical_place",
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Yapahuwa Rock Fortress",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:184",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=184"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google candidate is unapproved; insertion requires review"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:185",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.8,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.1177405,
+            "longitude": 80.4856735
+          },
+          "display_name": "Asupini Ella Falls",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "4F9P+37V, Aranayaka, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=7715143751385249211&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJQ8kLdxtz4zoRu3VkhF2yEWs",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "tourist_attraction",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.625,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Asupini Ella",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:185",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=185"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "official source title may describe multiple distinct destinations"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:188",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 1.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.6296,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 6.8662092,
+            "longitude": 81.0445561
+          },
+          "display_name": "Kuda Ravana Ella waterfall",
+          "distance_km": null,
+          "existing_kb_matches": [
+            {
+              "id": 36,
+              "name": "Kuda Ravana Ella waterfall"
+            }
+          ],
+          "formatted_address": "V28V+FRM, A23, Ella, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=12083104694607665632&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJk6Socrtl5DoR4NnxYbPPr6c",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "tourist_attraction",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 1.0,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Rawana ella and Ravana falls",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:188",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=188"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google candidate is unapproved; insertion requires review"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:19",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.8387,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 9.6190123,
+            "longitude": 79.7748762
+          },
+          "display_name": "Nainativu Nagapooshani Amman Kovil",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "Main St, Nainativu, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=7374345576813771355&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJsYm_ga1J_joRWzr1LDvwVmY",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "hindu_temple",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.654,
+          "types": [
+            "hindu_temple",
+            "tourist_attraction",
+            "place_of_worship",
+            "association_or_organization",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "The Nagapooshani Amman Kovil",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:19",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=19"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google candidate is unapproved; insertion requires review"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:192",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "physical_attraction",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 1.0,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 5.992272,
+            "longitude": 80.3106907
+          },
+          "display_name": "Koggala Beach",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "Koggala Beach, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=17540625183765318439&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJSar8mC9t4ToRJ0uaoKvRbPM",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "beach",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.775,
+          "types": [
+            "beach",
+            "natural_feature",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Koggala Beach",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:192",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=192"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google candidate is unapproved; insertion requires review"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:20",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.8,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 6.5837053,
+            "longitude": 80.39917969999999
+          },
+          "display_name": "Balla Mala Waterfall",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "H9MX+FMM, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=8039235504904206004&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJya20I2XB4zoRtPaFFxkakW8",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "tourist_attraction",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.625,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Balla Mala Ella",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:20",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=20"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google Place equals existing KB identity; source link still needs approval"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:201",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "physical_attraction",
+          "component_scores": {
+            "existing_google_place_id": 1.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.8387,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 6.9045749999999995,
+            "longitude": 79.9098313
+          },
+          "display_name": "Diyatha Uyana Park",
+          "distance_km": null,
+          "existing_kb_matches": [
+            {
+              "id": 3371,
+              "name": "Diyatha Uyana Park"
+            }
+          ],
+          "formatted_address": "WW35+RWG, B240, Sri Jayawardenepura Kotte, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=15909435537364352027&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJ7RLZi_lZ4joRG_yTVVSrydw",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "tourist_attraction",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 1.0,
+          "types": [
+            "tourist_attraction",
+            "water_park",
+            "amusement_park",
+            "park",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Diyatha Uyana",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:201",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "probable_match_review_required",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=201"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google Place equals existing KB identity; source link still needs approval"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:202",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 1.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.6222,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 6.9041619999999995,
+            "longitude": 79.8675756
+          },
+          "display_name": "Independence Square",
+          "distance_km": null,
+          "existing_kb_matches": [
+            {
+              "id": 3376,
+              "name": "Independence Square"
+            }
+          ],
+          "formatted_address": "7 Independence Ave, Colombo 00700, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=13962575699374777867&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJC46ViHtZ4joRCya8Jp8IxcE",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "historical_landmark",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 1.0,
+          "types": [
+            "historical_landmark",
+            "tourist_attraction",
+            "historical_place",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Independence Memorial Hall",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:202",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=202"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google Place equals existing KB identity; source link still needs approval"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:204",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 1.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.6415,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 6.9168768,
+            "longitude": 79.85454560000001
+          },
+          "display_name": "Seema Malakaya Temple",
+          "distance_km": null,
+          "existing_kb_matches": [
+            {
+              "id": 3517,
+              "name": "Seema Malakaya Temple"
+            }
+          ],
+          "formatted_address": "WV83+QR3, Sir James Pieris Mawatha, Colombo, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=4233545559280986988&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJU5Vl_2pZ4joRbCtggUGTwDo",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "buddhist_temple",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 1.0,
+          "types": [
+            "buddhist_temple",
+            "tourist_attraction",
+            "place_of_worship",
+            "association_or_organization",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Seema Malakaya Meditation Centre",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:204",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=204"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google candidate is unapproved; insertion requires review"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:208",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 1.0,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 6.936284499999999,
+            "longitude": 79.84078099999999
+          },
+          "display_name": "Colombo Lighthouse",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "WRPR+G86, Chaithya Rd, Colombo 00100, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=15146178412311558225&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJfwlVoChZ4joRUTiFogQJMtI",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "historical_landmark",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.775,
+          "types": [
+            "historical_landmark",
+            "tourist_attraction",
+            "historical_place",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Colombo Lighthouse",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:208",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=208"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google Place equals existing KB identity; source link still needs approval"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:211",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 1.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.5517,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.1583993999999995,
+            "longitude": 80.1759543
+          },
+          "display_name": "Sri Craft Algama",
+          "distance_km": null,
+          "existing_kb_matches": [
+            {
+              "id": 5245,
+              "name": "Sri Craft Algama"
+            }
+          ],
+          "formatted_address": "Junior School Road, Egodagama Algama, Warakapola 71607, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=4231945325634806519&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJSeG6awAD4zoR92JWE9rjujo",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "campground",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 1.0,
+          "types": [
+            "campground",
+            "camping_cabin",
+            "event_venue",
+            "lodging",
+            "restaurant",
+            "food",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Craft Village",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:211",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=211"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google candidate is unapproved; insertion requires review"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:214",
+      "field_provenance": {
+        "google": {
+          "business_status": null,
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.7143,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 6.9117245,
+            "longitude": 79.8614617
+          },
+          "display_name": "Green Path",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "Green Path, Colombo, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=16833063713985496500&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJ1dxj2G5Z4joRtIWfMUMOm-k",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": null,
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.5607,
+          "types": [
+            "route"
+          ]
+        },
+        "official": {
+          "attraction_name": "Green path Colombo",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:214",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=214"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "ambiguous_multiple_candidates"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:220",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.9767,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 6.9832956,
+            "longitude": 80.05850389999999
+          },
+          "display_name": "Sri Shakyasinharamaya",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "Sri Sakyasingharamaya Temple, Delgoda - Kirindiwela Rd, Palahala, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=9915837730358065160&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJDY_ion5V4joRCHhoIOEhnIk",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "buddhist_temple",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.7576,
+          "types": [
+            "buddhist_temple",
+            "place_of_worship",
+            "association_or_organization",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Sri Shakhyasinharamaya",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:220",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=220"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google candidate is unapproved; insertion requires review"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:23",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.96,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 6.8301799999999995,
+            "longitude": 80.37425979999999
+          },
+          "display_name": "\u0daf\u0dd2\u0dc0\u0dcf \u0d9c\u0dd4\u0dc4\u0dcf\u0dc0 (\u0db6\u0da7\u0dad\u0ddc\u0da7 \u0dbd\u0dd9\u0db1) | Diva Guhawa (Batathotalena)",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "Kuruwita Erathna Rd, Kuruwita, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=1601528518911207317&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJtypjglGj4zoRlSdc47PFORY",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "buddhist_temple",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.745,
+          "types": [
+            "buddhist_temple",
+            "tourist_attraction",
+            "place_of_worship",
+            "association_or_organization",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Diva Guhawa - Batatota Lena",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:23",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=23"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google Place equals existing KB identity; source link still needs approval"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:24",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 1.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.6897,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 6.3912983,
+            "longitude": 80.3922753
+          },
+          "display_name": "Neluwa Dooli Ella",
+          "distance_km": null,
+          "existing_kb_matches": [
+            {
+              "id": 94,
+              "name": "Neluwa Dooli Ella"
+            }
+          ],
+          "formatted_address": "Warukandeniya, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=7030603163959473157&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJSTeraJfe4zoRBbSK8FO4kWE",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "tourist_attraction",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 1.0,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Doovili Ella",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:24",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=24"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google candidate is unapproved; insertion requires review"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:28",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "physical_attraction",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 1.0,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.9161277000000005,
+            "longitude": 80.5707164
+          },
+          "display_name": "Jathika Namal Uyana",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "Madatugama - Pubbogama - Andiyagala Rd, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=15602909365526135819&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJ100zR7u7_DoRCwTNcmariNg",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "national_park",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.775,
+          "types": [
+            "tourist_attraction",
+            "national_park",
+            "park",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Jathika Namal Uyana",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:28",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=28"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google candidate is unapproved; insertion requires review"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:36",
+      "field_provenance": {
+        "google": {
+          "business_status": null,
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 1.0,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.4068137,
+            "longitude": 80.1732186
+          },
+          "display_name": "Panavitiya Ambalama",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "Panavitiya Ambalama, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=17559909112128444767&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJERu1CE8h4zoRX5mPFE1UsfM",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "premise",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.775,
+          "types": [
+            "premise",
+            "street_address"
+          ]
+        },
+        "official": {
+          "attraction_name": "Panavitiya Ambalama",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:36",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=36"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google candidate is unapproved; insertion requires review"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:5",
+      "field_provenance": {
+        "google": {
+          "business_status": null,
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.5714,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.835004199999999,
+            "longitude": 81.39244790000001
+          },
+          "display_name": "Thoppigala",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "Thoppigala, Perillaveli, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=13067309325606533376&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJK3FB9wQv-zoRADntGploWLU",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "mountain_peak",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.4536,
+          "types": [
+            "mountain_peak",
+            "natural_feature",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Baron's Cap or Thoppigala",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:5",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=5"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google candidate is unapproved; insertion requires review"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:51",
+      "field_provenance": {
+        "google": {
+          "business_status": null,
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.8485,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 8.0732263,
+            "longitude": 79.7142232
+          },
+          "display_name": "Alankuda Beach Road",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "Alankuda Beach Rd, Etalai, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=5150894765510169019&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJU3z7cGpr_ToRuxGnpX-ne0c",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": null,
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.6614,
+          "types": [
+            "route"
+          ]
+        },
+        "official": {
+          "attraction_name": "Alankuda Beach",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:51",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=51"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "top Google result is a locality or administrative area, not a physical attraction"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:53",
+      "field_provenance": {
+        "google": {
+          "business_status": null,
+          "candidate_kind": "locality_or_administrative_area",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.35,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 1.0,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 6.33847,
+            "longitude": 80.0289158
+          },
+          "display_name": "Kosgoda",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "Kosgoda, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=7434820831300047743&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJW0-Pi8wr4joRf1NQmifKLWc",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": null,
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.425,
+          "types": [
+            "locality",
+            "political"
+          ]
+        },
+        "official": {
+          "attraction_name": "Kosgoda",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:53",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=53"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google Place equals existing KB identity; source link still needs approval"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:59",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 1.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.9667,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.1137426999999995,
+            "longitude": 80.13550049999999
+          },
+          "display_name": "Attanagalla Raja Maha Viharaya",
+          "distance_km": null,
+          "existing_kb_matches": [
+            {
+              "id": 4924,
+              "name": "Attanagalla Raja Maha Viharaya"
+            }
+          ],
+          "formatted_address": "Nittambuwa - Ruwanwella Rd, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=5299154173877452392&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJMY4a9lYC4zoRaH7-H6Vgikk",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "buddhist_temple",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 1.0,
+          "types": [
+            "buddhist_temple",
+            "tourist_attraction",
+            "place_of_worship",
+            "association_or_organization",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Attanagalla Raja Maha Viharava",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:59",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "probable_match_review_required",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=59"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google candidate is unapproved; insertion requires review"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:6",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.8889,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 5.9472989,
+            "longitude": 80.4513496
+          },
+          "display_name": "Whale Watching Sayuri mirissa",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "2 Udupila Road, Mirissa 81740, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=1492424841603545112&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJHaUCKgA_4ToRGHi_eXwothQ",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "tour_agency",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.6917,
+          "types": [
+            "tour_agency",
+            "travel_agency",
+            "point_of_interest",
+            "service",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Whale Watching in Mirissa",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:6",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=6"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "top Google result is a locality or administrative area, not a physical attraction"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:61",
+      "field_provenance": {
+        "google": {
+          "business_status": null,
+          "candidate_kind": "locality_or_administrative_area",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.35,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 1.0,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.1979285,
+            "longitude": 80.15262709999999
+          },
+          "display_name": "Weweldeniya",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "Weweldeniya, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=14167522018819782496&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJ1ys7Efoc4zoRYDdHnzYmncQ",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": null,
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.425,
+          "types": [
+            "locality",
+            "political"
+          ]
+        },
+        "official": {
+          "attraction_name": "Weweldeniya",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:61",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=61"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google Place equals existing KB identity; source link still needs approval"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:66",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 1.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.7333,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.2097319,
+            "longitude": 79.8536661
+          },
+          "display_name": "Angurukaramulla Temple (Bodhirajaramaya)",
+          "distance_km": null,
+          "existing_kb_matches": [
+            {
+              "id": 5577,
+              "name": "Angurukaramulla Temple (Bodhirajaramaya)"
+            }
+          ],
+          "formatted_address": "6V53+VFV, Temple Rd, Negombomaristhala, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=13691521857064512751&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJw5Bw6ezu4joR76zTlJYOAr4",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "buddhist_temple",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 1.0,
+          "types": [
+            "buddhist_temple",
+            "tourist_attraction",
+            "place_of_worship",
+            "association_or_organization",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Angurukaramulla Temple",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:66",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=66"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google Place equals existing KB identity; source link still needs approval"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:69",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 1.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.8657,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 6.3599855,
+            "longitude": 80.2402438
+          },
+          "display_name": "Maligatenna Purana Rajamaha Viharaya",
+          "distance_km": null,
+          "existing_kb_matches": [
+            {
+              "id": 956,
+              "name": "Maligatenna Purana Rajamaha Viharaya"
+            }
+          ],
+          "formatted_address": "965R+X3X, B158, Hattaka, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=1754164789139128885&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJUYpY_AbX4zoRNcIi7pQLWBg",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "buddhist_temple",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 1.0,
+          "types": [
+            "buddhist_temple",
+            "place_of_worship",
+            "association_or_organization",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Maligathenna Raja Maha Viharaya",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:69",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "probable_match_review_required",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=69"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google candidate is unapproved; insertion requires review"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:79",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.75,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.0713069,
+            "longitude": 80.163696
+          },
+          "display_name": "Bopagama Ella",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "35C7+GFG, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=5125244927216380881&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJAUSW8mAB4zoR0euaSRuHIEc",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "tourist_attraction",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.5875,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Bopagama Water Fall",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:79",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=79"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google candidate is unapproved; insertion requires review"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:8",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.75,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 9.7872519,
+            "longitude": 79.9435981
+          },
+          "display_name": "Dambakola patuna",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "QWPV+WC5, Dabakolapatuna, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=14841013127546900538&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJ-QODMACt_zoROpBX9s7e9c0",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "buddhist_temple",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.5875,
+          "types": [
+            "buddhist_temple",
+            "place_of_worship",
+            "association_or_organization",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "DambakolaPatuna Viharaya",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:8",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=8"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google Place equals existing KB identity; source link still needs approval"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:87",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 1.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.6316,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.033587499999999,
+            "longitude": 79.9350469
+          },
+          "display_name": "National Basilica of Our Lady of Lanka - Tewatta, Ragama.",
+          "distance_km": null,
+          "existing_kb_matches": [
+            {
+              "id": 3548,
+              "name": "National Basilica of Our Lady of Lanka - Tewatta, Ragama."
+            }
+          ],
+          "formatted_address": "2WMP+C2M, Lankamatha Rd, Ragama, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=3208640666919794394&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJpwh9uM754joR2nagu69hhyw",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "church",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 1.0,
+          "types": [
+            "church",
+            "place_of_worship",
+            "association_or_organization",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Thewatta Besilika Church - National Basilica of Our Lady of Lan",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:87",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=87"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google candidate is unapproved; insertion requires review"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:88",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.6,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.2166299,
+            "longitude": 80.58725419999999
+          },
+          "display_name": "Nikathanna Temple",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "6H8P+MW2, Kovilakanda, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=2154581138392878971&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJN2nX4_1u4zoRew-qQSGc5h0",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "buddhist_temple",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.475,
+          "types": [
+            "buddhist_temple",
+            "place_of_worship",
+            "association_or_organization",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Nikayalannuwara Historical Temple",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:88",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=88"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google candidate is unapproved; insertion requires review"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:89",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.6857,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.5664512,
+            "longitude": 80.1011978
+          },
+          "display_name": "Rathmulukanda",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "H482+HFP, Kottamba Pitiya, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=9890001175146424923&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJ77qtAeEp4zoRW2rMWKtXQIk",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "buddhist_temple",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.5393,
+          "types": [
+            "buddhist_temple",
+            "place_of_worship",
+            "association_or_organization",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Ratmullukanda Viharaya",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:89",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=89"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google candidate is unapproved; insertion requires review"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:9",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.6316,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 9.512545,
+            "longitude": 79.7153096
+          },
+          "display_name": "The Baobab Tree - Delft",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "GP78+247, Delft Centre, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=14566761277349532614&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJLxEFA-04_joRxpNVKDSIJ8o",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "tourist_attraction",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.4987,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Delft Biobab Tree",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:9",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=9"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google candidate is unapproved; insertion requires review"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:90",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.963,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.536573199999999,
+            "longitude": 80.49142189999999
+          },
+          "display_name": "Rideeviharaya",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "Rideevihara, Rideeviharaya, Rideegama, New Road, Rideegama 60040, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=8351961718406026975&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJRX5gl1pI4zoR35ZAq-4g6HM",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "buddhist_temple",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.7472,
+          "types": [
+            "buddhist_temple",
+            "tourist_attraction",
+            "place_of_worship",
+            "association_or_organization",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Ridee Viharaya",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:90",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=90"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google candidate is unapproved; insertion requires review"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:92",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.7843,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.514524599999999,
+            "longitude": 80.5035367
+          },
+          "display_name": "Rambodagalla Stone Statue",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "GG73+RC3, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=11517214656074881806&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJfWN8x4ZI4zoRDhtEebVd1Z8",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "buddhist_temple",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.6132,
+          "types": [
+            "buddhist_temple",
+            "place_of_worship",
+            "association_or_organization",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Rambodagalla Buddha Statue",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:92",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=92"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google candidate is unapproved; insertion requires review"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:94",
+      "field_provenance": {
+        "google": {
+          "business_status": null,
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 1.0,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.4068137,
+            "longitude": 80.1732186
+          },
+          "display_name": "Panavitiya Ambalama",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "Panavitiya Ambalama, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=17559909112128444767&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJERu1CE8h4zoRX5mPFE1UsfM",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "premise",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.775,
+          "types": [
+            "premise",
+            "street_address"
+          ]
+        },
+        "official": {
+          "attraction_name": "Panavitiya Ambalama",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:94",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=94"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google candidate is unapproved; insertion requires review"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:97",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 0.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.8788,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 7.1469352,
+            "longitude": 81.55244379999999
+          },
+          "display_name": "Pannathgoda Rajamaha Viharaya",
+          "distance_km": null,
+          "existing_kb_matches": [],
+          "formatted_address": "Pallanoya, Wadinagala, Ampara, Pallang Oya - Inginiyagala, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=270618309991364184&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJN7o74_gC5ToRWHbATOttwQM",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "buddhist_temple",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 0.6841,
+          "types": [
+            "buddhist_temple",
+            "place_of_worship",
+            "association_or_organization",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Pannathgoda Purana Raja Maha Viharaya",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:97",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "probable_match_review_required",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=97"
+        }
+      }
+    },
+    {
+      "conflicts": [
+        "Google Place equals existing KB identity; source link still needs approval"
+      ],
+      "external_source_id": "srilanka_tourism_attraction:99",
+      "field_provenance": {
+        "google": {
+          "business_status": "OPERATIONAL",
+          "candidate_kind": "insufficient_type_evidence",
+          "component_scores": {
+            "existing_google_place_id": 1.0,
+            "geographic_proximity": 0.0,
+            "locality_agreement": 0.0,
+            "locality_type_penalty": -0.0,
+            "location_conflict_penalty": -0.0,
+            "name_similarity": 0.8,
+            "type_compatibility": 0.5
+          },
+          "coordinates": {
+            "latitude": 6.6501404,
+            "longitude": 81.7761872
+          },
+          "display_name": "Okanda North Beach",
+          "distance_km": null,
+          "existing_kb_matches": [
+            {
+              "id": 4067,
+              "name": "Okanda North Beach"
+            }
+          ],
+          "formatted_address": "MQ2G+3F, Okanda, Sri Lanka",
+          "google_maps_uri": "https://maps.google.com/?cid=7778553866762208460&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "google_place_id": "ChIJl1Iob07H5ToRzESafof58ms",
+          "location_conflict": false,
+          "location_conflict_reason": null,
+          "primary_type": "tourist_attraction",
+          "provenance": {
+            "field_mask": [
+              "id",
+              "displayName",
+              "formattedAddress",
+              "location",
+              "primaryType",
+              "types",
+              "businessStatus",
+              "googleMapsUri"
+            ],
+            "source": "google_places_search"
+          },
+          "score": 1.0,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        "official": {
+          "attraction_name": "Okanda Beach",
+          "district": null,
+          "external_source_id": "srilanka_tourism_attraction:99",
+          "google_place_candidate_ids": [],
+          "google_place_id": null,
+          "latitude": null,
+          "longitude": null,
+          "reason": "new_attraction_candidate",
+          "source_url": "https://srilanka.travel/attraction?attraction_id=99"
+        }
+      }
+    }
+  ]
+}
