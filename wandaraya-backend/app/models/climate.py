@@ -225,3 +225,134 @@ class ClimateProcessingRun(Base):
     error_summary: Mapped[str | None] = mapped_column(Text)
 
 
+class ClimateActivityType(Base):
+    __tablename__ = "climate_activity_types"
+    __table_args__ = (
+        UniqueConstraint("activity_family", "activity_type", "activity_variant", name="uq_climate_activity_type"),
+    )
+    id: Mapped[int] = mapped_column(primary_key=True)
+    activity_family: Mapped[str] = mapped_column(String(80), nullable=False)
+    activity_type: Mapped[str] = mapped_column(String(80), nullable=False)
+    activity_variant: Mapped[str] = mapped_column(String(80), nullable=False)
+    name: Mapped[str] = mapped_column(String(120), nullable=False)
+    description: Mapped[str | None] = mapped_column(Text)
+    primary_climate_factor: Mapped[str] = mapped_column(String(80), nullable=False)
+    requires_external_evidence: Mapped[bool] = mapped_column(nullable=False, default=False)
+    external_evidence_requirements: Mapped[dict] = mapped_column(JSON, nullable=False, default=list)
+    is_active: Mapped[bool] = mapped_column(nullable=False, default=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=lambda: datetime.now(timezone.utc))
+
+
+class ClimateActivityProfile(Base):
+    __tablename__ = "climate_activity_profiles"
+    __table_args__ = (
+        UniqueConstraint("activity_type_id", "profile_version", name="uq_climate_activity_profile"),
+    )
+    id: Mapped[int] = mapped_column(primary_key=True)
+    activity_type_id: Mapped[int] = mapped_column(ForeignKey("climate_activity_types.id"), nullable=False, index=True)
+    profile_version: Mapped[str] = mapped_column(String(40), nullable=False)
+    feature_weights_json: Mapped[dict] = mapped_column(JSON, nullable=False, default=dict)
+    thresholds_json: Mapped[dict] = mapped_column(JSON, nullable=False, default=dict)
+    hard_constraints_json: Mapped[dict] = mapped_column(JSON, nullable=False, default=dict)
+    required_external_evidence_json: Mapped[dict] = mapped_column(JSON, nullable=False, default=list)
+    uncertainty_policy_json: Mapped[dict] = mapped_column(JSON, nullable=False, default=dict)
+    rationale: Mapped[str] = mapped_column(Text, nullable=False)
+    evidence_status: Mapped[str] = mapped_column(String(40), nullable=False)
+    is_experimental: Mapped[bool] = mapped_column(nullable=False, default=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=lambda: datetime.now(timezone.utc))
+
+
+class ClimateAttractionActivityMapping(Base):
+    __tablename__ = "climate_attraction_activity_mappings"
+    __table_args__ = (
+        UniqueConstraint("attraction_id", "activity_type_id", "classification_version", name="uq_climate_attraction_activity_mapping"),
+    )
+    id: Mapped[int] = mapped_column(primary_key=True)
+    attraction_id: Mapped[int] = mapped_column(ForeignKey("attractions.id"), nullable=False, index=True)
+    activity_type_id: Mapped[int] = mapped_column(ForeignKey("climate_activity_types.id"), nullable=False, index=True)
+    mapping_source: Mapped[str] = mapped_column(String(80), nullable=False)
+    mapping_method: Mapped[str] = mapped_column(String(80), nullable=False)
+    evidence_reference: Mapped[str | None] = mapped_column(String(160))
+    confidence_level: Mapped[str] = mapped_column(String(40), nullable=False)
+    verification_status: Mapped[str] = mapped_column(String(40), nullable=False)
+    reviewer_status: Mapped[str] = mapped_column(String(40), nullable=False, default="AUTOMATED_RULE_AUDITED")
+    classification_version: Mapped[str] = mapped_column(String(40), nullable=False)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=lambda: datetime.now(timezone.utc))
+    updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=lambda: datetime.now(timezone.utc))
+
+
+class ClimateAttractionMonthlyClimatology(Base):
+    __tablename__ = "climate_attraction_monthly_climatology"
+    __table_args__ = (
+        UniqueConstraint("attraction_id", "dataset_version_id", "month", "reference_period", "processing_version", name="uq_climate_attraction_monthly_climatology"),
+    )
+    id: Mapped[int] = mapped_column(primary_key=True)
+    attraction_id: Mapped[int] = mapped_column(ForeignKey("attractions.id"), nullable=False, index=True)
+    dataset_version_id: Mapped[int] = mapped_column(ForeignKey("climate_dataset_versions.id"), nullable=False, index=True)
+    month: Mapped[int] = mapped_column(Integer, nullable=False, index=True)
+    reference_period: Mapped[str] = mapped_column(String(40), nullable=False)
+    processing_version: Mapped[str] = mapped_column(String(40), nullable=False)
+    rainfall_mean_mm: Mapped[float | None] = mapped_column(Float)
+    rainfall_median_mm: Mapped[float | None] = mapped_column(Float)
+    rainfall_std_mm: Mapped[float | None] = mapped_column(Float)
+    rainfall_iqr_mm: Mapped[float | None] = mapped_column(Float)
+    rainfall_p10_mm: Mapped[float | None] = mapped_column(Float)
+    rainfall_p90_mm: Mapped[float | None] = mapped_column(Float)
+    rainfall_min_mm: Mapped[float | None] = mapped_column(Float)
+    rainfall_max_mm: Mapped[float | None] = mapped_column(Float)
+    rainfall_cv: Mapped[float | None] = mapped_column(Float)
+    temp_mean_c: Mapped[float | None] = mapped_column(Float)
+    temp_max_mean_c: Mapped[float | None] = mapped_column(Float)
+    temp_min_mean_c: Mapped[float | None] = mapped_column(Float)
+    diurnal_range_mean_c: Mapped[float | None] = mapped_column(Float)
+    relative_humidity_mean_pct: Mapped[float | None] = mapped_column(Float)
+    wind_speed_mean_ms: Mapped[float | None] = mapped_column(Float)
+    solar_radiation_mean_mj: Mapped[float | None] = mapped_column(Float)
+    valid_years_count: Mapped[int] = mapped_column(Integer, nullable=False)
+    total_observed_days: Mapped[int] = mapped_column(Integer, nullable=False)
+    geographic_source_type: Mapped[str] = mapped_column(String(60), nullable=False)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=lambda: datetime.now(timezone.utc))
+
+
+class ClimateAttractionActivitySeasonality(Base):
+    __tablename__ = "climate_attraction_activity_seasonality"
+    __table_args__ = (
+        UniqueConstraint("attraction_id", "activity_type_id", "month", "processing_version", "activity_profile_version", name="uq_attr_act_seasonality"),
+    )
+    id: Mapped[int] = mapped_column(primary_key=True)
+    attraction_id: Mapped[int] = mapped_column(ForeignKey("attractions.id"), nullable=False, index=True)
+    activity_type_id: Mapped[int] = mapped_column(ForeignKey("climate_activity_types.id"), nullable=False, index=True)
+    district_id: Mapped[int] = mapped_column(ForeignKey("districts.id"), nullable=False, index=True)
+    month: Mapped[int] = mapped_column(Integer, nullable=False, index=True)
+    dataset_version_id: Mapped[int] = mapped_column(ForeignKey("climate_dataset_versions.id"), nullable=False, index=True)
+    climate_source_type: Mapped[str] = mapped_column(String(60), nullable=False)
+    activity_profile_version: Mapped[str] = mapped_column(String(40), nullable=False)
+    processing_version: Mapped[str] = mapped_column(String(40), nullable=False)
+    climate_favorability_score: Mapped[float] = mapped_column(Float, nullable=False)
+    climate_favorability_rank: Mapped[int] = mapped_column(Integer, nullable=False)
+    evidence_status: Mapped[str] = mapped_column(String(40), nullable=False)
+    confidence_level: Mapped[str] = mapped_column(String(40), nullable=False)
+    uncertainty_score: Mapped[float] = mapped_column(Float, nullable=False)
+    feature_contributions_json: Mapped[dict] = mapped_column(JSON, nullable=False, default=dict)
+    explanation_json: Mapped[dict] = mapped_column(JSON, nullable=False, default=dict)
+    limitations_json: Mapped[dict] = mapped_column(JSON, nullable=False, default=dict)
+    calculated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=lambda: datetime.now(timezone.utc))
+
+
+class ClimateActivityProcessingRun(Base):
+    __tablename__ = "climate_activity_processing_runs"
+    id: Mapped[int] = mapped_column(primary_key=True)
+    stage: Mapped[str] = mapped_column(String(40), nullable=False)
+    run_type: Mapped[str] = mapped_column(String(80), nullable=False)
+    processing_version: Mapped[str] = mapped_column(String(40), nullable=False)
+    started_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False)
+    completed_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    status: Mapped[str] = mapped_column(String(40), nullable=False)
+    records_processed: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
+    records_persisted: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
+    parameters_json: Mapped[dict] = mapped_column(JSON, nullable=False, default=dict)
+    summary_json: Mapped[dict] = mapped_column(JSON, nullable=False, default=dict)
+    error_summary: Mapped[str | None] = mapped_column(Text)
+
+
+

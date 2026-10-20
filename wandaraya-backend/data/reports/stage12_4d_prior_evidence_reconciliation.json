@@ -1,0 +1,67 @@
+{
+  "status": "RECONCILED",
+  "stage": "12.4D",
+  "task": "Task Section C — Mandatory Stage 12.4C Evidence Reconciliation",
+  "timestamp_utc": "2026-10-20T12:40:00Z",
+  "reconciliations": [
+    {
+      "topic": "C1 — Attraction vs District Climatology Comparison (Horton Plains / Nuwara Eliya)",
+      "original_narrative_claim": "Narrative claimed an elevation lapse-rate temperature difference of ~1.64°C between Horton Plains (Attraction 24) and Nuwara Eliya district centroid (District 92).",
+      "reported_json_value": "stage12_4c_attraction_comparison.json reported mean_temp_difference_c: 0.0°C and mean_daily_rainfall_diff_mm: 0.12.",
+      "recomputed_database_value": {
+        "mean_temp_difference_c": 0.0,
+        "max_temp_difference_c": 0.0,
+        "mean_precip_difference_mm": 0.0,
+        "horton_plains_b01_mean_temp_c": 22.666,
+        "nuwara_eliya_b02_mean_temp_c": 22.666,
+        "horton_plains_b01_elevation_m": 681.44,
+        "nuwara_eliya_b02_elevation_m": 681.44
+      },
+      "root_cause_explanation": "NASA POWER Daily API v2.10.0 native spatial resolution is 0.5° x 0.5° (~55 km x ~55 km grid). Horton Plains (lat 6.809, lon 80.802) and Nuwara Eliya centroid (lat 7.013, lon 80.757) fall into the EXACT same 0.5° grid cell. NASA POWER assigns the identical model elevation (681.44 m) and identical meteorological reanalysis time series to both request points. Similarly, Galle Fort vs Galle District and Anuradhapura attraction vs Anuradhapura District share the same 0.5° grid cells.",
+      "scientific_conclusion": "The ~1.64°C lapse-rate difference mentioned in prior narrative was a theoretical elevation-based hypothesis, NOT supported by the NASA POWER data. Within the 0.5° resolution of NASA POWER reanalysis, attraction-specific coordinates in Batch 01 and district representative coordinates in Batch 02 receive mathematically identical climate observations. True microclimatic lapse rates cannot be resolved by 0.5° reanalysis data alone."
+    },
+    {
+      "topic": "C2 — Island-wide Rainfall Threshold Averages",
+      "original_narrative_claim": "Earlier text quoted ~11.8 days (>=1mm), ~4.9 days (>=10mm), ~2.3 days (>=20mm).",
+      "recomputed_database_value": {
+        "aggregation_denominator": "4,800 district-year-month aggregate records (25 districts x 16 years x 12 months)",
+        "weighting_method": "Equal weighting across all 4,800 month observations (equivalent to equal weighting across 25 districts, as each district has exactly 192 months)",
+        "average_rainy_days_gte_1mm": 18.2,
+        "average_heavy_rain_days_gte_10mm": 5.11,
+        "average_very_heavy_rain_days_gte_20mm": 1.77,
+        "percent_calendar_days_gte_1mm": 59.7,
+        "percent_calendar_days_gte_10mm": 16.7,
+        "percent_calendar_days_gte_20mm": 5.8
+      },
+      "root_cause_explanation": "Prior draft estimates were derived from partial subsets or dry-run calculations. The exact query over all 4,800 validated district monthly records in PostgreSQL yields 18.20 days (>=1mm), 5.11 days (>=10mm), and 1.77 days (>=20mm).",
+      "scientific_conclusion": "Authoritative island-wide monthly rainfall threshold frequencies are 18.20 days (>=1mm), 5.11 days (>=10mm), and 1.77 days (>=20mm)."
+    },
+    {
+      "topic": "C3 — Baseline Spearman Rank Correlation Distributions",
+      "original_narrative_claim": "Baseline A vs B quoted as [0.78, 0.88]; Baseline A vs C quoted as [0.94, 0.99].",
+      "recomputed_database_value": {
+        "sample_size": "25 districts",
+        "baseline_a_vs_baseline_b": {
+          "min": 0.86,
+          "mean": 0.931,
+          "median": 0.937,
+          "max": 0.986
+        },
+        "baseline_a_vs_baseline_c": {
+          "min": 0.895,
+          "mean": 0.943,
+          "median": 0.951,
+          "max": 0.986
+        },
+        "baseline_b_vs_baseline_c": {
+          "min": 0.797,
+          "mean": 0.916,
+          "median": 0.909,
+          "max": 0.979
+        }
+      },
+      "root_cause_explanation": "Full 25-district calculation reveals Baseline A vs B ranges from 0.860 to 0.986 (mean 0.931), showing that rainfall favorability remains the primary driver across most districts, with temperature/humidity creating moderate reorderings in specific thermal zones.",
+      "scientific_conclusion": "All 25 districts exhibit high concordance across baselines, with Baseline A vs C showing the highest stability (mean 0.943) and Baseline B showing the largest differentiation (mean 0.931, min 0.860)."
+    }
+  ]
+}

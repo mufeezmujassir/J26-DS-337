@@ -1,0 +1,362 @@
+"""Tourism Activity Taxonomy and Climate Suitability Profiles (Stage 12.4D).
+
+Defines the hierarchical activity taxonomy and versioned experimental climate suitability
+profiles for Sri Lankan tourism.
+"""
+from __future__ import annotations
+
+from dataclasses import dataclass
+from typing import Any
+
+
+@dataclass(frozen=True)
+class ActivityTypeDefinition:
+    id_code: str
+    activity_family: str
+    activity_type: str
+    activity_variant: str
+    name: str
+    description: str
+    primary_climate_factor: str
+    requires_external_evidence: bool
+    external_evidence_requirements: list[str]
+    evidence_status: str
+    feature_weights: dict[str, float]
+    rationale: str
+    unsupported_abstention_warning: str | None = None
+
+
+ACTIVITY_TAXONOMY: list[ActivityTypeDefinition] = [
+    ActivityTypeDefinition(
+        id_code="beach_relaxation",
+        activity_family="coastal_recreation",
+        activity_type="beach_visit",
+        activity_variant="beach_relaxation",
+        name="Beach Relaxation",
+        description="Leisurely coastal and beachside activities requiring dry conditions, warm comfortable temperatures, and sunshine.",
+        primary_climate_factor="rainfall_favorability",
+        requires_external_evidence=False,
+        external_evidence_requirements=[],
+        evidence_status="SUPPORTED_CLIMATE_ONLY",
+        feature_weights={
+            "relative_rainfall_favorability": 0.50,
+            "temperature_comfort_index": 0.20,
+            "humidity_comfort_index": 0.15,
+            "solar_radiation_context": 0.15,
+        },
+        rationale="Beach relaxation strongly benefits from dry days and sunshine; rain significantly disrupts open coastal stays.",
+    ),
+    ActivityTypeDefinition(
+        id_code="surfing",
+        activity_family="water_sports",
+        activity_type="surfing",
+        activity_variant="coastal_surfing",
+        name="Surfing",
+        description="Ocean wave surfing along Sri Lankan coastal breaks (e.g. Arugam Bay, Weligama, Hikkaduwa).",
+        primary_climate_factor="marine_swell_and_currents",
+        requires_external_evidence=True,
+        external_evidence_requirements=["ocean_swell_height", "wave_period", "offshore_wind_direction", "bathymetry"],
+        evidence_status="CLIMATE_ONLY_PARTIAL",
+        feature_weights={
+            "relative_rainfall_favorability": 0.35,
+            "temperature_comfort_index": 0.35,
+            "solar_radiation_context": 0.15,
+            "rainfall_reliability_index": 0.15,
+        },
+        rationale="Surfing depends primarily on marine oceanographic factors (monsoon swell direction, wave periods, bathymetric breaks). Low rainfall is an incomplete proxy; during peak surf seasons, localized rain does not necessarily impede surfing.",
+        unsupported_abstention_warning="Surfing suitability fundamentally requires marine wave, swell, and wind direction data. Low rainfall alone is insufficient to evaluate surfing conditions.",
+    ),
+    ActivityTypeDefinition(
+        id_code="swimming",
+        activity_family="water_sports",
+        activity_type="swimming",
+        activity_variant="open_water_swimming",
+        name="Open Water Swimming",
+        description="Recreational ocean or lake swimming.",
+        primary_climate_factor="water_safety_and_currents",
+        requires_external_evidence=True,
+        external_evidence_requirements=["rip_currents", "monsoonal_sea_roughness", "water_quality", "lifeguard_status"],
+        evidence_status="CLIMATE_ONLY_PARTIAL",
+        feature_weights={
+            "relative_rainfall_favorability": 0.40,
+            "temperature_comfort_index": 0.30,
+            "humidity_comfort_index": 0.15,
+            "solar_radiation_context": 0.15,
+        },
+        rationale="Swimming comfort correlates with warmth and dryness, but physical safety depends critically on rough seas, rip currents, and monsoonal waves.",
+        unsupported_abstention_warning="Swimming safety requires marine wave roughness and rip current alerts. Climate metrics represent atmospheric comfort only.",
+    ),
+    ActivityTypeDefinition(
+        id_code="snorkeling_diving",
+        activity_family="water_sports",
+        activity_type="snorkeling_diving",
+        activity_variant="coral_reef_exploration",
+        name="Snorkeling & Scuba Diving",
+        description="Underwater marine exploration across coral reefs, shipwrecks, and marine sanctuaries.",
+        primary_climate_factor="underwater_visibility_and_roughness",
+        requires_external_evidence=True,
+        external_evidence_requirements=["underwater_visibility_meters", "marine_turbidity", "monsoonal_currents"],
+        evidence_status="CLIMATE_ONLY_PARTIAL",
+        feature_weights={
+            "relative_rainfall_favorability": 0.50,
+            "solar_radiation_context": 0.25,
+            "temperature_comfort_index": 0.15,
+            "rainfall_reliability_index": 0.10,
+        },
+        rationale="Heavy rain increases coastal sediment runoff and ruins water clarity; high solar radiation improves underwater illumination. However, marine currents and surge dictate actual dive safety.",
+        unsupported_abstention_warning="Diving clarity and safety fundamentally require underwater visibility and swell reports.",
+    ),
+    ActivityTypeDefinition(
+        id_code="hiking_trekking",
+        activity_family="outdoor_adventure",
+        activity_type="hiking",
+        activity_variant="trail_trekking",
+        name="Hiking & Trekking",
+        description="Foot trail navigation in nature reserves, hill country ridges, and national parks.",
+        primary_climate_factor="rainy_day_frequency_and_heat",
+        requires_external_evidence=False,
+        external_evidence_requirements=[],
+        evidence_status="SUPPORTED_CLIMATE_ONLY",
+        feature_weights={
+            "relative_rainfall_favorability": 0.45,
+            "temperature_comfort_index": 0.30,
+            "humidity_comfort_index": 0.15,
+            "rainfall_reliability_index": 0.10,
+        },
+        rationale="Trail slipperiness, leech activity, and outdoor exposure are strongly influenced by daily rainfall and heat stress.",
+    ),
+    ActivityTypeDefinition(
+        id_code="mountain_sightseeing",
+        activity_family="nature_sightseeing",
+        activity_type="mountain_viewing",
+        activity_variant="peak_sightseeing",
+        name="Mountain & Viewpoint Sightseeing",
+        description="Panoramic viewing from high-altitude ridges, gap viewpoints (e.g. World's End, Ella Gap, Lipton's Seat).",
+        primary_climate_factor="cloud_cover_and_rainfall",
+        requires_external_evidence=False,
+        external_evidence_requirements=[],
+        evidence_status="SUPPORTED_CLIMATE_ONLY",
+        feature_weights={
+            "relative_rainfall_favorability": 0.50,
+            "solar_radiation_context": 0.20,
+            "temperature_comfort_index": 0.15,
+            "rainfall_reliability_index": 0.15,
+        },
+        rationale="Viewpoint quality relies on low cloud cover and clear visibility, which correlate inversely with monsoonal rain.",
+    ),
+    ActivityTypeDefinition(
+        id_code="wildlife_safari",
+        activity_family="nature_wildlife",
+        activity_type="wildlife_safari",
+        activity_variant="national_park_jeep_safari",
+        name="Wildlife Safari",
+        description="Jeep safaris for elephant, leopard, and bird observation in national parks (e.g. Yala, Wilpattu, Udawalawe, Minneriya).",
+        primary_climate_factor="waterhole_concentration_and_trail_passability",
+        requires_external_evidence=True,
+        external_evidence_requirements=["animal_migration_season", "waterhole_dryness_index", "park_seasonal_closure"],
+        evidence_status="CLIMATE_ONLY_PARTIAL",
+        feature_weights={
+            "relative_rainfall_favorability": 0.45,
+            "temperature_comfort_index": 0.25,
+            "humidity_comfort_index": 0.15,
+            "rainfall_reliability_index": 0.15,
+        },
+        rationale="Dry months concentrate animals around shrinking waterholes, increasing sightings, and keep dirt tracks passable. However, specific events like the Minneriya Elephant Gathering or park drought closures require wildlife telemetry/park notices.",
+        unsupported_abstention_warning="Animal sightings depend on seasonal migration and waterhole ecology. Climate metrics reflect visitor track comfort only.",
+    ),
+    ActivityTypeDefinition(
+        id_code="cultural_sightseeing",
+        activity_family="heritage_culture",
+        activity_type="cultural_tour",
+        activity_variant="general_cultural_visit",
+        name="Cultural & Heritage Sightseeing",
+        description="Exploring historic cities, palaces, colonial forts, and cultural landmarks (e.g. Galle Fort, Kandy Royal Complex).",
+        primary_climate_factor="rainfall_and_thermal_comfort",
+        requires_external_evidence=False,
+        external_evidence_requirements=[],
+        evidence_status="SUPPORTED_CLIMATE_ONLY",
+        feature_weights={
+            "relative_rainfall_favorability": 0.40,
+            "temperature_comfort_index": 0.30,
+            "humidity_comfort_index": 0.20,
+            "solar_radiation_context": 0.10,
+        },
+        rationale="Walking tours in cultural centers are degraded by heavy rainfall and high humid heat stress.",
+    ),
+    ActivityTypeDefinition(
+        id_code="archaeological_exploration",
+        activity_family="heritage_culture",
+        activity_type="archaeology",
+        activity_variant="outdoor_archaeological_ruins",
+        name="Archaeological Exploration",
+        description="Exploring ancient open-air ruin complexes (e.g. Sigiriya, Anuradhapura Sacred City, Polonnaruwa).",
+        primary_climate_factor="outdoor_heat_and_rainfall",
+        requires_external_evidence=False,
+        external_evidence_requirements=[],
+        evidence_status="SUPPORTED_CLIMATE_ONLY",
+        feature_weights={
+            "relative_rainfall_favorability": 0.45,
+            "temperature_comfort_index": 0.30,
+            "humidity_comfort_index": 0.15,
+            "solar_radiation_context": 0.10,
+        },
+        rationale="Exposed stone structures and unshaded monuments become physically demanding under severe heat or torrential monsoon rain.",
+    ),
+    ActivityTypeDefinition(
+        id_code="religious_sightseeing",
+        activity_family="heritage_culture",
+        activity_type="religious_visit",
+        activity_variant="temple_pilgrimage",
+        name="Religious & Temple Pilgrimage",
+        description="Visiting active Buddhist, Hindu, Christian, and Islamic pilgrimage sites and shrines (e.g. Temple of the Tooth, Kataragama, Adam's Peak).",
+        primary_climate_factor="thermal_comfort_and_barefoot_exposure",
+        requires_external_evidence=True,
+        external_evidence_requirements=["poya_calendar", "pilgrimage_season_dates", "temple_dress_and_access_rules"],
+        evidence_status="CLIMATE_ONLY_PARTIAL",
+        feature_weights={
+            "relative_rainfall_favorability": 0.35,
+            "temperature_comfort_index": 0.35,
+            "humidity_comfort_index": 0.20,
+            "solar_radiation_context": 0.10,
+        },
+        rationale="Temple compounds frequently require walking barefoot on open stone/sand terraces; extreme midday solar heating burns feet, while rain causes slippage. Religious calendar events often override climate preferences.",
+        unsupported_abstention_warning="Religious pilgrimages (e.g. Sri Pada season Dec-May) are governed by tradition and Poya holidays, which take precedence over macroclimate.",
+    ),
+    ActivityTypeDefinition(
+        id_code="waterfalls",
+        activity_family="nature_sightseeing",
+        activity_type="waterfall_visit",
+        activity_variant="waterfall_viewing_bathing",
+        name="Waterfall Viewing & Bathing",
+        description="Visiting cascading mountain cascades and natural pool basins (e.g. Dunhinda, Diyaluma, Ramboda).",
+        primary_climate_factor="hydrological_flow_vs_flash_flood_risk",
+        requires_external_evidence=True,
+        external_evidence_requirements=["upstream_river_discharge", "flash_flood_warnings", "dry_season_stream_status"],
+        evidence_status="CLIMATE_ONLY_PARTIAL",
+        feature_weights={
+            "relative_rainfall_favorability": 0.30,
+            "temperature_comfort_index": 0.30,
+            "humidity_comfort_index": 0.20,
+            "solar_radiation_context": 0.20,
+        },
+        rationale="Waterfalls present a dual paradox: rainy seasons maximize dramatic water flow but create catastrophic flash flood and drowning risks; dry seasons allow safe bathing but may reduce the waterfall to a trickle.",
+        unsupported_abstention_warning="Waterfall volume and pool safety require upstream watershed hydrological sensors. Atmospheric climate alone cannot confirm water flow safety.",
+    ),
+    ActivityTypeDefinition(
+        id_code="camping",
+        activity_family="outdoor_adventure",
+        activity_type="camping",
+        activity_variant="overnight_wilderness_camping",
+        name="Wilderness Camping",
+        description="Overnight outdoor tent stays in forests, plains, and plateau sites.",
+        primary_climate_factor="rainy_day_frequency_and_temperature",
+        requires_external_evidence=False,
+        external_evidence_requirements=[],
+        evidence_status="SUPPORTED_CLIMATE_ONLY",
+        feature_weights={
+            "relative_rainfall_favorability": 0.50,
+            "temperature_comfort_index": 0.25,
+            "rainfall_reliability_index": 0.15,
+            "humidity_comfort_index": 0.10,
+        },
+        rationale="Camping comfort is severely compromised by prolonged precipitation, ground waterlogging, and extreme temperature drops in highlands.",
+    ),
+    ActivityTypeDefinition(
+        id_code="cycling",
+        activity_family="outdoor_adventure",
+        activity_type="cycling",
+        activity_variant="road_and_trail_cycling",
+        name="Cycling & Mountain Biking",
+        description="Road touring, rural gravel rides, and mountain bike descents.",
+        primary_climate_factor="rainfall_heat_humidity",
+        requires_external_evidence=False,
+        external_evidence_requirements=[],
+        evidence_status="SUPPORTED_CLIMATE_ONLY",
+        feature_weights={
+            "relative_rainfall_favorability": 0.40,
+            "temperature_comfort_index": 0.30,
+            "humidity_comfort_index": 0.20,
+            "solar_radiation_context": 0.10,
+        },
+        rationale="Cyclists generate substantial metabolic heat, requiring manageable ambient temperature, moderate humidity, and dry road surfaces.",
+    ),
+    ActivityTypeDefinition(
+        id_code="photography",
+        activity_family="creative_sightseeing",
+        activity_type="photography",
+        activity_variant="landscape_photography",
+        name="Landscape & Wildlife Photography",
+        description="Outdoor landscape, architectural, and golden-hour photography.",
+        primary_climate_factor="solar_illumination_and_clarity",
+        requires_external_evidence=False,
+        external_evidence_requirements=[],
+        evidence_status="SUPPORTED_CLIMATE_ONLY",
+        feature_weights={
+            "solar_radiation_context": 0.40,
+            "relative_rainfall_favorability": 0.30,
+            "humidity_comfort_index": 0.15,
+            "temperature_comfort_index": 0.15,
+        },
+        rationale="Photographers prioritize high incident light, dramatic skies without persistent downpours, and optical clarity.",
+    ),
+    ActivityTypeDefinition(
+        id_code="urban_sightseeing",
+        activity_family="sightseeing",
+        activity_type="urban_visit",
+        activity_variant="city_walking_tour",
+        name="Urban Sightseeing & Shopping",
+        description="City center exploration, shopping streets, and commercial markets (e.g. Colombo Pettah, Galle Fort boutiques).",
+        primary_climate_factor="thermal_comfort_and_rain",
+        requires_external_evidence=False,
+        external_evidence_requirements=[],
+        evidence_status="SUPPORTED_CLIMATE_ONLY",
+        feature_weights={
+            "relative_rainfall_favorability": 0.35,
+            "temperature_comfort_index": 0.35,
+            "humidity_comfort_index": 0.20,
+            "solar_radiation_context": 0.10,
+        },
+        rationale="Urban walks suffer from concrete heat island effects; rain creates puddles and traffic congestion, while extreme heat degrades walking comfort.",
+    ),
+    ActivityTypeDefinition(
+        id_code="tea_plantation_visits",
+        activity_family="agro_tourism",
+        activity_type="plantation_tour",
+        activity_variant="tea_estate_and_factory",
+        name="Tea Plantation & Factory Tour",
+        description="Strolling through terraced tea estates and touring historic tea processing factories.",
+        primary_climate_factor="mild_temperatures_and_rain",
+        requires_external_evidence=False,
+        external_evidence_requirements=[],
+        evidence_status="SUPPORTED_CLIMATE_ONLY",
+        feature_weights={
+            "relative_rainfall_favorability": 0.40,
+            "temperature_comfort_index": 0.35,
+            "humidity_comfort_index": 0.15,
+            "solar_radiation_context": 0.10,
+        },
+        rationale="Tea estates are outdoor hillside walks requiring dry, crisp weather; factories provide indoor shelter but plantation walks are degraded by rain.",
+    ),
+]
+
+
+def get_activity_taxonomy_dict() -> list[dict[str, Any]]:
+    """Return JSON-serializable list of activity definitions."""
+    return [
+        {
+            "id_code": a.id_code,
+            "activity_family": a.activity_family,
+            "activity_type": a.activity_type,
+            "activity_variant": a.activity_variant,
+            "name": a.name,
+            "description": a.description,
+            "primary_climate_factor": a.primary_climate_factor,
+            "requires_external_evidence": a.requires_external_evidence,
+            "external_evidence_requirements": a.external_evidence_requirements,
+            "evidence_status": a.evidence_status,
+            "feature_weights": a.feature_weights,
+            "rationale": a.rationale,
+            "unsupported_abstention_warning": a.unsupported_abstention_warning,
+        }
+        for a in ACTIVITY_TAXONOMY
+    ]

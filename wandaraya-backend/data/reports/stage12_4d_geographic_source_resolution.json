@@ -1,0 +1,13 @@
+{
+  "status": "COMPLETED",
+  "stage": "12.4D",
+  "dedicated_attractions_count": 3,
+  "dedicated_attraction_ids": [
+    1,
+    16,
+    24
+  ],
+  "dedicated_climatology_records": 36,
+  "district_proxy_attractions_count": 6117,
+  "geographic_policy": "Attractions 1, 16, 24 use ATTRACTION_COORDINATE_REANALYSIS; all other attractions use DISTRICT_REPRESENTATIVE_PROXY based on verified district_id mapping."
+}

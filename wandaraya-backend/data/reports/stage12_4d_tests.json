@@ -1,0 +1,160 @@
+{
+  "stage": "12.4D",
+  "timestamp_utc": "2026-10-20T14:45:25.591154+00:00",
+  "total_tests": 30,
+  "passed": 30,
+  "failed": 0,
+  "status": "ALL_TESTS_PASSED",
+  "test_details": [
+    {
+      "test_name": "test_01_stage12_4c_data_preserved",
+      "status": "PASSED",
+      "details": "Aggregates: 4800, Climatology: 300, Features: 300"
+    },
+    {
+      "test_name": "test_02_dataset_version_isolation",
+      "status": "PASSED",
+      "details": "Batch 02 dataset ID: 3"
+    },
+    {
+      "test_name": "test_03_attraction_inventory_completeness",
+      "status": "PASSED",
+      "details": "Total attractions: 6120, active: 6120"
+    },
+    {
+      "test_name": "test_04_valid_attraction_district_mapping",
+      "status": "PASSED",
+      "details": "Attractions with NULL district: 0"
+    },
+    {
+      "test_name": "test_05_activity_taxonomy_uniqueness",
+      "status": "PASSED",
+      "details": "Activity types in DB: 16/16"
+    },
+    {
+      "test_name": "test_06_activity_profile_versioning",
+      "status": "PASSED",
+      "details": "Profile versions: {'12.4d_v1': 16}"
+    },
+    {
+      "test_name": "test_07_mapping_provenance",
+      "status": "PASSED",
+      "details": "Verified mapping_source and mapping_method across sample records"
+    },
+    {
+      "test_name": "test_08_unsupported_activity_abstention",
+      "status": "PASSED",
+      "details": "Mapped attractions: 4472 < 6,120 (abstains for unclassified attractions)"
+    },
+    {
+      "test_name": "test_09_weight_normalization",
+      "status": "PASSED",
+      "details": "All activity taxonomy feature weights sum to 1.0"
+    },
+    {
+      "test_name": "test_10_score_bounds",
+      "status": "PASSED",
+      "details": "Scores strictly within [0.0, 1.0]: min=0.1597, max=0.927"
+    },
+    {
+      "test_name": "test_11_monthly_ranking_correctness",
+      "status": "PASSED",
+      "details": "Ranks for Attraction 1, Activity 8: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]"
+    },
+    {
+      "test_name": "test_12_explanation_score_consistency",
+      "status": "PASSED",
+      "details": "Rank 1 explanation reflects top favorability: March ranks #1 of 12 (one of the historically most favorable..."
+    },
+    {
+      "test_name": "test_13_missing_critical_evidence_flagging",
+      "status": "PASSED",
+      "details": "Evidence status counts: {'CLIMATE_ONLY_PARTIAL': 20328, 'SUPPORTED_CLIMATE_ONLY': 101196}"
+    },
+    {
+      "test_name": "test_14_geographic_proxy_labeling",
+      "status": "PASSED",
+      "details": "Geographic source types: {'ATTRACTION_COORDINATE_REANALYSIS': 132, 'DISTRICT_REPRESENTATIVE_PROXY': 121392}"
+    },
+    {
+      "test_name": "test_15_attraction_coordinate_isolation",
+      "status": "PASSED",
+      "details": "Dedicated attraction climatology count: 36/36"
+    },
+    {
+      "test_name": "test_16_prior_evidence_reconciled",
+      "status": "PASSED",
+      "details": "stage12_4d_prior_evidence_reconciliation.json exists: True"
+    },
+    {
+      "test_name": "test_17_district_fallback_behavior",
+      "status": "PASSED",
+      "details": "Attraction 100 resolved activities: 1"
+    },
+    {
+      "test_name": "test_18_elevation_proxy_warnings",
+      "status": "PASSED",
+      "details": "Limitations surfaced for Attraction 24: 2 warnings"
+    },
+    {
+      "test_name": "test_19_deterministic_repeated_execution",
+      "status": "PASSED",
+      "details": "Processing runs logged: 1"
+    },
+    {
+      "test_name": "test_20_idempotent_database_upserts",
+      "status": "PASSED",
+      "details": "Duplicate profiles found: 0"
+    },
+    {
+      "test_name": "test_21_transaction_rollback_integrity",
+      "status": "PASSED",
+      "details": "Transaction rolled back on FK violation: True"
+    },
+    {
+      "test_name": "test_22_foreign_key_integrity",
+      "status": "PASSED",
+      "details": "Orphan records: 0"
+    },
+    {
+      "test_name": "test_23_unique_constraint_enforced",
+      "status": "PASSED",
+      "details": "Duplicate mappings: 0"
+    },
+    {
+      "test_name": "test_24_experiment_reproducibility",
+      "status": "PASSED",
+      "details": "stage12_4d_experiments.json exists: True"
+    },
+    {
+      "test_name": "test_25_no_qdrant_writes",
+      "status": "PASSED",
+      "details": "Verified no vector collection mutations"
+    },
+    {
+      "test_name": "test_26_no_recommendation_ranking_changes",
+      "status": "PASSED",
+      "details": "Verified production recommendation ranker unchanged"
+    },
+    {
+      "test_name": "test_27_no_weather_table_modifications",
+      "status": "PASSED",
+      "details": "district_weather_monthly: 873, weather_readings: 1162"
+    },
+    {
+      "test_name": "test_28_preservation_of_raw_climate_observations",
+      "status": "PASSED",
+      "details": "Raw observations: 165828 (expected 165,828)"
+    },
+    {
+      "test_name": "test_29_marine_activity_evidence_status",
+      "status": "PASSED",
+      "details": "Marine activity evidence statuses: {'CLIMATE_ONLY_PARTIAL'}"
+    },
+    {
+      "test_name": "test_30_safety_and_wildlife_abstention",
+      "status": "PASSED",
+      "details": "Wildlife/waterfall evidence statuses: {'CLIMATE_ONLY_PARTIAL'}"
+    }
+  ]
+}

@@ -19,7 +19,13 @@ from app.models.district_weather_monthly import DistrictWeatherMonthly
 from app.models.weather_model_run import WeatherModelRun
 from app.models.weather_forecast import WeatherForecast
 from app.models.climate import (
+    ClimateActivityProcessingRun,
+    ClimateActivityProfile,
+    ClimateActivityType,
+    ClimateAttractionActivityMapping,
+    ClimateAttractionActivitySeasonality,
     ClimateAttractionMapping,
+    ClimateAttractionMonthlyClimatology,
     ClimateDailyObservation,
     ClimateDatasetVersion,
     ClimateDistrictMapping,
@@ -78,6 +84,12 @@ __all__ = [
     "ClimateSeasonalityFeature",
     "ClimateProcessingRun",
     "ClimateIngestionRun",
+    "ClimateActivityType",
+    "ClimateActivityProfile",
+    "ClimateAttractionActivityMapping",
+    "ClimateAttractionMonthlyClimatology",
+    "ClimateAttractionActivitySeasonality",
+    "ClimateActivityProcessingRun",
 
     "Road",
     "BusFare",

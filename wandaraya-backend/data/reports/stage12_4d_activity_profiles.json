@@ -1,0 +1,183 @@
+{
+  "status": "PROFILES_VERIFIED",
+  "profile_version": "12.4d_v1",
+  "profiles_count": 16,
+  "profiles": [
+    {
+      "activity_type_id": 1,
+      "weights": {
+        "relative_rainfall_favorability": 0.5,
+        "temperature_comfort_index": 0.2,
+        "humidity_comfort_index": 0.15,
+        "solar_radiation_context": 0.15
+      },
+      "evidence_status": "SUPPORTED_CLIMATE_ONLY",
+      "rationale": "Beach relaxation strongly benefits from dry days and sunshine; rain significantly disrupts open coastal stays."
+    },
+    {
+      "activity_type_id": 2,
+      "weights": {
+        "relative_rainfall_favorability": 0.35,
+        "temperature_comfort_index": 0.35,
+        "solar_radiation_context": 0.15,
+        "rainfall_reliability_index": 0.15
+      },
+      "evidence_status": "CLIMATE_ONLY_PARTIAL",
+      "rationale": "Surfing depends primarily on marine oceanographic factors (monsoon swell direction, wave periods, bathymetric breaks). Low rainfall is an incomplete proxy; during peak surf seasons, localized rain does not necessarily impede surfing."
+    },
+    {
+      "activity_type_id": 3,
+      "weights": {
+        "relative_rainfall_favorability": 0.4,
+        "temperature_comfort_index": 0.3,
+        "humidity_comfort_index": 0.15,
+        "solar_radiation_context": 0.15
+      },
+      "evidence_status": "CLIMATE_ONLY_PARTIAL",
+      "rationale": "Swimming comfort correlates with warmth and dryness, but physical safety depends critically on rough seas, rip currents, and monsoonal waves."
+    },
+    {
+      "activity_type_id": 4,
+      "weights": {
+        "relative_rainfall_favorability": 0.5,
+        "solar_radiation_context": 0.25,
+        "temperature_comfort_index": 0.15,
+        "rainfall_reliability_index": 0.1
+      },
+      "evidence_status": "CLIMATE_ONLY_PARTIAL",
+      "rationale": "Heavy rain increases coastal sediment runoff and ruins water clarity; high solar radiation improves underwater illumination. However, marine currents and surge dictate actual dive safety."
+    },
+    {
+      "activity_type_id": 5,
+      "weights": {
+        "relative_rainfall_favorability": 0.45,
+        "temperature_comfort_index": 0.3,
+        "humidity_comfort_index": 0.15,
+        "rainfall_reliability_index": 0.1
+      },
+      "evidence_status": "SUPPORTED_CLIMATE_ONLY",
+      "rationale": "Trail slipperiness, leech activity, and outdoor exposure are strongly influenced by daily rainfall and heat stress."
+    },
+    {
+      "activity_type_id": 6,
+      "weights": {
+        "relative_rainfall_favorability": 0.5,
+        "solar_radiation_context": 0.2,
+        "temperature_comfort_index": 0.15,
+        "rainfall_reliability_index": 0.15
+      },
+      "evidence_status": "SUPPORTED_CLIMATE_ONLY",
+      "rationale": "Viewpoint quality relies on low cloud cover and clear visibility, which correlate inversely with monsoonal rain."
+    },
+    {
+      "activity_type_id": 7,
+      "weights": {
+        "relative_rainfall_favorability": 0.45,
+        "temperature_comfort_index": 0.25,
+        "humidity_comfort_index": 0.15,
+        "rainfall_reliability_index": 0.15
+      },
+      "evidence_status": "CLIMATE_ONLY_PARTIAL",
+      "rationale": "Dry months concentrate animals around shrinking waterholes, increasing sightings, and keep dirt tracks passable. However, specific events like the Minneriya Elephant Gathering or park drought closures require wildlife telemetry/park notices."
+    },
+    {
+      "activity_type_id": 8,
+      "weights": {
+        "relative_rainfall_favorability": 0.4,
+        "temperature_comfort_index": 0.3,
+        "humidity_comfort_index": 0.2,
+        "solar_radiation_context": 0.1
+      },
+      "evidence_status": "SUPPORTED_CLIMATE_ONLY",
+      "rationale": "Walking tours in cultural centers are degraded by heavy rainfall and high humid heat stress."
+    },
+    {
+      "activity_type_id": 9,
+      "weights": {
+        "relative_rainfall_favorability": 0.45,
+        "temperature_comfort_index": 0.3,
+        "humidity_comfort_index": 0.15,
+        "solar_radiation_context": 0.1
+      },
+      "evidence_status": "SUPPORTED_CLIMATE_ONLY",
+      "rationale": "Exposed stone structures and unshaded monuments become physically demanding under severe heat or torrential monsoon rain."
+    },
+    {
+      "activity_type_id": 10,
+      "weights": {
+        "relative_rainfall_favorability": 0.35,
+        "temperature_comfort_index": 0.35,
+        "humidity_comfort_index": 0.2,
+        "solar_radiation_context": 0.1
+      },
+      "evidence_status": "CLIMATE_ONLY_PARTIAL",
+      "rationale": "Temple compounds frequently require walking barefoot on open stone/sand terraces; extreme midday solar heating burns feet, while rain causes slippage. Religious calendar events often override climate preferences."
+    },
+    {
+      "activity_type_id": 11,
+      "weights": {
+        "relative_rainfall_favorability": 0.3,
+        "temperature_comfort_index": 0.3,
+        "humidity_comfort_index": 0.2,
+        "solar_radiation_context": 0.2
+      },
+      "evidence_status": "CLIMATE_ONLY_PARTIAL",
+      "rationale": "Waterfalls present a dual paradox: rainy seasons maximize dramatic water flow but create catastrophic flash flood and drowning risks; dry seasons allow safe bathing but may reduce the waterfall to a trickle."
+    },
+    {
+      "activity_type_id": 12,
+      "weights": {
+        "relative_rainfall_favorability": 0.5,
+        "temperature_comfort_index": 0.25,
+        "rainfall_reliability_index": 0.15,
+        "humidity_comfort_index": 0.1
+      },
+      "evidence_status": "SUPPORTED_CLIMATE_ONLY",
+      "rationale": "Camping comfort is severely compromised by prolonged precipitation, ground waterlogging, and extreme temperature drops in highlands."
+    },
+    {
+      "activity_type_id": 13,
+      "weights": {
+        "relative_rainfall_favorability": 0.4,
+        "temperature_comfort_index": 0.3,
+        "humidity_comfort_index": 0.2,
+        "solar_radiation_context": 0.1
+      },
+      "evidence_status": "SUPPORTED_CLIMATE_ONLY",
+      "rationale": "Cyclists generate substantial metabolic heat, requiring manageable ambient temperature, moderate humidity, and dry road surfaces."
+    },
+    {
+      "activity_type_id": 14,
+      "weights": {
+        "solar_radiation_context": 0.4,
+        "relative_rainfall_favorability": 0.3,
+        "humidity_comfort_index": 0.15,
+        "temperature_comfort_index": 0.15
+      },
+      "evidence_status": "SUPPORTED_CLIMATE_ONLY",
+      "rationale": "Photographers prioritize high incident light, dramatic skies without persistent downpours, and optical clarity."
+    },
+    {
+      "activity_type_id": 15,
+      "weights": {
+        "relative_rainfall_favorability": 0.35,
+        "temperature_comfort_index": 0.35,
+        "humidity_comfort_index": 0.2,
+        "solar_radiation_context": 0.1
+      },
+      "evidence_status": "SUPPORTED_CLIMATE_ONLY",
+      "rationale": "Urban walks suffer from concrete heat island effects; rain creates puddles and traffic congestion, while extreme heat degrades walking comfort."
+    },
+    {
+      "activity_type_id": 16,
+      "weights": {
+        "relative_rainfall_favorability": 0.4,
+        "temperature_comfort_index": 0.35,
+        "humidity_comfort_index": 0.15,
+        "solar_radiation_context": 0.1
+      },
+      "evidence_status": "SUPPORTED_CLIMATE_ONLY",
+      "rationale": "Tea estates are outdoor hillside walks requiring dry, crisp weather; factories provide indoor shelter but plantation walks are degraded by rain."
+    }
+  ]
+}
