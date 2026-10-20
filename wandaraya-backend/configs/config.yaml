@@ -142,3 +142,25 @@ decision:
     weighted_results_json: /"reports/weighted_voting_results.json"
     weighted_sensitivity_figure: "reports/figures/weighted_sensitivity.png"
     weighted_comparison_figure: "reports/figures/weighted_comparison.png"
+
+    minority_results_json: "reports/minority_protection_results.json"
+    minority_comparison_figure: "reports/figures/minority_comparison.png"
+    minority_sensitivity_figure: "reports/figures/minority_sensitivity.png"
+  minority:
+    enabled: true
+    base_method: "weighted"          
+    min_strength: 1.0                 
+    slots:
+      Destination:
+        - "stop_1"
+        - "stop_2"
+        - "stop_3"
+      Activity:
+        - "morning"
+        - "afternoon"
+        - "evening"
+    max_protection_items: null        
+    solver: "greedy"                  
+    allow_repeats: false
+    forbid_rejected_items: true       
+    hints_path: "configs/compromise_hints.yaml"

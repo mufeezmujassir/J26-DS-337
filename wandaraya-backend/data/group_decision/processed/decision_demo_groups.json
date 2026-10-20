@@ -158,5 +158,57 @@
       {"member": "Bob", "category": "Destination", "stance": "positive", "value": {"name": "galle"}, "message_id": "msg_14_2", "emotion": {"intensity": 0.85, "valence_sign": 1, "dominant_emotion": "admiration"}},
       {"member": "Charlie", "category": "Destination", "stance": "positive", "value": {"name": "galle"}, "message_id": "msg_14_3", "emotion": {"intensity": 0.8, "valence_sign": 1, "dominant_emotion": "joy"}}
     ]
+  },
+  {
+    "group_id": "GROUP_15_MINORITY_4_VS_1",
+    "name": "Minority 4 vs 1 (4 beach, 1 historical site minority who rejects beach)",
+    "category": "Destination",
+    "records": [
+      {"member": "A", "category": "Destination", "stance": "positive", "value": {"name": "beach"}},
+      {"member": "B", "category": "Destination", "stance": "positive", "value": {"name": "beach"}},
+      {"member": "C", "category": "Destination", "stance": "positive", "value": {"name": "beach"}},
+      {"member": "D", "category": "Destination", "stance": "positive", "value": {"name": "beach"}},
+      {"member": "E", "category": "Destination", "stance": "negative", "value": {"name": "beach"}},
+      {"member": "E", "category": "Destination", "stance": "positive", "value": {"name": "historical site"}}
+    ]
+  },
+  {
+    "group_id": "GROUP_16_MINORITY_3_VS_2",
+    "name": "Minority 3 vs 2 Split (3 Ella supporters vs 2 Sigiriya supporters)",
+    "category": "Destination",
+    "records": [
+      {"member": "Alice", "category": "Destination", "stance": "positive", "value": {"name": "ella"}},
+      {"member": "Bob", "category": "Destination", "stance": "positive", "value": {"name": "ella"}},
+      {"member": "Charlie", "category": "Destination", "stance": "positive", "value": {"name": "ella"}},
+      {"member": "David", "category": "Destination", "stance": "positive", "value": {"name": "sigiriya"}},
+      {"member": "Eve", "category": "Destination", "stance": "positive", "value": {"name": "sigiriya"}}
+    ]
+  },
+  {
+    "group_id": "GROUP_17_MINORITY_REJECTS_WINNER_ONLY",
+    "name": "Minority Member Rejects Winner Only (Likes Nothing Else Explicitly)",
+    "category": "Destination",
+    "records": [
+      {"member": "Alice", "category": "Destination", "stance": "positive", "value": {"name": "kandy"}},
+      {"member": "Bob", "category": "Destination", "stance": "positive", "value": {"name": "kandy"}},
+      {"member": "Charlie", "category": "Destination", "stance": "positive", "value": {"name": "kandy"}},
+      {"member": "David", "category": "Destination", "stance": "negative", "value": {"name": "kandy"}},
+      {"member": "Alice", "category": "Destination", "stance": "positive", "value": {"name": "nuwara eliya"}}
+    ]
+  },
+  {
+    "group_id": "GROUP_18_MINORITY_EMOTIONAL_COMPETITION_SINGLE_SLOT",
+    "name": "Emotional Minority Competition for Single Free Slot",
+    "category": "Destination",
+    "records": [
+      {"member": "Alice", "category": "Destination", "stance": "positive", "value": {"name": "mirissa"}},
+      {"member": "Bob", "category": "Destination", "stance": "positive", "value": {"name": "mirissa"}},
+      {"member": "Charlie", "category": "Destination", "stance": "positive", "value": {"name": "mirissa"}},
+      {"member": "David", "category": "Destination", "stance": "positive", "value": {"name": "galle"}, "message_id": "msg_18_d", "emotion": {"intensity": 0.2, "valence_sign": 1, "dominant_emotion": "joy"}},
+      {"member": "Eve", "category": "Destination", "stance": "positive", "value": {"name": "sigiriya"}, "message_id": "msg_18_e", "emotion": {"intensity": 0.95, "valence_sign": 1, "dominant_emotion": "excitement"}}
+    ]
   }
 ]
+
+  
+

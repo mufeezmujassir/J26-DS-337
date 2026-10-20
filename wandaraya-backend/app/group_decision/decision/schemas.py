@@ -40,7 +40,7 @@ class DecisionResult(BaseModel):
         default=False,
         description="True if winner's share of total votes is strictly above 0.5",
     )
-    method: str = Field(..., description="Decision method name ('majority', 'preference_only', or 'weighted')")
+    method: str = Field(..., description="Decision method name ('majority', 'preference_only', 'weighted', or 'weighted_minority')")
     config: dict[str, Any] = Field(
         default_factory=dict,
         description="Configuration parameters used during decision execution",
@@ -58,6 +58,53 @@ class DecisionResult(BaseModel):
         description="Flag indicating if chosen_option changed compared to preference-only aggregation",
     )
 
+    primary_option: str | None = Field(
+        default=None,
+        description="Primary winning option from base decision method",
+    )
+    protected_members: list[dict[str, Any]] = Field(
+        default_factory=list,
+        description="List of uncovered members eligible for minority protection with strengths",
+    )
+    plan: list[dict[str, Any]] = Field(
+        default_factory=list,
+        description="Compromise plan skeleton of {slot, item, reason}",
+    )
+    covered_members: list[str] = Field(
+        default_factory=list,
+        description="List of group members who have at least one liked item in the plan",
+    )
+    uncovered_members: list[dict[str, Any]] = Field(
+        default_factory=list,
+        description="List of eligible members who could not be covered with reasons",
+    )
+    protection_applied: bool = Field(
+        default=False,
+        description="True if minority protection items were added to the plan",
+    )
+    resolved_conflicts: list[dict[str, Any]] = Field(
+        default_factory=list,
+        description="List of soft conflicts resolved by the compromise plan",
+    )
+    unresolved_conflicts: list[dict[str, Any]] = Field(
+        default_factory=list,
+        description="List of conflicts remaining unresolved",
+    )
+    unresolved_rejection: list[dict[str, Any]] = Field(
+        default_factory=list,
+        description="List of members who rejected an item that is included in the plan",
+    )
+    explanation: list[str] = Field(
+        default_factory=list,
+        description="Structured plain-text summary lines",
+    )
+    metrics: dict[str, Any] = Field(
+        default_factory=dict,
+        description="Comparative metrics {coverage_before, coverage_after, min_satisfaction_before, min_satisfaction_after, plan_size}",
+    )
+
     def to_dict(self) -> dict[str, Any]:
         """Convert decision result to dictionary."""
         return self.model_dump()
+
+    

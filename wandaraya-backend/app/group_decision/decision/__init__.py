@@ -12,9 +12,20 @@ from app.group_decision.decision.baselines import (
 from app.group_decision.decision.emotion_adapter import attach_emotion
 from app.group_decision.decision.metrics import (
     member_satisfaction,
+    member_satisfaction_plan,
     min_member_satisfaction,
+    min_member_satisfaction_plan,
     preference_coverage,
+    preference_coverage_plan,
+    satisfaction_gap,
 )
+
+from app.group_decision.decision.minority import (
+    load_compromise_hints,
+    load_minority_config,
+    protect_minority,
+)
+
 from app.group_decision.decision.schemas import (
     DecisionResult,
     EmotionSignal,
@@ -33,12 +44,19 @@ __all__ = [
     "majority_vote",
     "preference_only",
     "weighted_vote",
+    "load_minority_config",
+    "load_compromise_hints",
+    "protect_minority",
     "attach_emotion",
     "load_decision_config",
     "set_seed",
     "member_satisfaction",
+    "member_satisfaction_plan",
     "min_member_satisfaction",
+    "min_member_satisfaction_plan",
     "preference_coverage",
+    "preference_coverage_plan",
+    "satisfaction_gap",
     "DecisionResult",
     "EmotionSignal",
     "PreferenceRecord",
