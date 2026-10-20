@@ -1,6 +1,6 @@
 {
   "stage": "12.4D",
-  "timestamp_utc": "2026-10-20T14:45:25.591154+00:00",
+  "timestamp_utc": "2026-10-20T16:19:14.780459+00:00",
   "total_tests": 30,
   "passed": 30,
   "failed": 0,
@@ -64,7 +64,7 @@
     {
       "test_name": "test_12_explanation_score_consistency",
       "status": "PASSED",
-      "details": "Rank 1 explanation reflects top favorability: March ranks #1 of 12 (one of the historically most favorable..."
+      "details": "Rank 1 explanation reflects top favorability: February ranks #1 of 12 (one of the historically most favora..."
     },
     {
       "test_name": "test_13_missing_critical_evidence_flagging",
@@ -94,7 +94,7 @@
     {
       "test_name": "test_18_elevation_proxy_warnings",
       "status": "PASSED",
-      "details": "Limitations surfaced for Attraction 24: 2 warnings"
+      "details": "Limitations surfaced for Attraction 24: 1 warnings"
     },
     {
       "test_name": "test_19_deterministic_repeated_execution",

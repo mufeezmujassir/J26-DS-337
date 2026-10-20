@@ -1,9 +1,4 @@
-"""Evidence-preserving location assessment for tourism events.
 
-This module deliberately returns an unresolved/candidate result when a source
-mentions a venue name but does not publish traceable coordinates or a verified
-district.  It never geocodes or guesses a venue as part of matching.
-"""
 from __future__ import annotations
 
 from typing import Literal

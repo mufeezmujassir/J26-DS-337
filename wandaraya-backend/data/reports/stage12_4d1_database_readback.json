@@ -1,0 +1,18 @@
+{
+  "status": "DATABASE_READBACK_VERIFIED",
+  "stage": "12.4D.1",
+  "verified_at_utc": "2026-10-20T15:38:06.208716+00:00",
+  "database_counts": {
+    "climate_seasonality_quality_audit": 1187,
+    "climate_attraction_activity_mappings_total": 10127,
+    "climate_attraction_activity_mappings_eligible": 8940,
+    "climate_attraction_activity_mappings_ineligible": 1187,
+    "climate_attraction_activity_seasonality_active": 107280,
+    "climate_attraction_activity_seasonality_inactive": 14244,
+    "climate_daily_observations_preserved": 165828,
+    "climate_district_monthly_aggregates_preserved": 4800,
+    "climate_district_monthly_climatology_preserved": 300,
+    "climate_seasonality_features_preserved": 300
+  },
+  "integrity_verified": true
+}

@@ -1,0 +1,17 @@
+{
+  "status": "GEOGRAPHIC_PROXY_AUDIT_COMPLETED",
+  "stage": "12.4D.1",
+  "geographic_source_type_counts": {
+    "ATTRACTION_COORDINATE_REANALYSIS": 96,
+    "DISTRICT_REPRESENTATIVE_PROXY": 107184
+  },
+  "dedicated_attraction_coordinates": {
+    "Galle Dutch Fort (Attraction 1)": "ATTRACTION_COORDINATE_REANALYSIS (36 monthly climatologies)",
+    "Anuradhapura (Attraction 16)": "ATTRACTION_COORDINATE_REANALYSIS (36 monthly climatologies)",
+    "Horton Plains (Attraction 24)": "ATTRACTION_COORDINATE_REANALYSIS (36 monthly climatologies)"
+  },
+  "spatial_resolution_constraints": {
+    "grid_resolution": "0.5\u00b0 x 0.5\u00b0 (~55 km x 55 km)",
+    "horton_plains_finding": "Identical MERRA-2 grid cell with Nuwara Eliya district centroid; unresolvable montane lapse rate at 0.5\u00b0."
+  }
+}

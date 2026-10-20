@@ -1,0 +1,157 @@
+{
+  "automated_tests": {
+    "failed": 0,
+    "passed": 50,
+    "status": "ALL_TESTS_PASSED",
+    "total_tests": 50
+  },
+  "checksums": {
+    "stage12_4d2_cohort_a_high_evidence.csv": "7a83529e2eeb06203837376637abfc8f1151f48518bbcedad1a9f2895cc1f271",
+    "stage12_4d2_cohort_b_inferred.csv": "c869a8174e94d209259244d6a73e72693306d053686a3746ab460aa2819b23a1",
+    "stage12_4d2_cohort_c_provisional.csv": "2aa0ac220e8c05751b6c08e37d0979c5d24844bb95e40f0b296ba3d8b2ed0109",
+    "stage12_4d2_mapping_review_blind.csv": "9dc7944dc8222af52c82d9152c9ded9076c7688fca541ec1fa15438ad73af683",
+    "stage12_4d2_monthly_evaluation_dataset.csv": "134fc192d4f174c34f60ba7cc4917ff7bffae41d86d3b66c32308f81c6c7b244",
+    "stage12_4d2_seasonality_review_blind.csv": "c25d1dcdfa7286efc4e9ff71b55cbd11c513a4bcd27918255b567262b4084fb2"
+  },
+  "cohort_counts": {
+    "A": 1267,
+    "B": 2945,
+    "C": 5915
+  },
+  "completed_at_utc": "2026-10-20T16:22:58.764000+00:00",
+  "dataset_version": "stage12_4d2_eval_v1",
+  "evaluation_eligibility_distribution": {
+    "ELIGIBLE_HIGH_EVIDENCE": 1267,
+    "ELIGIBLE_INFERRED": 2945,
+    "EXCLUDED_UNSUPPORTED": 1229,
+    "PROVISIONAL_REVIEW_REQUIRED": 4686
+  },
+  "evidence_tier_distribution": {
+    "A": 1307,
+    "B": 3096,
+    "C": 4495,
+    "D": 1229
+  },
+  "final_database_counts": {
+    "active_profiles": 106776,
+    "alembic_revision": "e12f3a4b5c6d",
+    "attractions": 6120,
+    "district_aggregates": 4800,
+    "district_climatology": 300,
+    "eligible_mappings": 8898,
+    "evidence_audits": 10127,
+    "inactive_profiles": 14748,
+    "ineligible_mappings": 1229,
+    "mapped_attractions": 4472,
+    "offline_eligible": 4212,
+    "quality_audits": 1187,
+    "raw_observations": 165828,
+    "seasonality_features": 300,
+    "total_mappings": 10127
+  },
+  "geographic_proxy_distribution": {
+    "ATTRACTION_COORDINATE_REANALYSIS": 60,
+    "DISTRICT_REPRESENTATIVE_PROXY": 50484
+  },
+  "historical_discrepancy_cause": {
+    "cause": "Documentation/reporting inconsistency. Repository evidence does not establish a separately persisted run for Result B; therefore it is labeled unresolved as to exact originating run/code version.",
+    "distribution_a": "Confirmed by direct SQL before Stage 12.4D.2 policy assignment.",
+    "distribution_b": "Not supported by current persisted records; exact origin unresolved.",
+    "result_a": "Confirmed as the Stage 12.4D.1 persisted snapshot before Stage 12.4D.2 corrections.",
+    "result_b": "Found in narrative documentation, not supported by the current database or timestamped Stage 12.4D.1 final/readback JSON."
+  },
+  "integrity": {
+    "complete_pairs": true,
+    "missingness": {},
+    "pair_count": 4212,
+    "row_count": 50544,
+    "unique_keys": true,
+    "valid_months": true,
+    "valid_score_bounds": true
+  },
+  "mapping_corrections_performed": 42,
+  "migration_id": "e12f3a4b5c6d",
+  "monthly_dataset_rows": 50544,
+  "pre_policy_counts": {
+    "active_profiles": 106776,
+    "alembic_revision": "e12f3a4b5c6d",
+    "attractions": 6120,
+    "district_aggregates": 4800,
+    "district_climatology": 300,
+    "eligible_mappings": 8898,
+    "inactive_profiles": 14748,
+    "ineligible_mappings": 1229,
+    "mapped_attractions": 4472,
+    "quality_audits": 1187,
+    "raw_observations": 165828,
+    "seasonality_features": 300,
+    "total_mappings": 10127
+  },
+  "provisional_audit": {
+    "PROVISIONAL_CONTRADICTORY": 42,
+    "PROVISIONAL_WEAK_EVIDENCE": 4495,
+    "PROVISIONAL_WITH_SUPPORTING_EVIDENCE": 191
+  },
+  "regression_tests": {
+    "12.4D": {
+      "failed": 0,
+      "passed": 30,
+      "status": "ALL_TESTS_PASSED",
+      "total_tests": 30
+    },
+    "12.4D.1": {
+      "failed": 0,
+      "passed": 40,
+      "status": "ALL_TESTS_PASSED",
+      "total_tests": 40
+    }
+  },
+  "remaining_limitations": [
+    "Rule-derived mappings are not independent human ground truth.",
+    "Shared district climate proxies require cluster-aware inference.",
+    "Independent reviewer labels are pending."
+  ],
+  "review_sampling": {
+    "activity_coverage": [
+      "archaeology",
+      "beach_visit",
+      "camping",
+      "cultural_tour",
+      "cycling",
+      "hiking",
+      "mountain_viewing",
+      "photography",
+      "plantation_tour",
+      "religious_visit",
+      "snorkeling_diving",
+      "surfing",
+      "swimming",
+      "urban_visit",
+      "waterfall_visit",
+      "wildlife_safari"
+    ],
+    "dataset_version": "stage12_4d2_eval_v1",
+    "evidence_tier_coverage": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "labels_status": "PENDING_INDEPENDENT_REVIEW",
+    "mapping_review_items": 105,
+    "mapping_status_coverage": [
+      "PROVISIONAL",
+      "SUPPORTED_INFERRED",
+      "UNSUPPORTED",
+      "VERIFIED"
+    ],
+    "method": "SHA-256 deterministic stratification; up to two mappings per activity/status/evidence-tier stratum",
+    "model_predictions_exposed_to_reviewers": false,
+    "random_seed": 12402,
+    "seasonality_review_items": 216
+  },
+  "stage": "12.4D.2",
+  "stage12_4e": "PROTOCOL_READY_NOT_EXECUTED",
+  "started_at_utc": "2026-10-20T16:22:17.249181+00:00",
+  "status": "EVALUATION_DATASET_FROZEN_VERIFIED"
+}

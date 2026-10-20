@@ -1,0 +1,39 @@
+{
+  "activity_coverage": [
+    "archaeology",
+    "beach_visit",
+    "camping",
+    "cultural_tour",
+    "cycling",
+    "hiking",
+    "mountain_viewing",
+    "photography",
+    "plantation_tour",
+    "religious_visit",
+    "snorkeling_diving",
+    "surfing",
+    "swimming",
+    "urban_visit",
+    "waterfall_visit",
+    "wildlife_safari"
+  ],
+  "dataset_version": "stage12_4d2_eval_v1",
+  "evidence_tier_coverage": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "labels_status": "PENDING_INDEPENDENT_REVIEW",
+  "mapping_review_items": 105,
+  "mapping_status_coverage": [
+    "PROVISIONAL",
+    "SUPPORTED_INFERRED",
+    "UNSUPPORTED",
+    "VERIFIED"
+  ],
+  "method": "SHA-256 deterministic stratification; up to two mappings per activity/status/evidence-tier stratum",
+  "model_predictions_exposed_to_reviewers": false,
+  "random_seed": 12402,
+  "seasonality_review_items": 216
+}

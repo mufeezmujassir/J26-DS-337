@@ -277,6 +277,15 @@ class ClimateAttractionActivityMapping(Base):
     verification_status: Mapped[str] = mapped_column(String(40), nullable=False)
     reviewer_status: Mapped[str] = mapped_column(String(40), nullable=False, default="AUTOMATED_RULE_AUDITED")
     classification_version: Mapped[str] = mapped_column(String(40), nullable=False)
+    mapping_validation_status: Mapped[str] = mapped_column(String(40), nullable=False, default="VERIFIED")
+    mapping_validation_reason: Mapped[str | None] = mapped_column(Text)
+    mapping_rule_version: Mapped[str] = mapped_column(String(40), nullable=False, default="v1.1")
+    is_eligible_for_seasonality: Mapped[bool] = mapped_column(nullable=False, default=True)
+    evidence_tier: Mapped[str | None] = mapped_column(String(20))
+    evidence_policy_version: Mapped[str | None] = mapped_column(String(40))
+    evaluation_eligibility_status: Mapped[str | None] = mapped_column(String(60))
+    is_eligible_for_offline_evaluation: Mapped[bool] = mapped_column(nullable=False, default=False)
+    independent_review_status: Mapped[str] = mapped_column(String(40), nullable=False, default="NOT_REVIEWED")
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=lambda: datetime.now(timezone.utc))
     updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=lambda: datetime.now(timezone.utc))
 
@@ -336,6 +345,10 @@ class ClimateAttractionActivitySeasonality(Base):
     feature_contributions_json: Mapped[dict] = mapped_column(JSON, nullable=False, default=dict)
     explanation_json: Mapped[dict] = mapped_column(JSON, nullable=False, default=dict)
     limitations_json: Mapped[dict] = mapped_column(JSON, nullable=False, default=dict)
+    explanation_validation_status: Mapped[str] = mapped_column(String(40), nullable=False, default="VALIDATED")
+    geographic_validation_status: Mapped[str] = mapped_column(String(40), nullable=False, default="VERIFIED")
+    quality_audit_version: Mapped[str] = mapped_column(String(40), nullable=False, default="v1.1")
+    is_active: Mapped[bool] = mapped_column(nullable=False, default=True)
     calculated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=lambda: datetime.now(timezone.utc))
 
 
@@ -353,6 +366,41 @@ class ClimateActivityProcessingRun(Base):
     parameters_json: Mapped[dict] = mapped_column(JSON, nullable=False, default=dict)
     summary_json: Mapped[dict] = mapped_column(JSON, nullable=False, default=dict)
     error_summary: Mapped[str | None] = mapped_column(Text)
+
+
+class ClimateSeasonalityQualityAudit(Base):
+    __tablename__ = "climate_seasonality_quality_audit"
+    id: Mapped[int] = mapped_column(primary_key=True)
+    entity_type: Mapped[str] = mapped_column(String(60), nullable=False, index=True)
+    entity_id: Mapped[int] = mapped_column(Integer, nullable=False, index=True)
+    issue_type: Mapped[str] = mapped_column(String(60), nullable=False, index=True)
+    severity: Mapped[str] = mapped_column(String(20), nullable=False)
+    original_value_json: Mapped[dict] = mapped_column(JSON, nullable=False, default=dict)
+    corrected_value_json: Mapped[dict] = mapped_column(JSON, nullable=False, default=dict)
+    evidence_json: Mapped[dict] = mapped_column(JSON, nullable=False, default=dict)
+    correction_status: Mapped[str] = mapped_column(String(40), nullable=False)
+    audit_version: Mapped[str] = mapped_column(String(40), nullable=False)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=lambda: datetime.now(timezone.utc))
+    corrected_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+
+
+class ClimateMappingEvidenceAudit(Base):
+    __tablename__ = "climate_mapping_evidence_audit"
+    __table_args__ = (
+        UniqueConstraint("mapping_id", "policy_version", name="uq_climate_mapping_evidence_audit"),
+    )
+    id: Mapped[int] = mapped_column(primary_key=True)
+    mapping_id: Mapped[int] = mapped_column(ForeignKey("climate_attraction_activity_mappings.id"), nullable=False, index=True)
+    original_mapping_status: Mapped[str] = mapped_column(String(40), nullable=False)
+    revised_mapping_status: Mapped[str] = mapped_column(String(40), nullable=False)
+    original_evaluation_eligibility: Mapped[str | None] = mapped_column(String(60))
+    revised_evaluation_eligibility: Mapped[str] = mapped_column(String(60), nullable=False)
+    provisional_audit_class: Mapped[str | None] = mapped_column(String(80))
+    reason: Mapped[str] = mapped_column(Text, nullable=False)
+    evidence_json: Mapped[dict] = mapped_column(JSON, nullable=False, default=dict)
+    policy_version: Mapped[str] = mapped_column(String(40), nullable=False)
+    processed_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=lambda: datetime.now(timezone.utc))
+
 
 
 

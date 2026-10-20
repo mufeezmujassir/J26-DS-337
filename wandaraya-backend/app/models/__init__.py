@@ -35,6 +35,8 @@ from app.models.climate import (
     ClimateIngestionRun,
     ClimateProcessingRun,
     ClimateSeasonalityFeature,
+    ClimateSeasonalityQualityAudit,
+    ClimateMappingEvidenceAudit,
 )
 from app.models.tourism_sync import AttractionSourceReference, AttractionFieldProvenance, TourismImportBatch, TourismSyncReview, TourismDuplicateCluster
 
@@ -90,6 +92,8 @@ __all__ = [
     "ClimateAttractionMonthlyClimatology",
     "ClimateAttractionActivitySeasonality",
     "ClimateActivityProcessingRun",
+    "ClimateSeasonalityQualityAudit",
+    "ClimateMappingEvidenceAudit",
 
     "Road",
     "BusFare",

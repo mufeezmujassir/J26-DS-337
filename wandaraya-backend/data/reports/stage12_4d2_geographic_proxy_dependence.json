@@ -1,0 +1,17 @@
+{
+  "by_cohort": {
+    "A": {
+      "ATTRACTION_COORDINATE_REANALYSIS": 36,
+      "DISTRICT_REPRESENTATIVE_PROXY": 15168
+    },
+    "B": {
+      "ATTRACTION_COORDINATE_REANALYSIS": 24,
+      "DISTRICT_REPRESENTATIVE_PROXY": 35316
+    }
+  },
+  "distribution": {
+    "ATTRACTION_COORDINATE_REANALYSIS": 60,
+    "DISTRICT_REPRESENTATIVE_PROXY": 50484
+  },
+  "limitation": "Rows sharing a district representative proxy are not independent climate observations; Stage 12.4E must group or cluster-resample by district/climate-source identity."
+}

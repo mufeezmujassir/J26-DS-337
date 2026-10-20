@@ -1,0 +1,382 @@
+{
+  "activity_profile_configurations": [
+    {
+      "activity_type": "beach_visit",
+      "feature_weights_json": {
+        "humidity_comfort_index": 0.15,
+        "relative_rainfall_favorability": 0.5,
+        "solar_radiation_context": 0.15,
+        "temperature_comfort_index": 0.2
+      },
+      "hard_constraints_json": {
+        "max_acceptable_rain_days_per_month": 25
+      },
+      "profile_version": "12.4d_v1",
+      "thresholds_json": {
+        "heavy_rain_threshold_mm": 10.0,
+        "rainy_day_threshold_mm": 1.0
+      },
+      "uncertainty_policy_json": {
+        "abstain_if_missing_critical_evidence": false
+      }
+    },
+    {
+      "activity_type": "surfing",
+      "feature_weights_json": {
+        "rainfall_reliability_index": 0.15,
+        "relative_rainfall_favorability": 0.35,
+        "solar_radiation_context": 0.15,
+        "temperature_comfort_index": 0.35
+      },
+      "hard_constraints_json": {
+        "max_acceptable_rain_days_per_month": 25
+      },
+      "profile_version": "12.4d_v1",
+      "thresholds_json": {
+        "heavy_rain_threshold_mm": 10.0,
+        "rainy_day_threshold_mm": 1.0
+      },
+      "uncertainty_policy_json": {
+        "abstain_if_missing_critical_evidence": true
+      }
+    },
+    {
+      "activity_type": "swimming",
+      "feature_weights_json": {
+        "humidity_comfort_index": 0.15,
+        "relative_rainfall_favorability": 0.4,
+        "solar_radiation_context": 0.15,
+        "temperature_comfort_index": 0.3
+      },
+      "hard_constraints_json": {
+        "max_acceptable_rain_days_per_month": 25
+      },
+      "profile_version": "12.4d_v1",
+      "thresholds_json": {
+        "heavy_rain_threshold_mm": 10.0,
+        "rainy_day_threshold_mm": 1.0
+      },
+      "uncertainty_policy_json": {
+        "abstain_if_missing_critical_evidence": true
+      }
+    },
+    {
+      "activity_type": "snorkeling_diving",
+      "feature_weights_json": {
+        "rainfall_reliability_index": 0.1,
+        "relative_rainfall_favorability": 0.5,
+        "solar_radiation_context": 0.25,
+        "temperature_comfort_index": 0.15
+      },
+      "hard_constraints_json": {
+        "max_acceptable_rain_days_per_month": 25
+      },
+      "profile_version": "12.4d_v1",
+      "thresholds_json": {
+        "heavy_rain_threshold_mm": 10.0,
+        "rainy_day_threshold_mm": 1.0
+      },
+      "uncertainty_policy_json": {
+        "abstain_if_missing_critical_evidence": true
+      }
+    },
+    {
+      "activity_type": "hiking",
+      "feature_weights_json": {
+        "humidity_comfort_index": 0.15,
+        "rainfall_reliability_index": 0.1,
+        "relative_rainfall_favorability": 0.45,
+        "temperature_comfort_index": 0.3
+      },
+      "hard_constraints_json": {
+        "max_acceptable_rain_days_per_month": 25
+      },
+      "profile_version": "12.4d_v1",
+      "thresholds_json": {
+        "heavy_rain_threshold_mm": 10.0,
+        "rainy_day_threshold_mm": 1.0
+      },
+      "uncertainty_policy_json": {
+        "abstain_if_missing_critical_evidence": false
+      }
+    },
+    {
+      "activity_type": "mountain_viewing",
+      "feature_weights_json": {
+        "rainfall_reliability_index": 0.15,
+        "relative_rainfall_favorability": 0.5,
+        "solar_radiation_context": 0.2,
+        "temperature_comfort_index": 0.15
+      },
+      "hard_constraints_json": {
+        "max_acceptable_rain_days_per_month": 25
+      },
+      "profile_version": "12.4d_v1",
+      "thresholds_json": {
+        "heavy_rain_threshold_mm": 10.0,
+        "rainy_day_threshold_mm": 1.0
+      },
+      "uncertainty_policy_json": {
+        "abstain_if_missing_critical_evidence": false
+      }
+    },
+    {
+      "activity_type": "wildlife_safari",
+      "feature_weights_json": {
+        "humidity_comfort_index": 0.15,
+        "rainfall_reliability_index": 0.15,
+        "relative_rainfall_favorability": 0.45,
+        "temperature_comfort_index": 0.25
+      },
+      "hard_constraints_json": {
+        "max_acceptable_rain_days_per_month": 25
+      },
+      "profile_version": "12.4d_v1",
+      "thresholds_json": {
+        "heavy_rain_threshold_mm": 10.0,
+        "rainy_day_threshold_mm": 1.0
+      },
+      "uncertainty_policy_json": {
+        "abstain_if_missing_critical_evidence": true
+      }
+    },
+    {
+      "activity_type": "cultural_tour",
+      "feature_weights_json": {
+        "humidity_comfort_index": 0.2,
+        "relative_rainfall_favorability": 0.4,
+        "solar_radiation_context": 0.1,
+        "temperature_comfort_index": 0.3
+      },
+      "hard_constraints_json": {
+        "max_acceptable_rain_days_per_month": 25
+      },
+      "profile_version": "12.4d_v1",
+      "thresholds_json": {
+        "heavy_rain_threshold_mm": 10.0,
+        "rainy_day_threshold_mm": 1.0
+      },
+      "uncertainty_policy_json": {
+        "abstain_if_missing_critical_evidence": false
+      }
+    },
+    {
+      "activity_type": "archaeology",
+      "feature_weights_json": {
+        "humidity_comfort_index": 0.15,
+        "relative_rainfall_favorability": 0.45,
+        "solar_radiation_context": 0.1,
+        "temperature_comfort_index": 0.3
+      },
+      "hard_constraints_json": {
+        "max_acceptable_rain_days_per_month": 25
+      },
+      "profile_version": "12.4d_v1",
+      "thresholds_json": {
+        "heavy_rain_threshold_mm": 10.0,
+        "rainy_day_threshold_mm": 1.0
+      },
+      "uncertainty_policy_json": {
+        "abstain_if_missing_critical_evidence": false
+      }
+    },
+    {
+      "activity_type": "religious_visit",
+      "feature_weights_json": {
+        "humidity_comfort_index": 0.2,
+        "relative_rainfall_favorability": 0.35,
+        "solar_radiation_context": 0.1,
+        "temperature_comfort_index": 0.35
+      },
+      "hard_constraints_json": {
+        "max_acceptable_rain_days_per_month": 25
+      },
+      "profile_version": "12.4d_v1",
+      "thresholds_json": {
+        "heavy_rain_threshold_mm": 10.0,
+        "rainy_day_threshold_mm": 1.0
+      },
+      "uncertainty_policy_json": {
+        "abstain_if_missing_critical_evidence": true
+      }
+    },
+    {
+      "activity_type": "waterfall_visit",
+      "feature_weights_json": {
+        "humidity_comfort_index": 0.2,
+        "relative_rainfall_favorability": 0.3,
+        "solar_radiation_context": 0.2,
+        "temperature_comfort_index": 0.3
+      },
+      "hard_constraints_json": {
+        "max_acceptable_rain_days_per_month": 25
+      },
+      "profile_version": "12.4d_v1",
+      "thresholds_json": {
+        "heavy_rain_threshold_mm": 10.0,
+        "rainy_day_threshold_mm": 1.0
+      },
+      "uncertainty_policy_json": {
+        "abstain_if_missing_critical_evidence": true
+      }
+    },
+    {
+      "activity_type": "camping",
+      "feature_weights_json": {
+        "humidity_comfort_index": 0.1,
+        "rainfall_reliability_index": 0.15,
+        "relative_rainfall_favorability": 0.5,
+        "temperature_comfort_index": 0.25
+      },
+      "hard_constraints_json": {
+        "max_acceptable_rain_days_per_month": 25
+      },
+      "profile_version": "12.4d_v1",
+      "thresholds_json": {
+        "heavy_rain_threshold_mm": 10.0,
+        "rainy_day_threshold_mm": 1.0
+      },
+      "uncertainty_policy_json": {
+        "abstain_if_missing_critical_evidence": false
+      }
+    },
+    {
+      "activity_type": "cycling",
+      "feature_weights_json": {
+        "humidity_comfort_index": 0.2,
+        "relative_rainfall_favorability": 0.4,
+        "solar_radiation_context": 0.1,
+        "temperature_comfort_index": 0.3
+      },
+      "hard_constraints_json": {
+        "max_acceptable_rain_days_per_month": 25
+      },
+      "profile_version": "12.4d_v1",
+      "thresholds_json": {
+        "heavy_rain_threshold_mm": 10.0,
+        "rainy_day_threshold_mm": 1.0
+      },
+      "uncertainty_policy_json": {
+        "abstain_if_missing_critical_evidence": false
+      }
+    },
+    {
+      "activity_type": "photography",
+      "feature_weights_json": {
+        "humidity_comfort_index": 0.15,
+        "relative_rainfall_favorability": 0.3,
+        "solar_radiation_context": 0.4,
+        "temperature_comfort_index": 0.15
+      },
+      "hard_constraints_json": {
+        "max_acceptable_rain_days_per_month": 25
+      },
+      "profile_version": "12.4d_v1",
+      "thresholds_json": {
+        "heavy_rain_threshold_mm": 10.0,
+        "rainy_day_threshold_mm": 1.0
+      },
+      "uncertainty_policy_json": {
+        "abstain_if_missing_critical_evidence": false
+      }
+    },
+    {
+      "activity_type": "urban_visit",
+      "feature_weights_json": {
+        "humidity_comfort_index": 0.2,
+        "relative_rainfall_favorability": 0.35,
+        "solar_radiation_context": 0.1,
+        "temperature_comfort_index": 0.35
+      },
+      "hard_constraints_json": {
+        "max_acceptable_rain_days_per_month": 25
+      },
+      "profile_version": "12.4d_v1",
+      "thresholds_json": {
+        "heavy_rain_threshold_mm": 10.0,
+        "rainy_day_threshold_mm": 1.0
+      },
+      "uncertainty_policy_json": {
+        "abstain_if_missing_critical_evidence": false
+      }
+    },
+    {
+      "activity_type": "plantation_tour",
+      "feature_weights_json": {
+        "humidity_comfort_index": 0.15,
+        "relative_rainfall_favorability": 0.4,
+        "solar_radiation_context": 0.1,
+        "temperature_comfort_index": 0.35
+      },
+      "hard_constraints_json": {
+        "max_acceptable_rain_days_per_month": 25
+      },
+      "profile_version": "12.4d_v1",
+      "thresholds_json": {
+        "heavy_rain_threshold_mm": 10.0,
+        "rainy_day_threshold_mm": 1.0
+      },
+      "uncertainty_policy_json": {
+        "abstain_if_missing_critical_evidence": false
+      }
+    }
+  ],
+  "baselines": {
+    "A": {
+      "definition": "Rank the 12 historical calendar months by rainfall favorability.",
+      "features": [
+        "rainfall_mean_mm"
+      ],
+      "geographic_resolution": "attraction reanalysis or disclosed district proxy",
+      "missing_data_policy": "abstain; no synthetic fill",
+      "name": "Rainfall-only",
+      "source": "Stage 12.4C climate climatology"
+    },
+    "B": {
+      "definition": "Existing Stage 12.4C multi-variable baseline.",
+      "features": [
+        "rainfall",
+        "temperature",
+        "humidity"
+      ],
+      "geographic_resolution": "district",
+      "missing_data_policy": "existing Stage 12.4C policy",
+      "name": "District multi-variable climatology",
+      "source": "climate_seasonality_features"
+    },
+    "C": {
+      "definition": "Rank using rainfall mean and interannual variability.",
+      "features": [
+        "rainfall_mean_mm",
+        "rainfall_cv"
+      ],
+      "geographic_resolution": "district",
+      "missing_data_policy": "abstain",
+      "name": "Rainfall risk-adjusted",
+      "source": "Stage 12.4C climatology"
+    },
+    "D": {
+      "definition": "Existing Stage 12.4D climate suitability engine.",
+      "features": "activity profile dependent",
+      "geographic_resolution": "attraction reanalysis or disclosed district proxy",
+      "missing_data_policy": "existing activity profile uncertainty policy",
+      "name": "Activity-aware seasonality",
+      "source": "climate_attraction_activity_seasonality"
+    },
+    "E": {
+      "definition": "Baseline D restricted to Cohort A; an evaluation subset, not a predictive algorithm.",
+      "features": "same as D",
+      "geographic_resolution": "same as D",
+      "missing_data_policy": "same as D",
+      "name": "Activity-aware high-evidence subset",
+      "source": "Cohort A + Baseline D"
+    }
+  },
+  "configuration_frozen": true,
+  "dataset_version": "stage12_4d2_eval_v1",
+  "limitations": [
+    "Rule-derived mappings are not independent human ground truth.",
+    "Shared district climate proxies require cluster-aware inference."
+  ],
+  "weights_modified": false
+}

@@ -341,7 +341,6 @@ ACTIVITY_TAXONOMY: list[ActivityTypeDefinition] = [
 
 
 def get_activity_taxonomy_dict() -> list[dict[str, Any]]:
-    """Return JSON-serializable list of activity definitions."""
     return [
         {
             "id_code": a.id_code,

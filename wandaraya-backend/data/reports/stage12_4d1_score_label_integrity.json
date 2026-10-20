@@ -1,0 +1,16 @@
+{
+  "status": "SCORE_LABEL_INTEGRITY_VERIFIED",
+  "stage": "12.4D.1",
+  "total_profiles_audited": 121524,
+  "score_checks": {
+    "score_in_bounds": 107280
+  },
+  "tie_breaking_policy": "climate_favorability_score DESC, relative_rainfall_score DESC, temperature_comfort_score DESC, month ASC",
+  "suitability_classes": {
+    "HIGH_RELATIVE_CLIMATE_FAVORABILITY": "score >= 0.75",
+    "FAVORABLE": "0.60 <= score < 0.75",
+    "MODERATE": "0.45 <= score < 0.60",
+    "UNFAVORABLE": "score < 0.45"
+  },
+  "deterministic_ranks_enforced": true
+}
