@@ -1,17 +1,4 @@
 """Sample realistic disruption scenarios from the raw public data sources.
-
-Four of the thirteen model features are grounded in real data:
-
-* ``rain_duration_hours`` and ``rain_intensity_score`` -- derived from the real
-  monthly rainfall of the attraction's district;
-* ``temperature_celsius`` and ``heat_warning`` -- derived from the real monthly
-  maximum temperature;
-* ``is_outdoor_activity`` -- taken from the real attraction record.
-
-The remaining signals (closures, crowds, complaints, GPS drift, delays and the
-number of affected activities) are not observable in the raw sources and are
-sampled with a seeded RNG.  Only attractions whose district has weather
-coverage are eligible, which keeps ``real_data_ratio`` at 1.0.
 """
 
 from __future__ import annotations

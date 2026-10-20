@@ -1,9 +1,4 @@
-"""Dataset persistence, hashing and splitting helpers.
-
-These utilities are shared by :mod:`build_disruption_dataset` and keep the
-on-disk format (JSON Lines + ``metadata.json``) byte-for-byte compatible with
-the format the training, inference and evaluation scripts already expect.
-"""
+"""Dataset persistence, hashing and splitting helpers."""
 
 from __future__ import annotations
 

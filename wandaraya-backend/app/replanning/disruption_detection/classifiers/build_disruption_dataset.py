@@ -1,19 +1,4 @@
 """Build the frozen disruption-detection dataset from real public data.
-
-The pipeline mirrors the six documented stages:
-
-1. Load the raw sources (``sri_lankan_attractions.jsonl`` and
-   ``weather_monthly.jsonl``).
-2. Sample 3,000 scenarios, grounding weather/outdoor features in real records.
-3. Derive the remaining signals with a seeded RNG.
-4. Label every scenario with the deterministic rules, balance to the target
-   class distribution, then flip 5% of the labels.
-5. Split 80/10/10, stratified by ``(label, severity)``.
-6. Persist the dataset, the ``metadata.json`` manifest and a README.
-
-The feature schema, label vocabulary and file names are identical to the
-previous (fully synthetic) generator, so the training, inference and
-evaluation scripts consume the output unchanged.
 """
 
 from __future__ import annotations
