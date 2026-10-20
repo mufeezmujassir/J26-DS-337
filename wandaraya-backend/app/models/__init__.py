@@ -18,7 +18,14 @@ from app.models.weather_reading import WeatherReading
 from app.models.district_weather_monthly import DistrictWeatherMonthly
 from app.models.weather_model_run import WeatherModelRun
 from app.models.weather_forecast import WeatherForecast
-from app.models.climate import ClimateAttractionMapping, ClimateDailyObservation, ClimateDatasetVersion, ClimateGridCell, ClimateIngestionRun
+from app.models.climate import (
+    ClimateAttractionMapping,
+    ClimateDailyObservation,
+    ClimateDatasetVersion,
+    ClimateDistrictMapping,
+    ClimateGridCell,
+    ClimateIngestionRun,
+)
 from app.models.tourism_sync import AttractionSourceReference, AttractionFieldProvenance, TourismImportBatch, TourismSyncReview, TourismDuplicateCluster
 
 from app.models.roads import Road
@@ -57,6 +64,13 @@ __all__ = [
     "WeatherModelRun",
     "WeatherForecast",
 
+    "ClimateDatasetVersion",
+    "ClimateGridCell",
+    "ClimateDailyObservation",
+    "ClimateAttractionMapping",
+    "ClimateDistrictMapping",
+    "ClimateIngestionRun",
+
     "Road",
     "BusFare",
     "TrainStation",
@@ -65,5 +79,4 @@ __all__ = [
     "NBROIncident",
     "NBROInspection",
     "NBROPolygon",
-
 ]

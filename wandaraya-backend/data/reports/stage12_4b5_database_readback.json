@@ -1,0 +1,51 @@
+{
+  "status": "DATABASE_READBACK_VERIFIED",
+  "timestamp_utc": "2026-10-20T10:22:22.783520+00:00",
+  "table_counts": {
+    "climate_dataset_versions": 3,
+    "climate_grid_cells": 34,
+    "climate_daily_observations": 165828,
+    "climate_attraction_mappings": 9,
+    "climate_district_mappings": 28,
+    "climate_ingestion_runs": 5
+  },
+  "dataset_version_breakdown": [
+    {
+      "version": "nasa_power_daily_v2.10.0_2024_pilot",
+      "observation_count": 2196,
+      "cell_count": 6,
+      "min_date": "2024-01-01",
+      "max_date": "2024-12-31"
+    },
+    {
+      "version": "nasa_power_daily_v2.10.0_historical_2010_2025_batch01",
+      "observation_count": 17532,
+      "cell_count": 3,
+      "min_date": "2010-01-01",
+      "max_date": "2025-12-31"
+    },
+    {
+      "version": "nasa_power_daily_v2.10.0_historical_2010_2025_batch02",
+      "observation_count": 146100,
+      "cell_count": 25,
+      "min_date": "2010-01-01",
+      "max_date": "2025-12-31"
+    }
+  ],
+  "orphan_observations": 0,
+  "weather_tables_preserved": {
+    "district_weather_monthly": 873,
+    "weather_forecasts": 129,
+    "weather_model_runs": 43,
+    "weather_readings": 1162,
+    "weather_stations": 23
+  },
+  "integrity_checks": {
+    "pilot_preserved_2196": true,
+    "batch01_persisted_17532": true,
+    "batch02_persisted_146100": true,
+    "total_observations_165828": true,
+    "zero_orphan_observations": true,
+    "district_mappings_count_28": true
+  }
+}

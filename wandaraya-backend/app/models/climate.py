@@ -94,3 +94,17 @@ class ClimateIngestionRun(Base):
     records_rejected: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
     error_summary: Mapped[str | None] = mapped_column(Text)
     manifest_path: Mapped[str | None] = mapped_column(Text)
+
+
+class ClimateDistrictMapping(Base):
+    __tablename__ = "climate_district_mappings"
+    __table_args__ = (UniqueConstraint("district_id", "dataset_version_id", name="uq_climate_district_mapping"),)
+    id: Mapped[int] = mapped_column(primary_key=True)
+    district_id: Mapped[int] = mapped_column(ForeignKey("districts.id"), nullable=False, index=True)
+    dataset_version_id: Mapped[int] = mapped_column(ForeignKey("climate_dataset_versions.id"), nullable=False, index=True)
+    grid_cell_id: Mapped[int] = mapped_column(ForeignKey("climate_grid_cells.id"), nullable=False, index=True)
+    mapping_method: Mapped[str] = mapped_column(String(80), nullable=False)
+    distance_km: Mapped[float | None] = mapped_column(Float)
+    geographic_confidence: Mapped[str] = mapped_column(String(40), nullable=False)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=lambda: datetime.now(timezone.utc))
+

@@ -1,0 +1,130 @@
+{
+  "status": "ALL_TESTS_PASSED",
+  "timestamp_utc": "2026-10-20T10:40:39.053462+00:00",
+  "total_tests": 20,
+  "passed": 20,
+  "failed": 0,
+  "elapsed_seconds": 1.72,
+  "tests": [
+    {
+      "test_id": 1,
+      "name": "Historical manifest parsing",
+      "status": "PASS",
+      "error": ""
+    },
+    {
+      "test_id": 2,
+      "name": "Source checksum verification",
+      "status": "PASS",
+      "error": ""
+    },
+    {
+      "test_id": 3,
+      "name": "Dataset version registration",
+      "status": "PASS",
+      "error": ""
+    },
+    {
+      "test_id": 4,
+      "name": "Sample identity registration",
+      "status": "PASS",
+      "error": ""
+    },
+    {
+      "test_id": 5,
+      "name": "District mapping integrity",
+      "status": "PASS",
+      "error": ""
+    },
+    {
+      "test_id": 6,
+      "name": "Daily observation parsing",
+      "status": "PASS",
+      "error": ""
+    },
+    {
+      "test_id": 7,
+      "name": "Missing-value conversion",
+      "status": "PASS",
+      "error": ""
+    },
+    {
+      "test_id": 8,
+      "name": "Variable-level quality checks",
+      "status": "PASS",
+      "error": ""
+    },
+    {
+      "test_id": 9,
+      "name": "Date-range completeness",
+      "status": "PASS",
+      "error": ""
+    },
+    {
+      "test_id": 10,
+      "name": "Leap-year handling",
+      "status": "PASS",
+      "error": ""
+    },
+    {
+      "test_id": 11,
+      "name": "Duplicate prevention",
+      "status": "PASS",
+      "error": ""
+    },
+    {
+      "test_id": 12,
+      "name": "Transaction rollback",
+      "status": "PASS",
+      "error": ""
+    },
+    {
+      "test_id": 13,
+      "name": "Interrupted ingestion recovery",
+      "status": "PASS",
+      "error": ""
+    },
+    {
+      "test_id": 14,
+      "name": "Idempotent rerun",
+      "status": "PASS",
+      "error": ""
+    },
+    {
+      "test_id": 15,
+      "name": "Preservation of the 2024 pilot",
+      "status": "PASS",
+      "error": ""
+    },
+    {
+      "test_id": 16,
+      "name": "Preservation of unrelated weather tables",
+      "status": "PASS",
+      "error": ""
+    },
+    {
+      "test_id": 17,
+      "name": "Dataset-version isolation",
+      "status": "PASS",
+      "error": ""
+    },
+    {
+      "test_id": 18,
+      "name": "District boundary validation",
+      "status": "PASS",
+      "error": ""
+    },
+    {
+      "test_id": 19,
+      "name": "Read-only historical climate queries",
+      "status": "PASS",
+      "error": ""
+    },
+    {
+      "test_id": 20,
+      "name": "PostgreSQL readback verification",
+      "status": "PASS",
+      "error": ""
+    }
+  ]
+}

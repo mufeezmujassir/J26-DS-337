@@ -1,0 +1,82 @@
+﻿{
+  "status": "HISTORICAL_CLIMATE_DATASET_PERSISTED_VERIFIED",
+  "stage": "12.4B.5",
+  "executed_at_utc": "2026-10-20T10:45:00Z",
+  "source_files_verified": {
+    "batch01_samples": 3,
+    "batch02_district_samples": 25,
+    "total_samples": 28,
+    "manifests": [
+      "data/climate/manifests/nasa_power/historical_2010_2025/batch01_live_manifest_v3.json",
+      "data/climate/manifests/nasa_power/historical_2010_2025/batch02_proposed_manifest.json"
+    ],
+    "checksums_valid": true
+  },
+  "database_persistence": {
+    "historical_batch01_observations": 17532,
+    "historical_batch02_observations": 146100,
+    "total_historical_observations": 163632,
+    "preserved_pilot_2024_observations": 2196,
+    "total_database_climate_observations": 165828,
+    "dataset_versions_registered": [
+      "nasa_power_daily_v2.10.0_2024_pilot",
+      "nasa_power_daily_v2.10.0_historical_2010_2025_batch01",
+      "nasa_power_daily_v2.10.0_historical_2010_2025_batch02"
+    ],
+    "grid_cells_total": 34,
+    "district_mappings_total": 28,
+    "attraction_mappings_total": 9,
+    "ingestion_runs_logged": 3
+  },
+  "variable_quality_and_missingness": {
+    "total_evaluated_records": 163632,
+    "variables": [
+      "T2M",
+      "T2M_MAX",
+      "T2M_MIN",
+      "PRECTOTCORR",
+      "RH2M",
+      "WS10M",
+      "ALLSKY_SFC_SW_DWN"
+    ],
+    "missing_values_count": 0,
+    "missing_percent": 0.0,
+    "tmin_greater_than_tmax_count": 0,
+    "out_of_bounds_count": 0
+  },
+  "transaction_integrity_and_idempotency": {
+    "transactions_executed": 3,
+    "transaction_failures_or_rollbacks": 0,
+    "idempotency_rerun_verified": true,
+    "zero_duplicate_observations": true
+  },
+  "automated_tests": {
+    "total_tests": 20,
+    "passed": 20,
+    "failed": 0,
+    "status": "ALL_TESTS_PASSED",
+    "report_path": "data/reports/stage12_4b5_tests.json"
+  },
+  "boundary_and_scope_audit": {
+    "external_nasa_api_requests": 0,
+    "postgresql_writes_performed": true,
+    "qdrant_writes_performed": false,
+    "recommendation_ranking_changes": false,
+    "unrelated_weather_tables_modified": false
+  },
+  "infrastructure_status": {
+    "docker_container_active": "wandaraya-api-cutover",
+    "postgres_collation_status": "UNRESOLVED_NO_MAINTENANCE_PERFORMED",
+    "db_collation_version": "2.41",
+    "os_collation_version": "2.31"
+  },
+  "remaining_limitations": [
+    "NASA POWER data is based on satellite/reanalysis models at 0.5x0.5 degree grid, not physical meteorological ground stations.",
+    "25 district representative coordinates represent district centroids/major hubs and do not capture microclimate heterogeneity in complex elevation gradients.",
+    "Collation mismatch remains an unresolved host infrastructure warning."
+  ],
+  "next_research_stage": {
+    "stage": "Stage 12.4C — Monthly Climate Knowledge Base and Explainable Seasonality Baselines",
+    "status": "READY"
+  }
+}

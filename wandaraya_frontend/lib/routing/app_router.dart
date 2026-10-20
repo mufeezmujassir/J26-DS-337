@@ -4,6 +4,9 @@ import '../features/auth/sign_in_screen.dart';
 import '../features/auth/sign_up_screen.dart';
 import '../features/home/home_screen.dart';
 import '../features/onboarding/onboarding_screen.dart';
+import '../features/planner/presentation/group_chat_screen.dart';
+import '../features/planner/presentation/group_planner_screen.dart';
+import '../features/planner/presentation/itinerary_screen.dart';
 import '../features/splash/splash_screen.dart';
 
 class AppRouter {
@@ -36,6 +39,25 @@ class AppRouter {
         path: '/home',
         name: 'home',
         builder: (context, state) => const HomeScreen(),
+      ),
+      GoRoute(
+        path: '/groups',
+        name: 'groups',
+        builder: (context, state) => const GroupPlannerScreen(),
+        routes: [
+          GoRoute(
+            path: ':groupId',
+            name: 'group-chat',
+            builder: (context, state) => GroupChatScreen(
+              groupId: state.pathParameters['groupId']!,
+            ),
+          ),
+        ],
+      ),
+      GoRoute(
+        path: '/itinerary',
+        name: 'itinerary',
+        builder: (context, state) => const ItineraryScreen(),
       ),
     ],
   );

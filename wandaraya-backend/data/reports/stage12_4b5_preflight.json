@@ -1,0 +1,37 @@
+{
+  "status": "PREFLIGHT_VERIFIED",
+  "timestamp_utc": "2026-10-20T10:15:27.284434+00:00",
+  "containers": {
+    "api_cutover": "wandaraya-api-cutover",
+    "postgres": "wandaraya-postgres"
+  },
+  "baseline_climate_counts": {
+    "climate_dataset_versions": 1,
+    "climate_grid_cells": 6,
+    "climate_daily_observations": 2196,
+    "climate_attraction_mappings": 6,
+    "climate_district_mappings": 0,
+    "climate_ingestion_runs": 1
+  },
+  "baseline_weather_counts": {
+    "district_weather_monthly": 873,
+    "weather_forecasts": 129,
+    "weather_model_runs": 43,
+    "weather_readings": 1162,
+    "weather_stations": 23
+  },
+  "existing_dataset_versions": [
+    {
+      "id": 1,
+      "product_version": "nasa_power_daily_v2.10.0_2024_pilot",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    }
+  ],
+  "infrastructure_issues": {
+    "postgres_collation_status": "UNRESOLVED_NO_MAINTENANCE_PERFORMED",
+    "db_collation_version": "2.41",
+    "os_collation_version": "2.31",
+    "handling": "Preserved without unrelated maintenance"
+  }
+}
