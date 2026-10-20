@@ -1,0 +1,39 @@
+{
+  "builder_version": "1.0.0",
+  "random_seed": 42,
+  "num_rows": 3000,
+  "rows_with_real_weather": 3000,
+  "rows_with_real_attractions": 3000,
+  "real_data_ratio": 1.0,
+  "train_rows": 2400,
+  "dev_rows": 300,
+  "test_rows": 300,
+  "generated_at": "2026-10-20T06:24:46.014100+00:00",
+  "label_distribution": {
+    "normal": 1238,
+    "disruption": 1762
+  },
+  "severity_distribution": {
+    "step": 881,
+    "day": 579,
+    "plan": 302
+  },
+  "source_attractions_count": 147,
+  "source_districts_count": 10,
+  "dataset_hash_sha256": "297cf69aea6972e534b2af6ad898c0180d3df6fef9faa453ff0b437429dfc5d5",
+  "feature_names": [
+    "rain_duration_hours",
+    "rain_intensity_score",
+    "temperature_celsius",
+    "heat_warning",
+    "is_outdoor_activity",
+    "closure_flag",
+    "capacity_issue",
+    "crowd_level_score",
+    "complaint_score",
+    "change_request",
+    "gps_deviation_km",
+    "time_delay_minutes",
+    "num_affected_activities"
+  ]
+}
