@@ -207,8 +207,49 @@
       {"member": "David", "category": "Destination", "stance": "positive", "value": {"name": "galle"}, "message_id": "msg_18_d", "emotion": {"intensity": 0.2, "valence_sign": 1, "dominant_emotion": "joy"}},
       {"member": "Eve", "category": "Destination", "stance": "positive", "value": {"name": "sigiriya"}, "message_id": "msg_18_e", "emotion": {"intensity": 0.95, "valence_sign": 1, "dominant_emotion": "excitement"}}
     ]
+  },
+
+  {
+    "group_id": "GROUP_19_CONSENSUS_HIGH",
+    "name": "High Consensus: Strong Group Agreement on Ella",
+    "category": "Destination",
+    "records": [
+      {"member": "Alice", "category": "Destination", "stance": "positive", "value": {"name": "ella"}, "message_id": "msg_19_1", "emotion": {"intensity": 0.8, "valence_sign": 1, "dominant_emotion": "joy"}},
+      {"member": "Bob", "category": "Destination", "stance": "positive", "value": {"name": "ella"}, "message_id": "msg_19_2", "emotion": {"intensity": 0.85, "valence_sign": 1, "dominant_emotion": "admiration"}},
+      {"member": "Charlie", "category": "Destination", "stance": "positive", "value": {"name": "ella"}, "message_id": "msg_19_3", "emotion": {"intensity": 0.75, "valence_sign": 1, "dominant_emotion": "approval"}},
+      {"member": "David", "category": "Destination", "stance": "positive", "value": {"name": "ella"}, "message_id": "msg_19_4", "emotion": {"intensity": 0.9, "valence_sign": 1, "dominant_emotion": "excitement"}}
+    ]
+  },
+  {
+    "group_id": "GROUP_20_CONSENSUS_MEDIUM",
+    "name": "Medium Consensus: 3-Member Split Resolved by Plan",
+    "category": "Destination",
+    "records": [
+      {"member": "Alice", "category": "Destination", "stance": "positive", "value": {"name": "kandy"}, "message_id": "msg_20_1", "emotion": {"intensity": 0.6, "valence_sign": 1, "dominant_emotion": "approval"}},
+      {"member": "Bob", "category": "Destination", "stance": "positive", "value": {"name": "kandy"}, "message_id": "msg_20_2", "emotion": {"intensity": 0.65, "valence_sign": 1, "dominant_emotion": "joy"}},
+      {"member": "Charlie", "category": "Destination", "stance": "negative", "value": {"name": "kandy"}, "message_id": "msg_20_3", "emotion": {"intensity": 0.7, "valence_sign": -1, "dominant_emotion": "disapproval"}},
+      {"member": "Charlie", "category": "Destination", "stance": "positive", "value": {"name": "sigiriya"}, "message_id": "msg_20_4", "emotion": {"intensity": 0.8, "valence_sign": 1, "dominant_emotion": "excitement"}}
+    ]
+  },
+  {
+    "group_id": "GROUP_21_CONSENSUS_LOW",
+    "name": "Low Consensus: Deep Split with Mutual Rejections",
+    "category": "Destination",
+    "records": [
+      {"member": "Alice", "category": "Destination", "stance": "positive", "value": {"name": "mirissa"}, "message_id": "msg_21_1", "emotion": {"intensity": 0.7, "valence_sign": 1, "dominant_emotion": "joy"}},
+      {"member": "Alice", "category": "Destination", "stance": "negative", "value": {"name": "jaffna"}, "message_id": "msg_21_2", "emotion": {"intensity": 0.6, "valence_sign": -1, "dominant_emotion": "disappointment"}},
+      {"member": "Bob", "category": "Destination", "stance": "positive", "value": {"name": "jaffna"}, "message_id": "msg_21_3", "emotion": {"intensity": 0.8, "valence_sign": 1, "dominant_emotion": "excitement"}},
+      {"member": "Bob", "category": "Destination", "stance": "negative", "value": {"name": "mirissa"}, "message_id": "msg_21_4", "emotion": {"intensity": 0.7, "valence_sign": -1, "dominant_emotion": "disapproval"}},
+      {"member": "Charlie", "category": "Destination", "stance": "positive", "value": {"name": "colombo"}, "message_id": "msg_21_5", "emotion": {"intensity": 0.5, "valence_sign": 1, "dominant_emotion": "approval"}},
+      {"member": "Charlie", "category": "Destination", "stance": "negative", "value": {"name": "mirissa"}, "message_id": "msg_21_6", "emotion": {"intensity": 0.5, "valence_sign": -1, "dominant_emotion": "annoyance"}},
+      {"member": "David", "category": "Destination", "stance": "positive", "value": {"name": "trincomalee"}, "message_id": "msg_21_7", "emotion": {"intensity": 0.6, "valence_sign": 1, "dominant_emotion": "optimism"}},
+      {"member": "David", "category": "Destination", "stance": "negative", "value": {"name": "mirissa"}, "message_id": "msg_21_8", "emotion": {"intensity": 0.8, "valence_sign": -1, "dominant_emotion": "anger"}}
+    ]
   }
 ]
+
+
+
 
   
 
