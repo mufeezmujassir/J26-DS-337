@@ -23,8 +23,12 @@ from app.models.climate import (
     ClimateDailyObservation,
     ClimateDatasetVersion,
     ClimateDistrictMapping,
+    ClimateDistrictMonthlyAggregate,
+    ClimateDistrictMonthlyClimatology,
     ClimateGridCell,
     ClimateIngestionRun,
+    ClimateProcessingRun,
+    ClimateSeasonalityFeature,
 )
 from app.models.tourism_sync import AttractionSourceReference, AttractionFieldProvenance, TourismImportBatch, TourismSyncReview, TourismDuplicateCluster
 
@@ -69,6 +73,10 @@ __all__ = [
     "ClimateDailyObservation",
     "ClimateAttractionMapping",
     "ClimateDistrictMapping",
+    "ClimateDistrictMonthlyAggregate",
+    "ClimateDistrictMonthlyClimatology",
+    "ClimateSeasonalityFeature",
+    "ClimateProcessingRun",
     "ClimateIngestionRun",
 
     "Road",

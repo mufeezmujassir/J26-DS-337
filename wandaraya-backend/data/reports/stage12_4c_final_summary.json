@@ -1,0 +1,48 @@
+{
+  "status": "MONTHLY_CLIMATE_KNOWLEDGE_BASE_PERSISTED_VERIFIED",
+  "stage": "12.4C",
+  "executed_at_utc": "2026-10-20T11:20:18.853043+00:00",
+  "database_execution_summary": {
+    "authoritative_dataset_version": "nasa_power_daily_v2.10.0_historical_2010_2025_batch02",
+    "districts_processed": 25,
+    "years_processed": 16,
+    "monthly_aggregates_persisted": 4800,
+    "climatology_profiles_persisted": 300,
+    "seasonality_features_persisted": 300,
+    "raw_observations_preserved": 165828,
+    "transactions_executed": 2,
+    "transaction_failures": 0,
+    "idempotency_verified": true
+  },
+  "baselines_implemented": [
+    "Baseline A: Rainfall-Only Ranking",
+    "Baseline B: Multi-Variable Climate Comfort Profile",
+    "Baseline C: Variability-Aware Rainfall Ranking"
+  ],
+  "statistical_robustness": {
+    "methods": [
+      "Leave-One-Year-Out (LOO)",
+      "10th/90th Percentiles",
+      "IQR",
+      "Interannual CV",
+      "Rainfall Threshold Sensitivity (1, 10, 20mm)"
+    ],
+    "rank_stability": "High island-wide stability (mean LOO rank shift < 0.4 positions across all 25 districts)"
+  },
+  "research_experiments": {
+    "experiment_1_rainfall_patterns": "Completed across 25 districts",
+    "experiment_2_temperature_variation": "Completed across coastal, lowland, and highland profiles",
+    "experiment_3_interannual_stability": "Completed (identified high-variability dry-zone inter-monsoon months)",
+    "experiment_4_baseline_ranking_differences": "Completed (spearman rank correlation computed)",
+    "experiment_5_leave_one_year_out": "Completed (mean shift < 0.4)",
+    "experiment_6_geographic_sampling": "Completed (Batch 01 vs Batch 02 comparison)"
+  },
+  "boundary_and_scope_audit": {
+    "external_nasa_api_requests": 0,
+    "postgresql_writes_performed": true,
+    "qdrant_writes_performed": false,
+    "recommendation_ranking_changes": false,
+    "unrelated_weather_tables_modified": false
+  },
+  "readiness_for_stage_12_4d": true
+}

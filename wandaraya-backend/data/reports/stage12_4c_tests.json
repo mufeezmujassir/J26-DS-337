@@ -1,0 +1,120 @@
+{
+  "stage": "12.4C",
+  "timestamp_utc": "2026-10-20T11:22:10.965977+00:00",
+  "total_tests": 22,
+  "passed": 22,
+  "failed": 0,
+  "status": "ALL_TESTS_PASSED",
+  "test_details": [
+    {
+      "test_name": "test_01_dataset_version_isolation",
+      "status": "PASSED",
+      "details": "Batch 02 version ID: 3"
+    },
+    {
+      "test_name": "test_02_25_district_coverage",
+      "status": "PASSED",
+      "details": "Districts mapped: 25/25"
+    },
+    {
+      "test_name": "test_03_expected_4800_monthly_aggregates",
+      "status": "PASSED",
+      "details": "Found 4800 aggregate rows"
+    },
+    {
+      "test_name": "test_04_expected_300_climatology_records",
+      "status": "PASSED",
+      "details": "Found 300 climatology rows"
+    },
+    {
+      "test_name": "test_05_expected_300_seasonality_features",
+      "status": "PASSED",
+      "details": "Found 300 feature rows"
+    },
+    {
+      "test_name": "test_06_leap_year_handling",
+      "status": "PASSED",
+      "details": "Leap days: {29}, Non-leap: {28}"
+    },
+    {
+      "test_name": "test_07_monthly_rainfall_summation_distinction",
+      "status": "PASSED",
+      "details": "Verified across 10 sample records"
+    },
+    {
+      "test_name": "test_08_rainy_day_threshold_hierarchy",
+      "status": "PASSED",
+      "details": "Verified count hierarchy (rainy >= heavy >= very_heavy)"
+    },
+    {
+      "test_name": "test_09_quality_status_completeness",
+      "status": "PASSED",
+      "details": "Status counts: {'VALIDATED': 4800}"
+    },
+    {
+      "test_name": "test_10_temperature_metric_consistency",
+      "status": "PASSED",
+      "details": "Verified min <= mean <= max and diurnal range > 0"
+    },
+    {
+      "test_name": "test_11_humidity_bounds",
+      "status": "PASSED",
+      "details": "RH range: [50.43%, 97.48%], mean range: [62.65%, 93.45%]"
+    },
+    {
+      "test_name": "test_12_solar_radiation_unit_handling",
+      "status": "PASSED",
+      "details": "Verified daily mean ~10-25 MJ and monthly total ~300-750 MJ"
+    },
+    {
+      "test_name": "test_13_interannual_variability_and_cv",
+      "status": "PASSED",
+      "details": "Valid years == 16, std >= 0, CV >= 0"
+    },
+    {
+      "test_name": "test_14_climatology_percentile_monotonicity",
+      "status": "PASSED",
+      "details": "Min <= P10 <= Median <= P90 <= Max verified"
+    },
+    {
+      "test_name": "test_15_feature_normalization_bounds",
+      "status": "PASSED",
+      "details": "All 5 core features strictly within [0.0, 1.0]"
+    },
+    {
+      "test_name": "test_16_baseline_rankings_complete_permutation",
+      "status": "PASSED",
+      "details": "Baselines A, B, C form 1-12 permutations for District 78"
+    },
+    {
+      "test_name": "test_17_deterministic_idempotent_runs",
+      "status": "PASSED",
+      "details": "Processing runs logged: 2"
+    },
+    {
+      "test_name": "test_18_transaction_rollback_integrity",
+      "status": "PASSED",
+      "details": "Rolled back: True, count intact at 4800"
+    },
+    {
+      "test_name": "test_19_attraction_seasonality_service_lookup",
+      "status": "PASSED",
+      "details": "Attraction 1 lookup: District Galle, dedicated=True"
+    },
+    {
+      "test_name": "test_20_raw_climate_data_preservation",
+      "status": "PASSED",
+      "details": "Raw daily observations count: 165828 (expected 165,828)"
+    },
+    {
+      "test_name": "test_21_unrelated_weather_tables_preserved",
+      "status": "PASSED",
+      "details": "Operational weather tables preserved: {'district_weather_monthly': 873, 'weather_readings': 1162, 'weather_forecasts': 129}"
+    },
+    {
+      "test_name": "test_22_boundary_and_scope_audit",
+      "status": "PASSED",
+      "details": "Verified purely statistical monthly climate aggregation; no Qdrant writes, no ranking overrides"
+    }
+  ]
+}

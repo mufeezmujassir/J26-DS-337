@@ -108,3 +108,120 @@ class ClimateDistrictMapping(Base):
     geographic_confidence: Mapped[str] = mapped_column(String(40), nullable=False)
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=lambda: datetime.now(timezone.utc))
 
+
+class ClimateDistrictMonthlyAggregate(Base):
+    __tablename__ = "climate_district_monthly_aggregates"
+    __table_args__ = (
+        UniqueConstraint("district_id", "dataset_version_id", "year", "month", name="uq_district_monthly_aggregate"),
+    )
+    id: Mapped[int] = mapped_column(primary_key=True)
+    district_id: Mapped[int] = mapped_column(ForeignKey("districts.id"), nullable=False, index=True)
+    dataset_version_id: Mapped[int] = mapped_column(ForeignKey("climate_dataset_versions.id"), nullable=False, index=True)
+    year: Mapped[int] = mapped_column(Integer, nullable=False, index=True)
+    month: Mapped[int] = mapped_column(Integer, nullable=False, index=True)
+    temp_mean_c: Mapped[float | None] = mapped_column(Float)
+    temp_max_mean_c: Mapped[float | None] = mapped_column(Float)
+    temp_min_mean_c: Mapped[float | None] = mapped_column(Float)
+    temp_min_observed_c: Mapped[float | None] = mapped_column(Float)
+    temp_max_observed_c: Mapped[float | None] = mapped_column(Float)
+    diurnal_range_mean_c: Mapped[float | None] = mapped_column(Float)
+    precipitation_total_mm: Mapped[float | None] = mapped_column(Float)
+    precipitation_daily_mean_mm: Mapped[float | None] = mapped_column(Float)
+    precipitation_max_daily_mm: Mapped[float | None] = mapped_column(Float)
+    rainy_days_count: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
+    rainy_days_frequency: Mapped[float] = mapped_column(Float, nullable=False, default=0.0)
+    heavy_rain_days_count: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
+    very_heavy_rain_days_count: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
+    relative_humidity_mean_pct: Mapped[float | None] = mapped_column(Float)
+    relative_humidity_min_pct: Mapped[float | None] = mapped_column(Float)
+    relative_humidity_max_pct: Mapped[float | None] = mapped_column(Float)
+    wind_speed_mean_ms: Mapped[float | None] = mapped_column(Float)
+    wind_speed_max_ms: Mapped[float | None] = mapped_column(Float)
+    solar_radiation_mean_mj: Mapped[float | None] = mapped_column(Float)
+    solar_radiation_total_mj: Mapped[float | None] = mapped_column(Float)
+    calendar_days: Mapped[int] = mapped_column(Integer, nullable=False)
+    observed_days: Mapped[int] = mapped_column(Integer, nullable=False)
+    completeness_pct: Mapped[float] = mapped_column(Float, nullable=False)
+    quality_status: Mapped[str] = mapped_column(String(40), nullable=False, default="VALIDATED")
+    processing_version: Mapped[str] = mapped_column(String(40), nullable=False)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=lambda: datetime.now(timezone.utc))
+
+
+class ClimateDistrictMonthlyClimatology(Base):
+    __tablename__ = "climate_district_monthly_climatology"
+    __table_args__ = (
+        UniqueConstraint("district_id", "dataset_version_id", "month", "reference_period", "processing_version", name="uq_district_monthly_climatology"),
+    )
+    id: Mapped[int] = mapped_column(primary_key=True)
+    district_id: Mapped[int] = mapped_column(ForeignKey("districts.id"), nullable=False, index=True)
+    dataset_version_id: Mapped[int] = mapped_column(ForeignKey("climate_dataset_versions.id"), nullable=False, index=True)
+    month: Mapped[int] = mapped_column(Integer, nullable=False, index=True)
+    reference_period: Mapped[str] = mapped_column(String(40), nullable=False)
+    processing_version: Mapped[str] = mapped_column(String(40), nullable=False)
+    rainfall_mean_mm: Mapped[float | None] = mapped_column(Float)
+    rainfall_median_mm: Mapped[float | None] = mapped_column(Float)
+    rainfall_std_mm: Mapped[float | None] = mapped_column(Float)
+    rainfall_iqr_mm: Mapped[float | None] = mapped_column(Float)
+    rainfall_p10_mm: Mapped[float | None] = mapped_column(Float)
+    rainfall_p90_mm: Mapped[float | None] = mapped_column(Float)
+    rainfall_min_mm: Mapped[float | None] = mapped_column(Float)
+    rainfall_max_mm: Mapped[float | None] = mapped_column(Float)
+    rainfall_cv: Mapped[float | None] = mapped_column(Float)
+    rainy_day_frequency_mean: Mapped[float | None] = mapped_column(Float)
+    heavy_rain_days_mean: Mapped[float | None] = mapped_column(Float)
+    very_heavy_rain_days_mean: Mapped[float | None] = mapped_column(Float)
+    temp_mean_c: Mapped[float | None] = mapped_column(Float)
+    temp_max_mean_c: Mapped[float | None] = mapped_column(Float)
+    temp_min_mean_c: Mapped[float | None] = mapped_column(Float)
+    diurnal_range_mean_c: Mapped[float | None] = mapped_column(Float)
+    relative_humidity_mean_pct: Mapped[float | None] = mapped_column(Float)
+    wind_speed_mean_ms: Mapped[float | None] = mapped_column(Float)
+    solar_radiation_mean_mj: Mapped[float | None] = mapped_column(Float)
+    solar_radiation_total_mean_mj: Mapped[float | None] = mapped_column(Float)
+    valid_years_count: Mapped[int] = mapped_column(Integer, nullable=False)
+    total_observed_days: Mapped[int] = mapped_column(Integer, nullable=False)
+    geographic_uncertainty: Mapped[str] = mapped_column(String(40), nullable=False)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=lambda: datetime.now(timezone.utc))
+
+
+class ClimateSeasonalityFeature(Base):
+    __tablename__ = "climate_seasonality_features"
+    __table_args__ = (
+        UniqueConstraint("district_id", "dataset_version_id", "month", "feature_version", name="uq_climate_seasonality_features"),
+    )
+    id: Mapped[int] = mapped_column(primary_key=True)
+    district_id: Mapped[int] = mapped_column(ForeignKey("districts.id"), nullable=False, index=True)
+    dataset_version_id: Mapped[int] = mapped_column(ForeignKey("climate_dataset_versions.id"), nullable=False, index=True)
+    month: Mapped[int] = mapped_column(Integer, nullable=False, index=True)
+    feature_version: Mapped[str] = mapped_column(String(40), nullable=False)
+    relative_rainfall_favorability: Mapped[float] = mapped_column(Float, nullable=False)
+    temperature_comfort_index: Mapped[float] = mapped_column(Float, nullable=False)
+    humidity_comfort_index: Mapped[float] = mapped_column(Float, nullable=False)
+    rainfall_reliability_index: Mapped[float] = mapped_column(Float, nullable=False)
+    seasonality_uncertainty_score: Mapped[float] = mapped_column(Float, nullable=False)
+    baseline_a_rainfall_rank: Mapped[int] = mapped_column(Integer, nullable=False)
+    baseline_b_multivar_score: Mapped[float] = mapped_column(Float, nullable=False)
+    baseline_b_multivar_rank: Mapped[int] = mapped_column(Integer, nullable=False)
+    baseline_c_variability_rank: Mapped[int] = mapped_column(Integer, nullable=False)
+    feature_vector_json: Mapped[dict] = mapped_column(JSON, nullable=False, default=dict)
+    metadata_json: Mapped[dict] = mapped_column(JSON, nullable=False, default=dict)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=lambda: datetime.now(timezone.utc))
+
+
+class ClimateProcessingRun(Base):
+    __tablename__ = "climate_processing_runs"
+    id: Mapped[int] = mapped_column(primary_key=True)
+    stage: Mapped[str] = mapped_column(String(40), nullable=False)
+    run_type: Mapped[str] = mapped_column(String(80), nullable=False)
+    dataset_version_id: Mapped[int | None] = mapped_column(ForeignKey("climate_dataset_versions.id"), nullable=True, index=True)
+    processing_version: Mapped[str] = mapped_column(String(40), nullable=False)
+    started_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False)
+    completed_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    status: Mapped[str] = mapped_column(String(40), nullable=False)
+    records_processed: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
+    records_persisted: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
+    parameters_json: Mapped[dict] = mapped_column(JSON, nullable=False, default=dict)
+    summary_json: Mapped[dict] = mapped_column(JSON, nullable=False, default=dict)
+    error_summary: Mapped[str | None] = mapped_column(Text)
+
+
