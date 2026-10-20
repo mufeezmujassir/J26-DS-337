@@ -1,0 +1,5 @@
+{
+  "dataset_version_policy": "Keep 2024 pilot and historical Batch01/Batch02 as distinct versions; overlapping 2024 dates are never merged across dataset versions when calculating climatology.",
+  "historical_writes": false,
+  "transaction_plan": "validate checksum, one dataset version, idempotent grid/sample/date conflicts, commit per approved batch only."
+}

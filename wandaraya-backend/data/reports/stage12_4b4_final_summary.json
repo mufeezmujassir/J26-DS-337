@@ -1,0 +1,20 @@
+{
+  "status": "BATCH02_READY_AWAITING_ACQUISITION_APPROVAL",
+  "batch01_integrity": {
+    "batch01_samples": 3,
+    "checksums_valid": true,
+    "unique_dates_each": [
+      5844,
+      5844,
+      5844
+    ],
+    "pilot_2024_preserved": true
+  },
+  "remaining_district_samples": 25,
+  "expected_batch02_records": 146100,
+  "external_requests": 0,
+  "postgresql_writes": false,
+  "qdrant_writes": false,
+  "ranking_changes": false,
+  "pending": "Explicitly authorize exactly the manifest's remaining district representative requests; do not authorize persistence."
+}
