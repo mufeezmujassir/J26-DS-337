@@ -14,6 +14,7 @@ if str(ROOT_DIR) not in sys.path:
 
 from app.group_decision.decision.baselines import decide
 from app.group_decision.decision.metrics import min_member_satisfaction, preference_coverage
+from app.group_decision.decision.weighted import weighted_vote
 
 DEMO_GROUPS_PATH = ROOT_DIR / "data" / "group_decision"/"processed" / "decision_demo_groups.json"
 
@@ -28,18 +29,20 @@ def run_demo(groups_path: Path | str = DEMO_GROUPS_PATH) -> None:
     with open(path, "r", encoding="utf-8") as f:
         groups = json.load(f)
 
-    print("\n" + "=" * 116)
-    print("STEP 10a: DECISION ENGINE BASELINES DEMO (MAJORITY VS PREFERENCE-ONLY)")
-    print("=" * 116)
-    header_fmt = "{:<24} | {:<12} | {:<14} {:<6} {:<8} {:<8} | {:<16} {:<6} {:<8} {:<8}"
-    row_fmt    = "{:<24} | {:<12} | {:<14} {:<6} {:<8.2f} {:<8.2f} | {:<16} {:<6} {:<8.2f} {:<8.2f}"
-    
+    print("\n" + "=" * 140)
+    print("DECISION ENGINE DEMO: MAJORITY vs PREFERENCE-ONLY vs EMOTION-WEIGHTED VOTING")
+    print("=" * 140)
+    header_fmt = "{:<24} | {:<12} | {:<13} {:<5} | {:<13} {:<5} | {:<13} {:<5} {:<6} | {:<7} {:<7}"
+    row_fmt    = "{:<24} | {:<12} | {:<13} {:<5} | {:<13} {:<5} | {:<13} {:<5} {:<6} | {:<7.2f} {:<7.2f}"
+
     print(header_fmt.format(
         "Group ID", "Category",
-        "Maj: Winner", "Tie?", "Cov.", "MinSat",
-        "Pref: Winner", "Tie?", "Cov.", "MinSat",
+        "Maj: Winner", "Tie?", 
+        "Pref: Winner", "Tie?",
+        "Wgt: Winner", "Tie?", "Flip?",
+        "WgtCov", "WgtMinSat",
     ))
-    print("-" * 116)
+    print("-" * 140)
 
     for g in groups:
         gid = g.get("group_id", "GROUP")
@@ -49,27 +52,34 @@ def run_demo(groups_path: Path | str = DEMO_GROUPS_PATH) -> None:
         # Majority
         maj_res = decide(records, method="majority", category=category)
         maj_chosen = maj_res.chosen_option or "None"
-        maj_cov = preference_coverage(records, maj_res.chosen_option, category=category)
-        maj_min_sat = min_member_satisfaction(records, maj_res.chosen_option, category=category)
         maj_tie_str = "YES" if maj_res.is_tie else "NO"
 
         # Preference-only
         pref_res = decide(records, method="preference_only", category=category)
         pref_chosen = pref_res.chosen_option or "None"
-        pref_cov = preference_coverage(records, pref_res.chosen_option, category=category)
-        pref_min_sat = min_member_satisfaction(records, pref_res.chosen_option, category=category)
         pref_tie_str = "YES" if pref_res.is_tie else "NO"
+
+         #  Weighted
+        wgt_res = decide(records, method="weighted", category=category)
+        wgt_chosen = wgt_res.chosen_option or "None"
+        wgt_tie_str = "YES" if wgt_res.is_tie else "NO"
+        flip_str = "YES" if wgt_res.outcome_changed_vs_preference_only else "NO"
+        wgt_cov = preference_coverage(records, wgt_res.chosen_option, category=category)
+        wgt_min_sat = min_member_satisfaction(records, wgt_res.chosen_option, category=category)
+
 
         # Shorten ID if needed
         short_id = gid.replace("GROUP_", "")[:24]
 
         print(row_fmt.format(
             short_id, category,
-            maj_chosen[:14], maj_tie_str, maj_cov, maj_min_sat,
-            pref_chosen[:16], pref_tie_str, pref_cov, pref_min_sat,
+            maj_chosen[:13], maj_tie_str,
+            pref_chosen[:13], pref_tie_str,
+            wgt_chosen[:13], wgt_tie_str, flip_str,
+            wgt_cov, wgt_min_sat,
         ))
 
-    print("=" * 116 + "\n")
+    print("=" * 140 + "\n")
 
 
 if __name__ == "__main__":

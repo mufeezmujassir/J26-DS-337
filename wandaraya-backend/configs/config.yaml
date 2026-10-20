@@ -128,7 +128,17 @@ decision:
     positive: 1.0
     neutral: 0.0
     negative: -1.0
+  weighted:
+    alpha: 1.0                     
+    w_min: 1.0                    
+    w_max: 2.0                     
+    intensity_mode: "continuous"    
+    use_emotion: true              
+    aggregation_policy: "max"       
   paths:
     demo_groups_json: "data/processed/decision_demo_groups.json"
     results_json: "reports/decision_baselines_results.json"
     comparison_figure: "reports/figures/decision_baselines_comparison.png"
+    weighted_results_json: /"reports/weighted_voting_results.json"
+    weighted_sensitivity_figure: "reports/figures/weighted_sensitivity.png"
+    weighted_comparison_figure: "reports/figures/weighted_comparison.png"

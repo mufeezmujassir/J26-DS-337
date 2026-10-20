@@ -116,5 +116,47 @@
       {"member": "Alice", "category": "Destination", "stance": "negative", "value": {"name": "colombo"}},
       {"member": "Bob", "category": "Destination", "stance": "negative", "value": {"name": "colombo"}}
     ]
+  },
+
+  {
+    "group_id": "GROUP_11_WEIGHTED_FLIP_PROPOSAL",
+    "name": "Weighted Flip: Intense Opponent Reverses Winner",
+    "category": "Destination",
+    "records": [
+      {"member": "Alice", "category": "Destination", "stance": "positive", "value": {"name": "mirissa"}, "message_id": "msg_11_1", "emotion": {"intensity": 0.2, "valence_sign": 1, "dominant_emotion": "approval"}},
+      {"member": "Bob", "category": "Destination", "stance": "positive", "value": {"name": "mirissa"}, "message_id": "msg_11_2", "emotion": {"intensity": 0.2, "valence_sign": 1, "dominant_emotion": "approval"}},
+      {"member": "Charlie", "category": "Destination", "stance": "negative", "value": {"name": "mirissa"}, "message_id": "msg_11_3", "emotion": {"intensity": 0.95, "valence_sign": -1, "dominant_emotion": "anger"}},
+      {"member": "Charlie", "category": "Destination", "stance": "positive", "value": {"name": "sigiriya"}, "message_id": "msg_11_4", "emotion": {"intensity": 0.85, "valence_sign": 1, "dominant_emotion": "joy"}}
+    ]
+  },
+  {
+    "group_id": "GROUP_12_WEIGHTED_NO_FLIP_CONSENSUS",
+    "name": "Weighted No Flip: Strong Majority Resists Single Vocal Member",
+    "category": "Destination",
+    "records": [
+      {"member": "Alice", "category": "Destination", "stance": "positive", "value": {"name": "ella"}, "message_id": "msg_12_1", "emotion": {"intensity": 0.7, "valence_sign": 1, "dominant_emotion": "joy"}},
+      {"member": "Bob", "category": "Destination", "stance": "positive", "value": {"name": "ella"}, "message_id": "msg_12_2", "emotion": {"intensity": 0.6, "valence_sign": 1, "dominant_emotion": "joy"}},
+      {"member": "Charlie", "category": "Destination", "stance": "positive", "value": {"name": "ella"}, "message_id": "msg_12_3", "emotion": {"intensity": 0.5, "valence_sign": 1, "dominant_emotion": "optimism"}},
+      {"member": "David", "category": "Destination", "stance": "positive", "value": {"name": "kandy"}, "message_id": "msg_12_4", "emotion": {"intensity": 1.0, "valence_sign": 1, "dominant_emotion": "excitement"}}
+    ]
+  },
+  {
+    "group_id": "GROUP_13_WEIGHTED_ACTIVITY_ENTHUSIASM",
+    "name": "Activity Tie-Break Flipped by High Enthusiasm",
+    "category": "Activity",
+    "records": [
+      {"member": "Alice", "category": "Activity", "stance": "positive", "value": {"name": "hiking"}, "message_id": "msg_13_1", "emotion": {"intensity": 0.1, "valence_sign": 1, "dominant_emotion": "approval"}},
+      {"member": "Bob", "category": "Activity", "stance": "positive", "value": {"name": "surfing"}, "message_id": "msg_13_2", "emotion": {"intensity": 0.95, "valence_sign": 1, "dominant_emotion": "excitement"}}
+    ]
+  },
+  {
+    "group_id": "GROUP_14_WEIGHTED_UNANIMOUS_PASSION",
+    "name": "Unanimous Passion for Galle",
+    "category": "Destination",
+    "records": [
+      {"member": "Alice", "category": "Destination", "stance": "positive", "value": {"name": "galle"}, "message_id": "msg_14_1", "emotion": {"intensity": 0.9, "valence_sign": 1, "dominant_emotion": "love"}},
+      {"member": "Bob", "category": "Destination", "stance": "positive", "value": {"name": "galle"}, "message_id": "msg_14_2", "emotion": {"intensity": 0.85, "valence_sign": 1, "dominant_emotion": "admiration"}},
+      {"member": "Charlie", "category": "Destination", "stance": "positive", "value": {"name": "galle"}, "message_id": "msg_14_3", "emotion": {"intensity": 0.8, "valence_sign": 1, "dominant_emotion": "joy"}}
+    ]
   }
 ]

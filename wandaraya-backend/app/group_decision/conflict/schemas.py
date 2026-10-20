@@ -139,6 +139,22 @@ class ScheduleValue(BaseModel):
                 )
         return self
 
+class EmotionSignal(BaseModel):
+    """Schema representing emotion expression signal from intensity estimator."""
+
+    intensity: float = Field(..., ge=0.0, le=1.0, description="Expression intensity 0-1")
+    valence_sign: Literal[-1, 0, 1] = Field(..., description="Valence sign: -1, 0, or 1")
+    dominant_emotion: str = Field(..., description="Dominant emotion label")
+    valence: str | None = Field(default=None, description="Valence category (positive/negative/neutral/ambiguous)")
+    components: dict[str, Any] | None = Field(default=None, description="Component breakdown scores")
+
+    @field_validator("dominant_emotion")
+    @classmethod
+    def validate_dominant_emotion(cls, v: Any) -> str:
+        if not isinstance(v, str) or not v.strip():
+            raise ValueError("dominant_emotion must be a non-empty string.")
+        return v.strip().lower()
+
 
 class PreferenceRecord(BaseModel):
     """Validated representation of an input preference record."""
@@ -152,6 +168,15 @@ class PreferenceRecord(BaseModel):
     value: dict[str, Any] | DestinationValue | ActivityValue | BudgetValue | ScheduleValue = Field(
         ...,
         description="Category-specific value dictionary",
+    )
+
+    message_id: str | None = Field(
+        default=None,
+        description="Optional identifier of the source message for emotion association",
+    )
+    emotion: EmotionSignal | None = Field(
+        default=None,
+        description="Optional emotion signal matching output of src/intensity/estimator.py",
     )
 
     @field_validator("member")
