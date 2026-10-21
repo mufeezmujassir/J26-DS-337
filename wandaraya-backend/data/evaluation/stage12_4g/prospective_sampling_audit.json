@@ -1,0 +1,57 @@
+{
+  "activities": 16,
+  "candidate_inventory_queries": 8898,
+  "climate_cluster_counts": {
+    "dataset:2:attraction:1": 4,
+    "dataset:2:attraction:24": 4,
+    "dataset:3:district:73": 3,
+    "dataset:3:district:74": 3,
+    "dataset:3:district:75": 3,
+    "dataset:3:district:76": 3,
+    "dataset:3:district:77": 4,
+    "dataset:3:district:78": 4,
+    "dataset:3:district:79": 3,
+    "dataset:3:district:80": 3,
+    "dataset:3:district:81": 3,
+    "dataset:3:district:82": 3,
+    "dataset:3:district:83": 3,
+    "dataset:3:district:84": 3,
+    "dataset:3:district:86": 3,
+    "dataset:3:district:88": 2,
+    "dataset:3:district:89": 4,
+    "dataset:3:district:90": 4,
+    "dataset:3:district:92": 3,
+    "dataset:3:district:93": 3,
+    "dataset:3:district:94": 3,
+    "dataset:3:district:95": 3,
+    "dataset:3:district:96": 1
+  },
+  "dataset_version": "stage12_4g_prospective_review_v1",
+  "districts": 21,
+  "genuinely_new": true,
+  "geographic_evidence": {
+    "ATTRACTION_COORDINATE_REANALYSIS": 8,
+    "DISTRICT_REPRESENTATIVE_PROXY": 64
+  },
+  "historical_queries_excluded": 60,
+  "independent_climate_clusters": 23,
+  "independent_eligible_queries": 8838,
+  "mapping_tiers": {
+    "A": 18,
+    "B": 30,
+    "C": 24
+  },
+  "overlap_with_stage12_4e2": 0,
+  "predictions_exposed_to_reviewers": false,
+  "review_labels_populated": 0,
+  "sampling_audit_hash": "2de42768f048312de9d67d4a71a82eb2729a2880a5f246d40295e45d49190936",
+  "sampling_cohorts": {
+    "COORDINATE_EVIDENCE": 8,
+    "STRONG_MAPPING": 43,
+    "WEAK_MAPPING": 21
+  },
+  "seed": "wandaraya-stage12.4g-prospective-v1-20261021",
+  "selected_month_items": 864,
+  "selected_queries": 72,
+  "status": "PASS"
+}

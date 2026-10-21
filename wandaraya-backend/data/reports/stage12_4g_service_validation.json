@@ -1,0 +1,16 @@
+{
+  "batch_query_upper_bound": 3,
+  "evidence_kind": "HISTORICAL_CLIMATE_SEASONALITY",
+  "fallback_states": [
+    "FALLBACK_NOT_REQUIRED",
+    "DISTRICT_BASELINE_FALLBACK_APPLIED",
+    "FALLBACK_UNAVAILABLE",
+    "PROFILE_UNAVAILABLE",
+    "MAPPING_UNSUPPORTED"
+  ],
+  "live_weather_forecast": false,
+  "missing_mapping_observed": "MAPPING_UNSUPPORTED",
+  "persisted_provenance_authoritative": true,
+  "request_provenance_authoritative": false,
+  "status": "VERIFIED"
+}

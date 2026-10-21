@@ -36,6 +36,36 @@ def _remaining_minutes(schedule, local_visit: datetime) -> int | None:
     return min(candidates) if candidates else None
 
 
+def evaluate_attraction_time_evidence(attraction: Attraction, visit_datetime: datetime, visit_duration_minutes: int = 60) -> dict:
+    """Evaluate one already-hydrated candidate without changing its rank.
+
+    This is the small adapter used by the Stage 12.4G shadow compositor.  It
+    deliberately reuses the same parser, evaluator, and interval semantics as
+    the existing time-aware recommendation service.
+    """
+    local_visit = visit_datetime.astimezone(ZoneInfo("Asia/Colombo"))
+    schedule = normalize_google_regular_opening_hours(
+        attraction_id=attraction.id, opening_hours=attraction.opening_hours
+    )
+    evaluation = evaluate_weekly_schedule(schedule, local_visit)
+    if evaluation.state is OpeningState.UNKNOWN:
+        opening, window, score, confidence, unavailable = "UNKNOWN", "UNKNOWN", None, "unavailable", ["verified_opening_hours"]
+    elif evaluation.state is OpeningState.KNOWN_CLOSED:
+        opening, window, score, confidence, unavailable = "CLOSED", "UNKNOWN", 0.0, "medium", []
+    else:
+        remaining = _remaining_minutes(schedule, local_visit)
+        if remaining is None:
+            opening, window, score, confidence, unavailable = "UNKNOWN", "UNKNOWN", None, "unavailable", ["visit_window"]
+        elif remaining >= visit_duration_minutes:
+            opening, window, score, confidence, unavailable = "OPEN", "FITS", 1.0, "medium", []
+        else:
+            opening, window, score, confidence, unavailable = "OPEN", "INSUFFICIENT_TIME", 0.5, "medium", []
+    return {"opening_status": opening, "visit_window_status": window,
+            "score": score, "confidence": confidence, "source": schedule.source_type,
+            "freshness": schedule.evidence.freshness_status.value,
+            "explanation": evaluation.explanation, "unavailable_dimensions": unavailable}
+
+
 class TimeAwareRecommendationService:
     def __init__(self, db: AsyncSession, content_service: ContentBasedRecommendationService | None = None):
         self.db = db
@@ -52,21 +82,9 @@ class TimeAwareRecommendationService:
             attraction = attractions.get(baseline_item.attraction_id)
             if attraction is None:
                 continue
-            schedule = normalize_google_regular_opening_hours(attraction_id=attraction.id, opening_hours=attraction.opening_hours)
-            evaluation = evaluate_weekly_schedule(schedule, local_visit)
-            if evaluation.state is OpeningState.UNKNOWN:
-                opening, window, score, confidence = "UNKNOWN", "UNKNOWN", None, "unavailable"
-                unavailable = ["verified_opening_hours"]
-            elif evaluation.state is OpeningState.KNOWN_CLOSED:
-                opening, window, score, confidence, unavailable = "CLOSED", "UNKNOWN", 0.0, "medium", []
-            else:
-                remaining = _remaining_minutes(schedule, local_visit)
-                if remaining is None:
-                    opening, window, score, confidence, unavailable = "UNKNOWN", "UNKNOWN", None, "unavailable", ["visit_window"]
-                elif remaining >= request.visit_duration_minutes:
-                    opening, window, score, confidence, unavailable = "OPEN", "FITS", 1.0, "medium", []
-                else:
-                    opening, window, score, confidence, unavailable = "OPEN", "INSUFFICIENT_TIME", 0.5, "medium", []
+            evidence = evaluate_attraction_time_evidence(attraction, local_visit, request.visit_duration_minutes)
+            opening, window, score, confidence = evidence["opening_status"], evidence["visit_window_status"], evidence["score"], evidence["confidence"]
+            unavailable = evidence["unavailable_dimensions"]
             if request.strict_open_now and opening != "OPEN":
                 continue
             # Unknown schedule is intentionally not a zero score and therefore
@@ -75,9 +93,9 @@ class TimeAwareRecommendationService:
             result.append(TimeContextEvidenceItem(
                 **baseline_item.model_dump(), opening_status=opening, visit_window_status=window,
                 time_suitability_score=score, time_context_confidence=confidence,
-                time_evidence_source=schedule.source_type,
-                time_evidence_freshness=schedule.evidence.freshness_status.value,
-                time_explanation=evaluation.explanation,
+                time_evidence_source=evidence["source"],
+                time_evidence_freshness=evidence["freshness"],
+                time_explanation=evidence["explanation"],
                 time_unavailable_dimensions=unavailable,
                 final_experimental_score=round(final_score, 6),
                 best_time_advisory=(load_advisory_for_attraction(attraction.id) if request.include_best_time_advisory else None),

@@ -1,0 +1,73 @@
+{
+  "analysis": {
+    "bootstrap_iterations": 10000,
+    "bootstrap_seed": 12404,
+    "cluster_unit": "climate_source_identity",
+    "confidence_interval": "two-sided cluster bootstrap percentile 95%",
+    "incomplete_rankings": "excluded from full-ranking metrics",
+    "insufficient_evidence": "missing_not_zero",
+    "paired_unit": "complete_attraction_activity_query",
+    "secondary_multiplicity": "Holm-adjusted when inferential p-values are reported; otherwise descriptive and explicitly exploratory",
+    "ties": "deterministic month-number tie break for ranked lists; average ranks for Spearman; Kendall tau-b tie correction"
+  },
+  "dataset_version": "stage12_4g_prospective_review_v1",
+  "decision_rule": {
+    "INSUFFICIENT_INDEPENDENT_EVIDENCE": "fewer than 60 complete queries OR fewer than 15 independent clusters OR incomplete verified adjudication",
+    "NO_ESTABLISHED_IMPROVEMENT": "minimum data met but supported-improvement rule is not met",
+    "SUPPORTED_IMPROVEMENT": "minimum data met AND paired mean difference >= 0.01 AND cluster-bootstrap 95% lower bound > 0",
+    "minimum_complete_queries": 60,
+    "minimum_independent_clusters": 15,
+    "practical_mean_ndcg5_difference": 0.01
+  },
+  "frozen_before_labels": true,
+  "historical_ground_truth_sha256": "3383ee29f8367f4e3308ebf21d6beef187dc6015f588f5476345cb066488caad",
+  "power_statement": "The target is feasibility-based; no guaranteed statistical power is claimed. Precision depends on realized labels and effective climate-source clusters.",
+  "primary_baseline": {
+    "configuration_hash": "806824bf45c88bf33df58a8f050736f95854dcc73a8c57b21993431186c9a353",
+    "identifier": "district_multivariable",
+    "version": "12.4c_v1"
+  },
+  "primary_candidate": {
+    "configuration_hash": "219d30f4d7ac326977cd5b68dbed9116ea30d90a1b03834912be0975212d1d4a",
+    "identifier": "activity_aware",
+    "version": "12.4d_v1"
+  },
+  "primary_metric": "mean_ndcg_at_5_complete_12_month_queries",
+  "primary_question": "Does the frozen original activity-aware seasonality model improve monthly attraction-activity ranking over the frozen district multivariable reference on a new independently judged dataset?",
+  "prohibited": [
+    "retrospective_fixed_blend_as_primary",
+    "stage12_4e2_query_overlap",
+    "model_error_based_sampling",
+    "automatic_disagreement_resolution"
+  ],
+  "protocol_hash": "add895cffebcbe0b26089fe8b28ca48a7754ce1018623392b2e377bc3524723a",
+  "protocol_version": "stage12_4g_prospective_protocol_v1",
+  "sampling": {
+    "exclude_all_stage12_4e2_queries": true,
+    "months_per_query": 12,
+    "reviewers_per_item": 2,
+    "seed": "wandaraya-stage12.4g-prospective-v1-20261021",
+    "selection_uses_predictions": false,
+    "strata": [
+      "climate_source_identity",
+      "district",
+      "activity_family",
+      "mapping_evidence_tier",
+      "geographic_evidence_level"
+    ],
+    "target_queries": 72
+  },
+  "secondary_metrics": [
+    "ndcg_at_3",
+    "ndcg_at_12",
+    "spearman_tie_aware",
+    "kendall_tau_b",
+    "top_3_overlap",
+    "mrr_relevance_ge_3",
+    "geographic_subgroups",
+    "activity_subgroups",
+    "missingness",
+    "coverage"
+  ],
+  "status": "FROZEN_BEFORE_LABELS"
+}

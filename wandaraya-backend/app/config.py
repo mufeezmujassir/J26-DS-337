@@ -19,6 +19,11 @@ class Settings(BaseSettings):
     ROUTE_API_KEY: str = ""
     ORS_API_KEY: str = ""
     GROQ_API_KEY: str = ""
+    # Stage 12.4G research controls. Evidence composition is deliberately
+    # opt-in and can never imply permission to change production ordering.
+    ENABLE_EXPERIMENTAL_SEASONALITY_EVIDENCE: bool = False
+    ENABLE_EXPERIMENTAL_CONTEXT_COMPOSITION: bool = False
+    ENABLE_SEASONALITY_PRODUCTION_RERANKING: bool = False
 
     @property
     def effective_route_api_key(self) -> str:

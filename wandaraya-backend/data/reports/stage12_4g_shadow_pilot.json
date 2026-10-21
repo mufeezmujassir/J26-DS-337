@@ -1,0 +1,131 @@
+{
+  "batch_behavior": "seasonality executed in 2-3 queries per candidate batch, not per candidate",
+  "candidate_count": 15,
+  "conflicting_date_month_handling": "Pydantic rejects mismatched travel_date/month",
+  "database_query_count": {
+    "instrument": "SQLAlchemy before_cursor_execute event",
+    "mean_per_request": 10,
+    "total": 30
+  },
+  "deterministic_repeat": true,
+  "district_proxy_frequency": 0.6,
+  "environment": {
+    "container": "wandaraya-api-cutover",
+    "database": "PostgreSQL/PostGIS Docker service",
+    "embedding_model": "BAAI/bge-large-en-v1.5",
+    "executed_at": "2026-10-21T09:45:32.821613+05:30",
+    "vector_store": "http://qdrant-production-replacement:6333"
+  },
+  "error_rate": 0.0,
+  "fallback_frequency": 0.0,
+  "invalid_month_handling": "Pydantic rejects values outside 1..12",
+  "latency_ms": {
+    "max": 18729.49811500075,
+    "mean": 6850.740951998887,
+    "median": 1427.0274249975046
+  },
+  "limit_per_request": 5,
+  "measurements": [
+    {
+      "activity_type_id": 8,
+      "candidate_count": 5,
+      "database_query_count": 10,
+      "district_proxy": 2,
+      "errors": [],
+      "fallback_applied": 0,
+      "group_emotion_not_available": true,
+      "latency_ms": 18729.49811500075,
+      "original_order": [
+        1,
+        4727,
+        2281,
+        872,
+        1064
+      ],
+      "query": "historical heritage place in Galle",
+      "ranking_unchanged": true,
+      "returned_order": [
+        1,
+        4727,
+        2281,
+        872,
+        1064
+      ],
+      "seasonality_available": 3,
+      "seasonality_batch_query_count": 2,
+      "seasonality_latency_ms": 119.45168999955058,
+      "seasonality_unavailable": 2
+    },
+    {
+      "activity_type_id": 7,
+      "candidate_count": 5,
+      "database_query_count": 10,
+      "district_proxy": 4,
+      "errors": [],
+      "fallback_applied": 0,
+      "group_emotion_not_available": true,
+      "latency_ms": 1427.0274249975046,
+      "original_order": [
+        1298,
+        1490,
+        1492,
+        1477,
+        4064
+      ],
+      "query": "wildlife safari with elephants",
+      "ranking_unchanged": true,
+      "returned_order": [
+        1298,
+        1490,
+        1492,
+        1477,
+        4064
+      ],
+      "seasonality_available": 4,
+      "seasonality_batch_query_count": 2,
+      "seasonality_latency_ms": 41.144916001940146,
+      "seasonality_unavailable": 1
+    },
+    {
+      "activity_type_id": 1,
+      "candidate_count": 5,
+      "database_query_count": 10,
+      "district_proxy": 3,
+      "errors": [],
+      "fallback_applied": 0,
+      "group_emotion_not_available": true,
+      "latency_ms": 395.6973159984045,
+      "original_order": [
+        4226,
+        4218,
+        4115,
+        29,
+        4383
+      ],
+      "query": "beach destination near the ocean",
+      "ranking_unchanged": true,
+      "returned_order": [
+        4226,
+        4218,
+        4115,
+        29,
+        4383
+      ],
+      "seasonality_available": 3,
+      "seasonality_batch_query_count": 2,
+      "seasonality_latency_ms": 56.27563099915278,
+      "seasonality_unavailable": 2
+    }
+  ],
+  "missing_mapping_status": "MAPPING_UNSUPPORTED",
+  "production_ranking_changed": false,
+  "production_reranking_flag": false,
+  "ranking_invariance": true,
+  "requests": 3,
+  "seasonality_coverage": 0.6666666666666666,
+  "seasonality_latency_ms": {
+    "max": 119.45168999955058,
+    "mean": 72.29074566688116
+  },
+  "status": "SHADOW_PILOT_COMPLETED"
+}

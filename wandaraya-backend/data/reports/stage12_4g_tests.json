@@ -1,0 +1,515 @@
+{
+  "aggregate_executed": 240,
+  "aggregate_failed": 0,
+  "aggregate_passed": 240,
+  "checks": [
+    {
+      "detail": null,
+      "name": "protocol_version",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "protocol_hash_valid",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "protocol_frozen_before_labels",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "protocol_primary_metric",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "protocol_primary_candidate_original",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "protocol_baseline_district",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "protocol_fixed_blend_not_primary",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "protocol_bootstrap_seed",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "protocol_bootstrap_iterations",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "protocol_practical_threshold",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "protocol_missing_not_zero",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "protocol_min_clusters",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "protocol_min_queries",
+      "passed": true
+    },
+    {
+      "detail": 8898,
+      "name": "inventory_count",
+      "passed": true
+    },
+    {
+      "detail": 72,
+      "name": "sample_query_count",
+      "passed": true
+    },
+    {
+      "detail": 864,
+      "name": "review_item_count",
+      "passed": true
+    },
+    {
+      "detail": 1728,
+      "name": "two_assignment_slots",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "assignments_unassigned",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "labels_blank",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "reviewer_blinding",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "all_queries_twelve_months",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "all_calendar_months",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "source_references_present",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "dataset_version_on_all_items",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "no_historical_query_overlap",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "district_diversity",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "activity_diversity",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "climate_cluster_diversity",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "coordinate_evidence_present",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "district_proxy_present",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "strong_mapping_present",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "weak_mapping_present",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "sampling_deterministic",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "sampling_manifest_hash",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "inventory_checksum",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "template_checksum",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "duplicate_review_rejected",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "no_completed_review_files",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "service_supported_available",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "service_supported_no_fallback",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "service_supported_fallback_false",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "service_score_range",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "service_category_consistent",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "service_historical_kind",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "service_not_live_forecast",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "service_request_geo_ignored",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "service_geo_mismatch_recorded",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "service_persisted_geo_authoritative",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "service_model_version",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "service_production_unchanged",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "service_weak_fallback_applied",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "service_weak_fallback_true",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "service_weak_available",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "service_missing_mapping_explicit",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "service_missing_mapping_score_none",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "service_batch_query_bound",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "service_profile_unavailable",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "service_fallback_unavailable",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "service_weak_profile_not_silently_used",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "service_fallback_unavailable_false",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "service_invalid_month_rejected",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "service_date_month_conflict_rejected",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "composition_flag_enforced",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "flags_composition_default_off",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "flags_seasonality_default_off",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "flags_reranking_default_off",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "shadow_real_measurements",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "shadow_ranking_invariance",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "shadow_deterministic",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "shadow_no_errors",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "shadow_query_count_measured",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "shadow_latency_measured",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "shadow_seasonality_latency_measured",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "shadow_group_emotion_missing",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "shadow_no_production_reranking",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "prospective_pending",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "no_prospective_metric",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "no_significance_claim",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "no_model_approval",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "decision_supported",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "decision_no_improvement",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "decision_low_queries",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "decision_low_clusters",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "decision_missing_adjudication",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "month_tie_break",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "ndcg_perfect",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "evaluator_complete_filter",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "evaluator_cluster_grouping",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "evaluator_bootstrap_deterministic",
+      "passed": true
+    },
+    {
+      "detail": 165828,
+      "name": "historical_observations_unchanged",
+      "passed": true
+    },
+    {
+      "detail": 121524,
+      "name": "historical_profiles_unchanged",
+      "passed": true
+    },
+    {
+      "detail": 606528,
+      "name": "historical_predictions_unchanged",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "historical_ground_truth_hash",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "stage_f_activity_metric_unchanged",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "stage_f_district_metric_unchanged",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "no_new_migration",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "stage_g_run_persisted",
+      "passed": true
+    },
+    {
+      "detail": 6120,
+      "name": "qdrant_count_unchanged",
+      "passed": true
+    }
+  ],
+  "executed": 98,
+  "failed": 0,
+  "passed": 98,
+  "regression_suites": {
+    "stage12_4e2_completion": {
+      "executed": 48,
+      "failed": 0,
+      "passed": 48
+    },
+    "stage12_4f": {
+      "executed": 94,
+      "failed": 0,
+      "passed": 94
+    }
+  },
+  "stage": "12.4G",
+  "stage12_4g_executed": 98,
+  "status": "ALL_TESTS_PASSED"
+}

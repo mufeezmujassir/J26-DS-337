@@ -1,0 +1,12 @@
+{
+  "aggregator": "app.recommendation.context_composition.service.ExperimentalContextCompositionService.compose",
+  "alembic_migration_required": false,
+  "existing_evaluation_tables_reused": true,
+  "holiday_entry_point": "app.holiday_event.context_scoring.HolidayEventContextScoringService.score",
+  "production_isolation": "three default-off flags; compositor returns evidence in semantic order",
+  "public_route_added": false,
+  "seasonality_entry_point": "app.climate.services.seasonality_scoring.ExperimentalSeasonalityScoringService.score_batch",
+  "semantic_entry_point": "app.knowledge_base.retrieval.semantic_retriever.SemanticAttractionRetriever.search",
+  "status": "PASS",
+  "time_entry_point": "app.recommendation.time_context.service.evaluate_attraction_time_evidence"
+}
