@@ -1,0 +1,27 @@
+{
+  "stage": "12.5",
+  "status": "STAGE12_5_FOUR_LAYER_INTEGRATION_COMPLETED_EXPERIMENTAL",
+  "version": "stage12_5_unified_context_v1",
+  "context_layers_total_for_this_version": 4,
+  "context_layers_integrated": 4,
+  "group_emotion_status": "DEFERRED_BY_PROJECT_OWNER_NOT_INTEGRATED",
+  "experimental_reranker": ["R0", "R1", "R2", "R3"],
+  "shadow_pilot": {"status": "COMPLETED", "queries": 3, "returned_candidates": 15, "errors": 0},
+  "recommendation_accuracy_validated": false,
+  "production_ranking_changed": false,
+  "feature_flags_default_disabled": true,
+  "database_migration": "NOT_REQUIRED",
+  "tests_passed": 120,
+  "tests_failed": 0,
+  "stage12_4g": {
+    "artifacts_modified": false,
+    "protocol_hash": "add895cffebcbe0b26089fe8b28ca48a7754ce1018623392b2e377bc3524723a",
+    "candidate_inventory_queries": 8898,
+    "selected_queries": 72,
+    "monthly_review_items": 864,
+    "independent_climate_clusters": 23,
+    "human_judgments": 0,
+    "validation_status": "PROSPECTIVE_VALIDATION_PENDING"
+  },
+  "next_required_action": "Independent blinded unified recommendation relevance evaluation; group emotional intelligence remains a later separate stage."
+}

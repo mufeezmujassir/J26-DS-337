@@ -1,4 +1,3 @@
-"""Contracts shared by ingestion, APIs, and the holiday context scorer."""
 from __future__ import annotations
 
 from datetime import date, datetime
@@ -65,7 +64,6 @@ class LLMEventField(BaseModel):
 
 
 class LLMEventExtraction(BaseModel):
-    """Untrusted structured extraction; every populated value needs evidence."""
     title: LLMEventField = Field(default_factory=LLMEventField)
     description: LLMEventField = Field(default_factory=LLMEventField)
     start_date: LLMEventField = Field(default_factory=LLMEventField)

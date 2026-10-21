@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "executed": 120,
+  "passed": 120,
+  "failed": 0,
+  "runs": [
+    {"scope": "new Stage 12.5 schemas, adapters, reranker plus existing weather tests", "passed": 116, "failed": 0},
+    {"scope": "existing holiday/event context scoring", "passed": 4, "failed": 0}
+  ],
+  "note": "The two legacy context_scoring.py modules were run separately because pytest's default import mode gives identical basenames an import-file collision. This is a pre-existing test-layout issue, not a test failure."
+}
