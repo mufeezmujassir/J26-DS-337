@@ -1,0 +1,27 @@
+elicitation:
+  max_turns: 5
+  field_order: [group_type, trip_type, vibe, budget_per_day, duration_days, dates, departure_point]
+  field_options:
+    group_type: ["solo", "couple", "friends", "family"]
+    trip_type: ["honeymoon", "friends_trip", "family", "solo_adventure", "cultural_pilgrimage"]
+    vibe: ["relaxed", "active", "adventurous", "mixed", "cultural"]
+  budget:
+    min: 20
+    max: 1000
+    currency: "USD"
+  duration:
+    min_days: 1
+    max_days: 30
+
+gemini:
+  api_key_env: GEMINI_API_KEY
+  model: "gemini-1.5-flash"
+  timeout_seconds: 10
+
+state:
+  backend: "redis"
+  ttl_hours: 24
+  redis_url: "redis://redis:6379"
+
+logging:
+  level: INFO
