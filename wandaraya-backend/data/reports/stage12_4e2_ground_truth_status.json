@@ -1,0 +1,20 @@
+{
+  "complete_queries": 60,
+  "ground_truth_csv_sha256": "3383ee29f8367f4e3308ebf21d6beef187dc6015f588f5476345cb066488caad",
+  "ground_truth_records": 720,
+  "ground_truth_version": "stage12_4e2_ground_truth_v1",
+  "review_dataset_version": "stage12_4e2_review_v1",
+  "status": "ADJUDICATIONS_IMPORTED_GROUND_TRUTH_VERIFIED",
+  "tasks": {
+    "mapping": {
+      "already_present": 22,
+      "inserted": 0,
+      "validated": 22
+    },
+    "seasonality": {
+      "already_present": 113,
+      "inserted": 0,
+      "validated": 113
+    }
+  }
+}

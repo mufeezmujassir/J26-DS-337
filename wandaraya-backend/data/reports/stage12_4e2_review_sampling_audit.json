@@ -1,0 +1,51 @@
+{
+  "new_ranking_instrument": {
+    "activities": 16,
+    "cohorts": {
+      "A": 44,
+      "B": 16
+    },
+    "districts": 13,
+    "items_per_reviewer": 720,
+    "pairs": 60,
+    "version": "stage12_4e2_review_v1"
+  },
+  "original_mapping": {
+    "activity_coverage": 16,
+    "distinct_attractions": 98,
+    "district_coverage": 14,
+    "evidence_tier_coverage": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "items": 105,
+    "mapping_status_coverage": [
+      "PROVISIONAL",
+      "SUPPORTED_INFERRED",
+      "UNSUPPORTED",
+      "VERIFIED"
+    ],
+    "sampling_probabilities_retained": true
+  },
+  "original_seasonality": {
+    "activity_coverage": 16,
+    "complete_12_month_pairs": 0,
+    "distinct_attractions": 53,
+    "distinct_pairs": 54,
+    "district_coverage": 14,
+    "geographic_sources": {
+      "DISTRICT_REPRESENTATIVE_PROXY": 216
+    },
+    "items": 216,
+    "months_per_pair": [
+      [
+        4,
+        54
+      ]
+    ]
+  },
+  "precision_note": "This is a deterministic stratified review sample, not a simple random sample; population precision requires design-aware weighting.",
+  "status": "PASS"
+}

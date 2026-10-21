@@ -1,0 +1,55 @@
+{
+  "behavior": {
+    "ablation_district_only_fallback": {
+      "mean_absolute_rank_change": 0.550371953149731,
+      "mean_absolute_score_change": 0.035660199726970564,
+      "rows": 50544
+    },
+    "ablation_rainfall_only_simplified": {
+      "mean_absolute_rank_change": 0.9193178220955999,
+      "mean_absolute_score_change": 0.15233382144270338,
+      "rows": 50544
+    },
+    "ablation_without_activity_weighting": {
+      "mean_absolute_rank_change": 0.30092592592592593,
+      "mean_absolute_score_change": 0.03590062691911997,
+      "rows": 50544
+    },
+    "ablation_without_humidity": {
+      "mean_absolute_rank_change": 0.29040044317822095,
+      "mean_absolute_score_change": 0.06200262606837607,
+      "rows": 50544
+    },
+    "ablation_without_rainfall_reliability": {
+      "mean_absolute_rank_change": 0.06390471668249446,
+      "mean_absolute_score_change": 0.0062823623575498574,
+      "rows": 50544
+    },
+    "ablation_without_solar": {
+      "mean_absolute_rank_change": 0.550371953149731,
+      "mean_absolute_score_change": 0.03301733679566318,
+      "rows": 50544
+    },
+    "ablation_without_temperature": {
+      "mean_absolute_rank_change": 0.2783713200379867,
+      "mean_absolute_score_change": 0.11852731087765116,
+      "rows": 50544
+    }
+  },
+  "interpretation": "behavioral change only; larger change does not imply improvement",
+  "prediction_rows": 404352,
+  "status": "COMPLETED_LABEL_INDEPENDENT",
+  "unavailable": [
+    {
+      "available": false,
+      "configuration_hash": "6abc95b5032faa04f904ce5775f1cb4446d01ea084bb881e6a00be3fcb861dc8",
+      "id": "without_wind",
+      "removed": [
+        "wind_context"
+      ],
+      "renormalize": true,
+      "unavailable_reason": "No Stage 12.4D activity profile assigns wind a non-zero weight.",
+      "version": "12.4e1_v1"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "activity_profile_versions": [
+    "12.4d_v1"
+  ],
+  "alembic_revision": "f23a4b5c6d7e",
+  "available_independent_labels": 0,
+  "climate_versions": [
+    {
+      "dataset_checksum": "8b79f4ba278218a0f28ca29f59660b80f8c22b5aac57847fa71215cc2576c3ed",
+      "id": 1,
+      "product_name": "source-native daily meteorological data",
+      "product_version": "nasa_power_daily_v2.10.0_2024_pilot",
+      "provider_name": "NASA POWER",
+      "reference_end": "2024-12-31",
+      "reference_start": "2024-01-01"
+    },
+    {
+      "dataset_checksum": "b3a93accd51355cee5401c5f20362474924fe5dc0041982742ee1351c0fa65ed",
+      "id": 2,
+      "product_name": "source-native daily meteorological data",
+      "product_version": "nasa_power_daily_v2.10.0_historical_2010_2025_batch01",
+      "provider_name": "NASA POWER",
+      "reference_end": "2025-12-31",
+      "reference_start": "2010-01-01"
+    },
+    {
+      "dataset_checksum": "2a2f8498d498a58ad86e9b9333459268ac0b80cb781f7a132b1fbe7a74ade741",
+      "id": 3,
+      "product_name": "source-native daily meteorological data",
+      "product_version": "nasa_power_daily_v2.10.0_historical_2010_2025_batch02",
+      "provider_name": "NASA POWER",
+      "reference_end": "2025-12-31",
+      "reference_start": "2010-01-01"
+    }
+  ],
+  "cohort_sizes": {
+    "A": 1267,
+    "B": 2945,
+    "C": 5915
+  },
+  "dataset_version": "stage12_4d2_eval_v1",
+  "frozen_checksums": {
+    "all_match": true,
+    "files": {
+      "stage12_4d2_cohort_a_high_evidence.csv": {
+        "actual": "7a83529e2eeb06203837376637abfc8f1151f48518bbcedad1a9f2895cc1f271",
+        "expected": "7a83529e2eeb06203837376637abfc8f1151f48518bbcedad1a9f2895cc1f271",
+        "match": true
+      },
+      "stage12_4d2_cohort_b_inferred.csv": {
+        "actual": "c869a8174e94d209259244d6a73e72693306d053686a3746ab460aa2819b23a1",
+        "expected": "c869a8174e94d209259244d6a73e72693306d053686a3746ab460aa2819b23a1",
+        "match": true
+      },
+      "stage12_4d2_cohort_c_provisional.csv": {
+        "actual": "2aa0ac220e8c05751b6c08e37d0979c5d24844bb95e40f0b296ba3d8b2ed0109",
+        "expected": "2aa0ac220e8c05751b6c08e37d0979c5d24844bb95e40f0b296ba3d8b2ed0109",
+        "match": true
+      },
+      "stage12_4d2_mapping_review_blind.csv": {
+        "actual": "9dc7944dc8222af52c82d9152c9ded9076c7688fca541ec1fa15438ad73af683",
+        "expected": "9dc7944dc8222af52c82d9152c9ded9076c7688fca541ec1fa15438ad73af683",
+        "match": true
+      },
+      "stage12_4d2_monthly_evaluation_dataset.csv": {
+        "actual": "134fc192d4f174c34f60ba7cc4917ff7bffae41d86d3b66c32308f81c6c7b244",
+        "expected": "134fc192d4f174c34f60ba7cc4917ff7bffae41d86d3b66c32308f81c6c7b244",
+        "match": true
+      },
+      "stage12_4d2_seasonality_review_blind.csv": {
+        "actual": "c25d1dcdfa7286efc4e9ff71b55cbd11c513a4bcd27918255b567262b4084fb2",
+        "expected": "c25d1dcdfa7286efc4e9ff71b55cbd11c513a4bcd27918255b567262b4084fb2",
+        "match": true
+      }
+    }
+  },
+  "geographic_sources": {
+    "ATTRACTION_COORDINATE_REANALYSIS": 60,
+    "DISTRICT_REPRESENTATIVE_PROXY": 50484
+  },
+  "git_revision": "316aed800e55f435ab9881ded964df8fef50c414",
+  "monthly_rows": 50544,
+  "status": "PREFLIGHT_VERIFIED",
+  "verified_at_utc": "2026-10-20T17:10:51.079337+00:00"
+}

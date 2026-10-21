@@ -1,0 +1,404 @@
+{
+  "mapping_items": 105,
+  "planned_judgments": 1650,
+  "planned_reviewers": 2,
+  "review_dataset_version": "stage12_4e2_review_v1",
+  "sample_size_justification": {
+    "independent_paired_effect_80pct_power_approx": 0.36,
+    "limitation": "Only 22 source identities exist upstream; clustering reduces effective sample size, so cluster-robust inference is exploratory and expanded independent climate sources are recommended.",
+    "nominal_pairs": 60,
+    "proportion_95pct_half_width_at_p_0_5_approx": 0.126
+  },
+  "seasonality_items_per_reviewer": 720,
+  "seasonality_pairs": 60,
+  "seed": "wandaraya-stage12.4e.2-seed-20261020",
+  "selected_pairs": [
+    {
+      "activity_type_id": 1,
+      "attraction_id": 2015,
+      "cohort": "B",
+      "district_id": 78
+    },
+    {
+      "activity_type_id": 2,
+      "attraction_id": 348,
+      "cohort": "A",
+      "district_id": 89
+    },
+    {
+      "activity_type_id": 2,
+      "attraction_id": 355,
+      "cohort": "A",
+      "district_id": 89
+    },
+    {
+      "activity_type_id": 2,
+      "attraction_id": 4114,
+      "cohort": "B",
+      "district_id": 73
+    },
+    {
+      "activity_type_id": 3,
+      "attraction_id": 3492,
+      "cohort": "B",
+      "district_id": 77
+    },
+    {
+      "activity_type_id": 4,
+      "attraction_id": 520,
+      "cohort": "A",
+      "district_id": 89
+    },
+    {
+      "activity_type_id": 4,
+      "attraction_id": 543,
+      "cohort": "A",
+      "district_id": 89
+    },
+    {
+      "activity_type_id": 5,
+      "attraction_id": 357,
+      "cohort": "A",
+      "district_id": 89
+    },
+    {
+      "activity_type_id": 5,
+      "attraction_id": 5070,
+      "cohort": "A",
+      "district_id": 84
+    },
+    {
+      "activity_type_id": 5,
+      "attraction_id": 3508,
+      "cohort": "B",
+      "district_id": 77
+    },
+    {
+      "activity_type_id": 6,
+      "attraction_id": 2016,
+      "cohort": "B",
+      "district_id": 82
+    },
+    {
+      "activity_type_id": 7,
+      "attraction_id": 130,
+      "cohort": "A",
+      "district_id": 90
+    },
+    {
+      "activity_type_id": 7,
+      "attraction_id": 1234,
+      "cohort": "A",
+      "district_id": 80
+    },
+    {
+      "activity_type_id": 7,
+      "attraction_id": 4136,
+      "cohort": "B",
+      "district_id": 73
+    },
+    {
+      "activity_type_id": 8,
+      "attraction_id": 1636,
+      "cohort": "A",
+      "district_id": 80
+    },
+    {
+      "activity_type_id": 8,
+      "attraction_id": 645,
+      "cohort": "A",
+      "district_id": 78
+    },
+    {
+      "activity_type_id": 8,
+      "attraction_id": 6412,
+      "cohort": "B",
+      "district_id": 73
+    },
+    {
+      "activity_type_id": 9,
+      "attraction_id": 4947,
+      "cohort": "B",
+      "district_id": 84
+    },
+    {
+      "activity_type_id": 10,
+      "attraction_id": 5584,
+      "cohort": "A",
+      "district_id": 79
+    },
+    {
+      "activity_type_id": 10,
+      "attraction_id": 5100,
+      "cohort": "A",
+      "district_id": 77
+    },
+    {
+      "activity_type_id": 10,
+      "attraction_id": 4159,
+      "cohort": "B",
+      "district_id": 73
+    },
+    {
+      "activity_type_id": 11,
+      "attraction_id": 96,
+      "cohort": "A",
+      "district_id": 78
+    },
+    {
+      "activity_type_id": 11,
+      "attraction_id": 5568,
+      "cohort": "A",
+      "district_id": 84
+    },
+    {
+      "activity_type_id": 11,
+      "attraction_id": 2542,
+      "cohort": "B",
+      "district_id": 95
+    },
+    {
+      "activity_type_id": 12,
+      "attraction_id": 6102,
+      "cohort": "A",
+      "district_id": 83
+    },
+    {
+      "activity_type_id": 12,
+      "attraction_id": 4295,
+      "cohort": "A",
+      "district_id": 73
+    },
+    {
+      "activity_type_id": 12,
+      "attraction_id": 4454,
+      "cohort": "B",
+      "district_id": 75
+    },
+    {
+      "activity_type_id": 13,
+      "attraction_id": 4454,
+      "cohort": "B",
+      "district_id": 75
+    },
+    {
+      "activity_type_id": 14,
+      "attraction_id": 905,
+      "cohort": "A",
+      "district_id": 82
+    },
+    {
+      "activity_type_id": 14,
+      "attraction_id": 3462,
+      "cohort": "A",
+      "district_id": 77
+    },
+    {
+      "activity_type_id": 14,
+      "attraction_id": 2938,
+      "cohort": "B",
+      "district_id": 75
+    },
+    {
+      "activity_type_id": 15,
+      "attraction_id": 3583,
+      "cohort": "B",
+      "district_id": 77
+    },
+    {
+      "activity_type_id": 16,
+      "attraction_id": 2323,
+      "cohort": "A",
+      "district_id": 82
+    },
+    {
+      "activity_type_id": 16,
+      "attraction_id": 6273,
+      "cohort": "A",
+      "district_id": 92
+    },
+    {
+      "activity_type_id": 16,
+      "attraction_id": 1025,
+      "cohort": "B",
+      "district_id": 95
+    },
+    {
+      "activity_type_id": 16,
+      "attraction_id": 6041,
+      "cohort": "A",
+      "district_id": 92
+    },
+    {
+      "activity_type_id": 7,
+      "attraction_id": 2965,
+      "cohort": "A",
+      "district_id": 90
+    },
+    {
+      "activity_type_id": 5,
+      "attraction_id": 358,
+      "cohort": "A",
+      "district_id": 89
+    },
+    {
+      "activity_type_id": 8,
+      "attraction_id": 5518,
+      "cohort": "A",
+      "district_id": 79
+    },
+    {
+      "activity_type_id": 8,
+      "attraction_id": 6427,
+      "cohort": "A",
+      "district_id": 73
+    },
+    {
+      "activity_type_id": 8,
+      "attraction_id": 2953,
+      "cohort": "A",
+      "district_id": 75
+    },
+    {
+      "activity_type_id": 8,
+      "attraction_id": 181,
+      "cohort": "A",
+      "district_id": 80
+    },
+    {
+      "activity_type_id": 8,
+      "attraction_id": 4965,
+      "cohort": "A",
+      "district_id": 84
+    },
+    {
+      "activity_type_id": 12,
+      "attraction_id": 1055,
+      "cohort": "A",
+      "district_id": 95
+    },
+    {
+      "activity_type_id": 11,
+      "attraction_id": 93,
+      "cohort": "A",
+      "district_id": 78
+    },
+    {
+      "activity_type_id": 10,
+      "attraction_id": 4521,
+      "cohort": "A",
+      "district_id": 75
+    },
+    {
+      "activity_type_id": 11,
+      "attraction_id": 4925,
+      "cohort": "A",
+      "district_id": 84
+    },
+    {
+      "activity_type_id": 8,
+      "attraction_id": 5852,
+      "cohort": "A",
+      "district_id": 83
+    },
+    {
+      "activity_type_id": 8,
+      "attraction_id": 6443,
+      "cohort": "A",
+      "district_id": 73
+    },
+    {
+      "activity_type_id": 5,
+      "attraction_id": 3499,
+      "cohort": "A",
+      "district_id": 77
+    },
+    {
+      "activity_type_id": 5,
+      "attraction_id": 1686,
+      "cohort": "A",
+      "district_id": 80
+    },
+    {
+      "activity_type_id": 4,
+      "attraction_id": 538,
+      "cohort": "A",
+      "district_id": 89
+    },
+    {
+      "activity_type_id": 14,
+      "attraction_id": 2554,
+      "cohort": "A",
+      "district_id": 95
+    },
+    {
+      "activity_type_id": 5,
+      "attraction_id": 3021,
+      "cohort": "A",
+      "district_id": 75
+    },
+    {
+      "activity_type_id": 5,
+      "attraction_id": 2168,
+      "cohort": "A",
+      "district_id": 77
+    },
+    {
+      "activity_type_id": 7,
+      "attraction_id": 1496,
+      "cohort": "A",
+      "district_id": 80
+    },
+    {
+      "activity_type_id": 8,
+      "attraction_id": 3398,
+      "cohort": "A",
+      "district_id": 77
+    },
+    {
+      "activity_type_id": 8,
+      "attraction_id": 2488,
+      "cohort": "A",
+      "district_id": 92
+    },
+    {
+      "activity_type_id": 8,
+      "attraction_id": 4966,
+      "cohort": "A",
+      "district_id": 84
+    },
+    {
+      "activity_type_id": 10,
+      "attraction_id": 998,
+      "cohort": "B",
+      "district_id": 78
+    }
+  ],
+  "selection": {
+    "activity_strata": {
+      "1": 1,
+      "10": 5,
+      "11": 5,
+      "12": 4,
+      "13": 1,
+      "14": 4,
+      "15": 1,
+      "16": 4,
+      "2": 3,
+      "3": 1,
+      "4": 3,
+      "5": 8,
+      "6": 1,
+      "7": 5,
+      "8": 13,
+      "9": 1
+    },
+    "cohorts": {
+      "A": 44,
+      "B": 16
+    },
+    "district_count": 13,
+    "method": "deterministic SHA-256 ordering; two Cohort A and one Cohort B pair per activity where available, then 44/16 Cohort A/B target fill"
+  },
+  "source_dataset_version": "stage12_4d2_eval_v1"
+}

@@ -36,7 +36,7 @@ monthly=read_csv("stage12_4d2_monthly_evaluation_dataset.csv")
 mapping_review=read_csv("stage12_4d2_mapping_review_blind.csv")
 season_review=read_csv("stage12_4d2_seasonality_review_blind.csv")
 
-def t01(): require(count("SELECT version_num FROM alembic_version") == "e12f3a4b5c6d")
+def t01(): require(count("SELECT version_num FROM alembic_version") in {"e12f3a4b5c6d","f23a4b5c6d7e","g34b5c6d7e8f"})
 def t02(): require(count("SELECT count(*) FROM climate_attraction_activity_mappings")==10127)
 def t03(): require(count("SELECT count(*) FROM climate_daily_observations")==165828)
 def t04(): require(count("SELECT count(*) FROM climate_district_monthly_aggregates")==4800 and count("SELECT count(*) FROM climate_district_monthly_climatology")==300)

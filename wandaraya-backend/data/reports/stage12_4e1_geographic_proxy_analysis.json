@@ -1,0 +1,74 @@
+{
+  "activity_distribution_by_source": {
+    "archaeology": {
+      "ATTRACTION_COORDINATE_REANALYSIS": 1,
+      "DISTRICT_REPRESENTATIVE_PROXY": 523
+    },
+    "beach_visit": {
+      "DISTRICT_REPRESENTATIVE_PROXY": 96
+    },
+    "camping": {
+      "DISTRICT_REPRESENTATIVE_PROXY": 75
+    },
+    "cultural_tour": {
+      "ATTRACTION_COORDINATE_REANALYSIS": 1,
+      "DISTRICT_REPRESENTATIVE_PROXY": 568
+    },
+    "cycling": {
+      "DISTRICT_REPRESENTATIVE_PROXY": 1
+    },
+    "hiking": {
+      "DISTRICT_REPRESENTATIVE_PROXY": 395
+    },
+    "mountain_viewing": {
+      "DISTRICT_REPRESENTATIVE_PROXY": 100
+    },
+    "photography": {
+      "ATTRACTION_COORDINATE_REANALYSIS": 1,
+      "DISTRICT_REPRESENTATIVE_PROXY": 476
+    },
+    "plantation_tour": {
+      "DISTRICT_REPRESENTATIVE_PROXY": 328
+    },
+    "religious_visit": {
+      "DISTRICT_REPRESENTATIVE_PROXY": 975
+    },
+    "snorkeling_diving": {
+      "DISTRICT_REPRESENTATIVE_PROXY": 5
+    },
+    "surfing": {
+      "DISTRICT_REPRESENTATIVE_PROXY": 4
+    },
+    "swimming": {
+      "DISTRICT_REPRESENTATIVE_PROXY": 44
+    },
+    "urban_visit": {
+      "ATTRACTION_COORDINATE_REANALYSIS": 1,
+      "DISTRICT_REPRESENTATIVE_PROXY": 158
+    },
+    "waterfall_visit": {
+      "DISTRICT_REPRESENTATIVE_PROXY": 272
+    },
+    "wildlife_safari": {
+      "ATTRACTION_COORDINATE_REANALYSIS": 1,
+      "DISTRICT_REPRESENTATIVE_PROXY": 187
+    }
+  },
+  "dedicated_coordinate_attractions": 2,
+  "dedicated_coordinate_pairs": 5,
+  "distinct_climate_source_identities": 22,
+  "distinct_districts": 20,
+  "district_proxy_pairs": 4207,
+  "districts_shared_by_multiple_attractions": 17,
+  "identical_inputs_expected": "Geographically distinct attractions assigned to the same district reuse identical Stage 12.4C climate inputs; activity weighting can still change rankings.",
+  "limitation": "The dedicated-coordinate subset is too small to represent all attractions or establish local microclimate accuracy.",
+  "monthly_rows": {
+    "ATTRACTION_COORDINATE_REANALYSIS": 60,
+    "DISTRICT_REPRESENTATIVE_PROXY": 50484
+  },
+  "pairs_sharing_district_profiles": 18,
+  "percentages": {
+    "ATTRACTION_COORDINATE_REANALYSIS": 0.11870845204178537,
+    "DISTRICT_REPRESENTATIVE_PROXY": 99.88129154795821
+  }
+}

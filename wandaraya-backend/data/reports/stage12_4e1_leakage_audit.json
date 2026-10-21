@@ -1,0 +1,20 @@
+{
+  "blind_mapping_template": {
+    "prohibited_fields": [],
+    "safe": true
+  },
+  "blind_seasonality_template": {
+    "prohibited_fields": [],
+    "safe": true
+  },
+  "fixed_rule_evaluation_no_tuning_split_required": true,
+  "frozen_integrity": true,
+  "held_out_overlap": "NOT_APPLICABLE_NO_FITTING; grouped split required before any future tuning",
+  "human_labels_used_for_tuning": false,
+  "model_scores_used_as_labels": false,
+  "near_duplicate_policy": "Normalized exact-name candidates and all records sharing a climate source must remain grouped before any future tuning split.",
+  "normalized_duplicate_name_groups": 10,
+  "shared_climate_source_identities": 22,
+  "shared_district_proxy": "DETECTED_AND_GROUPING_REQUIRED",
+  "status": "NO_CRITICAL_LEAKAGE_DETECTED"
+}

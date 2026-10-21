@@ -1,0 +1,80 @@
+{
+  "cluster_definition": "dataset + geographic source + district/attraction identity",
+  "comparisons": {
+    "district_multivariable": {
+      "activity_aware_mean": 0.8970686648809267,
+      "baseline_mean": 0.9157434177595347,
+      "cluster_bootstrap": {
+        "ci95": [
+          -0.047325398270314616,
+          0.003621740525374679
+        ],
+        "clusters": 13,
+        "iterations": 10000,
+        "mean": -0.01971964787265861,
+        "seed": 12402,
+        "status": "COMPUTED"
+      },
+      "direction": "baseline_higher",
+      "inference": "EXPLORATORY_SMALL_CLUSTER_COUNT",
+      "paired": {
+        "mean_difference": -0.018674752878607984,
+        "n": 52,
+        "standardized_paired_effect": -0.27383056230995323
+      },
+      "primary_metric": "NDCG@5"
+    },
+    "rainfall_only": {
+      "activity_aware_mean": 0.8970686648809267,
+      "baseline_mean": 0.8916152305981202,
+      "cluster_bootstrap": {
+        "ci95": [
+          -0.010162548363177802,
+          0.022759640518461396
+        ],
+        "clusters": 13,
+        "iterations": 10000,
+        "mean": 0.005188220417291206,
+        "seed": 12402,
+        "status": "COMPUTED"
+      },
+      "direction": "activity_aware_higher",
+      "inference": "EXPLORATORY_SMALL_CLUSTER_COUNT",
+      "paired": {
+        "mean_difference": 0.005453434282806437,
+        "n": 52,
+        "standardized_paired_effect": 0.08841421584075852
+      },
+      "primary_metric": "NDCG@5"
+    },
+    "rainfall_risk_adjusted": {
+      "activity_aware_mean": 0.8970686648809267,
+      "baseline_mean": 0.875337982236392,
+      "cluster_bootstrap": {
+        "ci95": [
+          -0.008329424195258452,
+          0.05831875105337042
+        ],
+        "clusters": 13,
+        "iterations": 10000,
+        "mean": 0.02146273684894654,
+        "seed": 12402,
+        "status": "COMPUTED"
+      },
+      "direction": "activity_aware_higher",
+      "inference": "EXPLORATORY_SMALL_CLUSTER_COUNT",
+      "paired": {
+        "mean_difference": 0.021730682644534618,
+        "n": 52,
+        "standardized_paired_effect": 0.13572008203155542
+      },
+      "primary_metric": "NDCG@5"
+    }
+  },
+  "effective_clusters": 13,
+  "iterations": 10000,
+  "limitation": "Small cluster counts make confidence intervals exploratory; no overconfident p-values are reported.",
+  "resampling_unit": "attraction-activity query",
+  "seed": 12402,
+  "status": "COMPUTED_EXPLORATORY"
+}

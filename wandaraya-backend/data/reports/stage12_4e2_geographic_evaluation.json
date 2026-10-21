@@ -1,0 +1,45 @@
+{
+  "ground_truth_version": "stage12_4e2_ground_truth_v1",
+  "groups": {
+    "DISTRICT_REPRESENTATIVE_PROXY": {
+      "activity_aware_metrics": {
+        "kendall_tau_b": {
+          "mean": 0.6876153902837784,
+          "valid_queries": 52
+        },
+        "mrr_grade_ge_3": {
+          "mean": 0.9039007092198581,
+          "valid_queries": 47
+        },
+        "ndcg@12": {
+          "mean": 0.9510783179576884,
+          "valid_queries": 52
+        },
+        "ndcg@3": {
+          "mean": 0.8873160647552932,
+          "valid_queries": 52
+        },
+        "ndcg@5": {
+          "mean": 0.8970686648809267,
+          "valid_queries": 52
+        },
+        "spearman": {
+          "mean": 0.7843741893993247,
+          "valid_queries": 52
+        },
+        "top3_overlap": {
+          "mean": 0.6602564102564102,
+          "valid_queries": 52
+        }
+      },
+      "clusters": 13,
+      "queries": 52,
+      "status": "REPORTED"
+    }
+  },
+  "limitations": [
+    "District historical climate is not a short-term forecast.",
+    "No surf, current, flood, landslide, river, wildlife, or operational safety claim is supported."
+  ],
+  "status": "COMPUTED_WITH_LIMITATIONS"
+}

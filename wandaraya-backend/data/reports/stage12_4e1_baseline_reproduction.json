@@ -1,0 +1,42 @@
+{
+  "configuration_hashes": {
+    "activity_aware": "219d30f4d7ac326977cd5b68dbed9116ea30d90a1b03834912be0975212d1d4a",
+    "district_multivariable": "806824bf45c88bf33df58a8f050736f95854dcc73a8c57b21993431186c9a353",
+    "rainfall_only": "36ea43bc967cfec70c292308fa550732118d4f99c9f0a390fe0b900d7459907a",
+    "rainfall_risk_adjusted": "2bf71caf7e702e04e20f06b7f6d02e59fcb6cc9d9b7e5d262ca3c0ca9172a414"
+  },
+  "definitions": {
+    "activity_aware": {
+      "definition": "frozen Stage 12.4D activity-specific score",
+      "inputs": [
+        "climate_favorability_score"
+      ],
+      "version": "12.4d_v1"
+    },
+    "district_multivariable": {
+      "definition": "0.45 rainfall + 0.25 temperature + 0.15 humidity + 0.15 solar",
+      "inputs": [
+        "baseline_b_multivar_score"
+      ],
+      "version": "12.4c_v1"
+    },
+    "rainfall_only": {
+      "definition": "ascending district median monthly rainfall",
+      "inputs": [
+        "baseline_a_rainfall_rank"
+      ],
+      "version": "12.4c_v1"
+    },
+    "rainfall_risk_adjusted": {
+      "definition": "ascending rainfall mean + 0.5 rainfall standard deviation",
+      "inputs": [
+        "baseline_c_variability_rank"
+      ],
+      "version": "12.4c_v1"
+    }
+  },
+  "deterministic_tie_break": "descending score then ascending calendar month",
+  "pairs": 4212,
+  "prediction_rows": 202176,
+  "status": "REPRODUCED"
+}

@@ -1,0 +1,369 @@
+{
+  "status": "ALL_TESTS_PASSED",
+  "total_tests": 90,
+  "passed": 90,
+  "failed": 0,
+  "pytest_limitation": "pytest is not installed in the Docker image; no pytest suite is claimed as passed.",
+  "results": [
+    {
+      "name": "migration_head",
+      "status": "PASS"
+    },
+    {
+      "name": "table_climate_review_assignments",
+      "status": "PASS"
+    },
+    {
+      "name": "table_climate_reviewer_submission_corrections",
+      "status": "PASS"
+    },
+    {
+      "name": "table_climate_ground_truth_dataset_versions",
+      "status": "PASS"
+    },
+    {
+      "name": "table_climate_evaluation_artifact_references",
+      "status": "PASS"
+    },
+    {
+      "name": "mapping_105",
+      "status": "PASS"
+    },
+    {
+      "name": "seasonality_720",
+      "status": "PASS"
+    },
+    {
+      "name": "mapping_unique",
+      "status": "PASS"
+    },
+    {
+      "name": "seasonality_unique",
+      "status": "PASS"
+    },
+    {
+      "name": "pairs_60",
+      "status": "PASS"
+    },
+    {
+      "name": "twelve_months",
+      "status": "PASS"
+    },
+    {
+      "name": "manifest_version",
+      "status": "PASS"
+    },
+    {
+      "name": "source_version",
+      "status": "PASS"
+    },
+    {
+      "name": "planned_two_reviewers",
+      "status": "PASS"
+    },
+    {
+      "name": "planned_judgments",
+      "status": "PASS"
+    },
+    {
+      "name": "all_activities",
+      "status": "PASS"
+    },
+    {
+      "name": "cohort_a_primary",
+      "status": "PASS"
+    },
+    {
+      "name": "mapping_blank_reviewer_id",
+      "status": "PASS"
+    },
+    {
+      "name": "seasonality_blank_reviewer_id",
+      "status": "PASS"
+    },
+    {
+      "name": "mapping_blank_reviewer_expertise",
+      "status": "PASS"
+    },
+    {
+      "name": "seasonality_blank_reviewer_expertise",
+      "status": "PASS"
+    },
+    {
+      "name": "mapping_blank_review_timestamp",
+      "status": "PASS"
+    },
+    {
+      "name": "seasonality_blank_review_timestamp",
+      "status": "PASS"
+    },
+    {
+      "name": "mapping_blank_evidence_reviewed",
+      "status": "PASS"
+    },
+    {
+      "name": "seasonality_blank_evidence_reviewed",
+      "status": "PASS"
+    },
+    {
+      "name": "mapping_blank_decision",
+      "status": "PASS"
+    },
+    {
+      "name": "seasonality_blank_decision",
+      "status": "PASS"
+    },
+    {
+      "name": "mapping_blank_confidence",
+      "status": "PASS"
+    },
+    {
+      "name": "seasonality_blank_confidence",
+      "status": "PASS"
+    },
+    {
+      "name": "mapping_blank_notes",
+      "status": "PASS"
+    },
+    {
+      "name": "seasonality_blank_notes",
+      "status": "PASS"
+    },
+    {
+      "name": "mapping_blind_score",
+      "status": "PASS"
+    },
+    {
+      "name": "seasonality_blind_score",
+      "status": "PASS"
+    },
+    {
+      "name": "mapping_blind_rank",
+      "status": "PASS"
+    },
+    {
+      "name": "seasonality_blind_rank",
+      "status": "PASS"
+    },
+    {
+      "name": "mapping_blind_class",
+      "status": "PASS"
+    },
+    {
+      "name": "seasonality_blind_class",
+      "status": "PASS"
+    },
+    {
+      "name": "mapping_blind_evidence_tier",
+      "status": "PASS"
+    },
+    {
+      "name": "seasonality_blind_evidence_tier",
+      "status": "PASS"
+    },
+    {
+      "name": "mapping_blind_ablation",
+      "status": "PASS"
+    },
+    {
+      "name": "seasonality_blind_ablation",
+      "status": "PASS"
+    },
+    {
+      "name": "mapping_blind_model",
+      "status": "PASS"
+    },
+    {
+      "name": "seasonality_blind_model",
+      "status": "PASS"
+    },
+    {
+      "name": "evidence_rainfall_mean_mm",
+      "status": "PASS"
+    },
+    {
+      "name": "evidence_rainfall_cv",
+      "status": "PASS"
+    },
+    {
+      "name": "evidence_temperature_mean_c",
+      "status": "PASS"
+    },
+    {
+      "name": "evidence_relative_humidity_mean_pct",
+      "status": "PASS"
+    },
+    {
+      "name": "evidence_solar_radiation_mean_mj",
+      "status": "PASS"
+    },
+    {
+      "name": "evidence_historical_reference_period",
+      "status": "PASS"
+    },
+    {
+      "name": "evidence_source_name",
+      "status": "PASS"
+    },
+    {
+      "name": "evidence_product_version",
+      "status": "PASS"
+    },
+    {
+      "name": "checksum_review_sampling_manifest.json",
+      "status": "PASS"
+    },
+    {
+      "name": "checksum_reviewer_instructions.md",
+      "status": "PASS"
+    },
+    {
+      "name": "checksum_reviewer_mapping_package.csv",
+      "status": "PASS"
+    },
+    {
+      "name": "checksum_reviewer_seasonality_package.csv",
+      "status": "PASS"
+    },
+    {
+      "name": "package_audit",
+      "status": "PASS"
+    },
+    {
+      "name": "persisted_labels_have_assignments",
+      "status": "PASS"
+    },
+    {
+      "name": "persisted_assignment_integrity",
+      "status": "PASS"
+    },
+    {
+      "name": "ground_truth_zero",
+      "status": "PASS"
+    },
+    {
+      "name": "run_ready",
+      "status": "PASS"
+    },
+    {
+      "name": "experiments_pending",
+      "status": "PASS"
+    },
+    {
+      "name": "artifacts_six",
+      "status": "PASS"
+    },
+    {
+      "name": "final_status",
+      "status": "PASS"
+    },
+    {
+      "name": "no_fabrication",
+      "status": "PASS"
+    },
+    {
+      "name": "agreement_pending",
+      "status": "PASS"
+    },
+    {
+      "name": "stats_pending",
+      "status": "PASS"
+    },
+    {
+      "name": "kappa_perfect",
+      "status": "PASS"
+    },
+    {
+      "name": "kappa_insufficient",
+      "status": "PASS"
+    },
+    {
+      "name": "alpha_perfect",
+      "status": "PASS"
+    },
+    {
+      "name": "alpha_insufficient",
+      "status": "PASS"
+    },
+    {
+      "name": "valid_mapping_label",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid_confidence",
+      "status": "PASS"
+    },
+    {
+      "name": "duplicate_rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "cli_help",
+      "status": "PASS"
+    },
+    {
+      "name": "instructions_exist",
+      "status": "PASS"
+    },
+    {
+      "name": "correction_documented",
+      "status": "PASS"
+    },
+    {
+      "name": "cluster_limit_documented",
+      "status": "PASS"
+    },
+    {
+      "name": "assignment_integrity",
+      "status": "PASS"
+    },
+    {
+      "name": "assignment_idempotency",
+      "status": "PASS"
+    },
+    {
+      "name": "partial_finalize_rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "complete_finalize",
+      "status": "PASS"
+    },
+    {
+      "name": "fixture_rollback",
+      "status": "PASS"
+    },
+    {
+      "name": "ndcg_correct",
+      "status": "PASS"
+    },
+    {
+      "name": "spearman_correct",
+      "status": "PASS"
+    },
+    {
+      "name": "kendall_correct",
+      "status": "PASS"
+    },
+    {
+      "name": "top3_correct",
+      "status": "PASS"
+    },
+    {
+      "name": "missing_judgment",
+      "status": "PASS"
+    },
+    {
+      "name": "cluster_bootstrap_query_clusters",
+      "status": "PASS"
+    },
+    {
+      "name": "activity_subgroups_present",
+      "status": "PASS"
+    },
+    {
+      "name": "geographic_subgroups_present",
+      "status": "PASS"
+    }
+  ]
+}

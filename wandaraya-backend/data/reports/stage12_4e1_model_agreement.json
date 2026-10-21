@@ -1,0 +1,23 @@
+{
+  "district_multivariable": {
+    "interpretation": "model-to-model ranking agreement; not ground-truth accuracy",
+    "mean_kendall": 0.9351204351204352,
+    "mean_spearman": 0.9775151249510224,
+    "mean_top3_overlap": 0.9372427983539094,
+    "pairs": 4212
+  },
+  "rainfall_only": {
+    "interpretation": "model-to-model ranking agreement; not ground-truth accuracy",
+    "mean_kendall": 0.806289389622723,
+    "mean_spearman": 0.9103145192888783,
+    "mean_top3_overlap": 0.7006964229186451,
+    "pairs": 4212
+  },
+  "rainfall_risk_adjusted": {
+    "interpretation": "model-to-model ranking agreement; not ground-truth accuracy",
+    "mean_kendall": 0.8214265158709603,
+    "mean_spearman": 0.9134490865260096,
+    "mean_top3_overlap": 0.6151471984805318,
+    "pairs": 4212
+  }
+}
