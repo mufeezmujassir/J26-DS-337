@@ -1,0 +1,27 @@
+{
+  "automated_tests": {
+    "failed": 0,
+    "passed": 94,
+    "status": "ALL_TESTS_PASSED",
+    "total_tests": 94
+  },
+  "best_supported_candidate": "B_district_multivariable_reference",
+  "clusters": 13,
+  "comparison": {
+    "A_activity_aware": 0.8970686648809267,
+    "B_district_multivariable": 0.9157434177595347,
+    "C_activity_weighting_disabled": 0.914137825551812,
+    "D_reduced_activity_weight_strength": 0.9104700031874828,
+    "E_evidence_confidence_aware": 0.9043857637004628,
+    "F_fixed_calibrated_blend": 0.916132200838211,
+    "F_grouped_cv_calibrated_blend": 0.9139929193700433,
+    "G_conservative_adjustment": 0.9152307444365736
+  },
+  "historical_results_changed": false,
+  "new_candidate_approved": false,
+  "production_ranking_changed": false,
+  "rankable_queries": 52,
+  "seasonality_service": "INTEGRATION_READY_EXPERIMENTAL_NOT_ACTIVATED",
+  "stage": "12.4F",
+  "status": "STAGE12_4F_COMPLETED_WITH_LIMITATIONS"
+}

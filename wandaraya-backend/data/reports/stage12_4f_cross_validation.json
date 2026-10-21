@@ -1,0 +1,95 @@
+{
+  "clusters": 13,
+  "folds": [
+    {
+      "activity_weight": 0.25,
+      "fold": 1,
+      "test_clusters": [
+        "3:DISTRICT_REPRESENTATIVE_PROXY:Ampara",
+        "3:DISTRICT_REPRESENTATIVE_PROXY:Hambantota",
+        "3:DISTRICT_REPRESENTATIVE_PROXY:Moneragala"
+      ],
+      "test_queries": 12,
+      "train_queries": 40
+    },
+    {
+      "activity_weight": 0.25,
+      "fold": 2,
+      "test_clusters": [
+        "3:DISTRICT_REPRESENTATIVE_PROXY:Badulla",
+        "3:DISTRICT_REPRESENTATIVE_PROXY:Kalutara",
+        "3:DISTRICT_REPRESENTATIVE_PROXY:Nuwara Eliya"
+      ],
+      "test_queries": 10,
+      "train_queries": 42
+    },
+    {
+      "activity_weight": 0.25,
+      "fold": 3,
+      "test_clusters": [
+        "3:DISTRICT_REPRESENTATIVE_PROXY:Colombo",
+        "3:DISTRICT_REPRESENTATIVE_PROXY:Kandy",
+        "3:DISTRICT_REPRESENTATIVE_PROXY:Ratnapura"
+      ],
+      "test_queries": 13,
+      "train_queries": 39
+    },
+    {
+      "activity_weight": 0.25,
+      "fold": 4,
+      "test_clusters": [
+        "3:DISTRICT_REPRESENTATIVE_PROXY:Galle",
+        "3:DISTRICT_REPRESENTATIVE_PROXY:Kegalle"
+      ],
+      "test_queries": 9,
+      "train_queries": 43
+    },
+    {
+      "activity_weight": 0.0,
+      "fold": 5,
+      "test_clusters": [
+        "3:DISTRICT_REPRESENTATIVE_PROXY:Gampaha",
+        "3:DISTRICT_REPRESENTATIVE_PROXY:Matara"
+      ],
+      "test_queries": 8,
+      "train_queries": 44
+    }
+  ],
+  "grouping_unit": "climate-source identity; all 12 months of a query remain together",
+  "incomplete_queries_excluded": 8,
+  "insufficient_records_preserved_missing": 96,
+  "leakage_check": true,
+  "limitation": "The same evaluated benchmark supplies model-selection folds; this is cross-validated exploration, not fresh independent confirmation.",
+  "metrics": {
+    "kendall_tau_b": {
+      "mean": 0.7010080509661519,
+      "valid_queries": 52
+    },
+    "mrr_grade_ge_3": {
+      "mean": 0.9039007092198581,
+      "valid_queries": 47
+    },
+    "ndcg@12": {
+      "mean": 0.9589390976271578,
+      "valid_queries": 52
+    },
+    "ndcg@3": {
+      "mean": 0.8873369502315217,
+      "valid_queries": 52
+    },
+    "ndcg@5": {
+      "mean": 0.9139929193700433,
+      "valid_queries": 52
+    },
+    "spearman": {
+      "mean": 0.7950431875606414,
+      "valid_queries": 52
+    },
+    "top3_overlap": {
+      "mean": 0.673076923076923,
+      "valid_queries": 52
+    }
+  },
+  "rankable_queries": 52,
+  "status": "GROUPED_CROSS_VALIDATION_EXPLORATORY"
+}

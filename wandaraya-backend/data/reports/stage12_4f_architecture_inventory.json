@@ -1,0 +1,21 @@
+{
+  "data_lineage": [
+    "NASA POWER daily observations (165,828)",
+    "district/coordinate monthly climatology",
+    "Stage 12.4C features",
+    "Stage 12.4D activity profiles and mappings",
+    "Stage 12.4D.2 frozen monthly dataset",
+    "Stage 12.4E.1 frozen predictions",
+    "Stage 12.4E.2 genuine reviewer ground truth",
+    "Stage 12.4F diagnostics"
+  ],
+  "production_ranking_changed": false,
+  "services": {
+    "holiday_poya_event": "HolidayEventContextScoringService",
+    "seasonality": "ExperimentalSeasonalityScoringService",
+    "semantic": "SemanticAttractionRetriever",
+    "time_of_day": "TimeAwareRecommendationService",
+    "weather_enrichment": "RecommendationContextEnrichmentService"
+  },
+  "status": "VERIFIED"
+}

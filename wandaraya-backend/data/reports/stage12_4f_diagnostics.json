@@ -1,0 +1,205 @@
+{
+  "ablation_query_outperformance_counts": {
+    "B_district_multivariable": 11,
+    "C_activity_weighting_disabled": 12,
+    "D_reduced_activity_weight_strength": 12,
+    "E_evidence_confidence_aware": 10,
+    "F_fixed_calibrated_blend": 11,
+    "F_grouped_cv_calibrated_blend": 11,
+    "G_conservative_adjustment": 11
+  },
+  "activity_weight_profile": {
+    "interpretation": "Large activity-specific weights materially change ordering, but causal over-aggressiveness is not proven.",
+    "max_largest_weight": 0.5,
+    "mean_largest_weight": 0.41875,
+    "profiles": 16
+  },
+  "alembic_head": "h45c6d7e8f9a",
+  "clusters": 13,
+  "cohort_performance": {
+    "A": {
+      "kendall_tau_b": {
+        "mean": 0.6921271551267901,
+        "valid_queries": 39
+      },
+      "mrr_grade_ge_3": {
+        "mean": 0.8967592592592593,
+        "valid_queries": 36
+      },
+      "ndcg@12": {
+        "mean": 0.9437921023889448,
+        "valid_queries": 39
+      },
+      "ndcg@3": {
+        "mean": 0.8669536194093475,
+        "valid_queries": 39
+      },
+      "ndcg@5": {
+        "mean": 0.8872897141812142,
+        "valid_queries": 39
+      },
+      "spearman": {
+        "mean": 0.7895387132576154,
+        "valid_queries": 39
+      },
+      "top3_overlap": {
+        "mean": 0.6495726495726496,
+        "valid_queries": 39
+      }
+    },
+    "B": {
+      "kendall_tau_b": {
+        "mean": 0.6740800957547429,
+        "valid_queries": 13
+      },
+      "mrr_grade_ge_3": {
+        "mean": 0.9272727272727272,
+        "valid_queries": 11
+      },
+      "ndcg@12": {
+        "mean": 0.9729369646639189,
+        "valid_queries": 13
+      },
+      "ndcg@3": {
+        "mean": 0.9484034007931305,
+        "valid_queries": 13
+      },
+      "ndcg@5": {
+        "mean": 0.9264055169800645,
+        "valid_queries": 13
+      },
+      "spearman": {
+        "mean": 0.7688806178244525,
+        "valid_queries": 13
+      },
+      "top3_overlap": {
+        "mean": 0.6923076923076923,
+        "valid_queries": 13
+      }
+    }
+  },
+  "diagnostic_findings": [
+    "Disabling activity weighting raises benchmark mean NDCG@5 relative to the full model.",
+    "District multivariable remains the strongest pre-existing mean benchmark, but its E2 cluster interval versus full crosses zero.",
+    "Feature correlations quantify redundancy; they do not by themselves establish harmful double counting.",
+    "Coordinate-specific inference remains underpowered."
+  ],
+  "feature_correlations": {
+    "humidity_comfort__solar_context": 0.5612184847604891,
+    "rainfall_sub_index__humidity_comfort": 0.30211030951745943,
+    "rainfall_sub_index__solar_context": 0.4615664708118745,
+    "rainfall_sub_index__temperature_comfort": -0.022669129290301945,
+    "temperature_comfort__humidity_comfort": -0.06970284193916476,
+    "temperature_comfort__solar_context": -0.16328242785403901
+  },
+  "geographic_performance": {
+    "ATTRACTION_COORDINATE_REANALYSIS": {
+      "kendall_tau_b": {
+        "mean": null,
+        "valid_queries": 0
+      },
+      "mrr_grade_ge_3": {
+        "mean": null,
+        "valid_queries": 0
+      },
+      "ndcg@12": {
+        "mean": null,
+        "valid_queries": 0
+      },
+      "ndcg@3": {
+        "mean": null,
+        "valid_queries": 0
+      },
+      "ndcg@5": {
+        "mean": null,
+        "valid_queries": 0
+      },
+      "spearman": {
+        "mean": null,
+        "valid_queries": 0
+      },
+      "top3_overlap": {
+        "mean": null,
+        "valid_queries": 0
+      }
+    },
+    "DISTRICT_REPRESENTATIVE_PROXY": {
+      "kendall_tau_b": {
+        "mean": 0.6876153902837784,
+        "valid_queries": 52
+      },
+      "mrr_grade_ge_3": {
+        "mean": 0.9039007092198581,
+        "valid_queries": 47
+      },
+      "ndcg@12": {
+        "mean": 0.9510783179576884,
+        "valid_queries": 52
+      },
+      "ndcg@3": {
+        "mean": 0.8873160647552932,
+        "valid_queries": 52
+      },
+      "ndcg@5": {
+        "mean": 0.8970686648809267,
+        "valid_queries": 52
+      },
+      "spearman": {
+        "mean": 0.7843741893993247,
+        "valid_queries": 52
+      },
+      "top3_overlap": {
+        "mean": 0.6602564102564102,
+        "valid_queries": 52
+      }
+    }
+  },
+  "mapping_inventory": [
+    {
+      "count": 40,
+      "status": "PROVISIONAL",
+      "tier": "A"
+    },
+    {
+      "count": 151,
+      "status": "PROVISIONAL",
+      "tier": "B"
+    },
+    {
+      "count": 244,
+      "status": "SUPPORTED_INFERRED",
+      "tier": "A"
+    },
+    {
+      "count": 2945,
+      "status": "SUPPORTED_INFERRED",
+      "tier": "B"
+    },
+    {
+      "count": 1229,
+      "status": "UNSUPPORTED",
+      "tier": "D"
+    },
+    {
+      "count": 1023,
+      "status": "VERIFIED",
+      "tier": "A"
+    },
+    {
+      "count": 4495,
+      "status": "PROVISIONAL",
+      "tier": "C"
+    }
+  ],
+  "missing_feature_rows": {
+    "rainfall_cv": 0,
+    "rainfall_mean_mm": 0,
+    "relative_humidity_mean_pct": 0,
+    "solar_radiation_mean_mj": 0,
+    "temp_mean_c": 0,
+    "wind_speed_mean_ms": 0
+  },
+  "months": 624,
+  "rankable_queries": 52,
+  "status": "COMPUTED"
+}

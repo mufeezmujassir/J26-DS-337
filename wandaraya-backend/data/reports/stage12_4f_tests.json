@@ -1,0 +1,384 @@
+{
+  "status": "ALL_TESTS_PASSED",
+  "total_tests": 94,
+  "passed": 94,
+  "failed": 0,
+  "results": [
+    {
+      "name": "e2_status_preserved",
+      "status": "PASS"
+    },
+    {
+      "name": "e2_labels_preserved",
+      "status": "PASS"
+    },
+    {
+      "name": "gt_version_preserved",
+      "status": "PASS"
+    },
+    {
+      "name": "gt_hash_preserved",
+      "status": "PASS"
+    },
+    {
+      "name": "gt_rows",
+      "status": "PASS"
+    },
+    {
+      "name": "gt_no_duplicate",
+      "status": "PASS"
+    },
+    {
+      "name": "insufficient_96",
+      "status": "PASS"
+    },
+    {
+      "name": "insufficient_missing",
+      "status": "PASS"
+    },
+    {
+      "name": "rankable_52",
+      "status": "PASS"
+    },
+    {
+      "name": "incomplete_8_excluded",
+      "status": "PASS"
+    },
+    {
+      "name": "cv_leakage_check",
+      "status": "PASS"
+    },
+    {
+      "name": "cv_13_clusters",
+      "status": "PASS"
+    },
+    {
+      "name": "cv_five_folds",
+      "status": "PASS"
+    },
+    {
+      "name": "cv_all_test_queries",
+      "status": "PASS"
+    },
+    {
+      "name": "cv_train_test_nonempty",
+      "status": "PASS"
+    },
+    {
+      "name": "cv_weights_grid",
+      "status": "PASS"
+    },
+    {
+      "name": "fold_helper_deterministic",
+      "status": "PASS"
+    },
+    {
+      "name": "rank_tie_month",
+      "status": "PASS"
+    },
+    {
+      "name": "candidate_reproducible",
+      "status": "PASS"
+    },
+    {
+      "name": "cohort_a_more_activity",
+      "status": "PASS"
+    },
+    {
+      "name": "coordinate_confidence_effect",
+      "status": "PASS"
+    },
+    {
+      "name": "cohort_b_conservative_fallback",
+      "status": "PASS"
+    },
+    {
+      "name": "score_range_A_activity_aware",
+      "status": "PASS"
+    },
+    {
+      "name": "coverage_A_activity_aware",
+      "status": "PASS"
+    },
+    {
+      "name": "score_range_B_district_multivariable",
+      "status": "PASS"
+    },
+    {
+      "name": "coverage_B_district_multivariable",
+      "status": "PASS"
+    },
+    {
+      "name": "score_range_C_activity_weighting_disabled",
+      "status": "PASS"
+    },
+    {
+      "name": "coverage_C_activity_weighting_disabled",
+      "status": "PASS"
+    },
+    {
+      "name": "score_range_D_reduced_activity_weight_strength",
+      "status": "PASS"
+    },
+    {
+      "name": "coverage_D_reduced_activity_weight_strength",
+      "status": "PASS"
+    },
+    {
+      "name": "score_range_E_evidence_confidence_aware",
+      "status": "PASS"
+    },
+    {
+      "name": "coverage_E_evidence_confidence_aware",
+      "status": "PASS"
+    },
+    {
+      "name": "score_range_F_fixed_calibrated_blend",
+      "status": "PASS"
+    },
+    {
+      "name": "coverage_F_fixed_calibrated_blend",
+      "status": "PASS"
+    },
+    {
+      "name": "score_range_G_conservative_adjustment",
+      "status": "PASS"
+    },
+    {
+      "name": "coverage_G_conservative_adjustment",
+      "status": "PASS"
+    },
+    {
+      "name": "cv_metric_ndcg@3",
+      "status": "PASS"
+    },
+    {
+      "name": "district_metric_ndcg@3",
+      "status": "PASS"
+    },
+    {
+      "name": "cv_metric_ndcg@5",
+      "status": "PASS"
+    },
+    {
+      "name": "district_metric_ndcg@5",
+      "status": "PASS"
+    },
+    {
+      "name": "cv_metric_ndcg@12",
+      "status": "PASS"
+    },
+    {
+      "name": "district_metric_ndcg@12",
+      "status": "PASS"
+    },
+    {
+      "name": "cv_metric_spearman",
+      "status": "PASS"
+    },
+    {
+      "name": "district_metric_spearman",
+      "status": "PASS"
+    },
+    {
+      "name": "cv_metric_kendall_tau_b",
+      "status": "PASS"
+    },
+    {
+      "name": "district_metric_kendall_tau_b",
+      "status": "PASS"
+    },
+    {
+      "name": "cv_metric_top3_overlap",
+      "status": "PASS"
+    },
+    {
+      "name": "district_metric_top3_overlap",
+      "status": "PASS"
+    },
+    {
+      "name": "historical_activity_ndcg",
+      "status": "PASS"
+    },
+    {
+      "name": "historical_district_ndcg",
+      "status": "PASS"
+    },
+    {
+      "name": "historical_disabled_ndcg",
+      "status": "PASS"
+    },
+    {
+      "name": "selection_conservative",
+      "status": "PASS"
+    },
+    {
+      "name": "no_candidate_approved",
+      "status": "PASS"
+    },
+    {
+      "name": "small_cluster_limitation",
+      "status": "PASS"
+    },
+    {
+      "name": "diagnostic_months",
+      "status": "PASS"
+    },
+    {
+      "name": "profiles_16",
+      "status": "PASS"
+    },
+    {
+      "name": "missingness_reported",
+      "status": "PASS"
+    },
+    {
+      "name": "correlations_six",
+      "status": "PASS"
+    },
+    {
+      "name": "service_model_version",
+      "status": "PASS"
+    },
+    {
+      "name": "service_score_range",
+      "status": "PASS"
+    },
+    {
+      "name": "service_category_consistency",
+      "status": "PASS"
+    },
+    {
+      "name": "service_provenance",
+      "status": "PASS"
+    },
+    {
+      "name": "service_mapping_confidence",
+      "status": "PASS"
+    },
+    {
+      "name": "service_geo_evidence",
+      "status": "PASS"
+    },
+    {
+      "name": "service_proxy_boolean",
+      "status": "PASS"
+    },
+    {
+      "name": "strong_no_fallback",
+      "status": "PASS"
+    },
+    {
+      "name": "weak_fallback",
+      "status": "PASS"
+    },
+    {
+      "name": "weak_fallback_reason",
+      "status": "PASS"
+    },
+    {
+      "name": "service_not_live_weather",
+      "status": "PASS"
+    },
+    {
+      "name": "service_not_safety",
+      "status": "PASS"
+    },
+    {
+      "name": "service_production_unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "request_date_month",
+      "status": "PASS"
+    },
+    {
+      "name": "request_requires_time",
+      "status": "PASS"
+    },
+    {
+      "name": "semantic_module_compatible",
+      "status": "PASS"
+    },
+    {
+      "name": "time_module_compatible",
+      "status": "PASS"
+    },
+    {
+      "name": "holiday_module_compatible",
+      "status": "PASS"
+    },
+    {
+      "name": "enrichment_module_compatible",
+      "status": "PASS"
+    },
+    {
+      "name": "service_not_publicly_routed",
+      "status": "PASS"
+    },
+    {
+      "name": "integration_experimental",
+      "status": "PASS"
+    },
+    {
+      "name": "production_isolation",
+      "status": "PASS"
+    },
+    {
+      "name": "no_new_migration",
+      "status": "PASS"
+    },
+    {
+      "name": "stage_run_persisted",
+      "status": "PASS"
+    },
+    {
+      "name": "stage_experiments_four",
+      "status": "PASS"
+    },
+    {
+      "name": "raw_climate_preserved",
+      "status": "PASS"
+    },
+    {
+      "name": "predictions_preserved",
+      "status": "PASS"
+    },
+    {
+      "name": "seasonality_preserved",
+      "status": "PASS"
+    },
+    {
+      "name": "summary_status",
+      "status": "PASS"
+    },
+    {
+      "name": "doc_STAGE_12_4F_DIAGNOSTIC_REPORT.md",
+      "status": "PASS"
+    },
+    {
+      "name": "doc_STAGE_12_4F_MODEL_COMPARISON.md",
+      "status": "PASS"
+    },
+    {
+      "name": "doc_STAGE_12_4F_CROSS_VALIDATION_AND_LEAKAGE_CONTROL.md",
+      "status": "PASS"
+    },
+    {
+      "name": "doc_STAGE_12_4F_SEASONALITY_SCORING_SERVICE.md",
+      "status": "PASS"
+    },
+    {
+      "name": "doc_STAGE_12_4F_INTEGRATION_READINESS.md",
+      "status": "PASS"
+    },
+    {
+      "name": "doc_STAGE_12_4F_RESEARCH_LIMITATIONS_AND_FUTURE_VALIDATION.md",
+      "status": "PASS"
+    },
+    {
+      "name": "doc_STAGE_12_4F_EXECUTION_INSTRUCTIONS.md",
+      "status": "PASS"
+    }
+  ]
+}
