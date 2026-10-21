@@ -128,7 +128,59 @@ decision:
     positive: 1.0
     neutral: 0.0
     negative: -1.0
+  weighted:
+    alpha: 1.0                     
+    w_min: 1.0                    
+    w_max: 2.0                     
+    intensity_mode: "continuous"    
+    use_emotion: true              
+    aggregation_policy: "max"       
   paths:
     demo_groups_json: "data/processed/decision_demo_groups.json"
     results_json: "reports/decision_baselines_results.json"
     comparison_figure: "reports/figures/decision_baselines_comparison.png"
+    weighted_results_json: "reports/weighted_voting_results.json"
+    weighted_sensitivity_figure: "reports/figures/weighted_sensitivity.png"
+    weighted_comparison_figure: "reports/figures/weighted_comparison.png"
+
+    minority_results_json: "reports/minority_protection_results.json"
+    minority_comparison_figure: "reports/figures/minority_comparison.png"
+    minority_sensitivity_figure: "reports/figures/minority_sensitivity.png"
+    consensus_results_json: "reports/consensus_results.json"
+    consensus_by_method_figure: "reports/figures/consensus_by_method.png"
+    consensus_sensitivity_figure: "reports/figures/consensus_sensitivity.png"
+    consensus_distribution_figure: "reports/figures/consensus_distribution.png"
+  minority:
+    enabled: true
+    base_method: "weighted"          
+    min_strength: 1.0                 
+    slots:
+      Destination:
+        - "stop_1"
+        - "stop_2"
+        - "stop_3"
+      Activity:
+        - "morning"
+        - "afternoon"
+        - "evening"
+    max_protection_items: null        
+    solver: "greedy"                  
+    allow_repeats: false
+    forbid_rejected_items: true       
+    hints_path: "configs/compromise_hints.yaml"
+
+  consensus:
+    lambda: 0.5                     
+    weight_by_vote_weight: false    
+    high_threshold: 0.75            
+    medium_threshold: 0.50          
+    reach_threshold: 0.75           
+    min_acceptance_threshold: 0.50  
+    participants_only: false       
+    conflict_penalty: 0.0           
+    max_conflict_penalty: 0.30      
+    paths:
+      results_json: "reports/consensus_results.json"
+      by_method_figure: "reports/figures/consensus_by_method.png"
+      sensitivity_figure: "reports/figures/consensus_sensitivity.png"
+      distribution_figure: "reports/figures/consensus_distribution.png"
