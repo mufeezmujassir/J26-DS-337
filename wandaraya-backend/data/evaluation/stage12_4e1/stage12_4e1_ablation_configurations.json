@@ -1,0 +1,101 @@
+{
+  "configurations": [
+    {
+      "available": true,
+      "configuration_hash": "7095c394b4988fa6b635044fd490c1fbf0260a90dc44ee6e632d16d78edad878",
+      "id": "full_activity_aware",
+      "removed": [],
+      "renormalize": false,
+      "version": "12.4e1_v1"
+    },
+    {
+      "available": true,
+      "configuration_hash": "a35f7b83c9764cecf1a0326d76dc4439edca3dd514c4b97ac08f75988b5c255d",
+      "id": "without_rainfall_reliability",
+      "removed": [
+        "rainfall_reliability"
+      ],
+      "renormalize": true,
+      "version": "12.4e1_v1"
+    },
+    {
+      "available": true,
+      "configuration_hash": "d29b93952db11aacabe72ecbab674ec6fb733244e0fb6b0d109668cd793bd22e",
+      "id": "without_temperature",
+      "removed": [
+        "temperature_comfort"
+      ],
+      "renormalize": true,
+      "version": "12.4e1_v1"
+    },
+    {
+      "available": true,
+      "configuration_hash": "993d7878d90adfe2f66a6a213f8c488fbf87d11d22af40b328bc8ef9893ad3ef",
+      "id": "without_humidity",
+      "removed": [
+        "humidity_comfort"
+      ],
+      "renormalize": true,
+      "version": "12.4e1_v1"
+    },
+    {
+      "available": true,
+      "configuration_hash": "21a03e338913ab558e498a46af70482b1f2d8507e205dd4ebf6a381eba67070a",
+      "id": "without_solar",
+      "removed": [
+        "solar_context"
+      ],
+      "renormalize": true,
+      "version": "12.4e1_v1"
+    },
+    {
+      "available": false,
+      "configuration_hash": "6abc95b5032faa04f904ce5775f1cb4446d01ea084bb881e6a00be3fcb861dc8",
+      "id": "without_wind",
+      "removed": [
+        "wind_context"
+      ],
+      "renormalize": true,
+      "unavailable_reason": "No Stage 12.4D activity profile assigns wind a non-zero weight.",
+      "version": "12.4e1_v1"
+    },
+    {
+      "available": true,
+      "configuration_hash": "da6e3f33b600681fca4e8906aae65955c961893f27f738af6ba1895a7dcd478c",
+      "generic_weights": {
+        "humidity_comfort": 0.15,
+        "rainfall_sub_index": 0.45,
+        "solar_context": 0.15,
+        "temperature_comfort": 0.25
+      },
+      "id": "without_activity_weighting",
+      "removed": [],
+      "renormalize": true,
+      "version": "12.4e1_v1"
+    },
+    {
+      "available": true,
+      "configuration_hash": "abb2afd600ba29005c50800b7acc69859638abbfb77b9f057c9ff3db6af00be1",
+      "id": "district_only_fallback",
+      "policy": "use district feature inputs for every pair",
+      "removed": [],
+      "renormalize": false,
+      "version": "12.4e1_v1"
+    },
+    {
+      "available": true,
+      "configuration_hash": "854d43b9fade1f3d112fcce22c83f588abc17ba25aca783163d1c8b8b2aef33a",
+      "id": "rainfall_only_simplified",
+      "removed": [
+        "rainfall_reliability",
+        "temperature_comfort",
+        "humidity_comfort",
+        "solar_context",
+        "wind_context"
+      ],
+      "renormalize": true,
+      "version": "12.4e1_v1"
+    }
+  ],
+  "version": "stage12_4e1_v1"
+}

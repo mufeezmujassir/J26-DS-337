@@ -103,8 +103,7 @@ class HolidayEventContextFeatureService:
         poya = next((item for item in holidays if item.is_poya), None)
         evidence = [item.source_url for item in holidays if item.source_url]
         flags: list[str] = []
-        # Calendar source currently supplies page-level public/bank context,
-        # not row-level classification. Do not elevate those booleans to facts.
+        
         public_or_bank = any(item.is_public_holiday or item.is_bank_holiday for item in holidays)
         if public_or_bank:
             flags.append("holiday_public_bank_classification_page_level_uncertain")
@@ -146,8 +145,7 @@ class HolidayEventContextFeatureService:
             confidence = "low"
         return HolidayEventFeature(
             attraction_id=attraction.id,
-            # Explicitly unknown: existing page-level values cannot establish
-            # a row-specific public/bank classification.
+
             is_public_holiday=None if public_or_bank else False,
             is_bank_holiday=None if public_or_bank else False,
             is_poya_day=bool(poya), poya_name=poya.poya_name if poya else None,

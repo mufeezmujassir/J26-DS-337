@@ -1,0 +1,482 @@
+{
+  "ablation_behavior": {
+    "ablation_district_only_fallback": {
+      "mean_absolute_rank_change": 0.550371953149731,
+      "mean_absolute_score_change": 0.035660199726970564,
+      "rows": 50544
+    },
+    "ablation_rainfall_only_simplified": {
+      "mean_absolute_rank_change": 0.9193178220955999,
+      "mean_absolute_score_change": 0.15233382144270338,
+      "rows": 50544
+    },
+    "ablation_without_activity_weighting": {
+      "mean_absolute_rank_change": 0.30092592592592593,
+      "mean_absolute_score_change": 0.03590062691911997,
+      "rows": 50544
+    },
+    "ablation_without_humidity": {
+      "mean_absolute_rank_change": 0.29040044317822095,
+      "mean_absolute_score_change": 0.06200262606837607,
+      "rows": 50544
+    },
+    "ablation_without_rainfall_reliability": {
+      "mean_absolute_rank_change": 0.06390471668249446,
+      "mean_absolute_score_change": 0.0062823623575498574,
+      "rows": 50544
+    },
+    "ablation_without_solar": {
+      "mean_absolute_rank_change": 0.550371953149731,
+      "mean_absolute_score_change": 0.03301733679566318,
+      "rows": 50544
+    },
+    "ablation_without_temperature": {
+      "mean_absolute_rank_change": 0.2783713200379867,
+      "mean_absolute_score_change": 0.11852731087765116,
+      "rows": 50544
+    }
+  },
+  "ablation_predictions": 404352,
+  "activity_sensitivity": {
+    "by_activity_mean_score": {
+      "archaeology": 0.6574242843511451,
+      "beach_visit": 0.6228151041666666,
+      "camping": 0.6505474444444445,
+      "cultural_tour": 0.6441928822495606,
+      "cycling": 0.6804083333333333,
+      "hiking": 0.6584509282700421,
+      "mountain_viewing": 0.6264698333333333,
+      "photography": 0.5825099406009784,
+      "plantation_tour": 0.6700258384146341,
+      "religious_visit": 0.6645745982905983,
+      "snorkeling_diving": 0.6007583333333333,
+      "surfing": 0.6801791666666667,
+      "swimming": 0.6506617424242425,
+      "urban_visit": 0.6516718029350105,
+      "waterfall_visit": 0.641964368872549,
+      "wildlife_safari": 0.6402601507092198
+    },
+    "multi_activity_attractions": 854,
+    "percentage_distinct": 76.81498829039812,
+    "with_distinct_activity_rankings": 656
+  },
+  "automated_tests": {
+    "failed": 0,
+    "passed": 52,
+    "pytest_limitation": "pytest is not installed in the Docker image; no pytest suite is claimed as passed.",
+    "results": [
+      {
+        "name": "test_01",
+        "status": "PASS"
+      },
+      {
+        "name": "test_02",
+        "status": "PASS"
+      },
+      {
+        "name": "test_03",
+        "status": "PASS"
+      },
+      {
+        "name": "test_04",
+        "status": "PASS"
+      },
+      {
+        "name": "test_05",
+        "status": "PASS"
+      },
+      {
+        "name": "test_06",
+        "status": "PASS"
+      },
+      {
+        "name": "test_07",
+        "status": "PASS"
+      },
+      {
+        "name": "test_08",
+        "status": "PASS"
+      },
+      {
+        "name": "test_09",
+        "status": "PASS"
+      },
+      {
+        "name": "test_10",
+        "status": "PASS"
+      },
+      {
+        "name": "test_11",
+        "status": "PASS"
+      },
+      {
+        "name": "test_12",
+        "status": "PASS"
+      },
+      {
+        "name": "test_13",
+        "status": "PASS"
+      },
+      {
+        "name": "test_14",
+        "status": "PASS"
+      },
+      {
+        "name": "test_15",
+        "status": "PASS"
+      },
+      {
+        "name": "test_16",
+        "status": "PASS"
+      },
+      {
+        "name": "test_17",
+        "status": "PASS"
+      },
+      {
+        "name": "test_18",
+        "status": "PASS"
+      },
+      {
+        "name": "test_19",
+        "status": "PASS"
+      },
+      {
+        "name": "test_20",
+        "status": "PASS"
+      },
+      {
+        "name": "test_21",
+        "status": "PASS"
+      },
+      {
+        "name": "test_22",
+        "status": "PASS"
+      },
+      {
+        "name": "test_23",
+        "status": "PASS"
+      },
+      {
+        "name": "test_24",
+        "status": "PASS"
+      },
+      {
+        "name": "test_25",
+        "status": "PASS"
+      },
+      {
+        "name": "test_26",
+        "status": "PASS"
+      },
+      {
+        "name": "test_27",
+        "status": "PASS"
+      },
+      {
+        "name": "test_28",
+        "status": "PASS"
+      },
+      {
+        "name": "test_29",
+        "status": "PASS"
+      },
+      {
+        "name": "test_30",
+        "status": "PASS"
+      },
+      {
+        "name": "test_31",
+        "status": "PASS"
+      },
+      {
+        "name": "test_32",
+        "status": "PASS"
+      },
+      {
+        "name": "test_33",
+        "status": "PASS"
+      },
+      {
+        "name": "test_34",
+        "status": "PASS"
+      },
+      {
+        "name": "test_35",
+        "status": "PASS"
+      },
+      {
+        "name": "test_36",
+        "status": "PASS"
+      },
+      {
+        "name": "test_37",
+        "status": "PASS"
+      },
+      {
+        "name": "test_38",
+        "status": "PASS"
+      },
+      {
+        "name": "test_39",
+        "status": "PASS"
+      },
+      {
+        "name": "test_40",
+        "status": "PASS"
+      },
+      {
+        "name": "test_41",
+        "status": "PASS"
+      },
+      {
+        "name": "test_42",
+        "status": "PASS"
+      },
+      {
+        "name": "test_43",
+        "status": "PASS"
+      },
+      {
+        "name": "test_44",
+        "status": "PASS"
+      },
+      {
+        "name": "test_45",
+        "status": "PASS"
+      },
+      {
+        "name": "test_46",
+        "status": "PASS"
+      },
+      {
+        "name": "test_47",
+        "status": "PASS"
+      },
+      {
+        "name": "test_48",
+        "status": "PASS"
+      },
+      {
+        "name": "test_49",
+        "status": "PASS"
+      },
+      {
+        "name": "test_50",
+        "status": "PASS"
+      },
+      {
+        "name": "test_51",
+        "status": "PASS"
+      },
+      {
+        "name": "test_52",
+        "status": "PASS"
+      }
+    ],
+    "status": "ALL_TESTS_PASSED",
+    "total_tests": 52
+  },
+  "available_ablation_configurations": 8,
+  "baseline_configurations": 4,
+  "baseline_predictions": 202176,
+  "cohort_sensitivity": {
+    "A": {
+      "mean_activity_aware_score": 0.639649973691134,
+      "mean_uncertainty": 0.44835255853722705,
+      "pairs": 1267
+    },
+    "B": {
+      "mean_activity_aware_score": 0.6489422693831353,
+      "mean_uncertainty": 0.44692673457838145,
+      "pairs": 2945
+    },
+    "interpretation": "descriptive cohort sensitivity; not human-validated accuracy"
+  },
+  "completed_at_utc": "2026-10-20T17:12:20.517915+00:00",
+  "database_readback": {
+    "model_configurations": 12,
+    "persisted_predictions": 606528,
+    "protected_counts_unchanged": true,
+    "raw_observations": 165828,
+    "reviewer_label_rows": 0,
+    "run_id": 1,
+    "run_version": "stage12_4e1_run_v1",
+    "seasonality_profiles": 121524,
+    "status": "INDEPENDENT_READBACK_VERIFIED"
+  },
+  "dataset_version": "stage12_4d2_eval_v1",
+  "frozen_dataset_verified_before_and_after": true,
+  "geographic_proxy_dependence": {
+    "activity_distribution_by_source": {
+      "archaeology": {
+        "ATTRACTION_COORDINATE_REANALYSIS": 1,
+        "DISTRICT_REPRESENTATIVE_PROXY": 523
+      },
+      "beach_visit": {
+        "DISTRICT_REPRESENTATIVE_PROXY": 96
+      },
+      "camping": {
+        "DISTRICT_REPRESENTATIVE_PROXY": 75
+      },
+      "cultural_tour": {
+        "ATTRACTION_COORDINATE_REANALYSIS": 1,
+        "DISTRICT_REPRESENTATIVE_PROXY": 568
+      },
+      "cycling": {
+        "DISTRICT_REPRESENTATIVE_PROXY": 1
+      },
+      "hiking": {
+        "DISTRICT_REPRESENTATIVE_PROXY": 395
+      },
+      "mountain_viewing": {
+        "DISTRICT_REPRESENTATIVE_PROXY": 100
+      },
+      "photography": {
+        "ATTRACTION_COORDINATE_REANALYSIS": 1,
+        "DISTRICT_REPRESENTATIVE_PROXY": 476
+      },
+      "plantation_tour": {
+        "DISTRICT_REPRESENTATIVE_PROXY": 328
+      },
+      "religious_visit": {
+        "DISTRICT_REPRESENTATIVE_PROXY": 975
+      },
+      "snorkeling_diving": {
+        "DISTRICT_REPRESENTATIVE_PROXY": 5
+      },
+      "surfing": {
+        "DISTRICT_REPRESENTATIVE_PROXY": 4
+      },
+      "swimming": {
+        "DISTRICT_REPRESENTATIVE_PROXY": 44
+      },
+      "urban_visit": {
+        "ATTRACTION_COORDINATE_REANALYSIS": 1,
+        "DISTRICT_REPRESENTATIVE_PROXY": 158
+      },
+      "waterfall_visit": {
+        "DISTRICT_REPRESENTATIVE_PROXY": 272
+      },
+      "wildlife_safari": {
+        "ATTRACTION_COORDINATE_REANALYSIS": 1,
+        "DISTRICT_REPRESENTATIVE_PROXY": 187
+      }
+    },
+    "dedicated_coordinate_attractions": 2,
+    "dedicated_coordinate_pairs": 5,
+    "distinct_climate_source_identities": 22,
+    "distinct_districts": 20,
+    "district_proxy_pairs": 4207,
+    "districts_shared_by_multiple_attractions": 17,
+    "identical_inputs_expected": "Geographically distinct attractions assigned to the same district reuse identical Stage 12.4C climate inputs; activity weighting can still change rankings.",
+    "limitation": "The dedicated-coordinate subset is too small to represent all attractions or establish local microclimate accuracy.",
+    "monthly_rows": {
+      "ATTRACTION_COORDINATE_REANALYSIS": 60,
+      "DISTRICT_REPRESENTATIVE_PROXY": 50484
+    },
+    "pairs_sharing_district_profiles": 18,
+    "percentages": {
+      "ATTRACTION_COORDINATE_REANALYSIS": 0.11870845204178537,
+      "DISTRICT_REPRESENTATIVE_PROXY": 99.88129154795821
+    }
+  },
+  "label_dependent_experiments": "PENDING_INDEPENDENT_HUMAN_LABELS",
+  "leakage_audit": {
+    "blind_mapping_template": {
+      "prohibited_fields": [],
+      "safe": true
+    },
+    "blind_seasonality_template": {
+      "prohibited_fields": [],
+      "safe": true
+    },
+    "fixed_rule_evaluation_no_tuning_split_required": true,
+    "frozen_integrity": true,
+    "held_out_overlap": "NOT_APPLICABLE_NO_FITTING; grouped split required before any future tuning",
+    "human_labels_used_for_tuning": false,
+    "model_scores_used_as_labels": false,
+    "near_duplicate_policy": "Normalized exact-name candidates and all records sharing a climate source must remain grouped before any future tuning split.",
+    "normalized_duplicate_name_groups": 10,
+    "shared_climate_source_identities": 22,
+    "shared_district_proxy": "DETECTED_AND_GROUPING_REQUIRED",
+    "status": "NO_CRITICAL_LEAKAGE_DETECTED"
+  },
+  "migration_id": "f23a4b5c6d7e",
+  "model_agreement": {
+    "district_multivariable": {
+      "interpretation": "model-to-model ranking agreement; not ground-truth accuracy",
+      "mean_kendall": 0.9351204351204352,
+      "mean_spearman": 0.9775151249510224,
+      "mean_top3_overlap": 0.9372427983539094,
+      "pairs": 4212
+    },
+    "rainfall_only": {
+      "interpretation": "model-to-model ranking agreement; not ground-truth accuracy",
+      "mean_kendall": 0.806289389622723,
+      "mean_spearman": 0.9103145192888783,
+      "mean_top3_overlap": 0.7006964229186451,
+      "pairs": 4212
+    },
+    "rainfall_risk_adjusted": {
+      "interpretation": "model-to-model ranking agreement; not ground-truth accuracy",
+      "mean_kendall": 0.8214265158709603,
+      "mean_spearman": 0.9134490865260096,
+      "mean_top3_overlap": 0.6151471984805318,
+      "pairs": 4212
+    }
+  },
+  "prediction_checksums": {
+    "ablation_predictions.csv": "e7fbae01687b9828eff68e246250e3102ca57e56c73b2ce0f558785d8b89d009",
+    "baseline_predictions.csv": "c6de26d436aee3730dd7bb8f356c735f3b7c72ad9e29a6952a59a9a7310e92ae"
+  },
+  "pytest_limitation": "pytest is not installed in the Docker image; no pytest suite is claimed as passed.",
+  "regression_tests": {
+    "12.4D": {
+      "failed": 0,
+      "passed": 30,
+      "status": "ALL_TESTS_PASSED",
+      "total_tests": 30
+    },
+    "12.4D.1": {
+      "failed": 0,
+      "passed": 40,
+      "status": "ALL_TESTS_PASSED",
+      "total_tests": 40
+    },
+    "12.4D.2": {
+      "failed": 0,
+      "passed": 50,
+      "status": "ALL_TESTS_PASSED",
+      "total_tests": 50
+    }
+  },
+  "reviewer_labels": {
+    "completed_labels": 0,
+    "files": {
+      "stage12_4d2_mapping_review_blind.csv": 0,
+      "stage12_4d2_seasonality_review_blind.csv": 0
+    },
+    "label_dependent_experiments_status": "PENDING_INDEPENDENT_HUMAN_LABELS",
+    "prepared": [
+      "mapping precision",
+      "reviewer agreement",
+      "NDCG@3",
+      "NDCG@5",
+      "Spearman and Kendall versus judgments",
+      "top-3 relevance",
+      "paired baseline confidence intervals",
+      "activity/geographic subgroup evaluation",
+      "ablation performance"
+    ],
+    "status": "HUMAN_LABELS_PENDING"
+  },
+  "scientific_limitations": [
+    "No independent human labels are available.",
+    "District proxy reuse creates clustered dependence.",
+    "Model agreement is not accuracy.",
+    "The coordinate subset is not representative."
+  ],
+  "stage12_4e2": "READY_FOR_LABEL_COLLECTION_NOT_EXECUTED",
+  "status": "OFFLINE_EVALUATION_INFRASTRUCTURE_VERIFIED"
+}

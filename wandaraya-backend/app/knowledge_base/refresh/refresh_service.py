@@ -39,28 +39,7 @@ class KBRefreshResult:
 
 
 class TourismKBRefreshService:
-    """
-    Coordinates a refresh of existing WANDARAYA attractions.
-
-    Responsibilities:
-
-        PostgreSQL
-            ↓
-        select refresh targets
-            ↓
-        AttractionIngestionPipeline
-            ↓
-        PostgreSQL update
-            ↓
-        semantic document
-            ↓
-        BGE
-            ↓
-        Qdrant
-
-    This service intentionally reuses the existing ingestion
-    pipeline instead of duplicating ingestion logic.
-    """
+    
 
     def __init__(
         self,

@@ -1,0 +1,995 @@
+{
+  "status": "VARIABLE_QUALITY_VALIDATED",
+  "total_sample_days_analyzed": 163632,
+  "temperature_consistency": {
+    "tmin_greater_than_tmax_count": 0,
+    "tmean_inconsistent_count": 0
+  },
+  "variable_statistics": {
+    "temperature_mean_c": {
+      "total_observed": 163632,
+      "valid_count": 163632,
+      "sentinel_null_count": 0,
+      "nonfinite_count": 0,
+      "out_of_bounds_count": 0,
+      "missing_percent": 0.0,
+      "min_val": 18.15,
+      "max_val": 32.57
+    },
+    "temperature_min_c": {
+      "total_observed": 163632,
+      "valid_count": 163632,
+      "sentinel_null_count": 0,
+      "nonfinite_count": 0,
+      "out_of_bounds_count": 0,
+      "missing_percent": 0.0,
+      "min_val": 11.77,
+      "max_val": 30.55
+    },
+    "temperature_max_c": {
+      "total_observed": 163632,
+      "valid_count": 163632,
+      "sentinel_null_count": 0,
+      "nonfinite_count": 0,
+      "out_of_bounds_count": 0,
+      "missing_percent": 0.0,
+      "min_val": 21.27,
+      "max_val": 40.18
+    },
+    "precipitation_mm": {
+      "total_observed": 163632,
+      "valid_count": 163632,
+      "sentinel_null_count": 0,
+      "nonfinite_count": 0,
+      "out_of_bounds_count": 0,
+      "missing_percent": 0.0,
+      "min_val": 0.0,
+      "max_val": 347.71
+    },
+    "relative_humidity_pct": {
+      "total_observed": 163632,
+      "valid_count": 163632,
+      "sentinel_null_count": 0,
+      "nonfinite_count": 0,
+      "out_of_bounds_count": 0,
+      "missing_percent": 0.0,
+      "min_val": 50.43,
+      "max_val": 97.48
+    },
+    "wind_speed_10m": {
+      "total_observed": 163632,
+      "valid_count": 163632,
+      "sentinel_null_count": 0,
+      "nonfinite_count": 0,
+      "out_of_bounds_count": 0,
+      "missing_percent": 0.0,
+      "min_val": 0.38,
+      "max_val": 15.16
+    },
+    "solar_radiation": {
+      "total_observed": 163632,
+      "valid_count": 163632,
+      "sentinel_null_count": 0,
+      "nonfinite_count": 0,
+      "out_of_bounds_count": 0,
+      "missing_percent": 0.0,
+      "min_val": 1.04,
+      "max_val": 27.63
+    }
+  },
+  "per_sample_missingness": {
+    "historic_1": {
+      "batch": "batch01",
+      "district_id": 78,
+      "missing_counts": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      },
+      "total_records": 5844
+    },
+    "historic_24": {
+      "batch": "batch01",
+      "district_id": 92,
+      "missing_counts": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      },
+      "total_records": 5844
+    },
+    "historic_16": {
+      "batch": "batch01",
+      "district_id": 74,
+      "missing_counts": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      },
+      "total_records": 5844
+    },
+    "district_73_representative_2010_2025": {
+      "batch": "batch02",
+      "district_id": 73,
+      "missing_counts": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      },
+      "total_records": 5844
+    },
+    "district_74_representative_2010_2025": {
+      "batch": "batch02",
+      "district_id": 74,
+      "missing_counts": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      },
+      "total_records": 5844
+    },
+    "district_75_representative_2010_2025": {
+      "batch": "batch02",
+      "district_id": 75,
+      "missing_counts": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      },
+      "total_records": 5844
+    },
+    "district_76_representative_2010_2025": {
+      "batch": "batch02",
+      "district_id": 76,
+      "missing_counts": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      },
+      "total_records": 5844
+    },
+    "district_77_representative_2010_2025": {
+      "batch": "batch02",
+      "district_id": 77,
+      "missing_counts": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      },
+      "total_records": 5844
+    },
+    "district_78_representative_2010_2025": {
+      "batch": "batch02",
+      "district_id": 78,
+      "missing_counts": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      },
+      "total_records": 5844
+    },
+    "district_79_representative_2010_2025": {
+      "batch": "batch02",
+      "district_id": 79,
+      "missing_counts": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      },
+      "total_records": 5844
+    },
+    "district_80_representative_2010_2025": {
+      "batch": "batch02",
+      "district_id": 80,
+      "missing_counts": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      },
+      "total_records": 5844
+    },
+    "district_81_representative_2010_2025": {
+      "batch": "batch02",
+      "district_id": 81,
+      "missing_counts": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      },
+      "total_records": 5844
+    },
+    "district_82_representative_2010_2025": {
+      "batch": "batch02",
+      "district_id": 82,
+      "missing_counts": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      },
+      "total_records": 5844
+    },
+    "district_83_representative_2010_2025": {
+      "batch": "batch02",
+      "district_id": 83,
+      "missing_counts": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      },
+      "total_records": 5844
+    },
+    "district_84_representative_2010_2025": {
+      "batch": "batch02",
+      "district_id": 84,
+      "missing_counts": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      },
+      "total_records": 5844
+    },
+    "district_85_representative_2010_2025": {
+      "batch": "batch02",
+      "district_id": 85,
+      "missing_counts": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      },
+      "total_records": 5844
+    },
+    "district_86_representative_2010_2025": {
+      "batch": "batch02",
+      "district_id": 86,
+      "missing_counts": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      },
+      "total_records": 5844
+    },
+    "district_87_representative_2010_2025": {
+      "batch": "batch02",
+      "district_id": 87,
+      "missing_counts": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      },
+      "total_records": 5844
+    },
+    "district_88_representative_2010_2025": {
+      "batch": "batch02",
+      "district_id": 88,
+      "missing_counts": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      },
+      "total_records": 5844
+    },
+    "district_89_representative_2010_2025": {
+      "batch": "batch02",
+      "district_id": 89,
+      "missing_counts": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      },
+      "total_records": 5844
+    },
+    "district_90_representative_2010_2025": {
+      "batch": "batch02",
+      "district_id": 90,
+      "missing_counts": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      },
+      "total_records": 5844
+    },
+    "district_91_representative_2010_2025": {
+      "batch": "batch02",
+      "district_id": 91,
+      "missing_counts": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      },
+      "total_records": 5844
+    },
+    "district_92_representative_2010_2025": {
+      "batch": "batch02",
+      "district_id": 92,
+      "missing_counts": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      },
+      "total_records": 5844
+    },
+    "district_93_representative_2010_2025": {
+      "batch": "batch02",
+      "district_id": 93,
+      "missing_counts": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      },
+      "total_records": 5844
+    },
+    "district_94_representative_2010_2025": {
+      "batch": "batch02",
+      "district_id": 94,
+      "missing_counts": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      },
+      "total_records": 5844
+    },
+    "district_95_representative_2010_2025": {
+      "batch": "batch02",
+      "district_id": 95,
+      "missing_counts": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      },
+      "total_records": 5844
+    },
+    "district_96_representative_2010_2025": {
+      "batch": "batch02",
+      "district_id": 96,
+      "missing_counts": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      },
+      "total_records": 5844
+    },
+    "district_97_representative_2010_2025": {
+      "batch": "batch02",
+      "district_id": 97,
+      "missing_counts": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      },
+      "total_records": 5844
+    }
+  },
+  "per_district_missingness": {
+    "district_78": {
+      "district_id": 78,
+      "counts": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      },
+      "total_days": 11688
+    },
+    "district_92": {
+      "district_id": 92,
+      "counts": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      },
+      "total_days": 11688
+    },
+    "district_74": {
+      "district_id": 74,
+      "counts": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      },
+      "total_days": 11688
+    },
+    "district_73": {
+      "district_id": 73,
+      "counts": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      },
+      "total_days": 5844
+    },
+    "district_75": {
+      "district_id": 75,
+      "counts": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      },
+      "total_days": 5844
+    },
+    "district_76": {
+      "district_id": 76,
+      "counts": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      },
+      "total_days": 5844
+    },
+    "district_77": {
+      "district_id": 77,
+      "counts": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      },
+      "total_days": 5844
+    },
+    "district_79": {
+      "district_id": 79,
+      "counts": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      },
+      "total_days": 5844
+    },
+    "district_80": {
+      "district_id": 80,
+      "counts": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      },
+      "total_days": 5844
+    },
+    "district_81": {
+      "district_id": 81,
+      "counts": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      },
+      "total_days": 5844
+    },
+    "district_82": {
+      "district_id": 82,
+      "counts": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      },
+      "total_days": 5844
+    },
+    "district_83": {
+      "district_id": 83,
+      "counts": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      },
+      "total_days": 5844
+    },
+    "district_84": {
+      "district_id": 84,
+      "counts": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      },
+      "total_days": 5844
+    },
+    "district_85": {
+      "district_id": 85,
+      "counts": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      },
+      "total_days": 5844
+    },
+    "district_86": {
+      "district_id": 86,
+      "counts": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      },
+      "total_days": 5844
+    },
+    "district_87": {
+      "district_id": 87,
+      "counts": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      },
+      "total_days": 5844
+    },
+    "district_88": {
+      "district_id": 88,
+      "counts": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      },
+      "total_days": 5844
+    },
+    "district_89": {
+      "district_id": 89,
+      "counts": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      },
+      "total_days": 5844
+    },
+    "district_90": {
+      "district_id": 90,
+      "counts": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      },
+      "total_days": 5844
+    },
+    "district_91": {
+      "district_id": 91,
+      "counts": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      },
+      "total_days": 5844
+    },
+    "district_93": {
+      "district_id": 93,
+      "counts": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      },
+      "total_days": 5844
+    },
+    "district_94": {
+      "district_id": 94,
+      "counts": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      },
+      "total_days": 5844
+    },
+    "district_95": {
+      "district_id": 95,
+      "counts": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      },
+      "total_days": 5844
+    },
+    "district_96": {
+      "district_id": 96,
+      "counts": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      },
+      "total_days": 5844
+    },
+    "district_97": {
+      "district_id": 97,
+      "counts": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      },
+      "total_days": 5844
+    }
+  },
+  "per_year_missingness": {
+    "2010": {
+      "records": 10220,
+      "missing": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      }
+    },
+    "2011": {
+      "records": 10220,
+      "missing": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      }
+    },
+    "2012": {
+      "records": 10248,
+      "missing": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      }
+    },
+    "2013": {
+      "records": 10220,
+      "missing": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      }
+    },
+    "2014": {
+      "records": 10220,
+      "missing": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      }
+    },
+    "2015": {
+      "records": 10220,
+      "missing": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      }
+    },
+    "2016": {
+      "records": 10248,
+      "missing": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      }
+    },
+    "2017": {
+      "records": 10220,
+      "missing": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      }
+    },
+    "2018": {
+      "records": 10220,
+      "missing": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      }
+    },
+    "2019": {
+      "records": 10220,
+      "missing": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      }
+    },
+    "2020": {
+      "records": 10248,
+      "missing": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      }
+    },
+    "2021": {
+      "records": 10220,
+      "missing": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      }
+    },
+    "2022": {
+      "records": 10220,
+      "missing": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      }
+    },
+    "2023": {
+      "records": 10220,
+      "missing": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      }
+    },
+    "2024": {
+      "records": 10248,
+      "missing": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      }
+    },
+    "2025": {
+      "records": 10220,
+      "missing": {
+        "temperature_mean_c": 0,
+        "temperature_min_c": 0,
+        "temperature_max_c": 0,
+        "precipitation_mm": 0,
+        "relative_humidity_pct": 0,
+        "wind_speed_10m": 0,
+        "solar_radiation": 0
+      }
+    }
+  }
+}

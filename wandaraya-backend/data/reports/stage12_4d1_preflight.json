@@ -1,0 +1,19 @@
+{
+  "status": "PREFLIGHT_VERIFIED",
+  "stage": "12.4D.1",
+  "audited_at_utc": "2026-10-20T15:28:38.712377+00:00",
+  "database_baseline_counts": {
+    "active_attractions": 6120,
+    "climate_activity_types": 16,
+    "climate_activity_profiles": 16,
+    "climate_attraction_activity_mappings": 10127,
+    "climate_attraction_activity_seasonality": 121524,
+    "climate_attraction_monthly_climatology": 36,
+    "climate_district_monthly_aggregates": 4800,
+    "climate_district_monthly_climatology": 300,
+    "climate_seasonality_features": 300,
+    "climate_daily_observations": 165828
+  },
+  "alembic_head": "d01e2f3a4b5c",
+  "audit_version": "12.4D.1_v1.0"
+}

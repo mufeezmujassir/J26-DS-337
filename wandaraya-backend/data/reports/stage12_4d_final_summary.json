@@ -1,0 +1,31 @@
+{
+  "status": "ATTRACTION_AWARE_SEASONALITY_PERSISTED_VERIFIED",
+  "stage": "12.4D",
+  "executed_at_utc": "2026-10-20T14:42:03.844601+00:00",
+  "database_execution_summary": {
+    "activity_types_persisted": 16,
+    "activity_profiles_persisted": 16,
+    "attraction_activity_mappings_persisted": 10127,
+    "attraction_monthly_climatologies_persisted": 36,
+    "attraction_activity_seasonality_persisted": 121524,
+    "raw_observations_preserved": 165828,
+    "transactions_executed": 3,
+    "transaction_failures": 0,
+    "idempotency_verified": true
+  },
+  "coverage_summary": {
+    "total_attractions": 6120,
+    "mapped_attractions": 4472,
+    "unsupported_attractions": 1648,
+    "unique_attraction_activity_pairs": 10127,
+    "total_monthly_profiles": 121524,
+    "supported_climate_only_percentage": 83.27,
+    "climate_only_partial_percentage": 16.73
+  },
+  "geographic_sources": {
+    "dedicated_attractions": 3,
+    "district_proxy_attractions": 6117
+  },
+  "prior_evidence_reconciled": true,
+  "readiness_for_stage_12_4e": true
+}

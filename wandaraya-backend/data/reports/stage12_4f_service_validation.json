@@ -1,0 +1,18 @@
+{
+  "composition": "Attach as an independent evidence dimension after semantic candidate retrieval; preserve time and holiday/event dimensions; combine only in an explicitly approved future reranker.",
+  "contract_fields": [
+    "score",
+    "category",
+    "model version",
+    "climate provenance",
+    "mapping confidence",
+    "geographic evidence",
+    "district proxy flag",
+    "missingness",
+    "explanation",
+    "limitations"
+  ],
+  "production_ranking_changed": false,
+  "service": "ExperimentalSeasonalityScoringService",
+  "status": "INTEGRATION_READY_EXPERIMENTAL_NOT_ACTIVATED"
+}

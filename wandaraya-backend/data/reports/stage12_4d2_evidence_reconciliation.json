@@ -1,0 +1,195 @@
+{
+  "actual_database_values": {
+    "active_profiles": 106776,
+    "eligible_mappings": 8898,
+    "inactive_profiles": 14748,
+    "ineligible_mappings": 1229,
+    "raw_observations": 165828,
+    "total_mappings": 10127
+  },
+  "authoritative_source": "independent PostgreSQL readback",
+  "contradictory_metric_instances": 10,
+  "database_snapshot_timestamp": "2026-10-20T16:22:17.249181+00:00",
+  "discrepancy_matrix": [
+    {
+      "actual_database_value": 10127,
+      "correction_action": "none",
+      "database_snapshot_timestamp": "2026-10-20T16:22:17.249181+00:00",
+      "explanation": "Value agrees with the independently queried current snapshot.",
+      "metric_name": "total_mappings",
+      "reconciliation_status": "MATCHES_CURRENT_DATABASE",
+      "reported_value": 10127,
+      "source_file": "/app/data/reports/stage12_4d1_database_readback.json",
+      "source_timestamp": "2026-10-20T15:38:06.208716+00:00"
+    },
+    {
+      "actual_database_value": 8898,
+      "correction_action": "preserve source; annotate in Stage 12.4D.2 reconciliation",
+      "database_snapshot_timestamp": "2026-10-20T16:22:17.249181+00:00",
+      "explanation": "Value does not describe the current persisted snapshot; no averaging or silent rewrite was performed.",
+      "metric_name": "eligible_mappings",
+      "reconciliation_status": "HISTORICAL_OR_INCORRECT_CURRENT_STATE_CLAIM",
+      "reported_value": 8940,
+      "source_file": "/app/data/reports/stage12_4d1_database_readback.json",
+      "source_timestamp": "2026-10-20T15:38:06.208716+00:00"
+    },
+    {
+      "actual_database_value": 1229,
+      "correction_action": "preserve source; annotate in Stage 12.4D.2 reconciliation",
+      "database_snapshot_timestamp": "2026-10-20T16:22:17.249181+00:00",
+      "explanation": "Value does not describe the current persisted snapshot; no averaging or silent rewrite was performed.",
+      "metric_name": "ineligible_mappings",
+      "reconciliation_status": "HISTORICAL_OR_INCORRECT_CURRENT_STATE_CLAIM",
+      "reported_value": 1187,
+      "source_file": "/app/data/reports/stage12_4d1_database_readback.json",
+      "source_timestamp": "2026-10-20T15:38:06.208716+00:00"
+    },
+    {
+      "actual_database_value": 106776,
+      "correction_action": "preserve source; annotate in Stage 12.4D.2 reconciliation",
+      "database_snapshot_timestamp": "2026-10-20T16:22:17.249181+00:00",
+      "explanation": "Value does not describe the current persisted snapshot; no averaging or silent rewrite was performed.",
+      "metric_name": "active_profiles",
+      "reconciliation_status": "HISTORICAL_OR_INCORRECT_CURRENT_STATE_CLAIM",
+      "reported_value": 107280,
+      "source_file": "/app/data/reports/stage12_4d1_database_readback.json",
+      "source_timestamp": "2026-10-20T15:38:06.208716+00:00"
+    },
+    {
+      "actual_database_value": 14748,
+      "correction_action": "preserve source; annotate in Stage 12.4D.2 reconciliation",
+      "database_snapshot_timestamp": "2026-10-20T16:22:17.249181+00:00",
+      "explanation": "Value does not describe the current persisted snapshot; no averaging or silent rewrite was performed.",
+      "metric_name": "inactive_profiles",
+      "reconciliation_status": "HISTORICAL_OR_INCORRECT_CURRENT_STATE_CLAIM",
+      "reported_value": 14244,
+      "source_file": "/app/data/reports/stage12_4d1_database_readback.json",
+      "source_timestamp": "2026-10-20T15:38:06.208716+00:00"
+    },
+    {
+      "actual_database_value": 165828,
+      "correction_action": "none",
+      "database_snapshot_timestamp": "2026-10-20T16:22:17.249181+00:00",
+      "explanation": "Value agrees with the independently queried current snapshot.",
+      "metric_name": "raw_observations",
+      "reconciliation_status": "MATCHES_CURRENT_DATABASE",
+      "reported_value": 165828,
+      "source_file": "/app/data/reports/stage12_4d1_database_readback.json",
+      "source_timestamp": "2026-10-20T15:38:06.208716+00:00"
+    },
+    {
+      "actual_database_value": 10127,
+      "correction_action": "none",
+      "database_snapshot_timestamp": "2026-10-20T16:22:17.249181+00:00",
+      "explanation": "Value agrees with the independently queried current snapshot.",
+      "metric_name": "total_mappings",
+      "reconciliation_status": "MATCHES_CURRENT_DATABASE",
+      "reported_value": 10127,
+      "source_file": "/app/data/reports/stage12_4d1_final_summary.json",
+      "source_timestamp": null
+    },
+    {
+      "actual_database_value": 8898,
+      "correction_action": "preserve source; annotate in Stage 12.4D.2 reconciliation",
+      "database_snapshot_timestamp": "2026-10-20T16:22:17.249181+00:00",
+      "explanation": "Value does not describe the current persisted snapshot; no averaging or silent rewrite was performed.",
+      "metric_name": "eligible_mappings",
+      "reconciliation_status": "HISTORICAL_OR_INCORRECT_CURRENT_STATE_CLAIM",
+      "reported_value": 8940,
+      "source_file": "/app/data/reports/stage12_4d1_final_summary.json",
+      "source_timestamp": null
+    },
+    {
+      "actual_database_value": 1229,
+      "correction_action": "preserve source; annotate in Stage 12.4D.2 reconciliation",
+      "database_snapshot_timestamp": "2026-10-20T16:22:17.249181+00:00",
+      "explanation": "Value does not describe the current persisted snapshot; no averaging or silent rewrite was performed.",
+      "metric_name": "ineligible_mappings",
+      "reconciliation_status": "HISTORICAL_OR_INCORRECT_CURRENT_STATE_CLAIM",
+      "reported_value": 1187,
+      "source_file": "/app/data/reports/stage12_4d1_final_summary.json",
+      "source_timestamp": null
+    },
+    {
+      "actual_database_value": 106776,
+      "correction_action": "preserve source; annotate in Stage 12.4D.2 reconciliation",
+      "database_snapshot_timestamp": "2026-10-20T16:22:17.249181+00:00",
+      "explanation": "Value does not describe the current persisted snapshot; no averaging or silent rewrite was performed.",
+      "metric_name": "active_profiles",
+      "reconciliation_status": "HISTORICAL_OR_INCORRECT_CURRENT_STATE_CLAIM",
+      "reported_value": 107280,
+      "source_file": "/app/data/reports/stage12_4d1_final_summary.json",
+      "source_timestamp": null
+    },
+    {
+      "actual_database_value": 14748,
+      "correction_action": "preserve source; annotate in Stage 12.4D.2 reconciliation",
+      "database_snapshot_timestamp": "2026-10-20T16:22:17.249181+00:00",
+      "explanation": "Value does not describe the current persisted snapshot; no averaging or silent rewrite was performed.",
+      "metric_name": "inactive_profiles",
+      "reconciliation_status": "HISTORICAL_OR_INCORRECT_CURRENT_STATE_CLAIM",
+      "reported_value": 14244,
+      "source_file": "/app/data/reports/stage12_4d1_final_summary.json",
+      "source_timestamp": null
+    },
+    {
+      "actual_database_value": 165828,
+      "correction_action": "none",
+      "database_snapshot_timestamp": "2026-10-20T16:22:17.249181+00:00",
+      "explanation": "Value agrees with the independently queried current snapshot.",
+      "metric_name": "raw_observations",
+      "reconciliation_status": "MATCHES_CURRENT_DATABASE",
+      "reported_value": 165828,
+      "source_file": "/app/data/reports/stage12_4d1_final_summary.json",
+      "source_timestamp": null
+    },
+    {
+      "actual_database_value": 10127,
+      "correction_action": "none",
+      "database_snapshot_timestamp": "2026-10-20T16:22:17.249181+00:00",
+      "explanation": "Value agrees with the independently queried current snapshot.",
+      "metric_name": "total_mappings",
+      "reconciliation_status": "MATCHES_CURRENT_DATABASE",
+      "reported_value": 10127,
+      "source_file": "/app/data/reports/stage12_4d1_semantic_mapping_audit.json",
+      "source_timestamp": null
+    },
+    {
+      "actual_database_value": 8898,
+      "correction_action": "preserve source; annotate in Stage 12.4D.2 reconciliation",
+      "database_snapshot_timestamp": "2026-10-20T16:22:17.249181+00:00",
+      "explanation": "Value does not describe the current persisted snapshot; no averaging or silent rewrite was performed.",
+      "metric_name": "eligible_mappings",
+      "reconciliation_status": "HISTORICAL_OR_INCORRECT_CURRENT_STATE_CLAIM",
+      "reported_value": 8940,
+      "source_file": "/app/data/reports/stage12_4d1_semantic_mapping_audit.json",
+      "source_timestamp": null
+    },
+    {
+      "actual_database_value": 1229,
+      "correction_action": "preserve source; annotate in Stage 12.4D.2 reconciliation",
+      "database_snapshot_timestamp": "2026-10-20T16:22:17.249181+00:00",
+      "explanation": "Value does not describe the current persisted snapshot; no averaging or silent rewrite was performed.",
+      "metric_name": "ineligible_mappings",
+      "reconciliation_status": "HISTORICAL_OR_INCORRECT_CURRENT_STATE_CLAIM",
+      "reported_value": 1187,
+      "source_file": "/app/data/reports/stage12_4d1_semantic_mapping_audit.json",
+      "source_timestamp": null
+    }
+  ],
+  "generated_at_utc": "2026-10-20T16:22:18.343786+00:00",
+  "mandatory_discrepancy_conclusion": {
+    "cause": "Documentation/reporting inconsistency. Repository evidence does not establish a separately persisted run for Result B; therefore it is labeled unresolved as to exact originating run/code version.",
+    "distribution_a": "Confirmed by direct SQL before Stage 12.4D.2 policy assignment.",
+    "distribution_b": "Not supported by current persisted records; exact origin unresolved.",
+    "result_a": "Confirmed as the Stage 12.4D.1 persisted snapshot before Stage 12.4D.2 corrections.",
+    "result_b": "Found in narrative documentation, not supported by the current database or timestamped Stage 12.4D.1 final/readback JSON."
+  },
+  "pre_policy_mapping_status_distribution": {
+    "PROVISIONAL": 4686,
+    "SUPPORTED_INFERRED": 3189,
+    "UNSUPPORTED": 1229,
+    "VERIFIED": 1023
+  },
+  "status": "RECONCILED_WITH_CURRENT_DATABASE"
+}

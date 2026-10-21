@@ -1,0 +1,290 @@
+{
+  "status": "COMPLETED",
+  "stage": "12.4D",
+  "total_profiles_persisted": 121524,
+  "expected_profiles": 121524,
+  "sample_profiles": [
+    {
+      "attraction_id": 1,
+      "activity_type_id": 14,
+      "district_id": 78,
+      "month": 1,
+      "dataset_version_id": 2,
+      "climate_source_type": "ATTRACTION_COORDINATE_REANALYSIS",
+      "activity_profile_version": "12.4d_v1",
+      "processing_version": "12.4d_v1",
+      "climate_favorability_score": 0.6789,
+      "climate_favorability_rank": 3,
+      "evidence_status": "SUPPORTED_CLIMATE_ONLY",
+      "confidence_level": "HIGH",
+      "uncertainty_score": 0.5456,
+      "feature_contributions_json": {
+        "solar_radiation_context": 0.1546,
+        "relative_rainfall_favorability": 0.3,
+        "humidity_comfort_index": 0.084,
+        "temperature_comfort_index": 0.1404
+      },
+      "explanation_json": {
+        "summary": "January ranks #3 of 12 (one of the historically most favorable months, score: 0.679) for Landscape & Wildlife Photography at Galle Dutch Fort (Galle District). Historically, January exhibits median precipitation of 106.99 mm, mean temperature of 26.82\u00b0C, and relative humidity of 78.21%.",
+        "positive_factors": [
+          "Historically comparatively dry period with low rainfall disruption risk.",
+          "Thermal conditions fall comfortably within optimal traveler comfort bounds."
+        ],
+        "negative_factors": [
+          "No severe historical climate disruptions."
+        ],
+        "uncertainty_factors": [
+          "Based on 2010-2025 historical monthly climatology (16 years). Interannual variation can cause specific dates to depart from monthly averages."
+        ],
+        "unsupported_factors": [],
+        "data_source": "NASA POWER Daily API v2.10.0 (0.5\u00b0 MERRA-2/GEOS Reanalysis)",
+        "geographic_source_type": "ATTRACTION_COORDINATE_REANALYSIS",
+        "reference_period": "2010-2025",
+        "activity_profile_version": "12.4d_v1",
+        "climate_metrics": {
+          "month": 1,
+          "month_name": "January",
+          "rainfall_median_mm": 106.99,
+          "temp_mean_c": 26.82,
+          "relative_humidity_mean_pct": 78.21,
+          "rainy_day_frequency": null
+        },
+        "feature_contributions": {
+          "solar_radiation_context": 0.1546,
+          "relative_rainfall_favorability": 0.3,
+          "humidity_comfort_index": 0.084,
+          "temperature_comfort_index": 0.1404
+        }
+      },
+      "limitations_json": [
+        "Climate score is an experimental relative index derived from 0.5\u00b0 NASA POWER reanalysis, not an in-situ weather forecast."
+      ]
+    },
+    {
+      "attraction_id": 1,
+      "activity_type_id": 14,
+      "district_id": 78,
+      "month": 2,
+      "dataset_version_id": 2,
+      "climate_source_type": "ATTRACTION_COORDINATE_REANALYSIS",
+      "activity_profile_version": "12.4d_v1",
+      "processing_version": "12.4d_v1",
+      "climate_favorability_score": 0.8176,
+      "climate_favorability_rank": 2,
+      "evidence_status": "SUPPORTED_CLIMATE_ONLY",
+      "confidence_level": "HIGH",
+      "uncertainty_score": 0.4212,
+      "feature_contributions_json": {
+        "solar_radiation_context": 0.3251,
+        "relative_rainfall_favorability": 0.2703,
+        "humidity_comfort_index": 0.0864,
+        "temperature_comfort_index": 0.1358
+      },
+      "explanation_json": {
+        "summary": "February ranks #2 of 12 (one of the historically most favorable months, score: 0.818) for Landscape & Wildlife Photography at Galle Dutch Fort (Galle District). Historically, February exhibits median precipitation of 132.17 mm, mean temperature of 27.24\u00b0C, and relative humidity of 77.73%.",
+        "positive_factors": [
+          "Historically comparatively dry period with low rainfall disruption risk.",
+          "Thermal conditions fall comfortably within optimal traveler comfort bounds.",
+          "High solar radiation and clear skies enhance outdoor scenery and visibility."
+        ],
+        "negative_factors": [
+          "No severe historical climate disruptions."
+        ],
+        "uncertainty_factors": [
+          "Based on 2010-2025 historical monthly climatology (16 years). Interannual variation can cause specific dates to depart from monthly averages."
+        ],
+        "unsupported_factors": [],
+        "data_source": "NASA POWER Daily API v2.10.0 (0.5\u00b0 MERRA-2/GEOS Reanalysis)",
+        "geographic_source_type": "ATTRACTION_COORDINATE_REANALYSIS",
+        "reference_period": "2010-2025",
+        "activity_profile_version": "12.4d_v1",
+        "climate_metrics": {
+          "month": 2,
+          "month_name": "February",
+          "rainfall_median_mm": 132.17,
+          "temp_mean_c": 27.24,
+          "relative_humidity_mean_pct": 77.73,
+          "rainy_day_frequency": null
+        },
+        "feature_contributions": {
+          "solar_radiation_context": 0.3251,
+          "relative_rainfall_favorability": 0.2703,
+          "humidity_comfort_index": 0.0864,
+          "temperature_comfort_index": 0.1358
+        }
+      },
+      "limitations_json": [
+        "Climate score is an experimental relative index derived from 0.5\u00b0 NASA POWER reanalysis, not an in-situ weather forecast."
+      ]
+    },
+    {
+      "attraction_id": 1,
+      "activity_type_id": 14,
+      "district_id": 78,
+      "month": 3,
+      "dataset_version_id": 2,
+      "climate_source_type": "ATTRACTION_COORDINATE_REANALYSIS",
+      "activity_profile_version": "12.4d_v1",
+      "processing_version": "12.4d_v1",
+      "climate_favorability_score": 0.8539,
+      "climate_favorability_rank": 1,
+      "evidence_status": "SUPPORTED_CLIMATE_ONLY",
+      "confidence_level": "HIGH",
+      "uncertainty_score": 0.4468,
+      "feature_contributions_json": {
+        "solar_radiation_context": 0.4,
+        "relative_rainfall_favorability": 0.2432,
+        "humidity_comfort_index": 0.0843,
+        "temperature_comfort_index": 0.1265
+      },
+      "explanation_json": {
+        "summary": "March ranks #1 of 12 (one of the historically most favorable months, score: 0.854) for Landscape & Wildlife Photography at Galle Dutch Fort (Galle District). Historically, March exhibits median precipitation of 155.23 mm, mean temperature of 27.92\u00b0C, and relative humidity of 78.15%.",
+        "positive_factors": [
+          "Historically comparatively dry period with low rainfall disruption risk.",
+          "Thermal conditions fall comfortably within optimal traveler comfort bounds.",
+          "High solar radiation and clear skies enhance outdoor scenery and visibility."
+        ],
+        "negative_factors": [
+          "No severe historical climate disruptions."
+        ],
+        "uncertainty_factors": [
+          "Based on 2010-2025 historical monthly climatology (16 years). Interannual variation can cause specific dates to depart from monthly averages."
+        ],
+        "unsupported_factors": [],
+        "data_source": "NASA POWER Daily API v2.10.0 (0.5\u00b0 MERRA-2/GEOS Reanalysis)",
+        "geographic_source_type": "ATTRACTION_COORDINATE_REANALYSIS",
+        "reference_period": "2010-2025",
+        "activity_profile_version": "12.4d_v1",
+        "climate_metrics": {
+          "month": 3,
+          "month_name": "March",
+          "rainfall_median_mm": 155.23,
+          "temp_mean_c": 27.92,
+          "relative_humidity_mean_pct": 78.15,
+          "rainy_day_frequency": null
+        },
+        "feature_contributions": {
+          "solar_radiation_context": 0.4,
+          "relative_rainfall_favorability": 0.2432,
+          "humidity_comfort_index": 0.0843,
+          "temperature_comfort_index": 0.1265
+        }
+      },
+      "limitations_json": [
+        "Climate score is an experimental relative index derived from 0.5\u00b0 NASA POWER reanalysis, not an in-situ weather forecast."
+      ]
+    },
+    {
+      "attraction_id": 1,
+      "activity_type_id": 14,
+      "district_id": 78,
+      "month": 4,
+      "dataset_version_id": 2,
+      "climate_source_type": "ATTRACTION_COORDINATE_REANALYSIS",
+      "activity_profile_version": "12.4d_v1",
+      "processing_version": "12.4d_v1",
+      "climate_favorability_score": 0.6708,
+      "climate_favorability_rank": 4,
+      "evidence_status": "SUPPORTED_CLIMATE_ONLY",
+      "confidence_level": "HIGH",
+      "uncertainty_score": 0.3444,
+      "feature_contributions_json": {
+        "solar_radiation_context": 0.3187,
+        "relative_rainfall_favorability": 0.1626,
+        "humidity_comfort_index": 0.0705,
+        "temperature_comfort_index": 0.119
+      },
+      "explanation_json": {
+        "summary": "April ranks #4 of 12 (a moderate intermediate seasonal month, score: 0.671) for Landscape & Wildlife Photography at Galle Dutch Fort (Galle District). Historically, April exhibits median precipitation of 223.67 mm, mean temperature of 28.4\u00b0C, and relative humidity of 80.91%.",
+        "positive_factors": [
+          "Thermal conditions fall comfortably within optimal traveler comfort bounds.",
+          "High solar radiation and clear skies enhance outdoor scenery and visibility."
+        ],
+        "negative_factors": [
+          "No severe historical climate disruptions."
+        ],
+        "uncertainty_factors": [
+          "Based on 2010-2025 historical monthly climatology (16 years). Interannual variation can cause specific dates to depart from monthly averages."
+        ],
+        "unsupported_factors": [],
+        "data_source": "NASA POWER Daily API v2.10.0 (0.5\u00b0 MERRA-2/GEOS Reanalysis)",
+        "geographic_source_type": "ATTRACTION_COORDINATE_REANALYSIS",
+        "reference_period": "2010-2025",
+        "activity_profile_version": "12.4d_v1",
+        "climate_metrics": {
+          "month": 4,
+          "month_name": "April",
+          "rainfall_median_mm": 223.67,
+          "temp_mean_c": 28.4,
+          "relative_humidity_mean_pct": 80.91,
+          "rainy_day_frequency": null
+        },
+        "feature_contributions": {
+          "solar_radiation_context": 0.3187,
+          "relative_rainfall_favorability": 0.1626,
+          "humidity_comfort_index": 0.0705,
+          "temperature_comfort_index": 0.119
+        }
+      },
+      "limitations_json": [
+        "Climate score is an experimental relative index derived from 0.5\u00b0 NASA POWER reanalysis, not an in-situ weather forecast."
+      ]
+    },
+    {
+      "attraction_id": 1,
+      "activity_type_id": 14,
+      "district_id": 78,
+      "month": 5,
+      "dataset_version_id": 2,
+      "climate_source_type": "ATTRACTION_COORDINATE_REANALYSIS",
+      "activity_profile_version": "12.4d_v1",
+      "processing_version": "12.4d_v1",
+      "climate_favorability_score": 0.3494,
+      "climate_favorability_rank": 10,
+      "evidence_status": "SUPPORTED_CLIMATE_ONLY",
+      "confidence_level": "HIGH",
+      "uncertainty_score": 0.3729,
+      "feature_contributions_json": {
+        "solar_radiation_context": 0.0837,
+        "relative_rainfall_favorability": 0.0898,
+        "humidity_comfort_index": 0.0567,
+        "temperature_comfort_index": 0.1192
+      },
+      "explanation_json": {
+        "summary": "May ranks #10 of 12 (one of the historically least favorable months, score: 0.349) for Landscape & Wildlife Photography at Galle Dutch Fort (Galle District). Historically, May exhibits median precipitation of 285.42 mm, mean temperature of 28.39\u00b0C, and relative humidity of 83.66%.",
+        "positive_factors": [
+          "Thermal conditions fall comfortably within optimal traveler comfort bounds."
+        ],
+        "negative_factors": [
+          "Historically heavy rainfall or monsoon conditions create high disruption probability.",
+          "Lower solar radiation correlates with frequent overcast conditions."
+        ],
+        "uncertainty_factors": [
+          "Based on 2010-2025 historical monthly climatology (16 years). Interannual variation can cause specific dates to depart from monthly averages."
+        ],
+        "unsupported_factors": [],
+        "data_source": "NASA POWER Daily API v2.10.0 (0.5\u00b0 MERRA-2/GEOS Reanalysis)",
+        "geographic_source_type": "ATTRACTION_COORDINATE_REANALYSIS",
+        "reference_period": "2010-2025",
+        "activity_profile_version": "12.4d_v1",
+        "climate_metrics": {
+          "month": 5,
+          "month_name": "May",
+          "rainfall_median_mm": 285.42,
+          "temp_mean_c": 28.39,
+          "relative_humidity_mean_pct": 83.66,
+          "rainy_day_frequency": null
+        },
+        "feature_contributions": {
+          "solar_radiation_context": 0.0837,
+          "relative_rainfall_favorability": 0.0898,
+          "humidity_comfort_index": 0.0567,
+          "temperature_comfort_index": 0.1192
+        }
+      },
+      "limitations_json": [
+        "Climate score is an experimental relative index derived from 0.5\u00b0 NASA POWER reanalysis, not an in-situ weather forecast."
+      ]
+    }
+  ]
+}

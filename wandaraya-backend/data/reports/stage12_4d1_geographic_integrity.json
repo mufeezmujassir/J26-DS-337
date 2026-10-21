@@ -1,0 +1,24 @@
+{
+  "status": "GEOGRAPHIC_AUDIT_COMPLETED",
+  "stage": "12.4D.1",
+  "total_attractions_audited": 6120,
+  "geographically_verified_count": 6120,
+  "district_mismatches_count": 0,
+  "boundary_ambiguous_count": 0,
+  "outside_known_boundaries_count": 0,
+  "verification_rate_pct": 100.0,
+  "makumbura_investigation": {
+    "attraction_id": 77,
+    "name": "Makumbura Junction",
+    "city": "Yakkalamulla",
+    "address": "484M+QXV, Yakkalamulla, Sri Lanka",
+    "latitude": 6.1069914999999995,
+    "longitude": 80.33493109999999,
+    "stored_district_id": 78,
+    "spatial_district_id": 78,
+    "spatial_district_name": "Galle",
+    "investigation_conclusion": "Makumbura Junction (ID 77) is located at (6.10699, 80.33493) in Yakkalamulla, Southern Province, Galle District (ID 78). PostGIS ST_Covers independently verifies that its coordinates lie inside Galle District boundaries. It is distinct from the Makumbura Multimodal Transport Hub in Kottawa, Colombo District. The stored district assignment (78 - Galle) is verified and correct."
+  },
+  "crs": "EPSG:4326 (WGS 84)",
+  "spatial_predicate": "ST_Covers(districts.boundary, ST_SetSRID(ST_MakePoint(longitude, latitude), 4326))"
+}

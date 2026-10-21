@@ -1,0 +1,39 @@
+{
+  "generated_at_utc": "2026-10-19T15:44:36.882825+00:00",
+  "status": "SEASONALITY_DATA_AUDIT_VERIFIED",
+  "postgresql_writes": false,
+  "qdrant_writes": false,
+  "external_data_downloads": false,
+  "current_weather_coverage": {
+    "weather_readings": {
+      "rows": 1162,
+      "earliest": "2021-01-01",
+      "latest": "2025-10-01",
+      "stations": 23,
+      "districts": 16,
+      "rainfall_missing": 2,
+      "temperature_missing": 389,
+      "duplicate_identity_rows": 0
+    },
+    "district_monthly": {
+      "rows": 873,
+      "earliest": "2021-01-01",
+      "latest": "2025-10-01",
+      "districts": 16,
+      "rainfall_missing": 2,
+      "temperature_missing": 100,
+      "duplicate_identity_rows": 0
+    }
+  },
+  "geography": {
+    "active_attractions": 6120,
+    "missing_district": 0,
+    "missing_coordinates": 0,
+    "outside_assigned_boundary": 0,
+    "attraction_districts": 21,
+    "district_boundaries_missing": 0,
+    "invalid_district_boundaries": 0
+  },
+  "pilot_attraction_count": 30,
+  "next_stage_boundary": "Stage 12.4B requires separately approved source acquisition, schema migration and feature implementation."
+}

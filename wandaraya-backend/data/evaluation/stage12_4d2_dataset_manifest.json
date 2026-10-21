@@ -1,0 +1,161 @@
+{
+  "activity_profile_versions": [
+    "12.4d_v1"
+  ],
+  "alembic_revision": "e12f3a4b5c6d",
+  "climate_dataset_versions": [
+    {
+      "dataset_checksum": "8b79f4ba278218a0f28ca29f59660b80f8c22b5aac57847fa71215cc2576c3ed",
+      "id": 1,
+      "product_name": "source-native daily meteorological data",
+      "product_version": "nasa_power_daily_v2.10.0_2024_pilot",
+      "provider_name": "NASA POWER",
+      "reference_end": "2024-12-31",
+      "reference_start": "2024-01-01"
+    },
+    {
+      "dataset_checksum": "b3a93accd51355cee5401c5f20362474924fe5dc0041982742ee1351c0fa65ed",
+      "id": 2,
+      "product_name": "source-native daily meteorological data",
+      "product_version": "nasa_power_daily_v2.10.0_historical_2010_2025_batch01",
+      "provider_name": "NASA POWER",
+      "reference_end": "2025-12-31",
+      "reference_start": "2010-01-01"
+    },
+    {
+      "dataset_checksum": "2a2f8498d498a58ad86e9b9333459268ac0b80cb781f7a132b1fbe7a74ade741",
+      "id": 3,
+      "product_name": "source-native daily meteorological data",
+      "product_version": "nasa_power_daily_v2.10.0_historical_2010_2025_batch02",
+      "provider_name": "NASA POWER",
+      "reference_end": "2025-12-31",
+      "reference_start": "2010-01-01"
+    }
+  ],
+  "counts": {
+    "active_monthly_profiles": 106776,
+    "attractions": 6120,
+    "cohorts": {
+      "A": 1267,
+      "B": 2945,
+      "C": 5915
+    },
+    "mappings": 10127,
+    "monthly_export_rows": 50544
+  },
+  "dataset_creation_timestamp": "2026-10-20T16:14:13.011289+00:00",
+  "dataset_version": "stage12_4d2_eval_v1",
+  "deterministic_double_export_verified": true,
+  "evaluation_eligibility_policy": "Tier A high evidence; Tier B inferred sensitivity; Tier C/D excluded from trusted positive ground truth",
+  "evidence_policy_version": "12.4d2_v1.2",
+  "explanation_versions": [
+    "12.4d_v1"
+  ],
+  "export_schema": {
+    "cohorts": [
+      "attraction_id",
+      "activity_type_id",
+      "district_id",
+      "mapping_validation_status",
+      "evidence_tier",
+      "evidence_policy_version",
+      "evaluation_eligibility",
+      "climate_source_type",
+      "historical_reference_period",
+      "seasonality_profile_version",
+      "explanation_version",
+      "dataset_version",
+      "row_provenance"
+    ],
+    "mapping_review": [
+      "review_item_id",
+      "attraction_id",
+      "attraction_name",
+      "district",
+      "proposed_activity",
+      "primary_category",
+      "secondary_categories",
+      "explicit_activity_tags",
+      "description",
+      "source_references",
+      "sampling_probability",
+      "reviewer_id",
+      "reviewer_expertise",
+      "review_timestamp",
+      "evidence_reviewed",
+      "decision",
+      "confidence",
+      "notes"
+    ],
+    "monthly": [
+      "attraction_id",
+      "activity_id",
+      "calendar_month",
+      "evaluation_dataset_version",
+      "climate_favorability_score",
+      "relative_monthly_rank",
+      "experimental_score_class",
+      "rainfall_sub_index",
+      "rainfall_reliability",
+      "temperature_comfort",
+      "humidity_comfort",
+      "solar_context",
+      "wind_context",
+      "climate_uncertainty",
+      "geographic_source_type",
+      "evidence_status",
+      "safety_abstention_status",
+      "mapping_evidence_tier",
+      "mapping_rule_version",
+      "activity_profile_version",
+      "historical_reference_period",
+      "source_dataset_id",
+      "evaluation_cohort",
+      "missingness"
+    ],
+    "seasonality_review": [
+      "review_item_id",
+      "attraction_id",
+      "attraction_name",
+      "activity",
+      "calendar_month",
+      "district",
+      "historical_reference_period",
+      "rainfall_mean_mm",
+      "rainfall_cv",
+      "temperature_mean_c",
+      "relative_humidity_mean_pct",
+      "wind_speed_mean_ms",
+      "solar_radiation_mean_mj",
+      "climate_source_type",
+      "source_dataset_id",
+      "reviewer_id",
+      "reviewer_expertise",
+      "review_timestamp",
+      "evidence_reviewed",
+      "decision",
+      "confidence",
+      "notes"
+    ]
+  },
+  "file_hashes": {
+    "stage12_4d2_cohort_a_high_evidence.csv": "7a83529e2eeb06203837376637abfc8f1151f48518bbcedad1a9f2895cc1f271",
+    "stage12_4d2_cohort_b_inferred.csv": "c869a8174e94d209259244d6a73e72693306d053686a3746ab460aa2819b23a1",
+    "stage12_4d2_cohort_c_provisional.csv": "2aa0ac220e8c05751b6c08e37d0979c5d24844bb95e40f0b296ba3d8b2ed0109",
+    "stage12_4d2_mapping_review_blind.csv": "9dc7944dc8222af52c82d9152c9ded9076c7688fca541ec1fa15438ad73af683",
+    "stage12_4d2_monthly_evaluation_dataset.csv": "134fc192d4f174c34f60ba7cc4917ff7bffae41d86d3b66c32308f81c6c7b244",
+    "stage12_4d2_seasonality_review_blind.csv": "c25d1dcdfa7286efc4e9ff71b55cbd11c513a4bcd27918255b567262b4084fb2"
+  },
+  "git_commit_hash": "316aed800e55f435ab9881ded964df8fef50c414",
+  "immutable": true,
+  "mapping_rule_versions": [
+    "v1.1"
+  ],
+  "missingness": {},
+  "postgresql_snapshot_metadata": {
+    "isolation_level": "REPEATABLE READ",
+    "readback_timestamp": "2026-10-20T16:22:47.758175+00:00"
+  },
+  "random_seed": 12402,
+  "source_provenance": "PostgreSQL tables listed in export schema; NASA POWER source versions embedded above"
+}

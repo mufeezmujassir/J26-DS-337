@@ -1,0 +1,134 @@
+{
+  "status": "SEED_VERIFIED",
+  "activity_types_count": 16,
+  "taxonomy": [
+    {
+      "id": 1,
+      "name": "Beach Relaxation",
+      "family": "coastal_recreation",
+      "type": "beach_visit",
+      "variant": "beach_relaxation",
+      "requires_external_evidence": false
+    },
+    {
+      "id": 2,
+      "name": "Surfing",
+      "family": "water_sports",
+      "type": "surfing",
+      "variant": "coastal_surfing",
+      "requires_external_evidence": true
+    },
+    {
+      "id": 3,
+      "name": "Open Water Swimming",
+      "family": "water_sports",
+      "type": "swimming",
+      "variant": "open_water_swimming",
+      "requires_external_evidence": true
+    },
+    {
+      "id": 4,
+      "name": "Snorkeling & Scuba Diving",
+      "family": "water_sports",
+      "type": "snorkeling_diving",
+      "variant": "coral_reef_exploration",
+      "requires_external_evidence": true
+    },
+    {
+      "id": 5,
+      "name": "Hiking & Trekking",
+      "family": "outdoor_adventure",
+      "type": "hiking",
+      "variant": "trail_trekking",
+      "requires_external_evidence": false
+    },
+    {
+      "id": 6,
+      "name": "Mountain & Viewpoint Sightseeing",
+      "family": "nature_sightseeing",
+      "type": "mountain_viewing",
+      "variant": "peak_sightseeing",
+      "requires_external_evidence": false
+    },
+    {
+      "id": 7,
+      "name": "Wildlife Safari",
+      "family": "nature_wildlife",
+      "type": "wildlife_safari",
+      "variant": "national_park_jeep_safari",
+      "requires_external_evidence": true
+    },
+    {
+      "id": 8,
+      "name": "Cultural & Heritage Sightseeing",
+      "family": "heritage_culture",
+      "type": "cultural_tour",
+      "variant": "general_cultural_visit",
+      "requires_external_evidence": false
+    },
+    {
+      "id": 9,
+      "name": "Archaeological Exploration",
+      "family": "heritage_culture",
+      "type": "archaeology",
+      "variant": "outdoor_archaeological_ruins",
+      "requires_external_evidence": false
+    },
+    {
+      "id": 10,
+      "name": "Religious & Temple Pilgrimage",
+      "family": "heritage_culture",
+      "type": "religious_visit",
+      "variant": "temple_pilgrimage",
+      "requires_external_evidence": true
+    },
+    {
+      "id": 11,
+      "name": "Waterfall Viewing & Bathing",
+      "family": "nature_sightseeing",
+      "type": "waterfall_visit",
+      "variant": "waterfall_viewing_bathing",
+      "requires_external_evidence": true
+    },
+    {
+      "id": 12,
+      "name": "Wilderness Camping",
+      "family": "outdoor_adventure",
+      "type": "camping",
+      "variant": "overnight_wilderness_camping",
+      "requires_external_evidence": false
+    },
+    {
+      "id": 13,
+      "name": "Cycling & Mountain Biking",
+      "family": "outdoor_adventure",
+      "type": "cycling",
+      "variant": "road_and_trail_cycling",
+      "requires_external_evidence": false
+    },
+    {
+      "id": 14,
+      "name": "Landscape & Wildlife Photography",
+      "family": "creative_sightseeing",
+      "type": "photography",
+      "variant": "landscape_photography",
+      "requires_external_evidence": false
+    },
+    {
+      "id": 15,
+      "name": "Urban Sightseeing & Shopping",
+      "family": "sightseeing",
+      "type": "urban_visit",
+      "variant": "city_walking_tour",
+      "requires_external_evidence": false
+    },
+    {
+      "id": 16,
+      "name": "Tea Plantation & Factory Tour",
+      "family": "agro_tourism",
+      "type": "plantation_tour",
+      "variant": "tea_estate_and_factory",
+      "requires_external_evidence": false
+    }
+  ]
+}

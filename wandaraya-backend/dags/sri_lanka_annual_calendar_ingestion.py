@@ -23,8 +23,7 @@ LOCAL = ZoneInfo("Asia/Colombo")
 def calendar_dag():
     @task(retries=2, retry_delay=timedelta(minutes=10), execution_timeout=timedelta(minutes=15))
     def ingest() -> dict:
-        # A scheduler cannot silently enable a source: deployment must mount the
-        # reviewed local policy and explicitly set this flag after review.
+        
         if os.getenv("HOLIDAY_EVENT_SCHEDULED_INGESTION_ENABLED") != "true":
             return {"status": "SCHEDULED_INGESTION_DISABLED", "writes": 0}
         from app.database import AsyncSessionLocal

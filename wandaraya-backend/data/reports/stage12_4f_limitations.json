@@ -1,0 +1,16 @@
+{
+  "future_validation": {
+    "analysis": "Pre-register primary NDCG@5, candidate, sample size, and cluster-aware interval before viewing labels.",
+    "grouping": "Split by climate-source identity and attraction; keep all months and duplicate attractions together.",
+    "minimum": "Collect a new independently reviewed query set after freezing one candidate."
+  },
+  "items": [
+    "Only 13 effective clusters support refinement analysis.",
+    "The 52 rankable queries are an already-inspected benchmark, not a fresh holdout.",
+    "Eight queries remain excluded from full ranking metrics and 96 insufficient judgments remain missing.",
+    "District proxies dominate; coordinate results are not representative.",
+    "No candidate is approved from same-benchmark improvement alone.",
+    "Historical seasonality is neither live weather nor safety certification."
+  ],
+  "status": "DOCUMENTED"
+}

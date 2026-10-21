@@ -1,0 +1,30 @@
+{
+  "status": "INGESTION_COMPLETED",
+  "executed_at": "2026-10-20T10:22:22.789686+00:00",
+  "dry_run": false,
+  "batch_results": [
+    {
+      "batch": "batch01",
+      "status": "INGESTION_SUCCEEDED",
+      "dataset_version": "nasa_power_daily_v2.10.0_historical_2010_2025_batch01",
+      "dataset_version_id": 2,
+      "grid_cells_touched": 3,
+      "attraction_mappings_inserted": 0,
+      "district_mappings_inserted": 0,
+      "observations_inserted": 0,
+      "expected_observations": 17532,
+      "elapsed_seconds": 3.58
+    },
+    {
+      "batch": "batch02",
+      "status": "INGESTION_SUCCEEDED",
+      "dataset_version": "nasa_power_daily_v2.10.0_historical_2010_2025_batch02",
+      "dataset_version_id": 3,
+      "grid_cells_touched": 25,
+      "district_mappings_inserted": 0,
+      "observations_inserted": 0,
+      "expected_observations": 146100,
+      "elapsed_seconds": 27.77
+    }
+  ]
+}

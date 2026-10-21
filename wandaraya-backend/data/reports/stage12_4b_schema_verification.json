@@ -1,0 +1,8 @@
+{
+  "status": "CLIMATE_STORAGE_IMPLEMENTED_AWAITING_APPROVAL",
+  "models": "app/models/climate.py",
+  "migration": "migrations/versions/e67f8a9b0c1d_add_versioned_climate_tables.py",
+  "migration_applied": false,
+  "existing_weather_tables_modified": false,
+  "review_command": "docker exec -it wandaraya-api-cutover alembic upgrade e67f8a9b0c1d"
+}

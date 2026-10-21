@@ -1,0 +1,19 @@
+{
+  "adjudications": 135,
+  "cluster_inference": "EXPLORATORY_13_CLUSTERS",
+  "complete_review_queries": 60,
+  "fabricated_labels": 0,
+  "fully_rankable_queries": 52,
+  "genuine_labels": 1650,
+  "ground_truth_version": "stage12_4e2_ground_truth_v1",
+  "historical_climate_changed": false,
+  "insufficient_evidence_coded_as_zero": false,
+  "model_tuning_on_review_labels": false,
+  "predictions_used_as_ground_truth": false,
+  "production_ranking_changed": false,
+  "qdrant_changed": false,
+  "review_dataset_version": "stage12_4e2_review_v1",
+  "reviewers": 2,
+  "status": "PASS",
+  "unresolved_disagreements": 0
+}

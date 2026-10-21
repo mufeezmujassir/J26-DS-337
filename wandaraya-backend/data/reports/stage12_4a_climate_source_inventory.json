@@ -1,0 +1,43 @@
+{
+  "generated_at_utc": "2026-10-19T15:44:36.882825+00:00",
+  "network_data_downloaded": false,
+  "sources": [
+    {
+      "source": "Open-Meteo Historical Weather API / ERA5-Land",
+      "official_url": "https://open-meteo.com/en/docs/historical-weather-api",
+      "coverage_assessed": "ERA5-Land: 1950-present; ERA5: 1940-present",
+      "resolution_assessed": "ERA5-Land 0.1 degree; ERA5 0.25 degree",
+      "variables_assessed": [
+        "temperature",
+        "precipitation",
+        "humidity",
+        "wind",
+        "solar radiation"
+      ],
+      "stage12_4a_decision": "RECOMMENDED_CANDIDATE_PENDING_TERMS_AND_REPRODUCIBILITY_REVIEW",
+      "downloaded": false
+    },
+    {
+      "source": "NASA POWER",
+      "official_url": "https://power.larc.nasa.gov/",
+      "coverage_assessed": "candidate global agroclimatology source; exact variable/version policy remains to be verified before use",
+      "stage12_4a_decision": "SECONDARY_CANDIDATE_PENDING_VARIABLE_AND_LICENSE_REVIEW",
+      "downloaded": false
+    },
+    {
+      "source": "Department of Meteorology Sri Lanka",
+      "official_url": "https://meteo.gov.lk/",
+      "coverage_assessed": "authoritative national provider; machine-readable historical access and reuse terms not verified in this stage",
+      "stage12_4a_decision": "AUTHORITATIVE_LOCAL_REFERENCE_PENDING_ACCESS_AND_REUSE_CONFIRMATION",
+      "downloaded": false
+    },
+    {
+      "source": "Sri Lanka Tourism Development Authority",
+      "official_url": "https://www.sltda.gov.lk/",
+      "coverage_assessed": "tourism context/reference candidate, not assumed to provide climate observations",
+      "stage12_4a_decision": "CONTEXT_REFERENCE_ONLY_PENDING_DOCUMENT_REVIEW",
+      "downloaded": false
+    }
+  ],
+  "recommended_source": "ERA5-Land through a reviewed reproducible provider path, subject to terms/licence and data-quality review; validate against Department of Meteorology Sri Lanka data where access permits."
+}

@@ -1,0 +1,323 @@
+{
+  "real_api_data": true,
+  "outcomes": [
+    {
+      "attraction_id": 1,
+      "name": "Galle Dutch Fort",
+      "status": "VALIDATED",
+      "request_url": "https://power.larc.nasa.gov/api/temporal/daily/point?community=AG&latitude=6.0304592&longitude=80.2150207&start=20240101&end=20241231&parameters=T2M%2CT2M_MAX%2CT2M_MIN%2CPRECTOTCORR%2CRH2M%2CWS10M%2CALLSKY_SFC_SW_DWN&format=JSON&time-standard=UTC",
+      "raw_file": "data/climate/raw/nasa_power/nasa_power_1_20240101_20241231.json",
+      "checksum_sha256": "782dd46642b8c6b38065b321ca2a85dd9c8b3728797f0b484e16a95e1e9d01ae",
+      "validation": {
+        "received": 366,
+        "accepted": 366,
+        "rejected": 0,
+        "expected_daily_records": 366,
+        "completeness_percent": 100.0,
+        "rejections": []
+      },
+      "metadata": {
+        "header": {
+          "title": "NASA/POWER Source Native Resolution Daily Data",
+          "api": {
+            "version": "v2.10.0",
+            "name": "POWER Daily API"
+          },
+          "sources": [
+            "SYN1DEG",
+            "MERRA2",
+            "POWER"
+          ],
+          "fill_value": -999.0,
+          "time_standard": "UTC",
+          "start": "20240101",
+          "end": "20241231"
+        },
+        "units": {
+          "T2M": "C",
+          "T2M_MAX": "C",
+          "T2M_MIN": "C",
+          "PRECTOTCORR": "mm/day",
+          "RH2M": "%",
+          "WS10M": "m/s",
+          "ALLSKY_SFC_SW_DWN": "MJ/m^2/day"
+        },
+        "source_parameters": [
+          "T2M",
+          "T2M_MAX",
+          "T2M_MIN",
+          "PRECTOTCORR",
+          "RH2M",
+          "WS10M",
+          "ALLSKY_SFC_SW_DWN"
+        ],
+        "response_checksum_sha256": "9d3fe44aa580a9d58c79316c7db2aa4adc80ad135bd265ac41731ed847d5768e"
+      }
+    },
+    {
+      "attraction_id": 29,
+      "name": "Arugam Bay Beach",
+      "status": "VALIDATED",
+      "request_url": "https://power.larc.nasa.gov/api/temporal/daily/point?community=AG&latitude=6.8404077999999995&longitude=81.8368478&start=20240101&end=20241231&parameters=T2M%2CT2M_MAX%2CT2M_MIN%2CPRECTOTCORR%2CRH2M%2CWS10M%2CALLSKY_SFC_SW_DWN&format=JSON&time-standard=UTC",
+      "raw_file": "data/climate/raw/nasa_power/nasa_power_29_20240101_20241231.json",
+      "checksum_sha256": "3680b4599b5a87ea2b7c7f92f7ebcc838659e88b94783eaf8931daa9da6b9123",
+      "validation": {
+        "received": 366,
+        "accepted": 366,
+        "rejected": 0,
+        "expected_daily_records": 366,
+        "completeness_percent": 100.0,
+        "rejections": []
+      },
+      "metadata": {
+        "header": {
+          "title": "NASA/POWER Source Native Resolution Daily Data",
+          "api": {
+            "version": "v2.10.0",
+            "name": "POWER Daily API"
+          },
+          "sources": [
+            "SYN1DEG",
+            "MERRA2",
+            "POWER"
+          ],
+          "fill_value": -999.0,
+          "time_standard": "UTC",
+          "start": "20240101",
+          "end": "20241231"
+        },
+        "units": {
+          "T2M": "C",
+          "T2M_MAX": "C",
+          "T2M_MIN": "C",
+          "PRECTOTCORR": "mm/day",
+          "RH2M": "%",
+          "WS10M": "m/s",
+          "ALLSKY_SFC_SW_DWN": "MJ/m^2/day"
+        },
+        "source_parameters": [
+          "T2M",
+          "T2M_MAX",
+          "T2M_MIN",
+          "PRECTOTCORR",
+          "RH2M",
+          "WS10M",
+          "ALLSKY_SFC_SW_DWN"
+        ],
+        "response_checksum_sha256": "3824fae4e7c2c5700e564f8568e718f0c8b73abb929c682386d72f6d57c5834e"
+      }
+    },
+    {
+      "attraction_id": 24,
+      "name": "Horton Plains National Park",
+      "status": "VALIDATED",
+      "request_url": "https://power.larc.nasa.gov/api/temporal/daily/point?community=AG&latitude=6.809445999999999&longitude=80.8023333&start=20240101&end=20241231&parameters=T2M%2CT2M_MAX%2CT2M_MIN%2CPRECTOTCORR%2CRH2M%2CWS10M%2CALLSKY_SFC_SW_DWN&format=JSON&time-standard=UTC",
+      "raw_file": "data/climate/raw/nasa_power/nasa_power_24_20240101_20241231.json",
+      "checksum_sha256": "fdc6ba7b8a6abdab320633116d684dec3b517d8c62328498c958f181de6cc5bc",
+      "validation": {
+        "received": 366,
+        "accepted": 366,
+        "rejected": 0,
+        "expected_daily_records": 366,
+        "completeness_percent": 100.0,
+        "rejections": []
+      },
+      "metadata": {
+        "header": {
+          "title": "NASA/POWER Source Native Resolution Daily Data",
+          "api": {
+            "version": "v2.10.0",
+            "name": "POWER Daily API"
+          },
+          "sources": [
+            "SYN1DEG",
+            "MERRA2",
+            "POWER"
+          ],
+          "fill_value": -999.0,
+          "time_standard": "UTC",
+          "start": "20240101",
+          "end": "20241231"
+        },
+        "units": {
+          "T2M": "C",
+          "T2M_MAX": "C",
+          "T2M_MIN": "C",
+          "PRECTOTCORR": "mm/day",
+          "RH2M": "%",
+          "WS10M": "m/s",
+          "ALLSKY_SFC_SW_DWN": "MJ/m^2/day"
+        },
+        "source_parameters": [
+          "T2M",
+          "T2M_MAX",
+          "T2M_MIN",
+          "PRECTOTCORR",
+          "RH2M",
+          "WS10M",
+          "ALLSKY_SFC_SW_DWN"
+        ],
+        "response_checksum_sha256": "a7e780388a755905e3f113caa92eac059eb7ab738f46b643d1c3cbc522b7d288"
+      }
+    },
+    {
+      "attraction_id": 14,
+      "name": "Sigiriya",
+      "status": "VALIDATED",
+      "request_url": "https://power.larc.nasa.gov/api/temporal/daily/point?community=AG&latitude=7.9455635000000004&longitude=80.76157719999999&start=20240101&end=20241231&parameters=T2M%2CT2M_MAX%2CT2M_MIN%2CPRECTOTCORR%2CRH2M%2CWS10M%2CALLSKY_SFC_SW_DWN&format=JSON&time-standard=UTC",
+      "raw_file": "data/climate/raw/nasa_power/nasa_power_14_20240101_20241231.json",
+      "checksum_sha256": "70a68ba3af9917f75af92e2affdb04fc36f6cf76990de8fb54c90ef2f74b463d",
+      "validation": {
+        "received": 366,
+        "accepted": 366,
+        "rejected": 0,
+        "expected_daily_records": 366,
+        "completeness_percent": 100.0,
+        "rejections": []
+      },
+      "metadata": {
+        "header": {
+          "title": "NASA/POWER Source Native Resolution Daily Data",
+          "api": {
+            "version": "v2.10.0",
+            "name": "POWER Daily API"
+          },
+          "sources": [
+            "SYN1DEG",
+            "MERRA2",
+            "POWER"
+          ],
+          "fill_value": -999.0,
+          "time_standard": "UTC",
+          "start": "20240101",
+          "end": "20241231"
+        },
+        "units": {
+          "T2M": "C",
+          "T2M_MAX": "C",
+          "T2M_MIN": "C",
+          "PRECTOTCORR": "mm/day",
+          "RH2M": "%",
+          "WS10M": "m/s",
+          "ALLSKY_SFC_SW_DWN": "MJ/m^2/day"
+        },
+        "source_parameters": [
+          "T2M",
+          "T2M_MAX",
+          "T2M_MIN",
+          "PRECTOTCORR",
+          "RH2M",
+          "WS10M",
+          "ALLSKY_SFC_SW_DWN"
+        ],
+        "response_checksum_sha256": "646c7e99498aff5b8421889f17e4aee291b8646917edc50d2895785170513797"
+      }
+    },
+    {
+      "attraction_id": 16,
+      "name": "Anuradhapura",
+      "status": "VALIDATED",
+      "request_url": "https://power.larc.nasa.gov/api/temporal/daily/point?community=AG&latitude=8.311351799999999&longitude=80.4036508&start=20240101&end=20241231&parameters=T2M%2CT2M_MAX%2CT2M_MIN%2CPRECTOTCORR%2CRH2M%2CWS10M%2CALLSKY_SFC_SW_DWN&format=JSON&time-standard=UTC",
+      "raw_file": "data/climate/raw/nasa_power/nasa_power_16_20240101_20241231.json",
+      "checksum_sha256": "879d86590fa49471d0d83ee347ec97b70eb0fa00a9220415015ef3168a1a5048",
+      "validation": {
+        "received": 366,
+        "accepted": 366,
+        "rejected": 0,
+        "expected_daily_records": 366,
+        "completeness_percent": 100.0,
+        "rejections": []
+      },
+      "metadata": {
+        "header": {
+          "title": "NASA/POWER Source Native Resolution Daily Data",
+          "api": {
+            "version": "v2.10.0",
+            "name": "POWER Daily API"
+          },
+          "sources": [
+            "SYN1DEG",
+            "MERRA2",
+            "POWER"
+          ],
+          "fill_value": -999.0,
+          "time_standard": "UTC",
+          "start": "20240101",
+          "end": "20241231"
+        },
+        "units": {
+          "T2M": "C",
+          "T2M_MAX": "C",
+          "T2M_MIN": "C",
+          "PRECTOTCORR": "mm/day",
+          "RH2M": "%",
+          "WS10M": "m/s",
+          "ALLSKY_SFC_SW_DWN": "MJ/m^2/day"
+        },
+        "source_parameters": [
+          "T2M",
+          "T2M_MAX",
+          "T2M_MIN",
+          "PRECTOTCORR",
+          "RH2M",
+          "WS10M",
+          "ALLSKY_SFC_SW_DWN"
+        ],
+        "response_checksum_sha256": "a37bb042fee78309b16b583a1b4fad6c341c88a5214ac19c8df55666840fe1ae"
+      }
+    },
+    {
+      "attraction_id": 25,
+      "name": "Sinharaja Forest Reserve",
+      "status": "VALIDATED",
+      "request_url": "https://power.larc.nasa.gov/api/temporal/daily/point?community=AG&latitude=6.4069908&longitude=80.46002659999999&start=20240101&end=20241231&parameters=T2M%2CT2M_MAX%2CT2M_MIN%2CPRECTOTCORR%2CRH2M%2CWS10M%2CALLSKY_SFC_SW_DWN&format=JSON&time-standard=UTC",
+      "raw_file": "data/climate/raw/nasa_power/nasa_power_25_20240101_20241231.json",
+      "checksum_sha256": "f0614823cae634cd98cea2e8d2ac3e184076b497b1908122235b5345a85b4a42",
+      "validation": {
+        "received": 366,
+        "accepted": 366,
+        "rejected": 0,
+        "expected_daily_records": 366,
+        "completeness_percent": 100.0,
+        "rejections": []
+      },
+      "metadata": {
+        "header": {
+          "title": "NASA/POWER Source Native Resolution Daily Data",
+          "api": {
+            "version": "v2.10.0",
+            "name": "POWER Daily API"
+          },
+          "sources": [
+            "SYN1DEG",
+            "MERRA2",
+            "POWER"
+          ],
+          "fill_value": -999.0,
+          "time_standard": "UTC",
+          "start": "20240101",
+          "end": "20241231"
+        },
+        "units": {
+          "T2M": "C",
+          "T2M_MAX": "C",
+          "T2M_MIN": "C",
+          "PRECTOTCORR": "mm/day",
+          "RH2M": "%",
+          "WS10M": "m/s",
+          "ALLSKY_SFC_SW_DWN": "MJ/m^2/day"
+        },
+        "source_parameters": [
+          "T2M",
+          "T2M_MAX",
+          "T2M_MIN",
+          "PRECTOTCORR",
+          "RH2M",
+          "WS10M",
+          "ALLSKY_SFC_SW_DWN"
+        ],
+        "response_checksum_sha256": "45b380744d4cc1e60e7265b3a78a5479cccfb4312b31e91782939d7ac73055bb"
+      }
+    }
+  ]
+}

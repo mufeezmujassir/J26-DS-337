@@ -1,0 +1,71 @@
+{
+  "completion_tests": {
+    "failed": 0,
+    "passed": 48,
+    "status": "ALL_TESTS_PASSED",
+    "total_tests": 48
+  },
+  "fully_rankable_queries": 52,
+  "genuine_judgments": 1650,
+  "ground_truth_version": "stage12_4e2_ground_truth_v1",
+  "integrity": "NO_FABRICATED_LABELS; INSUFFICIENT_EVIDENCE_NOT_CODED_AS_ZERO",
+  "mapping_queries": 105,
+  "primary_baseline_comparison": {
+    "activity_aware_mean": 0.8970686648809267,
+    "baseline_mean": 0.9157434177595347,
+    "cluster_bootstrap": {
+      "ci95": [
+        -0.047325398270314616,
+        0.003621740525374679
+      ],
+      "clusters": 13,
+      "iterations": 10000,
+      "mean": -0.01971964787265861,
+      "seed": 12402,
+      "status": "COMPUTED"
+    },
+    "direction": "baseline_higher",
+    "inference": "EXPLORATORY_SMALL_CLUSTER_COUNT",
+    "paired": {
+      "mean_difference": -0.018674752878607984,
+      "n": 52,
+      "standardized_paired_effect": -0.27383056230995323
+    },
+    "primary_metric": "NDCG@5"
+  },
+  "ranking_primary": {
+    "kendall_tau_b": {
+      "mean": 0.6876153902837784,
+      "valid_queries": 52
+    },
+    "mrr_grade_ge_3": {
+      "mean": 0.9039007092198581,
+      "valid_queries": 47
+    },
+    "ndcg@12": {
+      "mean": 0.9510783179576884,
+      "valid_queries": 52
+    },
+    "ndcg@3": {
+      "mean": 0.8873160647552932,
+      "valid_queries": 52
+    },
+    "ndcg@5": {
+      "mean": 0.8970686648809267,
+      "valid_queries": 52
+    },
+    "spearman": {
+      "mean": 0.7843741893993247,
+      "valid_queries": 52
+    },
+    "top3_overlap": {
+      "mean": 0.6602564102564102,
+      "valid_queries": 52
+    }
+  },
+  "review_dataset_version": "stage12_4e2_review_v1",
+  "reviewers": 2,
+  "seasonality_queries": 60,
+  "stage": "12.4E.2",
+  "status": "HUMAN_EVALUATION_COMPLETED_VERIFIED"
+}

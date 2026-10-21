@@ -1,0 +1,100 @@
+{
+  "actual_returned_values": {
+    "active_profiles": 106776,
+    "alembic_revision": "e12f3a4b5c6d",
+    "attractions": 6120,
+    "district_aggregates": 4800,
+    "district_climatology": 300,
+    "eligible_mappings": 8898,
+    "inactive_profiles": 14748,
+    "ineligible_mappings": 1229,
+    "mapped_attractions": 4472,
+    "quality_audits": 1187,
+    "raw_observations": 165828,
+    "seasonality_features": 300,
+    "total_mappings": 10127
+  },
+  "climate_datasets": [
+    {
+      "dataset_checksum": "8b79f4ba278218a0f28ca29f59660b80f8c22b5aac57847fa71215cc2576c3ed",
+      "id": 1,
+      "product_name": "source-native daily meteorological data",
+      "product_version": "nasa_power_daily_v2.10.0_2024_pilot",
+      "provider_name": "NASA POWER",
+      "reference_end": "2024-12-31",
+      "reference_start": "2024-01-01"
+    },
+    {
+      "dataset_checksum": "b3a93accd51355cee5401c5f20362474924fe5dc0041982742ee1351c0fa65ed",
+      "id": 2,
+      "product_name": "source-native daily meteorological data",
+      "product_version": "nasa_power_daily_v2.10.0_historical_2010_2025_batch01",
+      "provider_name": "NASA POWER",
+      "reference_end": "2025-12-31",
+      "reference_start": "2010-01-01"
+    },
+    {
+      "dataset_checksum": "2a2f8498d498a58ad86e9b9333459268ac0b80cb781f7a132b1fbe7a74ade741",
+      "id": 3,
+      "product_name": "source-native daily meteorological data",
+      "product_version": "nasa_power_daily_v2.10.0_historical_2010_2025_batch02",
+      "provider_name": "NASA POWER",
+      "reference_end": "2025-12-31",
+      "reference_start": "2010-01-01"
+    }
+  ],
+  "current_migration": "e12f3a4b5c6d",
+  "mapping_status_distribution": {
+    "PROVISIONAL": 4686,
+    "SUPPORTED_INFERRED": 3189,
+    "UNSUPPORTED": 1229,
+    "VERIFIED": 1023
+  },
+  "processing_runs": [
+    {
+      "processing_version": "12.4c_v1",
+      "records_persisted": 5400,
+      "records_processed": 146100,
+      "run_type": "monthly_climate_aggregation_and_baselines",
+      "stage": "12.4C",
+      "status": "SUCCESS"
+    },
+    {
+      "processing_version": "12.4c_v1",
+      "records_persisted": 5400,
+      "records_processed": 146100,
+      "run_type": "monthly_climate_aggregation_and_baselines",
+      "stage": "12.4C",
+      "status": "SUCCESS"
+    }
+  ],
+  "queried_at_utc": "2026-10-20T16:22:17.249181+00:00",
+  "reference_migration": "d01e2f3a4b5c",
+  "sql_statements": {
+    "active_profiles": "SELECT count(*) FROM climate_attraction_activity_seasonality WHERE is_active",
+    "alembic_revision": "SELECT version_num FROM alembic_version",
+    "attractions": "SELECT count(*) FROM attractions WHERE is_active",
+    "district_aggregates": "SELECT count(*) FROM climate_district_monthly_aggregates",
+    "district_climatology": "SELECT count(*) FROM climate_district_monthly_climatology",
+    "eligible_mappings": "SELECT count(*) FROM climate_attraction_activity_mappings WHERE is_eligible_for_seasonality",
+    "inactive_profiles": "SELECT count(*) FROM climate_attraction_activity_seasonality WHERE NOT is_active",
+    "ineligible_mappings": "SELECT count(*) FROM climate_attraction_activity_mappings WHERE NOT is_eligible_for_seasonality",
+    "mapped_attractions": "SELECT count(DISTINCT attraction_id) FROM climate_attraction_activity_mappings",
+    "quality_audits": "SELECT count(*) FROM climate_seasonality_quality_audit",
+    "raw_observations": "SELECT count(*) FROM climate_daily_observations",
+    "seasonality_features": "SELECT count(*) FROM climate_seasonality_features",
+    "total_mappings": "SELECT count(*) FROM climate_attraction_activity_mappings"
+  },
+  "stage": "12.4D.2",
+  "stage12_4d1_authoritative_baseline": {
+    "active_profiles": 107280,
+    "attractions": 6120,
+    "eligible_mappings": 8940,
+    "inactive_profiles": 14244,
+    "ineligible_mappings": 1187,
+    "quality_audits": 1187,
+    "raw_observations": 165828,
+    "total_mappings": 10127
+  },
+  "status": "DATABASE_PREFLIGHT_VERIFIED"
+}

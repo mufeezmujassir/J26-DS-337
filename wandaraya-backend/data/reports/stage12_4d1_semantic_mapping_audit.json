@@ -1,0 +1,163 @@
+{
+  "status": "SEMANTIC_AUDIT_COMPLETED",
+  "stage": "12.4D.1",
+  "total_mappings_audited": 10127,
+  "status_distribution": {
+    "VERIFIED": 1023,
+    "SUPPORTED_INFERRED": 3189,
+    "UNSUPPORTED": 1187,
+    "PROVISIONAL": 4728
+  },
+  "supported_mappings_count": 8940,
+  "unsupported_mappings_count": 1187,
+  "ambiguous_mappings_count": 0,
+  "rejection_rules_triggered": {
+    "RULE_REJECT_HERITAGE_TO_MOUNTAIN": 238,
+    "RULE_REJECT_SPURIOUS_FAMILY_TO_CULTURE": 733,
+    "RULE_REJECT_NATURE_RESERVE_TO_URBAN": 63,
+    "RULE_REJECT_UNVERIFIED_SURFING": 75,
+    "RULE_REJECT_UNVERIFIED_DIVING": 78
+  },
+  "problematic_attraction_investigations": {
+    "galle_dutch_fort_mountain_viewing": true,
+    "horton_plains_urban_shopping": true,
+    "sinharaja_urban_shopping": true
+  },
+  "sample_unsupported_mappings": [
+    {
+      "mapping_id": 5,
+      "attraction_id": 1,
+      "attraction_name": "Galle Dutch Fort",
+      "activity_name": "Mountain & Viewpoint Sightseeing",
+      "activity_code": "mountain_viewing",
+      "reason": "Heritage, fortification, or museum site cannot be classified as mountain viewing without physical mountain topography.",
+      "rule_id": "RULE_REJECT_HERITAGE_TO_MOUNTAIN"
+    },
+    {
+      "mapping_id": 11,
+      "attraction_id": 2,
+      "attraction_name": "Sri Dalada Maligawa",
+      "activity_name": "Mountain & Viewpoint Sightseeing",
+      "activity_code": "mountain_viewing",
+      "reason": "Heritage, fortification, or museum site cannot be classified as mountain viewing without physical mountain topography.",
+      "rule_id": "RULE_REJECT_HERITAGE_TO_MOUNTAIN"
+    },
+    {
+      "mapping_id": 16,
+      "attraction_id": 13,
+      "attraction_name": "Yala National Park",
+      "activity_name": "Cultural & Heritage Sightseeing",
+      "activity_code": "cultural_tour",
+      "reason": "Family & Recreation category alone without cultural, historical, or museum metadata cannot substantiate cultural sightseeing.",
+      "rule_id": "RULE_REJECT_SPURIOUS_FAMILY_TO_CULTURE"
+    },
+    {
+      "mapping_id": 17,
+      "attraction_id": 13,
+      "attraction_name": "Yala National Park",
+      "activity_name": "Urban Sightseeing & Shopping",
+      "activity_code": "urban_visit",
+      "reason": "Protected nature reserves, national parks, and rainforests cannot be mapped to urban sightseeing and shopping.",
+      "rule_id": "RULE_REJECT_NATURE_RESERVE_TO_URBAN"
+    },
+    {
+      "mapping_id": 29,
+      "attraction_id": 21,
+      "attraction_name": "Udawalawe National Park",
+      "activity_name": "Cultural & Heritage Sightseeing",
+      "activity_code": "cultural_tour",
+      "reason": "Family & Recreation category alone without cultural, historical, or museum metadata cannot substantiate cultural sightseeing.",
+      "rule_id": "RULE_REJECT_SPURIOUS_FAMILY_TO_CULTURE"
+    },
+    {
+      "mapping_id": 34,
+      "attraction_id": 22,
+      "attraction_name": "Wilpattu National Park",
+      "activity_name": "Cultural & Heritage Sightseeing",
+      "activity_code": "cultural_tour",
+      "reason": "Family & Recreation category alone without cultural, historical, or museum metadata cannot substantiate cultural sightseeing.",
+      "rule_id": "RULE_REJECT_SPURIOUS_FAMILY_TO_CULTURE"
+    },
+    {
+      "mapping_id": 35,
+      "attraction_id": 22,
+      "attraction_name": "Wilpattu National Park",
+      "activity_name": "Urban Sightseeing & Shopping",
+      "activity_code": "urban_visit",
+      "reason": "Protected nature reserves, national parks, and rainforests cannot be mapped to urban sightseeing and shopping.",
+      "rule_id": "RULE_REJECT_NATURE_RESERVE_TO_URBAN"
+    },
+    {
+      "mapping_id": 40,
+      "attraction_id": 23,
+      "attraction_name": "Minneriya National Park",
+      "activity_name": "Cultural & Heritage Sightseeing",
+      "activity_code": "cultural_tour",
+      "reason": "Family & Recreation category alone without cultural, historical, or museum metadata cannot substantiate cultural sightseeing.",
+      "rule_id": "RULE_REJECT_SPURIOUS_FAMILY_TO_CULTURE"
+    },
+    {
+      "mapping_id": 41,
+      "attraction_id": 23,
+      "attraction_name": "Minneriya National Park",
+      "activity_name": "Urban Sightseeing & Shopping",
+      "activity_code": "urban_visit",
+      "reason": "Protected nature reserves, national parks, and rainforests cannot be mapped to urban sightseeing and shopping.",
+      "rule_id": "RULE_REJECT_NATURE_RESERVE_TO_URBAN"
+    },
+    {
+      "mapping_id": 46,
+      "attraction_id": 24,
+      "attraction_name": "Horton Plains National Park",
+      "activity_name": "Cultural & Heritage Sightseeing",
+      "activity_code": "cultural_tour",
+      "reason": "Family & Recreation category alone without cultural, historical, or museum metadata cannot substantiate cultural sightseeing.",
+      "rule_id": "RULE_REJECT_SPURIOUS_FAMILY_TO_CULTURE"
+    },
+    {
+      "mapping_id": 47,
+      "attraction_id": 24,
+      "attraction_name": "Horton Plains National Park",
+      "activity_name": "Urban Sightseeing & Shopping",
+      "activity_code": "urban_visit",
+      "reason": "Protected nature reserves, national parks, and rainforests cannot be mapped to urban sightseeing and shopping.",
+      "rule_id": "RULE_REJECT_NATURE_RESERVE_TO_URBAN"
+    },
+    {
+      "mapping_id": 51,
+      "attraction_id": 25,
+      "attraction_name": "Sinharaja Forest Reserve",
+      "activity_name": "Cultural & Heritage Sightseeing",
+      "activity_code": "cultural_tour",
+      "reason": "Family & Recreation category alone without cultural, historical, or museum metadata cannot substantiate cultural sightseeing.",
+      "rule_id": "RULE_REJECT_SPURIOUS_FAMILY_TO_CULTURE"
+    },
+    {
+      "mapping_id": 52,
+      "attraction_id": 25,
+      "attraction_name": "Sinharaja Forest Reserve",
+      "activity_name": "Urban Sightseeing & Shopping",
+      "activity_code": "urban_visit",
+      "reason": "Protected nature reserves, national parks, and rainforests cannot be mapped to urban sightseeing and shopping.",
+      "rule_id": "RULE_REJECT_NATURE_RESERVE_TO_URBAN"
+    },
+    {
+      "mapping_id": 56,
+      "attraction_id": 27,
+      "attraction_name": "Unawatuna Beach",
+      "activity_name": "Surfing",
+      "activity_code": "surfing",
+      "reason": "Surfing requires explicit surf activity tag or verified surf break point; cannot be inferred solely from generic coastal category.",
+      "rule_id": "RULE_REJECT_UNVERIFIED_SURFING"
+    },
+    {
+      "mapping_id": 57,
+      "attraction_id": 27,
+      "attraction_name": "Unawatuna Beach",
+      "activity_name": "Snorkeling & Scuba Diving",
+      "activity_code": "snorkeling_diving",
+      "reason": "Snorkeling and scuba diving require verified dive sites or marine activity tags; cannot be inferred from generic coastal category.",
+      "rule_id": "RULE_REJECT_UNVERIFIED_DIVING"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "status": "BEFORE_AFTER_COMPARISON_COMPLETED",
+  "stage": "12.4D.1",
+  "metrics": {
+    "total_attraction_activity_mappings": {
+      "before": 10127,
+      "after_supported": 8940,
+      "after_unsupported": 1187
+    },
+    "total_seasonality_profiles": {
+      "before": 121524,
+      "after_active": 107280,
+      "after_deactivated": 14244
+    },
+    "unsupported_heritage_mountain_mappings": {
+      "before": 238,
+      "after": 0
+    },
+    "unsupported_nature_urban_mappings": {
+      "before": 63,
+      "after": 0
+    },
+    "unverified_surfing_mappings": {
+      "before": 75,
+      "after": 0
+    },
+    "unverified_diving_mappings": {
+      "before": 78,
+      "after": 0
+    },
+    "spurious_family_to_culture_mappings": {
+      "before": 733,
+      "after": 0
+    },
+    "explanation_consistency_compliance_pct": {
+      "before": 80.0,
+      "after": 100.0
+    }
+  }
+}

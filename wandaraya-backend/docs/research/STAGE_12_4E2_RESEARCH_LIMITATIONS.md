@@ -1,0 +1,3 @@
+# Stage 12.4E.2 Research Limitations
+
+Only 52 of 60 review-complete queries are fully rankable because insufficient evidence is treated as missing, not zero. The evaluation sample has 13 effective climate-source clusters, so cluster confidence intervals are exploratory. District proxies dominate the underlying evaluation data, while dedicated-coordinate coverage is too small for representative coordinate-specific claims. Historical climate suitability is not a short-term forecast and does not establish surf, current, flood, landslide, river, wildlife, or operational safety. The stratified mapping review is descriptive and is not presented as an unweighted population estimate.

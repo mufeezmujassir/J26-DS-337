@@ -1,0 +1,10 @@
+{
+  "status": "PASSED",
+  "real_api_data_used_in_tests": false,
+  "tests": [
+    "tests/climate/test_stage12_4b_validation.py",
+    "tests/climate/test_nasa_power.py"
+  ],
+  "passed": 4,
+  "purpose": "Mocked/provider-normalization and validation regressions."
+}

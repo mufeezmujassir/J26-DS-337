@@ -1,0 +1,81 @@
+{
+  "status": "COMPLETED",
+  "stage": "12.4C",
+  "task": "Task E & F \u2014 Seasonality Features and Baselines",
+  "total_feature_records": 300,
+  "expected_records": 300,
+  "feature_definitions": {
+    "relative_rainfall_favorability": "District-specific min-max inverted rainfall median ranking (1.0 = driest month)",
+    "temperature_comfort_index": "Gaussian bell centered at 25.0C (sigma=5.0C)",
+    "humidity_comfort_index": "Linear penalty above 65% RH",
+    "rainfall_reliability_index": "1.0 - min(1.0, CV)",
+    "seasonality_uncertainty_score": "Composite metric combining interannual CV, relative IQR, and geographic sampling limitation"
+  },
+  "baselines_summary": {
+    "baseline_a": "Rainfall-only ranking (ascending median monthly rainfall)",
+    "baseline_b": "Multi-variable composite: 0.45*rf_fav + 0.25*t_comfort + 0.15*h_comfort + 0.15*solar_norm",
+    "baseline_c": "Variability-aware rainfall ranking: rf_mean + 0.5*rf_std"
+  },
+  "spearman_rank_correlations": [
+    {
+      "district_id": 73,
+      "district_name": "Ampara",
+      "spearman_A_vs_B": 0.951,
+      "spearman_A_vs_C": 0.923
+    },
+    {
+      "district_id": 74,
+      "district_name": "Anuradhapura",
+      "spearman_A_vs_B": 0.944,
+      "spearman_A_vs_C": 0.937
+    },
+    {
+      "district_id": 75,
+      "district_name": "Badulla",
+      "spearman_A_vs_B": 0.951,
+      "spearman_A_vs_C": 0.965
+    },
+    {
+      "district_id": 76,
+      "district_name": "Batticaloa",
+      "spearman_A_vs_B": 0.979,
+      "spearman_A_vs_C": 0.958
+    },
+    {
+      "district_id": 77,
+      "district_name": "Colombo",
+      "spearman_A_vs_B": 0.972,
+      "spearman_A_vs_C": 0.972
+    },
+    {
+      "district_id": 78,
+      "district_name": "Galle",
+      "spearman_A_vs_B": 0.937,
+      "spearman_A_vs_C": 0.951
+    },
+    {
+      "district_id": 79,
+      "district_name": "Gampaha",
+      "spearman_A_vs_B": 0.965,
+      "spearman_A_vs_C": 0.972
+    },
+    {
+      "district_id": 80,
+      "district_name": "Hambantota",
+      "spearman_A_vs_B": 0.93,
+      "spearman_A_vs_C": 0.937
+    },
+    {
+      "district_id": 81,
+      "district_name": "Jaffna",
+      "spearman_A_vs_B": 0.972,
+      "spearman_A_vs_C": 0.916
+    },
+    {
+      "district_id": 82,
+      "district_name": "Kalutara",
+      "spearman_A_vs_B": 0.909,
+      "spearman_A_vs_C": 0.965
+    }
+  ]
+}

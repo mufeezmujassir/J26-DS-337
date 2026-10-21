@@ -1,0 +1,55 @@
+{
+  "database_counts": {
+    "active_profiles": 106776,
+    "alembic_revision": "e12f3a4b5c6d",
+    "attractions": 6120,
+    "district_aggregates": 4800,
+    "district_climatology": 300,
+    "eligible_mappings": 8898,
+    "evidence_audits": 10127,
+    "inactive_profiles": 14748,
+    "ineligible_mappings": 1229,
+    "mapped_attractions": 4472,
+    "offline_eligible": 4212,
+    "quality_audits": 1187,
+    "raw_observations": 165828,
+    "seasonality_features": 300,
+    "total_mappings": 10127
+  },
+  "evaluation_eligibility_distribution": {
+    "ELIGIBLE_HIGH_EVIDENCE": 1267,
+    "ELIGIBLE_INFERRED": 2945,
+    "EXCLUDED_UNSUPPORTED": 1229,
+    "PROVISIONAL_REVIEW_REQUIRED": 4686
+  },
+  "evidence_tier_distribution": {
+    "A": 1307,
+    "B": 3096,
+    "C": 4495,
+    "D": 1229
+  },
+  "mapping_status_distribution": {
+    "PROVISIONAL": 4686,
+    "SUPPORTED_INFERRED": 3189,
+    "UNSUPPORTED": 1229,
+    "VERIFIED": 1023
+  },
+  "protected_counts_match_preflight": true,
+  "sql_statements": {
+    "active_profiles": "SELECT count(*) FROM climate_attraction_activity_seasonality WHERE is_active",
+    "alembic_revision": "SELECT version_num FROM alembic_version",
+    "attractions": "SELECT count(*) FROM attractions WHERE is_active",
+    "district_aggregates": "SELECT count(*) FROM climate_district_monthly_aggregates",
+    "district_climatology": "SELECT count(*) FROM climate_district_monthly_climatology",
+    "eligible_mappings": "SELECT count(*) FROM climate_attraction_activity_mappings WHERE is_eligible_for_seasonality",
+    "inactive_profiles": "SELECT count(*) FROM climate_attraction_activity_seasonality WHERE NOT is_active",
+    "ineligible_mappings": "SELECT count(*) FROM climate_attraction_activity_mappings WHERE NOT is_eligible_for_seasonality",
+    "mapped_attractions": "SELECT count(DISTINCT attraction_id) FROM climate_attraction_activity_mappings",
+    "quality_audits": "SELECT count(*) FROM climate_seasonality_quality_audit",
+    "raw_observations": "SELECT count(*) FROM climate_daily_observations",
+    "seasonality_features": "SELECT count(*) FROM climate_seasonality_features",
+    "total_mappings": "SELECT count(*) FROM climate_attraction_activity_mappings"
+  },
+  "status": "INDEPENDENT_SQL_READBACK_VERIFIED",
+  "verified_at_utc": "2026-10-20T16:22:47.781696+00:00"
+}

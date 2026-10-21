@@ -1,0 +1,13 @@
+{
+  "status": "PILOT_PERSISTED_VERIFIED",
+  "provider": "nasa_power",
+  "dataset_version": "nasa_power_daily_v2.10.0_2024_pilot",
+  "dataset_version_id": 1,
+  "climate_grid_cells_touched": 6,
+  "attraction_mappings_inserted": 6,
+  "observations_inserted": 2196,
+  "postgresql_writes": true,
+  "qdrant_writes": false,
+  "records_prepared": 2196,
+  "rejected": 0
+}

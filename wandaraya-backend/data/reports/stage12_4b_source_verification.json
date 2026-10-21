@@ -1,0 +1,14 @@
+{
+  "generated_at_utc": "2026-10-19T16:13:47.791328+00:00",
+  "status": "SOURCE_REVIEW_BLOCKED",
+  "provider": "Open-Meteo",
+  "underlying_dataset_requested": "ERA5-Land",
+  "endpoint": "https://archive-api.open-meteo.com/v1/archive",
+  "documentation": "https://open-meteo.com/en/docs/historical-weather-api",
+  "license_review": {
+    "status": "BLOCKED",
+    "reason": "Open-Meteo pricing documentation states historical APIs require a Professional plan; this stage has no paid-tier authorization."
+  },
+  "no_request_made": true,
+  "no_secrets_used": true
+}

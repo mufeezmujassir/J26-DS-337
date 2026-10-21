@@ -1,0 +1,43 @@
+{
+  "generated_at_utc": "2026-10-19T15:44:36.882825+00:00",
+  "models": [
+    {
+      "model_name": "monthly_climatology",
+      "run_count": 18,
+      "validated_runs": 8,
+      "production_approved_runs": 0,
+      "earliest_training": "2021-01-01",
+      "latest_cutoff": "2025-10-01",
+      "min_horizon": 3,
+      "max_horizon": 3
+    },
+    {
+      "model_name": "prophet",
+      "run_count": 20,
+      "validated_runs": 7,
+      "production_approved_runs": 0,
+      "earliest_training": "2021-01-01",
+      "latest_cutoff": "2025-10-01",
+      "min_horizon": 3,
+      "max_horizon": 3
+    },
+    {
+      "model_name": "seasonal_naive",
+      "run_count": 5,
+      "validated_runs": 1,
+      "production_approved_runs": 0,
+      "earliest_training": "2021-01-01",
+      "latest_cutoff": "2025-10-01",
+      "min_horizon": 3,
+      "max_horizon": 3
+    }
+  ],
+  "algorithms_found": [
+    "Prophet",
+    "seasonal_naive",
+    "monthly_climatology"
+  ],
+  "lstm_found": false,
+  "forecast_characteristics": "monthly target forecasts; registry indicates short three-month horizons and zero production-approved runs",
+  "seasonality_distinction": "Forecasting predicts upcoming weather from observations. Seasonality must be a separately versioned, long-period month-of-year climate feature and must not reuse forecast output as climatology."
+}

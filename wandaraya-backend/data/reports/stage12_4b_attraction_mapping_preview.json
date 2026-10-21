@@ -1,0 +1,46 @@
+{
+  "status": "PREVIEW_ONLY",
+  "records": [
+    {
+      "attraction_id": 1,
+      "mapping_method": "PROVIDER_GRID_PENDING_ACQUISITION",
+      "distance_km": null,
+      "confidence": "UNAVAILABLE_UNTIL_GRID_COORDINATE_RETURNED"
+    },
+    {
+      "attraction_id": 29,
+      "mapping_method": "PROVIDER_GRID_PENDING_ACQUISITION",
+      "distance_km": null,
+      "confidence": "UNAVAILABLE_UNTIL_GRID_COORDINATE_RETURNED"
+    },
+    {
+      "attraction_id": 24,
+      "mapping_method": "PROVIDER_GRID_PENDING_ACQUISITION",
+      "distance_km": null,
+      "confidence": "UNAVAILABLE_UNTIL_GRID_COORDINATE_RETURNED"
+    },
+    {
+      "attraction_id": 14,
+      "mapping_method": "PROVIDER_GRID_PENDING_ACQUISITION",
+      "distance_km": null,
+      "confidence": "UNAVAILABLE_UNTIL_GRID_COORDINATE_RETURNED"
+    },
+    {
+      "attraction_id": 16,
+      "mapping_method": "PROVIDER_GRID_PENDING_ACQUISITION",
+      "distance_km": null,
+      "confidence": "UNAVAILABLE_UNTIL_GRID_COORDINATE_RETURNED"
+    },
+    {
+      "attraction_id": 25,
+      "mapping_method": "PROVIDER_GRID_PENDING_ACQUISITION",
+      "distance_km": null,
+      "confidence": "UNAVAILABLE_UNTIL_GRID_COORDINATE_RETURNED"
+    }
+  ],
+  "risks": [
+    "central-highland elevation gradients",
+    "coastal microclimates",
+    "grid resolution/interpolation uncertainty"
+  ]
+}

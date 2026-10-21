@@ -1,0 +1,36 @@
+{
+  "stage": "12.4D",
+  "feature_ablation": {
+    "relative_rainfall_favorability": {
+      "spearman_vs_full": 0.217,
+      "mean_absolute_rank_shift": 3.33,
+      "feature_impact": "CRITICAL"
+    },
+    "temperature_comfort_index": {
+      "spearman_vs_full": 0.979,
+      "mean_absolute_rank_shift": 0.5,
+      "feature_impact": "MODERATE"
+    },
+    "humidity_comfort_index": {
+      "spearman_vs_full": 0.972,
+      "mean_absolute_rank_shift": 0.5,
+      "feature_impact": "MODERATE"
+    },
+    "rainfall_reliability_index": {
+      "spearman_vs_full": 0.993,
+      "mean_absolute_rank_shift": 0.17,
+      "feature_impact": "MODERATE"
+    }
+  },
+  "weight_sensitivity": {
+    "hiking_weight_variation_test": "Tested +/- 20% perturbation across rainfall and temperature weights; mean rank correlation remained > 0.96, demonstrating robust rank stability against minor weight shifts."
+  },
+  "uncertainty_metrics": {
+    "abstention_handling": "Water sports (surfing, swimming, snorkeling) and eco-tours (waterfalls, wildlife) strictly flag CLIMATE_ONLY_PARTIAL with missing marine/safety evidence alerts, preventing false safety assertions.",
+    "uncertainty_score_range": {
+      "min": 0.267,
+      "mean": 0.447,
+      "max": 0.76
+    }
+  }
+}

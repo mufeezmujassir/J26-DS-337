@@ -1,0 +1,32 @@
+{
+  "status": "SAFETY_ABSTENTION_AUDITED",
+  "stage": "12.4D.1",
+  "safety_sensitive_activities": [
+    "surfing",
+    "swimming",
+    "snorkeling_diving",
+    "wildlife_safari",
+    "religious_visit",
+    "waterfall_visit"
+  ],
+  "total_safety_sensitive_profiles": 18492,
+  "partial_evidence_enforced_pct": 100.0,
+  "missing_evidence_categories": {
+    "marine": [
+      "ocean_swell_height",
+      "wave_period",
+      "water_turbidity",
+      "rip_currents"
+    ],
+    "waterfalls": [
+      "river_discharge_rate",
+      "flash_flood_warnings",
+      "safe_bathing_pools"
+    ],
+    "wildlife": [
+      "park_closures",
+      "animal_migration_routes",
+      "grassland_vegetation"
+    ]
+  }
+}

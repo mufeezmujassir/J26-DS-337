@@ -1,0 +1,36 @@
+{
+  "proposal_only": true,
+  "migration_created": false,
+  "tables": [
+    {
+      "name": "climate_dataset_versions",
+      "purpose": "immutable source/version/license/checksum provenance"
+    },
+    {
+      "name": "climate_grid_cells",
+      "purpose": "source grid geometry, resolution and elevation metadata"
+    },
+    {
+      "name": "district_climate_monthly",
+      "purpose": "district-month climatology with sample size and uncertainty"
+    },
+    {
+      "name": "attraction_climate_monthly",
+      "purpose": "derived attraction-month values with district/grid provenance"
+    },
+    {
+      "name": "activity_seasonality_profiles",
+      "purpose": "category/activity rules, evidence and confidence; no invented facts"
+    },
+    {
+      "name": "seasonality_feature_runs",
+      "purpose": "versioned feature computation/audit trail"
+    }
+  ],
+  "constraints": [
+    "unique(dataset_version_id, grid_cell_id, observation_month, variable)",
+    "unique(attraction_id, dataset_version_id, calendar_month, variable)",
+    "foreign keys to districts, attractions and categories/activities where applicable",
+    "store source URL, retrieval timestamp, checksum, unit and transformation lineage"
+  ]
+}

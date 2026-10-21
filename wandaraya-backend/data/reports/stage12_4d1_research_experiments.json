@@ -1,0 +1,71 @@
+{
+  "status": "RESEARCH_EXPERIMENTS_COMPLETED",
+  "stage": "12.4D.1",
+  "experiment_1_semantic_mapping_precision": {
+    "stratified_sample_size": 80,
+    "activities_covered": 16,
+    "reviewer_template_generated": "/app/docs/research/STAGE_12_4D1_MAPPING_REVIEW_TEMPLATE.csv",
+    "status": "AWAITING_INDEPENDENT_HUMAN_VALIDATION",
+    "automated_precision_estimate": {
+      "supported_pct": 88.28,
+      "unsupported_pct": 11.72
+    }
+  },
+  "experiment_2_geographic_assignment_accuracy": {
+    "total_audited": 6120,
+    "exact_postgis_matches": 6120,
+    "mismatches": 0,
+    "accuracy_pct": 100.0
+  },
+  "experiment_3_explanation_consistency": {
+    "total_validated": 107280,
+    "satisfying_deterministic_consistency_pct": 100.0,
+    "discrepancies_detected": 0
+  },
+  "experiment_4_safety_abstention": {
+    "safety_sensitive_profiles": 18492,
+    "correctly_flagged_partial_pct": 100.0,
+    "unsupported_safety_claims_prevented": true
+  },
+  "experiment_5_before_after_quality_comparison": {
+    "total_attraction_activity_mappings": {
+      "before": 10127,
+      "after_supported": 8940,
+      "after_unsupported": 1187
+    },
+    "total_seasonality_profiles": {
+      "before": 121524,
+      "after_active": 107280,
+      "after_deactivated": 14244
+    },
+    "unsupported_heritage_mountain_mappings": {
+      "before": 238,
+      "after": 0
+    },
+    "unsupported_nature_urban_mappings": {
+      "before": 63,
+      "after": 0
+    },
+    "unverified_surfing_mappings": {
+      "before": 75,
+      "after": 0
+    },
+    "unverified_diving_mappings": {
+      "before": 78,
+      "after": 0
+    },
+    "spurious_family_to_culture_mappings": {
+      "before": 733,
+      "after": 0
+    },
+    "explanation_consistency_compliance_pct": {
+      "before": 80.0,
+      "after": 100.0
+    }
+  },
+  "experiment_6_ranking_impact": {
+    "active_profiles_with_deterministic_ranking": 107280,
+    "tie_breaking_policy": "climate_favorability_score DESC, relative_rainfall_score DESC, temperature_comfort_score DESC, month ASC",
+    "displacement_risk_mitigated": true
+  }
+}

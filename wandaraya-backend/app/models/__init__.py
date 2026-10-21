@@ -18,6 +18,26 @@ from app.models.weather_reading import WeatherReading
 from app.models.district_weather_monthly import DistrictWeatherMonthly
 from app.models.weather_model_run import WeatherModelRun
 from app.models.weather_forecast import WeatherForecast
+from app.models.climate import (
+    ClimateActivityProcessingRun,
+    ClimateActivityProfile,
+    ClimateActivityType,
+    ClimateAttractionActivityMapping,
+    ClimateAttractionActivitySeasonality,
+    ClimateAttractionMapping,
+    ClimateAttractionMonthlyClimatology,
+    ClimateDailyObservation,
+    ClimateDatasetVersion,
+    ClimateDistrictMapping,
+    ClimateDistrictMonthlyAggregate,
+    ClimateDistrictMonthlyClimatology,
+    ClimateGridCell,
+    ClimateIngestionRun,
+    ClimateProcessingRun,
+    ClimateSeasonalityFeature,
+    ClimateSeasonalityQualityAudit,
+    ClimateMappingEvidenceAudit,
+)
 from app.models.tourism_sync import AttractionSourceReference, AttractionFieldProvenance, TourismImportBatch, TourismSyncReview, TourismDuplicateCluster
 
 from app.models.roads import Road
@@ -56,6 +76,25 @@ __all__ = [
     "WeatherModelRun",
     "WeatherForecast",
 
+    "ClimateDatasetVersion",
+    "ClimateGridCell",
+    "ClimateDailyObservation",
+    "ClimateAttractionMapping",
+    "ClimateDistrictMapping",
+    "ClimateDistrictMonthlyAggregate",
+    "ClimateDistrictMonthlyClimatology",
+    "ClimateSeasonalityFeature",
+    "ClimateProcessingRun",
+    "ClimateIngestionRun",
+    "ClimateActivityType",
+    "ClimateActivityProfile",
+    "ClimateAttractionActivityMapping",
+    "ClimateAttractionMonthlyClimatology",
+    "ClimateAttractionActivitySeasonality",
+    "ClimateActivityProcessingRun",
+    "ClimateSeasonalityQualityAudit",
+    "ClimateMappingEvidenceAudit",
+
     "Road",
     "BusFare",
     "TrainStation",
@@ -64,5 +103,4 @@ __all__ = [
     "NBROIncident",
     "NBROInspection",
     "NBROPolygon",
-
 ]

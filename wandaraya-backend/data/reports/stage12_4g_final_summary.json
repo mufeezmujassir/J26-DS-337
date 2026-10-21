@@ -1,0 +1,40 @@
+{
+  "historical_integrity": {
+    "daily_observations": 165828,
+    "evaluation_predictions": 606528,
+    "ground_truth_sha256": "3383ee29f8367f4e3308ebf21d6beef187dc6015f588f5476345cb066488caad",
+    "qdrant_points": 6120,
+    "seasonality_profiles": 121524
+  },
+  "historical_results_changed": false,
+  "human_judgments": 0,
+  "independent_climate_clusters": 23,
+  "limitations": [
+    "No genuine prospective human labels are available.",
+    "No prospective ranking metric or significance result has been computed.",
+    "District proxy evidence dominates the selected sample.",
+    "Shadow latency sample has three requests and includes cold model initialization."
+  ],
+  "migration_status": "NO_MIGRATION_REQUIRED_REUSED_EXISTING_TABLES",
+  "next_required_action": "Two genuine independent reviewers must complete all 864 blind items each, followed by independent adjudication of disagreements and the frozen evaluator.",
+  "production_ranking_changed": false,
+  "prospective_metrics_computed": false,
+  "prospective_month_items": 864,
+  "prospective_sample_count": 72,
+  "prospective_validation_status": "PROSPECTIVE_VALIDATION_PENDING",
+  "protocol_hash": "add895cffebcbe0b26089fe8b28ca48a7754ce1018623392b2e377bc3524723a",
+  "protocol_version": "stage12_4g_prospective_protocol_v1",
+  "qdrant_changed": false,
+  "seasonality_service_status": "CORRECTED_EXPERIMENTAL_NOT_ACTIVATED",
+  "shadow_integration_status": "SHADOW_PILOT_COMPLETED",
+  "shadow_latency_ms": {
+    "max": 18729.49811500075,
+    "mean": 6850.740951998887,
+    "median": 1427.0274249975046
+  },
+  "stage": "12.4G",
+  "status": "STAGE12_4G_ENGINEERING_COMPLETED_VALIDATION_PENDING",
+  "tests_executed": 240,
+  "tests_failed": 0,
+  "tests_passed": 240
+}

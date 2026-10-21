@@ -26,15 +26,7 @@ class AttractionRefreshTargetSelector:
             limit:int | None = None,
 
     )->list[AttractionRefreshTarget]:
-        """
-        Selects attractions that need to be refreshed based on the last_sync_at timestamp.
-        If last_sync_at is None or older than 30 days, the attraction is considered for refresh.
-
-        Args:
-            db (AsyncSession): The database session to use for the query.
-            limit (int | None): Optional limit on the number of results to return.
-
-        Returns:    """
+        
         statement = (
             select(
                 Attraction.id,

@@ -1,0 +1,53 @@
+{
+  "samples": [
+    {
+      "attraction_id": 1,
+      "received": 5844,
+      "accepted": 5844,
+      "expected": 5844,
+      "checksum": "cbcf66bf9ba39a2d0e24ea2b927a2a29c2e94edea781b4472f0a0448d8aa4ade",
+      "units": {
+        "T2M": "C",
+        "T2M_MAX": "C",
+        "T2M_MIN": "C",
+        "PRECTOTCORR": "mm/day",
+        "RH2M": "%",
+        "WS10M": "m/s",
+        "ALLSKY_SFC_SW_DWN": "MJ/m^2/day"
+      }
+    },
+    {
+      "attraction_id": 24,
+      "received": 5844,
+      "accepted": 5844,
+      "expected": 5844,
+      "checksum": "88131cb916dc84bd4e8eb0a6516597bd1104f56310b5d3b75b3e15981e30099b",
+      "units": {
+        "T2M": "C",
+        "T2M_MAX": "C",
+        "T2M_MIN": "C",
+        "PRECTOTCORR": "mm/day",
+        "RH2M": "%",
+        "WS10M": "m/s",
+        "ALLSKY_SFC_SW_DWN": "MJ/m^2/day"
+      }
+    },
+    {
+      "attraction_id": 16,
+      "received": 5844,
+      "accepted": 5844,
+      "expected": 5844,
+      "checksum": "07517b0f9875f854eaf75f87bee7654ccad5c62a481fb9eabb5c62917c431d10",
+      "units": {
+        "T2M": "C",
+        "T2M_MAX": "C",
+        "T2M_MIN": "C",
+        "PRECTOTCORR": "mm/day",
+        "RH2M": "%",
+        "WS10M": "m/s",
+        "ALLSKY_SFC_SW_DWN": "MJ/m^2/day"
+      }
+    }
+  ],
+  "total_records": 17532
+}

@@ -1,0 +1,385 @@
+{
+  "candidates": {
+    "A_activity_aware": {
+      "cluster_bootstrap_difference": {
+        "ci95": [
+          -0.046491217976537075,
+          0.0036118651654334206
+        ],
+        "clusters": 13,
+        "iterations": 10000,
+        "mean": -0.019608035039586556,
+        "seed": 12403,
+        "status": "COMPUTED"
+      },
+      "coverage": 1.0,
+      "mean_latency_ms_per_query": 0.003184230769230769,
+      "mean_ndcg5_difference_vs_district": -0.018674752878607984,
+      "mean_unique_month_scores": 11.98076923076923,
+      "metrics": {
+        "kendall_tau_b": {
+          "mean": 0.6876153902837784,
+          "valid_queries": 52
+        },
+        "mrr_grade_ge_3": {
+          "mean": 0.9039007092198581,
+          "valid_queries": 47
+        },
+        "ndcg@12": {
+          "mean": 0.9510783179576884,
+          "valid_queries": 52
+        },
+        "ndcg@3": {
+          "mean": 0.8873160647552932,
+          "valid_queries": 52
+        },
+        "ndcg@5": {
+          "mean": 0.8970686648809267,
+          "valid_queries": 52
+        },
+        "spearman": {
+          "mean": 0.7843741893993247,
+          "valid_queries": 52
+        },
+        "top3_overlap": {
+          "mean": 0.6602564102564102,
+          "valid_queries": 52
+        }
+      }
+    },
+    "B_district_multivariable": {
+      "cluster_bootstrap_difference": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "clusters": 13,
+        "iterations": 10000,
+        "mean": 0.0,
+        "seed": 12403,
+        "status": "COMPUTED"
+      },
+      "coverage": 1.0,
+      "mean_latency_ms_per_query": 0.003184230769230769,
+      "mean_ndcg5_difference_vs_district": 0.0,
+      "mean_unique_month_scores": 12,
+      "metrics": {
+        "kendall_tau_b": {
+          "mean": 0.7042640361844815,
+          "valid_queries": 52
+        },
+        "mrr_grade_ge_3": {
+          "mean": 0.9039007092198581,
+          "valid_queries": 47
+        },
+        "ndcg@12": {
+          "mean": 0.9605021490470987,
+          "valid_queries": 52
+        },
+        "ndcg@3": {
+          "mean": 0.8894207906636161,
+          "valid_queries": 52
+        },
+        "ndcg@5": {
+          "mean": 0.9157434177595347,
+          "valid_queries": 52
+        },
+        "spearman": {
+          "mean": 0.7971455430414155,
+          "valid_queries": 52
+        },
+        "top3_overlap": {
+          "mean": 0.673076923076923,
+          "valid_queries": 52
+        }
+      }
+    },
+    "C_activity_weighting_disabled": {
+      "cluster_bootstrap_difference": {
+        "ci95": [
+          -0.013322828964513393,
+          0.0062659104249186874
+        ],
+        "clusters": 13,
+        "iterations": 10000,
+        "mean": -0.002034713730664429,
+        "seed": 12403,
+        "status": "COMPUTED"
+      },
+      "coverage": 1.0,
+      "mean_latency_ms_per_query": 0.003184230769230769,
+      "mean_ndcg5_difference_vs_district": -0.0016055922077227213,
+      "mean_unique_month_scores": 12,
+      "metrics": {
+        "kendall_tau_b": {
+          "mean": 0.7073681426187305,
+          "valid_queries": 52
+        },
+        "mrr_grade_ge_3": {
+          "mean": 0.8914893617021277,
+          "valid_queries": 47
+        },
+        "ndcg@12": {
+          "mean": 0.9577313066035684,
+          "valid_queries": 52
+        },
+        "ndcg@3": {
+          "mean": 0.8938520237825179,
+          "valid_queries": 52
+        },
+        "ndcg@5": {
+          "mean": 0.914137825551812,
+          "valid_queries": 52
+        },
+        "spearman": {
+          "mean": 0.802241096550058,
+          "valid_queries": 52
+        },
+        "top3_overlap": {
+          "mean": 0.6602564102564102,
+          "valid_queries": 52
+        }
+      }
+    },
+    "D_reduced_activity_weight_strength": {
+      "cluster_bootstrap_difference": {
+        "ci95": [
+          -0.024726477855423996,
+          0.008165387976656103
+        ],
+        "clusters": 13,
+        "iterations": 10000,
+        "mean": -0.00594501781027661,
+        "seed": 12403,
+        "status": "COMPUTED"
+      },
+      "coverage": 1.0,
+      "mean_latency_ms_per_query": 0.003184230769230769,
+      "mean_ndcg5_difference_vs_district": -0.0052734145720518205,
+      "mean_unique_month_scores": 12,
+      "metrics": {
+        "kendall_tau_b": {
+          "mean": 0.6999927163521336,
+          "valid_queries": 52
+        },
+        "mrr_grade_ge_3": {
+          "mean": 0.8868794326241135,
+          "valid_queries": 47
+        },
+        "ndcg@12": {
+          "mean": 0.9540990999044852,
+          "valid_queries": 52
+        },
+        "ndcg@3": {
+          "mean": 0.8921974614264234,
+          "valid_queries": 52
+        },
+        "ndcg@5": {
+          "mean": 0.9104700031874828,
+          "valid_queries": 52
+        },
+        "spearman": {
+          "mean": 0.7952335155951684,
+          "valid_queries": 52
+        },
+        "top3_overlap": {
+          "mean": 0.6666666666666666,
+          "valid_queries": 52
+        }
+      }
+    },
+    "E_evidence_confidence_aware": {
+      "cluster_bootstrap_difference": {
+        "ci95": [
+          -0.03378804032926724,
+          0.006833022862923938
+        ],
+        "clusters": 13,
+        "iterations": 10000,
+        "mean": -0.012167170094608246,
+        "seed": 12403,
+        "status": "COMPUTED"
+      },
+      "coverage": 1.0,
+      "mean_latency_ms_per_query": 0.003184230769230769,
+      "mean_ndcg5_difference_vs_district": -0.011357654059071961,
+      "mean_unique_month_scores": 12,
+      "metrics": {
+        "kendall_tau_b": {
+          "mean": 0.6973113887133684,
+          "valid_queries": 52
+        },
+        "mrr_grade_ge_3": {
+          "mean": 0.9074468085106383,
+          "valid_queries": 47
+        },
+        "ndcg@12": {
+          "mean": 0.9548661283120334,
+          "valid_queries": 52
+        },
+        "ndcg@3": {
+          "mean": 0.8939691633602111,
+          "valid_queries": 52
+        },
+        "ndcg@5": {
+          "mean": 0.9043857637004628,
+          "valid_queries": 52
+        },
+        "spearman": {
+          "mean": 0.7937295789757964,
+          "valid_queries": 52
+        },
+        "top3_overlap": {
+          "mean": 0.6666666666666666,
+          "valid_queries": 52
+        }
+      }
+    },
+    "F_fixed_calibrated_blend": {
+      "cluster_bootstrap_difference": {
+        "ci95": [
+          -0.0038704141934788622,
+          0.005280467886951468
+        ],
+        "clusters": 13,
+        "iterations": 10000,
+        "mean": 0.0002496887209457323,
+        "seed": 12403,
+        "status": "COMPUTED"
+      },
+      "coverage": 1.0,
+      "mean_latency_ms_per_query": 0.003184230769230769,
+      "mean_ndcg5_difference_vs_district": 0.00038878307867637463,
+      "mean_unique_month_scores": 12,
+      "metrics": {
+        "kendall_tau_b": {
+          "mean": 0.7030949307606046,
+          "valid_queries": 52
+        },
+        "mrr_grade_ge_3": {
+          "mean": 0.9109929078014184,
+          "valid_queries": 47
+        },
+        "ndcg@12": {
+          "mean": 0.9607609293983209,
+          "valid_queries": 52
+        },
+        "ndcg@3": {
+          "mean": 0.890187602198451,
+          "valid_queries": 52
+        },
+        "ndcg@5": {
+          "mean": 0.916132200838211,
+          "valid_queries": 52
+        },
+        "spearman": {
+          "mean": 0.7969297007424043,
+          "valid_queries": 52
+        },
+        "top3_overlap": {
+          "mean": 0.673076923076923,
+          "valid_queries": 52
+        }
+      }
+    },
+    "F_grouped_cv_calibrated_blend": {
+      "cluster_bootstrap_difference": {
+        "ci95": [
+          -0.004233763546676742,
+          0.0
+        ],
+        "clusters": 13,
+        "iterations": 10000,
+        "mean": -0.0018195522030919474,
+        "seed": 12403,
+        "status": "COMPUTED"
+      },
+      "coverage": 1.0,
+      "mean_latency_ms_per_query": 0.01,
+      "mean_ndcg5_difference_vs_district": -0.001750498389491345,
+      "mean_unique_month_scores": 12,
+      "metrics": {
+        "kendall_tau_b": {
+          "mean": 0.7010080509661519,
+          "valid_queries": 52
+        },
+        "mrr_grade_ge_3": {
+          "mean": 0.9039007092198581,
+          "valid_queries": 47
+        },
+        "ndcg@12": {
+          "mean": 0.9589390976271578,
+          "valid_queries": 52
+        },
+        "ndcg@3": {
+          "mean": 0.8873369502315217,
+          "valid_queries": 52
+        },
+        "ndcg@5": {
+          "mean": 0.9139929193700433,
+          "valid_queries": 52
+        },
+        "spearman": {
+          "mean": 0.7950431875606414,
+          "valid_queries": 52
+        },
+        "top3_overlap": {
+          "mean": 0.673076923076923,
+          "valid_queries": 52
+        }
+      }
+    },
+    "G_conservative_adjustment": {
+      "cluster_bootstrap_difference": {
+        "ci95": [
+          -0.002824244243456483,
+          0.0010718077752052552
+        ],
+        "clusters": 13,
+        "iterations": 10000,
+        "mean": -0.0005915836033761276,
+        "seed": 12403,
+        "status": "COMPUTED"
+      },
+      "coverage": 1.0,
+      "mean_latency_ms_per_query": 0.003184230769230769,
+      "mean_ndcg5_difference_vs_district": -0.0005126733229610253,
+      "mean_unique_month_scores": 12,
+      "metrics": {
+        "kendall_tau_b": {
+          "mean": 0.6988334582809601,
+          "valid_queries": 52
+        },
+        "mrr_grade_ge_3": {
+          "mean": 0.9104863221884498,
+          "valid_queries": 47
+        },
+        "ndcg@12": {
+          "mean": 0.9596710230642055,
+          "valid_queries": 52
+        },
+        "ndcg@3": {
+          "mean": 0.8888461052607232,
+          "valid_queries": 52
+        },
+        "ndcg@5": {
+          "mean": 0.9152307444365736,
+          "valid_queries": 52
+        },
+        "spearman": {
+          "mean": 0.7934856293987277,
+          "valid_queries": 52
+        },
+        "top3_overlap": {
+          "mean": 0.673076923076923,
+          "valid_queries": 52
+        }
+      }
+    }
+  },
+  "ground_truth": "stage12_4e2_ground_truth_v1",
+  "production_approval": false,
+  "selection": "B_district_multivariable_retained_as_best_supported_reference",
+  "selection_reason": "Highest pre-existing human benchmark mean and lower complexity; no refinement is independently confirmed.",
+  "status": "EXPLORATORY_BENCHMARK_COMPARISON"
+}

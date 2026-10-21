@@ -1,0 +1,4231 @@
+{
+  "generated_at_utc": "2026-10-19T15:44:36.882825+00:00",
+  "database": {
+    "weather_readings": {
+      "rows": 1162,
+      "earliest": "2021-01-01",
+      "latest": "2025-10-01",
+      "stations": 23,
+      "districts": 16,
+      "rainfall_missing": 2,
+      "temperature_missing": 389,
+      "duplicate_identity_rows": 0
+    },
+    "district_weather_monthly": {
+      "rows": 873,
+      "earliest": "2021-01-01",
+      "latest": "2025-10-01",
+      "districts": 16,
+      "rainfall_missing": 2,
+      "temperature_missing": 100,
+      "duplicate_identity_rows": 0
+    },
+    "weather_forecasts": {
+      "rows": 129,
+      "earliest": "2025-11-01",
+      "latest": "2026-01-01",
+      "model_runs": 43
+    }
+  },
+  "local_files": {
+    "count": 349,
+    "source_or_processed_count": 13,
+    "modeling_count": 146,
+    "files": [
+      {
+        "path": "data/weather/experiments/metrics/district_78_rainfall_mm_metrics.csv",
+        "bytes": 145,
+        "columns": [
+          "district_id",
+          "target",
+          "model",
+          "mae",
+          "rmse",
+          "evaluated_months"
+        ],
+        "data_rows": 2
+      },
+      {
+        "path": "data/weather/experiments/metrics/district_78_temperature_max_c_metrics.csv",
+        "bytes": 148,
+        "columns": [
+          "district_id",
+          "target",
+          "model",
+          "mae",
+          "rmse",
+          "evaluated_months"
+        ],
+        "data_rows": 2
+      },
+      {
+        "path": "data/weather/experiments/metrics/district_78_temperature_min_c_metrics.csv",
+        "bytes": 148,
+        "columns": [
+          "district_id",
+          "target",
+          "model",
+          "mae",
+          "rmse",
+          "evaluated_months"
+        ],
+        "data_rows": 2
+      },
+      {
+        "path": "data/weather/experiments/metrics/galle_model_comparison.csv",
+        "bytes": 339,
+        "columns": [
+          "district_id",
+          "target",
+          "model",
+          "mae",
+          "rmse",
+          "evaluated_months"
+        ],
+        "data_rows": 6
+      },
+      {
+        "path": "data/weather/experiments/predictions/district_78_rainfall_mm_prophet.csv",
+        "bytes": 690,
+        "columns": [
+          "ds",
+          "yhat",
+          "yhat_lower",
+          "yhat_upper"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/experiments/predictions/district_78_rainfall_mm_seasonal_naive.csv",
+        "bytes": 296,
+        "columns": [
+          "ds",
+          "yhat"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/experiments/predictions/district_78_temperature_max_c_prophet.csv",
+        "bytes": 703,
+        "columns": [
+          "ds",
+          "yhat",
+          "yhat_lower",
+          "yhat_upper"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/experiments/predictions/district_78_temperature_max_c_seasonal_naive.csv",
+        "bytes": 168,
+        "columns": [
+          "ds",
+          "yhat"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/experiments/predictions/district_78_temperature_min_c_prophet.csv",
+        "bytes": 699,
+        "columns": [
+          "ds",
+          "yhat",
+          "yhat_lower",
+          "yhat_upper"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/experiments/predictions/district_78_temperature_min_c_seasonal_naive.csv",
+        "bytes": 168,
+        "columns": [
+          "ds",
+          "yhat"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/experiments/stage5/holdout/district_73_rainfall_mm_predictions.csv",
+        "bytes": 176,
+        "columns": [
+          "ds",
+          "y",
+          "yhat"
+        ],
+        "data_rows": 4
+      },
+      {
+        "path": "data/weather/experiments/stage5/holdout/district_74_rainfall_mm_predictions.csv",
+        "bytes": 433,
+        "columns": [
+          "ds",
+          "y",
+          "yhat"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/experiments/stage5/holdout/district_74_temperature_max_c_predictions.csv",
+        "bytes": 283,
+        "columns": [
+          "ds",
+          "y",
+          "yhat"
+        ],
+        "data_rows": 8
+      },
+      {
+        "path": "data/weather/experiments/stage5/holdout/district_74_temperature_min_c_predictions.csv",
+        "bytes": 239,
+        "columns": [
+          "ds",
+          "y",
+          "yhat"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/experiments/stage5/holdout/district_76_rainfall_mm_predictions.csv",
+        "bytes": 483,
+        "columns": [
+          "ds",
+          "y",
+          "yhat"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/experiments/stage5/holdout/district_76_temperature_max_c_predictions.csv",
+        "bytes": 353,
+        "columns": [
+          "ds",
+          "y",
+          "yhat"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/experiments/stage5/holdout/district_76_temperature_min_c_predictions.csv",
+        "bytes": 220,
+        "columns": [
+          "ds",
+          "y",
+          "yhat"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/experiments/stage5/holdout/district_77_rainfall_mm_predictions.csv",
+        "bytes": 473,
+        "columns": [
+          "ds",
+          "y",
+          "yhat"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/experiments/stage5/holdout/district_77_temperature_max_c_predictions.csv",
+        "bytes": 258,
+        "columns": [
+          "ds",
+          "y",
+          "yhat"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/experiments/stage5/holdout/district_77_temperature_min_c_predictions.csv",
+        "bytes": 358,
+        "columns": [
+          "ds",
+          "y",
+          "yhat"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/experiments/stage5/holdout/district_78_rainfall_mm_predictions.csv",
+        "bytes": 485,
+        "columns": [
+          "ds",
+          "y",
+          "yhat"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/experiments/stage5/holdout/district_78_temperature_max_c_predictions.csv",
+        "bytes": 356,
+        "columns": [
+          "ds",
+          "y",
+          "yhat"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/experiments/stage5/holdout/district_78_temperature_min_c_predictions.csv",
+        "bytes": 354,
+        "columns": [
+          "ds",
+          "y",
+          "yhat"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/experiments/stage5/holdout/district_79_rainfall_mm_predictions.csv",
+        "bytes": 479,
+        "columns": [
+          "ds",
+          "y",
+          "yhat"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/experiments/stage5/holdout/district_79_temperature_max_c_predictions.csv",
+        "bytes": 317,
+        "columns": [
+          "ds",
+          "y",
+          "yhat"
+        ],
+        "data_rows": 9
+      },
+      {
+        "path": "data/weather/experiments/stage5/holdout/district_79_temperature_min_c_predictions.csv",
+        "bytes": 323,
+        "columns": [
+          "ds",
+          "y",
+          "yhat"
+        ],
+        "data_rows": 9
+      },
+      {
+        "path": "data/weather/experiments/stage5/holdout/district_80_rainfall_mm_predictions.csv",
+        "bytes": 476,
+        "columns": [
+          "ds",
+          "y",
+          "yhat"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/experiments/stage5/holdout/district_80_temperature_max_c_predictions.csv",
+        "bytes": 257,
+        "columns": [
+          "ds",
+          "y",
+          "yhat"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/experiments/stage5/holdout/district_80_temperature_min_c_predictions.csv",
+        "bytes": 357,
+        "columns": [
+          "ds",
+          "y",
+          "yhat"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/experiments/stage5/holdout/district_81_rainfall_mm_predictions.csv",
+        "bytes": 459,
+        "columns": [
+          "ds",
+          "y",
+          "yhat"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/experiments/stage5/holdout/district_81_temperature_max_c_predictions.csv",
+        "bytes": 355,
+        "columns": [
+          "ds",
+          "y",
+          "yhat"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/experiments/stage5/holdout/district_81_temperature_min_c_predictions.csv",
+        "bytes": 244,
+        "columns": [
+          "ds",
+          "y",
+          "yhat"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/experiments/stage5/holdout/district_83_rainfall_mm_predictions.csv",
+        "bytes": 471,
+        "columns": [
+          "ds",
+          "y",
+          "yhat"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/experiments/stage5/holdout/district_83_temperature_max_c_predictions.csv",
+        "bytes": 319,
+        "columns": [
+          "ds",
+          "y",
+          "yhat"
+        ],
+        "data_rows": 9
+      },
+      {
+        "path": "data/weather/experiments/stage5/holdout/district_83_temperature_min_c_predictions.csv",
+        "bytes": 255,
+        "columns": [
+          "ds",
+          "y",
+          "yhat"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/experiments/stage5/holdout/district_87_rainfall_mm_predictions.csv",
+        "bytes": 435,
+        "columns": [
+          "ds",
+          "y",
+          "yhat"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/experiments/stage5/holdout/district_87_temperature_max_c_predictions.csv",
+        "bytes": 350,
+        "columns": [
+          "ds",
+          "y",
+          "yhat"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/experiments/stage5/holdout/district_87_temperature_min_c_predictions.csv",
+        "bytes": 247,
+        "columns": [
+          "ds",
+          "y",
+          "yhat"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/experiments/stage5/holdout/district_92_rainfall_mm_predictions.csv",
+        "bytes": 467,
+        "columns": [
+          "ds",
+          "y",
+          "yhat"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/experiments/stage5/holdout/district_92_temperature_max_c_predictions.csv",
+        "bytes": 354,
+        "columns": [
+          "ds",
+          "y",
+          "yhat"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/experiments/stage5/holdout/district_92_temperature_min_c_predictions.csv",
+        "bytes": 360,
+        "columns": [
+          "ds",
+          "y",
+          "yhat"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/experiments/stage5/holdout/district_93_rainfall_mm_predictions.csv",
+        "bytes": 454,
+        "columns": [
+          "ds",
+          "y",
+          "yhat"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/experiments/stage5/holdout/district_93_temperature_max_c_predictions.csv",
+        "bytes": 350,
+        "columns": [
+          "ds",
+          "y",
+          "yhat"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/experiments/stage5/holdout/district_93_temperature_min_c_predictions.csv",
+        "bytes": 270,
+        "columns": [
+          "ds",
+          "y",
+          "yhat"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/experiments/stage5/holdout/district_94_rainfall_mm_predictions.csv",
+        "bytes": 430,
+        "columns": [
+          "ds",
+          "y",
+          "yhat"
+        ],
+        "data_rows": 9
+      },
+      {
+        "path": "data/weather/experiments/stage5/holdout/district_94_temperature_max_c_predictions.csv",
+        "bytes": 199,
+        "columns": [
+          "ds",
+          "y",
+          "yhat"
+        ],
+        "data_rows": 9
+      },
+      {
+        "path": "data/weather/experiments/stage5/holdout/district_94_temperature_min_c_predictions.csv",
+        "bytes": 322,
+        "columns": [
+          "ds",
+          "y",
+          "yhat"
+        ],
+        "data_rows": 9
+      },
+      {
+        "path": "data/weather/experiments/stage5/holdout/district_95_rainfall_mm_predictions.csv",
+        "bytes": 470,
+        "columns": [
+          "ds",
+          "y",
+          "yhat"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/experiments/stage5/holdout/district_95_temperature_max_c_predictions.csv",
+        "bytes": 354,
+        "columns": [
+          "ds",
+          "y",
+          "yhat"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/experiments/stage5/holdout/district_95_temperature_min_c_predictions.csv",
+        "bytes": 220,
+        "columns": [
+          "ds",
+          "y",
+          "yhat"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/experiments/stage5/holdout/district_96_rainfall_mm_predictions.csv",
+        "bytes": 446,
+        "columns": [
+          "ds",
+          "y",
+          "yhat"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/experiments/stage5/holdout/district_96_temperature_max_c_predictions.csv",
+        "bytes": 354,
+        "columns": [
+          "ds",
+          "y",
+          "yhat"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/experiments/stage5/holdout/district_96_temperature_min_c_predictions.csv",
+        "bytes": 241,
+        "columns": [
+          "ds",
+          "y",
+          "yhat"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/experiments/stage5/registry/model_selection_results.csv",
+        "bytes": 5543,
+        "columns": [
+          "district_id",
+          "target",
+          "selected_model",
+          "validation_mae",
+          "validation_rmse",
+          "validation_months",
+          "validation_folds",
+          "holdout_mae",
+          "holdout_rmse",
+          "holdout_months",
+          "status"
+        ],
+        "data_rows": 43
+      },
+      {
+        "path": "data/weather/experiments/stage5/reports/failed_experiments.csv",
+        "bytes": 25,
+        "columns": [
+          "district_id",
+          "target",
+          "error"
+        ],
+        "data_rows": 0
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_73_rainfall_mm_folds.csv",
+        "bytes": 702,
+        "columns": [
+          "fold",
+          "model",
+          "mae",
+          "rmse",
+          "n",
+          "absolute_error_sum",
+          "squared_error_sum"
+        ],
+        "data_rows": 6
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_73_rainfall_mm_scores.csv",
+        "bytes": 352,
+        "columns": [
+          "model",
+          "total_absolute_error",
+          "total_squared_error",
+          "total_n",
+          "folds",
+          "mae",
+          "rmse"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_74_rainfall_mm_folds.csv",
+        "bytes": 376,
+        "columns": [
+          "fold",
+          "model",
+          "mae",
+          "rmse",
+          "n",
+          "absolute_error_sum",
+          "squared_error_sum"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_74_rainfall_mm_scores.csv",
+        "bytes": 345,
+        "columns": [
+          "model",
+          "total_absolute_error",
+          "total_squared_error",
+          "total_n",
+          "folds",
+          "mae",
+          "rmse"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_74_temperature_max_c_folds.csv",
+        "bytes": 385,
+        "columns": [
+          "fold",
+          "model",
+          "mae",
+          "rmse",
+          "n",
+          "absolute_error_sum",
+          "squared_error_sum"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_74_temperature_max_c_scores.csv",
+        "bytes": 354,
+        "columns": [
+          "model",
+          "total_absolute_error",
+          "total_squared_error",
+          "total_n",
+          "folds",
+          "mae",
+          "rmse"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_74_temperature_min_c_folds.csv",
+        "bytes": 355,
+        "columns": [
+          "fold",
+          "model",
+          "mae",
+          "rmse",
+          "n",
+          "absolute_error_sum",
+          "squared_error_sum"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_74_temperature_min_c_scores.csv",
+        "bytes": 324,
+        "columns": [
+          "model",
+          "total_absolute_error",
+          "total_squared_error",
+          "total_n",
+          "folds",
+          "mae",
+          "rmse"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_76_rainfall_mm_folds.csv",
+        "bytes": 695,
+        "columns": [
+          "fold",
+          "model",
+          "mae",
+          "rmse",
+          "n",
+          "absolute_error_sum",
+          "squared_error_sum"
+        ],
+        "data_rows": 6
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_76_rainfall_mm_scores.csv",
+        "bytes": 350,
+        "columns": [
+          "model",
+          "total_absolute_error",
+          "total_squared_error",
+          "total_n",
+          "folds",
+          "mae",
+          "rmse"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_76_temperature_max_c_folds.csv",
+        "bytes": 379,
+        "columns": [
+          "fold",
+          "model",
+          "mae",
+          "rmse",
+          "n",
+          "absolute_error_sum",
+          "squared_error_sum"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_76_temperature_max_c_scores.csv",
+        "bytes": 348,
+        "columns": [
+          "model",
+          "total_absolute_error",
+          "total_squared_error",
+          "total_n",
+          "folds",
+          "mae",
+          "rmse"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_76_temperature_min_c_folds.csv",
+        "bytes": 365,
+        "columns": [
+          "fold",
+          "model",
+          "mae",
+          "rmse",
+          "n",
+          "absolute_error_sum",
+          "squared_error_sum"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_76_temperature_min_c_scores.csv",
+        "bytes": 334,
+        "columns": [
+          "model",
+          "total_absolute_error",
+          "total_squared_error",
+          "total_n",
+          "folds",
+          "mae",
+          "rmse"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_77_rainfall_mm_folds.csv",
+        "bytes": 706,
+        "columns": [
+          "fold",
+          "model",
+          "mae",
+          "rmse",
+          "n",
+          "absolute_error_sum",
+          "squared_error_sum"
+        ],
+        "data_rows": 6
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_77_rainfall_mm_scores.csv",
+        "bytes": 350,
+        "columns": [
+          "model",
+          "total_absolute_error",
+          "total_squared_error",
+          "total_n",
+          "folds",
+          "mae",
+          "rmse"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_77_temperature_max_c_folds.csv",
+        "bytes": 701,
+        "columns": [
+          "fold",
+          "model",
+          "mae",
+          "rmse",
+          "n",
+          "absolute_error_sum",
+          "squared_error_sum"
+        ],
+        "data_rows": 6
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_77_temperature_max_c_scores.csv",
+        "bytes": 355,
+        "columns": [
+          "model",
+          "total_absolute_error",
+          "total_squared_error",
+          "total_n",
+          "folds",
+          "mae",
+          "rmse"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_77_temperature_min_c_folds.csv",
+        "bytes": 674,
+        "columns": [
+          "fold",
+          "model",
+          "mae",
+          "rmse",
+          "n",
+          "absolute_error_sum",
+          "squared_error_sum"
+        ],
+        "data_rows": 6
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_77_temperature_min_c_scores.csv",
+        "bytes": 353,
+        "columns": [
+          "model",
+          "total_absolute_error",
+          "total_squared_error",
+          "total_n",
+          "folds",
+          "mae",
+          "rmse"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_78_rainfall_mm_folds.csv",
+        "bytes": 703,
+        "columns": [
+          "fold",
+          "model",
+          "mae",
+          "rmse",
+          "n",
+          "absolute_error_sum",
+          "squared_error_sum"
+        ],
+        "data_rows": 6
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_78_rainfall_mm_scores.csv",
+        "bytes": 350,
+        "columns": [
+          "model",
+          "total_absolute_error",
+          "total_squared_error",
+          "total_n",
+          "folds",
+          "mae",
+          "rmse"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_78_temperature_max_c_folds.csv",
+        "bytes": 370,
+        "columns": [
+          "fold",
+          "model",
+          "mae",
+          "rmse",
+          "n",
+          "absolute_error_sum",
+          "squared_error_sum"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_78_temperature_max_c_scores.csv",
+        "bytes": 339,
+        "columns": [
+          "model",
+          "total_absolute_error",
+          "total_squared_error",
+          "total_n",
+          "folds",
+          "mae",
+          "rmse"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_78_temperature_min_c_folds.csv",
+        "bytes": 381,
+        "columns": [
+          "fold",
+          "model",
+          "mae",
+          "rmse",
+          "n",
+          "absolute_error_sum",
+          "squared_error_sum"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_78_temperature_min_c_scores.csv",
+        "bytes": 350,
+        "columns": [
+          "model",
+          "total_absolute_error",
+          "total_squared_error",
+          "total_n",
+          "folds",
+          "mae",
+          "rmse"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_79_rainfall_mm_folds.csv",
+        "bytes": 700,
+        "columns": [
+          "fold",
+          "model",
+          "mae",
+          "rmse",
+          "n",
+          "absolute_error_sum",
+          "squared_error_sum"
+        ],
+        "data_rows": 6
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_79_rainfall_mm_scores.csv",
+        "bytes": 352,
+        "columns": [
+          "model",
+          "total_absolute_error",
+          "total_squared_error",
+          "total_n",
+          "folds",
+          "mae",
+          "rmse"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_79_temperature_max_c_folds.csv",
+        "bytes": 383,
+        "columns": [
+          "fold",
+          "model",
+          "mae",
+          "rmse",
+          "n",
+          "absolute_error_sum",
+          "squared_error_sum"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_79_temperature_max_c_scores.csv",
+        "bytes": 352,
+        "columns": [
+          "model",
+          "total_absolute_error",
+          "total_squared_error",
+          "total_n",
+          "folds",
+          "mae",
+          "rmse"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_79_temperature_min_c_folds.csv",
+        "bytes": 381,
+        "columns": [
+          "fold",
+          "model",
+          "mae",
+          "rmse",
+          "n",
+          "absolute_error_sum",
+          "squared_error_sum"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_79_temperature_min_c_scores.csv",
+        "bytes": 350,
+        "columns": [
+          "model",
+          "total_absolute_error",
+          "total_squared_error",
+          "total_n",
+          "folds",
+          "mae",
+          "rmse"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_80_rainfall_mm_folds.csv",
+        "bytes": 381,
+        "columns": [
+          "fold",
+          "model",
+          "mae",
+          "rmse",
+          "n",
+          "absolute_error_sum",
+          "squared_error_sum"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_80_rainfall_mm_scores.csv",
+        "bytes": 350,
+        "columns": [
+          "model",
+          "total_absolute_error",
+          "total_squared_error",
+          "total_n",
+          "folds",
+          "mae",
+          "rmse"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_80_temperature_max_c_folds.csv",
+        "bytes": 383,
+        "columns": [
+          "fold",
+          "model",
+          "mae",
+          "rmse",
+          "n",
+          "absolute_error_sum",
+          "squared_error_sum"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_80_temperature_max_c_scores.csv",
+        "bytes": 352,
+        "columns": [
+          "model",
+          "total_absolute_error",
+          "total_squared_error",
+          "total_n",
+          "folds",
+          "mae",
+          "rmse"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_80_temperature_min_c_folds.csv",
+        "bytes": 385,
+        "columns": [
+          "fold",
+          "model",
+          "mae",
+          "rmse",
+          "n",
+          "absolute_error_sum",
+          "squared_error_sum"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_80_temperature_min_c_scores.csv",
+        "bytes": 354,
+        "columns": [
+          "model",
+          "total_absolute_error",
+          "total_squared_error",
+          "total_n",
+          "folds",
+          "mae",
+          "rmse"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_81_rainfall_mm_folds.csv",
+        "bytes": 704,
+        "columns": [
+          "fold",
+          "model",
+          "mae",
+          "rmse",
+          "n",
+          "absolute_error_sum",
+          "squared_error_sum"
+        ],
+        "data_rows": 6
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_81_rainfall_mm_scores.csv",
+        "bytes": 350,
+        "columns": [
+          "model",
+          "total_absolute_error",
+          "total_squared_error",
+          "total_n",
+          "folds",
+          "mae",
+          "rmse"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_81_temperature_max_c_folds.csv",
+        "bytes": 382,
+        "columns": [
+          "fold",
+          "model",
+          "mae",
+          "rmse",
+          "n",
+          "absolute_error_sum",
+          "squared_error_sum"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_81_temperature_max_c_scores.csv",
+        "bytes": 351,
+        "columns": [
+          "model",
+          "total_absolute_error",
+          "total_squared_error",
+          "total_n",
+          "folds",
+          "mae",
+          "rmse"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_81_temperature_min_c_folds.csv",
+        "bytes": 707,
+        "columns": [
+          "fold",
+          "model",
+          "mae",
+          "rmse",
+          "n",
+          "absolute_error_sum",
+          "squared_error_sum"
+        ],
+        "data_rows": 6
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_81_temperature_min_c_scores.csv",
+        "bytes": 340,
+        "columns": [
+          "model",
+          "total_absolute_error",
+          "total_squared_error",
+          "total_n",
+          "folds",
+          "mae",
+          "rmse"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_83_rainfall_mm_folds.csv",
+        "bytes": 383,
+        "columns": [
+          "fold",
+          "model",
+          "mae",
+          "rmse",
+          "n",
+          "absolute_error_sum",
+          "squared_error_sum"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_83_rainfall_mm_scores.csv",
+        "bytes": 352,
+        "columns": [
+          "model",
+          "total_absolute_error",
+          "total_squared_error",
+          "total_n",
+          "folds",
+          "mae",
+          "rmse"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_83_temperature_max_c_folds.csv",
+        "bytes": 371,
+        "columns": [
+          "fold",
+          "model",
+          "mae",
+          "rmse",
+          "n",
+          "absolute_error_sum",
+          "squared_error_sum"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_83_temperature_max_c_scores.csv",
+        "bytes": 340,
+        "columns": [
+          "model",
+          "total_absolute_error",
+          "total_squared_error",
+          "total_n",
+          "folds",
+          "mae",
+          "rmse"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_83_temperature_min_c_folds.csv",
+        "bytes": 383,
+        "columns": [
+          "fold",
+          "model",
+          "mae",
+          "rmse",
+          "n",
+          "absolute_error_sum",
+          "squared_error_sum"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_83_temperature_min_c_scores.csv",
+        "bytes": 352,
+        "columns": [
+          "model",
+          "total_absolute_error",
+          "total_squared_error",
+          "total_n",
+          "folds",
+          "mae",
+          "rmse"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_87_rainfall_mm_folds.csv",
+        "bytes": 379,
+        "columns": [
+          "fold",
+          "model",
+          "mae",
+          "rmse",
+          "n",
+          "absolute_error_sum",
+          "squared_error_sum"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_87_rainfall_mm_scores.csv",
+        "bytes": 348,
+        "columns": [
+          "model",
+          "total_absolute_error",
+          "total_squared_error",
+          "total_n",
+          "folds",
+          "mae",
+          "rmse"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_87_temperature_max_c_folds.csv",
+        "bytes": 379,
+        "columns": [
+          "fold",
+          "model",
+          "mae",
+          "rmse",
+          "n",
+          "absolute_error_sum",
+          "squared_error_sum"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_87_temperature_max_c_scores.csv",
+        "bytes": 348,
+        "columns": [
+          "model",
+          "total_absolute_error",
+          "total_squared_error",
+          "total_n",
+          "folds",
+          "mae",
+          "rmse"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_87_temperature_min_c_folds.csv",
+        "bytes": 380,
+        "columns": [
+          "fold",
+          "model",
+          "mae",
+          "rmse",
+          "n",
+          "absolute_error_sum",
+          "squared_error_sum"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_87_temperature_min_c_scores.csv",
+        "bytes": 349,
+        "columns": [
+          "model",
+          "total_absolute_error",
+          "total_squared_error",
+          "total_n",
+          "folds",
+          "mae",
+          "rmse"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_92_rainfall_mm_folds.csv",
+        "bytes": 709,
+        "columns": [
+          "fold",
+          "model",
+          "mae",
+          "rmse",
+          "n",
+          "absolute_error_sum",
+          "squared_error_sum"
+        ],
+        "data_rows": 6
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_92_rainfall_mm_scores.csv",
+        "bytes": 350,
+        "columns": [
+          "model",
+          "total_absolute_error",
+          "total_squared_error",
+          "total_n",
+          "folds",
+          "mae",
+          "rmse"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_92_temperature_max_c_folds.csv",
+        "bytes": 665,
+        "columns": [
+          "fold",
+          "model",
+          "mae",
+          "rmse",
+          "n",
+          "absolute_error_sum",
+          "squared_error_sum"
+        ],
+        "data_rows": 6
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_92_temperature_max_c_scores.csv",
+        "bytes": 339,
+        "columns": [
+          "model",
+          "total_absolute_error",
+          "total_squared_error",
+          "total_n",
+          "folds",
+          "mae",
+          "rmse"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_92_temperature_min_c_folds.csv",
+        "bytes": 681,
+        "columns": [
+          "fold",
+          "model",
+          "mae",
+          "rmse",
+          "n",
+          "absolute_error_sum",
+          "squared_error_sum"
+        ],
+        "data_rows": 6
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_92_temperature_min_c_scores.csv",
+        "bytes": 353,
+        "columns": [
+          "model",
+          "total_absolute_error",
+          "total_squared_error",
+          "total_n",
+          "folds",
+          "mae",
+          "rmse"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_93_rainfall_mm_folds.csv",
+        "bytes": 707,
+        "columns": [
+          "fold",
+          "model",
+          "mae",
+          "rmse",
+          "n",
+          "absolute_error_sum",
+          "squared_error_sum"
+        ],
+        "data_rows": 6
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_93_rainfall_mm_scores.csv",
+        "bytes": 351,
+        "columns": [
+          "model",
+          "total_absolute_error",
+          "total_squared_error",
+          "total_n",
+          "folds",
+          "mae",
+          "rmse"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_93_temperature_max_c_folds.csv",
+        "bytes": 382,
+        "columns": [
+          "fold",
+          "model",
+          "mae",
+          "rmse",
+          "n",
+          "absolute_error_sum",
+          "squared_error_sum"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_93_temperature_max_c_scores.csv",
+        "bytes": 351,
+        "columns": [
+          "model",
+          "total_absolute_error",
+          "total_squared_error",
+          "total_n",
+          "folds",
+          "mae",
+          "rmse"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_93_temperature_min_c_folds.csv",
+        "bytes": 367,
+        "columns": [
+          "fold",
+          "model",
+          "mae",
+          "rmse",
+          "n",
+          "absolute_error_sum",
+          "squared_error_sum"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_93_temperature_min_c_scores.csv",
+        "bytes": 336,
+        "columns": [
+          "model",
+          "total_absolute_error",
+          "total_squared_error",
+          "total_n",
+          "folds",
+          "mae",
+          "rmse"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_94_rainfall_mm_folds.csv",
+        "bytes": 696,
+        "columns": [
+          "fold",
+          "model",
+          "mae",
+          "rmse",
+          "n",
+          "absolute_error_sum",
+          "squared_error_sum"
+        ],
+        "data_rows": 6
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_94_rainfall_mm_scores.csv",
+        "bytes": 350,
+        "columns": [
+          "model",
+          "total_absolute_error",
+          "total_squared_error",
+          "total_n",
+          "folds",
+          "mae",
+          "rmse"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_94_temperature_max_c_folds.csv",
+        "bytes": 382,
+        "columns": [
+          "fold",
+          "model",
+          "mae",
+          "rmse",
+          "n",
+          "absolute_error_sum",
+          "squared_error_sum"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_94_temperature_max_c_scores.csv",
+        "bytes": 351,
+        "columns": [
+          "model",
+          "total_absolute_error",
+          "total_squared_error",
+          "total_n",
+          "folds",
+          "mae",
+          "rmse"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_94_temperature_min_c_folds.csv",
+        "bytes": 379,
+        "columns": [
+          "fold",
+          "model",
+          "mae",
+          "rmse",
+          "n",
+          "absolute_error_sum",
+          "squared_error_sum"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_94_temperature_min_c_scores.csv",
+        "bytes": 348,
+        "columns": [
+          "model",
+          "total_absolute_error",
+          "total_squared_error",
+          "total_n",
+          "folds",
+          "mae",
+          "rmse"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_95_rainfall_mm_folds.csv",
+        "bytes": 705,
+        "columns": [
+          "fold",
+          "model",
+          "mae",
+          "rmse",
+          "n",
+          "absolute_error_sum",
+          "squared_error_sum"
+        ],
+        "data_rows": 6
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_95_rainfall_mm_scores.csv",
+        "bytes": 345,
+        "columns": [
+          "model",
+          "total_absolute_error",
+          "total_squared_error",
+          "total_n",
+          "folds",
+          "mae",
+          "rmse"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_95_temperature_max_c_folds.csv",
+        "bytes": 697,
+        "columns": [
+          "fold",
+          "model",
+          "mae",
+          "rmse",
+          "n",
+          "absolute_error_sum",
+          "squared_error_sum"
+        ],
+        "data_rows": 6
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_95_temperature_max_c_scores.csv",
+        "bytes": 339,
+        "columns": [
+          "model",
+          "total_absolute_error",
+          "total_squared_error",
+          "total_n",
+          "folds",
+          "mae",
+          "rmse"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_95_temperature_min_c_folds.csv",
+        "bytes": 709,
+        "columns": [
+          "fold",
+          "model",
+          "mae",
+          "rmse",
+          "n",
+          "absolute_error_sum",
+          "squared_error_sum"
+        ],
+        "data_rows": 6
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_95_temperature_min_c_scores.csv",
+        "bytes": 352,
+        "columns": [
+          "model",
+          "total_absolute_error",
+          "total_squared_error",
+          "total_n",
+          "folds",
+          "mae",
+          "rmse"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_96_rainfall_mm_folds.csv",
+        "bytes": 379,
+        "columns": [
+          "fold",
+          "model",
+          "mae",
+          "rmse",
+          "n",
+          "absolute_error_sum",
+          "squared_error_sum"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_96_rainfall_mm_scores.csv",
+        "bytes": 348,
+        "columns": [
+          "model",
+          "total_absolute_error",
+          "total_squared_error",
+          "total_n",
+          "folds",
+          "mae",
+          "rmse"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_96_temperature_max_c_folds.csv",
+        "bytes": 386,
+        "columns": [
+          "fold",
+          "model",
+          "mae",
+          "rmse",
+          "n",
+          "absolute_error_sum",
+          "squared_error_sum"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_96_temperature_max_c_scores.csv",
+        "bytes": 355,
+        "columns": [
+          "model",
+          "total_absolute_error",
+          "total_squared_error",
+          "total_n",
+          "folds",
+          "mae",
+          "rmse"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_96_temperature_min_c_folds.csv",
+        "bytes": 381,
+        "columns": [
+          "fold",
+          "model",
+          "mae",
+          "rmse",
+          "n",
+          "absolute_error_sum",
+          "squared_error_sum"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage5/validation/district_96_temperature_min_c_scores.csv",
+        "bytes": 350,
+        "columns": [
+          "model",
+          "total_absolute_error",
+          "total_squared_error",
+          "total_n",
+          "folds",
+          "mae",
+          "rmse"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/experiments/stage9_8_4/district_78_rainfall_mm/predictions.csv",
+        "bytes": 5218,
+        "columns": [
+          "model_name",
+          "origin",
+          "target_month",
+          "horizon",
+          "actual",
+          "predicted"
+        ],
+        "data_rows": 66
+      },
+      {
+        "path": "data/weather/forecasts/stage6/d73_rainfall_mm_seasonal_naive_20261010T082615Z/forecast.csv",
+        "bytes": 533,
+        "columns": [
+          "district_id",
+          "target",
+          "model",
+          "ds",
+          "yhat",
+          "yhat_lower",
+          "yhat_upper",
+          "raw_yhat",
+          "training_cutoff",
+          "production_approved",
+          "run_id"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/forecasts/stage6/d74_rainfall_mm_seasonal_naive_20261010T082615Z/forecast.csv",
+        "bytes": 533,
+        "columns": [
+          "district_id",
+          "target",
+          "model",
+          "ds",
+          "yhat",
+          "yhat_lower",
+          "yhat_upper",
+          "raw_yhat",
+          "training_cutoff",
+          "production_approved",
+          "run_id"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/forecasts/stage6/d74_temperature_max_c_prophet_20261010T082615Z/forecast.csv",
+        "bytes": 641,
+        "columns": [
+          "district_id",
+          "target",
+          "model",
+          "ds",
+          "yhat",
+          "yhat_lower",
+          "yhat_upper",
+          "raw_yhat",
+          "training_cutoff",
+          "production_approved",
+          "run_id"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/forecasts/stage6/d74_temperature_min_c_monthly_climatology_20261010T082615Z/forecast.csv",
+        "bytes": 563,
+        "columns": [
+          "district_id",
+          "target",
+          "model",
+          "ds",
+          "yhat",
+          "yhat_lower",
+          "yhat_upper",
+          "raw_yhat",
+          "training_cutoff",
+          "production_approved",
+          "run_id"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/forecasts/stage6/d76_rainfall_mm_monthly_climatology_20261010T082616Z/forecast.csv",
+        "bytes": 573,
+        "columns": [
+          "district_id",
+          "target",
+          "model",
+          "ds",
+          "yhat",
+          "yhat_lower",
+          "yhat_upper",
+          "raw_yhat",
+          "training_cutoff",
+          "production_approved",
+          "run_id"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/forecasts/stage6/d76_temperature_max_c_prophet_20261010T082616Z/forecast.csv",
+        "bytes": 644,
+        "columns": [
+          "district_id",
+          "target",
+          "model",
+          "ds",
+          "yhat",
+          "yhat_lower",
+          "yhat_upper",
+          "raw_yhat",
+          "training_cutoff",
+          "production_approved",
+          "run_id"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/forecasts/stage6/d76_temperature_min_c_seasonal_naive_20261010T082616Z/forecast.csv",
+        "bytes": 497,
+        "columns": [
+          "district_id",
+          "target",
+          "model",
+          "ds",
+          "yhat",
+          "yhat_lower",
+          "yhat_upper",
+          "raw_yhat",
+          "training_cutoff",
+          "production_approved",
+          "run_id"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/forecasts/stage6/d77_rainfall_mm_monthly_climatology_20261010T082616Z/forecast.csv",
+        "bytes": 573,
+        "columns": [
+          "district_id",
+          "target",
+          "model",
+          "ds",
+          "yhat",
+          "yhat_lower",
+          "yhat_upper",
+          "raw_yhat",
+          "training_cutoff",
+          "production_approved",
+          "run_id"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/forecasts/stage6/d77_temperature_max_c_monthly_climatology_20261010T082616Z/forecast.csv",
+        "bytes": 535,
+        "columns": [
+          "district_id",
+          "target",
+          "model",
+          "ds",
+          "yhat",
+          "yhat_lower",
+          "yhat_upper",
+          "raw_yhat",
+          "training_cutoff",
+          "production_approved",
+          "run_id"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/forecasts/stage6/d77_temperature_min_c_prophet_20261010T082617Z/forecast.csv",
+        "bytes": 642,
+        "columns": [
+          "district_id",
+          "target",
+          "model",
+          "ds",
+          "yhat",
+          "yhat_lower",
+          "yhat_upper",
+          "raw_yhat",
+          "training_cutoff",
+          "production_approved",
+          "run_id"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/forecasts/stage6/d78_rainfall_mm_monthly_climatology_20261010T082617Z/forecast.csv",
+        "bytes": 571,
+        "columns": [
+          "district_id",
+          "target",
+          "model",
+          "ds",
+          "yhat",
+          "yhat_lower",
+          "yhat_upper",
+          "raw_yhat",
+          "training_cutoff",
+          "production_approved",
+          "run_id"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/forecasts/stage6/d78_temperature_max_c_prophet_20261010T082617Z/forecast.csv",
+        "bytes": 647,
+        "columns": [
+          "district_id",
+          "target",
+          "model",
+          "ds",
+          "yhat",
+          "yhat_lower",
+          "yhat_upper",
+          "raw_yhat",
+          "training_cutoff",
+          "production_approved",
+          "run_id"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/forecasts/stage6/d78_temperature_min_c_prophet_20261010T082618Z/forecast.csv",
+        "bytes": 646,
+        "columns": [
+          "district_id",
+          "target",
+          "model",
+          "ds",
+          "yhat",
+          "yhat_lower",
+          "yhat_upper",
+          "raw_yhat",
+          "training_cutoff",
+          "production_approved",
+          "run_id"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/forecasts/stage6/d79_rainfall_mm_monthly_climatology_20261010T082618Z/forecast.csv",
+        "bytes": 569,
+        "columns": [
+          "district_id",
+          "target",
+          "model",
+          "ds",
+          "yhat",
+          "yhat_lower",
+          "yhat_upper",
+          "raw_yhat",
+          "training_cutoff",
+          "production_approved",
+          "run_id"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/forecasts/stage6/d79_temperature_max_c_prophet_20261010T082618Z/forecast.csv",
+        "bytes": 644,
+        "columns": [
+          "district_id",
+          "target",
+          "model",
+          "ds",
+          "yhat",
+          "yhat_lower",
+          "yhat_upper",
+          "raw_yhat",
+          "training_cutoff",
+          "production_approved",
+          "run_id"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/forecasts/stage6/d79_temperature_min_c_prophet_20261010T082618Z/forecast.csv",
+        "bytes": 642,
+        "columns": [
+          "district_id",
+          "target",
+          "model",
+          "ds",
+          "yhat",
+          "yhat_lower",
+          "yhat_upper",
+          "raw_yhat",
+          "training_cutoff",
+          "production_approved",
+          "run_id"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/forecasts/stage6/d80_rainfall_mm_monthly_climatology_20261010T082619Z/forecast.csv",
+        "bytes": 573,
+        "columns": [
+          "district_id",
+          "target",
+          "model",
+          "ds",
+          "yhat",
+          "yhat_lower",
+          "yhat_upper",
+          "raw_yhat",
+          "training_cutoff",
+          "production_approved",
+          "run_id"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/forecasts/stage6/d80_temperature_max_c_monthly_climatology_20261010T082619Z/forecast.csv",
+        "bytes": 533,
+        "columns": [
+          "district_id",
+          "target",
+          "model",
+          "ds",
+          "yhat",
+          "yhat_lower",
+          "yhat_upper",
+          "raw_yhat",
+          "training_cutoff",
+          "production_approved",
+          "run_id"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/forecasts/stage6/d80_temperature_min_c_prophet_20261010T082619Z/forecast.csv",
+        "bytes": 643,
+        "columns": [
+          "district_id",
+          "target",
+          "model",
+          "ds",
+          "yhat",
+          "yhat_lower",
+          "yhat_upper",
+          "raw_yhat",
+          "training_cutoff",
+          "production_approved",
+          "run_id"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/forecasts/stage6/d81_rainfall_mm_prophet_20261010T082619Z/forecast.csv",
+        "bytes": 589,
+        "columns": [
+          "district_id",
+          "target",
+          "model",
+          "ds",
+          "yhat",
+          "yhat_lower",
+          "yhat_upper",
+          "raw_yhat",
+          "training_cutoff",
+          "production_approved",
+          "run_id"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/forecasts/stage6/d81_temperature_max_c_prophet_20261010T082620Z/forecast.csv",
+        "bytes": 643,
+        "columns": [
+          "district_id",
+          "target",
+          "model",
+          "ds",
+          "yhat",
+          "yhat_lower",
+          "yhat_upper",
+          "raw_yhat",
+          "training_cutoff",
+          "production_approved",
+          "run_id"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/forecasts/stage6/d81_temperature_min_c_monthly_climatology_20261010T082620Z/forecast.csv",
+        "bytes": 531,
+        "columns": [
+          "district_id",
+          "target",
+          "model",
+          "ds",
+          "yhat",
+          "yhat_lower",
+          "yhat_upper",
+          "raw_yhat",
+          "training_cutoff",
+          "production_approved",
+          "run_id"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/forecasts/stage6/d83_rainfall_mm_monthly_climatology_20261010T082620Z/forecast.csv",
+        "bytes": 571,
+        "columns": [
+          "district_id",
+          "target",
+          "model",
+          "ds",
+          "yhat",
+          "yhat_lower",
+          "yhat_upper",
+          "raw_yhat",
+          "training_cutoff",
+          "production_approved",
+          "run_id"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/forecasts/stage6/d83_temperature_max_c_prophet_20261010T082620Z/forecast.csv",
+        "bytes": 646,
+        "columns": [
+          "district_id",
+          "target",
+          "model",
+          "ds",
+          "yhat",
+          "yhat_lower",
+          "yhat_upper",
+          "raw_yhat",
+          "training_cutoff",
+          "production_approved",
+          "run_id"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/forecasts/stage6/d83_temperature_min_c_monthly_climatology_20261010T082620Z/forecast.csv",
+        "bytes": 533,
+        "columns": [
+          "district_id",
+          "target",
+          "model",
+          "ds",
+          "yhat",
+          "yhat_lower",
+          "yhat_upper",
+          "raw_yhat",
+          "training_cutoff",
+          "production_approved",
+          "run_id"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/forecasts/stage6/d87_rainfall_mm_monthly_climatology_20261010T082620Z/forecast.csv",
+        "bytes": 573,
+        "columns": [
+          "district_id",
+          "target",
+          "model",
+          "ds",
+          "yhat",
+          "yhat_lower",
+          "yhat_upper",
+          "raw_yhat",
+          "training_cutoff",
+          "production_approved",
+          "run_id"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/forecasts/stage6/d87_temperature_max_c_prophet_20261010T082621Z/forecast.csv",
+        "bytes": 643,
+        "columns": [
+          "district_id",
+          "target",
+          "model",
+          "ds",
+          "yhat",
+          "yhat_lower",
+          "yhat_upper",
+          "raw_yhat",
+          "training_cutoff",
+          "production_approved",
+          "run_id"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/forecasts/stage6/d87_temperature_min_c_monthly_climatology_20261010T082621Z/forecast.csv",
+        "bytes": 531,
+        "columns": [
+          "district_id",
+          "target",
+          "model",
+          "ds",
+          "yhat",
+          "yhat_lower",
+          "yhat_upper",
+          "raw_yhat",
+          "training_cutoff",
+          "production_approved",
+          "run_id"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/forecasts/stage6/d92_rainfall_mm_monthly_climatology_20261010T082621Z/forecast.csv",
+        "bytes": 571,
+        "columns": [
+          "district_id",
+          "target",
+          "model",
+          "ds",
+          "yhat",
+          "yhat_lower",
+          "yhat_upper",
+          "raw_yhat",
+          "training_cutoff",
+          "production_approved",
+          "run_id"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/forecasts/stage6/d92_temperature_max_c_prophet_20261010T082621Z/forecast.csv",
+        "bytes": 643,
+        "columns": [
+          "district_id",
+          "target",
+          "model",
+          "ds",
+          "yhat",
+          "yhat_lower",
+          "yhat_upper",
+          "raw_yhat",
+          "training_cutoff",
+          "production_approved",
+          "run_id"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/forecasts/stage6/d92_temperature_min_c_prophet_20261010T082622Z/forecast.csv",
+        "bytes": 645,
+        "columns": [
+          "district_id",
+          "target",
+          "model",
+          "ds",
+          "yhat",
+          "yhat_lower",
+          "yhat_upper",
+          "raw_yhat",
+          "training_cutoff",
+          "production_approved",
+          "run_id"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/forecasts/stage6/d93_rainfall_mm_prophet_20261010T082622Z/forecast.csv",
+        "bytes": 603,
+        "columns": [
+          "district_id",
+          "target",
+          "model",
+          "ds",
+          "yhat",
+          "yhat_lower",
+          "yhat_upper",
+          "raw_yhat",
+          "training_cutoff",
+          "production_approved",
+          "run_id"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/forecasts/stage6/d93_temperature_max_c_prophet_20261010T082623Z/forecast.csv",
+        "bytes": 645,
+        "columns": [
+          "district_id",
+          "target",
+          "model",
+          "ds",
+          "yhat",
+          "yhat_lower",
+          "yhat_upper",
+          "raw_yhat",
+          "training_cutoff",
+          "production_approved",
+          "run_id"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/forecasts/stage6/d93_temperature_min_c_monthly_climatology_20261010T082623Z/forecast.csv",
+        "bytes": 531,
+        "columns": [
+          "district_id",
+          "target",
+          "model",
+          "ds",
+          "yhat",
+          "yhat_lower",
+          "yhat_upper",
+          "raw_yhat",
+          "training_cutoff",
+          "production_approved",
+          "run_id"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/forecasts/stage6/d94_rainfall_mm_monthly_climatology_20261010T082623Z/forecast.csv",
+        "bytes": 573,
+        "columns": [
+          "district_id",
+          "target",
+          "model",
+          "ds",
+          "yhat",
+          "yhat_lower",
+          "yhat_upper",
+          "raw_yhat",
+          "training_cutoff",
+          "production_approved",
+          "run_id"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/forecasts/stage6/d94_temperature_max_c_seasonal_naive_20261010T082623Z/forecast.csv",
+        "bytes": 497,
+        "columns": [
+          "district_id",
+          "target",
+          "model",
+          "ds",
+          "yhat",
+          "yhat_lower",
+          "yhat_upper",
+          "raw_yhat",
+          "training_cutoff",
+          "production_approved",
+          "run_id"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/forecasts/stage6/d94_temperature_min_c_prophet_20261010T082623Z/forecast.csv",
+        "bytes": 642,
+        "columns": [
+          "district_id",
+          "target",
+          "model",
+          "ds",
+          "yhat",
+          "yhat_lower",
+          "yhat_upper",
+          "raw_yhat",
+          "training_cutoff",
+          "production_approved",
+          "run_id"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/forecasts/stage6/d95_rainfall_mm_prophet_20261010T082624Z/forecast.csv",
+        "bytes": 589,
+        "columns": [
+          "district_id",
+          "target",
+          "model",
+          "ds",
+          "yhat",
+          "yhat_lower",
+          "yhat_upper",
+          "raw_yhat",
+          "training_cutoff",
+          "production_approved",
+          "run_id"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/forecasts/stage6/d95_temperature_max_c_prophet_20261010T082624Z/forecast.csv",
+        "bytes": 634,
+        "columns": [
+          "district_id",
+          "target",
+          "model",
+          "ds",
+          "yhat",
+          "yhat_lower",
+          "yhat_upper",
+          "raw_yhat",
+          "training_cutoff",
+          "production_approved",
+          "run_id"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/forecasts/stage6/d95_temperature_min_c_seasonal_naive_20261010T082624Z/forecast.csv",
+        "bytes": 497,
+        "columns": [
+          "district_id",
+          "target",
+          "model",
+          "ds",
+          "yhat",
+          "yhat_lower",
+          "yhat_upper",
+          "raw_yhat",
+          "training_cutoff",
+          "production_approved",
+          "run_id"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/forecasts/stage6/d96_rainfall_mm_monthly_climatology_20261010T082624Z/forecast.csv",
+        "bytes": 571,
+        "columns": [
+          "district_id",
+          "target",
+          "model",
+          "ds",
+          "yhat",
+          "yhat_lower",
+          "yhat_upper",
+          "raw_yhat",
+          "training_cutoff",
+          "production_approved",
+          "run_id"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/forecasts/stage6/d96_temperature_max_c_prophet_20261010T082625Z/forecast.csv",
+        "bytes": 646,
+        "columns": [
+          "district_id",
+          "target",
+          "model",
+          "ds",
+          "yhat",
+          "yhat_lower",
+          "yhat_upper",
+          "raw_yhat",
+          "training_cutoff",
+          "production_approved",
+          "run_id"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/forecasts/stage6/d96_temperature_min_c_monthly_climatology_20261010T082625Z/forecast.csv",
+        "bytes": 535,
+        "columns": [
+          "district_id",
+          "target",
+          "model",
+          "ds",
+          "yhat",
+          "yhat_lower",
+          "yhat_upper",
+          "raw_yhat",
+          "training_cutoff",
+          "production_approved",
+          "run_id"
+        ],
+        "data_rows": 3
+      },
+      {
+        "path": "data/weather/forecasts/stage6/reports/all_forecasts.csv",
+        "bytes": 20790,
+        "columns": [
+          "district_id",
+          "target",
+          "model",
+          "ds",
+          "yhat",
+          "yhat_lower",
+          "yhat_upper",
+          "raw_yhat",
+          "training_cutoff",
+          "production_approved",
+          "run_id"
+        ],
+        "data_rows": 129
+      },
+      {
+        "path": "data/weather/forecasts/stage6/reports/failed_training.csv",
+        "bytes": 40,
+        "columns": [
+          "district_id",
+          "target",
+          "selected_model",
+          "error"
+        ],
+        "data_rows": 0
+      },
+      {
+        "path": "data/weather/forecasts/stage6/reports/training_manifest.csv",
+        "bytes": 15560,
+        "columns": [
+          "run_id",
+          "district_id",
+          "target",
+          "selected_model",
+          "training_start",
+          "training_cutoff",
+          "latest_calendar_month",
+          "latest_observed_month",
+          "latest_month_missing",
+          "training_observations",
+          "forecast_horizon_months",
+          "production_approved",
+          "parameters",
+          "created_at_utc",
+          "validation_gate_passed",
+          "status"
+        ],
+        "data_rows": 43
+      },
+      {
+        "path": "data/weather/modeling/prophet/rainfall_mm/district_73_full.csv",
+        "bytes": 1279,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 58
+      },
+      {
+        "path": "data/weather/modeling/prophet/rainfall_mm/district_73_test.csv",
+        "bytes": 208,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/modeling/prophet/rainfall_mm/district_73_train.csv",
+        "bytes": 1076,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 48
+      },
+      {
+        "path": "data/weather/modeling/prophet/rainfall_mm/district_74_full.csv",
+        "bytes": 1569,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 58
+      },
+      {
+        "path": "data/weather/modeling/prophet/rainfall_mm/district_74_test.csv",
+        "bytes": 272,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/modeling/prophet/rainfall_mm/district_74_train.csv",
+        "bytes": 1302,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 48
+      },
+      {
+        "path": "data/weather/modeling/prophet/rainfall_mm/district_76_full.csv",
+        "bytes": 1654,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 58
+      },
+      {
+        "path": "data/weather/modeling/prophet/rainfall_mm/district_76_test.csv",
+        "bytes": 295,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/modeling/prophet/rainfall_mm/district_76_train.csv",
+        "bytes": 1364,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 48
+      },
+      {
+        "path": "data/weather/modeling/prophet/rainfall_mm/district_77_full.csv",
+        "bytes": 1615,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 58
+      },
+      {
+        "path": "data/weather/modeling/prophet/rainfall_mm/district_77_test.csv",
+        "bytes": 283,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/modeling/prophet/rainfall_mm/district_77_train.csv",
+        "bytes": 1337,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 48
+      },
+      {
+        "path": "data/weather/modeling/prophet/rainfall_mm/district_78_full.csv",
+        "bytes": 1664,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 58
+      },
+      {
+        "path": "data/weather/modeling/prophet/rainfall_mm/district_78_test.csv",
+        "bytes": 293,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/modeling/prophet/rainfall_mm/district_78_train.csv",
+        "bytes": 1376,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 48
+      },
+      {
+        "path": "data/weather/modeling/prophet/rainfall_mm/district_79_full.csv",
+        "bytes": 1659,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 58
+      },
+      {
+        "path": "data/weather/modeling/prophet/rainfall_mm/district_79_test.csv",
+        "bytes": 289,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/modeling/prophet/rainfall_mm/district_79_train.csv",
+        "bytes": 1375,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 48
+      },
+      {
+        "path": "data/weather/modeling/prophet/rainfall_mm/district_80_full.csv",
+        "bytes": 1636,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 58
+      },
+      {
+        "path": "data/weather/modeling/prophet/rainfall_mm/district_80_test.csv",
+        "bytes": 290,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/modeling/prophet/rainfall_mm/district_80_train.csv",
+        "bytes": 1351,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 48
+      },
+      {
+        "path": "data/weather/modeling/prophet/rainfall_mm/district_81_full.csv",
+        "bytes": 1624,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 58
+      },
+      {
+        "path": "data/weather/modeling/prophet/rainfall_mm/district_81_test.csv",
+        "bytes": 284,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/modeling/prophet/rainfall_mm/district_81_train.csv",
+        "bytes": 1345,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 48
+      },
+      {
+        "path": "data/weather/modeling/prophet/rainfall_mm/district_83_full.csv",
+        "bytes": 1605,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 58
+      },
+      {
+        "path": "data/weather/modeling/prophet/rainfall_mm/district_83_test.csv",
+        "bytes": 283,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/modeling/prophet/rainfall_mm/district_83_train.csv",
+        "bytes": 1327,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 48
+      },
+      {
+        "path": "data/weather/modeling/prophet/rainfall_mm/district_87_full.csv",
+        "bytes": 1521,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 58
+      },
+      {
+        "path": "data/weather/modeling/prophet/rainfall_mm/district_87_test.csv",
+        "bytes": 247,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/modeling/prophet/rainfall_mm/district_87_train.csv",
+        "bytes": 1279,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 48
+      },
+      {
+        "path": "data/weather/modeling/prophet/rainfall_mm/district_88_full.csv",
+        "bytes": 1001,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 58
+      },
+      {
+        "path": "data/weather/modeling/prophet/rainfall_mm/district_88_test.csv",
+        "bytes": 125,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/modeling/prophet/rainfall_mm/district_88_train.csv",
+        "bytes": 881,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 48
+      },
+      {
+        "path": "data/weather/modeling/prophet/rainfall_mm/district_92_full.csv",
+        "bytes": 1623,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 58
+      },
+      {
+        "path": "data/weather/modeling/prophet/rainfall_mm/district_92_test.csv",
+        "bytes": 282,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/modeling/prophet/rainfall_mm/district_92_train.csv",
+        "bytes": 1346,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 48
+      },
+      {
+        "path": "data/weather/modeling/prophet/rainfall_mm/district_93_full.csv",
+        "bytes": 1625,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 58
+      },
+      {
+        "path": "data/weather/modeling/prophet/rainfall_mm/district_93_test.csv",
+        "bytes": 263,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/modeling/prophet/rainfall_mm/district_93_train.csv",
+        "bytes": 1367,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 48
+      },
+      {
+        "path": "data/weather/modeling/prophet/rainfall_mm/district_94_full.csv",
+        "bytes": 1580,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 58
+      },
+      {
+        "path": "data/weather/modeling/prophet/rainfall_mm/district_94_test.csv",
+        "bytes": 275,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/modeling/prophet/rainfall_mm/district_94_train.csv",
+        "bytes": 1310,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 48
+      },
+      {
+        "path": "data/weather/modeling/prophet/rainfall_mm/district_95_full.csv",
+        "bytes": 1620,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 58
+      },
+      {
+        "path": "data/weather/modeling/prophet/rainfall_mm/district_95_test.csv",
+        "bytes": 283,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/modeling/prophet/rainfall_mm/district_95_train.csv",
+        "bytes": 1342,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 48
+      },
+      {
+        "path": "data/weather/modeling/prophet/rainfall_mm/district_96_full.csv",
+        "bytes": 1556,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 58
+      },
+      {
+        "path": "data/weather/modeling/prophet/rainfall_mm/district_96_test.csv",
+        "bytes": 259,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/modeling/prophet/rainfall_mm/district_96_train.csv",
+        "bytes": 1302,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 48
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_max_c/district_73_full.csv",
+        "bytes": 701,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 58
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_max_c/district_73_test.csv",
+        "bytes": 125,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_max_c/district_73_train.csv",
+        "bytes": 581,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 48
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_max_c/district_74_full.csv",
+        "bytes": 917,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 58
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_max_c/district_74_test.csv",
+        "bytes": 157,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_max_c/district_74_train.csv",
+        "bytes": 765,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 48
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_max_c/district_76_full.csv",
+        "bytes": 921,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 58
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_max_c/district_76_test.csv",
+        "bytes": 165,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_max_c/district_76_train.csv",
+        "bytes": 761,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 48
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_max_c/district_77_full.csv",
+        "bytes": 929,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 58
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_max_c/district_77_test.csv",
+        "bytes": 165,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_max_c/district_77_train.csv",
+        "bytes": 769,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 48
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_max_c/district_78_full.csv",
+        "bytes": 929,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 58
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_max_c/district_78_test.csv",
+        "bytes": 165,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_max_c/district_78_train.csv",
+        "bytes": 769,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 48
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_max_c/district_79_full.csv",
+        "bytes": 917,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 58
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_max_c/district_79_test.csv",
+        "bytes": 161,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_max_c/district_79_train.csv",
+        "bytes": 761,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 48
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_max_c/district_80_full.csv",
+        "bytes": 929,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 58
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_max_c/district_80_test.csv",
+        "bytes": 165,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_max_c/district_80_train.csv",
+        "bytes": 769,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 48
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_max_c/district_81_full.csv",
+        "bytes": 929,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 58
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_max_c/district_81_test.csv",
+        "bytes": 165,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_max_c/district_81_train.csv",
+        "bytes": 769,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 48
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_max_c/district_83_full.csv",
+        "bytes": 925,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 58
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_max_c/district_83_test.csv",
+        "bytes": 161,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_max_c/district_83_train.csv",
+        "bytes": 769,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 48
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_max_c/district_87_full.csv",
+        "bytes": 925,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 58
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_max_c/district_87_test.csv",
+        "bytes": 165,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_max_c/district_87_train.csv",
+        "bytes": 765,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 48
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_max_c/district_88_full.csv",
+        "bytes": 701,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 58
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_max_c/district_88_test.csv",
+        "bytes": 125,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_max_c/district_88_train.csv",
+        "bytes": 581,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 48
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_max_c/district_92_full.csv",
+        "bytes": 933,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 58
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_max_c/district_92_test.csv",
+        "bytes": 165,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_max_c/district_92_train.csv",
+        "bytes": 773,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 48
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_max_c/district_93_full.csv",
+        "bytes": 925,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 58
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_max_c/district_93_test.csv",
+        "bytes": 165,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_max_c/district_93_train.csv",
+        "bytes": 765,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 48
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_max_c/district_94_full.csv",
+        "bytes": 917,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 58
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_max_c/district_94_test.csv",
+        "bytes": 165,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_max_c/district_94_train.csv",
+        "bytes": 757,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 48
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_max_c/district_95_full.csv",
+        "bytes": 933,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 58
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_max_c/district_95_test.csv",
+        "bytes": 165,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_max_c/district_95_train.csv",
+        "bytes": 773,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 48
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_max_c/district_96_full.csv",
+        "bytes": 921,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 58
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_max_c/district_96_test.csv",
+        "bytes": 165,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_max_c/district_96_train.csv",
+        "bytes": 761,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 48
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_min_c/district_73_full.csv",
+        "bytes": 701,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 58
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_min_c/district_73_test.csv",
+        "bytes": 125,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_min_c/district_73_train.csv",
+        "bytes": 581,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 48
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_min_c/district_74_full.csv",
+        "bytes": 929,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 58
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_min_c/district_74_test.csv",
+        "bytes": 165,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_min_c/district_74_train.csv",
+        "bytes": 769,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 48
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_min_c/district_76_full.csv",
+        "bytes": 929,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 58
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_min_c/district_76_test.csv",
+        "bytes": 165,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_min_c/district_76_train.csv",
+        "bytes": 769,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 48
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_min_c/district_77_full.csv",
+        "bytes": 929,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 58
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_min_c/district_77_test.csv",
+        "bytes": 165,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_min_c/district_77_train.csv",
+        "bytes": 769,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 48
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_min_c/district_78_full.csv",
+        "bytes": 929,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 58
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_min_c/district_78_test.csv",
+        "bytes": 165,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_min_c/district_78_train.csv",
+        "bytes": 769,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 48
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_min_c/district_79_full.csv",
+        "bytes": 917,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 58
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_min_c/district_79_test.csv",
+        "bytes": 161,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_min_c/district_79_train.csv",
+        "bytes": 761,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 48
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_min_c/district_80_full.csv",
+        "bytes": 929,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 58
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_min_c/district_80_test.csv",
+        "bytes": 165,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_min_c/district_80_train.csv",
+        "bytes": 769,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 48
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_min_c/district_81_full.csv",
+        "bytes": 933,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 58
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_min_c/district_81_test.csv",
+        "bytes": 165,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_min_c/district_81_train.csv",
+        "bytes": 773,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 48
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_min_c/district_83_full.csv",
+        "bytes": 925,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 58
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_min_c/district_83_test.csv",
+        "bytes": 165,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_min_c/district_83_train.csv",
+        "bytes": 765,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 48
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_min_c/district_87_full.csv",
+        "bytes": 925,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 58
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_min_c/district_87_test.csv",
+        "bytes": 165,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_min_c/district_87_train.csv",
+        "bytes": 765,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 48
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_min_c/district_88_full.csv",
+        "bytes": 701,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 58
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_min_c/district_88_test.csv",
+        "bytes": 125,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_min_c/district_88_train.csv",
+        "bytes": 581,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 48
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_min_c/district_92_full.csv",
+        "bytes": 932,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 58
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_min_c/district_92_test.csv",
+        "bytes": 165,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_min_c/district_92_train.csv",
+        "bytes": 772,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 48
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_min_c/district_93_full.csv",
+        "bytes": 925,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 58
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_min_c/district_93_test.csv",
+        "bytes": 165,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_min_c/district_93_train.csv",
+        "bytes": 765,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 48
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_min_c/district_94_full.csv",
+        "bytes": 909,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 58
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_min_c/district_94_test.csv",
+        "bytes": 161,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_min_c/district_94_train.csv",
+        "bytes": 753,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 48
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_min_c/district_95_full.csv",
+        "bytes": 933,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 58
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_min_c/district_95_test.csv",
+        "bytes": 165,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_min_c/district_95_train.csv",
+        "bytes": 773,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 48
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_min_c/district_96_full.csv",
+        "bytes": 925,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 58
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_min_c/district_96_test.csv",
+        "bytes": 165,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 10
+      },
+      {
+        "path": "data/weather/modeling/prophet/temperature_min_c/district_96_train.csv",
+        "bytes": 765,
+        "columns": [
+          "ds",
+          "y"
+        ],
+        "data_rows": 48
+      },
+      {
+        "path": "data/weather/modeling/reports/corrected_district_coverage.csv",
+        "bytes": 2416,
+        "columns": [
+          "district_id",
+          "district_name",
+          "operating_start_date",
+          "operating_end_date",
+          "operating_expected_months",
+          "common_start_date",
+          "common_end_date",
+          "common_expected_months",
+          "rainfall_operating_observed_months",
+          "rainfall_operating_coverage_pct",
+          "rainfall_common_observed_months",
+          "rainfall_common_coverage_pct",
+          "temperature_min_operating_observed_months",
+          "temperature_min_operating_coverage_pct",
+          "temperature_min_common_observed_months",
+          "temperature_min_common_coverage_pct",
+          "temperature_max_operating_observed_months",
+          "temperature_max_operating_coverage_pct",
+          "temperature_max_common_observed_months",
+          "temperature_max_common_coverage_pct"
+        ],
+        "data_rows": 16
+      },
+      {
+        "path": "data/weather/modeling/reports/model_readiness.csv",
+        "bytes": 4085,
+        "columns": [
+          "district_id",
+          "district_name",
+          "target",
+          "study_start",
+          "study_end",
+          "common_expected_months",
+          "common_observed_months",
+          "common_coverage_pct",
+          "train_observations",
+          "test_observations",
+          "distinct_years",
+          "has_duplicate_district_months",
+          "model_ready"
+        ],
+        "data_rows": 48
+      },
+      {
+        "path": "data/weather/processed/district_weather_coverage.csv",
+        "bytes": 2433,
+        "columns": [
+          "district_id",
+          "district_name",
+          "operating_start_date",
+          "operating_end_date",
+          "operating_expected_months",
+          "common_start_date",
+          "common_end_date",
+          "common_expected_months",
+          "rainfall_operating_observed_months",
+          "rainfall_operating_coverage_pct",
+          "rainfall_common_observed_months",
+          "rainfall_common_coverage_pct",
+          "temperature_min_operating_observed_months",
+          "temperature_min_operating_coverage_pct",
+          "temperature_min_common_observed_months",
+          "temperature_min_common_coverage_pct",
+          "temperature_max_operating_observed_months",
+          "temperature_max_operating_coverage_pct",
+          "temperature_max_common_observed_months",
+          "temperature_max_common_coverage_pct"
+        ],
+        "data_rows": 16
+      },
+      {
+        "path": "data/weather/processed/district_weather_monthly.csv",
+        "bytes": 54781,
+        "columns": [
+          "district_id",
+          "district_name",
+          "observation_date",
+          "rainfall_mm",
+          "temperature_min_c",
+          "temperature_max_c",
+          "temperature_avg_c",
+          "station_count",
+          "rainfall_station_count",
+          "temperature_station_count"
+        ],
+        "data_rows": 873
+      },
+      {
+        "path": "data/weather/processed/quality/rainfall_missing.csv",
+        "bytes": 41,
+        "columns": [
+          "station_name",
+          "yyyy",
+          "month",
+          "date",
+          "source_file"
+        ],
+        "data_rows": 0
+      },
+      {
+        "path": "data/weather/processed/quality/rainfall_monthly_coverage.csv",
+        "bytes": 1469,
+        "columns": [
+          "yyyy",
+          "month",
+          "stations",
+          "observations",
+          "available",
+          "missing",
+          "coverage_pct"
+        ],
+        "data_rows": 58
+      },
+      {
+        "path": "data/weather/processed/quality/rainfall_station_summary.csv",
+        "bytes": 1163,
+        "columns": [
+          "station_name",
+          "first_date",
+          "last_date",
+          "records",
+          "available_rainfall",
+          "missing_rainfall",
+          "coverage_pct"
+        ],
+        "data_rows": 23
+      },
+      {
+        "path": "data/weather/processed/quality/temperature_max_monthly_coverage.csv",
+        "bytes": 1465,
+        "columns": [
+          "yyyy",
+          "month",
+          "stations",
+          "observations",
+          "available",
+          "missing",
+          "coverage_pct"
+        ],
+        "data_rows": 58
+      },
+      {
+        "path": "data/weather/processed/quality/temperature_min_monthly_coverage.csv",
+        "bytes": 1466,
+        "columns": [
+          "yyyy",
+          "month",
+          "stations",
+          "observations",
+          "available",
+          "missing",
+          "coverage_pct"
+        ],
+        "data_rows": 58
+      },
+      {
+        "path": "data/weather/processed/quality/temperature_missing.csv",
+        "bytes": 1519,
+        "columns": [
+          "station_name",
+          "yyyy",
+          "month",
+          "date",
+          "temperature_min_c",
+          "temperature_max_c",
+          "temperature_avg_c",
+          "source_file"
+        ],
+        "data_rows": 27
+      },
+      {
+        "path": "data/weather/processed/quality/temperature_station_summary.csv",
+        "bytes": 928,
+        "columns": [
+          "station_name",
+          "first_date",
+          "last_date",
+          "records",
+          "available_min",
+          "available_max",
+          "missing_min",
+          "missing_max",
+          "min_coverage_pct",
+          "max_coverage_pct"
+        ],
+        "data_rows": 14
+      },
+      {
+        "path": "data/weather/processed/rainfall_monthly.csv",
+        "bytes": 86812,
+        "columns": [
+          "id",
+          "station_name",
+          "longitude",
+          "latitude",
+          "date",
+          "yyyy",
+          "month",
+          "rainfall_mm",
+          "source_file"
+        ],
+        "data_rows": 1160
+      },
+      {
+        "path": "data/weather/processed/temperature_monthly.csv",
+        "bytes": 64131,
+        "columns": [
+          "id",
+          "station_name",
+          "longitude",
+          "latitude",
+          "date",
+          "yyyy",
+          "month",
+          "temperature_max_c",
+          "temperature_min_c",
+          "temperature_avg_c",
+          "source_file"
+        ],
+        "data_rows": 800
+      },
+      {
+        "path": "data/weather/processed/weather_monthly_resolved.csv",
+        "bytes": 127974,
+        "columns": [
+          "station_id",
+          "station_name",
+          "district_id",
+          "latitude",
+          "longitude",
+          "observation_date",
+          "rainfall_mm",
+          "temperature_min_c",
+          "temperature_max_c",
+          "humidity_percent",
+          "source",
+          "district_name",
+          "resolution_status"
+        ],
+        "data_rows": 1162
+      },
+      {
+        "path": "data/weather/processed/weather_stations.csv",
+        "bytes": 1561,
+        "columns": [
+          "station_id",
+          "station_name",
+          "latitude",
+          "longitude",
+          "district_id",
+          "district_name",
+          "resolution_status",
+          "has_rainfall",
+          "has_temperature"
+        ],
+        "data_rows": 23
+      },
+      {
+        "path": "data/weather/reports/backtesting/missing_months_audit.csv",
+        "bytes": 118538,
+        "columns": [
+          "district_id",
+          "district_name",
+          "target",
+          "month",
+          "kind"
+        ],
+        "data_rows": 1906
+      },
+      {
+        "path": "data/weather/stations/station_metadata.csv",
+        "bytes": 179,
+        "columns": [
+          "station_name",
+          "latitude",
+          "longitude",
+          "coordinate_source"
+        ],
+        "data_rows": 9
+      }
+    ]
+  },
+  "assessment": "Existing persisted weather coverage begins in 2021; it cannot by itself support the requested 2010-2025 climate reference period."
+}

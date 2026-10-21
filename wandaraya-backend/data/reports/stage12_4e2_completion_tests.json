@@ -1,0 +1,200 @@
+{
+  "status": "ALL_TESTS_PASSED",
+  "total_tests": 48,
+  "passed": 48,
+  "failed": 0,
+  "results": [
+    {
+      "name": "migration_head",
+      "status": "PASS"
+    },
+    {
+      "name": "two_reviewers",
+      "status": "PASS"
+    },
+    {
+      "name": "genuine_labels_1650",
+      "status": "PASS"
+    },
+    {
+      "name": "assignments_1650",
+      "status": "PASS"
+    },
+    {
+      "name": "all_finalized",
+      "status": "PASS"
+    },
+    {
+      "name": "no_duplicate_submissions",
+      "status": "PASS"
+    },
+    {
+      "name": "mapping_adjudications",
+      "status": "PASS"
+    },
+    {
+      "name": "seasonality_adjudications",
+      "status": "PASS"
+    },
+    {
+      "name": "adjudication_evidence",
+      "status": "PASS"
+    },
+    {
+      "name": "mapping_overlap",
+      "status": "PASS"
+    },
+    {
+      "name": "seasonality_overlap",
+      "status": "PASS"
+    },
+    {
+      "name": "mapping_disagreements",
+      "status": "PASS"
+    },
+    {
+      "name": "seasonality_disagreements",
+      "status": "PASS"
+    },
+    {
+      "name": "mapping_kappa_range",
+      "status": "PASS"
+    },
+    {
+      "name": "seasonality_kappa_range",
+      "status": "PASS"
+    },
+    {
+      "name": "weighted_kappa_range",
+      "status": "PASS"
+    },
+    {
+      "name": "gt_version",
+      "status": "PASS"
+    },
+    {
+      "name": "gt_720",
+      "status": "PASS"
+    },
+    {
+      "name": "gt_60_queries",
+      "status": "PASS"
+    },
+    {
+      "name": "gt_12_each",
+      "status": "PASS"
+    },
+    {
+      "name": "gt_unresolved_zero",
+      "status": "PASS"
+    },
+    {
+      "name": "gt_insufficient_96",
+      "status": "PASS"
+    },
+    {
+      "name": "gt_rankable_52",
+      "status": "PASS"
+    },
+    {
+      "name": "insufficient_not_zero",
+      "status": "PASS"
+    },
+    {
+      "name": "grade_range",
+      "status": "PASS"
+    },
+    {
+      "name": "gt_checksum",
+      "status": "PASS"
+    },
+    {
+      "name": "gt_db_verified",
+      "status": "PASS"
+    },
+    {
+      "name": "ranking_computed",
+      "status": "PASS"
+    },
+    {
+      "name": "ranking_52",
+      "status": "PASS"
+    },
+    {
+      "name": "metric_ndcg@3",
+      "status": "PASS"
+    },
+    {
+      "name": "metric_ndcg@5",
+      "status": "PASS"
+    },
+    {
+      "name": "metric_ndcg@12",
+      "status": "PASS"
+    },
+    {
+      "name": "metric_spearman",
+      "status": "PASS"
+    },
+    {
+      "name": "metric_kendall_tau_b",
+      "status": "PASS"
+    },
+    {
+      "name": "metric_top3_overlap",
+      "status": "PASS"
+    },
+    {
+      "name": "primary_baseline",
+      "status": "PASS"
+    },
+    {
+      "name": "baseline_n52",
+      "status": "PASS"
+    },
+    {
+      "name": "cluster_iterations",
+      "status": "PASS"
+    },
+    {
+      "name": "cluster_small_warning",
+      "status": "PASS"
+    },
+    {
+      "name": "ablations_computed",
+      "status": "PASS"
+    },
+    {
+      "name": "wind_not_invented",
+      "status": "PASS"
+    },
+    {
+      "name": "run_completed",
+      "status": "PASS"
+    },
+    {
+      "name": "experiments_completed",
+      "status": "PASS"
+    },
+    {
+      "name": "raw_climate_preserved",
+      "status": "PASS"
+    },
+    {
+      "name": "predictions_preserved",
+      "status": "PASS"
+    },
+    {
+      "name": "seasonality_preserved",
+      "status": "PASS"
+    },
+    {
+      "name": "final_status",
+      "status": "PASS"
+    },
+    {
+      "name": "no_fabrication_claim",
+      "status": "PASS"
+    }
+  ]
+}

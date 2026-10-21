@@ -1,0 +1,20 @@
+{
+  "completed_labels": 0,
+  "files": {
+    "stage12_4d2_mapping_review_blind.csv": 0,
+    "stage12_4d2_seasonality_review_blind.csv": 0
+  },
+  "label_dependent_experiments_status": "PENDING_INDEPENDENT_HUMAN_LABELS",
+  "prepared": [
+    "mapping precision",
+    "reviewer agreement",
+    "NDCG@3",
+    "NDCG@5",
+    "Spearman and Kendall versus judgments",
+    "top-3 relevance",
+    "paired baseline confidence intervals",
+    "activity/geographic subgroup evaluation",
+    "ablation performance"
+  ],
+  "status": "HUMAN_LABELS_PENDING"
+}

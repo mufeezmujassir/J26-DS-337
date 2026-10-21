@@ -1,0 +1,54 @@
+{
+  "generated_at": "2026-10-21T02:58:19.247969+00:00",
+  "review_dataset_version": "stage12_4e2_review_v1",
+  "stage": "12.4E.2",
+  "status": "ADJUDICATION_REQUIRED",
+  "tasks": {
+    "mapping": {
+      "agreements": 83,
+      "cohens_kappa": {
+        "kappa": 0.665314401622718,
+        "n": 105,
+        "observed_agreement": 0.7904761904761904,
+        "status": "COMPUTED"
+      },
+      "disagreements": 22,
+      "krippendorff_alpha_nominal": {
+        "alpha": 0.6636676175846683,
+        "items": 105,
+        "status": "COMPUTED"
+      },
+      "observed_agreement": 0.7904761904761904,
+      "overlap": 105
+    },
+    "seasonality": {
+      "agreements": 607,
+      "cohens_kappa": {
+        "kappa": 0.80951176854837,
+        "n": 720,
+        "observed_agreement": 0.8430555555555556,
+        "status": "COMPUTED"
+      },
+      "disagreements": 113,
+      "krippendorff_alpha_nominal": {
+        "alpha": 0.809485257418156,
+        "items": 720,
+        "status": "COMPUTED"
+      },
+      "krippendorff_alpha_ordinal": {
+        "alpha": 0.9542042215276656,
+        "items": 624,
+        "status": "COMPUTED"
+      },
+      "observed_agreement": 0.8430555555555556,
+      "overlap": 720,
+      "weighted_cohens_kappa_ordinal": {
+        "kappa": 0.9543569109353882,
+        "n": 624,
+        "observed_agreement": 0.8189102564102564,
+        "status": "COMPUTED"
+      },
+      "weighted_kappa_excluded_insufficient_evidence_pairs": 96
+    }
+  }
+}

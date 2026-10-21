@@ -1,0 +1,151 @@
+[
+  {
+    "configuration_hash": "36ea43bc967cfec70c292308fa550732118d4f99c9f0a390fe0b900d7459907a",
+    "definition": "ascending district median monthly rainfall",
+    "inputs": [
+      "baseline_a_rainfall_rank"
+    ],
+    "kind": "baseline",
+    "model_identifier": "rainfall_only",
+    "version": "12.4c_v1"
+  },
+  {
+    "configuration_hash": "806824bf45c88bf33df58a8f050736f95854dcc73a8c57b21993431186c9a353",
+    "definition": "0.45 rainfall + 0.25 temperature + 0.15 humidity + 0.15 solar",
+    "inputs": [
+      "baseline_b_multivar_score"
+    ],
+    "kind": "baseline",
+    "model_identifier": "district_multivariable",
+    "version": "12.4c_v1"
+  },
+  {
+    "configuration_hash": "2bf71caf7e702e04e20f06b7f6d02e59fcb6cc9d9b7e5d262ca3c0ca9172a414",
+    "definition": "ascending rainfall mean + 0.5 rainfall standard deviation",
+    "inputs": [
+      "baseline_c_variability_rank"
+    ],
+    "kind": "baseline",
+    "model_identifier": "rainfall_risk_adjusted",
+    "version": "12.4c_v1"
+  },
+  {
+    "configuration_hash": "219d30f4d7ac326977cd5b68dbed9116ea30d90a1b03834912be0975212d1d4a",
+    "definition": "frozen Stage 12.4D activity-specific score",
+    "inputs": [
+      "climate_favorability_score"
+    ],
+    "kind": "baseline",
+    "model_identifier": "activity_aware",
+    "version": "12.4d_v1"
+  },
+  {
+    "available": true,
+    "configuration_hash": "7095c394b4988fa6b635044fd490c1fbf0260a90dc44ee6e632d16d78edad878",
+    "id": "full_activity_aware",
+    "kind": "ablation",
+    "model_identifier": "ablation_full_activity_aware",
+    "model_version": "12.4e1_v1",
+    "removed": [],
+    "renormalize": false,
+    "version": "12.4e1_v1"
+  },
+  {
+    "available": true,
+    "configuration_hash": "a35f7b83c9764cecf1a0326d76dc4439edca3dd514c4b97ac08f75988b5c255d",
+    "id": "without_rainfall_reliability",
+    "kind": "ablation",
+    "model_identifier": "ablation_without_rainfall_reliability",
+    "model_version": "12.4e1_v1",
+    "removed": [
+      "rainfall_reliability"
+    ],
+    "renormalize": true,
+    "version": "12.4e1_v1"
+  },
+  {
+    "available": true,
+    "configuration_hash": "d29b93952db11aacabe72ecbab674ec6fb733244e0fb6b0d109668cd793bd22e",
+    "id": "without_temperature",
+    "kind": "ablation",
+    "model_identifier": "ablation_without_temperature",
+    "model_version": "12.4e1_v1",
+    "removed": [
+      "temperature_comfort"
+    ],
+    "renormalize": true,
+    "version": "12.4e1_v1"
+  },
+  {
+    "available": true,
+    "configuration_hash": "993d7878d90adfe2f66a6a213f8c488fbf87d11d22af40b328bc8ef9893ad3ef",
+    "id": "without_humidity",
+    "kind": "ablation",
+    "model_identifier": "ablation_without_humidity",
+    "model_version": "12.4e1_v1",
+    "removed": [
+      "humidity_comfort"
+    ],
+    "renormalize": true,
+    "version": "12.4e1_v1"
+  },
+  {
+    "available": true,
+    "configuration_hash": "21a03e338913ab558e498a46af70482b1f2d8507e205dd4ebf6a381eba67070a",
+    "id": "without_solar",
+    "kind": "ablation",
+    "model_identifier": "ablation_without_solar",
+    "model_version": "12.4e1_v1",
+    "removed": [
+      "solar_context"
+    ],
+    "renormalize": true,
+    "version": "12.4e1_v1"
+  },
+  {
+    "available": true,
+    "configuration_hash": "da6e3f33b600681fca4e8906aae65955c961893f27f738af6ba1895a7dcd478c",
+    "generic_weights": {
+      "humidity_comfort": 0.15,
+      "rainfall_sub_index": 0.45,
+      "solar_context": 0.15,
+      "temperature_comfort": 0.25
+    },
+    "id": "without_activity_weighting",
+    "kind": "ablation",
+    "model_identifier": "ablation_without_activity_weighting",
+    "model_version": "12.4e1_v1",
+    "removed": [],
+    "renormalize": true,
+    "version": "12.4e1_v1"
+  },
+  {
+    "available": true,
+    "configuration_hash": "abb2afd600ba29005c50800b7acc69859638abbfb77b9f057c9ff3db6af00be1",
+    "id": "district_only_fallback",
+    "kind": "ablation",
+    "model_identifier": "ablation_district_only_fallback",
+    "model_version": "12.4e1_v1",
+    "policy": "use district feature inputs for every pair",
+    "removed": [],
+    "renormalize": false,
+    "version": "12.4e1_v1"
+  },
+  {
+    "available": true,
+    "configuration_hash": "854d43b9fade1f3d112fcce22c83f588abc17ba25aca783163d1c8b8b2aef33a",
+    "id": "rainfall_only_simplified",
+    "kind": "ablation",
+    "model_identifier": "ablation_rainfall_only_simplified",
+    "model_version": "12.4e1_v1",
+    "removed": [
+      "rainfall_reliability",
+      "temperature_comfort",
+      "humidity_comfort",
+      "solar_context",
+      "wind_context"
+    ],
+    "renormalize": true,
+    "version": "12.4e1_v1"
+  }
+]
