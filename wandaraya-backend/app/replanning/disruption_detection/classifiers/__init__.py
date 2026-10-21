@@ -8,7 +8,9 @@ from typing import Any, Dict, Iterable, List, Sequence
 
 from app.replanning.disruption_detection.utils import MODULE_DIR, REPO_ROOT
 
-DATA_DIR: Path = REPO_ROOT / "data" / "disruption_detection"
+DATA_ROOT: Path = REPO_ROOT / "data" / "disruption_detection"
+RAW_DIR: Path = DATA_ROOT / "raw"
+DATA_DIR: Path = DATA_ROOT / "processed"
 MODEL_DIR: Path = MODULE_DIR / "model_files"
 
 FEATURE_NAMES: tuple[str, ...] = (
@@ -165,6 +167,8 @@ def severity_from_rows(rows: Sequence[Dict[str, Any]]) -> List[str]:
 
 __all__ = [
     "DATA_DIR",
+    "DATA_ROOT",
+    "RAW_DIR",
     "MODEL_DIR",
     "FEATURE_NAMES",
     "LABELS",

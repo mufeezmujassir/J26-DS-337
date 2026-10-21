@@ -1,7 +1,7 @@
 """Tests for the ML disruption-detection classifiers (Component 4).
 
-Covers the data generator, the :class:`MLClassifier` inference wrapper, the
-hybrid fusion logic and an end-to-end mock-trip detection.
+Covers the real-data dataset builder, the :class:`MLClassifier` inference
+wrapper, the hybrid fusion logic and an end-to-end mock-trip detection.
 
 This file is intentionally separate from ``test_disruption_detection.py`` (the
 rule-based suite) and does not modify it.
@@ -23,16 +23,28 @@ if str(BACKEND_ROOT) not in sys.path:
     sys.path.insert(0, str(BACKEND_ROOT))
 
 from app.replanning.disruption_detection.classifiers import (  # noqa: E402
+    DATA_DIR,
     FEATURE_NAMES,
     LABEL_DISRUPTION,
     LABEL_NORMAL,
+    RAW_DIR,
     SEVERITY_LEVELS,
     extract_features,
 )
-from app.replanning.disruption_detection.classifiers.generate_disruption_data import (  # noqa: E402
-    bootstrap_label,
-    generate_rows,
-    write_dataset,
+from app.replanning.disruption_detection.classifiers._dataset_io import (  # noqa: E402
+    compute_sha256,
+    stratified_split,
+)
+from app.replanning.disruption_detection.classifiers._disruption_labeler import (  # noqa: E402
+    DisruptionLabeler,
+)
+from app.replanning.disruption_detection.classifiers._feature_sampler import (  # noqa: E402
+    FeatureSampler,
+)
+from app.replanning.disruption_detection.classifiers.build_disruption_dataset import (  # noqa: E402
+    DEFAULT_SEED,
+    DEFAULT_TOTAL_ROWS,
+    build_dataset,
 )
 from app.replanning.disruption_detection.fusion import (  # noqa: E402
     DECISION_CONFIRMED,
@@ -50,20 +62,49 @@ from app.replanning.disruption_detection.ml_classifier import (  # noqa: E402
 
 LOGGER = logging.getLogger(__name__)
 
+DATASET_FILE = DATA_DIR / "simulated_disruptions.jsonl"
+METADATA_FILE = DATA_DIR / "metadata.json"
+ATTRACTIONS_FILE = RAW_DIR / "sri_lankan_attractions.jsonl"
+WEATHER_FILE = RAW_DIR / "weather_monthly.jsonl"
+
+RAW_AVAILABLE = ATTRACTIONS_FILE.is_file() and WEATHER_FILE.is_file()
+requires_raw = pytest.mark.skipif(
+    not RAW_AVAILABLE,
+    reason="raw data sources are git-ignored and unavailable",
+)
+
 
 # ---------------------------------------------------------------------------
 # Fixtures
 # ---------------------------------------------------------------------------
 
-@pytest.fixture(scope="session")
-def generated_rows() -> List[Dict[str, Any]]:
-    """A deterministic dataset shared across the generator tests."""
-    return generate_rows(seed=42)
+def _load_jsonl(path: Path) -> List[Dict[str, Any]]:
+    return [
+        json.loads(line)
+        for line in path.read_text(encoding="utf-8").splitlines()
+        if line.strip()
+    ]
 
 
 @pytest.fixture(scope="session")
-def trained_classifier(tmp_path_factory: pytest.TempPathFactory) -> MLClassifier:
-    """Train tiny models on the seeded dataset and load them via MLClassifier.
+def dataset_rows() -> List[Dict[str, Any]]:
+    """The committed frozen dataset shared across the builder tests."""
+    assert DATASET_FILE.is_file(), f"missing frozen dataset: {DATASET_FILE}"
+    return _load_jsonl(DATASET_FILE)
+
+
+@pytest.fixture(scope="session")
+def dataset_metadata() -> Dict[str, Any]:
+    """The committed metadata manifest."""
+    assert METADATA_FILE.is_file(), f"missing metadata: {METADATA_FILE}"
+    return json.loads(METADATA_FILE.read_text(encoding="utf-8"))
+
+
+@pytest.fixture(scope="session")
+def trained_classifier(
+    tmp_path_factory: pytest.TempPathFactory,
+) -> MLClassifier:
+    """Train tiny models on the committed dataset and load them via MLClassifier.
 
     Keeps the suite fast and independent of the git-ignored model artefacts.
     """
@@ -73,7 +114,7 @@ def trained_classifier(tmp_path_factory: pytest.TempPathFactory) -> MLClassifier
     from sklearn.linear_model import LogisticRegression
     from sklearn.preprocessing import StandardScaler
 
-    rows = generate_rows(seed=42)
+    rows = _load_jsonl(DATA_DIR / "train.jsonl")
     X = np.asarray([extract_features(row) for row in rows], dtype=float)
     y_presence = np.asarray(
         [1 if row["label"] == LABEL_DISRUPTION else 0 for row in rows], dtype=int
@@ -92,9 +133,7 @@ def trained_classifier(tmp_path_factory: pytest.TempPathFactory) -> MLClassifier
     Xd = np.asarray(
         [extract_features(row) for row in disruption_rows], dtype=float
     )
-    yd = np.asarray(
-        [str(row["severity"]) for row in disruption_rows]
-    )
+    yd = np.asarray([str(row["severity"]) for row in disruption_rows])
     severity = RandomForestClassifier(
         n_estimators=10, class_weight="balanced", random_state=42
     ).fit(Xd, yd)
@@ -109,70 +148,68 @@ def trained_classifier(tmp_path_factory: pytest.TempPathFactory) -> MLClassifier
 
 
 # ---------------------------------------------------------------------------
-# 1-4. Data generator
+# 1-5. Dataset builder
 # ---------------------------------------------------------------------------
 
-def test_generator_produces_expected_fields(
-    generated_rows: List[Dict[str, Any]],
+def test_dataset_produces_expected_fields(
+    dataset_rows: List[Dict[str, Any]],
 ) -> None:
-    """Every row carries the 13 features plus label/severity/source."""
-    required = set(FEATURE_NAMES) | {"label", "severity", "source"}
-    for row in generated_rows:
+    """Every row carries the 13 features plus label/severity."""
+    required = set(FEATURE_NAMES) | {"label", "severity"}
+    for row in dataset_rows:
         assert required.issubset(row.keys())
         assert row["label"] in (LABEL_NORMAL, LABEL_DISRUPTION)
         assert row["severity"] in set(SEVERITY_LEVELS) | {"none"}
 
 
-def test_generator_produces_1500_rows(
-    generated_rows: List[Dict[str, Any]],
+def test_dataset_produces_3000_rows(
+    dataset_rows: List[Dict[str, Any]],
 ) -> None:
-    """The frozen dataset always has exactly 1,500 rows."""
-    assert len(generated_rows) == 1500
+    """The frozen dataset always has exactly 3,000 rows."""
+    assert len(dataset_rows) == 3000
 
 
-def test_generator_is_deterministic() -> None:
-    """The same seed yields byte-identical rows."""
-    first = generate_rows(seed=42)
-    second = generate_rows(seed=42)
-    assert first == second
-
-
-def test_written_dataset_matches_metadata(
-    tmp_path: Path, generated_rows: List[Dict[str, Any]]
+def test_dataset_metadata_matches_written_files(
+    dataset_rows: List[Dict[str, Any]],
+    dataset_metadata: Dict[str, Any],
 ) -> None:
-    """metadata.json distributions agree with the written JSONL files."""
-    metadata = write_dataset(generated_rows, tmp_path, seed=42)
+    """metadata.json distributions agree with the written dataset (80/10/10)."""
+    assert dataset_metadata["num_rows"] == len(dataset_rows) == 3000
+    assert dataset_metadata["train_rows"] == 2400
+    assert dataset_metadata["dev_rows"] == 300
+    assert dataset_metadata["test_rows"] == 300
+    assert dataset_metadata["random_seed"] == DEFAULT_SEED
+    assert len(dataset_metadata["dataset_hash_sha256"]) == 64
 
-    assert metadata["num_rows"] == 1500
-    assert metadata["train_rows"] == 1200
-    assert metadata["dev_rows"] == 150
-    assert metadata["test_rows"] == 150
-    assert metadata["random_seed"] == 42
-    assert len(metadata["dataset_hash_sha256"]) == 64
-
-    head = [
-        json.loads(line)
-        for line in (tmp_path / "simulated_disruptions.jsonl")
-        .read_text(encoding="utf-8")
-        .splitlines()
-        if line.strip()
-    ]
-    normal = sum(1 for row in head if row["label"] == LABEL_NORMAL)
-    disruption = sum(1 for row in head if row["label"] == LABEL_DISRUPTION)
-    assert normal == metadata["label_distribution"][LABEL_NORMAL]
-    assert disruption == metadata["label_distribution"][LABEL_DISRUPTION]
+    normal = sum(1 for row in dataset_rows if row["label"] == LABEL_NORMAL)
+    disruption = sum(
+        1 for row in dataset_rows if row["label"] == LABEL_DISRUPTION
+    )
+    assert normal == dataset_metadata["label_distribution"][LABEL_NORMAL]
+    assert disruption == dataset_metadata["label_distribution"][LABEL_DISRUPTION]
 
     for level in SEVERITY_LEVELS:
         observed = sum(
             1
-            for row in head
+            for row in dataset_rows
             if row["label"] == LABEL_DISRUPTION and row["severity"] == level
         )
-        assert observed == metadata["severity_distribution"][level]
+        assert observed == dataset_metadata["severity_distribution"][level]
 
 
-def test_bootstrap_label_rules() -> None:
-    """The documented bootstrap rules produce the expected labels."""
+def test_stratified_split_is_deterministic(
+    dataset_rows: List[Dict[str, Any]],
+) -> None:
+    """The 80/10/10 split is reproducible for a fixed seed."""
+    first = stratified_split(dataset_rows, seed=42)
+    second = stratified_split(dataset_rows, seed=42)
+    assert first == second
+    assert [len(split) for split in first] == [2400, 300, 300]
+
+
+def test_labeler_rules() -> None:
+    """The documented labelling rules produce the expected labels."""
+    labeler = DisruptionLabeler()
     benign = {
         "rain_duration_hours": 1.0,
         "is_outdoor_activity": 1,
@@ -188,17 +225,17 @@ def test_bootstrap_label_rules() -> None:
         "rain_intensity_score": 0.2,
         "temperature_celsius": 25.0,
     }
-    assert bootstrap_label(benign) == (LABEL_NORMAL, "none")
+    assert labeler.label(benign) == (LABEL_NORMAL, "none")
 
     rain = dict(benign, rain_duration_hours=4.0)
-    assert bootstrap_label(rain) == (LABEL_DISRUPTION, "step")
+    assert labeler.label(rain) == (LABEL_DISRUPTION, "step")
 
     plan = dict(benign, num_affected_activities=4)
-    assert bootstrap_label(plan) == (LABEL_DISRUPTION, "plan")
+    assert labeler.label(plan) == (LABEL_DISRUPTION, "plan")
 
 
 # ---------------------------------------------------------------------------
-# 5-7. MLClassifier
+# 6-9. MLClassifier
 # ---------------------------------------------------------------------------
 
 def test_ml_classifier_loads_models(trained_classifier: MLClassifier) -> None:
@@ -247,7 +284,7 @@ def test_predict_combines_both_models(trained_classifier: MLClassifier) -> None:
 
 
 # ---------------------------------------------------------------------------
-# 8. Hybrid fusion logic
+# 10. Hybrid fusion logic
 # ---------------------------------------------------------------------------
 
 def _rule(name: str = "rain_3h_outdoor", severity: str = "step") -> Dict[str, Any]:
@@ -328,7 +365,7 @@ def test_fusion_rules_only_when_no_ml() -> None:
 
 
 # ---------------------------------------------------------------------------
-# 9. End-to-end mock trip
+# 11. End-to-end mock trip
 # ---------------------------------------------------------------------------
 
 def _mock_trip() -> Dict[str, Any]:
@@ -397,7 +434,7 @@ def test_end_to_end_mock_trip(trained_classifier: MLClassifier) -> None:
 
 
 # ---------------------------------------------------------------------------
-# 10. Missing model files
+# 12. Missing model files
 # ---------------------------------------------------------------------------
 
 def test_missing_models_raise_clear_error(tmp_path: Path) -> None:
@@ -421,6 +458,78 @@ def test_predict_before_load_raises_when_files_absent(tmp_path: Path) -> None:
 
     with pytest.raises(FileNotFoundError):
         classifier.predict_disruption(features)
+
+
+# ---------------------------------------------------------------------------
+# 13-19. Real-data provenance
+# ---------------------------------------------------------------------------
+
+@requires_raw
+def test_real_attractions_loaded() -> None:
+    """The sampler loads the real attraction source."""
+    sampler = FeatureSampler(ATTRACTIONS_FILE, WEATHER_FILE, seed=42)
+    sampler.load_sources()
+    assert len(sampler.attractions) > 0
+    assert all("district_id" in row for row in sampler.attractions)
+
+
+@requires_raw
+def test_real_weather_loaded() -> None:
+    """The sampler loads the real weather source."""
+    sampler = FeatureSampler(ATTRACTIONS_FILE, WEATHER_FILE, seed=42)
+    sampler.load_sources()
+    assert len(sampler.weather) > 0
+    assert all("rainfall_mm" in row for row in sampler.weather)
+
+
+def test_real_data_ratio_at_least_half(
+    dataset_metadata: Dict[str, Any],
+) -> None:
+    """At least half the rows are backed by real weather data."""
+    assert dataset_metadata["real_data_ratio"] >= 0.5
+
+
+def test_source_attractions_count_positive(
+    dataset_metadata: Dict[str, Any],
+) -> None:
+    """The builder records which real attractions it sampled."""
+    assert dataset_metadata["source_attractions_count"] > 0
+
+
+def test_dataset_hash_matches_recomputed(
+    dataset_metadata: Dict[str, Any],
+) -> None:
+    """The committed dataset hash matches a fresh recomputation."""
+    recomputed = compute_sha256(DATASET_FILE)
+    assert recomputed == dataset_metadata["dataset_hash_sha256"]
+
+
+@requires_raw
+def test_seed42_regeneration_identical(
+    tmp_path: Path,
+    dataset_metadata: Dict[str, Any],
+) -> None:
+    """Rebuilding with the default seed reproduces the committed dataset."""
+    metadata = build_dataset(
+        raw_dir=RAW_DIR,
+        output_dir=tmp_path,
+        total_rows=DEFAULT_TOTAL_ROWS,
+        seed=DEFAULT_SEED,
+    )
+    assert metadata["dataset_hash_sha256"] == dataset_metadata["dataset_hash_sha256"]
+
+
+@requires_raw
+def test_builder_produces_3000_rows(tmp_path: Path) -> None:
+    """Building with the default settings yields exactly 3,000 rows."""
+    metadata = build_dataset(
+        raw_dir=RAW_DIR,
+        output_dir=tmp_path,
+        total_rows=DEFAULT_TOTAL_ROWS,
+        seed=DEFAULT_SEED,
+    )
+    assert metadata["num_rows"] == 3000
+    assert len(_load_jsonl(tmp_path / "simulated_disruptions.jsonl")) == 3000
 
 
 if __name__ == "__main__":
