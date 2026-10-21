@@ -1,0 +1,13 @@
+{
+  "version": "stage12_5_unified_context_v1",
+  "context_layers_planned_for_this_version": 4,
+  "context_layers_integrated": 4,
+  "layers": {
+    "weather": {"available_capability": true, "forecast_only": true, "historical_climatology_scored_as_weather": false},
+    "time_of_day": {"available_capability": true, "unknown_hours_policy": "unknown_not_open_and_not_penalized"},
+    "holiday_event": {"available_capability": true, "verified_event_required": true},
+    "historical_seasonality": {"available_capability": true, "model_policy": "stage12_4f_conservative_v1", "district_baseline_fallback": true}
+  },
+  "excluded": {"group_emotion": "deferred_by_project_owner_component_incomplete"},
+  "production_ranking": "unchanged"
+}

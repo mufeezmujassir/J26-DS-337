@@ -1,0 +1,17 @@
+{
+  "source": "data/reports/stage12_5_shadow_pilot.json",
+  "queries": 3,
+  "cold_start_wall_ms": 18806.275,
+  "warm_wall_ms_mean": 714.116,
+  "all_queries": {
+    "wall_ms": {"mean": 6744.836, "min": 267.572, "max": 18806.275},
+    "service_end_to_end_ms": {"mean": 6744.311, "min": 267.130, "max": 18805.702},
+    "semantic_retrieval_ms": {"mean": 5794.334, "min": 216.689, "max": 16123.738},
+    "weather_ms": {"mean": 766.846, "min": 0.852, "max": 2252.274},
+    "time_of_day_ms": {"mean": 0.986, "min": 0.804, "max": 1.348},
+    "holiday_event_ms": {"mean": 122.611, "min": 14.277, "max": 335.238},
+    "historical_seasonality_ms": {"mean": 27.803, "min": 4.557, "max": 73.593},
+    "reranking_ms": {"mean": 0.574, "min": 0.416, "max": 0.737}
+  },
+  "limitations": ["Three-query engineering pilot", "Cold start includes embedding model initialization and an external model-registry lookup attempt", "No load or concurrency benchmark"]
+}

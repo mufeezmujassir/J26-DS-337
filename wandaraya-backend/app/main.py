@@ -27,6 +27,7 @@ from app.routers.context_enrichment import router as context_enrichment_router
 from app.routers.content_recommendations import router as content_recommendations_router
 from app.routers.time_aware_recommendations import router as time_aware_recommendations_router
 from app.routers.holiday_events import router as holiday_events_router
+from app.routers.unified_context_research import router as unified_context_research_router
 app = FastAPI(
     title=settings.APP_NAME,
     version="1.0.0",
@@ -175,6 +176,9 @@ app.include_router(context_enrichment_router)
 app.include_router(content_recommendations_router)
 app.include_router(time_aware_recommendations_router)
 app.include_router(holiday_events_router)
+# Stage 12.5 internal research endpoint. The route remains inert unless all
+# independent feature flags and token authentication are configured.
+app.include_router(unified_context_research_router)
 # You can include your routers here later:
 # from app.routers import recommend
 # app.include_router(recommend.router, prefix="/api")

@@ -1,0 +1,18 @@
+{
+  "stage": "12.5",
+  "version": "stage12_5_unified_context_v1",
+  "status": "PASS_WITH_GROUP_EMOTION_DEFERRED_BY_OWNER",
+  "components": [
+    {"name": "semantic_retrieval", "path": "app/knowledge_base/retrieval/semantic_retriever.py", "status": "implemented", "async": true, "batch": false, "database": true, "limitations": ["Requires Qdrant and embedding model"]},
+    {"name": "weather", "path": "app/weather_model/context/weather_context_service.py", "status": "implemented", "async": true, "batch": false, "database": "approved monthly forecasts only", "adapter": "app/recommendation/unified_context/adapters/weather.py"},
+    {"name": "time_of_day", "path": "app/recommendation/time_context/service.py", "status": "implemented", "async": false, "batch": "adapter loop", "database": false, "adapter": "app/recommendation/unified_context/adapters/time_of_day.py"},
+    {"name": "holiday_event", "path": "app/holiday_event/context_scoring.py", "status": "implemented", "async": true, "batch": true, "database": true, "adapter": "app/recommendation/unified_context/adapters/holiday_event.py"},
+    {"name": "historical_seasonality", "path": "app/climate/services/seasonality_scoring.py", "status": "implemented", "async": true, "batch": true, "database": true, "adapter": "app/recommendation/unified_context/adapters/seasonality.py"},
+    {"name": "stage12_4g_composition", "path": "app/recommendation/context_composition/service.py", "status": "preserved", "async": true, "batch": true, "database": true},
+    {"name": "group_emotion", "status": "deferred_by_project_owner", "adapter": null}
+  ],
+  "routing": {"main": "app/main.py", "research_router": "app/routers/unified_context_research.py"},
+  "tests": "pytest",
+  "feature_flags_default_disabled": true,
+  "migration_required": false
+}

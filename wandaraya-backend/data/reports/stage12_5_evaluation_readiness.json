@@ -1,0 +1,12 @@
+{
+  "version": "stage12_5_unified_context_v1",
+  "engineering_diagnostics_ready": true,
+  "blinded_review_package_generation_ready": true,
+  "independent_unified_recommendation_labels_available": false,
+  "recommendation_accuracy_status": "UNIFIED_RANKING_ACCURACY_NOT_YET_VALIDATED",
+  "ndcg_computed": false,
+  "precision_at_5_computed": false,
+  "mrr_computed": false,
+  "stage12_4e2_labels_reused": false,
+  "next_required_action": "Collect independent blinded attraction-relevance judgments on a held-out unified-context recommendation set."
+}

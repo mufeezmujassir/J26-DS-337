@@ -1,0 +1,15 @@
+{
+  "version": "stage12_5_unified_context_v1",
+  "status": "PASS",
+  "validated": [
+    "weather forecast and climatology separation",
+    "provider failure and null-score behavior",
+    "missing coordinates and district behavior",
+    "opening-hours unknown is not open",
+    "holiday evidence remains null when ineligible",
+    "seasonality requires persisted activity mapping",
+    "adapter provenance and evidence-quality mapping",
+    "unsupported weather activities do not receive inferred scores"
+  ],
+  "group_emotion": "not_implemented_or_tested_by_owner_direction"
+}

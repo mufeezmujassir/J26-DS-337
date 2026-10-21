@@ -24,6 +24,15 @@ class Settings(BaseSettings):
     ENABLE_EXPERIMENTAL_SEASONALITY_EVIDENCE: bool = False
     ENABLE_EXPERIMENTAL_CONTEXT_COMPOSITION: bool = False
     ENABLE_SEASONALITY_PRODUCTION_RERANKING: bool = False
+    # Stage 12.5 is an internal research-only four-layer engine.  Every switch
+    # is opt-in and the production-ranking switch is a hard safety guard.
+    ENABLE_UNIFIED_CONTEXT_ENGINE: bool = False
+    ENABLE_UNIFIED_CONTEXT_EXPERIMENTAL_RERANKING: bool = False
+    ENABLE_UNIFIED_CONTEXT_RESEARCH_API: bool = False
+    ENABLE_UNIFIED_CONTEXT_PRODUCTION_RANKING: bool = False
+    UNIFIED_CONTEXT_RESEARCH_API_TOKEN: str = ""
+    UNIFIED_CONTEXT_MAX_CANDIDATES: int = 50
+    UNIFIED_CONTEXT_ADAPTER_TIMEOUT_SECONDS: float = 15.0
 
     @property
     def effective_route_api_key(self) -> str:

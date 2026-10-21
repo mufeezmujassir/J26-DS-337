@@ -1,0 +1,32 @@
+[
+  {
+    "query": "quiet beach for swimming and relaxation in southern Sri Lanka",
+    "travel_datetime": "2026-10-23T08:00:00+05:30",
+    "activity_type_id": 118,
+    "requested_activities": ["beach relaxation"],
+    "interests": ["beach", "swimming"],
+    "limit": 5,
+    "candidate_pool_size": 10,
+    "configuration": "R3_WEATHER_SEASONALITY_REDUNDANCY_CONTROLLED"
+  },
+  {
+    "query": "heritage temple and cultural attraction",
+    "travel_datetime": "2026-11-24T10:00:00+05:30",
+    "activity_type_id": 127,
+    "requested_activities": ["temple visit"],
+    "interests": ["heritage", "religion", "culture"],
+    "limit": 5,
+    "candidate_pool_size": 10,
+    "configuration": "R3_WEATHER_SEASONALITY_REDUNDANCY_CONTROLLED"
+  },
+  {
+    "query": "hiking trail with mountain views",
+    "travel_datetime": "2027-04-15T07:30:00+05:30",
+    "activity_type_id": 99,
+    "requested_activities": ["hiking"],
+    "interests": ["hiking", "nature"],
+    "limit": 5,
+    "candidate_pool_size": 10,
+    "configuration": "R3_WEATHER_SEASONALITY_REDUNDANCY_CONTROLLED"
+  }
+]

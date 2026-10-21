@@ -1,0 +1,13 @@
+{
+  "source": "data/reports/stage12_5_shadow_pilot.json",
+  "pilot_queries": 3,
+  "returned_candidates": 15,
+  "coverage": {
+    "weather": {"available": 5, "not_available": 10, "coverage_ratio": 0.333333},
+    "time_of_day": {"available": 11, "not_available": 4, "coverage_ratio": 0.733333},
+    "holiday_event": {"available": 10, "not_available": 5, "coverage_ratio": 0.666667},
+    "historical_seasonality": {"available": 0, "not_available": 15, "coverage_ratio": 0.0}
+  },
+  "interpretation": "Coverage is descriptive for three selected real queries only. Seasonality was truthfully unavailable for the retrieved attraction/activity pairs; no fallback score was fabricated.",
+  "group_emotion": "excluded_not_measured"
+}
