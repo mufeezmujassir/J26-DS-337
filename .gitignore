@@ -1,0 +1,24 @@
+# Environment and secrets
+.env
+*.env
+wandaraya-backend/.env
+
+# Temporary crash and execution logs
+hs_err_pid*.log
+replay_pid*.log
+*.log
+
+# Scratch scripts and local artifacts
+wandaraya-backend/scratch/
+scratch/
+
+# Benchmark evaluation cache
+wandaraya-backend/scripts/evaluation_results.json
+
+# Python caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+.venv/

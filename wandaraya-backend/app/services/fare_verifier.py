@@ -76,25 +76,29 @@ class FareVerifier:
             "temperature": 0.1
         }
 
-        try:
-            with httpx.Client(timeout=15.0) as client:
-                resp = client.post(self.GROQ_API_URL, json=payload, headers=headers)
-                if resp.status_code == 200:
-                    msg = resp.json()["choices"][0]["message"]
-                    raw_text = (msg.get("content") or msg.get("reasoning") or "").strip()
-                    if raw_text:
-                        status = "VERIFIED ACCURATE" if "VERIFIED ACCURATE" in raw_text.upper() else "VALIDATED WITH NOTES"
-                        return {
-                            "source": "GROQ_API",
-                            "model": self.MODEL_NAME,
-                            "status": status,
-                            "verified": True,
-                            "analysis_text": raw_text
-                        }
-                else:
-                    logger.warning(f"Groq API returned status {resp.status_code}: {resp.text}")
-        except Exception as e:
-            logger.warning(f"Groq API call failed: {e}")
+        if not getattr(self, "_groq_invalid_key", False):
+            try:
+                with httpx.Client(timeout=3.0) as client:
+                    resp = client.post(self.GROQ_API_URL, json=payload, headers=headers)
+                    if resp.status_code == 200:
+                        msg = resp.json()["choices"][0]["message"]
+                        raw_text = (msg.get("content") or msg.get("reasoning") or "").strip()
+                        if raw_text:
+                            status = "VERIFIED ACCURATE" if "VERIFIED ACCURATE" in raw_text.upper() else "VALIDATED WITH NOTES"
+                            return {
+                                "source": "GROQ_API",
+                                "model": self.MODEL_NAME,
+                                "status": status,
+                                "verified": True,
+                                "analysis_text": raw_text
+                            }
+                    elif resp.status_code in (401, 403):
+                        self._groq_invalid_key = True
+                        logger.info("Groq API key invalid or unauthorized. Using official SLR/NTC tariff audit baseline.")
+                    else:
+                        logger.warning(f"Groq API returned status {resp.status_code}: {resp.text}")
+            except Exception as e:
+                logger.warning(f"Groq API call failed: {e}")
 
         # Local deterministic baseline verification
         # 3rd class is ~1.4 - 1.6 LKR/km; 2nd is ~2.8 - 3.2 LKR/km; 1st is ~5.5 - 6.0 LKR/km

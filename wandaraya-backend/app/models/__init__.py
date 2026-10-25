@@ -22,6 +22,7 @@ from app.models.roads import Road
 from app.models.transport import BusFare, TrainStation, TrainFare
 from app.models.scenic import ScenicPlace
 from app.models.nbro import NBROIncident, NBROInspection, NBROPolygon
+from app.models.fuel import FuelPrice, VehicleFuelEfficiency
 
 
 # Removed weather models, user_preference, and group_preference per user instruction.
@@ -57,5 +58,7 @@ __all__ = [
     "NBROIncident",
     "NBROInspection",
     "NBROPolygon",
+    "FuelPrice",
+    "VehicleFuelEfficiency",
 
 ]
