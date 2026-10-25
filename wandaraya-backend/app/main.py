@@ -15,6 +15,8 @@ from app.routers.weather_forecasts import router as weather_forecast_router
 from app.routers.weather_context import (
     router as weather_context_router,
 )
+from app.routers.fuel import router as fuel_router
+
 app = FastAPI(
     title=settings.APP_NAME,
     version="1.0.0",
@@ -29,6 +31,7 @@ app.add_middleware(
 )
 
 app.include_router(weather_forecast_router)
+app.include_router(fuel_router)
 
 @app.get("/health")
 async def health_check():

@@ -1,6 +1,6 @@
 import math
 import heapq
-from typing import List, Tuple, Dict, Optional, Any
+from typing import List, Tuple, Dict, Optional, Any, Set
 from app.services.graph import MultimodalGraph, Edge
 from app.services.route_metrics import RouteMetricsService, CalculatedRouteMetrics
 
@@ -226,22 +226,104 @@ class TimeCostModel:
 
 class EnvironmentalRiskCostModel:
     """
-    Environmental risk-aware cost model for Dijkstra routing.
-    Weights edges by distance with a penalty factor for edges passing through
-    documented landslide proximity hazard zones or active severe weather areas.
-    Maintains travel distance, travel time, and fare as strictly separate metrics.
+    Component 2 Safety-Aware Dijkstra Cost Model:
+      SafetyEdgeCost = SegmentTravelTime * [1 + lambda * (SegmentRisk / 100)^2]
+
+    Principles:
+    - lambda = 3.0 (configurable experimental sensitivity parameter, not a validated optimum).
+    - SegmentTravelTime in minutes (calculated via TimeCostModel, or estimated from distance and transit speed).
+    - SegmentRisk is on a 0-100 scale.
+    - Excludes verified closed/restricted segments (closure_status == 'Closed' or is_closed is True).
+    - Unknown risk is NOT treated as zero risk; uses configurable default_unknown_risk (default 15.0).
+    - Ordinary shortest-time Dijkstra remains untouched via TimeCostModel as a scientific baseline.
     """
-    @staticmethod
-    def get_weight(edge: Edge) -> Optional[float]:
-        val_d = DistanceCostModel.get_weight(edge)
-        if val_d is None:
+
+    def __init__(
+        self,
+        lambda_risk: float = 3.0,
+        default_unknown_risk: float = 15.0,
+        verified_closures: Optional[Set[Tuple[str, str]]] = None,
+    ):
+        self.lambda_risk = float(lambda_risk)
+        self.default_unknown_risk = float(default_unknown_risk)
+        self.verified_closures = verified_closures or set()
+
+    @classmethod
+    def calculate_edge_weight(
+        cls,
+        edge: Edge,
+        lambda_risk: float = 3.0,
+        default_unknown_risk: float = 15.0,
+        verified_closures: Optional[Set[Tuple[str, str]]] = None,
+    ) -> Optional[float]:
+        inst = cls(
+            lambda_risk=lambda_risk,
+            default_unknown_risk=default_unknown_risk,
+            verified_closures=verified_closures,
+        )
+        return inst.get_weight(edge)
+
+    def get_cost(self, edge: Edge) -> Optional[float]:
+        return self.get_weight(edge)
+
+    def get_weight(self, edge: Optional[Edge] = None) -> Optional[float]:
+        # Handle static invocation: EnvironmentalRiskCostModel.get_weight(edge)
+        if edge is None and isinstance(self, Edge):
+            return EnvironmentalRiskCostModel.calculate_edge_weight(self)
+
+        if edge is None:
             return None
+
+        # 1. Authoritative road closure check
         attrs = getattr(edge, "attributes", {}) or {}
-        # Penalty if edge is tagged with environmental hazard (e.g., landslide proximity or severe weather alert)
-        risk_penalty = 1.0
-        if attrs.get("hazard_detected") or attrs.get("landslide_proximity"):
-            risk_penalty = 3.0  # Steers path towards safer alternative corridors
-        return max(0.01, round(val_d * risk_penalty, 4))
+        if str(attrs.get("closure_status", "")).lower() == "closed" or attrs.get("is_closed") is True:
+            return None
+        if self.verified_closures and (edge.from_node, edge.to_node) in self.verified_closures:
+            return None
+
+        # 2. Segment Travel Time in minutes
+        val_t = TimeCostModel.get_weight(edge)
+        if val_t is None:
+            val_d = DistanceCostModel.get_weight(edge)
+            if val_d is None:
+                return None
+            mode_str = str(getattr(edge.mode, "value", edge.mode)).lower()
+            if "walk" in mode_str:
+                speed_kmh = 4.5
+            elif "bus" in mode_str:
+                speed_kmh = 30.0
+            elif "rail" in mode_str:
+                speed_kmh = 40.0
+            else:
+                speed_kmh = 50.0
+            val_t = (val_d / speed_kmh) * 60.0
+
+        if val_t <= 0.0:
+            val_t = 0.1
+
+        # 3. Segment Environmental Risk (0-100 scale)
+        raw_risk = attrs.get("segment_risk")
+        if raw_risk is None:
+            raw_risk = attrs.get("environmental_risk_score")
+        if raw_risk is None:
+            raw_risk = attrs.get("risk_score")
+
+        if raw_risk is not None:
+            try:
+                seg_risk = min(100.0, max(0.0, float(raw_risk)))
+            except (ValueError, TypeError):
+                seg_risk = self.default_unknown_risk
+        elif attrs.get("landslide_proximity") or attrs.get("hazard_detected"):
+            seg_risk = 60.0
+        elif attrs.get("warning_active"):
+            seg_risk = 85.0
+        else:
+            seg_risk = self.default_unknown_risk
+
+        # 4. Configurable Quadratic Penalty: TravelTime * [1 + lambda * (Risk / 100)^2]
+        penalty = 1.0 + self.lambda_risk * ((seg_risk / 100.0) ** 2)
+        return max(0.01, round(val_t * penalty, 4))
+
 
 class DijkstraPathResult:
     """
@@ -256,7 +338,8 @@ class DijkstraPathResult:
         edges: List[Edge],
         total_distance_km: Optional[float] = None,
         objective: str = "shortest",
-        optimized_weight: Optional[float] = None
+        optimized_weight: Optional[float] = None,
+        selection_explanation: Optional[str] = None,
     ):
         self.nodes = nodes
         self.edges = edges
@@ -308,13 +391,34 @@ class DijkstraPathResult:
             self.warnings.append(
                 "Scenic-route objective optimized for picturesque landscapes, coastal/hill corridors, and scenic vistas."
             )
-        elif self.objective in ("environmental_risk", "safe", "risk_aware"):
-            self.optimized_weight = self.total_distance_km
+        elif self.objective in ("environmental_risk", "safe", "risk_aware", "safety", "safest"):
+            self.optimized_weight = self.total_journey_time_min if self.total_journey_time_min is not None else self.total_travel_time_min
             self.warnings.append(
-                "Environmental-risk objective optimized to steer route away from documented landslide zones and severe weather alerts."
+                "Safety-aware objective optimized using risk-weighted travel time penalizing segments with elevated landslide and weather hazards."
             )
         else:
             self.optimized_weight = optimized_weight
+
+        # Clear, transparent route selection explanation
+        if selection_explanation:
+            self.selection_explanation = selection_explanation
+        elif self.objective in ("shortest", "distance"):
+            self.selection_explanation = f"Selected to minimize total travel distance ({round(self.total_distance_km, 2)} km) across available transportation links."
+        elif self.objective in ("fastest", "time"):
+            time_val = round(self.total_journey_time_min or self.total_travel_time_min or 0.0, 1)
+            self.selection_explanation = f"Selected to minimize total journey time ({time_val} min) prioritizing high-speed transit corridors."
+        elif self.objective in ("cheapest", "cost"):
+            cost_val = round(self.total_cost_lkr or 0.0, 2)
+            self.selection_explanation = f"Selected to minimize total passenger fare ({cost_val} LKR) utilizing regulated public transit tariffs."
+        elif self.objective in ("slower", "slowest", "leisurely"):
+            self.selection_explanation = "Selected for a relaxed, leisurely travel pace with lower transit speeds and relaxed connections."
+        elif self.objective in ("scenic", "picturesque"):
+            self.selection_explanation = "Selected to prioritize scenic beauty along picturesque coastal and hill-country railway and road corridors."
+        elif self.objective in ("environmental_risk", "safe", "risk_aware", "safety", "safest"):
+            self.selection_explanation = "Selected using safety-weighted Dijkstra (lambda=3.0) penalizing segments with elevated landslide susceptibility and severe weather hazards, avoiding known risk zones while excluding verified road closures."
+        else:
+            self.selection_explanation = f"Selected based on configured objective '{self.objective}'."
+
     def to_dict(self) -> Dict[str, Any]:
         return {
             "total_distance_km": self.total_distance_km,
@@ -340,6 +444,7 @@ class DijkstraPathResult:
             "is_cost_estimated": self.is_cost_estimated,
             "objective": self.objective,
             "optimized_weight": self.optimized_weight,
+            "selection_explanation": self.selection_explanation,
             "warnings": self.warnings,
             "edges": [
                 {
@@ -402,6 +507,8 @@ class DijkstraRouter:
         "environmental_risk": "environmental_risk",
         "safe": "environmental_risk",
         "risk_aware": "environmental_risk",
+        "safety": "environmental_risk",
+        "safest": "environmental_risk",
     }
 
     def __init__(
@@ -409,9 +516,13 @@ class DijkstraRouter:
         graph: MultimodalGraph,
         cost_model: Optional[Any] = None,
         objective: str = "shortest",
-        allowed_modes: Optional[Any] = None
+        allowed_modes: Optional[Any] = None,
+        lambda_risk: float = 3.0,
+        verified_closures: Optional[Set[Tuple[str, str]]] = None,
     ):
         self.graph = graph
+        self.lambda_risk = float(lambda_risk)
+        self.verified_closures = verified_closures or set()
         raw_obj = (objective or "shortest").lower().strip()
         if raw_obj not in self.SUPPORTED_OBJECTIVES:
             raise ValueError(
@@ -441,7 +552,10 @@ class DijkstraRouter:
         elif self.canonical_objective == "scenic":
             self.cost_model = ScenicCostModel()
         elif self.canonical_objective == "environmental_risk":
-            self.cost_model = EnvironmentalRiskCostModel()
+            self.cost_model = EnvironmentalRiskCostModel(
+                lambda_risk=self.lambda_risk,
+                verified_closures=self.verified_closures,
+            )
 
     def _is_mode_allowed(self, mode_str: str) -> bool:
         if self.allowed_modes is None:

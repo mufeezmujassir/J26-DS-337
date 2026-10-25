@@ -146,8 +146,14 @@ async def calculate_dijkstra_route(
     if route_coords:
         try:
             from app.services.environmental_risk_service import environmental_risk_service
+            from app.services.warning_service import warning_service
             assessment = environmental_risk_service.assess_route(route_coords, route_id=f"{origin_node}->{dest_node}")
             env_assessment = assessment.to_dict()
+            ls_w = warning_service.check_official_landslide_warnings(route_coords)
+            met_w = warning_service.check_official_weather_warnings(route_coords)
+            env_assessment["landslide_warning_status"] = ls_w.warning_status
+            env_assessment["weather_warning_status"] = met_w.warning_status
+            env_assessment["active_warnings"] = [w.to_dict() for w in (ls_w.active_warnings + met_w.active_warnings)]
         except Exception as e:
             logger.warning(f"Environmental risk assessment failed: {e}")
 
