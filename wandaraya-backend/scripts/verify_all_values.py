@@ -17,7 +17,7 @@ print("=" * 80)
 all_passed = True
 
 for start, end in test_corridors:
-    url = f"http://127.0.0.1:8000/api/routes/multimodal-plan?start={start}&end={end}"
+    url = f"http://127.0.0.1:8000/api/routes/multimodal-plan?start={start}&end={end}&modes=train,bus,walking"
     try:
         resp = urllib.request.urlopen(url, timeout=30)
         assert resp.status == 200, f"HTTP status was {resp.status}"
