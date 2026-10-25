@@ -32,6 +32,7 @@ class NBROIncident(Base):
     rain_cum: Mapped[float] = mapped_column(Float, nullable=True)
     latitude: Mapped[float] = mapped_column(Float, nullable=True)
     longitude: Mapped[float] = mapped_column(Float, nullable=True)
+    geom = mapped_column(Geometry(geometry_type="POINT", srid=4326), nullable=True)
     created_at: Mapped[datetime] = mapped_column(default=lambda: datetime.now(timezone.utc))
 
 
@@ -57,6 +58,7 @@ class NBROInspection(Base):
     total_risk: Mapped[float] = mapped_column(Float, nullable=True)
     latitude: Mapped[float] = mapped_column(Float, nullable=True)
     longitude: Mapped[float] = mapped_column(Float, nullable=True)
+    geom = mapped_column(Geometry(geometry_type="POINT", srid=4326), nullable=True)
     created_at: Mapped[datetime] = mapped_column(default=lambda: datetime.now(timezone.utc))
 
 
@@ -72,4 +74,20 @@ class NBROPolygon(Base):
     centroid_longitude: Mapped[float] = mapped_column(Float, nullable=True)
     centroid_latitude: Mapped[float] = mapped_column(Float, nullable=True)
     wkt_geometry = mapped_column(Geometry(geometry_type="GEOMETRY", srid=4326), nullable=True)
+    created_at: Mapped[datetime] = mapped_column(default=lambda: datetime.now(timezone.utc))
+
+
+class NBROHazardZone(Base):
+    __tablename__ = "nbro_hazard_zones"
+
+    id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
+    hazard_range: Mapped[float] = mapped_column(Float, nullable=False, index=True)
+    hazard_class: Mapped[str] = mapped_column(String(50), nullable=False)
+    susceptibility_score: Mapped[float] = mapped_column(Float, nullable=False)
+    centroid_x: Mapped[float] = mapped_column(Float, nullable=False)
+    centroid_y: Mapped[float] = mapped_column(Float, nullable=False)
+    latitude: Mapped[float] = mapped_column(Float, nullable=False)
+    longitude: Mapped[float] = mapped_column(Float, nullable=False)
+    source_crs: Mapped[str] = mapped_column(String(20), default="EPSG:5234")
+    geom = mapped_column(Geometry(geometry_type="POINT", srid=4326), nullable=False)
     created_at: Mapped[datetime] = mapped_column(default=lambda: datetime.now(timezone.utc))

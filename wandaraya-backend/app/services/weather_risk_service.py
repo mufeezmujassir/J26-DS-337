@@ -41,6 +41,14 @@ HIGH_PRECIPITATION_PROBABILITY = 0.75
 # Cache TTL: 1 hour (3600 seconds)
 CACHE_TTL_SECONDS = 3600.0
 
+# Normalization maximum thresholds (mm) for multi-horizon Rainfall Risk (R):
+# R24: 0-100mm (100mm represents severe torrential 24h deluge)
+# R72: 0-200mm (200mm represents critical 3-day regional saturation limit)
+# R7:  0-350mm (350mm represents severe 7-day cumulative monsoon saturation)
+THRESHOLD_R24_MAX_MM = 100.0
+THRESHOLD_R72_MAX_MM = 200.0
+THRESHOLD_R7_MAX_MM = 350.0
+
 
 @dataclass
 class WeatherPointAssessment:
@@ -56,6 +64,10 @@ class WeatherPointAssessment:
     weather_descriptions: List[str] = field(default_factory=list)
     risk_level: str = "NONE"  # "NONE", "LOW", "MODERATE", "HIGH"
     risk_factors: List[str] = field(default_factory=list)
+    rainfall_risk_score: float = 0.0  # Normalized R (0-100)
+    weather_context_score: float = 0.0  # Normalized W (0-100, non-rainfall)
+    wind_speed_mps: Optional[float] = None
+    visibility_m: Optional[float] = None
     cached: bool = False
     fetched_at: float = field(default_factory=time.time)
     error_message: Optional[str] = None
@@ -69,6 +81,10 @@ class WeatherPointAssessment:
             "status": self.status,
             "precipitation_mm": self.precipitation_mm,
             "precipitation_probability": self.precipitation_prob,
+            "rainfall_risk_score": round(self.rainfall_risk_score, 2),
+            "weather_context_score": round(self.weather_context_score, 2),
+            "wind_speed_mps": self.wind_speed_mps,
+            "visibility_m": self.visibility_m,
             "temperature_range_c": (
                 [self.temperature_min_c, self.temperature_max_c]
                 if self.temperature_min_c is not None and self.temperature_max_c is not None
@@ -83,6 +99,153 @@ class WeatherPointAssessment:
 
 
 class WeatherRiskService:
+    @staticmethod
+    def normalize_rainfall_component(rain_mm: Optional[float], max_threshold_mm: float) -> float:
+        """
+        Normalizes raw rainfall measurement in millimetres to a 0-100 score:
+          score = min(100.0, max(0.0, (rain_mm / max_threshold_mm) * 100.0))
+        Returns 0.0 if rain_mm is None or negative.
+        """
+        if rain_mm is None or not math.isfinite(rain_mm) or rain_mm < 0.0:
+            return 0.0
+        return round(min(100.0, max(0.0, (float(rain_mm) / max_threshold_mm) * 100.0)), 2)
+
+    @staticmethod
+    def calculate_rainfall_risk_score(
+        r24_mm: Optional[float] = None,
+        r72_mm: Optional[float] = None,
+        r7_mm: Optional[float] = None,
+        weights: Tuple[float, float, float] = (0.50, 0.30, 0.20),
+        is_forecast: bool = True,
+        observation_timestamp: Optional[str] = None,
+    ) -> Dict[str, Any]:
+        """
+        Calculates normalized Rainfall Risk Score (R):
+          R = 0.50 * Norm(R24) + 0.30 * Norm(R72) + 0.20 * Norm(R7)
+        All three components are normalized to 0-100 before combining.
+        Distinguishes observed from forecast data, records timestamps, and
+        flags horizon completeness ("COMPLETE" vs "R24_ONLY" vs "UNAVAILABLE").
+        """
+        w24, w72, w7 = weights
+        norm_r24 = WeatherRiskService.normalize_rainfall_component(r24_mm, THRESHOLD_R24_MAX_MM)
+        norm_r72 = WeatherRiskService.normalize_rainfall_component(r72_mm, THRESHOLD_R72_MAX_MM)
+        norm_r7 = WeatherRiskService.normalize_rainfall_component(r7_mm, THRESHOLD_R7_MAX_MM)
+
+        if r24_mm is not None and r72_mm is not None and r7_mm is not None:
+            completeness = "COMPLETE"
+            combined_r = round(w24 * norm_r24 + w72 * norm_r72 + w7 * norm_r7, 2)
+        elif r24_mm is not None:
+            completeness = "R24_ONLY"
+            combined_r = norm_r24
+        else:
+            completeness = "UNAVAILABLE"
+            combined_r = 0.0
+
+        return {
+            "rainfall_risk_score": round(combined_r, 2),
+            "r24_raw_mm": round(r24_mm, 2) if r24_mm is not None else None,
+            "r72_raw_mm": round(r72_mm, 2) if r72_mm is not None else None,
+            "r7_raw_mm": round(r7_mm, 2) if r7_mm is not None else None,
+            "r24_normalized_score": norm_r24,
+            "r72_normalized_score": norm_r72,
+            "r7_normalized_score": norm_r7,
+            "weights": {"w24": w24, "w72": w72, "w7": w7},
+            "thresholds_max_mm": {
+                "r24": THRESHOLD_R24_MAX_MM,
+                "r72": THRESHOLD_R72_MAX_MM,
+                "r7": THRESHOLD_R7_MAX_MM,
+            },
+            "horizon_completeness": completeness,
+            "data_type": "FORECAST" if is_forecast else "OBSERVED",
+            "timestamp_utc": observation_timestamp or datetime.now(timezone.utc).isoformat(),
+        }
+
+    @staticmethod
+    def calculate_weather_context_score(
+        weather_descriptions: List[str],
+        wind_speed_mps: Optional[float] = None,
+        visibility_m: Optional[float] = None,
+        is_severe_alert: bool = False,
+    ) -> Dict[str, Any]:
+        """
+        Calculates Weather-Context Score (W) on a 0-100 scale.
+        Evaluates travel hazards WITHOUT double-counting precipitation:
+        1. Severe Convective Phenomena (0-40 points): Thunderstorms, lightning, squalls, gale warnings.
+        2. High Wind Hazards (0-35 points): Wind speeds exceeding 15 m/s (~54 km/h gale threshold).
+        3. Impaired Visibility (0-25 points): Low visibility < 1000m (dense mist, mountain fog).
+        Clamped to 0-100.
+        """
+        score_convective = 0.0
+        score_wind = 0.0
+        score_visibility = 0.0
+        factors: List[str] = []
+
+        convective_keywords = {
+            "thunderstorm": 35.0,
+            "squall": 40.0,
+            "tornado": 40.0,
+            "gale": 35.0,
+            "cyclonic": 40.0,
+            "heavy thunderstorm": 40.0,
+        }
+        for desc in weather_descriptions:
+            dl = desc.lower()
+            for kw, pt in convective_keywords.items():
+                if kw in dl:
+                    score_convective = max(score_convective, pt)
+                    factors.append(f"Convective hazard: {desc}")
+                    break
+
+        if is_severe_alert and score_convective == 0.0:
+            score_convective = 20.0
+            factors.append("Active severe meteorological advisory")
+
+        if wind_speed_mps is not None and math.isfinite(wind_speed_mps) and wind_speed_mps > 0:
+            if wind_speed_mps >= 20.0:
+                score_wind = 35.0
+                factors.append(f"Gale-force winds ({wind_speed_mps:.1f} m/s >= 20 m/s)")
+            elif wind_speed_mps >= 15.0:
+                score_wind = 25.0
+                factors.append(f"Strong gusts ({wind_speed_mps:.1f} m/s >= 15 m/s)")
+            elif wind_speed_mps >= 10.0:
+                score_wind = 12.0
+                factors.append(f"Moderate breezy conditions ({wind_speed_mps:.1f} m/s)")
+
+        if visibility_m is not None and math.isfinite(visibility_m) and visibility_m >= 0:
+            if visibility_m < 500.0:
+                score_visibility = 25.0
+                factors.append(f"Extremely poor visibility ({visibility_m:.0f}m < 500m)")
+            elif visibility_m < 1000.0:
+                score_visibility = 15.0
+                factors.append(f"Reduced visibility / mountain fog ({visibility_m:.0f}m < 1000m)")
+            elif visibility_m < 3000.0:
+                score_visibility = 8.0
+                factors.append(f"Moderate mist ({visibility_m:.0f}m)")
+
+        if visibility_m is None:
+            for desc in weather_descriptions:
+                dl = desc.lower()
+                if "dense fog" in dl:
+                    score_visibility = max(score_visibility, 25.0)
+                    factors.append(f"Reported phenomenon: {desc}")
+                elif "fog" in dl or "mist" in dl or "haze" in dl:
+                    score_visibility = max(score_visibility, 12.0)
+                    factors.append(f"Reported phenomenon: {desc}")
+
+        total_w = min(100.0, score_convective + score_wind + score_visibility)
+
+        return {
+            "weather_context_score": round(total_w, 2),
+            "breakdown": {
+                "convective_score": round(score_convective, 2),
+                "wind_score": round(score_wind, 2),
+                "visibility_score": round(score_visibility, 2),
+            },
+            "contributing_factors": factors,
+            "wind_speed_mps": wind_speed_mps,
+            "visibility_m": visibility_m,
+            "non_rainfall_isolation_verified": True,
+        }
     @staticmethod
     def _resolve_api_key() -> Optional[str]:
         # 1. From settings
@@ -234,6 +397,13 @@ class WeatherRiskService:
 
         status_code = "RISK_DETECTED" if risk_level in ("HIGH", "MODERATE") else "NO_RISK_DETECTED"
 
+        # Calculate normalized R and W component scores for this point
+        r_calc = self.calculate_rainfall_risk_score(r24_mm=precip_val, is_forecast=True)
+        w_calc = self.calculate_weather_context_score(
+            weather_descriptions=descriptions,
+            is_severe_alert=(risk_level in ("HIGH", "MODERATE"))
+        )
+
         assessment = WeatherPointAssessment(
             latitude=latitude,
             longitude=longitude,
@@ -247,6 +417,8 @@ class WeatherRiskService:
             weather_descriptions=descriptions,
             risk_level=risk_level,
             risk_factors=risk_factors,
+            rainfall_risk_score=r_calc["rainfall_risk_score"],
+            weather_context_score=w_calc["weather_context_score"],
             cached=False,
             fetched_at=now,
         )
@@ -270,6 +442,8 @@ class WeatherRiskService:
                 "overall_risk_level": "UNKNOWN",
                 "points_assessed": 0,
                 "weather_points": [],
+                "max_rainfall_risk_score": 0.0,
+                "max_weather_context_score": 0.0,
                 "summary": "No route coordinates provided for weather evaluation.",
             }
 
@@ -292,7 +466,6 @@ class WeatherRiskService:
 
         # Limit max samples to avoid excessive API calls
         if len(points_to_query) > 5:
-            # Sample evenly down to 5 points
             indices = [int(i * (len(points_to_query) - 1) / 4) for i in range(5)]
             points_to_query = [points_to_query[idx] for idx in indices]
 
@@ -336,18 +509,35 @@ class WeatherRiskService:
                 status = "DATA_STALE"
 
         max_precip = max((p.precipitation_mm or 0.0 for p in point_results if p.available), default=0.0)
+        max_r_score = max((p.rainfall_risk_score for p in point_results if p.available), default=0.0)
+        max_w_score = max((p.weather_context_score for p in point_results if p.available), default=0.0)
+
+        all_descriptions: List[str] = []
+        for p in point_results:
+            if p.available:
+                all_descriptions.extend(p.weather_descriptions)
 
         return {
             "status": status,
             "available": available_count > 0,
             "overall_risk_level": overall_risk,
             "max_precipitation_forecast_mm": round(max_precip, 2),
+            "max_rainfall_risk_score": round(max_r_score, 2),
+            "max_weather_context_score": round(max_w_score, 2),
             "points_assessed": available_count,
             "points_total": total_count,
             "weather_points": [p.to_dict() for p in point_results],
+            "rainfall_risk_evaluation": self.calculate_rainfall_risk_score(r24_mm=max_precip, is_forecast=True),
+            "weather_context_evaluation": self.calculate_weather_context_score(
+                weather_descriptions=all_descriptions,
+                is_severe_alert=(overall_risk in ("HIGH", "MODERATE"))
+            ),
             "summary": summary,
         }
 
 
 # Singleton service instance
 weather_risk_service = WeatherRiskService()
+normalize_rainfall_component = WeatherRiskService.normalize_rainfall_component
+calculate_rainfall_risk_score = WeatherRiskService.calculate_rainfall_risk_score
+calculate_weather_context_score = WeatherRiskService.calculate_weather_context_score

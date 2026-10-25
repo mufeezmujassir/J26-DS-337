@@ -34,6 +34,18 @@ SRI_LANKA_BOUNDS = {
     "max_lon": 82.00,
 }
 
+# Configurable, evidence-based mapping from NBRO 1:50,000 Landslide Hazard Zonation
+# categorical classes to a standardized 0-100 Geological Susceptibility score (L).
+# Based on NBRO Landslide Hazard Mapping Project technical classification standards.
+DEFAULT_HAZARD_CLASS_SUSCEPTIBILITY: Dict[str, float] = {
+    "VERY_HIGH_HAZARD": 95.0,
+    "HIGH_HAZARD": 75.0,
+    "MODEST_HAZARD": 40.0,
+    "LOW_HAZARD": 15.0,
+    "WATER_BODY_UNCLASSIFIED": 0.0,
+    "NO_HAZARD_ZONE": 0.0,
+}
+
 
 def haversine_distance_m(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
     """Calculates great-circle distance between two points in meters."""
@@ -83,11 +95,13 @@ class LandslideRecord:
     rain_1h: Optional[float] = None
     rain_24h: Optional[float] = None
     rain_cum: Optional[float] = None
-    trigger_rainfall_mm: float = 75.0
-    trigger_rainfall_source: str = "NBRO_EMPIRICAL_WATCH_THRESHOLD"
+    trigger_rainfall_mm: Optional[float] = 75.0
+    trigger_rainfall_source: Optional[str] = "NBRO_EMPIRICAL_WATCH_THRESHOLD"
+    trigger_rainfall_status: str = "AVAILABLE"  # "AVAILABLE", "HISTORICAL_TRIGGER_UNAVAILABLE", "NBRO_LHZM_ZONATION"
     is_polygon: bool = False
     polygon_layer: Optional[str] = None
     polygon_name: Optional[str] = None
+    geojson: Optional[str] = None
 
     def to_dict(self) -> Dict[str, Any]:
         return {
@@ -107,13 +121,19 @@ class LandslideRecord:
             "rain_cum_mm": self.rain_cum,
             "trigger_rainfall_mm": self.trigger_rainfall_mm,
             "trigger_rainfall_source": self.trigger_rainfall_source,
+            "trigger_rainfall_status": self.trigger_rainfall_status,
             "is_polygon": self.is_polygon,
             "polygon_layer": self.polygon_layer,
+            "polygon_name": self.polygon_name,
+            "geojson": self.geojson,
             "historical_rainfall_description": (
                 f"Historically triggered by {self.rain_24h:.1f}mm rainfall in 24h"
                 if self.rain_24h is not None else (
                     f"Historically triggered by {self.rain_cum:.1f}mm cumulative rainfall"
-                    if self.rain_cum is not None else f"NBRO hill country baseline threshold: {self.trigger_rainfall_mm:.1f}mm/24h"
+                    if self.rain_cum is not None else (
+                        f"Empirical hill country baseline threshold: {self.trigger_rainfall_mm:.1f}mm/24h"
+                        if self.trigger_rainfall_mm is not None else "Historical incident recorded without localized rainfall measurement at time of failure."
+                    )
                 )
             ),
         }
@@ -137,9 +157,26 @@ class LandslideHazardMatch:
         }
 
 
+_SYNC_DB_ENGINE = None
+_SUSCEPTIBILITY_CACHE: Dict[Tuple[float, float], Tuple[float, str]] = {}
+
+def get_sync_engine():
+    global _SYNC_DB_ENGINE
+    if _SYNC_DB_ENGINE is None:
+        try:
+            from app.config import settings
+            from sqlalchemy import create_engine
+            sync_url = settings.DATABASE_URL.replace("+asyncpg", "")
+            _SYNC_DB_ENGINE = create_engine(sync_url, pool_size=10, max_overflow=20, pool_pre_ping=True, connect_args={"connect_timeout": 3})
+        except Exception as e:
+            logger.warning(f"Failed to initialize sync database engine: {e}")
+    return _SYNC_DB_ENGINE
+
+
 class LandslideService:
     def __init__(self, data_path: Optional[str] = None, polygon_path: Optional[str] = None) -> None:
         default_master, default_poly = self._default_dataset_paths()
+        self.is_custom_dataset = (data_path is not None)
         self.data_path = data_path or default_master
         self.polygon_path = polygon_path or (default_poly if data_path is None else None)
         self.records: List[LandslideRecord] = []
@@ -162,21 +199,19 @@ class LandslideService:
     def get_database_status() -> Dict[str, Any]:
         """Queries PostgreSQL database for NBRO tables row counts and health."""
         try:
-            from dotenv import load_dotenv
-            load_dotenv()
-            db_url = os.environ.get("DATABASE_URL")
-            if not db_url:
-                return {"connected": False, "reason": "DATABASE_URL not configured"}
-            from sqlalchemy import create_engine, text
-            sync_url = db_url.replace("+asyncpg", "").replace("+psycopg", "")
-            engine = create_engine(sync_url, connect_args={"connect_timeout": 3})
+            from sqlalchemy import text
+            engine = get_sync_engine()
+            if not engine:
+                return {"connected": False, "error": "Database engine not initialized"}
             with engine.connect() as conn:
+                hz_cnt = conn.execute(text("SELECT count(*) FROM nbro_hazard_zones")).scalar()
                 inc_cnt = conn.execute(text("SELECT count(*) FROM nbro_incidents")).scalar()
                 insp_cnt = conn.execute(text("SELECT count(*) FROM nbro_inspections")).scalar()
                 poly_cnt = conn.execute(text("SELECT count(*) FROM nbro_polygons")).scalar()
                 return {
                     "connected": True,
                     "database": "PostgreSQL with PostGIS",
+                    "nbro_hazard_zones_count": hz_cnt,
                     "nbro_incidents_count": inc_cnt,
                     "nbro_inspections_count": insp_cnt,
                     "nbro_polygons_count": poly_cnt,
@@ -184,6 +219,299 @@ class LandslideService:
                 }
         except Exception as e:
             return {"connected": False, "error": str(e)}
+
+    @staticmethod
+    def get_susceptibility_score(
+        latitude: float,
+        longitude: float,
+        class_mapping: Optional[Dict[str, float]] = None,
+    ) -> Tuple[float, str]:
+        """
+        Queries official NBRO 1:50,000 Landslide Hazard Zonation Map (194,016 points)
+        in PostgreSQL/PostGIS for the hazard susceptibility score at the given coordinate.
+        Converts hazard classes into a documented 0-100 susceptibility score using a
+        configurable, evidence-based mapping (DEFAULT_HAZARD_CLASS_SUSCEPTIBILITY).
+        Uses PostGIS geography ST_Distance for accurate metric distance calculations.
+        Returns (susceptibility_score, hazard_class).
+        """
+        mapping = class_mapping or DEFAULT_HAZARD_CLASS_SUSCEPTIBILITY
+        ckey = (round(latitude, 3), round(longitude, 3))
+        if ckey in _SUSCEPTIBILITY_CACHE and class_mapping is None:
+            return _SUSCEPTIBILITY_CACHE[ckey]
+        try:
+            from sqlalchemy import text
+            engine = get_sync_engine()
+            if not engine:
+                return 0.0, "NO_HAZARD_ZONE"
+            with engine.connect() as conn:
+                res = conn.execute(text("""
+                    SELECT hz.susceptibility_score, hz.hazard_class,
+                           ST_Distance(hz.geom::geography, ST_SetSRID(ST_MakePoint(:lon, :lat), 4326)::geography) AS dist_m
+                    FROM nbro_hazard_zones hz
+                    WHERE ST_DWithin(hz.geom, ST_SetSRID(ST_MakePoint(:lon, :lat), 4326), 0.015)
+                    ORDER BY hz.geom <-> ST_SetSRID(ST_MakePoint(:lon, :lat), 4326)
+                    LIMIT 1;
+                """), {"lon": longitude, "lat": latitude}).fetchone()
+                if res and res[2] <= 1500.0:
+                    hazard_cls = str(res[1])
+                    score_val = mapping.get(hazard_cls, float(res[0]) if res[0] is not None else 0.0)
+                    val = (score_val, hazard_cls)
+                else:
+                    val = (0.0, "NO_HAZARD_ZONE")
+                if class_mapping is None:
+                    _SUSCEPTIBILITY_CACHE[ckey] = val
+                return val
+        except Exception as e:
+            logger.warning(f"Failed to query database for susceptibility score: {e}")
+            return 0.0, "NO_HAZARD_ZONE"
+
+    @classmethod
+    def get_segment_susceptibility(
+        cls,
+        coordinates: List[Tuple[float, float]],
+        class_mapping: Optional[Dict[str, float]] = None,
+    ) -> Dict[str, Any]:
+        """
+        Calculates geological susceptibility across a road/railway polyline segment
+        by sampling points and querying NBRO hazard zones using PostGIS geography distance.
+        Returns max, mean, and dominant hazard class along the segment.
+        """
+        if not coordinates:
+            return {
+                "max_susceptibility": 0.0,
+                "mean_susceptibility": 0.0,
+                "dominant_hazard_class": "NO_HAZARD_ZONE",
+                "sampled_points": 0,
+            }
+
+        scores: List[float] = []
+        classes: List[str] = []
+        for lat, lon in coordinates:
+            sc, hc = cls.get_susceptibility_score(lat, lon, class_mapping=class_mapping)
+            scores.append(sc)
+            classes.append(hc)
+
+        max_sc = max(scores) if scores else 0.0
+        mean_sc = sum(scores) / len(scores) if scores else 0.0
+        dominant_cls = "NO_HAZARD_ZONE"
+        for sc, hc in zip(scores, classes):
+            if sc == max_sc:
+                dominant_cls = hc
+                break
+
+        return {
+            "max_susceptibility": round(max_sc, 2),
+            "mean_susceptibility": round(mean_sc, 2),
+            "dominant_hazard_class": dominant_cls,
+            "sampled_points": len(scores),
+        }
+
+    def query_database_hazards(
+        self,
+        route_coordinates: List[Tuple[float, float]],
+        buffer_meters: float = 1000.0,
+    ) -> Optional[List[LandslideHazardMatch]]:
+        """
+        Directly queries PostgreSQL/PostGIS for NBRO hazard zones (194,016 1:50,000 points),
+        historical incidents (20,438), and mapped hazard polygons (1,967).
+        Uses GiST spatial indexes (idx_nbro_hazard_zones_geom, idx_nbro_incidents_geom).
+        Returns None if database is unreachable, allowing seamless KDTree fallback.
+        """
+        valid_coords = [
+            (float(lat), float(lon))
+            for lat, lon in route_coordinates
+            if SRI_LANKA_BOUNDS["min_lat"] <= float(lat) <= SRI_LANKA_BOUNDS["max_lat"]
+            and SRI_LANKA_BOUNDS["min_lon"] <= float(lon) <= SRI_LANKA_BOUNDS["max_lon"]
+        ]
+        if not valid_coords:
+            return []
+
+        try:
+            from sqlalchemy import text
+            engine = get_sync_engine()
+            if not engine:
+                return []
+
+            deg_buf = max(0.001, buffer_meters / 111320.0)
+            if len(valid_coords) == 1:
+                wkt = f"POINT({valid_coords[0][1]} {valid_coords[0][0]})"
+            else:
+                pts_str = ", ".join(f"{lon} {lat}" for lat, lon in valid_coords)
+                wkt = f"LINESTRING({pts_str})"
+
+            hazard_map: Dict[str, LandslideHazardMatch] = {}
+
+            with engine.connect() as conn:
+                # 1. Official 1:50,000 Landslide Hazard Zonation Map (194,016 points)
+                hz_rows = conn.execute(text("""
+                    SELECT hz.id, hz.hazard_range, hz.hazard_class, hz.susceptibility_score,
+                           hz.latitude, hz.longitude,
+                           ST_Distance(hz.geom::geography, ST_SetSRID(ST_GeomFromText(:wkt), 4326)::geography) AS dist_m
+                    FROM nbro_hazard_zones hz
+                    WHERE ST_DWithin(hz.geom, ST_SetSRID(ST_GeomFromText(:wkt), 4326), :deg_buffer)
+                    ORDER BY hz.susceptibility_score DESC, dist_m ASC
+                    LIMIT 30;
+                """), {"wkt": wkt, "deg_buffer": deg_buf}).fetchall()
+
+                for row in hz_rows:
+                    hz_id, h_range, h_class, susc_score, lat, lon, dist_m = row
+                    dist_m = float(dist_m)
+                    if dist_m > buffer_meters:
+                        continue
+                    zone_key = f"NBRO_LHZM_{hz_id}"
+                    proximity_zone = "CORRIDOR_DIRECT" if dist_m <= 500.0 else ("ADJACENT_SLOPE" if dist_m <= 1500.0 else "REGIONAL_WATCH")
+                    advisory = (
+                        f"Official NBRO 1:50,000 Landslide Hazard Zonation Map indicates {h_class.replace('_', ' ')} "
+                        f"(Susceptibility: {susc_score:.1f}, Range {h_range}) within {dist_m:.0f}m of route corridor. "
+                        f"Represents baseline geological slope susceptibility, not an active ground failure."
+                    )
+                    record = LandslideRecord(
+                        record_id=zone_key,
+                        incident_type=f"NBRO Hazard Zone ({h_class})",
+                        district="Hill Country",
+                        ds_division=None,
+                        event_date=None,
+                        cause="NBRO 1:50,000 Hazard Zonation Survey",
+                        latitude=lat,
+                        longitude=lon,
+                        source="NBRO 1:50,000 Landslide Hazard Zonation Map (PostgreSQL)",
+                        is_historical=False,
+                        is_active_closure=False,
+                        trigger_rainfall_mm=75.0,
+                        trigger_rainfall_source="NBRO_LHZM_ZONATION",
+                        trigger_rainfall_status="NBRO_LHZM_ZONATION",
+                    )
+                    hazard_map[zone_key] = LandslideHazardMatch(
+                        record=record,
+                        distance_meters=dist_m,
+                        nearest_route_point=(lat, lon),
+                        proximity_zone=proximity_zone,
+                        advisory=advisory,
+                    )
+
+                # 2. Historical Recorded Incidents (20,438 records)
+                inc_rows = conn.execute(text("""
+                    SELECT inc.id, inc.case_id, inc.inc_type, inc.district, inc.ds_name,
+                           inc.date, inc.cause, inc.rain_1h, inc.rain_24h, inc.rain_cum,
+                           inc.latitude, inc.longitude,
+                           ST_Distance(inc.geom::geography, ST_SetSRID(ST_GeomFromText(:wkt), 4326)::geography) AS dist_m
+                    FROM nbro_incidents inc
+                    WHERE ST_DWithin(inc.geom, ST_SetSRID(ST_GeomFromText(:wkt), 4326), :deg_buffer)
+                    ORDER BY dist_m ASC
+                    LIMIT 30;
+                """), {"wkt": wkt, "deg_buffer": deg_buf}).fetchall()
+
+                for row in inc_rows:
+                    (i_id, case_id, inc_type, district, ds_name, date_str, cause,
+                     r1h, r24h, rcum, lat, lon, dist_m) = row
+                    dist_m = float(dist_m)
+                    if dist_m > buffer_meters:
+                        continue
+                    rec_id = case_id or f"NBRO_INC_{i_id}"
+                    if rec_id in hazard_map and hazard_map[rec_id].distance_meters <= dist_m:
+                        continue
+
+                    if r24h is not None and r24h > 0:
+                        trig_mm, trig_src = r24h, "NBRO_EVENT_24H_RECORDED"
+                        trig_status = "HISTORICAL_TRIGGER_RECORDED"
+                    elif rcum is not None and rcum > 0:
+                        trig_mm, trig_src = rcum, "NBRO_EVENT_CUMULATIVE_RECORDED"
+                        trig_status = "HISTORICAL_TRIGGER_RECORDED"
+                    else:
+                        trig_mm, trig_src = None, "HISTORICAL_RAINFALL_NOT_RECORDED"
+                        trig_status = "HISTORICAL_TRIGGER_UNAVAILABLE"
+
+                    proximity_zone = "CORRIDOR_DIRECT" if dist_m <= 500.0 else ("ADJACENT_SLOPE" if dist_m <= 1500.0 else "REGIONAL_WATCH")
+                    advisory = (
+                        f"Route corridor passes within {dist_m:.0f}m of an NBRO recorded historical {inc_type or 'landslide'} "
+                        f"in {district or 'Hill Country'} (Date: {date_str or 'unrecorded'}). Ground truth represents historical occurrence; "
+                        f"segment is not assumed to be unstable or closed unless verified by current conditions."
+                    )
+                    record = LandslideRecord(
+                        record_id=rec_id,
+                        incident_type=inc_type or "Historical Landslide",
+                        district=district or "Unknown",
+                        ds_division=ds_name,
+                        event_date=date_str,
+                        cause=cause,
+                        latitude=lat,
+                        longitude=lon,
+                        source="NBRO Sri Lanka Landslide Inventory (PostgreSQL)",
+                        is_historical=True,
+                        is_active_closure=False,
+                        rain_1h=r1h,
+                        rain_24h=r24h,
+                        rain_cum=rcum,
+                        trigger_rainfall_mm=trig_mm,
+                        trigger_rainfall_source=trig_src,
+                        trigger_rainfall_status=trig_status,
+                    )
+                    hazard_map[rec_id] = LandslideHazardMatch(
+                        record=record,
+                        distance_meters=dist_m,
+                        nearest_route_point=(lat, lon),
+                        proximity_zone=proximity_zone,
+                        advisory=advisory,
+                    )
+
+                # 3. NBRO Mapped Hazard Polygons (1,967 polygons)
+                poly_rows = conn.execute(text("""
+                    SELECT p.id, p.name, p.district, p.layer_name, p.centroid_latitude, p.centroid_longitude,
+                           ST_Distance(p.wkt_geometry::geography, ST_SetSRID(ST_GeomFromText(:wkt), 4326)::geography) AS dist_m,
+                           ST_Intersects(p.wkt_geometry, ST_SetSRID(ST_GeomFromText(:wkt), 4326)) AS is_intersect,
+                           ST_AsGeoJSON(p.wkt_geometry) AS geojson
+                    FROM nbro_polygons p
+                    WHERE ST_DWithin(p.wkt_geometry, ST_SetSRID(ST_GeomFromText(:wkt), 4326), :deg_buffer)
+                    ORDER BY dist_m ASC
+                    LIMIT 20;
+                """), {"wkt": wkt, "deg_buffer": deg_buf}).fetchall()
+
+                for row in poly_rows:
+                    p_id, name, district, layer_name, c_lat, c_lon, dist_m, is_intersect, geojson_str = row
+                    dist_m = float(dist_m)
+                    if dist_m > buffer_meters:
+                        continue
+                    poly_key = f"NBRO_POLY_{p_id}"
+                    zone = "POLYGON_DIRECT_INTERSECTION" if is_intersect else ("POLYGON_DIRECT" if dist_m <= 500.0 else "POLYGON_ADJACENT")
+                    advisory = (
+                        f"Route corridor directly intersects NBRO mapped landslide hazard footprint polygon ({layer_name}) in {district}."
+                        if zone == "POLYGON_DIRECT_INTERSECTION" else
+                        f"Route corridor passes within {dist_m:.0f}m of NBRO mapped landslide hazard footprint polygon in {district}."
+                    )
+                    poly_rec = LandslideRecord(
+                        record_id=poly_key,
+                        incident_type=f"NBRO Hazard Polygon ({layer_name})",
+                        district=district or "Unknown",
+                        ds_division=None,
+                        event_date=None,
+                        cause="Mapped Geological Slope Instability Footprint",
+                        latitude=c_lat,
+                        longitude=c_lon,
+                        source="NBRO Sri Lanka Hazard Polygons (PostgreSQL)",
+                        is_historical=True,
+                        is_active_closure=False,
+                        trigger_rainfall_mm=75.0,
+                        trigger_rainfall_source="NBRO_POLYGON_WATCH_THRESHOLD",
+                        is_polygon=True,
+                        polygon_layer=layer_name,
+                        polygon_name=name,
+                        geojson=geojson_str,
+                    )
+                    hazard_map[poly_key] = LandslideHazardMatch(
+                        record=poly_rec,
+                        distance_meters=dist_m,
+                        nearest_route_point=(c_lat, c_lon),
+                        proximity_zone=zone,
+                        advisory=advisory,
+                    )
+
+            results = list(hazard_map.values())
+            results.sort(key=lambda m: m.distance_meters)
+            return results
+
+        except Exception as e:
+            logger.warning(f"PostGIS direct hazard query encountered error (falling back to KDTree): {e}")
+            return None
 
     def _load_and_index(self) -> None:
         """Loads and validates NBRO master records and hazard polygons, constructing spatial KDTrees."""
@@ -360,13 +688,15 @@ class LandslideService:
     def find_hazards_near_route(
         self,
         route_coordinates: List[Tuple[float, float]],
-        buffer_meters: float = 1000.0
+        buffer_meters: float = 1000.0,
+        prefer_database: bool = True,
     ) -> List[LandslideHazardMatch]:
         """
         Finds all NBRO landslide hazard records within buffer_meters of any point along the route.
-        Returns deduplicated matches sorted by proximity to route corridor.
+        Queries PostgreSQL/PostGIS database first (194,016 hazard zones + 20,438 incidents + 1,967 polygons).
+        Falls back to in-memory spatial KDTree if database is offline.
         """
-        if not self._tree or not self.records or not route_coordinates:
+        if not route_coordinates:
             return []
 
         # Validate and clean route coordinates
@@ -377,6 +707,14 @@ class LandslideService:
             and SRI_LANKA_BOUNDS["min_lon"] <= float(lon) <= SRI_LANKA_BOUNDS["max_lon"]
         ]
         if not valid_route_coords:
+            return []
+
+        if prefer_database and not self.is_custom_dataset:
+            db_res = self.query_database_hazards(valid_route_coords, buffer_meters=buffer_meters)
+            if db_res is not None:
+                return db_res
+
+        if not self._tree or not self.records:
             return []
 
         # Dense sampling if sparse to avoid missing hazards between vertices

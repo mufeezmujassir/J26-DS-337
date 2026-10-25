@@ -20,7 +20,7 @@ class LiveWeatherClient:
         self._api_key = api_key if api_key is not None else (
             settings.OPENWEATHERMAP_API_KEY or settings.OPENWEATHER_API_KEY
         )
-        self._client = http_client or httpx.Client(timeout=15.0)
+        self._client = http_client or httpx.Client(timeout=3.5)
         self._owns_client = http_client is None
 
     def close(self) -> None:
