@@ -38,14 +38,29 @@ class AttractionCard extends StatelessWidget {
                   color: AppColors.primaryDark,
                   borderRadius: BorderRadius.circular(16),
                 ),
+                clipBehavior: Clip.antiAlias,
                 child: Stack(
                   children: [
-                    const Center(
-                      child: Icon(
-                        Icons.landscape_rounded,
-                        color: Colors.white,
-                        size: 32,
-                      ),
+                    Positioned.fill(
+                      child: attraction.primaryImageUrl == null
+                          ? const Center(
+                              child: Icon(
+                                Icons.landscape_rounded,
+                                color: Colors.white,
+                                size: 32,
+                              ),
+                            )
+                          : Image.network(
+                              attraction.primaryImageUrl!,
+                              fit: BoxFit.cover,
+                              errorBuilder: (_, _, _) => const Center(
+                                child: Icon(
+                                  Icons.landscape_rounded,
+                                  color: Colors.white,
+                                  size: 32,
+                                ),
+                              ),
+                            ),
                     ),
                     if (rank != null)
                       Positioned(

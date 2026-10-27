@@ -39,6 +39,24 @@ def test_monthly_planning_weather_never_rejects_a_specific_day():
     assert _weather_rejection(candidate(source="approved_model")) is None
 
 
+def test_light_rain_alone_does_not_reject_outdoor_candidate():
+    item = candidate(
+        probability=0.30,
+        rainfall=1.0,
+        descriptions=["light rain"],
+    )
+    assert _weather_rejection(item) is None
+
+
+def test_heavy_rain_description_can_reject_even_before_amount_threshold():
+    item = candidate(
+        probability=0.30,
+        rainfall=4.0,
+        descriptions=["heavy rain"],
+    )
+    assert _weather_rejection(item) is not None
+
+
 def test_indoor_museum_is_not_rejected_during_rain():
     item = candidate(
         name="Galle Museum",

@@ -18,6 +18,7 @@ class KnowledgeBaseAttractionSummary(BaseModel):
     rating: float | None = None
     categories: list[str] = Field(default_factory=list)
     activities: list[str] = Field(default_factory=list)
+    primary_image_url: str | None = None
 
 
 class NearbyAttraction(KnowledgeBaseAttractionSummary):
@@ -56,6 +57,13 @@ class KnowledgeBaseDescription(BaseModel):
     language: str | None = None
 
 
+class KnowledgeBaseImage(BaseModel):
+    url: str
+    is_primary: bool = False
+    source: str | None = None
+    attribution: dict | None = None
+
+
 class KnowledgeBaseAttractionDetail(KnowledgeBaseAttractionSummary):
     address: str | None = None
     google_place_id: str | None = None
@@ -64,6 +72,9 @@ class KnowledgeBaseAttractionDetail(KnowledgeBaseAttractionSummary):
     is_active: bool
     updated_at: datetime | None = None
     enrichments: list[KnowledgeBaseDescription] = Field(default_factory=list)
+    images: list[KnowledgeBaseImage] = Field(default_factory=list)
+    official_source_url: str | None = None
+    official_theme: str | None = None
 
 
 class SemanticSearchResult(KnowledgeBaseAttractionSummary):

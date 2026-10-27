@@ -11,6 +11,7 @@ class AttractionSummary {
     this.longitude,
     this.rating,
     this.semanticScore,
+    this.primaryImageUrl,
   });
 
   factory AttractionSummary.fromJson(Map<String, dynamic> json) =>
@@ -26,6 +27,7 @@ class AttractionSummary {
         categories: _strings(json['categories']),
         activities: _strings(json['activities']),
         semanticScore: (json['semantic_score'] as num?)?.toDouble(),
+        primaryImageUrl: json['primary_image_url'] as String?,
       );
 
   final int id;
@@ -39,6 +41,7 @@ class AttractionSummary {
   final List<String> categories;
   final List<String> activities;
   final double? semanticScore;
+  final String? primaryImageUrl;
 }
 
 class AttractionDetail extends AttractionSummary {
@@ -54,11 +57,15 @@ class AttractionDetail extends AttractionSummary {
     super.latitude,
     super.longitude,
     super.rating,
+    super.primaryImageUrl,
     this.address,
     this.websiteUrl,
     this.description,
     this.updatedAt,
     this.enrichments = const [],
+    this.images = const [],
+    this.officialSourceUrl,
+    this.officialTheme,
   });
 
   factory AttractionDetail.fromJson(Map<String, dynamic> json) {
@@ -74,6 +81,7 @@ class AttractionDetail extends AttractionSummary {
       latitude: summary.latitude,
       longitude: summary.longitude,
       rating: summary.rating,
+      primaryImageUrl: summary.primaryImageUrl,
       isActive: json['is_active'] as bool? ?? false,
       address: json['address'] as String?,
       websiteUrl: json['website_url'] as String?,
@@ -86,6 +94,14 @@ class AttractionDetail extends AttractionSummary {
                 AttractionEnrichment.fromJson(Map<String, dynamic>.from(item)),
           )
           .toList(),
+      images: (json['images'] as List? ?? const [])
+          .whereType<Map>()
+          .map(
+            (item) => AttractionImage.fromJson(Map<String, dynamic>.from(item)),
+          )
+          .toList(),
+      officialSourceUrl: json['official_source_url'] as String?,
+      officialTheme: json['official_theme'] as String?,
     );
   }
 
@@ -95,6 +111,28 @@ class AttractionDetail extends AttractionSummary {
   final String? description;
   final DateTime? updatedAt;
   final List<AttractionEnrichment> enrichments;
+  final List<AttractionImage> images;
+  final String? officialSourceUrl;
+  final String? officialTheme;
+}
+
+class AttractionImage {
+  const AttractionImage({
+    required this.url,
+    this.isPrimary = false,
+    this.source,
+  });
+
+  factory AttractionImage.fromJson(Map<String, dynamic> json) =>
+      AttractionImage(
+        url: json['url'] as String,
+        isPrimary: json['is_primary'] as bool? ?? false,
+        source: json['source'] as String?,
+      );
+
+  final String url;
+  final bool isPrimary;
+  final String? source;
 }
 
 class AttractionEnrichment {

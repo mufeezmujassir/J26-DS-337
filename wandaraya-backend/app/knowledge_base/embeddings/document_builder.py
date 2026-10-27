@@ -26,6 +26,8 @@ class AttractionSemanticDocument:
     categories:list[str]
     activities:list[str]
 
+    official_text:str | None
+
     wikipedia_text:str | None
     wikivoyage_text:str|None
 
@@ -89,6 +91,7 @@ class AttractionDocumentBuilder:
             province=province,
             categories=categories,
             activities=activities,
+            official_text=attraction.description,
             wikipedia_text=wikipedia_text,
             wikivoyage_text=wikivoyage_text,
         )
@@ -102,6 +105,7 @@ class AttractionDocumentBuilder:
             province=province,
             categories=categories,
             activities=activities,
+            official_text=attraction.description,
             wikipedia_text=wikipedia_text,
             wikivoyage_text=wikivoyage_text,
         )
@@ -193,6 +197,7 @@ class AttractionDocumentBuilder:
         province: str | None,
         categories: list[str],
         activities: list[str],
+        official_text: str | None,
         wikipedia_text: str | None,
         wikivoyage_text: str | None,
     ) -> str:
@@ -240,6 +245,12 @@ class AttractionDocumentBuilder:
             sections.append(
                 "Activities: "
                 + ", ".join(activities)
+            )
+
+        if official_text:
+            sections.append(
+                "Official Sri Lanka Tourism description: "
+                + official_text.strip()
             )
 
         if wikipedia_text:

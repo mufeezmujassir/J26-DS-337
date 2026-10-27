@@ -67,9 +67,26 @@ class _DetailsBody extends StatelessWidget {
           color: AppColors.primaryDark,
           borderRadius: BorderRadius.circular(24),
         ),
-        child: const Center(
-          child: Icon(Icons.landscape_rounded, color: Colors.white, size: 70),
-        ),
+        clipBehavior: Clip.antiAlias,
+        child: detail.primaryImageUrl == null
+            ? const Center(
+                child: Icon(
+                  Icons.landscape_rounded,
+                  color: Colors.white,
+                  size: 70,
+                ),
+              )
+            : Image.network(
+                detail.primaryImageUrl!,
+                fit: BoxFit.cover,
+                errorBuilder: (_, _, _) => const Center(
+                  child: Icon(
+                    Icons.landscape_rounded,
+                    color: Colors.white,
+                    size: 70,
+                  ),
+                ),
+              ),
       ),
       const SizedBox(height: 20),
       Text(
@@ -80,6 +97,27 @@ class _DetailsBody extends StatelessWidget {
           letterSpacing: -.5,
         ),
       ),
+      if (detail.images.length > 1) ...[
+        const SizedBox(height: 14),
+        SizedBox(
+          height: 92,
+          child: ListView.separated(
+            scrollDirection: Axis.horizontal,
+            itemCount: detail.images.length,
+            separatorBuilder: (_, _) => const SizedBox(width: 10),
+            itemBuilder: (context, index) => ClipRRect(
+              borderRadius: BorderRadius.circular(14),
+              child: Image.network(
+                detail.images[index].url,
+                width: 132,
+                height: 92,
+                fit: BoxFit.cover,
+                errorBuilder: (_, _, _) => const SizedBox.shrink(),
+              ),
+            ),
+          ),
+        ),
+      ],
       const SizedBox(height: 7),
       Text(
         [

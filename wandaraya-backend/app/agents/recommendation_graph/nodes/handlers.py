@@ -66,10 +66,16 @@ def _weather_rejection(candidate: dict[str, Any]) -> dict[str, Any] | None:
         for value in ((conditions.get("provenance") or {}).get("weather_descriptions") or [])
         if str(value).strip()
     ]
+    # A provider description such as "light rain" is not enough on its own
+    # to remove every exposed attraction. Reserve hard rejection for clearly
+    # severe descriptions or quantitative rain/probability thresholds.
     adverse_description = any(
         token in description.casefold()
         for description in descriptions
-        for token in ("rain", "storm", "thunder", "squall")
+        for token in (
+            "heavy rain", "extreme rain", "torrential rain",
+            "storm", "thunder", "squall", "cyclone",
+        )
     )
     adverse = (
         (probability is not None and float(probability) >= 0.70)

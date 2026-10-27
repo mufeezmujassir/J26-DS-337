@@ -17,6 +17,8 @@ from app.models.attraction import Attraction
 from app.models.attraction_activities import AttractionActivity
 from app.models.attraction_categories import AttractionCategory
 from app.models.attraction_descriptions import AttractionDescription
+from app.models.attraction_images import AttractionImage
+from app.models.tourism_sync import AttractionSourceReference
 from app.models.categories import Category
 from app.models.data_sources import DataSource
 from app.models.district import District
@@ -25,6 +27,7 @@ from app.schemas.knowledge_base import (
     KnowledgeBaseAttractionSummary,
     KnowledgeBaseCategory,
     KnowledgeBaseDescription,
+    KnowledgeBaseImage,
     KnowledgeBaseDistrict,
     KnowledgeBaseQualityReport,
     KnowledgeBaseStatus,
@@ -49,10 +52,19 @@ async def _names(db: AsyncSession, attraction_id: int) -> tuple[list[str], list[
 
 async def _summary(db: AsyncSession, attraction: Attraction, district_name: str | None = None) -> KnowledgeBaseAttractionSummary:
     categories, activities = await _names(db, attraction.id)
+    if district_name is None and attraction.district_id is not None:
+        district_name = await db.scalar(select(District.name).where(District.id == attraction.district_id))
+    primary_image_url = await db.scalar(
+        select(AttractionImage.original_url).where(
+            AttractionImage.attraction_id == attraction.id,
+            AttractionImage.is_active.is_(True),
+        ).order_by(AttractionImage.is_primary.desc(), AttractionImage.id).limit(1)
+    )
     return KnowledgeBaseAttractionSummary(
         id=attraction.id, name=attraction.name, district_id=attraction.district_id, district=district_name,
         city=attraction.city, latitude=attraction.latitude, longitude=attraction.longitude,
         rating=attraction.rating, categories=categories, activities=activities,
+        primary_image_url=primary_image_url,
     )
 
 
@@ -154,6 +166,20 @@ async def get_attraction(attraction_id: int, db: AsyncSession = Depends(get_db))
             AttractionDescription.attraction_id == attraction.id, AttractionDescription.is_active.is_(True)
         ).order_by(AttractionDescription.created_at.desc())
     )).all()
+    images = list((await db.scalars(
+        select(AttractionImage).where(
+            AttractionImage.attraction_id == attraction.id,
+            AttractionImage.is_active.is_(True),
+            AttractionImage.original_url.is_not(None),
+        ).order_by(AttractionImage.is_primary.desc(), AttractionImage.id)
+    )).all())
+    official_source_url = await db.scalar(
+        select(AttractionSourceReference.canonical_source_url).where(
+            AttractionSourceReference.attraction_id == attraction.id,
+            AttractionSourceReference.source_provider == "srilanka.travel",
+        ).limit(1)
+    )
+    official_theme = summary.categories[0] if summary.categories else None
     return KnowledgeBaseAttractionDetail(
         **summary.model_dump(), address=attraction.address, google_place_id=attraction.google_place_id,
         website_url=attraction.website_url, description=attraction.description, is_active=attraction.is_active,
@@ -162,6 +188,12 @@ async def get_attraction(attraction_id: int, db: AsyncSession = Depends(get_db))
             title=item.title, description=item.description, source=source, source_url=item.source_url,
             language=item.language,
         ) for item, source in enrichments],
+        images=[KnowledgeBaseImage(
+            url=item.original_url, is_primary=item.is_primary,
+            source=item.source_type, attribution=item.attribution,
+        ) for item in images if item.original_url],
+        official_source_url=official_source_url,
+        official_theme=official_theme,
     )
 
 
