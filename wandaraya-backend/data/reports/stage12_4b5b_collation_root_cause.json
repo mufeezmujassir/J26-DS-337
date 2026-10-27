@@ -1,0 +1,24 @@
+{
+  "generated_at_utc": "2026-10-20T06:12:54.140973+00:00",
+  "database": {
+    "database": "wandaraya",
+    "provider": "c",
+    "datcollate": "en_US.utf8",
+    "datctype": "en_US.utf8",
+    "recorded": "2.41",
+    "actual": "2.31"
+  },
+  "postgres_image": "postgis/postgis:17-3.5",
+  "image_id": "sha256:01a6a70e41e6c4467c8f55f6063555ed72db2d6662cd0d571040d42eadaeb6f6",
+  "libc": "ldd (Debian GLIBC 2.31-13+deb11u13) 2.31",
+  "mounts": [
+    {
+      "Type": "bind",
+      "Source": "C:\\Users\\MUFEEZ\\OneDrive - Sri Lanka Institute of Information Technology\\Desktop\\RP\\Research_2027\\wandaraya-backend\\postgres-data",
+      "Destination": "/var/lib/postgresql/data"
+    }
+  ],
+  "explanation": "Database records libc collation 2.41 while current libc supplies 2.31. A prior environment with different libc is plausible; exact image or change history is not established.",
+  "alembic_revision": "e67f8a9b0c1d",
+  "production_write": false
+}

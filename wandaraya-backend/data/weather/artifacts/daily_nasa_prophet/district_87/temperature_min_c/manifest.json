@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "model_type": "daily_prophet",
+  "district_id": 87,
+  "district_name": "Mannar",
+  "target": "temperature_min_c",
+  "resolution": "daily",
+  "observed_rain_threshold_mm": null,
+  "rain_prediction_threshold_mm": null,
+  "training_start": "2010-01-01",
+  "training_cutoff": "2025-12-31",
+  "validation_period": "2024-01-01..2024-12-31",
+  "test_period": "2025-01-01..2025-12-31",
+  "validation_metrics": {
+    "mae": 0.6607,
+    "rmse": 0.816,
+    "bias": -0.4663
+  },
+  "test_metrics": {
+    "mae": 0.6887,
+    "rmse": 0.8989,
+    "bias": 0.5341
+  },
+  "source_provenance": {
+    "provider": "NASA POWER",
+    "source_file": "data/climate/processed/nasa_power/historical_2010_2025/district_87_20100101_20251231.json",
+    "source_sha256": "b123b2d60f627aea40d3f006c9ec603811bd43c20dff31c6efc3a6d28ed5d54c",
+    "district_id": 87,
+    "district_name": "Mannar",
+    "latitude": 8.880898345500043,
+    "longitude": 80.16334279919033,
+    "first_date": "2010-01-01",
+    "last_date": "2025-12-31",
+    "calendar_days": 5844,
+    "missing_source_dates": 0,
+    "invalid_values_replaced_with_missing": {
+      "rainfall_mm": 0,
+      "temperature_min_c": 0,
+      "temperature_max_c": 0,
+      "temperature_mean_c": 0,
+      "relative_humidity_pct": 0,
+      "solar_radiation": 0,
+      "wind_speed_10m": 0,
+      "temperature_order": 0
+    },
+    "spatial_uncertainty": "COARSE_GRID_REPRESENTATIVE_ONLY"
+  },
+  "model_sha256": "2579458754b7511f97213e5bc73906717f000ec14c4d412aac652288bd52a0ec",
+  "production_approved": true
+}

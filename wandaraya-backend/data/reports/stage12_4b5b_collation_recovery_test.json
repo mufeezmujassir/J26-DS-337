@@ -1,0 +1,17 @@
+{
+  "isolated_database": "climate_collation_review_5b",
+  "pre_reindex_recorded": "2.31",
+  "pre_reindex_actual": "2.31",
+  "reindex_database": "passed",
+  "post_reindex_recorded": "2.31",
+  "post_reindex_actual": "2.31",
+  "active_attractions": 6120,
+  "climate_observations": 2196,
+  "duplicate_climate_keys": 0,
+  "status": "REINDEX_MECHANICS_TESTED_NOT_MISMATCH_REMEDIATION",
+  "limitations": [
+    "restored database did not reproduce version mismatch",
+    "collation refresh not tested",
+    "full application integrity and all unique keys not independently verified"
+  ]
+}

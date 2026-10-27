@@ -1,0 +1,11 @@
+{
+  "status": "HISTORICAL_IMPORT_ENGINEERING_BLOCKED",
+  "production_import_enabled": false,
+  "production_apply_behavior": "scripts.ingest_stage12_4b5_historical rejects --apply unconditionally",
+  "guard_implementation": "app/climate/production_guard.py performs pure identity, revision, constraint, source and default-collation checks; it is not wired to a production execution path and does not authorize writes",
+  "guard_unit_tests": "18 passed across tests/climate/test_stage12_4b7_guards.py, test_historical_executor.py and test_stage12_4b5a_safety.py",
+  "limitations": ["No production-aware command wired to database identity or independent target identifier", "No tested production authorization mechanism or full preflight", "Named collation dynamic usage and prior rebuild execution evidence not independently established", "No current restore-tested backup", "Content fingerprint preservation across synthetic pilot and weather integration import not tested"],
+  "postgresql_production_writes": false,
+  "qdrant_writes": false,
+  "nasa_api_requests": false
+}

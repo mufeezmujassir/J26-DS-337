@@ -1,0 +1,20 @@
+{
+  "audit_date":"2026-10-21",
+  "models_algorithms":[
+    {"name":"BAAI/bge-large-en-v1.5","family":"sentence embedding transformer","status":"IMPLEMENTED_AND_TESTED","trained_in_repo":false,"input":"semantic document or query","output":"1024-D normalized vector","evaluation":"no local encoder comparison found"},
+    {"name":"Qdrant cosine retrieval","family":"dense nearest-neighbor retrieval","status":"IMPLEMENTED_AND_TESTED","trained_in_repo":false,"input":"query vector","output":"ordered IDs and scores","evaluation":"runtime collection verified"},
+    {"name":"Prophet monthly weather","family":"additive statistical forecasting","status":"IMPLEMENTED_EXPERIMENTAL","trained_in_repo":true,"input":"monthly target series","output":"yhat and 80% interval","evaluation":{"runs":20,"validated_runs":7,"production_approved_runs":0,"registered_horizon_months":3}},
+    {"name":"monthly climatology weather baseline","family":"statistical baseline","status":"IMPLEMENTED_EXPERIMENTAL","trained_in_repo":true,"input":"historical monthly observations","output":"monthly baseline forecast","evaluation":{"runs":18,"validated_runs":8,"production_approved_runs":0,"registered_horizon_months":3}},
+    {"name":"seasonal naive weather baseline","family":"statistical baseline","status":"IMPLEMENTED_EXPERIMENTAL","trained_in_repo":true,"input":"historical monthly observations","output":"seasonal persistence forecast","evaluation":{"runs":5,"validated_runs":1,"production_approved_runs":0,"registered_horizon_months":3}},
+    {"name":"weather activity rules","family":"rule-based scorer","status":"IMPLEMENTED_EXPERIMENTAL","trained_in_repo":false,"input":"weather evidence and activity profile","output":"suitability/evidence","evaluation":"heuristic"},
+    {"name":"time-of-day scorer","family":"schedule rule engine","status":"IMPLEMENTED_EXPERIMENTAL","trained_in_repo":false,"input":"hours, arrival, duration","output":"1/.5/0/null","evaluation":"heuristic"},
+    {"name":"holiday-event scorer","family":"eligible weighted average","status":"IMPLEMENTED_EXPERIMENTAL","trained_in_repo":false,"input":"holiday, Poya, verified event, interests","output":"bounded context score","evaluation":"weights unoptimized"},
+    {"name":"seasonality Baseline B","family":"multivariable climatology composite","status":"VALIDATION_PENDING","trained_in_repo":false,"input":"rain/temp/humidity/solar district-month features","output":"suitability evidence","evaluation":{"exploratory_ndcg5":0.9157434178,"prospective_validation":false}},
+    {"name":"R0-R3 unified reranker","family":"deterministic hybrid reranking","status":"IMPLEMENTED_EXPERIMENTAL","trained_in_repo":false,"input":"semantic score and available context","output":"experimental order and trace","evaluation":"shadow reliability only"},
+    {"name":"LangGraph workflow","family":"stateful orchestration algorithm","status":"IMPLEMENTED_EXPERIMENTAL","trained_in_repo":false,"input":"natural-language request/session","output":"clarification or verified recommendation response","evaluation":"8 tests and 3-request pilot"},
+    {"name":"Neural Collaborative Filtering","family":"neural recommender","status":"NOT_IMPLEMENTED"},
+    {"name":"GNN graph recommender","family":"graph neural recommender","status":"NOT_IMPLEMENTED"},
+    {"name":"LSTM weather model","family":"recurrent forecasting","status":"NOT_IMPLEMENTED"},
+    {"name":"genetic optimizer","family":"evolutionary optimization","status":"NOT_IMPLEMENTED"}
+  ]
+}

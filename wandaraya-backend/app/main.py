@@ -28,6 +28,7 @@ from app.routers.content_recommendations import router as content_recommendation
 from app.routers.time_aware_recommendations import router as time_aware_recommendations_router
 from app.routers.holiday_events import router as holiday_events_router
 from app.routers.unified_context_research import router as unified_context_research_router
+from app.routers.langgraph_recommendations import router as langgraph_recommendations_router
 app = FastAPI(
     title=settings.APP_NAME,
     version="1.0.0",
@@ -179,6 +180,9 @@ app.include_router(holiday_events_router)
 # Stage 12.5 internal research endpoint. The route remains inert unless all
 # independent feature flags and token authentication are configured.
 app.include_router(unified_context_research_router)
+# Stage 12.6 checkpointed LangGraph research workflow. It has dedicated flags
+# and authentication and remains disconnected from production routing.
+app.include_router(langgraph_recommendations_router)
 # You can include your routers here later:
 # from app.routers import recommend
 # app.include_router(recommend.router, prefix="/api")

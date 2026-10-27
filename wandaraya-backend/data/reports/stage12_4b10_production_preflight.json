@@ -1,0 +1,19 @@
+{
+  "status": "BLOCKED_IMPORTER_INCOMPLETE",
+  "method": "Read-only SQL and offline source audit; not a full production CLI preflight",
+  "database": "wandaraya",
+  "server_version": "17.5",
+  "revision": "f78a9b0c1d2e",
+  "default_collation_recorded": "2.31",
+  "default_collation_actual": "2.31",
+  "pilot_observations": 2196,
+  "historical_checkpoints": 0,
+  "source_checksums_matching": 28,
+  "expected_batch_counts": [17532, 146100],
+  "backup_sha256": "85ce4023c38efc39fde5d151c133e9829d361fae5cc3fd3f7b68ec1441e5073e",
+  "backup_checksum_matches": true,
+  "backup_restore_report": "data/reports/stage12_4b9_backup_readiness.json",
+  "backup_limitations": ["restore used --no-owner --no-acl", "roles and permissions equivalence not tested", "no verified off-host copy", "freshness and baseline must be rechecked at execution"],
+  "collation_limitations": ["873 named mismatches, no direct climate-index dependencies or climate user triggers in prior review; dynamic or external use not excluded"],
+  "production_writes_executed": false
+}

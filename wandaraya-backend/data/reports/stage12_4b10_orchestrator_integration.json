@@ -1,0 +1,8 @@
+{
+  "status": "INCOMPLETE_PRODUCTION_EXECUTION_DISABLED",
+  "implemented": ["Request binding covering operation, database identity, dataset version, count, manifest hash and backup hash", "Ed25519 approval signature verification using independently supplied pinned public key; not wired into production CLI", "Pure checks reject missing/mismatched approval, backup checksum mismatch, absent/failed restore evidence and stale backup", "CLI --isolated-test connects to isolated batch orchestrator"],
+  "not_implemented": ["End-to-end production execution orchestration", "Integration of binding/backup guards with CLI and database transaction", "Independent proof that an approval file represents actual operator authorization", "Durable post-import reconciliation and protected-content checks", "Full isolated end-to-end CLI execution and rejection suite"],
+  "apply": "scripts.ingest_stage12_4b5_historical rejects --apply unconditionally",
+  "important": "A caller-supplied JSON approval object is not authorization. Signature verification must be wired to a separately provisioned, protected production trust key before it can serve as an execution gate; no production key is provisioned.",
+  "production_writes_executed": false
+}

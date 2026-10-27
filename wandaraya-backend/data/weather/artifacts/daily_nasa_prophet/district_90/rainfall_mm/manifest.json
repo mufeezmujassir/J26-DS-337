@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "model_type": "daily_prophet",
+  "district_id": 90,
+  "district_name": "Moneragala",
+  "target": "rainfall_mm",
+  "resolution": "daily",
+  "observed_rain_threshold_mm": 0.5,
+  "rain_prediction_threshold_mm": 5.276767,
+  "training_start": "2010-01-01",
+  "training_cutoff": "2025-12-31",
+  "validation_period": "2024-01-01..2024-12-31",
+  "test_period": "2025-01-01..2025-12-31",
+  "validation_metrics": {
+    "mae": 4.9892,
+    "rmse": 8.5736,
+    "bias": 0.4273,
+    "rain_event_accuracy": 0.5601,
+    "rain_event_precision": 0.8836,
+    "rain_event_recall": 0.4725,
+    "rain_event_f1": 0.6158,
+    "rain_prediction_threshold_mm": 5.276767
+  },
+  "test_metrics": {
+    "mae": 5.9225,
+    "rmse": 13.5001,
+    "bias": -3.2449,
+    "rain_event_accuracy": 0.3973,
+    "rain_event_precision": 0.9405,
+    "rain_event_recall": 0.2687,
+    "rain_event_f1": 0.418,
+    "rain_prediction_threshold_mm": 5.276767
+  },
+  "source_provenance": {
+    "provider": "NASA POWER",
+    "source_file": "data/climate/processed/nasa_power/historical_2010_2025/district_90_20100101_20251231.json",
+    "source_sha256": "89e75fa521df56e1fbda1e1f4550712c1bc89548bd6372dc534e7e27e16b0f2a",
+    "district_id": 90,
+    "district_name": "Moneragala",
+    "latitude": 6.876474256500046,
+    "longitude": 81.3751729176638,
+    "first_date": "2010-01-01",
+    "last_date": "2025-12-31",
+    "calendar_days": 5844,
+    "missing_source_dates": 0,
+    "invalid_values_replaced_with_missing": {
+      "rainfall_mm": 0,
+      "temperature_min_c": 0,
+      "temperature_max_c": 0,
+      "temperature_mean_c": 0,
+      "relative_humidity_pct": 0,
+      "solar_radiation": 0,
+      "wind_speed_10m": 0,
+      "temperature_order": 0
+    },
+    "spatial_uncertainty": "COARSE_GRID_REPRESENTATIVE_ONLY"
+  },
+  "model_sha256": "dff4c56b0a0bbb4a026351caecca7087684b3054ab6e55cd237179423fea8746",
+  "production_approved": true
+}

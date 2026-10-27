@@ -69,9 +69,7 @@ class HolidayEventIngestionService:
             await self.repository.db.commit()
             return {"status": status, "source": source_name, "access": access, "counts": counts, "database_readback": {"holidays": 0, "events": 0}, "postgresql_domain_records_written": False, "ingestion_audit_written": True, "qdrant_writes": False}
         try:
-            # Persist the RUNNING audit row before domain work. A later rollback
-            # can therefore transition this same run to FAILED rather than create
-            # a second, misleading run record.
+
             await self.repository.db.commit()
             if source_name == "calendar_sri_lanka":
                 records = await self._ingest_calendar(counts)

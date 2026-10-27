@@ -1,0 +1,12 @@
+{
+  "status": "REVIEW_REQUIRED",
+  "catalog_report": "data/reports/stage12_4b7_named_collation_dependencies.json",
+  "catalog_mismatches": 873,
+  "catalog_user_index_references": 0,
+  "catalog_user_column_references": 0,
+  "catalog_dependencies": 0,
+  "search": "rg -n -i '\\bcollate\\b|\\.collate\\(|setlocale\\(|locale\\.strxfrm|locale\\.strcoll' app scripts migrations --glob '*.py'",
+  "search_results": ["scripts/stage12_4b7_readonly_audit.py uses explicit COLLATE C for deterministic fingerprint sorting"],
+  "limitations": ["Text search cannot exclude dynamic SQL, generated queries, non-Python code or external clients", "Zero direct catalog references do not prove that named collations are never used", "Production default-collation rebuild execution logs not independently located"],
+  "production_maintenance_performed": false
+}

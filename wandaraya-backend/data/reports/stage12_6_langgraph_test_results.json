@@ -1,0 +1,25 @@
+{
+  "stage": "12.6",
+  "executed_at": "2026-10-21",
+  "tests_passed": 116,
+  "tests_failed": 0,
+  "suites": [
+    {
+      "name": "stage12_6_recommendation_graph",
+      "command": "python -m pytest -q tests/agents/recommendation_graph -x",
+      "passed": 8,
+      "failed": 0,
+      "duration_seconds": 20.84
+    },
+    {
+      "name": "stage12_5_unified_context_regression",
+      "command": "python -m pytest -q tests/recommendation/test_unified_context_schemas.py tests/recommendation/test_unified_context_reranker.py tests/recommendation/test_unified_context_adapters.py -x",
+      "passed": 108,
+      "failed": 0,
+      "duration_seconds": 23.32
+    }
+  ],
+  "live_health_check": "PASSED",
+  "disabled_api_guard": "PASSED_HTTP_503",
+  "paid_llm_calls": 0
+}

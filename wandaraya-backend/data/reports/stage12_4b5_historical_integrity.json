@@ -1,0 +1,30 @@
+{
+  "batch01_records": 17532,
+  "batch02_records": 146100,
+  "checksum_matches": 28,
+  "expected_records": 163632,
+  "network_requests": 0,
+  "parameter_invalid_values": {
+    "ALLSKY_SFC_SW_DWN": 0,
+    "PRECTOTCORR": 0,
+    "RH2M": 0,
+    "T2M": 0,
+    "T2M_MAX": 0,
+    "T2M_MIN": 0,
+    "WS10M": 0
+  },
+  "parameter_missing_values": {
+    "ALLSKY_SFC_SW_DWN": 0,
+    "PRECTOTCORR": 0,
+    "RH2M": 0,
+    "T2M": 0,
+    "T2M_MAX": 0,
+    "T2M_MIN": 0,
+    "WS10M": 0
+  },
+  "postgresql_writes": false,
+  "qdrant_writes": false,
+  "samples": 28,
+  "structural_errors": 0,
+  "temperature_min_exceeds_max": 0
+}

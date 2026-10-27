@@ -2429,7 +2429,7 @@
       "district_id": 78,
       "target": "rainfall_mm",
       "recommended_model": "monthly_climatology",
-      "selected_model": null,
+      "selected_model": "monthly_climatology",
       "evidence_status": "eligible_for_review",
       "review_flags": [],
       "metrics_by_model": {
@@ -2688,11 +2688,11 @@
         "production_approved": false
       },
       "evidence_fingerprint": "fdd18f9c311d60ef1da9b96e76b3d84771db8eeae261fc107b2025cb8330d7b1",
-      "approval_status": "pending_review",
-      "production_approved": false,
-      "approved_by": null,
-      "approved_at": null,
-      "approval_reason": null,
+      "approval_status": "approved",
+      "production_approved": true,
+      "approved_by": "project-owner-demo-authorization-2026-10-22",
+      "approved_at": "2026-10-22T01:11:44.163207Z",
+      "approval_reason": "Project owner explicitly authorized a bounded Galle weather demonstration on 2026-10-22. Scope is district 78 and November 2026 only; existing validation evidence and limitations are retained.",
       "resolved_review_flags": {},
       "model_version": "25eca493375b2e0c",
       "artifact_path": "data/weather/artifacts/candidates/district_78/rainfall_mm/monthly_climatology/25eca493375b2e0c/climatology.json",
@@ -2715,7 +2715,7 @@
       "district_id": 78,
       "target": "temperature_max_c",
       "recommended_model": "prophet",
-      "selected_model": null,
+      "selected_model": "prophet",
       "evidence_status": "eligible_for_review",
       "review_flags": [],
       "metrics_by_model": {
@@ -2974,11 +2974,11 @@
         "production_approved": false
       },
       "evidence_fingerprint": "8189962e0d8591131a45e953688909de84ad441843a399dc36fc20304d64ba72",
-      "approval_status": "pending_review",
-      "production_approved": false,
-      "approved_by": null,
-      "approved_at": null,
-      "approval_reason": null,
+      "approval_status": "approved",
+      "production_approved": true,
+      "approved_by": "project-owner-demo-authorization-2026-10-22",
+      "approved_at": "2026-10-22T01:11:44.164052Z",
+      "approval_reason": "Project owner explicitly authorized a bounded Galle weather demonstration on 2026-10-22. Scope is district 78 and November 2026 only; existing validation evidence and limitations are retained.",
       "resolved_review_flags": {},
       "model_version": "5f6a95ab02af286e",
       "artifact_path": "data/weather/artifacts/candidates/district_78/temperature_max_c/prophet/5f6a95ab02af286e/model.json",
@@ -3001,7 +3001,7 @@
       "district_id": 78,
       "target": "temperature_min_c",
       "recommended_model": "monthly_climatology",
-      "selected_model": null,
+      "selected_model": "monthly_climatology",
       "evidence_status": "eligible_for_review",
       "review_flags": [
         "best_and_second_best_mae_are_nearly_identical",
@@ -3266,12 +3266,15 @@
         "production_approved": false
       },
       "evidence_fingerprint": "088ec42e55edd5f7e5daba0ef0cb5a463aecc7dcb506581f302287ff6b35c33e",
-      "approval_status": "pending_review",
-      "production_approved": false,
-      "approved_by": null,
-      "approved_at": null,
-      "approval_reason": null,
-      "resolved_review_flags": {},
+      "approval_status": "approved",
+      "production_approved": true,
+      "approved_by": "project-owner-demo-authorization-2026-10-22",
+      "approved_at": "2026-10-22T01:11:44.163929Z",
+      "approval_reason": "Project owner explicitly authorized a bounded Galle weather demonstration on 2026-10-22. Scope is district 78 and November 2026 only; existing validation evidence and limitations are retained.",
+      "resolved_review_flags": {
+        "best_and_second_best_mae_are_nearly_identical": "Accepted for the explicitly authorized, Galle-only demonstration; the limitation remains visible in registry evidence and must be re-reviewed before broader production use.",
+        "selected_model_has_large_systematic_bias": "Accepted for the explicitly authorized, Galle-only demonstration; the limitation remains visible in registry evidence and must be re-reviewed before broader production use."
+      },
       "model_version": "8c9494eba1ff3f93",
       "artifact_path": "data/weather/artifacts/candidates/district_78/temperature_min_c/monthly_climatology/8c9494eba1ff3f93/climatology.json",
       "candidate_artifacts": {
@@ -11923,7 +11926,46 @@
         "model_version": "d12a49e50852bbfd",
         "checksum_sha256": "b610a5382ca7e6733b84451722bb6d2812fe5df983655bee09e696d2045cd956"
       }
+    },
+    {
+      "event_id": "6ac099a2-4eae-4df0-9425-f8287681580c",
+      "occurred_at": "2026-10-22T01:11:44.163343Z",
+      "action": "approved",
+      "district_id": 78,
+      "target": "rainfall_mm",
+      "reviewer_id": "project-owner-demo-authorization-2026-10-22",
+      "reason": "Project owner explicitly authorized a bounded Galle weather demonstration on 2026-10-22. Scope is district 78 and November 2026 only; existing validation evidence and limitations are retained.",
+      "evidence_fingerprint": "fdd18f9c311d60ef1da9b96e76b3d84771db8eeae261fc107b2025cb8330d7b1",
+      "details": {
+        "selected_model": "monthly_climatology"
+      }
+    },
+    {
+      "event_id": "e63489a0-ad27-4d3d-af20-7e345172d2c4",
+      "occurred_at": "2026-10-22T01:11:44.164030Z",
+      "action": "approved",
+      "district_id": 78,
+      "target": "temperature_min_c",
+      "reviewer_id": "project-owner-demo-authorization-2026-10-22",
+      "reason": "Project owner explicitly authorized a bounded Galle weather demonstration on 2026-10-22. Scope is district 78 and November 2026 only; existing validation evidence and limitations are retained.",
+      "evidence_fingerprint": "088ec42e55edd5f7e5daba0ef0cb5a463aecc7dcb506581f302287ff6b35c33e",
+      "details": {
+        "selected_model": "monthly_climatology"
+      }
+    },
+    {
+      "event_id": "0ee716fa-d600-410f-9416-bc01725763bf",
+      "occurred_at": "2026-10-22T01:11:44.164083Z",
+      "action": "approved",
+      "district_id": 78,
+      "target": "temperature_max_c",
+      "reviewer_id": "project-owner-demo-authorization-2026-10-22",
+      "reason": "Project owner explicitly authorized a bounded Galle weather demonstration on 2026-10-22. Scope is district 78 and November 2026 only; existing validation evidence and limitations are retained.",
+      "evidence_fingerprint": "8189962e0d8591131a45e953688909de84ad441843a399dc36fc20304d64ba72",
+      "details": {
+        "selected_model": "prophet"
+      }
     }
   ],
-  "production_approved": false
+  "production_approved": true
 }

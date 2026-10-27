@@ -1,0 +1,8 @@
+{
+  "audit_date":"2026-10-21",
+  "repository_test_files":111,
+  "filename_group_counts_nonexclusive":{"knowledge_embedding_semantic":5,"weather":35,"time":32,"holiday_event":4,"seasonality_climate":6,"unified_context":3,"langgraph_agents":4,"group_emotion":1,"api_router":3,"security_auth":2},
+  "latest_executed_relevant_suite":{"passed":116,"failed":0,"composition":"108 unified/context relevant tests plus 8 graph tests","context":"immediately preceding Stage 12.6 implementation verification","artifacts":["data/reports/stage12_6_langgraph_test_results.json","data/reports/stage12_6_langgraph_shadow_pilot.json"]},
+  "pilot":{"requests":3,"candidates":15,"graph_errors":0,"accuracy_validated":false},
+  "warnings":["Filename groups overlap and do not sum to the repository total.","Passing tests demonstrate software behavior, not recommendation accuracy.","Inspect fixtures before running the full suite against persistent infrastructure."]
+}

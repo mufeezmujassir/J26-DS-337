@@ -7,7 +7,7 @@ class WeatherForecastDataLoader:
 
     def __init__(
             self,
-            base_dir="/app/data/weather/modeling/prophet",
+            base_dir="data/weather/modeling/nasa_power/prophet",
 
     ):
         self.base_dir = Path(base_dir)

@@ -49,7 +49,6 @@ def _religious_category(name: str, poya: re.Match[str] | None) -> str | None:
 
 
 def parse_calendar_html(html: str, *, source_url: str, year: int) -> list[HolidayRecord]:
-    """Parse only explicit date/name rows; malformed or ambiguous rows are omitted."""
     soup = BeautifulSoup(html, "html.parser")
     page_text = soup.get_text(" ", strip=True).casefold()
     records: dict[tuple[str, str], HolidayRecord] = {}

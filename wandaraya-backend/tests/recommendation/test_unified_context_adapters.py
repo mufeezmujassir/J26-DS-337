@@ -80,16 +80,19 @@ async def test_live_weather_is_scored_with_provenance():
 
 
 @pytest.mark.asyncio
-async def test_climatology_is_not_misrepresented_as_weather_forecast():
+async def test_climatology_is_scored_as_lower_confidence_planning_evidence():
     adapter = WeatherAdapter.__new__(WeatherAdapter)
     adapter.context_service = WeatherContextStub(weather_context(
         selected_source="climatology", actual_source="historical_climatology",
         resolution="calendar_month", days_ahead=400,
     ))
+    from app.weather_model.context_scoring.weather_suitability import WeatherSuitabilityEngine
+    adapter.scorer = WeatherSuitabilityEngine()
     result = (await adapter.score_batch([attraction()], date(2027, 1, 1), "hiking"))[1]
-    assert result.status is EvidenceStatus.NOT_AVAILABLE
-    assert result.score is None
-    assert "not used as a date-specific weather forecast" in result.limitations[0]
+    assert result.status is EvidenceStatus.AVAILABLE
+    assert result.score is not None
+    assert result.confidence_label == "historical_climatology"
+    assert "not a day-specific forecast" in result.limitations[0]
 
 
 @pytest.mark.asyncio

@@ -1,0 +1,13 @@
+{
+  "audit_date":"2026-10-21","source":"live http://localhost:8000/openapi.json","operation_count":34,
+  "operations":[
+    ["GET","/health"],["POST","/internal/knowledge-base/discovery"],["POST","/internal/knowledge-base/refresh"],
+    ["GET","/api/v1/knowledge-base/status"],["GET","/api/v1/knowledge-base/attractions"],["GET","/api/v1/knowledge-base/attractions/nearby"],["GET","/api/v1/knowledge-base/attractions/{attraction_id}"],["GET","/api/v1/knowledge-base/categories"],["GET","/api/v1/knowledge-base/districts"],["GET","/api/v1/knowledge-base/sources"],["GET","/api/v1/knowledge-base/quality"],["GET","/api/v1/knowledge-base/semantic-search"],
+    ["POST","/api/v1/recommendations/content-based"],["POST","/api/v1/recommendations/context-enrich"],["POST","/api/v1/recommendations/time-aware"],
+    ["POST","/api/v1/research/recommendations/context-aware"],["POST","/api/v1/research/agents/context-aware"],
+    ["GET","/api/v1/weather/context/{district_id}"],["GET","/api/v1/weather/forecasts/{district_id}"],["GET","/api/v1/weather/forecasts/{district_id}/status"],["GET","/api/v1/weather/suitability/{district_id}"],["POST","/api/v1/weather/suitability/batch"],["GET","/api/v1/weather/attractions"],
+    ["GET","/api/v1/calendar/holidays"],["GET","/api/v1/calendar/poya-days"],["GET","/api/v1/context/holiday-events"],["POST","/api/v1/context/holiday-events/evaluate"],["POST","/api/v1/context/holiday-events/score"],["GET","/api/v1/events"],["GET","/api/v1/events/upcoming"],["GET","/api/v1/events/{event_id}"],["GET","/api/v1/events/{event_id}/attraction-matches"],
+    ["POST","/routes/dijkstra"],["POST","/api/route/validate"]
+  ],
+  "note":"The live OpenAPI path-method inventory is the source of truth; rerun it after route changes."
+}

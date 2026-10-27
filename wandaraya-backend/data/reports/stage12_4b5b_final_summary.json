@@ -1,0 +1,19 @@
+{
+  "status": "SCHEMA_AND_COLLATION_REVIEW_INCOMPLETE",
+  "source_sample_count": 28,
+  "historical_observations_isolated": 163632,
+  "production_climate_observation_count": 2196,
+  "active_revision": "e67f8a9b0c1d",
+  "migration_test": "MIGRATED_SCHEMA_IMPORT_TEST_PASSED_WITH_TEST_ONLY_CHECKPOINT_TABLE",
+  "collation_test": "REINDEX_MECHANICS_TESTED_NOT_MISMATCH_REMEDIATION",
+  "production_historical_apply_enabled": false,
+  "blockers": [
+    "production collation mismatch unresolved",
+    "actual mismatch remediation not validated",
+    "checkpoint table has no Alembic migration",
+    "fresh backup, role backup and restoration validation required",
+    "reviewed production preflight and explicit maintenance approval required"
+  ],
+  "production_postgresql_writes": false,
+  "qdrant_writes": false
+}

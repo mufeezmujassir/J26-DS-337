@@ -1,0 +1,8 @@
+{
+  "recorded_version": "2.41",
+  "actual_version": "2.31",
+  "status": "UNRESOLVED_REQUIRES_REVIEW",
+  "risk": "Text indexes and uniqueness checks may depend on collation order and cannot be presumed reliable until independently assessed.",
+  "maintenance_performed": false,
+  "recommendation": "Take and verify backups, plan a maintenance window, assess affected indexes and compatible PostgreSQL collation environment with a database administrator, and test an appropriate rebuild procedure in an isolated copy before authorizing production maintenance."
+}

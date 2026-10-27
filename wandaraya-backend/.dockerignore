@@ -16,6 +16,14 @@
 **/tests
 **/data
 logs/
+backups/
+postgres-data/
+qdrant-data/
+qdrant-data-quarantine-*/
+qdrant-recovery-verify-snapshots/
+qdrant-replacement-snapshots/
+qdrant-snapshots/
+redis-data/
 **/migrations
 **/wandaraya-backend
 **/.*

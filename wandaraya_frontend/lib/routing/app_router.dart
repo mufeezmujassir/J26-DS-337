@@ -2,6 +2,14 @@ import 'package:go_router/go_router.dart';
 
 import '../features/auth/sign_in_screen.dart';
 import '../features/auth/sign_up_screen.dart';
+import '../features/component1/presentation/ai_assistant_screen.dart';
+import '../features/component1/presentation/attraction_detail_screen.dart';
+import '../features/component1/presentation/discover_screen.dart';
+import '../features/component1/presentation/recommendations_screen.dart';
+import '../features/component1/presentation/research_insights_screen.dart';
+import '../features/component1/presentation/saved_places_screen.dart';
+import '../features/component1/presentation/settings_screen.dart';
+import '../features/component1/presentation/travel_preferences_screen.dart';
 import '../features/home/home_screen.dart';
 import '../features/onboarding/onboarding_screen.dart';
 import '../features/planner/presentation/group_chat_screen.dart';
@@ -18,47 +26,67 @@ class AppRouter {
       GoRoute(
         path: '/',
         name: 'splash',
-        builder: (context, state) => const SplashScreen(),
+        builder: (_, _) => const SplashScreen(),
       ),
       GoRoute(
-        path: '/onboarding',
-        name: 'onboarding',
-        builder: (context, state) => const OnboardingScreen(),
+        path: '/discover',
+        name: 'discover',
+        builder: (_, _) => const DiscoverScreen(),
       ),
       GoRoute(
-        path: '/sign-in',
-        name: 'sign-in',
-        builder: (context, state) => const SignInScreen(),
+        path: '/preferences',
+        name: 'preferences',
+        builder: (_, _) => const TravelPreferencesScreen(),
       ),
       GoRoute(
-        path: '/sign-up',
-        name: 'sign-up',
-        builder: (context, state) => const SignUpScreen(),
+        path: '/assistant',
+        name: 'assistant',
+        builder: (_, _) => const AiAssistantScreen(),
       ),
       GoRoute(
-        path: '/home',
-        name: 'home',
-        builder: (context, state) => const HomeScreen(),
+        path: '/recommendations',
+        name: 'recommendations',
+        builder: (_, _) => const RecommendationsScreen(),
       ),
+      GoRoute(
+        path: '/attractions/:id',
+        name: 'attraction-details',
+        builder: (_, state) => AttractionDetailScreen(
+          attractionId: int.parse(state.pathParameters['id']!),
+        ),
+      ),
+      GoRoute(
+        path: '/saved',
+        name: 'saved',
+        builder: (_, _) => const SavedPlacesScreen(),
+      ),
+      GoRoute(
+        path: '/settings',
+        name: 'settings',
+        builder: (_, _) => const SettingsScreen(),
+      ),
+      GoRoute(
+        path: '/research',
+        name: 'research',
+        builder: (_, _) => const ResearchInsightsScreen(),
+      ),
+      // Retained legacy presentation routes while Component 1 migration is completed.
+      GoRoute(path: '/onboarding', builder: (_, _) => const OnboardingScreen()),
+      GoRoute(path: '/sign-in', builder: (_, _) => const SignInScreen()),
+      GoRoute(path: '/sign-up', builder: (_, _) => const SignUpScreen()),
+      GoRoute(path: '/home', builder: (_, _) => const HomeScreen()),
       GoRoute(
         path: '/groups',
-        name: 'groups',
-        builder: (context, state) => const GroupPlannerScreen(),
+        builder: (_, _) => const GroupPlannerScreen(),
         routes: [
           GoRoute(
             path: ':groupId',
-            name: 'group-chat',
-            builder: (context, state) => GroupChatScreen(
-              groupId: state.pathParameters['groupId']!,
-            ),
+            builder: (_, state) =>
+                GroupChatScreen(groupId: state.pathParameters['groupId']!),
           ),
         ],
       ),
-      GoRoute(
-        path: '/itinerary',
-        name: 'itinerary',
-        builder: (context, state) => const ItineraryScreen(),
-      ),
+      GoRoute(path: '/itinerary', builder: (_, _) => const ItineraryScreen()),
     ],
   );
 }

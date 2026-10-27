@@ -1,0 +1,8 @@
+{
+  "status": "NOT_READY",
+  "existing_backup": "backups/wandaraya_before_checkpoint_20261020_124843.dump",
+  "sha256_previously_verified": "5920e639c8f7c3fc03308b28d841ee804a0938a7e2a2ccb1a5b3d8d0ad611faa",
+  "limitations": ["Backup predates checkpoint migration", "This exact backup was not restore-tested in this stage", "No fresh production backup was authorized or created", "Other isolated earlier backup restore is not evidence for this file"],
+  "production_backup_created": false,
+  "production_restore_executed": false
+}

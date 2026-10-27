@@ -1,0 +1,50 @@
+{
+  "status": "ISOLATED_BATCH_ORCHESTRATOR_PASSED",
+  "database": "climate_orchestrator_isolated_test",
+  "results": [
+    {
+      "batch": "batch01",
+      "version": "nasa_power_daily_v2.10.0_historical_2010_2025_batch01",
+      "expected": 17532,
+      "observations": 17532,
+      "checkpoints": 3,
+      "inserted": 17532,
+      "unchanged": 0
+    },
+    {
+      "batch": "batch02",
+      "version": "nasa_power_daily_v2.10.0_historical_2010_2025_batch02",
+      "expected": 146100,
+      "observations": 146100,
+      "checkpoints": 25,
+      "inserted": 146100,
+      "unchanged": 0
+    },
+    {
+      "batch": "batch01",
+      "version": "nasa_power_daily_v2.10.0_historical_2010_2025_batch01",
+      "expected": 17532,
+      "observations": 17532,
+      "checkpoints": 3,
+      "inserted": 0,
+      "unchanged": 17532
+    },
+    {
+      "batch": "batch02",
+      "version": "nasa_power_daily_v2.10.0_historical_2010_2025_batch02",
+      "expected": 146100,
+      "observations": 146100,
+      "checkpoints": 25,
+      "inserted": 0,
+      "unchanged": 146100
+    }
+  ],
+  "observations": 163632,
+  "checkpoints": 28,
+  "production_postgresql_writes": false,
+  "limitations": [
+    "Not a production execution path",
+    "No full CLI authorization or backup gate tested",
+    "No nonempty pilot/weather records seeded in this test; see Stage 12.4B.9 for lower-level preservation test"
+  ]
+}

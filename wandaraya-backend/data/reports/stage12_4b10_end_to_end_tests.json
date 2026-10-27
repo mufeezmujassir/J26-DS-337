@@ -1,0 +1,13 @@
+{
+  "status": "ISOLATED_BATCH_CLI_PASSED_FULL_SAFETY_SUITE_INCOMPLETE",
+  "current_unit_test_command": ".venv\\Scripts\\python.exe -m pytest tests\\climate\\test_stage12_4b10_authorization.py tests\\climate\\test_historical_orchestrator.py tests\\climate\\test_historical_executor.py tests\\climate\\test_stage12_4b7_guards.py -q",
+  "current_unit_test_result": "28 passed",
+  "isolated_cli_test": "data/reports/stage12_4b10_cli_isolated_test.json",
+  "isolated_cli_result": "Actual CLI migrated fresh isolated database, imported both batches (17532 and 146100), repeated with zero inserts and rejected --apply even with --confirm-apply",
+  "approval_signature_test": "Ed25519 signed test request accepted; incorrect pinned key and signature rejected (test_stage12_4b10_authorization.py). Not connected to CLI.",
+  "production_target_rejection": "Actual CLI --isolated-test run in wandaraya-api-cutover rejected the production target before database connection or writes.",
+  "previous_isolated_test": "data/reports/stage12_4b9_integration_tests.json",
+  "previous_isolated_evidence": "Real Alembic chain, full 163632 insertions, repeat, rollback and nonempty synthetic protected-table hash equality; called lower-level executor, not full production CLI",
+  "not_verified": ["Valid isolated authorization through complete CLI", "Wrong production authorization through complete execution path", "Backup and restore checks integrated with transaction path", "Relevant named collation injection through complete path", "Post-import deliberate reconciliation failure through complete path", "Full interruption and resume through complete CLI"],
+  "production_writes_executed": false
+}

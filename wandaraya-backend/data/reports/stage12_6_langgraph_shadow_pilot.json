@@ -1,0 +1,157 @@
+{
+  "stage": "12.6",
+  "generated_at": "2026-10-21T09:39:46.732571+00:00",
+  "pilot_type": "real_postgresql_qdrant_shadow",
+  "llm_calls": 0,
+  "group_emotion_integrated": false,
+  "recommendation_accuracy_validated": false,
+  "production_ranking_changed": false,
+  "queries": [
+    {
+      "phase": "cold",
+      "session_id": "stage12-6-kandy",
+      "status": "COMPLETED",
+      "latency_ms": 39786.613,
+      "candidate_count": 5,
+      "context_coverage": {
+        "weather": {
+          "AVAILABLE": 0,
+          "PARTIALLY_AVAILABLE": 0,
+          "OTHER": 5
+        },
+        "time_of_day": {
+          "AVAILABLE": 5,
+          "PARTIALLY_AVAILABLE": 0,
+          "OTHER": 0
+        },
+        "holiday_event": {
+          "AVAILABLE": 0,
+          "PARTIALLY_AVAILABLE": 0,
+          "OTHER": 5
+        },
+        "historical_seasonality": {
+          "AVAILABLE": 0,
+          "PARTIALLY_AVAILABLE": 0,
+          "OTHER": 5
+        }
+      },
+      "group_emotion_status": "DEFERRED_NOT_INTEGRATED",
+      "configuration": "R3_WEATHER_SEASONALITY_REDUNDANCY_CONTROLLED",
+      "errors": [],
+      "warnings": [
+        "Approximate period 'morning' was represented as 09:00 Asia/Colombo for deterministic scoring."
+      ],
+      "nodes_executed": [
+        "parse_intent",
+        "validate_request",
+        "resolve_destination",
+        "resolve_activity",
+        "run_recommendation",
+        "verify_results",
+        "compose_response"
+      ],
+      "tool_calls": [
+        "resolve_sri_lanka_destination",
+        "resolve_tourism_activity",
+        "run_unified_context_recommendation"
+      ],
+      "production_order_preserved": true
+    },
+    {
+      "phase": "warm",
+      "session_id": "stage12-6-mirissa",
+      "status": "COMPLETED",
+      "latency_ms": 4737.157,
+      "candidate_count": 5,
+      "context_coverage": {
+        "weather": {
+          "AVAILABLE": 5,
+          "PARTIALLY_AVAILABLE": 0,
+          "OTHER": 0
+        },
+        "time_of_day": {
+          "AVAILABLE": 5,
+          "PARTIALLY_AVAILABLE": 0,
+          "OTHER": 0
+        },
+        "holiday_event": {
+          "AVAILABLE": 0,
+          "PARTIALLY_AVAILABLE": 0,
+          "OTHER": 5
+        },
+        "historical_seasonality": {
+          "AVAILABLE": 0,
+          "PARTIALLY_AVAILABLE": 0,
+          "OTHER": 5
+        }
+      },
+      "group_emotion_status": "DEFERRED_NOT_INTEGRATED",
+      "configuration": "R3_WEATHER_SEASONALITY_REDUNDANCY_CONTROLLED",
+      "errors": [],
+      "warnings": [],
+      "nodes_executed": [
+        "parse_intent",
+        "validate_request",
+        "resolve_destination",
+        "resolve_activity",
+        "run_recommendation",
+        "verify_results",
+        "compose_response"
+      ],
+      "tool_calls": [
+        "resolve_sri_lanka_destination",
+        "resolve_tourism_activity",
+        "run_unified_context_recommendation"
+      ],
+      "production_order_preserved": true
+    },
+    {
+      "phase": "warm",
+      "session_id": "stage12-6-ella",
+      "status": "COMPLETED",
+      "latency_ms": 745.332,
+      "candidate_count": 5,
+      "context_coverage": {
+        "weather": {
+          "AVAILABLE": 0,
+          "PARTIALLY_AVAILABLE": 0,
+          "OTHER": 5
+        },
+        "time_of_day": {
+          "AVAILABLE": 3,
+          "PARTIALLY_AVAILABLE": 0,
+          "OTHER": 2
+        },
+        "holiday_event": {
+          "AVAILABLE": 3,
+          "PARTIALLY_AVAILABLE": 0,
+          "OTHER": 2
+        },
+        "historical_seasonality": {
+          "AVAILABLE": 0,
+          "PARTIALLY_AVAILABLE": 0,
+          "OTHER": 5
+        }
+      },
+      "group_emotion_status": "DEFERRED_NOT_INTEGRATED",
+      "configuration": "R3_WEATHER_SEASONALITY_REDUNDANCY_CONTROLLED",
+      "errors": [],
+      "warnings": [],
+      "nodes_executed": [
+        "parse_intent",
+        "validate_request",
+        "resolve_destination",
+        "resolve_activity",
+        "run_recommendation",
+        "verify_results",
+        "compose_response"
+      ],
+      "tool_calls": [
+        "resolve_sri_lanka_destination",
+        "resolve_tourism_activity",
+        "run_unified_context_recommendation"
+      ],
+      "production_order_preserved": true
+    }
+  ]
+}

@@ -66,6 +66,7 @@ class UnifiedContextRequest(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
     query: str = Field(min_length=2, max_length=500)
+    destination_district_id: int | None = Field(default=None, gt=0)
     candidates: list[SuppliedCandidate] | None = Field(default=None, max_length=50)
     travel_datetime: datetime
     activity_type_id: int | None = Field(default=None, gt=0)
@@ -120,6 +121,21 @@ class CandidateExplanation(BaseModel):
 class UnifiedRankedCandidate(BaseModel):
     attraction_id: int
     attraction_name: str
+    description: str | None = None
+    description_source: str | None = None
+    city: str | None = None
+    district_name: str | None = None
+    address: str | None = None
+    latitude: float | None = None
+    longitude: float | None = None
+    rating: float | None = None
+    review_count: int | None = None
+    phone_number: str | None = None
+    website_url: str | None = None
+    opening_hours: Any | None = None
+    categories: list[str] = Field(default_factory=list)
+    activities: list[str] = Field(default_factory=list)
+    explicit_preference_match: bool = False
     original_semantic_score: float
     normalized_semantic_score: float = Field(ge=0, le=1)
     original_semantic_rank: int = Field(ge=1)

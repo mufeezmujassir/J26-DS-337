@@ -1,0 +1,20 @@
+{
+  "database": "climate_alembic_5b_test",
+  "container": "wandaraya-climate-executor-integration-test",
+  "migration_returncode": 0,
+  "migration_log": "\nINFO  [alembic.runtime.migration] Context impl PostgresqlImpl.\nINFO  [alembic.runtime.migration] Will assume transactional DDL.\n",
+  "historical_ingestion_test": "PASSED",
+  "production_database_writes": false,
+  "alembic_revision": "e67f8a9b0c1d",
+  "checkpoint_table_exists": false,
+  "status": "MIGRATED_SCHEMA_IMPORT_TEST_PASSED_WITH_TEST_ONLY_CHECKPOINT_TABLE",
+  "inserted": 163632,
+  "repeat_unchanged": 163632,
+  "batch_counts": {
+    "nasa_power_daily_v2.10.0_historical_2010_2025_batch01": 17532,
+    "nasa_power_daily_v2.10.0_historical_2010_2025_batch02": 146100
+  },
+  "checkpoints": 28,
+  "rollback_verified": true,
+  "limitation": "checkpoint table created outside Alembic exclusively in isolated test database"
+}

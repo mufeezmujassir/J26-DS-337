@@ -16,6 +16,7 @@ from app.weather_model.backtesting.metrics import calculate_metrics, improvement
 from app.weather_model.backtesting.observation_loader import (
     ALLOWED_TARGETS,
     load_monthly_observations,
+    load_monthly_observations_from_csv,
 )
 from app.weather_model.backtesting.prophet_batch import ProphetBatchPredictor
 from app.weather_model.backtesting.rolling_origin import rolling_origin_comparison
@@ -128,15 +129,33 @@ def main() -> None:
     parser.add_argument(
         "--output-dir", type=Path, default=Path("data/weather/reports/backtesting")
     )
+    parser.add_argument(
+        "--data-source",
+        choices=("nasa_power", "database"),
+        default="nasa_power",
+    )
+    parser.add_argument(
+        "--nasa-monthly-path",
+        type=Path,
+        default=Path("data/weather/modeling/nasa_power/district_weather_monthly.csv"),
+    )
     arguments = parser.parse_args()
 
-    engine = get_weather_engine()
-    try:
-        observations = load_monthly_observations(
-            engine, arguments.district_id, arguments.target, arguments.cutoff
+    if arguments.data_source == "nasa_power":
+        observations = load_monthly_observations_from_csv(
+            arguments.nasa_monthly_path,
+            arguments.district_id,
+            arguments.target,
+            arguments.cutoff,
         )
-    finally:
-        engine.dispose()
+    else:
+        engine = get_weather_engine()
+        try:
+            observations = load_monthly_observations(
+                engine, arguments.district_id, arguments.target, arguments.cutoff
+            )
+        finally:
+            engine.dispose()
     if not observations:
         raise ValueError("No valid observations exist for this district and target")
 
@@ -173,6 +192,12 @@ def main() -> None:
     payload = {
         "district_id": arguments.district_id,
         "target": arguments.target,
+        "data_source": arguments.data_source,
+        "source_path": (
+            str(arguments.nasa_monthly_path)
+            if arguments.data_source == "nasa_power"
+            else "database:district_weather_monthly"
+        ),
         "cutoff": arguments.cutoff,
         "observation_count": len(observations),
         "first_observation_month": observations[0].month,

@@ -1,0 +1,3478 @@
+{
+  "samples": [
+    {
+      "checksum_match": true,
+      "header": {
+        "api": {
+          "name": "POWER Daily API",
+          "version": "v2.10.0"
+        },
+        "end": "20251231",
+        "fill_value": -999.0,
+        "sources": [
+          "SYN1DEG",
+          "MERRA2",
+          "POWER"
+        ],
+        "start": "20100101",
+        "time_standard": "UTC",
+        "title": "NASA/POWER Source Native Resolution Daily Data"
+      },
+      "original_sha256": "cbcf66bf9ba39a2d0e24ea2b927a2a29c2e94edea781b4472f0a0448d8aa4ade",
+      "parameters": {
+        "ALLSKY_SFC_SW_DWN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 27.42,
+          "mean": 18.060864134154688,
+          "min": 2.89,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "MJ/m^2/day"
+        },
+        "PRECTOTCORR": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 128.69,
+          "mean": 7.001300479123888,
+          "min": 0.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "mm/day"
+        },
+        "RH2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 93.57,
+          "mean": 82.08663244353183,
+          "min": 62.57,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "%"
+        },
+        "T2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 30.23,
+          "mean": 27.519306981519506,
+          "min": 25.28,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MAX": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 31.5,
+          "mean": 28.33256160164271,
+          "min": 25.74,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MIN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 29.46,
+          "mean": 26.669964065708417,
+          "min": 23.49,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "WS10M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 12.9,
+          "mean": 4.812559890485968,
+          "min": 0.67,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "m/s"
+        }
+      },
+      "raw_file": "data/climate/raw/nasa_power/historical_2010_2025/nasa_power_historical_1_20100101_20251231.json",
+      "returned_coordinates": [
+        80.215,
+        6.03,
+        26.06
+      ],
+      "sample_id": "historic_1",
+      "structural_errors": [],
+      "temperature_min_exceeds_max": 0,
+      "verification_sha256": "cbcf66bf9ba39a2d0e24ea2b927a2a29c2e94edea781b4472f0a0448d8aa4ade"
+    },
+    {
+      "checksum_match": true,
+      "header": {
+        "api": {
+          "name": "POWER Daily API",
+          "version": "v2.10.0"
+        },
+        "end": "20251231",
+        "fill_value": -999.0,
+        "sources": [
+          "SYN1DEG",
+          "MERRA2",
+          "POWER"
+        ],
+        "start": "20100101",
+        "time_standard": "UTC",
+        "title": "NASA/POWER Source Native Resolution Daily Data"
+      },
+      "original_sha256": "88131cb916dc84bd4e8eb0a6516597bd1104f56310b5d3b75b3e15981e30099b",
+      "parameters": {
+        "ALLSKY_SFC_SW_DWN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 27.42,
+          "mean": 18.060864134154688,
+          "min": 2.89,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "MJ/m^2/day"
+        },
+        "PRECTOTCORR": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 174.03,
+          "mean": 5.772871321013006,
+          "min": 0.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "mm/day"
+        },
+        "RH2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 97.43,
+          "mean": 88.22406570841889,
+          "min": 61.7,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "%"
+        },
+        "T2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 26.34,
+          "mean": 22.666368925393567,
+          "min": 18.15,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MAX": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 33.58,
+          "mean": 26.545222450376453,
+          "min": 21.27,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MIN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 23.32,
+          "mean": 19.671824093086926,
+          "min": 11.77,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "WS10M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 9.43,
+          "mean": 3.550958247775496,
+          "min": 0.38,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "m/s"
+        }
+      },
+      "raw_file": "data/climate/raw/nasa_power/historical_2010_2025/nasa_power_historical_24_20100101_20251231.json",
+      "returned_coordinates": [
+        80.802,
+        6.809,
+        681.44
+      ],
+      "sample_id": "historic_24",
+      "structural_errors": [],
+      "temperature_min_exceeds_max": 0,
+      "verification_sha256": "88131cb916dc84bd4e8eb0a6516597bd1104f56310b5d3b75b3e15981e30099b"
+    },
+    {
+      "checksum_match": true,
+      "header": {
+        "api": {
+          "name": "POWER Daily API",
+          "version": "v2.10.0"
+        },
+        "end": "20251231",
+        "fill_value": -999.0,
+        "sources": [
+          "SYN1DEG",
+          "MERRA2",
+          "POWER"
+        ],
+        "start": "20100101",
+        "time_standard": "UTC",
+        "title": "NASA/POWER Source Native Resolution Daily Data"
+      },
+      "original_sha256": "07517b0f9875f854eaf75f87bee7654ccad5c62a481fb9eabb5c62917c431d10",
+      "parameters": {
+        "ALLSKY_SFC_SW_DWN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 27.44,
+          "mean": 18.99425906913073,
+          "min": 1.9,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "MJ/m^2/day"
+        },
+        "PRECTOTCORR": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 193.18,
+          "mean": 4.395662217659138,
+          "min": 0.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "mm/day"
+        },
+        "RH2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 96.04,
+          "mean": 80.01773442847364,
+          "min": 50.48,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "%"
+        },
+        "T2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 32.48,
+          "mean": 26.835443189596166,
+          "min": 21.69,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MAX": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 40.18,
+          "mean": 31.49446954140999,
+          "min": 23.72,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MIN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 27.58,
+          "mean": 23.40310403832991,
+          "min": 16.58,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "WS10M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 10.18,
+          "mean": 4.48370636550308,
+          "min": 0.78,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "m/s"
+        }
+      },
+      "raw_file": "data/climate/raw/nasa_power/historical_2010_2025/nasa_power_historical_16_20100101_20251231.json",
+      "returned_coordinates": [
+        80.404,
+        8.311,
+        84.84
+      ],
+      "sample_id": "historic_16",
+      "structural_errors": [],
+      "temperature_min_exceeds_max": 0,
+      "verification_sha256": "07517b0f9875f854eaf75f87bee7654ccad5c62a481fb9eabb5c62917c431d10"
+    },
+    {
+      "checksum_match": true,
+      "header": {
+        "api": {
+          "name": "POWER Daily API",
+          "version": "v2.10.0"
+        },
+        "end": "20251231",
+        "fill_value": -999.0,
+        "sources": [
+          "SYN1DEG",
+          "MERRA2",
+          "POWER"
+        ],
+        "start": "20100101",
+        "time_standard": "UTC",
+        "title": "NASA/POWER Source Native Resolution Daily Data"
+      },
+      "original_sha256": "f84973a0a333dddfd6344559266ddd8981e90d1a7d66b3e7a3654a1798cff929",
+      "parameters": {
+        "ALLSKY_SFC_SW_DWN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 27.32,
+          "mean": 19.225485968514718,
+          "min": 1.04,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "MJ/m^2/day"
+        },
+        "PRECTOTCORR": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 154.58,
+          "mean": 5.47009582477755,
+          "min": 0.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "mm/day"
+        },
+        "RH2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 94.31,
+          "mean": 80.86489048596852,
+          "min": 58.06,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "%"
+        },
+        "T2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 30.79,
+          "mean": 27.59852498288843,
+          "min": 23.36,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MAX": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 35.82,
+          "mean": 29.934681724845994,
+          "min": 24.32,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MIN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 28.74,
+          "mean": 25.84706023271732,
+          "min": 22.1,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "WS10M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 9.7,
+          "mean": 3.2907665982203973,
+          "min": 0.86,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "m/s"
+        }
+      },
+      "raw_file": "data/climate/raw/nasa_power/historical_2010_2025/district_73_20100101_20251231.json",
+      "returned_coordinates": [
+        81.686,
+        7.125,
+        33.7
+      ],
+      "sample_id": "district_73_representative_2010_2025",
+      "structural_errors": [],
+      "temperature_min_exceeds_max": 0,
+      "verification_sha256": "f84973a0a333dddfd6344559266ddd8981e90d1a7d66b3e7a3654a1798cff929"
+    },
+    {
+      "checksum_match": true,
+      "header": {
+        "api": {
+          "name": "POWER Daily API",
+          "version": "v2.10.0"
+        },
+        "end": "20251231",
+        "fill_value": -999.0,
+        "sources": [
+          "SYN1DEG",
+          "MERRA2",
+          "POWER"
+        ],
+        "start": "20100101",
+        "time_standard": "UTC",
+        "title": "NASA/POWER Source Native Resolution Daily Data"
+      },
+      "original_sha256": "8f6f5ad578acf4bafc5f16d942d1bc613351b594c55a0bb326ca0edcca2859cb",
+      "parameters": {
+        "ALLSKY_SFC_SW_DWN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 27.44,
+          "mean": 18.99425906913073,
+          "min": 1.9,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "MJ/m^2/day"
+        },
+        "PRECTOTCORR": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 193.18,
+          "mean": 4.395662217659138,
+          "min": 0.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "mm/day"
+        },
+        "RH2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 96.04,
+          "mean": 80.01773442847364,
+          "min": 50.48,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "%"
+        },
+        "T2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 32.48,
+          "mean": 26.835443189596166,
+          "min": 21.69,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MAX": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 40.18,
+          "mean": 31.49446954140999,
+          "min": 23.72,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MIN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 27.58,
+          "mean": 23.40310403832991,
+          "min": 16.58,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "WS10M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 10.18,
+          "mean": 4.48370636550308,
+          "min": 0.78,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "m/s"
+        }
+      },
+      "raw_file": "data/climate/raw/nasa_power/historical_2010_2025/district_74_20100101_20251231.json",
+      "returned_coordinates": [
+        80.44,
+        8.369,
+        84.84
+      ],
+      "sample_id": "district_74_representative_2010_2025",
+      "structural_errors": [],
+      "temperature_min_exceeds_max": 0,
+      "verification_sha256": "8f6f5ad578acf4bafc5f16d942d1bc613351b594c55a0bb326ca0edcca2859cb"
+    },
+    {
+      "checksum_match": true,
+      "header": {
+        "api": {
+          "name": "POWER Daily API",
+          "version": "v2.10.0"
+        },
+        "end": "20251231",
+        "fill_value": -999.0,
+        "sources": [
+          "SYN1DEG",
+          "MERRA2",
+          "POWER"
+        ],
+        "start": "20100101",
+        "time_standard": "UTC",
+        "title": "NASA/POWER Source Native Resolution Daily Data"
+      },
+      "original_sha256": "1fdc6510a3f142cb7ea2819b944aae595eb52a48f9745b964da7da36c34507b4",
+      "parameters": {
+        "ALLSKY_SFC_SW_DWN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 27.32,
+          "mean": 19.225485968514718,
+          "min": 1.04,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "MJ/m^2/day"
+        },
+        "PRECTOTCORR": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 181.48,
+          "mean": 5.942948323066393,
+          "min": 0.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "mm/day"
+        },
+        "RH2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 97.48,
+          "mean": 83.6081605065024,
+          "min": 53.54,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "%"
+        },
+        "T2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 29.6,
+          "mean": 24.658778234086242,
+          "min": 19.52,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MAX": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 37.54,
+          "mean": 29.1815212183436,
+          "min": 22.06,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MIN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 24.87,
+          "mean": 21.182183436002738,
+          "min": 13.96,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "WS10M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 9.87,
+          "mean": 3.3240366187542776,
+          "min": 0.53,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "m/s"
+        }
+      },
+      "raw_file": "data/climate/raw/nasa_power/historical_2010_2025/district_75_20100101_20251231.json",
+      "returned_coordinates": [
+        81.089,
+        7.082,
+        399.54
+      ],
+      "sample_id": "district_75_representative_2010_2025",
+      "structural_errors": [],
+      "temperature_min_exceeds_max": 0,
+      "verification_sha256": "1fdc6510a3f142cb7ea2819b944aae595eb52a48f9745b964da7da36c34507b4"
+    },
+    {
+      "checksum_match": true,
+      "header": {
+        "api": {
+          "name": "POWER Daily API",
+          "version": "v2.10.0"
+        },
+        "end": "20251231",
+        "fill_value": -999.0,
+        "sources": [
+          "SYN1DEG",
+          "MERRA2",
+          "POWER"
+        ],
+        "start": "20100101",
+        "time_standard": "UTC",
+        "title": "NASA/POWER Source Native Resolution Daily Data"
+      },
+      "original_sha256": "7ff9c1009116b869f359303eed9408530c51da6c101e4097e03c00fbf829c757",
+      "parameters": {
+        "ALLSKY_SFC_SW_DWN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 27.32,
+          "mean": 19.225485968514718,
+          "min": 1.04,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "MJ/m^2/day"
+        },
+        "PRECTOTCORR": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 251.09,
+          "mean": 5.573258042436687,
+          "min": 0.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "mm/day"
+        },
+        "RH2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 95.58,
+          "mean": 79.52815023956194,
+          "min": 55.08,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "%"
+        },
+        "T2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 32.57,
+          "mean": 27.312782340862423,
+          "min": 22.52,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MAX": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 38.76,
+          "mean": 31.06722108145106,
+          "min": 24.4,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MIN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 28.29,
+          "mean": 24.40058692676249,
+          "min": 19.06,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "WS10M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 11.66,
+          "mean": 4.411326146475017,
+          "min": 0.86,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "m/s"
+        }
+      },
+      "raw_file": "data/climate/raw/nasa_power/historical_2010_2025/district_76_20100101_20251231.json",
+      "returned_coordinates": [
+        81.41,
+        7.834,
+        51.07
+      ],
+      "sample_id": "district_76_representative_2010_2025",
+      "structural_errors": [],
+      "temperature_min_exceeds_max": 0,
+      "verification_sha256": "7ff9c1009116b869f359303eed9408530c51da6c101e4097e03c00fbf829c757"
+    },
+    {
+      "checksum_match": true,
+      "header": {
+        "api": {
+          "name": "POWER Daily API",
+          "version": "v2.10.0"
+        },
+        "end": "20251231",
+        "fill_value": -999.0,
+        "sources": [
+          "SYN1DEG",
+          "MERRA2",
+          "POWER"
+        ],
+        "start": "20100101",
+        "time_standard": "UTC",
+        "title": "NASA/POWER Source Native Resolution Daily Data"
+      },
+      "original_sha256": "5b36a1b8d1ebb6e11137462ba681741465558b9fe22c133c8625e70e9190286b",
+      "parameters": {
+        "ALLSKY_SFC_SW_DWN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 27.42,
+          "mean": 18.060864134154688,
+          "min": 2.89,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "MJ/m^2/day"
+        },
+        "PRECTOTCORR": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 127.48,
+          "mean": 6.401567419575634,
+          "min": 0.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "mm/day"
+        },
+        "RH2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 92.84,
+          "mean": 84.01699520876113,
+          "min": 60.24,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "%"
+        },
+        "T2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 29.61,
+          "mean": 26.458576317590694,
+          "min": 22.94,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MAX": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 34.26,
+          "mean": 28.829305270362763,
+          "min": 24.67,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MIN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 27.8,
+          "mean": 24.41264887063655,
+          "min": 18.93,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "WS10M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 10.24,
+          "mean": 4.238056125941136,
+          "min": 0.82,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "m/s"
+        }
+      },
+      "raw_file": "data/climate/raw/nasa_power/historical_2010_2025/district_77_20100101_20251231.json",
+      "returned_coordinates": [
+        80.029,
+        6.848,
+        123.66
+      ],
+      "sample_id": "district_77_representative_2010_2025",
+      "structural_errors": [],
+      "temperature_min_exceeds_max": 0,
+      "verification_sha256": "5b36a1b8d1ebb6e11137462ba681741465558b9fe22c133c8625e70e9190286b"
+    },
+    {
+      "checksum_match": true,
+      "header": {
+        "api": {
+          "name": "POWER Daily API",
+          "version": "v2.10.0"
+        },
+        "end": "20251231",
+        "fill_value": -999.0,
+        "sources": [
+          "SYN1DEG",
+          "MERRA2",
+          "POWER"
+        ],
+        "start": "20100101",
+        "time_standard": "UTC",
+        "title": "NASA/POWER Source Native Resolution Daily Data"
+      },
+      "original_sha256": "01c398943959cd84f2f01de3c0a4e9943c8624c79092a52f089176c799995fe6",
+      "parameters": {
+        "ALLSKY_SFC_SW_DWN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 27.42,
+          "mean": 18.060864134154688,
+          "min": 2.89,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "MJ/m^2/day"
+        },
+        "PRECTOTCORR": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 128.69,
+          "mean": 7.001300479123888,
+          "min": 0.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "mm/day"
+        },
+        "RH2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 93.57,
+          "mean": 82.08663244353183,
+          "min": 62.57,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "%"
+        },
+        "T2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 30.23,
+          "mean": 27.519306981519506,
+          "min": 25.28,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MAX": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 31.5,
+          "mean": 28.33256160164271,
+          "min": 25.74,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MIN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 29.46,
+          "mean": 26.669964065708417,
+          "min": 23.49,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "WS10M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 12.9,
+          "mean": 4.812559890485968,
+          "min": 0.67,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "m/s"
+        }
+      },
+      "raw_file": "data/climate/raw/nasa_power/historical_2010_2025/district_78_20100101_20251231.json",
+      "returned_coordinates": [
+        80.231,
+        6.203,
+        26.06
+      ],
+      "sample_id": "district_78_representative_2010_2025",
+      "structural_errors": [],
+      "temperature_min_exceeds_max": 0,
+      "verification_sha256": "01c398943959cd84f2f01de3c0a4e9943c8624c79092a52f089176c799995fe6"
+    },
+    {
+      "checksum_match": true,
+      "header": {
+        "api": {
+          "name": "POWER Daily API",
+          "version": "v2.10.0"
+        },
+        "end": "20251231",
+        "fill_value": -999.0,
+        "sources": [
+          "SYN1DEG",
+          "MERRA2",
+          "POWER"
+        ],
+        "start": "20100101",
+        "time_standard": "UTC",
+        "title": "NASA/POWER Source Native Resolution Daily Data"
+      },
+      "original_sha256": "8a17ccea97545080ce91ea8d3a4453c1ad0fdf990b8da68083dbe8ecc716509c",
+      "parameters": {
+        "ALLSKY_SFC_SW_DWN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 27.63,
+          "mean": 18.682399041752223,
+          "min": 1.34,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "MJ/m^2/day"
+        },
+        "PRECTOTCORR": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 127.48,
+          "mean": 6.401567419575634,
+          "min": 0.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "mm/day"
+        },
+        "RH2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 92.84,
+          "mean": 84.01699520876113,
+          "min": 60.24,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "%"
+        },
+        "T2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 29.61,
+          "mean": 26.458576317590694,
+          "min": 22.94,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MAX": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 34.26,
+          "mean": 28.829305270362763,
+          "min": 24.67,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MIN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 27.8,
+          "mean": 24.41264887063655,
+          "min": 18.93,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "WS10M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 10.24,
+          "mean": 4.238056125941136,
+          "min": 0.82,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "m/s"
+        }
+      },
+      "raw_file": "data/climate/raw/nasa_power/historical_2010_2025/district_79_20100101_20251231.json",
+      "returned_coordinates": [
+        80.021,
+        7.119,
+        123.66
+      ],
+      "sample_id": "district_79_representative_2010_2025",
+      "structural_errors": [],
+      "temperature_min_exceeds_max": 0,
+      "verification_sha256": "8a17ccea97545080ce91ea8d3a4453c1ad0fdf990b8da68083dbe8ecc716509c"
+    },
+    {
+      "checksum_match": true,
+      "header": {
+        "api": {
+          "name": "POWER Daily API",
+          "version": "v2.10.0"
+        },
+        "end": "20251231",
+        "fill_value": -999.0,
+        "sources": [
+          "SYN1DEG",
+          "MERRA2",
+          "POWER"
+        ],
+        "start": "20100101",
+        "time_standard": "UTC",
+        "title": "NASA/POWER Source Native Resolution Daily Data"
+      },
+      "original_sha256": "10f1537d3c5689ea9a00a8ad9f81e07e8efefdeb66ea4bd6ad6c3270f59bda04",
+      "parameters": {
+        "ALLSKY_SFC_SW_DWN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 27.42,
+          "mean": 19.35066221765914,
+          "min": 1.55,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "MJ/m^2/day"
+        },
+        "PRECTOTCORR": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 185.82,
+          "mean": 6.3622399041752224,
+          "min": 0.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "mm/day"
+        },
+        "RH2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 95.72,
+          "mean": 85.22280458590006,
+          "min": 59.33,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "%"
+        },
+        "T2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 29.74,
+          "mean": 25.94541238877481,
+          "min": 21.94,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MAX": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 36.2,
+          "mean": 29.448752566735113,
+          "min": 24.79,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MIN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 26.55,
+          "mean": 23.262339151266254,
+          "min": 17.34,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "WS10M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 10.4,
+          "mean": 4.183624229979466,
+          "min": 0.65,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "m/s"
+        }
+      },
+      "raw_file": "data/climate/raw/nasa_power/historical_2010_2025/district_80_20100101_20251231.json",
+      "returned_coordinates": [
+        81.178,
+        6.276,
+        168.92
+      ],
+      "sample_id": "district_80_representative_2010_2025",
+      "structural_errors": [],
+      "temperature_min_exceeds_max": 0,
+      "verification_sha256": "10f1537d3c5689ea9a00a8ad9f81e07e8efefdeb66ea4bd6ad6c3270f59bda04"
+    },
+    {
+      "checksum_match": true,
+      "header": {
+        "api": {
+          "name": "POWER Daily API",
+          "version": "v2.10.0"
+        },
+        "end": "20251231",
+        "fill_value": -999.0,
+        "sources": [
+          "SYN1DEG",
+          "MERRA2",
+          "POWER"
+        ],
+        "start": "20100101",
+        "time_standard": "UTC",
+        "title": "NASA/POWER Source Native Resolution Daily Data"
+      },
+      "original_sha256": "164148d74c71d76cd94cef2bd6c17503a5fc533118f1718b8be42c589b45a5cb",
+      "parameters": {
+        "ALLSKY_SFC_SW_DWN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 26.9,
+          "mean": 19.815136892539357,
+          "min": 1.8,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "MJ/m^2/day"
+        },
+        "PRECTOTCORR": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 144.63,
+          "mean": 3.623376112251882,
+          "min": 0.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "mm/day"
+        },
+        "RH2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 92.03,
+          "mean": 77.52173169062286,
+          "min": 57.75,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "%"
+        },
+        "T2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 32.07,
+          "mean": 28.256456194387408,
+          "min": 23.81,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MAX": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 35.09,
+          "mean": 29.716001026694045,
+          "min": 25.12,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MIN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 30.55,
+          "mean": 26.952056810403835,
+          "min": 22.21,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "WS10M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 15.16,
+          "mean": 6.068593429158111,
+          "min": 1.03,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "m/s"
+        }
+      },
+      "raw_file": "data/climate/raw/nasa_power/historical_2010_2025/district_81_20100101_20251231.json",
+      "returned_coordinates": [
+        79.908,
+        9.644,
+        6.95
+      ],
+      "sample_id": "district_81_representative_2010_2025",
+      "structural_errors": [],
+      "temperature_min_exceeds_max": 0,
+      "verification_sha256": "164148d74c71d76cd94cef2bd6c17503a5fc533118f1718b8be42c589b45a5cb"
+    },
+    {
+      "checksum_match": true,
+      "header": {
+        "api": {
+          "name": "POWER Daily API",
+          "version": "v2.10.0"
+        },
+        "end": "20251231",
+        "fill_value": -999.0,
+        "sources": [
+          "SYN1DEG",
+          "MERRA2",
+          "POWER"
+        ],
+        "start": "20100101",
+        "time_standard": "UTC",
+        "title": "NASA/POWER Source Native Resolution Daily Data"
+      },
+      "original_sha256": "a08dd61afd238ceb07adef56f0a774519ff1d2b20794713768ef28ae17430e08",
+      "parameters": {
+        "ALLSKY_SFC_SW_DWN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 27.42,
+          "mean": 18.060864134154688,
+          "min": 2.89,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "MJ/m^2/day"
+        },
+        "PRECTOTCORR": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 125.95,
+          "mean": 7.23539356605065,
+          "min": 0.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "mm/day"
+        },
+        "RH2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 93.46,
+          "mean": 84.12814510609172,
+          "min": 64.37,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "%"
+        },
+        "T2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 29.38,
+          "mean": 26.734178644763862,
+          "min": 23.98,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MAX": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 32.71,
+          "mean": 28.58831279945243,
+          "min": 25.1,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MIN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 28.08,
+          "mean": 25.074933264887065,
+          "min": 19.98,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "WS10M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 11.06,
+          "mean": 4.079623545516769,
+          "min": 0.84,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "m/s"
+        }
+      },
+      "raw_file": "data/climate/raw/nasa_power/historical_2010_2025/district_82_20100101_20251231.json",
+      "returned_coordinates": [
+        80.135,
+        6.576,
+        87.06
+      ],
+      "sample_id": "district_82_representative_2010_2025",
+      "structural_errors": [],
+      "temperature_min_exceeds_max": 0,
+      "verification_sha256": "a08dd61afd238ceb07adef56f0a774519ff1d2b20794713768ef28ae17430e08"
+    },
+    {
+      "checksum_match": true,
+      "header": {
+        "api": {
+          "name": "POWER Daily API",
+          "version": "v2.10.0"
+        },
+        "end": "20251231",
+        "fill_value": -999.0,
+        "sources": [
+          "SYN1DEG",
+          "MERRA2",
+          "POWER"
+        ],
+        "start": "20100101",
+        "time_standard": "UTC",
+        "title": "NASA/POWER Source Native Resolution Daily Data"
+      },
+      "original_sha256": "b964f652755cbadaa296b9dda7cfd1d19946e7684f891702c1491c767c85892d",
+      "parameters": {
+        "ALLSKY_SFC_SW_DWN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 27.63,
+          "mean": 18.682399041752223,
+          "min": 1.34,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "MJ/m^2/day"
+        },
+        "PRECTOTCORR": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 174.03,
+          "mean": 5.772871321013006,
+          "min": 0.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "mm/day"
+        },
+        "RH2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 97.43,
+          "mean": 88.22406570841889,
+          "min": 61.7,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "%"
+        },
+        "T2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 26.34,
+          "mean": 22.666368925393567,
+          "min": 18.15,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MAX": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 33.58,
+          "mean": 26.545222450376453,
+          "min": 21.27,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MIN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 23.32,
+          "mean": 19.671824093086926,
+          "min": 11.77,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "WS10M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 9.43,
+          "mean": 3.550958247775496,
+          "min": 0.38,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "m/s"
+        }
+      },
+      "raw_file": "data/climate/raw/nasa_power/historical_2010_2025/district_83_20100101_20251231.json",
+      "returned_coordinates": [
+        80.641,
+        7.215,
+        681.44
+      ],
+      "sample_id": "district_83_representative_2010_2025",
+      "structural_errors": [],
+      "temperature_min_exceeds_max": 0,
+      "verification_sha256": "b964f652755cbadaa296b9dda7cfd1d19946e7684f891702c1491c767c85892d"
+    },
+    {
+      "checksum_match": true,
+      "header": {
+        "api": {
+          "name": "POWER Daily API",
+          "version": "v2.10.0"
+        },
+        "end": "20251231",
+        "fill_value": -999.0,
+        "sources": [
+          "SYN1DEG",
+          "MERRA2",
+          "POWER"
+        ],
+        "start": "20100101",
+        "time_standard": "UTC",
+        "title": "NASA/POWER Source Native Resolution Daily Data"
+      },
+      "original_sha256": "d4ece0d64f97ca00451034f004d3ab79d3da47a107b630b4eadafd175c124e4a",
+      "parameters": {
+        "ALLSKY_SFC_SW_DWN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 27.63,
+          "mean": 18.682399041752223,
+          "min": 1.34,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "MJ/m^2/day"
+        },
+        "PRECTOTCORR": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 174.03,
+          "mean": 5.772871321013006,
+          "min": 0.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "mm/day"
+        },
+        "RH2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 97.43,
+          "mean": 88.22406570841889,
+          "min": 61.7,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "%"
+        },
+        "T2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 26.34,
+          "mean": 22.666368925393567,
+          "min": 18.15,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MAX": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 33.58,
+          "mean": 26.545222450376453,
+          "min": 21.27,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MIN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 23.32,
+          "mean": 19.671824093086926,
+          "min": 11.77,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "WS10M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 9.43,
+          "mean": 3.550958247775496,
+          "min": 0.38,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "m/s"
+        }
+      },
+      "raw_file": "data/climate/raw/nasa_power/historical_2010_2025/district_84_20100101_20251231.json",
+      "returned_coordinates": [
+        80.321,
+        7.113,
+        681.44
+      ],
+      "sample_id": "district_84_representative_2010_2025",
+      "structural_errors": [],
+      "temperature_min_exceeds_max": 0,
+      "verification_sha256": "d4ece0d64f97ca00451034f004d3ab79d3da47a107b630b4eadafd175c124e4a"
+    },
+    {
+      "checksum_match": true,
+      "header": {
+        "api": {
+          "name": "POWER Daily API",
+          "version": "v2.10.0"
+        },
+        "end": "20251231",
+        "fill_value": -999.0,
+        "sources": [
+          "SYN1DEG",
+          "MERRA2",
+          "POWER"
+        ],
+        "start": "20100101",
+        "time_standard": "UTC",
+        "title": "NASA/POWER Source Native Resolution Daily Data"
+      },
+      "original_sha256": "661f5be037870bc5e51632c1af6cf1edb1b49dcf9e171febb8251b4ccc6b901d",
+      "parameters": {
+        "ALLSKY_SFC_SW_DWN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 27.1,
+          "mean": 19.273507871321012,
+          "min": 1.56,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "MJ/m^2/day"
+        },
+        "PRECTOTCORR": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 179.36,
+          "mean": 4.2356536618754275,
+          "min": 0.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "mm/day"
+        },
+        "RH2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 92.63,
+          "mean": 78.08409479808351,
+          "min": 59.42,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "%"
+        },
+        "T2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 32.2,
+          "mean": 28.125343942505136,
+          "min": 22.76,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MAX": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 35.46,
+          "mean": 29.83731690622861,
+          "min": 24.88,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MIN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 29.88,
+          "mean": 26.660804243668718,
+          "min": 21.28,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "WS10M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 15.09,
+          "mean": 5.802400752908967,
+          "min": 1.03,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "m/s"
+        }
+      },
+      "raw_file": "data/climate/raw/nasa_power/historical_2010_2025/district_85_20100101_20251231.json",
+      "returned_coordinates": [
+        80.386,
+        9.448,
+        9.66
+      ],
+      "sample_id": "district_85_representative_2010_2025",
+      "structural_errors": [],
+      "temperature_min_exceeds_max": 0,
+      "verification_sha256": "661f5be037870bc5e51632c1af6cf1edb1b49dcf9e171febb8251b4ccc6b901d"
+    },
+    {
+      "checksum_match": true,
+      "header": {
+        "api": {
+          "name": "POWER Daily API",
+          "version": "v2.10.0"
+        },
+        "end": "20251231",
+        "fill_value": -999.0,
+        "sources": [
+          "SYN1DEG",
+          "MERRA2",
+          "POWER"
+        ],
+        "start": "20100101",
+        "time_standard": "UTC",
+        "title": "NASA/POWER Source Native Resolution Daily Data"
+      },
+      "original_sha256": "d776a0e0c169b5441a01a537d4a73429c840c63703540d88b71d3bfcc6bf501b",
+      "parameters": {
+        "ALLSKY_SFC_SW_DWN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 27.63,
+          "mean": 18.682399041752223,
+          "min": 1.34,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "MJ/m^2/day"
+        },
+        "PRECTOTCORR": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 140.4,
+          "mean": 5.029534565366188,
+          "min": 0.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "mm/day"
+        },
+        "RH2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 93.22,
+          "mean": 82.51980321697467,
+          "min": 52.18,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "%"
+        },
+        "T2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 31.14,
+          "mean": 26.881969541409994,
+          "min": 22.98,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MAX": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 37.29,
+          "mean": 29.619315537303216,
+          "min": 24.35,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MIN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 28.49,
+          "mean": 24.634084531143053,
+          "min": 18.94,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "WS10M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 11.95,
+          "mean": 4.965915468856948,
+          "min": 0.81,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "m/s"
+        }
+      },
+      "raw_file": "data/climate/raw/nasa_power/historical_2010_2025/district_86_20100101_20251231.json",
+      "returned_coordinates": [
+        80.257,
+        7.728,
+        70.83
+      ],
+      "sample_id": "district_86_representative_2010_2025",
+      "structural_errors": [],
+      "temperature_min_exceeds_max": 0,
+      "verification_sha256": "d776a0e0c169b5441a01a537d4a73429c840c63703540d88b71d3bfcc6bf501b"
+    },
+    {
+      "checksum_match": true,
+      "header": {
+        "api": {
+          "name": "POWER Daily API",
+          "version": "v2.10.0"
+        },
+        "end": "20251231",
+        "fill_value": -999.0,
+        "sources": [
+          "SYN1DEG",
+          "MERRA2",
+          "POWER"
+        ],
+        "start": "20100101",
+        "time_standard": "UTC",
+        "title": "NASA/POWER Source Native Resolution Daily Data"
+      },
+      "original_sha256": "5c7f5d2e55e3ed1ecd7975e80b64f5d92e13baf884cbd0005ebe12de5355f97f",
+      "parameters": {
+        "ALLSKY_SFC_SW_DWN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 27.44,
+          "mean": 18.99425906913073,
+          "min": 1.9,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "MJ/m^2/day"
+        },
+        "PRECTOTCORR": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 199.35,
+          "mean": 3.4549863107460643,
+          "min": 0.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "mm/day"
+        },
+        "RH2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 93.85,
+          "mean": 78.57436516084874,
+          "min": 54.57,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "%"
+        },
+        "T2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 32.11,
+          "mean": 27.840254962354553,
+          "min": 23.73,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MAX": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 37.07,
+          "mean": 30.192777207392197,
+          "min": 24.54,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MIN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 29.74,
+          "mean": 25.933749144421625,
+          "min": 20.9,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "WS10M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 14.11,
+          "mean": 5.666028405201916,
+          "min": 0.73,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "m/s"
+        }
+      },
+      "raw_file": "data/climate/raw/nasa_power/historical_2010_2025/district_87_20100101_20251231.json",
+      "returned_coordinates": [
+        80.163,
+        8.881,
+        24.02
+      ],
+      "sample_id": "district_87_representative_2010_2025",
+      "structural_errors": [],
+      "temperature_min_exceeds_max": 0,
+      "verification_sha256": "5c7f5d2e55e3ed1ecd7975e80b64f5d92e13baf884cbd0005ebe12de5355f97f"
+    },
+    {
+      "checksum_match": true,
+      "header": {
+        "api": {
+          "name": "POWER Daily API",
+          "version": "v2.10.0"
+        },
+        "end": "20251231",
+        "fill_value": -999.0,
+        "sources": [
+          "SYN1DEG",
+          "MERRA2",
+          "POWER"
+        ],
+        "start": "20100101",
+        "time_standard": "UTC",
+        "title": "NASA/POWER Source Native Resolution Daily Data"
+      },
+      "original_sha256": "35e6d548dfb0aaf348b3ea0ea5597e5aad135dabdb4fd1dbae12573db5295262",
+      "parameters": {
+        "ALLSKY_SFC_SW_DWN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 27.63,
+          "mean": 18.682399041752223,
+          "min": 1.34,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "MJ/m^2/day"
+        },
+        "PRECTOTCORR": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 194.32,
+          "mean": 5.325990759753593,
+          "min": 0.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "mm/day"
+        },
+        "RH2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 96.84,
+          "mean": 84.39810746064339,
+          "min": 50.43,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "%"
+        },
+        "T2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 30.55,
+          "mean": 25.0967128678987,
+          "min": 20.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MAX": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 38.69,
+          "mean": 29.442876454483233,
+          "min": 22.59,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MIN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 25.66,
+          "mean": 21.791586242299793,
+          "min": 15.1,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "WS10M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 11.76,
+          "mean": 4.080853867214237,
+          "min": 0.52,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "m/s"
+        }
+      },
+      "raw_file": "data/climate/raw/nasa_power/historical_2010_2025/district_88_20100101_20251231.json",
+      "returned_coordinates": [
+        80.66,
+        7.698,
+        296.6
+      ],
+      "sample_id": "district_88_representative_2010_2025",
+      "structural_errors": [],
+      "temperature_min_exceeds_max": 0,
+      "verification_sha256": "35e6d548dfb0aaf348b3ea0ea5597e5aad135dabdb4fd1dbae12573db5295262"
+    },
+    {
+      "checksum_match": true,
+      "header": {
+        "api": {
+          "name": "POWER Daily API",
+          "version": "v2.10.0"
+        },
+        "end": "20251231",
+        "fill_value": -999.0,
+        "sources": [
+          "SYN1DEG",
+          "MERRA2",
+          "POWER"
+        ],
+        "start": "20100101",
+        "time_standard": "UTC",
+        "title": "NASA/POWER Source Native Resolution Daily Data"
+      },
+      "original_sha256": "9f5578467bca2d905fc18b0ffef72fc9381a9a8c90f0816a3ea7c7db211b84fe",
+      "parameters": {
+        "ALLSKY_SFC_SW_DWN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 27.42,
+          "mean": 18.060864134154688,
+          "min": 2.89,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "MJ/m^2/day"
+        },
+        "PRECTOTCORR": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 116.6,
+          "mean": 6.349197467488022,
+          "min": 0.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "mm/day"
+        },
+        "RH2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 92.26,
+          "mean": 83.13728097193703,
+          "min": 63.57,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "%"
+        },
+        "T2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 29.96,
+          "mean": 27.064652635181382,
+          "min": 24.55,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MAX": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 32.38,
+          "mean": 28.78870636550308,
+          "min": 25.6,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MIN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 28.68,
+          "mean": 25.629110198494182,
+          "min": 21.64,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "WS10M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 11.24,
+          "mean": 4.818040725530459,
+          "min": 0.91,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "m/s"
+        }
+      },
+      "raw_file": "data/climate/raw/nasa_power/historical_2010_2025/district_89_20100101_20251231.json",
+      "returned_coordinates": [
+        80.519,
+        6.158,
+        60.75
+      ],
+      "sample_id": "district_89_representative_2010_2025",
+      "structural_errors": [],
+      "temperature_min_exceeds_max": 0,
+      "verification_sha256": "9f5578467bca2d905fc18b0ffef72fc9381a9a8c90f0816a3ea7c7db211b84fe"
+    },
+    {
+      "checksum_match": true,
+      "header": {
+        "api": {
+          "name": "POWER Daily API",
+          "version": "v2.10.0"
+        },
+        "end": "20251231",
+        "fill_value": -999.0,
+        "sources": [
+          "SYN1DEG",
+          "MERRA2",
+          "POWER"
+        ],
+        "start": "20100101",
+        "time_standard": "UTC",
+        "title": "NASA/POWER Source Native Resolution Daily Data"
+      },
+      "original_sha256": "09a25790a4739f1bce95476aa23ff0c20295b51fdb50505df1cf6763a3930397",
+      "parameters": {
+        "ALLSKY_SFC_SW_DWN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 27.42,
+          "mean": 19.35066221765914,
+          "min": 1.55,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "MJ/m^2/day"
+        },
+        "PRECTOTCORR": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 181.48,
+          "mean": 5.942948323066393,
+          "min": 0.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "mm/day"
+        },
+        "RH2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 97.48,
+          "mean": 83.6081605065024,
+          "min": 53.54,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "%"
+        },
+        "T2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 29.6,
+          "mean": 24.658778234086242,
+          "min": 19.52,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MAX": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 37.54,
+          "mean": 29.1815212183436,
+          "min": 22.06,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MIN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 24.87,
+          "mean": 21.182183436002738,
+          "min": 13.96,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "WS10M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 9.87,
+          "mean": 3.3240366187542776,
+          "min": 0.53,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "m/s"
+        }
+      },
+      "raw_file": "data/climate/raw/nasa_power/historical_2010_2025/district_90_20100101_20251231.json",
+      "returned_coordinates": [
+        81.375,
+        6.876,
+        399.54
+      ],
+      "sample_id": "district_90_representative_2010_2025",
+      "structural_errors": [],
+      "temperature_min_exceeds_max": 0,
+      "verification_sha256": "09a25790a4739f1bce95476aa23ff0c20295b51fdb50505df1cf6763a3930397"
+    },
+    {
+      "checksum_match": true,
+      "header": {
+        "api": {
+          "name": "POWER Daily API",
+          "version": "v2.10.0"
+        },
+        "end": "20251231",
+        "fill_value": -999.0,
+        "sources": [
+          "SYN1DEG",
+          "MERRA2",
+          "POWER"
+        ],
+        "start": "20100101",
+        "time_standard": "UTC",
+        "title": "NASA/POWER Source Native Resolution Daily Data"
+      },
+      "original_sha256": "467e32f2cbc3bba362f59ce974eb8d2a4b3c8441f4b5cd84951fa6ac32e93313",
+      "parameters": {
+        "ALLSKY_SFC_SW_DWN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 27.1,
+          "mean": 19.273507871321012,
+          "min": 1.56,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "MJ/m^2/day"
+        },
+        "PRECTOTCORR": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 193.11,
+          "mean": 4.255764887063655,
+          "min": 0.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "mm/day"
+        },
+        "RH2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 94.93,
+          "mean": 78.69083846680356,
+          "min": 55.29,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "%"
+        },
+        "T2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 32.38,
+          "mean": 27.514062286105407,
+          "min": 21.69,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MAX": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 38.48,
+          "mean": 31.208377823408625,
+          "min": 23.98,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MIN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 28.38,
+          "mean": 24.73921115674196,
+          "min": 19.24,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "WS10M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 10.62,
+          "mean": 4.805398699520876,
+          "min": 0.73,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "m/s"
+        }
+      },
+      "raw_file": "data/climate/raw/nasa_power/historical_2010_2025/district_91_20100101_20251231.json",
+      "returned_coordinates": [
+        80.526,
+        9.181,
+        40.74
+      ],
+      "sample_id": "district_91_representative_2010_2025",
+      "structural_errors": [],
+      "temperature_min_exceeds_max": 0,
+      "verification_sha256": "467e32f2cbc3bba362f59ce974eb8d2a4b3c8441f4b5cd84951fa6ac32e93313"
+    },
+    {
+      "checksum_match": true,
+      "header": {
+        "api": {
+          "name": "POWER Daily API",
+          "version": "v2.10.0"
+        },
+        "end": "20251231",
+        "fill_value": -999.0,
+        "sources": [
+          "SYN1DEG",
+          "MERRA2",
+          "POWER"
+        ],
+        "start": "20100101",
+        "time_standard": "UTC",
+        "title": "NASA/POWER Source Native Resolution Daily Data"
+      },
+      "original_sha256": "af8eabdd0a61c7ee7b657a220c5ace8ffb1bb05b137036bc32b3b554c795b7b4",
+      "parameters": {
+        "ALLSKY_SFC_SW_DWN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 27.63,
+          "mean": 18.682399041752223,
+          "min": 1.34,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "MJ/m^2/day"
+        },
+        "PRECTOTCORR": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 174.03,
+          "mean": 5.772871321013006,
+          "min": 0.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "mm/day"
+        },
+        "RH2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 97.43,
+          "mean": 88.22406570841889,
+          "min": 61.7,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "%"
+        },
+        "T2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 26.34,
+          "mean": 22.666368925393567,
+          "min": 18.15,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MAX": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 33.58,
+          "mean": 26.545222450376453,
+          "min": 21.27,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MIN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 23.32,
+          "mean": 19.671824093086926,
+          "min": 11.77,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "WS10M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 9.43,
+          "mean": 3.550958247775496,
+          "min": 0.38,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "m/s"
+        }
+      },
+      "raw_file": "data/climate/raw/nasa_power/historical_2010_2025/district_92_20100101_20251231.json",
+      "returned_coordinates": [
+        80.757,
+        7.013,
+        681.44
+      ],
+      "sample_id": "district_92_representative_2010_2025",
+      "structural_errors": [],
+      "temperature_min_exceeds_max": 0,
+      "verification_sha256": "af8eabdd0a61c7ee7b657a220c5ace8ffb1bb05b137036bc32b3b554c795b7b4"
+    },
+    {
+      "checksum_match": true,
+      "header": {
+        "api": {
+          "name": "POWER Daily API",
+          "version": "v2.10.0"
+        },
+        "end": "20251231",
+        "fill_value": -999.0,
+        "sources": [
+          "SYN1DEG",
+          "MERRA2",
+          "POWER"
+        ],
+        "start": "20100101",
+        "time_standard": "UTC",
+        "title": "NASA/POWER Source Native Resolution Daily Data"
+      },
+      "original_sha256": "944377cc7c037bd29176b0b4754367e221bb83fe7b72b8e6b37229a547285374",
+      "parameters": {
+        "ALLSKY_SFC_SW_DWN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 27.32,
+          "mean": 19.225485968514718,
+          "min": 1.04,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "MJ/m^2/day"
+        },
+        "PRECTOTCORR": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 251.09,
+          "mean": 5.573258042436687,
+          "min": 0.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "mm/day"
+        },
+        "RH2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 95.58,
+          "mean": 79.52815023956194,
+          "min": 55.08,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "%"
+        },
+        "T2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 32.57,
+          "mean": 27.312782340862423,
+          "min": 22.52,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MAX": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 38.76,
+          "mean": 31.06722108145106,
+          "min": 24.4,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MIN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 28.29,
+          "mean": 24.40058692676249,
+          "min": 19.06,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "WS10M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 11.66,
+          "mean": 4.411326146475017,
+          "min": 0.86,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "m/s"
+        }
+      },
+      "raw_file": "data/climate/raw/nasa_power/historical_2010_2025/district_93_20100101_20251231.json",
+      "returned_coordinates": [
+        81.051,
+        7.994,
+        51.07
+      ],
+      "sample_id": "district_93_representative_2010_2025",
+      "structural_errors": [],
+      "temperature_min_exceeds_max": 0,
+      "verification_sha256": "944377cc7c037bd29176b0b4754367e221bb83fe7b72b8e6b37229a547285374"
+    },
+    {
+      "checksum_match": true,
+      "header": {
+        "api": {
+          "name": "POWER Daily API",
+          "version": "v2.10.0"
+        },
+        "end": "20251231",
+        "fill_value": -999.0,
+        "sources": [
+          "SYN1DEG",
+          "MERRA2",
+          "POWER"
+        ],
+        "start": "20100101",
+        "time_standard": "UTC",
+        "title": "NASA/POWER Source Native Resolution Daily Data"
+      },
+      "original_sha256": "2ce682aba918f8cfb2dd6d1626f59ec4723455ccb0cc4e5de3ef915445e4f529",
+      "parameters": {
+        "ALLSKY_SFC_SW_DWN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 27.07,
+          "mean": 20.37451232032854,
+          "min": 1.78,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "MJ/m^2/day"
+        },
+        "PRECTOTCORR": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 128.6,
+          "mean": 4.0455253251197805,
+          "min": 0.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "mm/day"
+        },
+        "RH2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 93.26,
+          "mean": 80.73186858316221,
+          "min": 50.69,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "%"
+        },
+        "T2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 31.93,
+          "mean": 27.180539014373718,
+          "min": 23.06,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MAX": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 37.98,
+          "mean": 30.2570636550308,
+          "min": 24.52,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MIN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 28.78,
+          "mean": 24.734767282683094,
+          "min": 18.69,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "WS10M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 14.63,
+          "mean": 5.295785420944559,
+          "min": 0.65,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "m/s"
+        }
+      },
+      "raw_file": "data/climate/raw/nasa_power/historical_2010_2025/district_94_20100101_20251231.json",
+      "returned_coordinates": [
+        79.913,
+        7.916,
+        55.43
+      ],
+      "sample_id": "district_94_representative_2010_2025",
+      "structural_errors": [],
+      "temperature_min_exceeds_max": 0,
+      "verification_sha256": "2ce682aba918f8cfb2dd6d1626f59ec4723455ccb0cc4e5de3ef915445e4f529"
+    },
+    {
+      "checksum_match": true,
+      "header": {
+        "api": {
+          "name": "POWER Daily API",
+          "version": "v2.10.0"
+        },
+        "end": "20251231",
+        "fill_value": -999.0,
+        "sources": [
+          "SYN1DEG",
+          "MERRA2",
+          "POWER"
+        ],
+        "start": "20100101",
+        "time_standard": "UTC",
+        "title": "NASA/POWER Source Native Resolution Daily Data"
+      },
+      "original_sha256": "b0385aed97fdb99a97317f1c815938827fb493b6f308b1fb97627232bb7e3ece",
+      "parameters": {
+        "ALLSKY_SFC_SW_DWN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 27.42,
+          "mean": 18.060864134154688,
+          "min": 2.89,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "MJ/m^2/day"
+        },
+        "PRECTOTCORR": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 119.59,
+          "mean": 5.981716290212184,
+          "min": 0.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "mm/day"
+        },
+        "RH2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 96.36,
+          "mean": 86.82803045859,
+          "min": 63.98,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "%"
+        },
+        "T2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 28.23,
+          "mean": 24.84709787816564,
+          "min": 21.07,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MAX": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 35.11,
+          "mean": 28.66229979466119,
+          "min": 24.15,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MIN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 25.17,
+          "mean": 21.868889459274467,
+          "min": 15.2,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "WS10M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 9.38,
+          "mean": 3.4579705681040385,
+          "min": 0.43,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "m/s"
+        }
+      },
+      "raw_file": "data/climate/raw/nasa_power/historical_2010_2025/district_95_20100101_20251231.json",
+      "returned_coordinates": [
+        80.59,
+        6.58,
+        316.87
+      ],
+      "sample_id": "district_95_representative_2010_2025",
+      "structural_errors": [],
+      "temperature_min_exceeds_max": 0,
+      "verification_sha256": "b0385aed97fdb99a97317f1c815938827fb493b6f308b1fb97627232bb7e3ece"
+    },
+    {
+      "checksum_match": true,
+      "header": {
+        "api": {
+          "name": "POWER Daily API",
+          "version": "v2.10.0"
+        },
+        "end": "20251231",
+        "fill_value": -999.0,
+        "sources": [
+          "SYN1DEG",
+          "MERRA2",
+          "POWER"
+        ],
+        "start": "20100101",
+        "time_standard": "UTC",
+        "title": "NASA/POWER Source Native Resolution Daily Data"
+      },
+      "original_sha256": "487e4a6ce2f260bb7ebcadd0213c198438b43c2e3f30353918cafaf54e5b3357",
+      "parameters": {
+        "ALLSKY_SFC_SW_DWN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 26.71,
+          "mean": 19.261332991101984,
+          "min": 1.15,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "MJ/m^2/day"
+        },
+        "PRECTOTCORR": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 347.71,
+          "mean": 5.083153661875428,
+          "min": 0.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "mm/day"
+        },
+        "RH2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 93.24,
+          "mean": 78.33049965776866,
+          "min": 60.18,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "%"
+        },
+        "T2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 31.82,
+          "mean": 27.859295003422314,
+          "min": 22.95,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MAX": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 36.43,
+          "mean": 30.36836413415469,
+          "min": 24.75,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MIN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 29.04,
+          "mean": 25.864705681040384,
+          "min": 21.53,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "WS10M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 13.41,
+          "mean": 5.429096509240246,
+          "min": 0.82,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "m/s"
+        }
+      },
+      "raw_file": "data/climate/raw/nasa_power/historical_2010_2025/district_96_20100101_20251231.json",
+      "returned_coordinates": [
+        81.063,
+        8.568,
+        26.3
+      ],
+      "sample_id": "district_96_representative_2010_2025",
+      "structural_errors": [],
+      "temperature_min_exceeds_max": 0,
+      "verification_sha256": "487e4a6ce2f260bb7ebcadd0213c198438b43c2e3f30353918cafaf54e5b3357"
+    },
+    {
+      "checksum_match": true,
+      "header": {
+        "api": {
+          "name": "POWER Daily API",
+          "version": "v2.10.0"
+        },
+        "end": "20251231",
+        "fill_value": -999.0,
+        "sources": [
+          "SYN1DEG",
+          "MERRA2",
+          "POWER"
+        ],
+        "start": "20100101",
+        "time_standard": "UTC",
+        "title": "NASA/POWER Source Native Resolution Daily Data"
+      },
+      "original_sha256": "a3a93bb8a1a49ff472d486bba84c15264c0fffc97ecfc1e2e4dfda22fff1b997",
+      "parameters": {
+        "ALLSKY_SFC_SW_DWN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 27.44,
+          "mean": 18.99425906913073,
+          "min": 1.9,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "MJ/m^2/day"
+        },
+        "PRECTOTCORR": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 193.11,
+          "mean": 4.255764887063655,
+          "min": 0.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "mm/day"
+        },
+        "RH2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 94.93,
+          "mean": 78.69083846680356,
+          "min": 55.29,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "%"
+        },
+        "T2M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 32.38,
+          "mean": 27.514062286105407,
+          "min": 21.69,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MAX": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 38.48,
+          "mean": 31.208377823408625,
+          "min": 23.98,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "T2M_MIN": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 28.38,
+          "mean": 24.73921115674196,
+          "min": 19.24,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "C"
+        },
+        "WS10M": {
+          "available": 5844,
+          "distinct_dates": 5844,
+          "duplicate_dates": 0,
+          "expected": 5844,
+          "invalid": 0,
+          "max": 10.62,
+          "mean": 4.805398699520876,
+          "min": 0.73,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "unit": "m/s"
+        }
+      },
+      "raw_file": "data/climate/raw/nasa_power/historical_2010_2025/district_97_20100101_20251231.json",
+      "returned_coordinates": [
+        80.486,
+        8.836,
+        40.74
+      ],
+      "sample_id": "district_97_representative_2010_2025",
+      "structural_errors": [],
+      "temperature_min_exceeds_max": 0,
+      "verification_sha256": "a3a93bb8a1a49ff472d486bba84c15264c0fffc97ecfc1e2e4dfda22fff1b997"
+    }
+  ],
+  "summary": {
+    "batch01_records": 17532,
+    "batch02_records": 146100,
+    "checksum_matches": 28,
+    "expected_records": 163632,
+    "network_requests": 0,
+    "parameter_invalid_values": {
+      "ALLSKY_SFC_SW_DWN": 0,
+      "PRECTOTCORR": 0,
+      "RH2M": 0,
+      "T2M": 0,
+      "T2M_MAX": 0,
+      "T2M_MIN": 0,
+      "WS10M": 0
+    },
+    "parameter_missing_values": {
+      "ALLSKY_SFC_SW_DWN": 0,
+      "PRECTOTCORR": 0,
+      "RH2M": 0,
+      "T2M": 0,
+      "T2M_MAX": 0,
+      "T2M_MIN": 0,
+      "WS10M": 0
+    },
+    "postgresql_writes": false,
+    "qdrant_writes": false,
+    "samples": 28,
+    "structural_errors": 0,
+    "temperature_min_exceeds_max": 0
+  }
+}

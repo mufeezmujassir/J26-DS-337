@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+from dataclasses import field
 
 from app.recommendation.unified_context.explainability import explain_candidate
 from app.recommendation.unified_context.schemas import (
@@ -21,6 +22,8 @@ class RankingCandidate:
     semantic_rank: int
     evidence: dict[str, ContextEvidence]
     semantic_metadata: dict
+    details: dict = field(default_factory=dict)
+    explicit_preference_match: bool = False
 
 
 class ExperimentalContextReranker:
@@ -52,7 +55,15 @@ class ExperimentalContextReranker:
                 final = 0.0
             scored.append((candidate, round(max(0.0, min(1.0, final)), 6), context_score, contributions, confidence))
 
-        scored.sort(key=lambda row: (-row[1], row[0].semantic_rank, row[0].attraction_id))
+        # An operational context score may reorder relevant candidates, but it
+        # must not lift an unrelated place above candidates that explicitly
+        # match the user's requested activity or interest.
+        scored.sort(key=lambda row: (
+            not row[0].explicit_preference_match,
+            -row[1],
+            row[0].semantic_rank,
+            row[0].attraction_id,
+        ))
         output: list[UnifiedRankedCandidate] = []
         for rank, (candidate, final, context_score, contributions, confidence) in enumerate(scored, 1):
             explanation = explain_candidate(candidate.evidence)
@@ -60,6 +71,8 @@ class ExperimentalContextReranker:
             output.append(UnifiedRankedCandidate(
                 attraction_id=candidate.attraction_id,
                 attraction_name=candidate.attraction_name,
+                **candidate.details,
+                explicit_preference_match=candidate.explicit_preference_match,
                 original_semantic_score=candidate.semantic_score,
                 normalized_semantic_score=candidate.normalized_semantic_score,
                 original_semantic_rank=candidate.semantic_rank,

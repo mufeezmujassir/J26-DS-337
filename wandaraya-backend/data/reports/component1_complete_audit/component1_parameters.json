@@ -1,0 +1,20 @@
+{
+  "audit_date":"2026-10-21",
+  "parameters":[
+    {"name":"EMBEDDING_MODEL","value":"BAAI/bge-large-en-v1.5","source":"app/config.py:14","effect":"model change requires re-embedding"},
+    {"name":"embedding_dimension","value":1024,"source":"app/knowledge_base/embeddings/embedding_service.py","effect":"must equal Qdrant vector size"},
+    {"name":"vector_distance","value":"COSINE","source":"app/knowledge_base/embeddings/qdrant_indexer.py","effect":"changes similarity geometry"},
+    {"name":"UNIFIED_CONTEXT_MAX_CANDIDATES","value":50,"source":"app/config.py:34","effect":"recall/latency trade-off"},
+    {"name":"UNIFIED_CONTEXT_ADAPTER_TIMEOUT_SECONDS","value":15.0,"source":"app/config.py:35","effect":"per-layer failure/latency bound"},
+    {"name":"semantic_alpha","value":0.65,"source":"app/recommendation/unified_context/schemas.py","effect":"semantic versus context blend; heuristic"},
+    {"name":"time_scores","value":{"open_enough":1.0,"open_insufficient":0.5,"closed":0.0,"unknown":null},"source":"app/time_context/service.py","effect":"operational suitability; closed is hard restriction in R1-R3"},
+    {"name":"holiday_event_weights","value":{"holiday":0.20,"poya":0.35,"verified_event":0.25,"interests":0.20},"source":"config/holiday_event_scoring.yaml:3-7","effect":"eligible feature influence; heuristic"},
+    {"name":"seasonality_baseline_b_weights","value":{"rainfall":0.45,"temperature":0.25,"humidity":0.15,"solar":0.15},"source":"app/climate/services/seasonality_features.py:95","effect":"district-month climate score"},
+    {"name":"weather_horizons_days","value":{"live":5,"monthly":90},"source":"app/weather_model/context/source_selector.py:11-12","effect":"data-source routing"},
+    {"name":"prophet","value":{"growth":"linear","yearly":true,"weekly":false,"daily":false,"mode":"additive","changepoint_prior_scale":0.05,"seasonality_prior_scale":10.0,"interval_width":0.80,"minimum_months":24},"source":"app/weather_model/forecasting/prophet_trainer.py","effect":"monthly model flexibility and eligibility"},
+    {"name":"LANGGRAPH_MAX_CLARIFICATION_TURNS","value":3,"source":"app/config.py:46","effect":"clarification loop bound"},
+    {"name":"LANGGRAPH_EXECUTION_TIMEOUT_SECONDS","value":45.0,"source":"app/config.py:47","effect":"whole graph deadline"},
+    {"name":"LANGGRAPH_SESSION_TTL_SECONDS","value":3600,"source":"app/config.py:48","effect":"process-local session expiry"},
+    {"name":"LANGCHAIN_INTENT_MODEL","value":"llama-3.3-70b-versatile","source":"app/config.py:49","effect":"optional intent parser; disabled by default"}
+  ]
+}

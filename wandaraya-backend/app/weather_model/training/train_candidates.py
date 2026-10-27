@@ -6,7 +6,10 @@ import argparse
 from datetime import date
 from pathlib import Path
 
-from app.weather_model.backtesting.observation_loader import load_monthly_observations
+from app.weather_model.backtesting.observation_loader import (
+    load_monthly_observations,
+    load_monthly_observations_from_csv,
+)
 from app.weather_model.persistence.database import get_weather_engine
 from app.weather_model.registry.registry_manager import RegistryManager
 from app.weather_model.training.candidate_artifacts import (
@@ -18,6 +21,7 @@ from app.weather_model.training.candidate_artifacts import (
 
 DEFAULT_ARTIFACT_ROOT = Path("data/weather/artifacts/candidates")
 DEFAULT_REGISTRY_PATH = Path("data/weather/reports/registry/weather_model_registry.json")
+DEFAULT_NASA_MONTHLY_PATH = Path("data/weather/modeling/nasa_power/district_weather_monthly.csv")
 
 
 def candidate_jobs(registry, district_id: int | None, target: str | None, include_limited: bool, models: list[str]):
@@ -59,6 +63,13 @@ def main() -> None:
     parser.add_argument("--cutoff", type=date.fromisoformat)
     parser.add_argument("--artifact-root", type=Path, default=DEFAULT_ARTIFACT_ROOT)
     parser.add_argument("--registry-path", type=Path, default=DEFAULT_REGISTRY_PATH)
+    parser.add_argument(
+        "--data-source",
+        choices=("nasa_power", "database"),
+        default="nasa_power",
+        help="Training source. NASA POWER is the canonical default; database preserves the legacy path.",
+    )
+    parser.add_argument("--nasa-monthly-path", type=Path, default=DEFAULT_NASA_MONTHLY_PATH)
     arguments = parser.parse_args()
 
     manager = RegistryManager(arguments.registry_path)
@@ -90,15 +101,33 @@ def main() -> None:
     existing_artifacts: list[dict] = []
     insufficient_data: list[dict] = []
     execution_failures: list[dict] = []
-    engine = get_weather_engine()
+    engine = get_weather_engine() if arguments.data_source == "database" else None
     try:
         for entry, model_name in jobs:
             try:
-                observations = load_monthly_observations(
-                    engine, entry.district_id, entry.target, arguments.cutoff
-                )
+                if arguments.data_source == "nasa_power":
+                    observations = load_monthly_observations_from_csv(
+                        arguments.nasa_monthly_path,
+                        entry.district_id,
+                        entry.target,
+                        arguments.cutoff,
+                    )
+                else:
+                    observations = load_monthly_observations(
+                        engine, entry.district_id, entry.target, arguments.cutoff
+                    )
                 training, provenance = prepare_candidate_training(
                     observations, target=entry.target, cutoff=arguments.cutoff
+                )
+                provenance["source_dataset"] = (
+                    "NASA POWER daily district representatives aggregated to complete months"
+                    if arguments.data_source == "nasa_power"
+                    else "district_weather_monthly database table (legacy)"
+                )
+                provenance["source_path"] = (
+                    str(arguments.nasa_monthly_path)
+                    if arguments.data_source == "nasa_power"
+                    else "database:district_weather_monthly"
                 )
                 manifest = create_candidate_artifact(
                     root=arguments.artifact_root,
@@ -143,7 +172,8 @@ def main() -> None:
                     label = "FAILED"
                 print(f"{label} district={entry.district_id} target={entry.target} model={model_name}: {exc}")
     finally:
-        engine.dispose()
+        if engine is not None:
+            engine.dispose()
 
     print("\n=== WEATHER CANDIDATE TRAINING ===")
     print("New artifacts created:     ", len(successes))

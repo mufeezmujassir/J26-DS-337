@@ -1,0 +1,72 @@
+{
+  "before": {
+    "pilot": {
+      "count": 1,
+      "sha256": "c94325eca45596e7d0ff473b4b5a85ca37b31b7283b36aef6f33d13333d76101"
+    },
+    "pilot_version": {
+      "count": 1,
+      "sha256": "047315b457a7c3fad661c50f7c74668406a8605174581eb706fe2817fb2b5f0a"
+    },
+    "pilot_grid": {
+      "count": 1,
+      "sha256": "8d61d3d63bbf97c2a5ec846aac0df7f7866ce5ee243d56519d4773073524a770"
+    },
+    "weather": {
+      "count": 1,
+      "sha256": "7c85c6b09dea3be6e55068b3281b138accbf22506ab0ae3fd4d8413751070100"
+    },
+    "weather_stations": {
+      "count": 1,
+      "sha256": "b5b6e8d4b257712a42a0043720b206b269376a8f236f7ec372772972f5b5fc5b"
+    },
+    "monthly": {
+      "count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "forecasts": {
+      "count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "mappings": {
+      "count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "after": {
+    "pilot": {
+      "count": 1,
+      "sha256": "c94325eca45596e7d0ff473b4b5a85ca37b31b7283b36aef6f33d13333d76101"
+    },
+    "pilot_version": {
+      "count": 1,
+      "sha256": "047315b457a7c3fad661c50f7c74668406a8605174581eb706fe2817fb2b5f0a"
+    },
+    "pilot_grid": {
+      "count": 1,
+      "sha256": "8d61d3d63bbf97c2a5ec846aac0df7f7866ce5ee243d56519d4773073524a770"
+    },
+    "weather": {
+      "count": 1,
+      "sha256": "7c85c6b09dea3be6e55068b3281b138accbf22506ab0ae3fd4d8413751070100"
+    },
+    "weather_stations": {
+      "count": 1,
+      "sha256": "b5b6e8d4b257712a42a0043720b206b269376a8f236f7ec372772972f5b5fc5b"
+    },
+    "monthly": {
+      "count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "forecasts": {
+      "count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "mappings": {
+      "count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "equal": true,
+  "note": "Synthetic pilot and one weather_readings row; other protected tables empty"
+}

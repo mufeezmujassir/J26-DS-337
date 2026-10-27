@@ -1,0 +1,12 @@
+{
+  "status": "HISTORICAL_IMPORT_IMPLEMENTATION_INCOMPLETE",
+  "backup_restore_test": "PASSED_WITH_LIMITATIONS",
+  "isolated_full_import_repeat_rollback_and_nonempty_protected_table_fingerprints": "PASSED",
+  "guard_tests": "21 passed; production end-to-end gate and all required failure scenarios not verified",
+  "collation_evidence": "Default versions match; no named-mismatch climate index or user trigger identified; dynamic and external use still cannot be excluded",
+  "blocker": "No operational and fully verified production import path exists; apply deliberately fails closed.",
+  "production_historical_writes": false,
+  "production_schema_changes": false,
+  "qdrant_writes": false,
+  "nasa_requests": false
+}

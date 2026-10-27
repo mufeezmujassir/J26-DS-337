@@ -1,0 +1,216 @@
+{
+  "indexes": [
+    {
+      "schema_name": "public",
+      "table_name": "activities",
+      "index_name": "activities_name_key",
+      "is_unique": true,
+      "collation": "default"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "alembic_version",
+      "index_name": "alembic_version_pkc",
+      "is_unique": true,
+      "collation": "default"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "attraction_images",
+      "index_name": "ix_attraction_images_content_hash",
+      "is_unique": false,
+      "collation": "default"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "attraction_images",
+      "index_name": "ix_attraction_images_external_image_id",
+      "is_unique": false,
+      "collation": "default"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "attraction_images",
+      "index_name": "ix_attraction_images_source_type",
+      "is_unique": false,
+      "collation": "default"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "attraction_images",
+      "index_name": "uix_attraction_image_storage",
+      "is_unique": true,
+      "collation": "default"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "attraction_source_references",
+      "index_name": "uq_attraction_source_provider_external_id",
+      "is_unique": true,
+      "collation": "default"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "attractions",
+      "index_name": "attractions_google_place_id_key",
+      "is_unique": true,
+      "collation": "default"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "attractions",
+      "index_name": "attractions_slug_key",
+      "is_unique": true,
+      "collation": "default"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "categories",
+      "index_name": "categories_name_key",
+      "is_unique": true,
+      "collation": "default"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "climate_dataset_versions",
+      "index_name": "uq_climate_dataset_source_version",
+      "is_unique": true,
+      "collation": "default"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "climate_grid_cells",
+      "index_name": "uq_climate_grid_cell_version_source",
+      "is_unique": true,
+      "collation": "default"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "districts",
+      "index_name": "districts_name_key",
+      "is_unique": true,
+      "collation": "default"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "event_attraction_links",
+      "index_name": "ix_event_attraction_links_status",
+      "is_unique": false,
+      "collation": "default"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "event_attraction_links",
+      "index_name": "uq_event_attraction_relationship",
+      "is_unique": true,
+      "collation": "default"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "holiday_calendar",
+      "index_name": "uq_holiday_calendar_source_record",
+      "is_unique": true,
+      "collation": "default"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "ingestion_sources",
+      "index_name": "ingestion_sources_source_name_key",
+      "is_unique": true,
+      "collation": "default"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "tourism_events",
+      "index_name": "uq_tourism_event_source_record",
+      "is_unique": true,
+      "collation": "default"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "tourism_import_batches",
+      "index_name": "tourism_import_batches_pkey",
+      "is_unique": true,
+      "collation": "default"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "tourism_sync_reviews",
+      "index_name": "uq_tourism_review_batch_source",
+      "is_unique": true,
+      "collation": "default"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "trip_groups",
+      "index_name": "trip_groups_group_code_key",
+      "is_unique": true,
+      "collation": "default"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "users",
+      "index_name": "users_anonymous_user_id_key",
+      "is_unique": true,
+      "collation": "default"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "weather_forecasts",
+      "index_name": "ix_weather_forecasts_run_id",
+      "is_unique": false,
+      "collation": "default"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "weather_forecasts",
+      "index_name": "uq_weather_forecast_run_month",
+      "is_unique": true,
+      "collation": "default"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "weather_model_runs",
+      "index_name": "ix_weather_model_runs_target",
+      "is_unique": false,
+      "collation": "default"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "weather_model_runs",
+      "index_name": "weather_model_runs_pkey",
+      "is_unique": true,
+      "collation": "default"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "weather_readings",
+      "index_name": "ix_weather_readings_station_id",
+      "is_unique": false,
+      "collation": "default"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "weather_readings",
+      "index_name": "uq_weather_reading_station_date",
+      "is_unique": true,
+      "collation": "default"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "weather_stations",
+      "index_name": "uq_weather_stations_station_id",
+      "is_unique": true,
+      "collation": "default"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "weather_stations",
+      "index_name": "uq_weather_stations_station_name",
+      "is_unique": true,
+      "collation": "default"
+    }
+  ],
+  "distinct_index_count": 30,
+  "note": "Potentially collation-dependent, not proof of corruption; public schema inventory only."
+}

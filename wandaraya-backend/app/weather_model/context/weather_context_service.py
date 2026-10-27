@@ -17,6 +17,7 @@ from app.weather_model.context.live_weather_client import (
 from app.weather_model.context.climatology_provider import (
     ClimatologyProvider,
 )
+from app.weather_model.context.daily_forecast_provider import DailyForecastProvider
 
 
 class WeatherContextService:
@@ -26,6 +27,7 @@ class WeatherContextService:
         live_client: LiveWeatherClient | None = None,
         climatology_provider: ClimatologyProvider | None = None,
         monthly_lookup: Callable | None = None,
+        daily_forecast_provider: DailyForecastProvider | None = None,
     ):
         self.live_client = live_client or LiveWeatherClient()
 
@@ -37,6 +39,7 @@ class WeatherContextService:
         # monthly_lookup(district_id, travel_date)
         # Must return the existing MonthlyForecastResult.
         self.monthly_lookup = monthly_lookup
+        self.daily_forecast_provider = daily_forecast_provider or DailyForecastProvider()
 
     async def get_context(
         self,
@@ -145,6 +148,47 @@ class WeatherContextService:
                     "weather_descriptions": (
                         forecast.weather_descriptions
                     ),
+                },
+                message=result.message,
+            )
+
+        if decision.selected_source == WeatherSource.DAILY_FORECAST:
+            result = await run_in_threadpool(
+                self.daily_forecast_provider.get_daily_forecast,
+                district_id=district_id,
+                travel_date=travel_date,
+            )
+            if not result.available:
+                return self._unavailable(
+                    common,
+                    result.source,
+                    result.message,
+                    missing_targets=result.missing_targets,
+                )
+            return UnifiedWeatherContext(
+                **common,
+                actual_source=result.source,
+                available=True,
+                resolution="daily",
+                rainfall_mm=result.rainfall.value if result.rainfall else None,
+                rainfall_period="daily",
+                temperature_min_c=result.temperature_min.value if result.temperature_min else None,
+                temperature_max_c=result.temperature_max.value if result.temperature_max else None,
+                missing_targets=result.missing_targets,
+                provenance={
+                    **result.provenance,
+                    "requested_date": travel_date.isoformat(),
+                    "rain_expected": result.rain_expected,
+                    "rain_threshold_mm": result.rain_threshold_mm,
+                    "prediction_intervals": {
+                        key: {"lower": item.lower, "upper": item.upper}
+                        for key, item in {
+                            "rainfall": result.rainfall,
+                            "temperature_min": result.temperature_min,
+                            "temperature_max": result.temperature_max,
+                        }.items()
+                        if item is not None
+                    },
                 },
                 message=result.message,
             )

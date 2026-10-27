@@ -1,0 +1,7 @@
+{
+  "status": "NOT_RUN",
+  "reason": "A separate disposable PostgreSQL environment and transaction executor have not been established.",
+  "isolated_database_created": false,
+  "local_unit_tests": {"passed": 13, "command": ".venv\\Scripts\\python.exe -m pytest tests\\climate\\test_stage12_4b5a_safety.py tests\\climate\\test_stage12_4b5_audit.py tests\\climate\\test_stage12_4b4_historical.py tests\\climate\\test_nasa_power.py tests\\climate\\test_stage12_4b_validation.py -q"},
+  "unit_tests_are_not_database_integration_tests": true
+}

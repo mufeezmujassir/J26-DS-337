@@ -13,6 +13,7 @@ class WeatherSource(str, Enum):
 
     HISTORICAL = "historical"
     LIVE_API = "live_api"
+    DAILY_FORECAST = "daily_forecast"
     MONTHLY_FORECAST = "monthly_forecast"
     CLIMATOLOGY = "climatology"
 
@@ -70,6 +71,31 @@ class MonthlyForecastResult(BaseModel):
 
     missing_targets: list[str] = Field(default_factory=list)
 
+    message: str
+
+
+class DailyForecastValue(BaseModel):
+    target: str
+    value: float
+    lower: float
+    upper: float
+    unit: str
+    model_name: str = "prophet"
+
+
+class DailyForecastResult(BaseModel):
+    district_id: int
+    requested_date: date
+    available: bool
+    source: str = "nasa_power_daily_prophet"
+    resolution: str = "daily"
+    rainfall: DailyForecastValue | None = None
+    temperature_min: DailyForecastValue | None = None
+    temperature_max: DailyForecastValue | None = None
+    rain_expected: bool | None = None
+    rain_threshold_mm: float = 0.5
+    missing_targets: list[str] = Field(default_factory=list)
+    provenance: dict[str, Any] = Field(default_factory=dict)
     message: str
 
 

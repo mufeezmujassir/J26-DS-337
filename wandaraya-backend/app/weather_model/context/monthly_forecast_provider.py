@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from datetime import date, datetime, timezone
+from pathlib import Path
 from typing import Iterable
 
 from sqlalchemy import select
@@ -11,6 +12,8 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.models.weather_forecast import WeatherForecast
 from app.models.weather_model_run import WeatherModelRun
 from app.weather_model.context.schemas import MonthlyForecastResult, MonthlyForecastValue
+from app.weather_model.forecasting.forecast_service import ForecastService
+from app.weather_model.forecasting.reliability import ArtifactVerifier, is_forecast_after_training_cutoff
 
 
 class MonthlyForecastProvider:
@@ -21,6 +24,7 @@ class MonthlyForecastProvider:
         "temperature_max_c": "temperature_max",
     }
     _UNITS = {"rainfall_mm": "mm/month", "temperature_min_c": "°C", "temperature_max_c": "°C"}
+    REGISTRY_PATH = Path("data/weather/reports/registry/weather_model_registry.json")
 
     @classmethod
     async def get_monthly_forecast(
@@ -45,7 +49,45 @@ class MonthlyForecastProvider:
                 WeatherModelRun.run_id.desc(),
             )
         )
-        return cls._build_result(district_id, requested_month, (await db.execute(statement)).all())
+        result = cls._build_result(district_id, requested_month, (await db.execute(statement)).all())
+        if result.missing_targets:
+            cls._fill_from_approved_artifacts(result)
+        return result
+
+    @classmethod
+    def _fill_from_approved_artifacts(cls, result: MonthlyForecastResult) -> None:
+        """Fill absent exact-month rows from checksum-verified approved artifacts.
+
+        This keeps arbitrary future months available without pre-populating an
+        unbounded forecast table. Candidate or unapproved artifacts still fail
+        closed through ``ArtifactVerifier``.
+        """
+        verifier = ArtifactVerifier(cls.REGISTRY_PATH)
+        for target in list(result.missing_targets):
+            try:
+                artifact = verifier.verify(result.district_id, target)
+                if not is_forecast_after_training_cutoff(artifact, result.requested_month):
+                    continue
+                value = ForecastService._predict_from_artifact(artifact, result.requested_month)
+            except (OSError, ValueError, KeyError, TypeError, RuntimeError):
+                continue
+            setattr(result, cls._FIELDS[target], MonthlyForecastValue(
+                target=target,
+                value=float(value),
+                unit=cls._UNITS[target],
+                model_name=artifact.model_name,
+                model_run_id=f"artifact:{artifact.model_version}",
+                production_approved=True,
+            ))
+        result.missing_targets = [
+            target for target in cls.TARGETS
+            if getattr(result, cls._FIELDS[target]) is None
+        ]
+        result.available = len(result.missing_targets) < len(cls.TARGETS)
+        if result.available and not result.missing_targets:
+            result.message = "Production-approved monthly forecast data is available for the requested month."
+        elif result.available:
+            result.message = "Partial production-approved monthly forecast data is available for the requested month."
 
     @classmethod
     def _build_result(

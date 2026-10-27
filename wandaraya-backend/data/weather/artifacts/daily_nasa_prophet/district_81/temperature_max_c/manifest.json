@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "model_type": "daily_prophet",
+  "district_id": 81,
+  "district_name": "Jaffna",
+  "target": "temperature_max_c",
+  "resolution": "daily",
+  "observed_rain_threshold_mm": null,
+  "rain_prediction_threshold_mm": null,
+  "training_start": "2010-01-01",
+  "training_cutoff": "2025-12-31",
+  "validation_period": "2024-01-01..2024-12-31",
+  "test_period": "2025-01-01..2025-12-31",
+  "validation_metrics": {
+    "mae": 0.7258,
+    "rmse": 0.9273,
+    "bias": -0.4863
+  },
+  "test_metrics": {
+    "mae": 0.8621,
+    "rmse": 1.04,
+    "bias": 0.7821
+  },
+  "source_provenance": {
+    "provider": "NASA POWER",
+    "source_file": "data/climate/processed/nasa_power/historical_2010_2025/district_81_20100101_20251231.json",
+    "source_sha256": "8d7925ff3793ef9d6dcdda5e3754784fb796a43a132a54be33373e76dd9f2df8",
+    "district_id": 81,
+    "district_name": "Jaffna",
+    "latitude": 9.64395026750006,
+    "longitude": 79.90838018852006,
+    "first_date": "2010-01-01",
+    "last_date": "2025-12-31",
+    "calendar_days": 5844,
+    "missing_source_dates": 0,
+    "invalid_values_replaced_with_missing": {
+      "rainfall_mm": 0,
+      "temperature_min_c": 0,
+      "temperature_max_c": 0,
+      "temperature_mean_c": 0,
+      "relative_humidity_pct": 0,
+      "solar_radiation": 0,
+      "wind_speed_10m": 0,
+      "temperature_order": 0
+    },
+    "spatial_uncertainty": "COARSE_GRID_REPRESENTATIVE_ONLY"
+  },
+  "model_sha256": "a21b4cf7ed13a1747c9ce2ea9b62690204b52cb7a7dc32cb69762e3a4fa99314",
+  "production_approved": true
+}

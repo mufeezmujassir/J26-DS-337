@@ -1,0 +1,17 @@
+{
+  "backup": "backups/wandaraya_stage12_4b9_20261020_134358.dump",
+  "created_local": "2026-10-20T13:43:58+05:30",
+  "size_bytes": 12396202,
+  "sha256": "85ce4023c38efc39fde5d151c133e9829d361fae5cc3fd3f7b68ec1441e5073e",
+  "host_container_and_restore_copy_checksums_match": true,
+  "isolated_container": "wandaraya-globals-restore-test",
+  "isolated_network_mode": "none",
+  "restored_database": "climate_4b9_backup_restore",
+  "pg_restore_exit_code": 0,
+  "restored_revision": "f78a9b0c1d2e",
+  "postgres_version": "17.5",
+  "postgis_version": "3.5.2",
+  "content_comparison": "data/reports/stage12_4b9_restore_content_comparison.json",
+  "protected_counts_and_hashes_match": true,
+  "limitations": ["Point-in-time backup; production can change after capture", "Restore used --no-owner --no-acl; roles and ownership/ACL equivalence and complete application behavior not established", "Globals backup from prior maintenance was not recreated by this operation", "Keep a copy outside the same host before relying on it for disaster recovery"]
+}

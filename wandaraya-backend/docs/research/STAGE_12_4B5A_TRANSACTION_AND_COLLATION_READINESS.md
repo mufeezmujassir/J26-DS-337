@@ -1,0 +1,15 @@
+# Stage 12.4B.5A: transaction and collation readiness
+
+Status: HISTORICAL_PERSISTENCE_PREPARATION_BLOCKED. No isolated PostgreSQL transaction execution has been completed, and no historical executor is ready for writes. The current dry-run verifies original source checksums and compares processed records and metadata to freshly normalized raw responses. It is not a database transaction or rollback test.
+
+The active PostgreSQL 17.5 database uses libc locale en_US.utf8. Its recorded collation version is 2.41 and its actual runtime version is 2.31. Thirty public indexes have collation-dependent keys; they include the unique dataset-version and sample-identity indexes used by climate ingestion. This inventory identifies potential exposure, not proven corruption. Historical application remains disabled.
+
+Before any maintenance, arrange a tested backup and restore, identify an appropriate compatible runtime and maintenance window, reproduce the upgrade or repair on an isolated restored copy, assess and rebuild affected indexes in the reviewed order, refresh the recorded collation version only after required rebuilds, and verify integrity and application behavior. Define rollback and obtain separate authorization before production maintenance. No REINDEX or ALTER DATABASE operation has been performed.
+
+Next implement a guarded executor with a fail-closed disposable target identity, verified provenance, transactional sample checkpoints, database uniqueness and idempotency; execute all requested PostgreSQL integration scenarios on separate storage and credentials. Do not use the active database as a fallback.
+
+## Recovery evidence and production change boundary
+
+The operator supplied a custom-format backup whose container and host SHA-256 matched: `b55260094aa7dcda43d690a4dba55e9aa3d03862bea24faeb55e93c6d6bc2836`. The operator restored it into `wandaraya-postgres-restore-test` on a separate volume with no network. The supplied restore output showed no error and reported 6,120 active attractions, 2,196 climate observations, six climate grid cells and mappings, 1,162 weather readings, 873 district monthly records, 129 forecasts, and revision `e67f8a9b0c1d`. That test database reports collation 2.31 recorded and 2.31 actual. These limited checks support restore readiness but do not establish full data or application equivalence, and the backup is a point-in-time snapshot, not a substitute for a fresh pre-maintenance backup.
+
+For the next review, independently verify production and restore target identities, compare fresh data counts and important constraints, and examine disk capacity and write downtime. The restore database was freshly created, so it does not demonstrate that in-place reindexing the active mismatched database works. Evaluate in-place repair and restore-based replacement as separate approaches with a DBA; do not assume either is safe without a tested procedure, current backup, application write quiescence, and explicit production authorization. Preserve the active volume, restored test volume, and all backup files.

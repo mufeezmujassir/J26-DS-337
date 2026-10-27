@@ -1,0 +1,22 @@
+# Standalone disposable test service. Do not combine this file with the
+# production Compose configuration or point applications at this database.
+services:
+  climate-integration-postgres:
+    image: postgis/postgis:17-3.5
+    container_name: wandaraya-climate-integration-postgres
+    network_mode: none
+    environment:
+      POSTGRES_DB: wandaraya_climate_integration_test
+      POSTGRES_USER: climate_integration_test
+      POSTGRES_PASSWORD: ${CLIMATE_TEST_DB_PASSWORD:?Set CLIMATE_TEST_DB_PASSWORD to a unique test-only password}
+    volumes:
+      - climate_integration_test_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U climate_integration_test -d wandaraya_climate_integration_test"]
+      interval: 5s
+      timeout: 3s
+      retries: 30
+
+volumes:
+  climate_integration_test_data:
+    name: wandaraya_climate_integration_test_data

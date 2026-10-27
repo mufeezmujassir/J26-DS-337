@@ -7,6 +7,7 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
+import pandas as pd
 from sqlalchemy import create_engine, text
 
 
@@ -25,6 +26,23 @@ MODELS = (
 REPORT_DIR = Path("data/weather/reports/backtesting")
 NATIONAL_REPORT = REPORT_DIR / "national_benchmark_report.json"
 PROGRESS_REPORT = REPORT_DIR / "national_benchmark_progress.json"
+DEFAULT_NASA_MONTHLY_PATH = Path("data/weather/modeling/nasa_power/district_weather_monthly.csv")
+
+
+def get_nasa_district_target_coverage(path):
+    frame = pd.read_csv(path, parse_dates=["observation_date"])
+    rows = []
+    for district_id, district in frame.groupby("district_id", sort=True):
+        rows.append({
+            "district_id": int(district_id),
+            "total_months": len(district),
+            "first_month": district["observation_date"].min(),
+            "last_month": district["observation_date"].max(),
+            "rainfall_count": int(district["rainfall_mm"].count()),
+            "min_temp_count": int(district["temperature_min_c"].count()),
+            "max_temp_count": int(district["temperature_max_c"].count()),
+        })
+    return rows
 
 
 def get_district_target_coverage(database_url):
@@ -78,15 +96,25 @@ def write_json(path, payload):
 def national_report_matches_configuration(report, args):
     """Whether a prior national report can safely be resumed."""
     configuration = report.get("configuration", {})
+    requested_source = getattr(args, "data_source", "database")
+    recorded_source = configuration.get("data_source", "database")
+    requested_nasa_path = str(getattr(args, "nasa_monthly_path", DEFAULT_NASA_MONTHLY_PATH))
     return (
         configuration.get("min_train_months") == args.min_train_months
         and configuration.get("horizon_months") == args.horizon
         and configuration.get("step_months") == args.step_months
         and configuration.get("min_coverage") == args.min_coverage
+        and recorded_source == requested_source
+        and (
+            requested_source != "nasa_power"
+            or configuration.get("nasa_monthly_path") == requested_nasa_path
+        )
     )
 
 
 def build_output(args, jobs, results, failures, skipped, *, complete):
+    data_source = getattr(args, "data_source", "database")
+    nasa_monthly_path = str(getattr(args, "nasa_monthly_path", DEFAULT_NASA_MONTHLY_PATH))
     completed = sum(
         item["fair_comparison_status"] == "completed"
         and item["provisional_lowest_mae_model"] is not None
@@ -102,6 +130,8 @@ def build_output(args, jobs, results, failures, skipped, *, complete):
             "horizon_months": args.horizon,
             "step_months": args.step_months,
             "min_coverage": args.min_coverage,
+            "data_source": data_source,
+            "nasa_monthly_path": nasa_monthly_path if data_source == "nasa_power" else None,
         },
         "summary": {
             "jobs_attempted": len(jobs),
@@ -123,6 +153,8 @@ def run_backtest(
     min_train_months,
     horizon,
     step_months,
+    data_source,
+    nasa_monthly_path,
 ):
     command = [
         sys.executable,
@@ -138,6 +170,10 @@ def run_backtest(
         str(horizon),
         "--step-months",
         str(step_months),
+        "--data-source",
+        data_source,
+        "--nasa-monthly-path",
+        str(nasa_monthly_path),
     ]
 
     process = subprocess.run(
@@ -229,6 +265,12 @@ def main():
     parser.add_argument("--district-id", type=int, default=None)
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument(
+        "--data-source",
+        choices=("nasa_power", "database"),
+        default="nasa_power",
+    )
+    parser.add_argument("--nasa-monthly-path", type=Path, default=DEFAULT_NASA_MONTHLY_PATH)
+    parser.add_argument(
         "--resume",
         action="store_true",
         help=(
@@ -258,8 +300,11 @@ def main():
             "with --district-id."
         )
 
-    database_url = os.environ["DATABASE_URL"]
-    coverage = get_district_target_coverage(database_url)
+    if args.data_source == "nasa_power":
+        coverage = get_nasa_district_target_coverage(args.nasa_monthly_path)
+    else:
+        database_url = os.environ["DATABASE_URL"]
+        coverage = get_district_target_coverage(database_url)
 
     jobs = []
     skipped = []
@@ -390,6 +435,8 @@ def main():
             args.min_train_months,
             args.horizon,
             args.step_months,
+            args.data_source,
+            args.nasa_monthly_path,
         )
 
         path = report_path(district_id, target)

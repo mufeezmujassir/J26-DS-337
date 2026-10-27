@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "model_type": "daily_prophet",
+  "district_id": 94,
+  "district_name": "Puttalam",
+  "target": "temperature_min_c",
+  "resolution": "daily",
+  "observed_rain_threshold_mm": null,
+  "rain_prediction_threshold_mm": null,
+  "training_start": "2010-01-01",
+  "training_cutoff": "2025-12-31",
+  "validation_period": "2024-01-01..2024-12-31",
+  "test_period": "2025-01-01..2025-12-31",
+  "validation_metrics": {
+    "mae": 0.7172,
+    "rmse": 0.918,
+    "bias": -0.4194
+  },
+  "test_metrics": {
+    "mae": 0.9619,
+    "rmse": 1.1658,
+    "bias": 0.7882
+  },
+  "source_provenance": {
+    "provider": "NASA POWER",
+    "source_file": "data/climate/processed/nasa_power/historical_2010_2025/district_94_20100101_20251231.json",
+    "source_sha256": "638bf9162aae12c5cf9606f4e3f2874d0bd92313709ad480d8282f298695669f",
+    "district_id": 94,
+    "district_name": "Puttalam",
+    "latitude": 7.916192603500036,
+    "longitude": 79.91290159006525,
+    "first_date": "2010-01-01",
+    "last_date": "2025-12-31",
+    "calendar_days": 5844,
+    "missing_source_dates": 0,
+    "invalid_values_replaced_with_missing": {
+      "rainfall_mm": 0,
+      "temperature_min_c": 0,
+      "temperature_max_c": 0,
+      "temperature_mean_c": 0,
+      "relative_humidity_pct": 0,
+      "solar_radiation": 0,
+      "wind_speed_10m": 0,
+      "temperature_order": 0
+    },
+    "spatial_uncertainty": "COARSE_GRID_REPRESENTATIVE_ONLY"
+  },
+  "model_sha256": "5b49ba9a4619f0a847b7136ade65595e79ee0a8a275f001c667f0ccc4e28a42f",
+  "production_approved": true
+}

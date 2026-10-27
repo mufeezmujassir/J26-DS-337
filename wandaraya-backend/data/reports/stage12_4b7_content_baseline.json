@@ -1,0 +1,35 @@
+{
+  "database": "wandaraya",
+  "format": "postgresql-17-jsonb-text-utc-sorted-C-v1",
+  "excluded_columns": [],
+  "tables": {
+    "pilot_observations": {
+      "rows": 2196,
+      "sha256": "808bb54ee9b3e6bbed60127c8efd8d7985c239522e0d5fd389f6f5d8329227af"
+    },
+    "pilot_dataset": {
+      "rows": 1,
+      "sha256": "e3007d2c027339df90c138c6ed721aaa1267d9c1b90b0e598e488c01d9e22a95"
+    },
+    "pilot_grid_cells": {
+      "rows": 6,
+      "sha256": "25525b6a0b54122af6938f9ed925199b9218a78d5cd150c6ec26dd1d1f035e5c"
+    },
+    "climate_attraction_mappings": {
+      "rows": 6,
+      "sha256": "ff3ced361dbbec1df532c9c74abbc1e393386b85d6e317edee340d70d3cb6be3"
+    },
+    "weather_readings": {
+      "rows": 1162,
+      "sha256": "2e354933258e42258810c5b03819f1689844765af3dbf62613464e960c51437e"
+    },
+    "district_weather_monthly": {
+      "rows": 873,
+      "sha256": "42227248a04915c1f58437fe3a150c7a2ad54f6deab9c5380a42895a83638f19"
+    },
+    "weather_forecasts": {
+      "rows": 129,
+      "sha256": "3a047eaa305ad4f3d31b94e344bd83b57dc83da6744d3f597bb1641523f1e026"
+    }
+  }
+}

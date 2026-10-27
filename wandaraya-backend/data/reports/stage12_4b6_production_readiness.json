@@ -1,0 +1,79 @@
+{
+  "status": "HISTORICAL_PERSISTENCE_BLOCKED",
+  "scope": "Read-only production assessment; no production import, schema changes, reindex, collation refresh, NASA requests or Qdrant changes",
+  "prerequisites": {
+    "checkpoint_migration_schema": {
+      "status": "PASS",
+      "evidence": "Active revision f78a9b0c1d2e; six checkpoint columns, composite primary key, named sample uniqueness and positive record count check, and dataset/grid foreign keys match migrations/versions/f78a9b0c1d2e_add_climate_import_checkpoints.py."
+    },
+    "database_default_collation_versions": {
+      "status": "PASS",
+      "evidence": "Read-only pg_database query: postgres, template1 and wandaraya recorded 2.31 and actual 2.31."
+    },
+    "collation_remediation_and_integrity_evidence": {
+      "status": "NOT_VERIFIED",
+      "evidence": "No durable production reindex and refresh execution log was identified in the inspected reports. Read-only catalog checks show zero invalid indexes and unvalidated constraints; these do not prove index ordering. The isolated test report explicitly says it did not reproduce the mismatch. Conversation reports production rebuild and refresh, but this assessment did not independently verify execution logs."
+    },
+    "named_collations": {
+      "status": "NOT_VERIFIED",
+      "evidence": "In wandaraya, 871 ICU and 2 libc named collations have recorded/actual version differences. Their dependencies and application use require documented review; no refresh was executed."
+    },
+    "historical_tables_and_constraints": {
+      "status": "PASS",
+      "evidence": "Catalog inspection confirms climate_dataset_versions, climate_grid_cells, climate_daily_observations and checkpoint table, foreign keys and uniqueness constraints. Current observation and checkpoint rows have no cross-dataset grid references."
+    },
+    "cross_dataset_constraint": {
+      "status": "NOT_VERIFIED",
+      "evidence": "Separate foreign keys do not by themselves enforce that a grid and observation or checkpoint belong to the same dataset; the executor checks grid ownership. A production execution path must retain and test that check."
+    },
+    "executor_isolated_test": {
+      "status": "PASS",
+      "evidence": "stage12_4b5c_checkpoint_migration_test.json reports migrated isolated schema, 163632 inserts, 163632 unchanged on repeat, 28 checkpoints and rollback verification."
+    },
+    "production_executor_and_guards": {
+      "status": "FAIL",
+      "evidence": "scripts/ingest_stage12_4b5_historical.py unconditionally refuses --apply. It is fail-closed, but no usable production command enforcing explicit authorization, target identity, schema, checksums and collation was verified. The lower-level import_sample accepts an engine and is not itself a production authorization gate."
+    },
+    "recent_backup": {
+      "status": "PASS",
+      "evidence": "backups/wandaraya_before_checkpoint_20261020_124843.dump exists; SHA-256 5920e639c8f7c3fc03308b28d841ee804a0938a7e2a2ccb1a5b3d8d0ad611faa matches recorded copy checksum. Backup predates the checkpoint migration and is not necessarily current."
+    },
+    "recent_backup_restore": {
+      "status": "NOT_VERIFIED",
+      "evidence": "No isolated restore evidence identified for the specific pre-checkpoint backup. Earlier separate backup restore evidence exists but is not proof that this specific backup restores."
+    },
+    "historical_source_files": {
+      "status": "PASS",
+      "evidence": "Offline audit re-run: 28 of 28 checksums match, 17532 batch 01 and 146100 batch 02 records, 163632 total, zero structural errors, missing or invalid parameter values and temperature-order errors; no network access."
+    },
+    "pilot_and_weather_counts": {
+      "status": "PASS",
+      "evidence": "Read-only counts match stage12_4b5_database_preservation.json: 2196 pilot observations, 6 mappings, 1162 weather_readings, 873 district_weather_monthly, 129 weather_forecasts; 6120 active attractions. Pilot dates fall in 2024. Counts do not prove content-level equality."
+    },
+    "pilot_and_weather_content_integrity": {
+      "status": "NOT_VERIFIED",
+      "evidence": "No before/after content hashes were available for all pilot and unrelated weather records; count equality alone is insufficient."
+    },
+    "existing_historical_data": {
+      "status": "PASS",
+      "evidence": "Dataset inventory contains the 2024 pilot only; checkpoint count is zero."
+    }
+  },
+  "blockers": [
+    "Production-capable import command with tested identity, explicit authorization, schema, checksum and collation gates does not exist; current apply is disabled.",
+    "Production collation remediation execution evidence and named-collation dependency review were not independently verified.",
+    "The latest identified backup has not been independently restore-tested, and should be refreshed and tested before a future import.",
+    "Full pilot and unrelated weather content-level preservation has not been established."
+  ],
+  "proposed_procedure_not_authorized_or_executed": [
+    "Review named collation usage and collect production remediation evidence; resolve any affected dependencies.",
+    "Implement and test a production-target preflight and fail-closed executor including authorization, target identity, schema, source integrity, grid ownership, transaction and resume checks.",
+    "Take a fresh timestamped backup and test restoration in isolated compatible storage; preserve existing backups and verify pilot/weather baseline hashes.",
+    "Re-run read-only preflight, review batch scope and rollback plan, and obtain separate explicit authorization.",
+    "Under separate authorization run the reviewed executor for batch 01 and then batch 02; verify counts, checkpoints, duplicate prevention and pilot/weather content after each batch. No executable production import command is currently available."
+  ],
+  "production_postgresql_writes": false,
+  "production_historical_import_executed": false,
+  "qdrant_writes": false,
+  "nasa_requests": false
+}

@@ -1,0 +1,8 @@
+{
+  "status": "PARTIAL_FAIL_CLOSED",
+  "production_apply": "DISABLED_UNCONDITIONALLY",
+  "changes": ["CLI has mutually exclusive modes and a read-only --verify path requiring an independently supplied target identity", "Read-only verification invokes the pure target/revision/source/default-collation guard", "PostgreSQL transaction primitive rejects targets outside a narrowly named local isolated-test allowlist"],
+  "limitations": ["No complete production-aware execution path is enabled or implemented", "The read-only verifier checks selected constraint names, not complete definitions or all required constraints", "Backup readiness, named collation usage, baseline fingerprints, operator approval and post-import audit are not integrated", "Isolated-target allowlist is a development safety boundary, not cryptographic attestation or an authorization boundary", "CLI --isolated-test directs the operator to the dedicated isolated harness", "Source checks use manifest and raw files, not an authenticated immutable approval package"],
+  "tests": "pytest tests/climate/test_stage12_4b7_guards.py tests/climate/test_historical_executor.py tests/climate/test_stage12_4b5a_safety.py -q: 21 passed; docker apply with --confirm-apply rejected; docker file-only dry-run passed",
+  "production_postgresql_writes": false
+}

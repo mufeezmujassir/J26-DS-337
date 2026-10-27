@@ -1,0 +1,24 @@
+{
+  "status": "ISOLATED_POSTGRESQL_IMPORT_TEST_PASSED",
+  "test_container": "wandaraya-climate-executor-integration-test",
+  "database": "climate_executor_isolated_test",
+  "sample_count": 28,
+  "inserted": 163632,
+  "repeat_unchanged": 163632,
+  "batch_counts": {
+    "nasa_power_daily_v2.10.0_2024_pilot": 0,
+    "nasa_power_daily_v2.10.0_historical_2010_2025_batch01": 17532,
+    "nasa_power_daily_v2.10.0_historical_2010_2025_batch02": 146100
+  },
+  "rollback_verified": true,
+  "resume_verified": true,
+  "checkpoints": 28,
+  "production_database_writes": false,
+  "qdrant_writes": false,
+  "pilot_note": "Isolated synthetic pilot sentinel; production pilot was not touched or read",
+  "limitations": [
+    "isolated schema created from ORM tables, not a production migration",
+    "production collation unresolved",
+    "production apply remains disabled"
+  ]
+}

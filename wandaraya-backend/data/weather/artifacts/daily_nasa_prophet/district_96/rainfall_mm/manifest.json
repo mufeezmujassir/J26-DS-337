@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "model_type": "daily_prophet",
+  "district_id": 96,
+  "district_name": "Trincomalee",
+  "target": "rainfall_mm",
+  "resolution": "daily",
+  "observed_rain_threshold_mm": 0.5,
+  "rain_prediction_threshold_mm": 2.473785,
+  "training_start": "2010-01-01",
+  "training_cutoff": "2025-12-31",
+  "validation_period": "2024-01-01..2024-12-31",
+  "test_period": "2025-01-01..2025-12-31",
+  "validation_metrics": {
+    "mae": 4.4186,
+    "rmse": 12.3064,
+    "bias": -1.2486,
+    "rain_event_accuracy": 0.6284,
+    "rain_event_precision": 0.8027,
+    "rain_event_recall": 0.5244,
+    "rain_event_f1": 0.6344,
+    "rain_prediction_threshold_mm": 2.473785
+  },
+  "test_metrics": {
+    "mae": 5.3116,
+    "rmse": 16.023,
+    "bias": -3.4688,
+    "rain_event_accuracy": 0.6137,
+    "rain_event_precision": 0.8806,
+    "rain_event_recall": 0.4856,
+    "rain_event_f1": 0.626,
+    "rain_prediction_threshold_mm": 2.473785
+  },
+  "source_provenance": {
+    "provider": "NASA POWER",
+    "source_file": "data/climate/processed/nasa_power/historical_2010_2025/district_96_20100101_20251231.json",
+    "source_sha256": "2ca8b579a0bb5ec27683c426d276e2920d21aa18da75e904f0a076478a7a832f",
+    "district_id": 96,
+    "district_name": "Trincomalee",
+    "latitude": 8.56827392650007,
+    "longitude": 81.06290663215692,
+    "first_date": "2010-01-01",
+    "last_date": "2025-12-31",
+    "calendar_days": 5844,
+    "missing_source_dates": 0,
+    "invalid_values_replaced_with_missing": {
+      "rainfall_mm": 0,
+      "temperature_min_c": 0,
+      "temperature_max_c": 0,
+      "temperature_mean_c": 0,
+      "relative_humidity_pct": 0,
+      "solar_radiation": 0,
+      "wind_speed_10m": 0,
+      "temperature_order": 0
+    },
+    "spatial_uncertainty": "COARSE_GRID_REPRESENTATIVE_ONLY"
+  },
+  "model_sha256": "f504bb6e10e5059b70fc7cb5ddf5f36929b875f70c0174bb58e1e651ddc6909f",
+  "production_approved": true
+}

@@ -22,7 +22,6 @@ class SourceAccessResult:
 
 @dataclass(frozen=True)
 class TermsReview:
-    """Human-recorded source terms decision; it is never inferred from robots.txt."""
     reviewed: bool
     automated_collection_permitted: bool
     evidence_reference: str | None = None

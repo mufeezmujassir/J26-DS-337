@@ -15,11 +15,11 @@ REFERENCE_DATE = date(2026, 10, 10)
         (-1, WeatherSource.HISTORICAL),
         (0, WeatherSource.LIVE_API),
         (5, WeatherSource.LIVE_API),
-        (6, WeatherSource.MONTHLY_FORECAST),
-        (30, WeatherSource.MONTHLY_FORECAST),
-        (90, WeatherSource.MONTHLY_FORECAST),
-        (91, WeatherSource.CLIMATOLOGY),
-        (180, WeatherSource.CLIMATOLOGY),
+        (6, WeatherSource.DAILY_FORECAST),
+        (30, WeatherSource.DAILY_FORECAST),
+        (90, WeatherSource.DAILY_FORECAST),
+        (91, WeatherSource.DAILY_FORECAST),
+        (180, WeatherSource.DAILY_FORECAST),
     ],
 )
 def test_source_selection(days_ahead: int, expected_source: WeatherSource) -> None:
@@ -32,7 +32,7 @@ def test_source_selection(days_ahead: int, expected_source: WeatherSource) -> No
     assert result.days_ahead == days_ahead
 
 
-def test_monthly_forecast_requires_approval() -> None:
+def test_daily_forecast_requires_approval() -> None:
     result = WeatherSourceSelector.select(
         district_id=78,
         travel_date=REFERENCE_DATE + timedelta(days=30),

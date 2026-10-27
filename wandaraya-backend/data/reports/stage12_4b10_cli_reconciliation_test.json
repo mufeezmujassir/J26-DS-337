@@ -1,0 +1,57 @@
+{
+  "status": "ISOLATED_CLI_IMPORT_AND_REPEAT_PASSED",
+  "database": "climate_cli_reconcile_isolated_test",
+  "results": [
+    {
+      "status": "ISOLATED_IMPORT_RECONCILED",
+      "batch": "batch01",
+      "version": "nasa_power_daily_v2.10.0_historical_2010_2025_batch01",
+      "expected": 17532,
+      "observations": 17532,
+      "checkpoints": 3,
+      "inserted": 17532,
+      "unchanged": 0,
+      "production_postgresql_writes": false
+    },
+    {
+      "status": "ISOLATED_IMPORT_RECONCILED",
+      "batch": "batch02",
+      "version": "nasa_power_daily_v2.10.0_historical_2010_2025_batch02",
+      "expected": 146100,
+      "observations": 146100,
+      "checkpoints": 25,
+      "inserted": 146100,
+      "unchanged": 0,
+      "production_postgresql_writes": false
+    },
+    {
+      "status": "ISOLATED_IMPORT_RECONCILED",
+      "batch": "batch01",
+      "version": "nasa_power_daily_v2.10.0_historical_2010_2025_batch01",
+      "expected": 17532,
+      "observations": 17532,
+      "checkpoints": 3,
+      "inserted": 0,
+      "unchanged": 17532,
+      "production_postgresql_writes": false
+    },
+    {
+      "status": "ISOLATED_IMPORT_RECONCILED",
+      "batch": "batch02",
+      "version": "nasa_power_daily_v2.10.0_historical_2010_2025_batch02",
+      "expected": 146100,
+      "observations": 146100,
+      "checkpoints": 25,
+      "inserted": 0,
+      "unchanged": 146100,
+      "production_postgresql_writes": false
+    }
+  ],
+  "apply_rejected_even_with_confirmation": true,
+  "production_writes": false,
+  "limitations": [
+    "No independent operator authorization mechanism integrated",
+    "Full production preflight and production execution path remain disabled",
+    "This CLI test does not exercise all requested failure scenarios or nonempty pilot and weather fixtures"
+  ]
+}

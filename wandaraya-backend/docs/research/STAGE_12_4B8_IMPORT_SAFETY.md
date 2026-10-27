@@ -1,0 +1,9 @@
+# Stage 12.4B.8 import safety
+
+Status: HISTORICAL_IMPORT_GUARD_INTEGRATION_BLOCKED. No production apply exists. The low-level executor is restricted to named local test targets, but this is not server attestation and must not be used as a production authorization mechanism. Do not remove the production block.
+
+The CLI --verify requires an independently supplied target identity with system identifier, server address, database, port, user and server version; it runs in a read-only transaction and always refuses readiness while backup and other prerequisites are unverified. Its constraint checks are incomplete. The default dry-run validates local source files and makes no database transaction. --isolated-test instructs use of the dedicated isolated harness. --apply is blocked even with --confirm-apply.
+
+Tests: `.venv\Scripts\python.exe -m pytest tests\climate\test_stage12_4b7_guards.py tests\climate\test_historical_executor.py tests\climate\test_stage12_4b5a_safety.py -q`; `.venv\Scripts\python.exe -m scripts.test_stage12_4b8_isolated_import`. The latter only creates a new specifically named isolated test database and refuses reuse; failed earlier test data is preserved.
+
+Before future production execution: complete a reviewed server-attested authorization boundary, independently verify source identities and counts, constraint definitions, dataset ownership, all checkpoint states, named collation usage, preservation baselines and reconciliation; test all failure paths against a disposable migrated server. The current pre-checkpoint backup is not current recovery evidence. In a separate authorized maintenance window take a fresh timestamped backup, verify checksums, and restore into an isolated compatible PostGIS instance; validate roles, extensions, schema, content fingerprints and application reads. Preserve previous backups, do not restore over production, and require a separate import authorization.

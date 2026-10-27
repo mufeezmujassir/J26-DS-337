@@ -11,7 +11,6 @@ class WeatherSourceSelector:
     """Route dates only; providers handle retrieval and availability."""
 
     LIVE_FORECAST_DAYS = 5
-    MONTHLY_FORECAST_DAYS = 90
 
     @classmethod
     def select(
@@ -36,16 +35,11 @@ class WeatherSourceSelector:
             resolution = "daily"
             requires_approval = False
             message = "Short-term weather forecast should be retrieved from the live weather provider."
-        elif days_ahead <= cls.MONTHLY_FORECAST_DAYS:
-            source = WeatherSource.MONTHLY_FORECAST
-            resolution = "monthly"
-            requires_approval = True
-            message = "Monthly weather outlook should be retrieved from an approved forecasting model."
         else:
-            source = WeatherSource.CLIMATOLOGY
-            resolution = "monthly_climatology"
-            requires_approval = False
-            message = "Long-range travel planning should use historical monthly climate patterns."
+            source = WeatherSource.DAILY_FORECAST
+            resolution = "daily"
+            requires_approval = True
+            message = "Date-specific long-range weather should be estimated by the approved daily NASA POWER Prophet model."
 
         return WeatherSourceDecision(
             district_id=district_id,

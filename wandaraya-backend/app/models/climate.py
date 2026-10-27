@@ -6,7 +6,7 @@ The accompanying Alembic migration is not applied by this stage.
 from __future__ import annotations
 
 from datetime import date, datetime, timezone
-from sqlalchemy import Date, DateTime, Float, ForeignKey, Integer, JSON, String, Text, UniqueConstraint
+from sqlalchemy import CheckConstraint, Date, DateTime, Float, ForeignKey, Integer, JSON, String, Text, UniqueConstraint
 from sqlalchemy.orm import Mapped, mapped_column
 from geoalchemy2 import Geometry
 from app.database import Base
@@ -401,6 +401,17 @@ class ClimateMappingEvidenceAudit(Base):
     policy_version: Mapped[str] = mapped_column(String(40), nullable=False)
     processed_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=lambda: datetime.now(timezone.utc))
 
-
-
+class ClimateHistoricalImportCheckpoint(Base):
+    """Committed sample boundary for resumable historical imports."""
+    __tablename__ = "climate_historical_import_checkpoints"
+    __table_args__ = (
+        UniqueConstraint("dataset_version_id", "sample_id", name="uq_climate_checkpoint_sample"),
+        CheckConstraint("record_count > 0", name="ck_climate_checkpoint_record_count"),
+    )
+    dataset_version_id: Mapped[int] = mapped_column(ForeignKey("climate_dataset_versions.id"), primary_key=True)
+    grid_cell_id: Mapped[int] = mapped_column(ForeignKey("climate_grid_cells.id"), primary_key=True)
+    sample_id: Mapped[str] = mapped_column(String(160), nullable=False)
+    source_sha256: Mapped[str] = mapped_column(String(64), nullable=False)
+    record_count: Mapped[int] = mapped_column(Integer, nullable=False)
+    committed_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False)
 

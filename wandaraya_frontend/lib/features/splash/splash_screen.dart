@@ -35,12 +35,13 @@ class _SplashScreenState extends State<SplashScreen>
     _scale = Tween<double>(begin: 0.88, end: 1).animate(
       CurvedAnimation(parent: _entranceController, curve: Curves.easeOutBack),
     );
-    _continueToOnboarding();
+    _continueToApp();
   }
 
-  Future<void> _continueToOnboarding() async {
-    await Future<void>.delayed(const Duration(milliseconds: 2700));
-    if (mounted) context.go('/onboarding');
+  void _continueToApp() {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (mounted) context.go('/discover');
+    });
   }
 
   @override

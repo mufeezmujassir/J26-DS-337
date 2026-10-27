@@ -1,0 +1,14 @@
+{
+  "status": "UNRESOLVED_REVIEW_REQUIRED",
+  "postgresql": "PostgreSQL 17.5 Debian 17.5-1.pgdg110+1",
+  "image": "postgis/postgis:17-3.5",
+  "locale": "en_US.utf8",
+  "provider": "libc",
+  "recorded_version": "2.41",
+  "actual_version": "2.31",
+  "potentially_collation_dependent_public_indexes": 30,
+  "climate_unique_indexes": ["uq_climate_dataset_source_version", "uq_climate_grid_cell_version_source"],
+  "inventory_command": "SELECT n.nspname,t.relname,i.relname,x.indisunique,pg_get_indexdef(x.indexrelid) FROM pg_index x JOIN pg_class i ON i.oid=x.indexrelid JOIN pg_class t ON t.oid=x.indrelid JOIN pg_namespace n ON n.oid=t.relnamespace WHERE n.nspname='public' AND EXISTS (SELECT 1 FROM unnest(x.indcollation) AS c(oid) WHERE c.oid<>0) ORDER BY t.relname,i.relname;",
+  "risk": "Collation-dependent indexes including unique constraints require independent verification; an index listed here is potentially affected, not proof of corruption.",
+  "maintenance_performed": false
+}

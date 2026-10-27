@@ -10,12 +10,7 @@ DEFAULT_USER_AGENT = "WANDARAYA-research/1.0 (+contact: project-owner)"
 
 
 class RequestsAsyncClient:
-    """Async facade over requests with proxy inheritance disabled.
-
-    Calendar Sri Lanka currently returns its published robots file to requests
-    while returning an HTTP 403 to httpx from the same container.  This class
-    records no cache and does not alter IPs, cookies, or access controls.
-    """
+   
 
     transport_name = "requests"
 

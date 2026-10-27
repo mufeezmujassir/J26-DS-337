@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 import os
+from threading import Lock
 
 from sentence_transformers import SentenceTransformer
 
@@ -28,14 +29,20 @@ class AttractionEmbeddingService:
     )
 
     _model: SentenceTransformer | None = None
+    _model_lock = Lock()
 
     @classmethod
     def _get_model(cls) -> SentenceTransformer:
 
         if cls._model is None:
-            cls._model = SentenceTransformer(
-                cls.MODEL_NAME
-            )
+            # A timed-out request does not stop its worker thread. Serializing
+            # initialization prevents retries from loading several large model
+            # copies concurrently and exhausting the API container.
+            with cls._model_lock:
+                if cls._model is None:
+                    cls._model = SentenceTransformer(
+                        cls.MODEL_NAME
+                    )
 
         return cls._model
 

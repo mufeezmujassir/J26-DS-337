@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "model_type": "daily_prophet",
+  "district_id": 88,
+  "district_name": "Matale",
+  "target": "rainfall_mm",
+  "resolution": "daily",
+  "observed_rain_threshold_mm": 0.5,
+  "rain_prediction_threshold_mm": 2.027622,
+  "training_start": "2010-01-01",
+  "training_cutoff": "2025-12-31",
+  "validation_period": "2024-01-01..2024-12-31",
+  "test_period": "2025-01-01..2025-12-31",
+  "validation_metrics": {
+    "mae": 4.4022,
+    "rmse": 7.8854,
+    "bias": -0.4734,
+    "rain_event_accuracy": 0.7131,
+    "rain_event_precision": 0.7266,
+    "rain_event_recall": 0.8745,
+    "rain_event_f1": 0.7937,
+    "rain_prediction_threshold_mm": 2.027622
+  },
+  "test_metrics": {
+    "mae": 6.441,
+    "rmse": 15.4998,
+    "bias": -4.33,
+    "rain_event_accuracy": 0.6438,
+    "rain_event_precision": 0.8186,
+    "rain_event_recall": 0.6423,
+    "rain_event_f1": 0.7198,
+    "rain_prediction_threshold_mm": 2.027622
+  },
+  "source_provenance": {
+    "provider": "NASA POWER",
+    "source_file": "data/climate/processed/nasa_power/historical_2010_2025/district_88_20100101_20251231.json",
+    "source_sha256": "e69236d78d024c7b1f87a1ddb39cd38494ad4e2c07d06742fa3f5a457d821d3d",
+    "district_id": 88,
+    "district_name": "Matale",
+    "latitude": 7.697902215000056,
+    "longitude": 80.66033492685153,
+    "first_date": "2010-01-01",
+    "last_date": "2025-12-31",
+    "calendar_days": 5844,
+    "missing_source_dates": 0,
+    "invalid_values_replaced_with_missing": {
+      "rainfall_mm": 0,
+      "temperature_min_c": 0,
+      "temperature_max_c": 0,
+      "temperature_mean_c": 0,
+      "relative_humidity_pct": 0,
+      "solar_radiation": 0,
+      "wind_speed_10m": 0,
+      "temperature_order": 0
+    },
+    "spatial_uncertainty": "COARSE_GRID_REPRESENTATIVE_ONLY"
+  },
+  "model_sha256": "fbf5838cfcbb562824458e4a14172ecdebcdabe24245b5713b97a78d43b2afc5",
+  "production_approved": true
+}

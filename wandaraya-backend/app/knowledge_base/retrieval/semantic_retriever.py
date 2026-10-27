@@ -5,12 +5,14 @@ from dataclasses import dataclass
 import os
 
 from qdrant_client import QdrantClient
+from qdrant_client.models import FieldCondition, Filter, MatchValue
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.config import settings
 from app.knowledge_base.embeddings.embedding_service import AttractionEmbeddingService
 from app.models.attraction import Attraction
+from app.models.district import District
 
 @dataclass
 class SemanticCandidate:
@@ -51,6 +53,7 @@ class SemanticAttractionRetriever:
             db: AsyncSession,
             query: str,
             limit: int = 10,
+            district_id: int | None = None,
     ) -> list[SemanticCandidate]:
 
 
@@ -67,11 +70,21 @@ class SemanticAttractionRetriever:
         )
 
 
+        query_filter = None
+        if district_id is not None:
+            district = await db.get(District, district_id)
+            if district is None or not district.is_active:
+                return []
+            query_filter = Filter(
+                must=[FieldCondition(key="district", match=MatchValue(value=district.name))]
+            )
+
         try:
             response = await asyncio.to_thread(
                 self.client.query_points,
                 collection_name=self.collection_name,
                 query=query_embedding.vector,
+                query_filter=query_filter,
                 limit=limit,
                 with_payload=True,
             )

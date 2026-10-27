@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "model_type": "daily_prophet",
+  "district_id": 80,
+  "district_name": "Hambantota",
+  "target": "temperature_max_c",
+  "resolution": "daily",
+  "observed_rain_threshold_mm": null,
+  "rain_prediction_threshold_mm": null,
+  "training_start": "2010-01-01",
+  "training_cutoff": "2025-12-31",
+  "validation_period": "2024-01-01..2024-12-31",
+  "test_period": "2025-01-01..2025-12-31",
+  "validation_metrics": {
+    "mae": 1.4645,
+    "rmse": 1.7503,
+    "bias": -1.332
+  },
+  "test_metrics": {
+    "mae": 1.4823,
+    "rmse": 1.7404,
+    "bias": 1.3862
+  },
+  "source_provenance": {
+    "provider": "NASA POWER",
+    "source_file": "data/climate/processed/nasa_power/historical_2010_2025/district_80_20100101_20251231.json",
+    "source_sha256": "8e4f3e6ed88a1c526aa75fda61a89566c2144b890211565983498931135a1817",
+    "district_id": 80,
+    "district_name": "Hambantota",
+    "latitude": 6.275908935500041,
+    "longitude": 81.17796149109354,
+    "first_date": "2010-01-01",
+    "last_date": "2025-12-31",
+    "calendar_days": 5844,
+    "missing_source_dates": 0,
+    "invalid_values_replaced_with_missing": {
+      "rainfall_mm": 0,
+      "temperature_min_c": 0,
+      "temperature_max_c": 0,
+      "temperature_mean_c": 0,
+      "relative_humidity_pct": 0,
+      "solar_radiation": 0,
+      "wind_speed_10m": 0,
+      "temperature_order": 0
+    },
+    "spatial_uncertainty": "COARSE_GRID_REPRESENTATIVE_ONLY"
+  },
+  "model_sha256": "b63a5c5a00ce41aadaeb1492766ebbc8e0b5895a99498b3369831da93f1d812e",
+  "production_approved": true
+}

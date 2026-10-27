@@ -16,7 +16,7 @@ from app.weather_model.context_scoring.activity_weather_rules import get_rule
 from app.weather_model.context_scoring.weather_suitability import WeatherSuitabilityEngine
 
 
-_QUALITY = {"live_provider": 0.90, "approved_model": 0.65}
+_QUALITY = {"live_provider": 0.90, "approved_model": 0.65, "historical_climatology": 0.45}
 _ACTIVITY_COMPATIBILITY = {
     "beach_relaxation": "beach",
     "swimming": "water_activities",
@@ -26,7 +26,10 @@ _ACTIVITY_COMPATIBILITY = {
     "kayaking": "water_activities",
     "temple_visit": "heritage_site",
     "cultural_experience": "heritage_site",
+    "cultural_sightseeing": "heritage_site",
     "sightseeing": "heritage_site",
+    "scenic_sightseeing": "heritage_site",
+    "nature_sightseeing": "hiking",
 }
 
 
@@ -37,7 +40,7 @@ class WeatherAdapter:
     seasonality dimension already owns historical climate evidence.
     """
 
-    source_version = "stage12_5_weather_adapter_v1"
+    source_version = "stage12_5_weather_adapter_v2_daily_nasa_prophet"
 
     def __init__(self, db: AsyncSession):
         async def monthly_lookup(district_id, travel_date):
@@ -74,7 +77,9 @@ class WeatherAdapter:
         decisions: dict[int, object] = {}
         if activity is not None:
             live: list[Attraction] = []
+            daily_groups: dict[int, list[Attraction]] = {}
             monthly_groups: dict[int, list[Attraction]] = {}
+            planning_groups: dict[int, list[Attraction]] = {}
             for attraction in attractions:
                 if attraction.district_id is None:
                     continue
@@ -82,8 +87,12 @@ class WeatherAdapter:
                 decisions[attraction.id] = decision
                 if decision.selected_source is WeatherSource.LIVE_API:
                     live.append(attraction)
+                elif decision.selected_source is WeatherSource.DAILY_FORECAST:
+                    daily_groups.setdefault(attraction.district_id, []).append(attraction)
                 elif decision.selected_source is WeatherSource.MONTHLY_FORECAST:
                     monthly_groups.setdefault(attraction.district_id, []).append(attraction)
+                elif decision.selected_source is WeatherSource.CLIMATOLOGY:
+                    planning_groups.setdefault(attraction.district_id, []).append(attraction)
 
             # Live-provider calls do not use the AsyncSession and are safe to
             # overlap. Provider failures remain candidate-local.
@@ -98,6 +107,19 @@ class WeatherAdapter:
                 for item, result in zip(live, live_results):
                     contexts[item.id] = result
 
+            for district_id, members in daily_groups.items():
+                representative = members[0]
+                try:
+                    result = await self.context_service.get_context(
+                        district_id=district_id, travel_date=travel_date,
+                        latitude=representative.latitude, longitude=representative.longitude,
+                        planning_mode=False,
+                    )
+                except Exception as exc:
+                    result = exc
+                for item in members:
+                    contexts[item.id] = result
+
             # Approved monthly lookups use the shared request session. Query
             # once per district, sequentially, then reuse across candidates.
             for district_id, members in monthly_groups.items():
@@ -107,6 +129,22 @@ class WeatherAdapter:
                         district_id=district_id, travel_date=travel_date,
                         latitude=representative.latitude, longitude=representative.longitude,
                         planning_mode=False,
+                    )
+                except Exception as exc:
+                    result = exc
+                for item in members:
+                    contexts[item.id] = result
+
+            # Beyond the approved-model horizon, retain a clearly labelled
+            # historical month-of-year planning estimate instead of dropping
+            # the weather layer entirely. Query once per district.
+            for district_id, members in planning_groups.items():
+                representative = members[0]
+                try:
+                    result = await self.context_service.get_context(
+                        district_id=district_id, travel_date=travel_date,
+                        latitude=representative.latitude, longitude=representative.longitude,
+                        planning_mode=True,
                     )
                 except Exception as exc:
                     result = exc
@@ -133,7 +171,10 @@ class WeatherAdapter:
                 )
                 continue
             decision = decisions[attraction.id]
-            if decision.selected_source not in {WeatherSource.LIVE_API, WeatherSource.MONTHLY_FORECAST}:
+            if decision.selected_source not in {
+                WeatherSource.LIVE_API, WeatherSource.DAILY_FORECAST,
+                WeatherSource.MONTHLY_FORECAST, WeatherSource.CLIMATOLOGY,
+            }:
                 output[attraction.id] = ContextEvidence(
                     **common, status=EvidenceStatus.NOT_AVAILABLE,
                     source=decision.selected_source.value,
@@ -166,11 +207,8 @@ class WeatherAdapter:
                 "days_ahead": context.days_ahead,
                 "resolution": context.resolution,
             })
-            if not context.available or context.actual_source == "historical_climatology":
-                limitation = (
-                    "Historical climatology was not used as a date-specific weather forecast."
-                    if context.actual_source == "historical_climatology" else context.message
-                )
+            if not context.available:
+                limitation = context.message
                 output[attraction.id] = ContextEvidence(
                     **common, status=EvidenceStatus.NOT_AVAILABLE,
                     source=context.actual_source, provenance=provenance,
@@ -180,8 +218,18 @@ class WeatherAdapter:
                     details=context.model_dump(mode="json"),
                 )
                 continue
-            reliability = "live_provider" if context.actual_source == "openweathermap" else "approved_model"
-            resolution = "three_hourly_aggregated" if context.resolution == "three_hourly_aggregated" else "monthly"
+            reliability = (
+                "live_provider" if context.actual_source == "openweathermap"
+                else "historical_climatology" if context.actual_source == "historical_climatology"
+                else "approved_model"
+            )
+            resolution = (
+                "three_hourly_aggregated"
+                if context.resolution == "three_hourly_aggregated"
+                else "daily"
+                if context.resolution == "daily"
+                else "monthly"
+            )
             rainfall_period = context.rainfall_period
             if rainfall_period == "calendar_month":
                 rainfall_period = "monthly_total"
@@ -205,7 +253,13 @@ class WeatherAdapter:
                 confidence=_QUALITY.get(reliability), confidence_label=reliability,
                 source=context.actual_source, provenance=provenance,
                 explanation=score.explanation,
-                limitations=["Rule-based experimental activity-weather thresholds are not empirically optimized or a safety certification."],
+                limitations=[
+                    "Historical monthly climate is a planning estimate, not a day-specific forecast."
+                    if context.actual_source == "historical_climatology" else
+                    "This is a date-specific long-range model estimate, not a live observation or short-range numerical forecast."
+                    if context.actual_source == "nasa_power_daily_prophet" else
+                    "Rule-based experimental activity-weather thresholds are not empirically optimized or a safety certification."
+                ],
                 missing_data_indicators=context.missing_targets,
                 details={
                     "conditions": context.model_dump(mode="json"),

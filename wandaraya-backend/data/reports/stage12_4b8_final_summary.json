@@ -1,0 +1,11 @@
+{
+  "status": "HISTORICAL_IMPORT_GUARD_INTEGRATION_BLOCKED",
+  "production_apply_enabled": false,
+  "blockers": ["Production guard integration is incomplete and does not enforce all prerequisites", "A current independently restore-tested production backup is unavailable", "Named collation application usage is not conclusively ruled out", "Full required failure-injection and seeded preservation coverage remains incomplete"],
+  "reports": ["data/reports/stage12_4b8_guard_integration.json", "data/reports/stage12_4b8_failure_injection_tests.json", "data/reports/stage12_4b8_content_preservation.json", "data/reports/stage12_4b8_collation_usage_review.json"],
+  "production_postgresql_writes": false,
+  "historical_production_import": false,
+  "qdrant_writes": false,
+  "nasa_requests": false,
+  "production_backup_created": false
+}

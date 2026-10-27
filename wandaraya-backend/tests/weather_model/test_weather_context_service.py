@@ -12,6 +12,8 @@ from app.weather_model.context.schemas import (
     ClimatologyResult,
     ClimatologyValue,
     MonthlyForecastResult,
+    DailyForecastResult,
+    DailyForecastValue,
 )
 
 
@@ -58,12 +60,12 @@ async def test_live_weather_routing():
 
 
 @pytest.mark.asyncio
-async def test_monthly_unapproved_is_rejected():
+async def test_daily_model_unavailable_is_reported():
 
-    def monthly_lookup(district_id, travel_date):
-        return MonthlyForecastResult(
-            district_id=district_id,
-            requested_month=travel_date.replace(day=1),
+    provider = Mock()
+    provider.get_daily_forecast.return_value = DailyForecastResult(
+            district_id=78,
+            requested_date=date(2026, 11, 15),
             available=False,
             missing_targets=[
                 "rainfall_mm",
@@ -73,9 +75,7 @@ async def test_monthly_unapproved_is_rejected():
             message="No approved forecast",
         )
 
-    service = WeatherContextService(
-        monthly_lookup=monthly_lookup,
-    )
+    service = WeatherContextService(daily_forecast_provider=provider)
 
     result = await service.get_context(
         district_id=78,
@@ -84,24 +84,23 @@ async def test_monthly_unapproved_is_rejected():
     )
 
     assert result.available is False
-    assert result.selected_source == "monthly_forecast"
-    assert result.actual_source == "monthly_forecast"
+    assert result.selected_source == "daily_forecast"
+    assert result.actual_source == "nasa_power_daily_prophet"
 
 
 @pytest.mark.asyncio
-async def test_planning_mode_uses_historical_monthly_patterns_before_90_days():
+async def test_planning_mode_still_uses_date_specific_daily_model():
     provider = Mock()
-    provider.get_climatology.return_value = ClimatologyResult(
+    provider.get_daily_forecast.return_value = DailyForecastResult(
         district_id=78,
-        requested_month=date(2026, 11, 1),
+        requested_date=date(2026, 11, 15),
         available=True,
-        rainfall=ClimatologyValue(
-            target="rainfall_mm", mean=250.0, minimum=150.0, maximum=350.0,
-            unit="mm/month", observation_years=5, first_year=2021, last_year=2025,
+        rainfall=DailyForecastValue(
+            target="rainfall_mm", value=8.0, lower=0.0, upper=30.0, unit="mm/day",
         ),
-        message="Historical climatology",
+        message="Daily Prophet estimate",
     )
-    service = WeatherContextService(climatology_provider=provider)
+    service = WeatherContextService(daily_forecast_provider=provider)
 
     result = await service.get_context(
         district_id=78,
@@ -111,38 +110,29 @@ async def test_planning_mode_uses_historical_monthly_patterns_before_90_days():
     )
 
     assert result.available is True
-    assert result.selected_source == "climatology"
-    assert result.actual_source == "historical_climatology"
-    assert result.rainfall_period == "historical_calendar_month_mean"
-    assert result.provenance["planning_mode"] is True
-    assert "not a day-specific forecast" in result.message
+    assert result.selected_source == "daily_forecast"
+    assert result.actual_source == "nasa_power_daily_prophet"
+    assert result.rainfall_period == "daily"
+    assert result.rainfall_mm == 8.0
 
 
 @pytest.mark.asyncio
-async def test_climatology_routing():
+async def test_long_range_daily_routing():
 
     provider = Mock()
 
-    provider.get_climatology.return_value = ClimatologyResult(
+    provider.get_daily_forecast.return_value = DailyForecastResult(
         district_id=78,
-        requested_month=date(2027, 4, 1),
+        requested_date=date(2027, 4, 15),
         available=True,
-        rainfall=ClimatologyValue(
-            target="rainfall_mm",
-            mean=280.58,
-            minimum=171.95,
-            maximum=395.95,
-            standard_deviation=82.876,
-            unit="mm/month",
-            observation_years=5,
-            first_year=2021,
-            last_year=2025,
+        rainfall=DailyForecastValue(
+            target="rainfall_mm", value=12.5, lower=0.0, upper=42.0, unit="mm/day",
         ),
-        message="Historical climatology",
+        message="Daily Prophet estimate",
     )
 
     service = WeatherContextService(
-        climatology_provider=provider,
+        daily_forecast_provider=provider,
     )
 
     result = await service.get_context(
@@ -152,10 +142,10 @@ async def test_climatology_routing():
     )
 
     assert result.available is True
-    assert result.selected_source == "climatology"
-    assert result.actual_source == "historical_climatology"
-    assert result.rainfall_mm == 280.58
-    assert result.rainfall_period == "historical_calendar_month_mean"
+    assert result.selected_source == "daily_forecast"
+    assert result.actual_source == "nasa_power_daily_prophet"
+    assert result.rainfall_mm == 12.5
+    assert result.rainfall_period == "daily"
 
 
 @pytest.mark.asyncio
@@ -189,7 +179,7 @@ async def test_past_date_is_not_presented_as_forecast():
 
 
 @pytest.mark.asyncio
-async def test_async_monthly_lookup_is_awaited():
+async def test_legacy_async_monthly_lookup_remains_supported_directly():
     async def monthly_lookup(district_id, travel_date):
         return MonthlyForecastResult(
             district_id=district_id,
@@ -205,12 +195,4 @@ async def test_async_monthly_lookup_is_awaited():
 
     service = WeatherContextService(monthly_lookup=monthly_lookup)
 
-    result = await service.get_context(
-        district_id=78,
-        travel_date=date(2026, 11, 15),
-        reference_date=REFERENCE_DATE,
-    )
-
-    assert result.available is False
-    assert result.selected_source == "monthly_forecast"
-    assert result.message == "No approved monthly forecast"
+    assert service.monthly_lookup is monthly_lookup

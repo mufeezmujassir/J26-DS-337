@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "model_type": "daily_prophet",
+  "district_id": 91,
+  "district_name": "Mullaitivu",
+  "target": "temperature_max_c",
+  "resolution": "daily",
+  "observed_rain_threshold_mm": null,
+  "rain_prediction_threshold_mm": null,
+  "training_start": "2010-01-01",
+  "training_cutoff": "2025-12-31",
+  "validation_period": "2024-01-01..2024-12-31",
+  "test_period": "2025-01-01..2025-12-31",
+  "validation_metrics": {
+    "mae": 1.0618,
+    "rmse": 1.3917,
+    "bias": -0.6057
+  },
+  "test_metrics": {
+    "mae": 1.4997,
+    "rmse": 1.778,
+    "bias": 1.3144
+  },
+  "source_provenance": {
+    "provider": "NASA POWER",
+    "source_file": "data/climate/processed/nasa_power/historical_2010_2025/district_91_20100101_20251231.json",
+    "source_sha256": "8abb4e8fbf65a3bc05a9d5193ca96d626d48612e8fbd0a7dd0439f61145a0b73",
+    "district_id": 91,
+    "district_name": "Mullaitivu",
+    "latitude": 9.18102023350005,
+    "longitude": 80.52648228260031,
+    "first_date": "2010-01-01",
+    "last_date": "2025-12-31",
+    "calendar_days": 5844,
+    "missing_source_dates": 0,
+    "invalid_values_replaced_with_missing": {
+      "rainfall_mm": 0,
+      "temperature_min_c": 0,
+      "temperature_max_c": 0,
+      "temperature_mean_c": 0,
+      "relative_humidity_pct": 0,
+      "solar_radiation": 0,
+      "wind_speed_10m": 0,
+      "temperature_order": 0
+    },
+    "spatial_uncertainty": "COARSE_GRID_REPRESENTATIVE_ONLY"
+  },
+  "model_sha256": "1aad689cc59088f44403d87197194e63a39c61124e3f798e313b973b8c37ded6",
+  "production_approved": true
+}

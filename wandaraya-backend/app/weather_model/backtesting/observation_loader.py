@@ -4,7 +4,9 @@ from __future__ import annotations
 
 import math
 from datetime import date, datetime
+from pathlib import Path
 
+import pandas as pd
 from sqlalchemy import text
 from sqlalchemy.engine import Engine
 
@@ -16,6 +18,40 @@ ALLOWED_TARGETS = {
     "temperature_min_c",
     "temperature_max_c",
 }
+
+
+def load_monthly_observations_from_csv(
+    path: str | Path,
+    district_id: int,
+    target: str,
+    cutoff: date | None = None,
+) -> list[MonthlyObservation]:
+    """Load one district/target from the canonical NASA-derived monthly CSV."""
+    if target not in ALLOWED_TARGETS:
+        raise ValueError(f"Unsupported target: {target}")
+    frame = pd.read_csv(path, parse_dates=["observation_date"])
+    required = {"district_id", "observation_date", target}
+    missing = required - set(frame.columns)
+    if missing:
+        raise ValueError(f"Monthly CSV is missing columns: {sorted(missing)}")
+    frame = frame[frame["district_id"] == district_id].sort_values("observation_date")
+    if cutoff is not None:
+        frame = frame[frame["observation_date"].dt.date <= cutoff]
+    if frame["observation_date"].duplicated().any():
+        raise ValueError(f"Duplicate month for district {district_id}")
+    observations: list[MonthlyObservation] = []
+    for row in frame.itertuples(index=False):
+        month = row.observation_date.date()
+        value = getattr(row, target)
+        value = None if pd.isna(value) else float(value)
+        if month.day != 1:
+            raise ValueError(f"Non-month-start date: {month}")
+        if value is not None and not math.isfinite(value):
+            raise ValueError(f"Non-finite observation: {month}")
+        if target == "rainfall_mm" and value is not None and value < 0:
+            raise ValueError(f"Negative rainfall: {month}")
+        observations.append(MonthlyObservation(month=month, value=value))
+    return observations
 
 
 def load_monthly_observations(

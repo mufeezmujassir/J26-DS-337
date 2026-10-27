@@ -6,7 +6,7 @@ import logging
 from app.weather_model.forecasting.district_backtester import DistrictWeatherBacktester
 
 READINESS_FILE = Path(
-    "data/weather/modeling/reports/model_readiness.csv"
+    "data/weather/modeling/nasa_power/reports/model_readiness.csv"
 )
 
 def main():

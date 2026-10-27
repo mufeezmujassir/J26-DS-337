@@ -1,0 +1,11 @@
+{
+  "status": "HISTORICAL_PERSISTENCE_PREPARATION_BLOCKED",
+  "processed_raw_consistency_dry_run": {"batch01_samples": 3, "batch01_records": 17532, "batch02_samples": 25, "batch02_records": 146100},
+  "local_tests_passed": 13,
+  "database_integration_tests_passed": 0,
+  "blockers": ["historical transaction executor not implemented", "disposable PostgreSQL integration environment not established", "collation mismatch unresolved"],
+  "historical_apply_disabled": true,
+  "postgresql_writes_executed": false,
+  "qdrant_writes_executed": false,
+  "nasa_requests": 0
+}

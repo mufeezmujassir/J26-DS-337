@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "model_type": "daily_prophet",
+  "district_id": 82,
+  "district_name": "Kalutara",
+  "target": "temperature_max_c",
+  "resolution": "daily",
+  "observed_rain_threshold_mm": null,
+  "rain_prediction_threshold_mm": null,
+  "training_start": "2010-01-01",
+  "training_cutoff": "2025-12-31",
+  "validation_period": "2024-01-01..2024-12-31",
+  "test_period": "2025-01-01..2025-12-31",
+  "validation_metrics": {
+    "mae": 0.6856,
+    "rmse": 0.8325,
+    "bias": -0.4386
+  },
+  "test_metrics": {
+    "mae": 0.9573,
+    "rmse": 1.1725,
+    "bias": 0.9238
+  },
+  "source_provenance": {
+    "provider": "NASA POWER",
+    "source_file": "data/climate/processed/nasa_power/historical_2010_2025/district_82_20100101_20251231.json",
+    "source_sha256": "4749f664e0312ef0ec5146325faebd69e200202ef121efc56b0cd53f78a4bedb",
+    "district_id": 82,
+    "district_name": "Kalutara",
+    "latitude": 6.5756489320000355,
+    "longitude": 80.1345205828068,
+    "first_date": "2010-01-01",
+    "last_date": "2025-12-31",
+    "calendar_days": 5844,
+    "missing_source_dates": 0,
+    "invalid_values_replaced_with_missing": {
+      "rainfall_mm": 0,
+      "temperature_min_c": 0,
+      "temperature_max_c": 0,
+      "temperature_mean_c": 0,
+      "relative_humidity_pct": 0,
+      "solar_radiation": 0,
+      "wind_speed_10m": 0,
+      "temperature_order": 0
+    },
+    "spatial_uncertainty": "COARSE_GRID_REPRESENTATIVE_ONLY"
+  },
+  "model_sha256": "19daeec061e349ff2db57f43c5ba20bd9d3658aad15335707b41de4f32773aa6",
+  "production_approved": true
+}

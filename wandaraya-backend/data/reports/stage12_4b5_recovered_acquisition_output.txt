@@ -1,0 +1,370 @@
+(.venv) C:\Users\MUFEEZ\OneDrive - Sri Lanka Institute of Information Technology\Desktop\RP\Research_2027\wandaraya-backend>docker exec -it wandaraya-api-cutover python -m scripts.acquire_stage12_4b4_batch02 --manifest data/climate/manifests/nasa_power/historical_2010_2025/batch02_proposed_manifest.json --dry-run
+{
+  "status": "DRY_RUN_VALID",
+  "samples": 25,
+  "expected_records": 146100,
+  "network_requests": 0,
+  "postgresql_writes": false,
+  "qdrant_writes": false
+}
+
+(.venv) C:\Users\MUFEEZ\OneDrive - Sri Lanka Institute of Information Technology\Desktop\RP\Research_2027\wandaraya-backend>docker exec -it wandaraya-api-cutover python -m scripts.acquire_stage12_4b4_batch02 --manifest data/climate/manifests/nasa_power/historical_2010_2025/batch02_proposed_manifest.json --execute-acquisition --confirm-execute
+{
+  "status": "ACQUISITION_COMPLETED_NO_DATABASE_PERSISTENCE",
+  "results": [
+    {
+      "sample_id": "district_73_representative_2010_2025",
+      "status": "VALIDATED",
+      "source": "network",
+      "checksum_sha256": "f84973a0a333dddfd6344559266ddd8981e90d1a7d66b3e7a3654a1798cff929",
+      "validation": {
+        "received": 5844,
+        "accepted": 5844,
+        "rejected": 0,
+        "expected_daily_records": 5844,
+        "completeness_percent": 100.0,
+        "rejections": []
+      }
+    },
+    {
+      "sample_id": "district_74_representative_2010_2025",
+      "status": "VALIDATED",
+      "source": "network",
+      "checksum_sha256": "8f6f5ad578acf4bafc5f16d942d1bc613351b594c55a0bb326ca0edcca2859cb",
+      "validation": {
+        "received": 5844,
+        "accepted": 5844,
+        "rejected": 0,
+        "expected_daily_records": 5844,
+        "completeness_percent": 100.0,
+        "rejections": []
+      }
+    },
+    {
+      "sample_id": "district_75_representative_2010_2025",
+      "status": "VALIDATED",
+      "source": "network",
+      "checksum_sha256": "1fdc6510a3f142cb7ea2819b944aae595eb52a48f9745b964da7da36c34507b4",
+      "validation": {
+        "received": 5844,
+        "accepted": 5844,
+        "rejected": 0,
+        "expected_daily_records": 5844,
+        "completeness_percent": 100.0,
+        "rejections": []
+      }
+    },
+    {
+      "sample_id": "district_76_representative_2010_2025",
+      "status": "VALIDATED",
+      "source": "network",
+      "checksum_sha256": "7ff9c1009116b869f359303eed9408530c51da6c101e4097e03c00fbf829c757",
+      "validation": {
+        "received": 5844,
+        "accepted": 5844,
+        "rejected": 0,
+        "expected_daily_records": 5844,
+        "completeness_percent": 100.0,
+        "rejections": []
+      }
+    },
+    {
+      "sample_id": "district_77_representative_2010_2025",
+      "status": "VALIDATED",
+      "source": "network",
+      "checksum_sha256": "5b36a1b8d1ebb6e11137462ba681741465558b9fe22c133c8625e70e9190286b",
+      "validation": {
+        "received": 5844,
+        "accepted": 5844,
+        "rejected": 0,
+        "expected_daily_records": 5844,
+        "completeness_percent": 100.0,
+        "rejections": []
+      }
+    },
+    {
+      "sample_id": "district_78_representative_2010_2025",
+      "status": "VALIDATED",
+      "source": "network",
+      "checksum_sha256": "01c398943959cd84f2f01de3c0a4e9943c8624c79092a52f089176c799995fe6",
+      "validation": {
+        "received": 5844,
+        "accepted": 5844,
+        "rejected": 0,
+        "expected_daily_records": 5844,
+        "completeness_percent": 100.0,
+        "rejections": []
+      }
+    },
+    {
+      "sample_id": "district_79_representative_2010_2025",
+      "status": "VALIDATED",
+      "source": "network",
+      "checksum_sha256": "8a17ccea97545080ce91ea8d3a4453c1ad0fdf990b8da68083dbe8ecc716509c",
+      "validation": {
+        "received": 5844,
+        "accepted": 5844,
+        "rejected": 0,
+        "expected_daily_records": 5844,
+        "completeness_percent": 100.0,
+        "rejections": []
+      }
+    },
+    {
+      "sample_id": "district_80_representative_2010_2025",
+      "status": "VALIDATED",
+      "source": "network",
+      "checksum_sha256": "10f1537d3c5689ea9a00a8ad9f81e07e8efefdeb66ea4bd6ad6c3270f59bda04",
+      "validation": {
+        "received": 5844,
+        "accepted": 5844,
+        "rejected": 0,
+        "expected_daily_records": 5844,
+        "completeness_percent": 100.0,
+        "rejections": []
+      }
+    },
+    {
+      "sample_id": "district_81_representative_2010_2025",
+      "status": "VALIDATED",
+      "source": "network",
+      "checksum_sha256": "164148d74c71d76cd94cef2bd6c17503a5fc533118f1718b8be42c589b45a5cb",
+      "validation": {
+        "received": 5844,
+        "accepted": 5844,
+        "rejected": 0,
+        "expected_daily_records": 5844,
+        "completeness_percent": 100.0,
+        "rejections": []
+      }
+    },
+    {
+      "sample_id": "district_82_representative_2010_2025",
+      "status": "VALIDATED",
+      "source": "network",
+      "checksum_sha256": "a08dd61afd238ceb07adef56f0a774519ff1d2b20794713768ef28ae17430e08",
+      "validation": {
+        "received": 5844,
+        "accepted": 5844,
+        "rejected": 0,
+        "expected_daily_records": 5844,
+        "completeness_percent": 100.0,
+        "rejections": []
+      }
+    },
+    {
+      "sample_id": "district_83_representative_2010_2025",
+      "status": "VALIDATED",
+      "source": "network",
+      "checksum_sha256": "b964f652755cbadaa296b9dda7cfd1d19946e7684f891702c1491c767c85892d",
+      "validation": {
+        "received": 5844,
+        "accepted": 5844,
+        "rejected": 0,
+        "expected_daily_records": 5844,
+        "completeness_percent": 100.0,
+        "rejections": []
+      }
+    },
+    {
+      "sample_id": "district_84_representative_2010_2025",
+      "status": "VALIDATED",
+      "source": "network",
+      "checksum_sha256": "d4ece0d64f97ca00451034f004d3ab79d3da47a107b630b4eadafd175c124e4a",
+      "validation": {
+        "received": 5844,
+        "accepted": 5844,
+        "rejected": 0,
+        "expected_daily_records": 5844,
+        "completeness_percent": 100.0,
+        "rejections": []
+      }
+    },
+    {
+      "sample_id": "district_85_representative_2010_2025",
+      "status": "VALIDATED",
+      "source": "network",
+      "checksum_sha256": "661f5be037870bc5e51632c1af6cf1edb1b49dcf9e171febb8251b4ccc6b901d",
+      "validation": {
+        "received": 5844,
+        "accepted": 5844,
+        "rejected": 0,
+        "expected_daily_records": 5844,
+        "completeness_percent": 100.0,
+        "rejections": []
+      }
+    },
+    {
+      "sample_id": "district_86_representative_2010_2025",
+      "status": "VALIDATED",
+      "source": "network",
+      "checksum_sha256": "d776a0e0c169b5441a01a537d4a73429c840c63703540d88b71d3bfcc6bf501b",
+      "validation": {
+        "received": 5844,
+        "accepted": 5844,
+        "rejected": 0,
+        "expected_daily_records": 5844,
+        "completeness_percent": 100.0,
+        "rejections": []
+      }
+    },
+    {
+      "sample_id": "district_87_representative_2010_2025",
+      "status": "VALIDATED",
+      "source": "network",
+      "checksum_sha256": "5c7f5d2e55e3ed1ecd7975e80b64f5d92e13baf884cbd0005ebe12de5355f97f",
+      "validation": {
+        "received": 5844,
+        "accepted": 5844,
+        "rejected": 0,
+        "expected_daily_records": 5844,
+        "completeness_percent": 100.0,
+        "rejections": []
+      }
+    },
+    {
+      "sample_id": "district_88_representative_2010_2025",
+      "status": "VALIDATED",
+      "source": "network",
+      "checksum_sha256": "35e6d548dfb0aaf348b3ea0ea5597e5aad135dabdb4fd1dbae12573db5295262",
+      "validation": {
+        "received": 5844,
+        "accepted": 5844,
+        "rejected": 0,
+        "expected_daily_records": 5844,
+        "completeness_percent": 100.0,
+        "rejections": []
+      }
+    },
+    {
+      "sample_id": "district_89_representative_2010_2025",
+      "status": "VALIDATED",
+      "source": "network",
+      "checksum_sha256": "9f5578467bca2d905fc18b0ffef72fc9381a9a8c90f0816a3ea7c7db211b84fe",
+      "validation": {
+        "received": 5844,
+        "accepted": 5844,
+        "rejected": 0,
+        "expected_daily_records": 5844,
+        "completeness_percent": 100.0,
+        "rejections": []
+      }
+    },
+    {
+      "sample_id": "district_90_representative_2010_2025",
+      "status": "VALIDATED",
+      "source": "network",
+      "checksum_sha256": "09a25790a4739f1bce95476aa23ff0c20295b51fdb50505df1cf6763a3930397",
+      "validation": {
+        "received": 5844,
+        "accepted": 5844,
+        "rejected": 0,
+        "expected_daily_records": 5844,
+        "completeness_percent": 100.0,
+        "rejections": []
+      }
+    },
+    {
+      "sample_id": "district_91_representative_2010_2025",
+      "status": "VALIDATED",
+      "source": "network",
+      "checksum_sha256": "467e32f2cbc3bba362f59ce974eb8d2a4b3c8441f4b5cd84951fa6ac32e93313",
+      "validation": {
+        "received": 5844,
+        "accepted": 5844,
+        "rejected": 0,
+        "expected_daily_records": 5844,
+        "completeness_percent": 100.0,
+        "rejections": []
+      }
+    },
+    {
+      "sample_id": "district_92_representative_2010_2025",
+      "status": "VALIDATED",
+      "source": "network",
+      "checksum_sha256": "af8eabdd0a61c7ee7b657a220c5ace8ffb1bb05b137036bc32b3b554c795b7b4",
+      "validation": {
+        "received": 5844,
+        "accepted": 5844,
+        "rejected": 0,
+        "expected_daily_records": 5844,
+        "completeness_percent": 100.0,
+        "rejections": []
+      }
+    },
+    {
+      "sample_id": "district_93_representative_2010_2025",
+      "status": "VALIDATED",
+      "source": "network",
+      "checksum_sha256": "944377cc7c037bd29176b0b4754367e221bb83fe7b72b8e6b37229a547285374",
+      "validation": {
+        "received": 5844,
+        "accepted": 5844,
+        "rejected": 0,
+        "expected_daily_records": 5844,
+        "completeness_percent": 100.0,
+        "rejections": []
+      }
+    },
+    {
+      "sample_id": "district_94_representative_2010_2025",
+      "status": "VALIDATED",
+      "source": "network",
+      "checksum_sha256": "2ce682aba918f8cfb2dd6d1626f59ec4723455ccb0cc4e5de3ef915445e4f529",
+      "validation": {
+        "received": 5844,
+        "accepted": 5844,
+        "rejected": 0,
+        "expected_daily_records": 5844,
+        "completeness_percent": 100.0,
+        "rejections": []
+      }
+    },
+    {
+      "sample_id": "district_95_representative_2010_2025",
+      "status": "VALIDATED",
+      "source": "network",
+      "checksum_sha256": "b0385aed97fdb99a97317f1c815938827fb493b6f308b1fb97627232bb7e3ece",
+      "validation": {
+        "received": 5844,
+        "accepted": 5844,
+        "rejected": 0,
+        "expected_daily_records": 5844,
+        "completeness_percent": 100.0,
+        "rejections": []
+      }
+    },
+    {
+      "sample_id": "district_96_representative_2010_2025",
+      "status": "VALIDATED",
+      "source": "network",
+      "checksum_sha256": "487e4a6ce2f260bb7ebcadd0213c198438b43c2e3f30353918cafaf54e5b3357",
+      "validation": {
+        "received": 5844,
+        "accepted": 5844,
+        "rejected": 0,
+        "expected_daily_records": 5844,
+        "completeness_percent": 100.0,
+        "rejections": []
+      }
+    },
+    {
+      "sample_id": "district_97_representative_2010_2025",
+      "status": "VALIDATED",
+      "source": "network",
+      "checksum_sha256": "a3a93bb8a1a49ff472d486bba84c15264c0fffc97ecfc1e2e4dfda22fff1b997",
+      "validation": {
+        "received": 5844,
+        "accepted": 5844,
+        "rejected": 0,
+        "expected_daily_records": 5844,
+        "completeness_percent": 100.0,
+        "rejections": []
+      }
+    }
+  ],
+  "postgresql_writes": false,
+  "qdrant_writes": false
+}
+
+(.venv) C:\Users\MUFEEZ\OneDrive - Sri Lanka Institute of Information Technology\Desktop\RP\Research_2027\wandaraya-backend>

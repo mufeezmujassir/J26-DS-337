@@ -1,0 +1,91 @@
+{
+  "database": "climate_safety_4b9_test",
+  "container": "wandaraya-climate-executor-integration-test",
+  "migration_returncode": 0,
+  "migration_log": "\nINFO  [alembic.runtime.migration] Context impl PostgresqlImpl.\nINFO  [alembic.runtime.migration] Will assume transactional DDL.\nINFO  [alembic.runtime.migration] Running upgrade  -> c3634af3e5c7, Initial schema setup\nINFO  [alembic.runtime.migration] Running upgrade c3634af3e5c7 -> 4cd4e4d3535e, add\nINFO  [alembic.runtime.migration] Running upgrade 4cd4e4d3535e -> 3f1c4bf9f174, add attraction image table\nINFO  [alembic.runtime.migration] Running upgrade 3f1c4bf9f174 -> 321c5b988b7c, add weather readings\nINFO  [alembic.runtime.migration] Running upgrade 321c5b988b7c -> b10f0b26943a, add weather station registry\nINFO  [alembic.runtime.migration] Running upgrade b10f0b26943a -> d9e7f6a5b4c3, add weather foundation tables\nINFO  [alembic.runtime.migration] Running upgrade d9e7f6a5b4c3 -> 8295ce04d40b, add modified wheather\nINFO  [alembic.runtime.migration] Running upgrade 8295ce04d40b -> e4a7d9c2f681, add weather forecast persistence tables\nINFO  [alembic.runtime.migration] Running upgrade e4a7d9c2f681 -> f5e2a1d7b903, add tourism synchronization governance tables\nINFO  [alembic.runtime.migration] Running upgrade f5e2a1d7b903 -> a12b3c4d5e6f, add Sri Lanka holiday and tourism-event intelligence tables\nINFO  [alembic.runtime.migration] Running upgrade a12b3c4d5e6f -> b34c5d6e7f8a, Extend tourism-event source fields for bounded LankaEvents ingestion.\nINFO  [alembic.runtime.migration] Running upgrade b34c5d6e7f8a -> c45d6e7f8a9b, Add event extraction provenance fields.\nINFO  [alembic.runtime.migration] Running upgrade c45d6e7f8a9b -> d56e7f8a9b0c, Add evidence-aware fields for candidate event-attraction links.\nINFO  [alembic.runtime.migration] Running upgrade d56e7f8a9b0c -> e67f8a9b0c1d, add versioned climate pilot tables\nINFO  [alembic.runtime.migration] Running upgrade e67f8a9b0c1d -> f78a9b0c1d2e, Add resumable historical climate import checkpoints.\n",
+  "historical_ingestion_test": "PASSED",
+  "production_database_writes": false,
+  "alembic_revision": "f78a9b0c1d2e",
+  "checkpoint_table_exists": true,
+  "status": "CHECKPOINT_MIGRATION_AND_IMPORT_TEST_PASSED",
+  "inserted": 163632,
+  "repeat_unchanged": 163632,
+  "batch_counts": {
+    "nasa_power_daily_v2.10.0_historical_2010_2025_batch01": 17532,
+    "nasa_power_daily_v2.10.0_historical_2010_2025_batch02": 146100
+  },
+  "checkpoints": 28,
+  "rollback_verified": true,
+  "limitation": "production migration and historical imports were not performed; production guard integration, named-collation failure and inconsistent checkpoint tests were not covered",
+  "content_preservation": {
+    "before": {
+      "pilot": {
+        "count": 1,
+        "sha256": "26956093816a5d2bdf006eba8bfc1559c1b6eb9f31d1a8e1ac8f620739bf73c0"
+      },
+      "pilot_version": {
+        "count": 1,
+        "sha256": "baf9c8fa3e12aea6c40f68e211015b78ee092aa73612fbaf58b35c33bf2acb2c"
+      },
+      "pilot_grid": {
+        "count": 1,
+        "sha256": "8d61d3d63bbf97c2a5ec846aac0df7f7866ce5ee243d56519d4773073524a770"
+      },
+      "weather": {
+        "count": 1,
+        "sha256": "7c85c6b09dea3be6e55068b3281b138accbf22506ab0ae3fd4d8413751070100"
+      },
+      "weather_stations": {
+        "count": 1,
+        "sha256": "14de80b1a239779e18b776cf9658aaf5cf0115b09ac1866922edeb051787a5eb"
+      },
+      "monthly": {
+        "count": 1,
+        "sha256": "3e9a219a54ee997987b964ef9e1719460b3d5718fa8426cb7ce14283478cd9b3"
+      },
+      "forecasts": {
+        "count": 1,
+        "sha256": "549aa82d6d93e6e9bdf380296113cb19734c6699a23376a3d82c6bce32878bf8"
+      },
+      "mappings": {
+        "count": 1,
+        "sha256": "cc218514d635f7a959c67b3ecfe7204f062f42c7f76a674e6a74d672e4186d0b"
+      }
+    },
+    "after": {
+      "pilot": {
+        "count": 1,
+        "sha256": "26956093816a5d2bdf006eba8bfc1559c1b6eb9f31d1a8e1ac8f620739bf73c0"
+      },
+      "pilot_version": {
+        "count": 1,
+        "sha256": "baf9c8fa3e12aea6c40f68e211015b78ee092aa73612fbaf58b35c33bf2acb2c"
+      },
+      "pilot_grid": {
+        "count": 1,
+        "sha256": "8d61d3d63bbf97c2a5ec846aac0df7f7866ce5ee243d56519d4773073524a770"
+      },
+      "weather": {
+        "count": 1,
+        "sha256": "7c85c6b09dea3be6e55068b3281b138accbf22506ab0ae3fd4d8413751070100"
+      },
+      "weather_stations": {
+        "count": 1,
+        "sha256": "14de80b1a239779e18b776cf9658aaf5cf0115b09ac1866922edeb051787a5eb"
+      },
+      "monthly": {
+        "count": 1,
+        "sha256": "3e9a219a54ee997987b964ef9e1719460b3d5718fa8426cb7ce14283478cd9b3"
+      },
+      "forecasts": {
+        "count": 1,
+        "sha256": "549aa82d6d93e6e9bdf380296113cb19734c6699a23376a3d82c6bce32878bf8"
+      },
+      "mappings": {
+        "count": 1,
+        "sha256": "cc218514d635f7a959c67b3ecfe7204f062f42c7f76a674e6a74d672e4186d0b"
+      }
+    },
+    "equal": true
+  }
+}

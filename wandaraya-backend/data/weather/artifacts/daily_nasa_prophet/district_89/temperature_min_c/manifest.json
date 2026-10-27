@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "model_type": "daily_prophet",
+  "district_id": 89,
+  "district_name": "Matara",
+  "target": "temperature_min_c",
+  "resolution": "daily",
+  "observed_rain_threshold_mm": null,
+  "rain_prediction_threshold_mm": null,
+  "training_start": "2010-01-01",
+  "training_cutoff": "2025-12-31",
+  "validation_period": "2024-01-01..2024-12-31",
+  "test_period": "2025-01-01..2025-12-31",
+  "validation_metrics": {
+    "mae": 0.6082,
+    "rmse": 0.7172,
+    "bias": -0.4593
+  },
+  "test_metrics": {
+    "mae": 0.7972,
+    "rmse": 0.9133,
+    "bias": 0.7538
+  },
+  "source_provenance": {
+    "provider": "NASA POWER",
+    "source_file": "data/climate/processed/nasa_power/historical_2010_2025/district_89_20100101_20251231.json",
+    "source_sha256": "7755e998735a86392e9696a076348e0b5965e5d697126b0742147b8ca8005c08",
+    "district_id": 89,
+    "district_name": "Matara",
+    "latitude": 6.15822239600007,
+    "longitude": 80.5194068155318,
+    "first_date": "2010-01-01",
+    "last_date": "2025-12-31",
+    "calendar_days": 5844,
+    "missing_source_dates": 0,
+    "invalid_values_replaced_with_missing": {
+      "rainfall_mm": 0,
+      "temperature_min_c": 0,
+      "temperature_max_c": 0,
+      "temperature_mean_c": 0,
+      "relative_humidity_pct": 0,
+      "solar_radiation": 0,
+      "wind_speed_10m": 0,
+      "temperature_order": 0
+    },
+    "spatial_uncertainty": "COARSE_GRID_REPRESENTATIVE_ONLY"
+  },
+  "model_sha256": "88f19b05dc10571e8d029cf12af33e3a4de0e4af15844c915d252c27dd1317c8",
+  "production_approved": true
+}

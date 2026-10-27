@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "model_type": "daily_prophet",
+  "district_id": 85,
+  "district_name": "Kilinochchi",
+  "target": "rainfall_mm",
+  "resolution": "daily",
+  "observed_rain_threshold_mm": 0.5,
+  "rain_prediction_threshold_mm": 1.484384,
+  "training_start": "2010-01-01",
+  "training_cutoff": "2025-12-31",
+  "validation_period": "2024-01-01..2024-12-31",
+  "test_period": "2025-01-01..2025-12-31",
+  "validation_metrics": {
+    "mae": 3.416,
+    "rmse": 7.4278,
+    "bias": -0.808,
+    "rain_event_accuracy": 0.7022,
+    "rain_event_precision": 0.7175,
+    "rain_event_recall": 0.7767,
+    "rain_event_f1": 0.7459,
+    "rain_prediction_threshold_mm": 1.484384
+  },
+  "test_metrics": {
+    "mae": 4.0406,
+    "rmse": 10.6829,
+    "bias": -2.6075,
+    "rain_event_accuracy": 0.6356,
+    "rain_event_precision": 0.837,
+    "rain_event_recall": 0.5992,
+    "rain_event_f1": 0.6984,
+    "rain_prediction_threshold_mm": 1.484384
+  },
+  "source_provenance": {
+    "provider": "NASA POWER",
+    "source_file": "data/climate/processed/nasa_power/historical_2010_2025/district_85_20100101_20251231.json",
+    "source_sha256": "fafcb58b2391acb5c395bd9b55c8e1681d8e8c6c00da61e73aec71df2fdf9374",
+    "district_id": 85,
+    "district_name": "Kilinochchi",
+    "latitude": 9.447651908000068,
+    "longitude": 80.38569529237084,
+    "first_date": "2010-01-01",
+    "last_date": "2025-12-31",
+    "calendar_days": 5844,
+    "missing_source_dates": 0,
+    "invalid_values_replaced_with_missing": {
+      "rainfall_mm": 0,
+      "temperature_min_c": 0,
+      "temperature_max_c": 0,
+      "temperature_mean_c": 0,
+      "relative_humidity_pct": 0,
+      "solar_radiation": 0,
+      "wind_speed_10m": 0,
+      "temperature_order": 0
+    },
+    "spatial_uncertainty": "COARSE_GRID_REPRESENTATIVE_ONLY"
+  },
+  "model_sha256": "e7902fb1504fb25248fb63998158b1ecc4809ab35108b956d00d11f9a5966ca0",
+  "production_approved": true
+}

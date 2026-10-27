@@ -1,0 +1,6 @@
+{
+  "status": "NOT_RUN",
+  "reason": "A safe isolated PostgreSQL persistence test environment and complete historical transaction executor are not yet established.",
+  "production_database_writes": false,
+  "do_not_interpret_unit_tests_as_database_transaction_tests": true
+}

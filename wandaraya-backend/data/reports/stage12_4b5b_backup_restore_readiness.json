@@ -1,0 +1,20 @@
+{
+  "backup_path": "backups\\wandaraya_pre_collation_review_20261020.dump",
+  "sha256": "b55260094aa7dcda43d690a4dba55e9aa3d03862bea24faeb55e93c6d6bc2836",
+  "expected_sha256": "b55260094aa7dcda43d690a4dba55e9aa3d03862bea24faeb55e93c6d6bc2836",
+  "checksum_matches": true,
+  "isolated_database": "climate_collation_review_5b",
+  "container": "wandaraya-climate-integration-postgres",
+  "restore_exit_code": 0,
+  "baseline": {
+    "active_attractions": 6120,
+    "climate_observations": 2196,
+    "alembic_revision": "e67f8a9b0c1d"
+  },
+  "limitations": [
+    "point-in-time backup",
+    "roles were not backed up or restored separately",
+    "baseline checks do not establish complete equivalence",
+    "fresh pre-maintenance backup still required"
+  ]
+}

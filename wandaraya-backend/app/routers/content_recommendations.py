@@ -19,11 +19,7 @@ async def content_based_recommendations(
     payload: ContentBasedRecommendationRequest,
     db: AsyncSession = Depends(get_db),
 ) -> ContentBasedRecommendationResponse:
-    """Rank semantic candidates with verified attraction metadata.
-
-    This route is read-only and intentionally does not apply weather or any of
-    the future contextual re-ranking dimensions.
-    """
+   
     try:
         return await ContentBasedRecommendationService(db=db).recommend(payload)
     except ValueError as exc:

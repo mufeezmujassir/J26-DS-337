@@ -18,7 +18,7 @@ class ClimatologyProvider:
 
     def __init__(
         self,
-        data_root: str | Path = "data/weather/modeling/prophet",
+        data_root: str | Path = "data/weather/modeling/nasa_power/prophet",
         min_years: int = 3,
         history_cutoff: date | None = None,
     ):

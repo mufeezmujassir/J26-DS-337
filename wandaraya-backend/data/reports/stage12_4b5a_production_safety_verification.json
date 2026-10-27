@@ -1,0 +1,8 @@
+{
+  "target": "wandaraya-postgres / wandaraya",
+  "historical_apply": "disabled unconditionally",
+  "read_only_baseline_last_verified": {"alembic_revision": "e67f8a9b0c1d", "pilot_observations": 2196, "grid_cells": 6, "attraction_mappings": 6, "historical_observations": 0, "weather_readings": 1162, "district_weather_monthly": 873, "weather_forecasts": 129},
+  "production_postgresql_writes_executed": false,
+  "qdrant_writes_executed": false,
+  "ranking_changes": false
+}

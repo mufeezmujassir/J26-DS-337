@@ -1,0 +1,16 @@
+{
+  "audit_date":"2026-10-21",
+  "sources":[
+    {"name":"Google Places API New","data":"place identity, geography, types, ratings, hours and metadata","ingestion":"HTTP connector/discovery/details","frequency":"tourism discovery/refresh DAG configured monthly","destination":"attractions and mappings","usage":"canonical discovery/enrichment","status":"IMPLEMENTED","limitations":"key/cost/terms and provider coverage"},
+    {"name":"Wikipedia","data":"encyclopedic descriptions","ingestion":"MediaWiki API","frequency":"KB refresh","destination":"attraction_descriptions","usage":"semantic document","status":"IMPLEMENTED","limitations":"coverage/content changes"},
+    {"name":"Wikivoyage","data":"travel context","ingestion":"MediaWiki API","frequency":"KB refresh","destination":"attraction_descriptions","usage":"semantic document","status":"IMPLEMENTED","limitations":"coverage/content changes"},
+    {"name":"OpenWeatherMap","data":"short-term forecast","ingestion":"live API","frequency":"weather DAG configured every 3 hours/on demand","destination":"weather context/cache tables","usage":"0-5 day context","status":"IMPLEMENTED","limitations":"key/provider uncertainty"},
+    {"name":"NASA POWER","data":"daily historical climate","ingestion":"climate acquisition pipeline","frequency":"research batches","destination":"climate_daily_observations and derived profiles","usage":"historical seasonality","status":"IMPLEMENTED","limitations":"0.5 degree grid, not microclimate"},
+    {"name":"calendar-sri-lanka","data":"holiday and Poya dates","ingestion":"source connector/DAG","frequency":"annual schedule configured","destination":"holiday_calendar","usage":"holiday/Poya context","status":"IMPLEMENTED","limitations":"successful schedule history not verified"},
+    {"name":"LankaEvents","data":"tourism event candidates","ingestion":"source connector/DAG","frequency":"daily schedule configured","destination":"tourism_events/event_attraction_links","usage":"verified event context","status":"IMPLEMENTED","limitations":"sparse runtime coverage and verification required"},
+    {"name":"OpenRouteService","data":"route information","ingestion":"on-demand HTTP","frequency":"request time","destination":null,"usage":"routing separate from recommendation core","status":"IMPLEMENTED","limitations":"external key/provider"},
+    {"name":"SLTDA","data":"tourism/governance artifacts","ingestion":"repository artifacts/scripts","frequency":"NOT_VERIFIED","destination":"various governance artifacts","usage":"quality/reconciliation","status":"PARTIALLY_IMPLEMENTED","limitations":"live direct feed not proven"},
+    {"name":"TripAdvisor","data":null,"ingestion":null,"frequency":null,"destination":null,"usage":null,"status":"NOT_IMPLEMENTED"},
+    {"name":"Sri Lanka Railways direct API","data":null,"ingestion":null,"frequency":null,"destination":null,"usage":"transport integration not verified for Component 1","status":"NOT_VERIFIED"}
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "audit_date":"2026-10-21",
+  "production_ranking_changed_by_audit":false,
+  "items":[
+    {"module":"knowledge_base","status":"IMPLEMENTED_AND_TESTED","evaluation":"runtime counts verified","remaining":"quality monitoring and backup drill"},
+    {"module":"data_ingestion","status":"IMPLEMENTED_AND_TESTED","evaluation":"code/tests; scheduled-run history not verified","remaining":"licensing and observed DAG audit"},
+    {"module":"embeddings_qdrant","status":"IMPLEMENTED_AND_TESTED","evaluation":"green active collection with 6120 points","remaining":"cross-store recovery drill"},
+    {"module":"semantic_retrieval","status":"IMPLEMENTED_AND_TESTED","evaluation":"tests/API","remaining":"independent relevance benchmark"},
+    {"module":"weather","status":"PARTIALLY_IMPLEMENTED","evaluation":"tests/artifacts; zero approved model runs in cited audit","remaining":"approve/evaluate medium-term forecast"},
+    {"module":"time_of_day","status":"IMPLEMENTED_EXPERIMENTAL","evaluation":"tests","remaining":"calibration"},
+    {"module":"holiday_event","status":"IMPLEMENTED_EXPERIMENTAL","evaluation":"tests; sparse runtime event data","remaining":"coverage and human evaluation"},
+    {"module":"seasonality","status":"VALIDATION_PENDING","evaluation":"exploratory NDCG only","remaining":"Stage 12.4G prospective judgments"},
+    {"module":"unified_reranker","status":"IMPLEMENTED_EXPERIMENTAL","evaluation":"shadow pilot and tests","remaining":"R0-R3 human ablation"},
+    {"module":"langgraph_langchain","status":"IMPLEMENTED_EXPERIMENTAL","evaluation":"8 graph tests and 3-request pilot","remaining":"durable checkpoints, load/security tests"},
+    {"module":"group_emotion","status":"CONTRACT_READY","evaluation":null,"remaining":"component completion, consent, calibration and R4"},
+    {"module":"ncf","status":"NOT_IMPLEMENTED","evaluation":null,"remaining":"requires interaction data and baseline justification"},
+    {"module":"graph_recommender_gnn","status":"NOT_IMPLEMENTED","evaluation":null,"remaining":"requires graph/data/evaluation design"},
+    {"module":"genetic_optimizer","status":"NOT_IMPLEMENTED","evaluation":null,"remaining":"only if itinerary optimization scope requires it"},
+    {"module":"frontend","status":"UNKNOWN_REQUIRES_VERIFICATION","evaluation":null,"remaining":"inspect separate Flutter repository"},
+    {"module":"production_context_ranking","status":"NOT_IMPLEMENTED","evaluation":"guarded off","remaining":"validation and approval"}
+  ]
+}

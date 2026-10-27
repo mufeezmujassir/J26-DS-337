@@ -1,5 +1,5 @@
-"""Experimental training and production-safe weather forecast components."""
+"""Weather forecasting package.
 
-from app.weather_model.forecasting.forecast_service import ForecastService
-
-__all__ = ["ForecastService"]
+Concrete services are imported from their modules to avoid package-level
+cycles between live-weather context and forecast selection.
+"""

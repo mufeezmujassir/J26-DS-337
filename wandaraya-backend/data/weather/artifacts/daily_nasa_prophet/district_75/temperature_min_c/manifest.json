@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "model_type": "daily_prophet",
+  "district_id": 75,
+  "district_name": "Badulla",
+  "target": "temperature_min_c",
+  "resolution": "daily",
+  "observed_rain_threshold_mm": null,
+  "rain_prediction_threshold_mm": null,
+  "training_start": "2010-01-01",
+  "training_cutoff": "2025-12-31",
+  "validation_period": "2024-01-01..2024-12-31",
+  "test_period": "2025-01-01..2025-12-31",
+  "validation_metrics": {
+    "mae": 1.017,
+    "rmse": 1.2169,
+    "bias": -0.6999
+  },
+  "test_metrics": {
+    "mae": 1.2121,
+    "rmse": 1.4351,
+    "bias": 0.9525
+  },
+  "source_provenance": {
+    "provider": "NASA POWER",
+    "source_file": "data/climate/processed/nasa_power/historical_2010_2025/district_75_20100101_20251231.json",
+    "source_sha256": "17974dbdf4d3f8ed876df1d7b1a251d098312564004c407c0c0b6a8bac1d874d",
+    "district_id": 75,
+    "district_name": "Badulla",
+    "latitude": 7.082017122500048,
+    "longitude": 81.08871712025555,
+    "first_date": "2010-01-01",
+    "last_date": "2025-12-31",
+    "calendar_days": 5844,
+    "missing_source_dates": 0,
+    "invalid_values_replaced_with_missing": {
+      "rainfall_mm": 0,
+      "temperature_min_c": 0,
+      "temperature_max_c": 0,
+      "temperature_mean_c": 0,
+      "relative_humidity_pct": 0,
+      "solar_radiation": 0,
+      "wind_speed_10m": 0,
+      "temperature_order": 0
+    },
+    "spatial_uncertainty": "COARSE_GRID_REPRESENTATIVE_ONLY"
+  },
+  "model_sha256": "065da335886a3906921f8baf9a9c3f052decd3d87c6b71cfec463b3693c3b47f",
+  "production_approved": true
+}

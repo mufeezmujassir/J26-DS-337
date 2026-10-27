@@ -1,0 +1,90 @@
+{
+  "restore_target": "climate_4b9_backup_restore",
+  "container": "wandaraya-globals-restore-test",
+  "matching": true,
+  "tables": {
+    "pilot_observations": {
+      "production_count": 2196,
+      "restore_count": 2196,
+      "production_sha256": "f0d2be1f50cfe5e84914dfce2ee3d110cc0f33b6eeb8bcc974d87f3a5fb0ddc0",
+      "restore_sha256": "f0d2be1f50cfe5e84914dfce2ee3d110cc0f33b6eeb8bcc974d87f3a5fb0ddc0",
+      "match": true
+    },
+    "pilot_dataset": {
+      "production_count": 1,
+      "restore_count": 1,
+      "production_sha256": "61c1fd2b36e014e56c65fab038ff30699e1ea79fa69e405f857ba74206dd8406",
+      "restore_sha256": "61c1fd2b36e014e56c65fab038ff30699e1ea79fa69e405f857ba74206dd8406",
+      "match": true
+    },
+    "pilot_grid_cells": {
+      "production_count": 6,
+      "restore_count": 6,
+      "production_sha256": "6f3790c5baa5ba909f3212a80b4e5dfd01144be9b421d7d78a9ccaa63da6ca9f",
+      "restore_sha256": "6f3790c5baa5ba909f3212a80b4e5dfd01144be9b421d7d78a9ccaa63da6ca9f",
+      "match": true
+    },
+    "climate_attraction_mappings": {
+      "production_count": 6,
+      "restore_count": 6,
+      "production_sha256": "ac562448d34f269878b58de52ac49e76acb180f1b2370da1ae9e2d78357668d7",
+      "restore_sha256": "ac562448d34f269878b58de52ac49e76acb180f1b2370da1ae9e2d78357668d7",
+      "match": true
+    },
+    "weather_readings": {
+      "production_count": 1162,
+      "restore_count": 1162,
+      "production_sha256": "ceed082c4fd332e9a26db8123c604013b744c1e2b339ad66fa85d98ac6a5f5a2",
+      "restore_sha256": "ceed082c4fd332e9a26db8123c604013b744c1e2b339ad66fa85d98ac6a5f5a2",
+      "match": true
+    },
+    "district_weather_monthly": {
+      "production_count": 873,
+      "restore_count": 873,
+      "production_sha256": "f5e26f2b998200e864f792cc896d813004ff9e5f44cecdacc336ef51c4954eb6",
+      "restore_sha256": "f5e26f2b998200e864f792cc896d813004ff9e5f44cecdacc336ef51c4954eb6",
+      "match": true
+    },
+    "weather_forecasts": {
+      "production_count": 129,
+      "restore_count": 129,
+      "production_sha256": "b1839de14bca26be21225f95b68269102f2acbfdeec93ca1b413d6d6e96d8280",
+      "restore_sha256": "b1839de14bca26be21225f95b68269102f2acbfdeec93ca1b413d6d6e96d8280",
+      "match": true
+    },
+    "checkpoints": {
+      "production_count": 0,
+      "restore_count": 0,
+      "production_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "restore_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "match": true
+    },
+    "active_attractions": {
+      "production_count": 6120,
+      "restore_count": 6120,
+      "production_sha256": "42572c2773c5e695196b42431f3a178cc890d730e2e484887d0f172190179f03",
+      "restore_sha256": "42572c2773c5e695196b42431f3a178cc890d730e2e484887d0f172190179f03",
+      "match": true
+    },
+    "alembic_revision": {
+      "production_count": 1,
+      "restore_count": 1,
+      "production_sha256": "2f2cf33c434251fbb45f1df84bcc93a5308f5bee5fc7752643aa04c5b42e24a9",
+      "restore_sha256": "2f2cf33c434251fbb45f1df84bcc93a5308f5bee5fc7752643aa04c5b42e24a9",
+      "match": true
+    },
+    "application_constraints": {
+      "production_count": 109,
+      "restore_count": 109,
+      "production_sha256": "f145bb3493c7a19572ddfd9103b7ded943ab685a2b9bff66a5a1165f41bc9517",
+      "restore_sha256": "f145bb3493c7a19572ddfd9103b7ded943ab685a2b9bff66a5a1165f41bc9517",
+      "match": true
+    }
+  },
+  "method": "sha256 of newline-delimited PostgreSQL 17 jsonb text sorted C, UTC",
+  "limitations": [
+    "point-in-time data may change between production reads",
+    "roles and ownership/ACL equivalence not validated",
+    "no production restore performed"
+  ]
+}

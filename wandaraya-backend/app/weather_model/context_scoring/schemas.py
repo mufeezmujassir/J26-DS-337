@@ -12,7 +12,9 @@ class WeatherConditions(BaseModel):
     status: Literal["available", "unavailable"]
     source: str | None = None
     resolution: Literal["daily", "three_hourly_aggregated", "monthly"] | None = None
-    reliability_level: Literal["live_provider", "approved_model", "unavailable"] = "unavailable"
+    reliability_level: Literal[
+        "live_provider", "approved_model", "historical_climatology", "unavailable"
+    ] = "unavailable"
     issued_at_utc: datetime | None = None
     rainfall_mm: float | None = Field(default=None, ge=0)
     rainfall_period: Literal["daily", "available_3h_intervals", "monthly_total"] | None = None

@@ -1,0 +1,9 @@
+{
+  "status": "BLOCKED_INCOMPLETE_PRODUCTION_EXECUTOR",
+  "production_apply": "disabled unconditionally",
+  "actual_failure": "The requested production execution path is not implemented: scripts/ingest_stage12_4b5_historical.py refuses --apply and app/climate/historical_executor.py only permits named local isolated test databases.",
+  "root_cause": "Earlier work implemented a transaction primitive and partial read-only identity guard, not the end-to-end production orchestration, backup/baseline gating and reconciliation demanded by this stage.",
+  "changes_attempted": ["Added a distinct isolated database to the low-level test allowlist", "Added nonempty pilot, mapping, weather and forecast fixtures to a fresh Alembic-migrated integration database", "Added restore/content comparison script"],
+  "smallest_remaining_implementation": "Implement and integration-test end-to-end production orchestration and non-bypassable target, source, schema, backup, baseline and reconciliation checks; only enable apply after these pass.",
+  "production_import_executed": false
+}

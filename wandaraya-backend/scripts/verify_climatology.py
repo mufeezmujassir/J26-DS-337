@@ -20,7 +20,7 @@ def main():
 
     parser.add_argument(
         "--data-root",
-        default="data/weather/modeling/prophet",
+        default="data/weather/modeling/nasa_power/prophet",
     )
 
     args = parser.parse_args()

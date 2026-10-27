@@ -28,11 +28,7 @@ CATALOGUE_SEED_URLS = (
 
 
 def parse_researcher_approval_timestamp(value: str) -> datetime:
-    """Parse an explicit, timezone-aware researcher approval timestamp.
-
-    Placeholder text is rejected separately so a CMD user gets an actionable
-    message rather than Python's low-level date parsing traceback.
-    """
+  
     normalized = value.strip()
     if not normalized or any(token in normalized.upper() for token in ("YOUR_", "REPLACE_", "<", ">")):
         raise ValueError(

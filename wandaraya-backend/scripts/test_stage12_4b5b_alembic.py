@@ -1,0 +1,110 @@
+"""Run actual Alembic chain in a new database on the isolated test server only."""
+import json
+import os
+import subprocess
+import sys
+from datetime import date, datetime, timezone
+from pathlib import Path
+
+from sqlalchemy import create_engine, text
+from sqlalchemy.engine import URL
+from app.climate.historical_executor import checkpoints, import_sample
+from app.models.climate import ClimateDatasetVersion, ClimateGridCell
+from scripts.audit_stage12_4b5_historical import EXPECTED
+from scripts.test_stage12_4b5_postgres_executor import load_verified, VERSIONS
+
+CONTAINER = "wandaraya-climate-executor-integration-test"
+DATABASE = "climate_alembic_5b_test"
+USER = "climate_executor_test"
+REPORT = Path("data/reports/stage12_4b5b_alembic_integration_test.json")
+
+
+def docker(*args):
+    return subprocess.run(["docker", *args], capture_output=True, text=True, check=True).stdout.strip()
+
+
+def main():
+    info = json.loads(docker("inspect", CONTAINER))[0]
+    ports = info["NetworkSettings"]["Ports"]["5432/tcp"]
+    mounts = info["Mounts"]
+    if info["Config"]["Image"] != "postgis/postgis:17-3.5" or len(ports) != 1 or ports[0]["HostIp"] != "127.0.0.1" or any(m.get("Source", "").lower().endswith("postgres-data") for m in mounts):
+        raise RuntimeError("unsafe isolated container configuration")
+    env = dict(item.split("=", 1) for item in info["Config"]["Env"] if "=" in item)
+    if env.get("POSTGRES_USER") != USER or env.get("POSTGRES_DB") != "climate_executor_isolated_test":
+        raise RuntimeError("unexpected test container identity")
+    existing = docker("exec", CONTAINER, "psql", "-U", USER, "-d", "postgres", "-tAc", "SELECT 1 FROM pg_database WHERE datname='climate_alembic_5b_test'")
+    if existing and sys.argv[1:] != ["--resume-migrated-test"]:
+        raise RuntimeError("test database exists; use --resume-migrated-test only after reviewing it")
+    if not existing:
+        docker("exec", CONTAINER, "createdb", "-U", USER, DATABASE)
+        docker("exec", CONTAINER, "psql", "-v", "ON_ERROR_STOP=1", "-U", USER, "-d", DATABASE, "-c", "CREATE EXTENSION IF NOT EXISTS postgis")
+    url = URL.create("postgresql+psycopg", username=USER, password=env["POSTGRES_PASSWORD"], host="127.0.0.1", port=int(ports[0]["HostPort"]), database=DATABASE)
+    run_env = os.environ.copy()
+    run_env["DATABASE_URL"] = url.render_as_string(hide_password=False)
+    result = subprocess.run([sys.executable, "-m", "alembic", "upgrade", "e67f8a9b0c1d"], env=run_env, capture_output=True, text=True)
+    report = {"database": DATABASE, "container": CONTAINER, "migration_returncode": result.returncode,
+              "migration_log": (result.stdout + "\n" + result.stderr).replace(env["POSTGRES_PASSWORD"], "[redacted]"),
+              "historical_ingestion_test": "NOT_RUN", "production_database_writes": False}
+    if result.returncode == 0:
+        engine = create_engine(url)
+        with engine.connect() as conn:
+            report["alembic_revision"] = conn.execute(text("SELECT version_num FROM alembic_version")).scalar_one()
+            report["checkpoint_table_exists"] = conn.execute(text("SELECT to_regclass('public.climate_historical_import_checkpoints') IS NOT NULL")).scalar_one()
+        if report["alembic_revision"] != "e67f8a9b0c1d" or report["checkpoint_table_exists"]:
+            raise RuntimeError("unexpected migration state; refusing test writes")
+        verified = load_verified()
+        with engine.begin() as conn:
+            baseline = {table: conn.execute(text(f"SELECT count(*) FROM {table}")).scalar_one() for table in ("attractions", "weather_readings", "climate_daily_observations")}
+            if any(baseline.values()):
+                raise RuntimeError("test database not empty")
+            checkpoints.create(conn)  # isolated test only; not part of Alembic
+            ids = {}
+            for batch, version in VERSIONS.items():
+                ids[batch] = conn.execute(ClimateDatasetVersion.__table__.insert().returning(ClimateDatasetVersion.id), dict(
+                    source_name="NASA POWER", provider_name="NASA", product_name="POWER Daily", product_version=version,
+                    source_url="https://power.larc.nasa.gov/", license_review_status="test_only", retrieved_at=datetime.now(timezone.utc), source_units_json={}, normalized_units_json={})).scalar_one()
+            grids = {}
+            for sample, _, location, _ in verified:
+                grids[sample["sample_id"]] = conn.execute(ClimateGridCell.__table__.insert().returning(ClimateGridCell.id), dict(
+                    dataset_version_id=ids[sample["batch"]], source_grid_identifier=sample["sample_id"], latitude=location["latitude"], longitude=location["longitude"],
+                    geometry=f"SRID=4326;POINT({location['longitude']} {location['latitude']})", spatial_resolution="representative_only",
+                    metadata_json={"source_sha256": sample["original_acquisition_sha256"]})).scalar_one()
+        dates = {date(int(x[:4]), int(x[4:6]), int(x[6:])) for x in EXPECTED}
+        def run_sample(item, hook=None):
+            sample, records, _, _ = item
+            return import_sample(engine, dataset_version_id=ids[sample["batch"]], grid_cell_id=grids[sample["sample_id"]], sample_id=sample["sample_id"],
+                                 source_sha256=sample["original_acquisition_sha256"], records=records, expected_dates=dates, _before_checkpoint=hook)
+        def interrupt():
+            raise RuntimeError("isolated rollback test")
+        try:
+            run_sample(verified[0], interrupt)
+            raise AssertionError("failure injection did not execute")
+        except RuntimeError as exc:
+            if str(exc) != "isolated rollback test":
+                raise
+        with engine.connect() as conn:
+            assert conn.execute(text("SELECT count(*) FROM climate_daily_observations")).scalar_one() == 0
+            assert conn.execute(text("SELECT count(*) FROM climate_historical_import_checkpoints")).scalar_one() == 0
+        inserted = sum(run_sample(sample)["inserted"] for sample in verified)
+        unchanged = sum(run_sample(sample)["unchanged"] for sample in verified)
+        with engine.connect() as conn:
+            counts = dict(conn.execute(text("SELECT v.product_version, count(o.id) FROM climate_dataset_versions v JOIN climate_daily_observations o ON v.id=o.dataset_version_id GROUP BY v.product_version")).all())
+            assert counts == {VERSIONS["batch01"]: 17532, VERSIONS["batch02"]: 146100}
+            assert conn.execute(text("SELECT count(*) FROM climate_historical_import_checkpoints")).scalar_one() == 28
+            assert conn.execute(text("SELECT count(*) FROM attractions")).scalar_one() == baseline["attractions"]
+            assert conn.execute(text("SELECT count(*) FROM weather_readings")).scalar_one() == baseline["weather_readings"]
+        assert inserted == unchanged == 163632
+        report.update(status="MIGRATED_SCHEMA_IMPORT_TEST_PASSED_WITH_TEST_ONLY_CHECKPOINT_TABLE", historical_ingestion_test="PASSED",
+                      inserted=inserted, repeat_unchanged=unchanged, batch_counts=counts, checkpoints=28, rollback_verified=True,
+                      limitation="checkpoint table created outside Alembic exclusively in isolated test database")
+        engine.dispose()
+    else:
+        report["status"] = "MIGRATION_CHAIN_FAILED"
+    REPORT.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
+    print(json.dumps({k: v for k, v in report.items() if k != "migration_log"}, indent=2))
+    if result.returncode:
+        raise SystemExit(1)
+
+
+if __name__ == "__main__":
+    main()

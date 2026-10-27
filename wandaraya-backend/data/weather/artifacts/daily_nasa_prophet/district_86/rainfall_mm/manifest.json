@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "model_type": "daily_prophet",
+  "district_id": 86,
+  "district_name": "Kurunegala",
+  "target": "rainfall_mm",
+  "resolution": "daily",
+  "observed_rain_threshold_mm": 0.5,
+  "rain_prediction_threshold_mm": 1.896123,
+  "training_start": "2010-01-01",
+  "training_cutoff": "2025-12-31",
+  "validation_period": "2024-01-01..2024-12-31",
+  "test_period": "2025-01-01..2025-12-31",
+  "validation_metrics": {
+    "mae": 4.1118,
+    "rmse": 6.9257,
+    "bias": -0.7985,
+    "rain_event_accuracy": 0.7787,
+    "rain_event_precision": 0.8129,
+    "rain_event_recall": 0.8863,
+    "rain_event_f1": 0.848,
+    "rain_prediction_threshold_mm": 1.896123
+  },
+  "test_metrics": {
+    "mae": 5.8119,
+    "rmse": 13.0823,
+    "bias": -3.4345,
+    "rain_event_accuracy": 0.6822,
+    "rain_event_precision": 0.7967,
+    "rain_event_recall": 0.7481,
+    "rain_event_f1": 0.7717,
+    "rain_prediction_threshold_mm": 1.896123
+  },
+  "source_provenance": {
+    "provider": "NASA POWER",
+    "source_file": "data/climate/processed/nasa_power/historical_2010_2025/district_86_20100101_20251231.json",
+    "source_sha256": "f2715c487f3bb9cd2200f08f26f3a7316720c2d4f53307068fcec5c77e1b07d9",
+    "district_id": 86,
+    "district_name": "Kurunegala",
+    "latitude": 7.727953008500037,
+    "longitude": 80.25743280677722,
+    "first_date": "2010-01-01",
+    "last_date": "2025-12-31",
+    "calendar_days": 5844,
+    "missing_source_dates": 0,
+    "invalid_values_replaced_with_missing": {
+      "rainfall_mm": 0,
+      "temperature_min_c": 0,
+      "temperature_max_c": 0,
+      "temperature_mean_c": 0,
+      "relative_humidity_pct": 0,
+      "solar_radiation": 0,
+      "wind_speed_10m": 0,
+      "temperature_order": 0
+    },
+    "spatial_uncertainty": "COARSE_GRID_REPRESENTATIVE_ONLY"
+  },
+  "model_sha256": "a51146ea3c3daa918199e9fd2a4606abd59bd92b6be30ffc43292ea3fddd08e3",
+  "production_approved": true
+}

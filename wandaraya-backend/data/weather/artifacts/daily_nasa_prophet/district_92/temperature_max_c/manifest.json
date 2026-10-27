@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "model_type": "daily_prophet",
+  "district_id": 92,
+  "district_name": "Nuwara Eliya",
+  "target": "temperature_max_c",
+  "resolution": "daily",
+  "observed_rain_threshold_mm": null,
+  "rain_prediction_threshold_mm": null,
+  "training_start": "2010-01-01",
+  "training_cutoff": "2025-12-31",
+  "validation_period": "2024-01-01..2024-12-31",
+  "test_period": "2025-01-01..2025-12-31",
+  "validation_metrics": {
+    "mae": 1.0382,
+    "rmse": 1.2869,
+    "bias": -0.7438
+  },
+  "test_metrics": {
+    "mae": 1.6014,
+    "rmse": 1.8876,
+    "bias": 1.5631
+  },
+  "source_provenance": {
+    "provider": "NASA POWER",
+    "source_file": "data/climate/processed/nasa_power/historical_2010_2025/district_92_20100101_20251231.json",
+    "source_sha256": "e7b638c451435b66495ce54a2492afbc668b9c20e7adfacc9123b918297a493e",
+    "district_id": 92,
+    "district_name": "Nuwara Eliya",
+    "latitude": 7.013276609500025,
+    "longitude": 80.7570414439532,
+    "first_date": "2010-01-01",
+    "last_date": "2025-12-31",
+    "calendar_days": 5844,
+    "missing_source_dates": 0,
+    "invalid_values_replaced_with_missing": {
+      "rainfall_mm": 0,
+      "temperature_min_c": 0,
+      "temperature_max_c": 0,
+      "temperature_mean_c": 0,
+      "relative_humidity_pct": 0,
+      "solar_radiation": 0,
+      "wind_speed_10m": 0,
+      "temperature_order": 0
+    },
+    "spatial_uncertainty": "COARSE_GRID_REPRESENTATIVE_ONLY"
+  },
+  "model_sha256": "e7e01b6c8e0f726a063a0bae61d905b68fda014bccafe314cfe1bd1562b87f42",
+  "production_approved": true
+}
