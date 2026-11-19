@@ -26,3 +26,31 @@ class TourismSyncReview(Base):
 class TourismDuplicateCluster(Base):
     __tablename__="tourism_duplicate_clusters"
     id: Mapped[int]=mapped_column(primary_key=True); import_batch_id: Mapped[str]=mapped_column(ForeignKey("tourism_import_batches.batch_id",ondelete="RESTRICT"),nullable=False,index=True); cluster_key: Mapped[str]=mapped_column(String(255),nullable=False); source_ids: Mapped[dict]=mapped_column(JSON,nullable=False); google_place_ids: Mapped[dict]=mapped_column(JSON,nullable=False); candidate_attraction_ids: Mapped[dict]=mapped_column(JSON,nullable=False); conflict_evidence: Mapped[dict]=mapped_column(JSON,nullable=False); review_status: Mapped[str]=mapped_column(String(40),nullable=False,default="unresolved"); reviewer_decision: Mapped[str|None]=mapped_column(String(40)); created_at: Mapped[datetime]=mapped_column(DateTime(timezone=True),default=utcnow)
+
+
+class TourismSourceStaging(Base):
+    """Source-attributed records waiting for identity and quality approval."""
+
+    __tablename__ = "tourism_source_staging"
+    __table_args__ = (
+        UniqueConstraint("source_provider", "external_source_id", name="uq_tourism_source_staging_identity"),
+    )
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    source_provider: Mapped[str] = mapped_column(String(80), nullable=False, index=True)
+    external_source_id: Mapped[str] = mapped_column(String(255), nullable=False)
+    canonical_source_url: Mapped[str] = mapped_column(Text, nullable=False)
+    source_record_sha256: Mapped[str] = mapped_column(String(64), nullable=False)
+    raw_record: Mapped[dict] = mapped_column(JSON, nullable=False)
+    mapped_theme: Mapped[str | None] = mapped_column(String(80))
+    mapping_method: Mapped[str | None] = mapped_column(String(80))
+    validation_status: Mapped[str] = mapped_column(String(50), nullable=False, default="pending")
+    matched_attraction_id: Mapped[int | None] = mapped_column(ForeignKey("attractions.id", ondelete="SET NULL"), index=True)
+    google_place_id: Mapped[str | None] = mapped_column(String(255))
+    google_evidence: Mapped[dict | None] = mapped_column(JSON)
+    import_batch_id: Mapped[str | None] = mapped_column(String(120), index=True)
+    error_message: Mapped[str | None] = mapped_column(Text)
+    first_seen_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
+    last_seen_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
+    updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow, onupdate=utcnow)

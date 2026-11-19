@@ -1,0 +1,4 @@
+partition,start,end,days,purpose
+Training,2010.0,2024.0,5113,Model fitting
+Validation,2024.0,2025.0,366,Threshold selection
+Testing,2025.0,2026.0,365,Untouched evaluation

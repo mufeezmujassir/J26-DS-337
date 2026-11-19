@@ -1,0 +1,160 @@
+{
+  "batch_id": "dayouting-20261028T011803Z",
+  "content_signals": {
+    "search": "yes",
+    "ai-train": "no",
+    "use": "reference"
+  },
+  "sitemap_records": 1196,
+  "policy": "reference-only; prohibited from AI training; remote images are not downloaded",
+  "staged": {
+    "pending_google_verification": 806,
+    "pending_category_review": 276,
+    "linked_existing": 28,
+    "pending_location_review": 4,
+    "source_verified_new": 30,
+    "rejected_non_attraction_name": 1,
+    "pending_content_review": 18
+  },
+  "fetch_errors": [
+    {
+      "url": "https://dayouting.lk/places-to-visit/11/mahamevnawa-buddhist-monastery",
+      "error": "Incomplete DayOuting record 11: name/description missing"
+    },
+    {
+      "url": "https://dayouting.lk/places-to-visit/17/halpe-tea-factory",
+      "error": "Incomplete DayOuting record 17: name/description missing"
+    },
+    {
+      "url": "https://dayouting.lk/places-to-visit/18/pallewela-alikoti-waterfall",
+      "error": "Incomplete DayOuting record 18: name/description missing"
+    },
+    {
+      "url": "https://dayouting.lk/places-to-visit/19/kombukara-waterfall",
+      "error": "Incomplete DayOuting record 19: name/description missing"
+    },
+    {
+      "url": "https://dayouting.lk/places-to-visit/20/bambaragala-pathana",
+      "error": "Incomplete DayOuting record 20: name/description missing"
+    },
+    {
+      "url": "https://dayouting.lk/places-to-visit/78/aluthkade-streetfood",
+      "error": "Incomplete DayOuting record 78: name/description missing"
+    },
+    {
+      "url": "https://dayouting.lk/places-to-visit/90/sri-sudharmalaya-buddhist-temple",
+      "error": "Incomplete DayOuting record 90: name/description missing"
+    },
+    {
+      "url": "https://dayouting.lk/places-to-visit/100/dewata-surfing-beach",
+      "error": "Incomplete DayOuting record 100: name/description missing"
+    },
+    {
+      "url": "https://dayouting.lk/places-to-visit/103/darmapala-park-open-theater",
+      "error": "Incomplete DayOuting record 103: name/description missing"
+    },
+    {
+      "url": "https://dayouting.lk/places-to-visit/105/lighthouse-beach",
+      "error": "Incomplete DayOuting record 105: name/description missing"
+    },
+    {
+      "url": "https://dayouting.lk/places-to-visit/108/unawatuna-beach",
+      "error": "Incomplete DayOuting record 108: name/description missing"
+    },
+    {
+      "url": "https://dayouting.lk/places-to-visit/128/e-l-senanayake-children-s-park",
+      "error": "Incomplete DayOuting record 128: name/description missing"
+    },
+    {
+      "url": "https://dayouting.lk/places-to-visit/152/torrington-park-kandy",
+      "error": "Incomplete DayOuting record 152: name/description missing"
+    },
+    {
+      "url": "https://dayouting.lk/places-to-visit/168/wadakada-ella-falls",
+      "error": "Incomplete DayOuting record 168: name/description missing"
+    },
+    {
+      "url": "https://dayouting.lk/places-to-visit/174/badagamuwa-forest",
+      "error": "Incomplete DayOuting record 174: name/description missing"
+    },
+    {
+      "url": "https://dayouting.lk/places-to-visit/399/german-estate-cranford-hill",
+      "error": "Incomplete DayOuting record 399: name/description missing"
+    },
+    {
+      "url": "https://dayouting.lk/places-to-visit/403/hunnas-paradise",
+      "error": "Incomplete DayOuting record 403: name/description missing"
+    },
+    {
+      "url": "https://dayouting.lk/places-to-visit/571/gigiri-ella",
+      "error": "Incomplete DayOuting record 571: name/description missing"
+    },
+    {
+      "url": "https://dayouting.lk/places-to-visit/598/mahanaga-viharaya",
+      "error": "Incomplete DayOuting record 598: name/description missing"
+    },
+    {
+      "url": "https://dayouting.lk/places-to-visit/680/puttalam-fans-kids-park",
+      "error": "Incomplete DayOuting record 680: name/description missing"
+    },
+    {
+      "url": "https://dayouting.lk/places-to-visit/684/upulwehera-rajama-viharaya-ancient-temple",
+      "error": "Incomplete DayOuting record 684: name/description missing"
+    },
+    {
+      "url": "https://dayouting.lk/places-to-visit/729/mi-oya-damme",
+      "error": "Incomplete DayOuting record 729: name/description missing"
+    },
+    {
+      "url": "https://dayouting.lk/places-to-visit/741/bio-bab-tree",
+      "error": "Incomplete DayOuting record 741: name/description missing"
+    },
+    {
+      "url": "https://dayouting.lk/places-to-visit/742/turtle-watching-point",
+      "error": "Incomplete DayOuting record 742: name/description missing"
+    },
+    {
+      "url": "https://dayouting.lk/places-to-visit/780/labugama-falls",
+      "error": "Incomplete DayOuting record 780: name/description missing"
+    },
+    {
+      "url": "https://dayouting.lk/places-to-visit/783/adawala-waterfall",
+      "error": "Incomplete DayOuting record 783: name/description missing"
+    },
+    {
+      "url": "https://dayouting.lk/places-to-visit/926/balangoda-ella",
+      "error": "Incomplete DayOuting record 926: name/description missing"
+    },
+    {
+      "url": "https://dayouting.lk/places-to-visit/1010/udayarkattu-kulam",
+      "error": "DayOuting returned no TouristAttraction for source id 1010"
+    },
+    {
+      "url": "https://dayouting.lk/places-to-visit/1122/madukanda-tank",
+      "error": "Incomplete DayOuting record 1122: name/description missing"
+    },
+    {
+      "url": "https://dayouting.lk/places-to-visit/1152/nakkavita-ella",
+      "error": "Incomplete DayOuting record 1152: name/description missing"
+    },
+    {
+      "url": "https://dayouting.lk/places-to-visit/1161/mahalla",
+      "error": "Incomplete DayOuting record 1161: name/description missing"
+    },
+    {
+      "url": "https://dayouting.lk/places-to-visit/1181/kekuna-ella-falls",
+      "error": "Incomplete DayOuting record 1181: name/description missing"
+    },
+    {
+      "url": "https://dayouting.lk/places-to-visit/1215/food-base-aluthkade",
+      "error": "Incomplete DayOuting record 1215: name/description missing"
+    }
+  ],
+  "google": {},
+  "promotion": {
+    "linked_existing": 0,
+    "promoted_new": 0
+  },
+  "fetch_error_count": 33,
+  "completed_at": "2026-10-28T01:27:01.667700+00:00"
+}

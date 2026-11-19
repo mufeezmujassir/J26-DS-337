@@ -39,7 +39,7 @@ from app.models.climate import (
     ClimateSeasonalityQualityAudit,
     ClimateMappingEvidenceAudit,
 )
-from app.models.tourism_sync import AttractionSourceReference, AttractionFieldProvenance, TourismImportBatch, TourismSyncReview, TourismDuplicateCluster
+from app.models.tourism_sync import AttractionSourceReference, AttractionFieldProvenance, TourismImportBatch, TourismSyncReview, TourismDuplicateCluster, TourismSourceStaging
 
 from app.models.roads import Road
 from app.models.transport import BusFare, TrainStation, TrainFare
@@ -96,6 +96,7 @@ __all__ = [
     "ClimateActivityProcessingRun",
     "ClimateSeasonalityQualityAudit",
     "ClimateMappingEvidenceAudit",
+    "TourismSourceStaging",
 
     "Road",
     "BusFare",
